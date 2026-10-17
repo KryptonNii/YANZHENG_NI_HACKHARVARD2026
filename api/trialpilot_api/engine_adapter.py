@@ -1,4 +1,5 @@
-"""Bridge to the calculation engine (A2: compute_scenario / compare / drivers; A3: forecast, supply).
+"""Bridge to the calculation engine (A2: compute_scenario / compare_levers / drivers;
+A3: forecast + simulate_supply).
 
 There is NO placeholder engine in production code (MASTER §2.1): if the engine is missing or
 raises NotImplementedError the API answers 501 `engine_not_ready`. Tests inject a fake engine.
@@ -33,7 +34,7 @@ METRICS = (
 @dataclass
 class EngineFns:
     compute: Callable[..., Any] | None = None
-    compare: Callable[..., Any] | None = None
+    compare_levers: Callable[..., Any] | None = None  # recompute a and b, common random numbers
     drivers: Callable[..., Any] | None = None
     forecast: Callable[..., Any] | None = None
     simulate_supply: Callable[..., Any] | None = None
@@ -47,11 +48,10 @@ def load_engine() -> EngineFns:
     except Exception as exc:
         fns.status["engine"] = f"not_installed: {type(exc).__name__}: {exc}"[:200]
         return fns
-    fns.compute = getattr(eng, "compute_scenario", None)
-    fns.compare = getattr(eng, "compare", None)
-    fns.drivers = getattr(eng, "drivers", None)
-    for name in ("compute", "compare", "drivers"):
-        fns.status[name] = "available" if getattr(fns, name) else "missing"
+    for slot, attr in (("compute", "compute_scenario"), ("compare_levers", "compare_levers"),
+                       ("drivers", "drivers")):
+        setattr(fns, slot, getattr(eng, attr, None))
+        fns.status[attr] = "available" if getattr(fns, slot) else "missing"
     for mod_name, attr, slot in (
         ("trialpilot_engine.forecast", "forecast", "forecast"),
         ("trialpilot_engine.supply", "simulate_supply", "simulate_supply"),
@@ -74,14 +74,6 @@ def _accepts(fn: Callable[..., Any], name: str) -> bool:
     return name in params or any(p.kind is inspect.Parameter.VAR_KEYWORD for p in params.values())
 
 
-def _as_result(obj: Any) -> ScenarioResult:
-    if isinstance(obj, ScenarioResult):
-        return obj
-    if hasattr(obj, "model_dump"):
-        return ScenarioResult.model_validate(obj.model_dump(mode="json"))
-    return ScenarioResult.model_validate(obj)
-
-
 def _not_ready(what: str) -> ApiError:
     return ApiError(
         501, "engine_not_ready",
@@ -95,9 +87,10 @@ def _engine_failure(exc: Exception, what: str) -> ApiError:
     if isinstance(exc, NotImplementedError):
         return _not_ready(what)
     if isinstance(exc, (ValueError, KeyError)):
-        # Engine rejected the input (e.g. zero sites, missing parameter): plain-English 422.
-        return ApiError(422, "engine_rejected_input", f"The engine could not compute this "
-                        f"scenario: {exc}", {"component": what, "exception": type(exc).__name__})
+        # EngineInputError(code, message) and friends: the input cannot be computed -> 422.
+        code = getattr(exc, "code", None) or "engine_rejected_input"
+        return ApiError(422, str(code), f"The engine could not compute this: {exc}",
+                        {"component": what, "exception": type(exc).__name__})
     log.exception("engine error", extra={"component": what})
     return ApiError(500, "engine_error", f"The engine failed while computing ({what}).",
                     {"component": what, "exception": type(exc).__name__})
@@ -130,16 +123,18 @@ class ComputeCache:
             while len(self._data) > self.size:
                 self._data.popitem(last=False)
 
-    def clear(self) -> None:
-        with self._lock:
-            self._data.clear()
-
 
 @dataclass
 class ComputeOutcome:
     result: ScenarioResult
     cache_hit: bool
     compute_ms: float
+
+
+@dataclass
+class A3Inputs:
+    kwargs: dict[str, Any]  # forecast=..., supply=... for the engine call (only what is available)
+    warnings: list[str]
 
 
 class EngineAdapter:
@@ -157,6 +152,35 @@ class EngineAdapter:
     ) -> tuple[Any, ...]:
         return (sha256_hex(design), sha256_hex(levers), param_version, seed, draws)
 
+    # ---------------------------------------------------------------- A3 forecast + supply
+    def a3_inputs(
+        self, target: Callable[..., Any], design: TrialDesign, levers: Levers,
+        params: dict[str, Parameter], seed: int, draws: int,
+    ) -> A3Inputs:
+        """Run A3's forecast and supply simulation when available and when `target` (an engine
+        function) takes them. Failures become honest warnings, never silent defaults."""
+        kwargs: dict[str, Any] = {}
+        warnings: list[str] = []
+        if self.fns.forecast is None or not _accepts(target, "forecast"):
+            return A3Inputs(kwargs, warnings)
+        try:
+            fc = self.fns.forecast(design, levers, params, seed=seed, draws=draws)
+            kwargs["forecast"] = fc
+        except Exception as exc:
+            log.warning("forecast failed", extra={"error": repr(exc)})
+            warnings.append(f"Enrollment forecast unavailable ({type(exc).__name__}: {exc}); "
+                            "duration is the design's planned duration.")
+            return A3Inputs(kwargs, warnings)
+        if self.fns.simulate_supply is not None and _accepts(target, "supply"):
+            try:
+                kwargs["supply"] = self.fns.simulate_supply(design, levers, params, fc, seed=seed)
+            except Exception as exc:
+                log.warning("supply simulation failed", extra={"error": repr(exc)})
+                warnings.append(f"Drug supply simulation unavailable ({type(exc).__name__}: "
+                                f"{exc}); kit waste uses the parameter library.")
+        return A3Inputs(kwargs, warnings)
+
+    # ---------------------------------------------------------------- compute
     def compute(
         self,
         design: TrialDesign,
@@ -171,71 +195,51 @@ class EngineAdapter:
         cached = self.cache.get(key)
         if cached is not None:
             return ComputeOutcome(cached, True, (time.perf_counter() - start) * 1000)
-        if self.fns.compute is None:
+        compute = self.fns.compute
+        if compute is None:
             raise _not_ready("compute_scenario")
-        result = self._run_compute(design, levers, params, seed, draws)
+        a3 = self.a3_inputs(compute, design, levers, params, seed, draws)
+        kwargs: dict[str, Any] = {"seed": seed, **a3.kwargs}
+        if _accepts(compute, "draws"):
+            kwargs["draws"] = draws
+        try:
+            result = compute(design, levers, params, **kwargs)
+        except Exception as exc:
+            raise _engine_failure(exc, "compute_scenario") from exc
+        if a3.warnings:
+            result = result.model_copy(update={"warnings": [*result.warnings, *a3.warnings]})
         self.cache.put(key, result)
         return ComputeOutcome(result, False, (time.perf_counter() - start) * 1000)
 
-    def _run_compute(
+    # ---------------------------------------------------------------- compare
+    def compare(
         self,
         design: TrialDesign,
-        levers: Levers,
+        levers_a: Levers,
+        levers_b: Levers,
         params: dict[str, Parameter],
         seed: int,
         draws: int,
-    ) -> ScenarioResult:
-        compute = self.fns.compute
-        assert compute is not None
-        e_design, e_levers, e_params = design, levers, params
-        kwargs: dict[str, Any] = {"seed": seed}
-        if _accepts(compute, "draws"):
-            kwargs["draws"] = draws
-        extra_warnings: list[str] = []
-        # A3 forecast/supply: pass them only if A2's compute_scenario takes them as inputs.
-        fc = None
-        if self.fns.forecast is not None and _accepts(compute, "forecast"):
-            try:
-                fc = self.fns.forecast(e_design, e_levers, e_params, seed=seed, draws=draws)
-                kwargs["forecast"] = fc
-            except NotImplementedError:
-                extra_warnings.append("Enrollment forecast not available yet (A3); duration "
-                                      "uses the design's planned duration.")
-            except Exception as exc:
-                log.exception("forecast failed")
-                extra_warnings.append(f"Enrollment forecast failed ({type(exc).__name__}); "
-                                      "duration uses the design's planned duration.")
-        if fc is not None and self.fns.simulate_supply is not None and _accepts(compute, "supply"):
-            try:
-                sp = self.fns.simulate_supply(e_design, e_levers, e_params, fc, seed=seed)
-                kwargs["supply"] = sp
-            except NotImplementedError:
-                extra_warnings.append("Drug supply simulation not available yet (A3).")
-            except Exception as exc:
-                log.exception("supply simulation failed")
-                extra_warnings.append(f"Drug supply simulation failed ({type(exc).__name__}).")
+    ) -> tuple[dict[str, MetricRange], list[str]]:
+        """Per-draw deltas b − a for two lever sets on one design (common random numbers)."""
+        fn = self.fns.compare_levers
+        if fn is None:
+            raise _not_ready("compare_levers")
+        target = self.fns.compute or fn
+        a3a = self.a3_inputs(target, design, levers_a, params, seed, draws)
+        a3b = self.a3_inputs(target, design, levers_b, params, seed, draws)
+        kwargs: dict[str, Any] = {"seed": seed, "draws": draws}
+        for side, a3 in (("a", a3a), ("b", a3b)):
+            for name, value in a3.kwargs.items():
+                if _accepts(fn, f"{name}_{side}"):
+                    kwargs[f"{name}_{side}"] = value
         try:
-            raw = compute(e_design, e_levers, e_params, **kwargs)
+            _, _, deltas = fn(design, levers_a, levers_b, params, **kwargs)
         except Exception as exc:
-            raise _engine_failure(exc, "compute_scenario") from exc
-        result = _as_result(raw)
-        if extra_warnings:
-            result = result.model_copy(update={"warnings": [*result.warnings, *extra_warnings]})
-        return result
+            raise _engine_failure(exc, "compare_levers") from exc
+        return dict(deltas), list(dict.fromkeys([*a3a.warnings, *a3b.warnings]))
 
-    def compare(self, a: ScenarioResult, b: ScenarioResult) -> dict[str, MetricRange]:
-        if self.fns.compare is None:
-            raise _not_ready("compare")
-        try:
-            out = self.fns.compare(a, b)
-        except Exception as exc:
-            raise _engine_failure(exc, "compare") from exc
-        return {
-            k: v if isinstance(v, MetricRange) else MetricRange.model_validate(
-                v.model_dump() if hasattr(v, "model_dump") else v)
-            for k, v in dict(out).items()
-        }
-
+    # ---------------------------------------------------------------- drivers
     def drivers(
         self,
         design: TrialDesign,
@@ -245,17 +249,17 @@ class EngineAdapter:
         top: int,
         seed: int,
         draws: int,
-    ) -> list[tuple[str, float]]:
-        if self.fns.drivers is None:
+    ) -> tuple[list[tuple[str, float]], list[str]]:
+        fn = self.fns.drivers
+        if fn is None:
             raise _not_ready("drivers")
-        e_design, e_levers, e_params = design, levers, params
-        kwargs: dict[str, Any] = {"metric": metric, "top": top}
-        if _accepts(self.fns.drivers, "seed"):
-            kwargs["seed"] = seed
-        if _accepts(self.fns.drivers, "draws"):
-            kwargs["draws"] = draws
+        a3 = self.a3_inputs(fn, design, levers, params, seed, draws)
+        kwargs: dict[str, Any] = {"metric": metric, "top": top, **a3.kwargs}
+        for name, value in (("seed", seed), ("draws", draws)):
+            if _accepts(fn, name):
+                kwargs[name] = value
         try:
-            out = self.fns.drivers(e_design, e_levers, e_params, **kwargs)
+            out = fn(design, levers, params, **kwargs)
         except Exception as exc:
             raise _engine_failure(exc, "drivers") from exc
-        return [(str(pid), float(share)) for pid, share in out]
+        return [(str(pid), float(share)) for pid, share in out], a3.warnings

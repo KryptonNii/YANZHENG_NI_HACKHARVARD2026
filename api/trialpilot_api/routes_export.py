@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import csv
 import io
+import math
 import re
 from typing import Any
 
@@ -70,6 +71,11 @@ def _filename(row: ScenarioRow, ext: str) -> str:
 
 
 # ------------------------------------------------------------------------------------------ CSV
+def _num(v: float) -> float | str:
+    """Unknown (NaN/inf from the engine: missing inputs) is written as 'unknown', never 0."""
+    return v if math.isfinite(v) else "unknown"
+
+
 def build_csv(data: dict[str, Any]) -> str:
     row: ScenarioRow = data["row"]
     result: ScenarioResult = data["result"]
@@ -90,10 +96,12 @@ def build_csv(data: dict[str, Any]) -> str:
         w.writerow(["lever", k, "", "", "", "", v])
     for m in METRICS:
         r = getattr(result, m)
-        w.writerow(["metric", m, r.p10, r.p50, r.p90, r.unit, METRIC_LABELS[m]])
+        w.writerow(["metric", m, _num(r.p10), _num(r.p50), _num(r.p90), r.unit,
+                    METRIC_LABELS[m]])
     for mod in result.modules:
         for metric_name, r in (("cost_usd", mod.cost_usd), ("co2e_kg", mod.co2e_kg)):
-            w.writerow(["module", f"{mod.module}.{metric_name}", r.p10, r.p50, r.p90, r.unit, ""])
+            w.writerow(["module", f"{mod.module}.{metric_name}", _num(r.p10), _num(r.p50),
+                        _num(r.p90), r.unit, ""])
         for pi in mod.provenance:
             w.writerow(["provenance", f"{mod.module}:{pi.formula_id}", "", "", "", "",
                         f"{pi.description} | parameters: {', '.join(pi.parameter_ids)}"])
@@ -131,6 +139,8 @@ def export_csv(
 
 # ------------------------------------------------------------------------------------------ PDF
 def _fmt(v: float, unit: str) -> str:
+    if not math.isfinite(v):
+        return "unknown"
     if unit == "usd":
         return f"${v:,.0f}"
     if unit == "percent":

@@ -200,10 +200,20 @@ def test_compare_two_saved_scenarios(client: TestClient, design_id: str) -> None
     r = client.post("/api/scenarios/compare", json={"a_id": a["id"], "b_id": b["id"]})
     assert r.status_code == 200, r.text
     body = r.json()
-    assert body["same_parameter_set"] is True
+    assert body["same_parameter_set"] is True and body["warnings"] == []
     assert body["deltas"]["patient_travel_hours"]["p50"] < 0
     assert client.post("/api/scenarios/compare",
                        json={"a_id": a["id"], "b_id": "nope"}).status_code == 404
+
+
+def test_compare_needs_same_design_version(client: TestClient, design_id: str) -> None:
+    a = save_scenario(client, design_id)
+    changed = make_design()
+    changed["enrollment_target"] = 150
+    client.post("/api/designs", json=changed, headers=AUTHOR)
+    b = save_scenario(client, design_id)
+    r = client.post("/api/scenarios/compare", json={"a_id": a["id"], "b_id": b["id"]})
+    assert r.status_code == 422 and r.json()["error"] == "compare_needs_same_design"
 
 
 def test_drivers_for_saved_and_unsaved(client: TestClient, design_id: str) -> None:

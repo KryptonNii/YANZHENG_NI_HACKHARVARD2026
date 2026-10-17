@@ -164,7 +164,12 @@ class DriversOut(BaseModel):
 class CompareOut(BaseModel):
     a_id: str
     b_id: str
-    deltas: dict[str, MetricRange] = Field(description="b − a per metric (engine `compare`)")
+    deltas: dict[str, MetricRange] = Field(
+        description="b − a per draw (common random numbers): the six headline metrics plus "
+        "`cost_usd.<module>` / `co2e_kg.<module>`")
+    seed: int
+    draws: int
+    parameter_set_version: str
     a_metrics: dict[str, MetricRange]
     b_metrics: dict[str, MetricRange]
     same_parameter_set: bool
@@ -391,12 +396,14 @@ def _drivers_out(
     svc: Any, design: TrialDesign, levers: Levers, params: dict[str, Parameter], version: str,
     metric: str, top: int, seed: int, draws: int, warnings: list[str],
 ) -> DriversOut:
-    if metric not in METRICS:
-        raise ApiError(422, "invalid_metric", f"metric must be one of {', '.join(METRICS)}.",
-                       {"metric": metric})
+    if metric not in METRICS and not metric.startswith(("cost_usd.", "co2e_kg.")):
+        raise ApiError(422, "invalid_metric",
+                       f"metric must be one of {', '.join(METRICS)} (or cost_usd.<module> / "
+                       "co2e_kg.<module>).", {"metric": metric})
     validate_levers(design, levers)
     plain = Levers.model_validate(levers.model_dump())
-    pairs = svc.engine.drivers(design, plain, params, metric, top, seed, draws)
+    pairs, engine_warnings = svc.engine.drivers(design, plain, params, metric, top, seed, draws)
+    warnings = [*warnings, *engine_warnings]
     out: list[Driver] = []
     for pid, share in pairs:
         p = params.get(pid)
@@ -426,21 +433,38 @@ def drivers_unsaved(
 def compare(
     req: CompareRequest, session: Session = Depends(get_session), svc: Any = Depends(services)
 ) -> CompareOut:
-    """Per-metric deltas b − a between two saved scenarios (engine `compare`)."""
+    """Deltas b − a between two saved scenarios on the same design version, computed per draw
+    with common random numbers (both lever sets are recomputed with A's seed and draws)."""
     a, b = _get_row(session, req.a_id), _get_row(session, req.b_id)
+    if (a.design_id, a.design_version) != (b.design_id, b.design_version):
+        raise ApiError(422, "compare_needs_same_design",
+                       "Per-draw comparison needs both scenarios on the same trial design version "
+                       f"({a.design_id} v{a.design_version} vs {b.design_id} v{b.design_version}).",
+                       {"a": [a.design_id, a.design_version], "b": [b.design_id, b.design_version]})
     ra = ScenarioResult.model_validate_json(a.result)
     rb = ScenarioResult.model_validate_json(b.result)
-    warnings = []
+    warnings: list[str] = []
     same = a.parameter_set_version == b.parameter_set_version
-    if not same:
-        warnings.append("The two scenarios were computed with different parameter set versions "
-                        f"({a.parameter_set_version} vs {b.parameter_set_version}); part of the "
-                        "difference comes from parameter changes, not levers.")
-    if a.design_id != b.design_id:
-        warnings.append("The two scenarios are based on different trial designs.")
-    deltas = svc.engine.compare(ra, rb)
-    return CompareOut(a_id=a.id, b_id=b.id, deltas=deltas, a_metrics=_metrics(ra),
-                      b_metrics=_metrics(rb), same_parameter_set=same, warnings=warnings)
+    stored = svc.params.params_for_set(a.parameter_set_version) if same else None
+    if stored is not None:
+        params, version = {p.id: p for p in stored}, a.parameter_set_version
+    else:
+        snap = _params_snapshot(svc)
+        params, version = snap.params, snap.version
+        warnings.append("The two scenarios were saved with different (or unknown) parameter sets "
+                        f"({a.parameter_set_version} vs {b.parameter_set_version}); the deltas use "
+                        f"the current set {version}, so they may not match the saved results.")
+    if (a.seed, a.draws) != (b.seed, b.draws):
+        warnings.append(f"Scenario B was saved with seed {b.seed} / {b.draws} draws; the per-draw "
+                        f"deltas use A's seed {a.seed} / {a.draws} draws for both.")
+    _, design = load_design(session, a.design_id, a.design_version)
+    deltas, engine_warnings = svc.engine.compare(
+        design, Levers.model_validate_json(a.levers), Levers.model_validate_json(b.levers),
+        params, a.seed, a.draws)
+    return CompareOut(a_id=a.id, b_id=b.id, deltas=deltas, seed=a.seed, draws=a.draws,
+                      parameter_set_version=version, a_metrics=_metrics(ra),
+                      b_metrics=_metrics(rb), same_parameter_set=same,
+                      warnings=[*warnings, *engine_warnings])
 
 
 # ------------------------------------------------------------------------------------------

@@ -87,18 +87,24 @@ class FakeEngine:
             computed_at=datetime.now(UTC),
         )
 
-    def compare(self, a: ScenarioResult, b: ScenarioResult) -> dict[str, MetricRange]:
-        return {m: MetricRange(p10=getattr(b, m).p10 - getattr(a, m).p10,
-                               p50=getattr(b, m).p50 - getattr(a, m).p50,
-                               p90=getattr(b, m).p90 - getattr(a, m).p90,
-                               unit=getattr(a, m).unit) for m in METRICS}
+    def compare_levers(
+        self, design: TrialDesign, levers_a: Levers, levers_b: Levers,
+        params: dict[str, Parameter], seed: int = 7, draws: int = 2000,
+    ) -> tuple[ScenarioResult, ScenarioResult, dict[str, MetricRange]]:
+        a = self.compute_scenario(design, levers_a, params, seed, draws)
+        b = self.compute_scenario(design, levers_b, params, seed, draws)
+        deltas = {m: MetricRange(p10=getattr(b, m).p10 - getattr(a, m).p10,
+                                 p50=getattr(b, m).p50 - getattr(a, m).p50,
+                                 p90=getattr(b, m).p90 - getattr(a, m).p90,
+                                 unit=getattr(a, m).unit) for m in METRICS}
+        return a, b, deltas
 
     def drivers(self, design: TrialDesign, levers: Levers, params: dict[str, Parameter],
                 metric: str, top: int = 5) -> list[tuple[str, float]]:
         return [(pid, 1.0 / (i + 1)) for i, pid in enumerate(list(params)[:top])]
 
     def fns(self) -> EngineFns:
-        return EngineFns(compute=self.compute_scenario, compare=self.compare,
+        return EngineFns(compute=self.compute_scenario, compare_levers=self.compare_levers,
                          drivers=self.drivers, status={"engine": "test-fake"})
 
 

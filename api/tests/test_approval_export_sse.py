@@ -149,3 +149,25 @@ def test_sse_response_uses_15s_heartbeat_and_last_event_id() -> None:
     resp = sse_response(Request(scope), "ops:t1", EventBroker())
     assert resp.ping_interval == 15
     assert resp.headers["cache-control"] == "no-cache"
+
+
+def test_unknown_metrics_survive_save_and_export(make_client, fake_engine) -> None:  # type: ignore[no-untyped-def]
+    """The engine reports a metric it cannot compute as NaN (unknown, never 0): JSON shows null,
+    storage round-trips it, exports say 'unknown'."""
+    original = fake_engine.compute_scenario
+
+    def with_unknown(*args, **kwargs):  # type: ignore[no-untyped-def]
+        r = original(*args, **kwargs)
+        nan = float("nan")
+        return r.model_copy(update={"co2e_kg": r.co2e_kg.model_copy(
+            update={"p10": nan, "p50": nan, "p90": nan})})
+
+    fake_engine.compute_scenario = with_unknown
+    c = make_client()
+    c.post("/api/designs", json=make_design(), headers=AUTHOR)
+    s = save_scenario(c, "design-test-1")
+    assert s["result"]["co2e_kg"]["p50"] is None
+    assert c.get(f"/api/scenarios/{s['id']}").json()["result"]["co2e_kg"]["p50"] is None
+    csv_text = c.get(f"/api/export/scenario/{s['id']}.csv").text
+    assert "metric,co2e_kg,unknown,unknown,unknown,kg_co2e" in csv_text
+    assert c.get(f"/api/export/scenario/{s['id']}.pdf").status_code == 200
