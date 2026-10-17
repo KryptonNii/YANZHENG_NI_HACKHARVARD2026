@@ -148,11 +148,13 @@ def library_check(ledger: Ledger, sampler: LibrarySampler) -> Check:
         pub = ledger.published_modules.get(m)
         ours = _range(by_module[m])
         _, _, status = _status(pub, ours)
-        expl = _library_explanation(m, [c for _, c in changes if c.module == m]) if status != "match" else None
+        expl = None
+        if status != "match":
+            expl = _join(_correction_text(ledger, m), _library_explanation(m, [c for _, c in changes if c.module == m]))
         rows.append(_row(m, pub, ours, expl))
     total_draws = sum(by_module.values(), np.zeros(n))
     total = _row("total", ledger.published_total_kg, _range(total_draws),
-                 _library_explanation("total", [c for _, c in changes]))
+                 _join(_correction_text(ledger, None), _library_explanation("total", [c for _, c in changes])))
     changes.sort(key=lambda t: -t[0])
     return Check(
         id="library", title="Library check: the paper's activity data x TrialPilot's parameter library",
@@ -164,6 +166,21 @@ def library_check(ledger: Ledger, sampler: LibrarySampler) -> Check:
         notes=([f"{len(kept)} line(s) keep the paper's factor (no library equivalent):"] + kept) if kept else [],
         line_changes=[c for _, c in changes[:15]],
     )
+
+
+def _join(*parts: str | None) -> str | None:
+    text = " ".join(p for p in parts if p)
+    return text or None
+
+
+def _correction_text(ledger: Ledger, module: str | None) -> str | None:
+    """'Uses the corrected activity (-636 kg: casps-f2 ...)' when corrections touch this module (None = all)."""
+    lines = [ln for ln in ledger.lines if ln.correction and (module is None or ln.module == module)]
+    if not lines:
+        return None
+    delta = sum(ln.corrected_kg - ln.recomputed_kg for ln in lines)
+    ids = sorted({ln.correction.finding for ln in lines if ln.correction})
+    return f"Uses the corrected activity data ({delta:+,.0f} kg at the paper's factors; {', '.join(ids)})."
 
 
 def _library_explanation(module: str, changes: list[LineChange]) -> str | None:

@@ -84,13 +84,18 @@ def _summary(ledger: Ledger, checks: Mapping[str, Check]) -> list[str]:
     eng = checks.get("engine_library")
     eng_txt = ""
     if eng and eng.available and eng.total and eng.total.ours:
-        eng_txt = (f" The TrialPilot engine on the rebuilt design gives {eng.total.ours.p50:,.0f} kg "
-                   f"(P10-P90 {eng.total.ours.p10:,.0f}-{eng.total.ours.p90:,.0f}, {eng.total.diff_pct:+.0f}%).")
+        inside = "inside" if eng.total.published_within_range else "outside"
+        eng_txt = (f" The full TrialPilot engine on the rebuilt design gives {eng.total.ours.p50:,.0f} kg "
+                   f"(P10-P90 {eng.total.ours.p10:,.0f}-{eng.total.ours.p90:,.0f}, {eng.total.diff_pct:+.0f}%), "
+                   f"published total {inside} the range, with module-level differences explained per module.")
     elif eng is not None:
         eng_txt = " The engine check is not available yet (" + (eng.unavailable_reason or "unknown") + ")."
+    movers = [c for c in checks["library"].line_changes if c.library_kg is not None][:2]
+    why = "; ".join(f"{c.item.split(':')[0].split(',')[0]} ({c.library_kg.p50 - c.paper_kg:+,.0f} kg)"
+                    for c in movers if c.library_kg)
     s2 = (f"With TrialPilot's library factors the same activity data give {lib.ours.p50:,.0f} kg "
-          f"(P10-P90 {lib.ours.p10:,.0f}-{lib.ours.p90:,.0f}, {lib.diff_pct:+.1f}% vs published), the difference "
-          f"being factor vintage (DESNZ 2026 vs 2021/2022) rather than method.{eng_txt}")
+          f"(P10-P90 {lib.ours.p10:,.0f}-{lib.ours.p90:,.0f}, {lib.diff_pct:+.1f}% vs published), driven mostly by "
+          f"{why}.{eng_txt}")
     return [s1, s2]
 
 
@@ -215,9 +220,10 @@ def run(seed: int = SEED, draws: int = DRAWS) -> ScienceResults:
 def write(results: ScienceResults, out: Path = paths.RESULTS_JSON, schema: Path = paths.RESULTS_SCHEMA) -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
     data = json.loads(results.model_dump_json())
-    out.write_text(json.dumps(data, indent=2, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
+    out.write_text(json.dumps(data, indent=2, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8",
+                   newline="\n")
     schema.write_text(json.dumps(ScienceResults.model_json_schema(), indent=2, sort_keys=True) + "\n",
-                      encoding="utf-8")
+                      encoding="utf-8", newline="\n")
 
 
 def main(argv: list[str] | None = None) -> int:

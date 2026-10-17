@@ -48,7 +48,19 @@ inputs:
   - {field: "research blood samples", value: "12 per patient, frozen", origin: assumption, ref: "appendix C p.20: 313 CTAD + 261 CPT samples = 574 (12.2 per patient); one frozen sample per visit assumed"}
   - {field: drug_type, value: "small_molecule (oral cediranib, ~4000 bottles shipped)", origin: paper, ref: "appendix C p.11"}
 
-activity_overrides:   # trial-specific activity reported by the paper, applied in both engine runs
+activity_overrides:   # trial-specific activity REPORTED by the paper (inputs, not tuning), applied in both engine runs
   rate.trial_management.fte:
     value: 1.8
     ref: "appendix C p.5: trial staff FTE UK 1, Spain 0.3, Australia 0.5"
+  rate.investigator_meeting.attendees_per_site:
+    value: 0
+    ref: "appendix C p.8-9: meetings were IDMC/TSC and TMG teleconferences and two UK conferences; no investigator meeting"
+  energy.freezer.minus80.trial_share:
+    value: 0.02778
+    ref: "appendix C p.21: samples need '1/3 of a freezer' (one central -80 C freezer); 1/3 spread over 12 sites"
+  rate.closeout.archive_boxes_per_site:
+    value: 3.333
+    ref: "appendix C p.22: archiving requires 4 m2; = 40 boxes at the library's 0.1 m2/box (the box area cancels with ef.closeout.archiving_per_box_year) / 12 sites"
+  supply.sample.samples_per_shipment:
+    value: 19.8
+    ref: "appendix C p.18 and p.20: 313 CTAD + 261 CPT samples shipped in 29 single-use cold storage boxes"

@@ -1,0 +1,78 @@
+# Plain-English explanations of the engine check, per trial and module (shown in results.json and the /science page).
+# Written by A10 after reading the engine's provenance for each module (formula ids in brackets). They explain
+# structure (what each side counts), not tuning — no parameter was changed to close a gap.
+casps:
+  setup: >-
+    Allocation difference. The engine puts one site-initiation round trip per site in set-up
+    [carbon.site_initiation_trips.v1] plus a per-site documents factor; the paper books its initiation visits
+    (UK rail, Australian flights) under meetings and travel and keeps only printing and postage (350 kg) in set-up.
+  trial_management: >-
+    The engine applies one UK per-FTE factor (office energy + heating + commuting, 1,652.6 kg/FTE-year) to the
+    paper's 1.8 FTE x 6 years. The paper computed the Australian coordinating unit's office electricity from a Victorian
+    benchmark at 0.98 kg/kWh (7,347 kg for 0.5 FTE), about 13x the UK benchmark - most of the gap.
+  meetings_travel: >-
+    Monitoring intensity. The paper reports monitoring as travel distance (UK 12,957 p.km by rail, Australia 15,310,
+    Spain 3,280) but not the number of visits; the engine uses its default on-site frequency (FDA: 4-8-week intervals for
+    major efficacy trials; mid 0.54 visits/site/month), i.e. several hundred visits over 6 years - far more than an
+    academic phase 2 trial. The paper's audits (10.9 t of flights) have no engine equivalent. Reported activity applied:
+    no investigator meeting.
+  intervention: >-
+    Not comparable by design: the engine excludes the intervention module (manufacture out of scope, as in the method)
+    and models drug kits in the drug_supply extension, which also includes manufacture. The paper's 1,252 kg here is IMP
+    distribution and incineration of 1,464 overage bottles.
+  data_collection: >-
+    The paper's CASPS used paper CRFs air-freighted to and from Australia and Spain (about 0.3 t); the engine's
+    per-patient-year factor spans the two case studies and is applied over the 72-week visit window only.
+  supplies_equipment: >-
+    The paper's value is spend-based (GBP 1,350 of office machinery); the engine scales a per-patient factor, which fits
+    neither trial well with 47 patients.
+  patient_assessments: >-
+    The engine counts patient travel (km-based, per country) and per-procedure emissions (9 CT scans per patient, as
+    reported). The paper also counts hospital utilities attributed to trial staff time (2,077 kg) and consumables
+    (226 kg), which the engine does not model, and applies the UK 5.8 kg/visit travel factor to Australian and Spanish
+    patients too.
+  samples: >-
+    Reported activity applied: 574 samples in 29 boxes, one third of one -80 C freezer. The engine's samples module also
+    holds freezer storage (the paper books storage under laboratory), so samples and laboratory must be read together.
+  laboratory: >-
+    The paper's laboratory module is mostly 10 years of -80 C storage (7,307 kg at 2,192 kg per freezer-year) plus the
+    centrifuge lines that carry a units error (finding casps-f1); the engine books storage under samples and uses a
+    measured 9.7 kWh/day freezer over the 6-year trial.
+  closeout: >-
+    The engine adds one close-out round trip per site [carbon.closeout_trips.v1], which the paper does not count; the
+    archive (4 m2 for 10 years, reported) is applied as reported.
+  drug_supply: >-
+    TrialPilot extension, outside the published method: kits manufactured (with industry-reported upfront waste) x a
+    wide per-kit factor. For context, CASPS destroyed 1,464 of ~4,000 bottles shipped (~37%, appendix C p.11-12).
+  total: >-
+    Published total lies inside the engine's P10-P90. Module allocation differs (initiation trips, storage) and the engine
+    lacks hospital utilities and audits while assuming industry-level monitoring, so the module rows matter more than the total.
+primetime:
+  setup: >-
+    The engine counts one site-initiation round trip for each of the 64 sites [carbon.site_initiation_trips.v1]; PRIMETIME
+    ran 66 virtual initiation sessions and 1 in person (appendix D p.6). The engine has no parameter for virtual
+    initiation yet (request filed with A2).
+  trial_management: "Matches: the paper's 7.1 FTE-years x the same three LCCT per-FTE factors."
+  meetings_travel: >-
+    Reported activity applied: no on-site monitoring, no investigator meeting. The paper's remaining 1.1 t (TMG rail travel,
+    hotel nights, lunches, teleconferences) has no engine equivalent.
+  data_collection: "Close: the per-patient-year factor's low end is derived from PRIMETIME itself."
+  supplies_equipment: >-
+    The paper's value is spend-based (GBP 4,500 of office machinery); the engine scales a per-patient factor by 1,962
+    patients, which overstates it.
+  patient_assessments: >-
+    Two structural differences pull in opposite directions. TrialDesign applies the 5 extra mammogram visits to all 1,962
+    patients, while the paper counts them for the 1,623 no-radiotherapy patients only (+21% visits; contract proposal
+    Visit.patient_share). The engine's km-based travel gives ~4.3 kg per UK visit vs the paper's 5.8 kg, and the engine does
+    not model hospital utilities (5,778 kg) or consumables (1,485 kg).
+  samples: >-
+    Not modelled: PRIMETIME's samples are tissue blocks from routine surgery shipped for Ki67 testing (2,989 shipments),
+    which have no visit in the rebuilt schedule.
+  laboratory: "Not modelled for the same reason (lab utilities for 2,989 IHC analyses, 2,061 kg)."
+  closeout: >-
+    The engine adds one close-out round trip per site for 64 sites [carbon.closeout_trips.v1]; the paper counts none.
+    The archive (4 m2 x 10 years) is applied as reported; the paper's 2 m2 of sample storage is not modelled.
+  drug_supply: "No drug kits: avoidance-of-radiotherapy trial (drug_type none)."
+  total: >-
+    Published total lies inside the engine's P10-P90; the closeness is partly offsetting errors (extra initiation and
+    close-out trips and supplies vs missing hospital utilities, samples and laboratory).

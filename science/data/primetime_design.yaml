@@ -43,3 +43,9 @@ activity_overrides:
   rate.monitoring.onsite_visits_per_site_month:
     value: 0
     ref: "appendix D p.5: 'No feasibility visits, monitoring, audits, or conferences'"
+  rate.investigator_meeting.attendees_per_site:
+    value: 0
+    ref: "appendix D p.6-8: site initiation was virtual (66 + 6 refresher sessions, 1 in person); meetings were TMG, TSC, IDMC; no investigator meeting"
+  rate.closeout.archive_boxes_per_site:
+    value: 0.625
+    ref: "appendix D p.21: archiving requires 4 m2; = 40 boxes at the library's 0.1 m2/box (cancels with ef.closeout.archiving_per_box_year) / 64 sites"
