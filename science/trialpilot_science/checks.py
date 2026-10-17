@@ -10,10 +10,9 @@ import numpy as np
 from trialpilot_contracts import Levers, Parameter
 
 from .designs import PublishedDesign
-from .ledger import Ledger, Line
+from .ledger import Ledger
 from .library import FloatArray, LibrarySampler
 from .results import CLOSE_PCT, MATCH_PCT, MODULE_LABELS, Check, LineChange, ModuleRow, Range
-
 
 # ---------------------------------------------------------------- helpers
 
