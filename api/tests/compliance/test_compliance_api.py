@@ -214,3 +214,49 @@ def test_deep_evidence_paths_can_be_hashed_and_downloaded(client: TestClient, tm
     response = client.get(f"/api/validation/package/files/{relative.as_posix()}")
     assert response.status_code == 200 and response.content == b"PNG fixture"
     assert response.headers["content-type"] == "image/png"
+
+
+@pytest.mark.req("URS-020")
+def test_validation_package_qa_signoff_line_follows_the_live_approval(
+    client: TestClient, tmp_path: Path,
+) -> None:
+    """The report's QA sign-off line is refreshed on read, like the deliverables; unsigned stays
+    "awaiting QA approval"."""
+    from trialpilot_api.compliance import records, workflow
+
+    doc = tmp_path / "report.md"
+    doc.write_text("summary v1", encoding="utf-8")
+    records.register_file("validation_report", "VSR-1", doc)
+    vsr = workflow.create_request("validation_report", "VSR-1", "alex.author").id
+    pkg = tmp_path / "vout" / "package"
+    pkg.mkdir(parents=True)
+
+    def build(report: dict[str, object]) -> None:  # what `tpv package` wrote at build time
+        (pkg / "package_index.json").write_text(json.dumps(
+            {"deliverables": [], "report": {**report, "summary": {"total": 1}}}), encoding="utf-8")
+
+    def report() -> dict[str, object]:
+        r = client.get("/api/validation/package")
+        assert r.status_code == 200, r.text
+        return r.json()["report"]
+
+    build({"status": "awaiting QA approval", "record_id": "VSR-1", "approval_id": vsr,
+           "signatures": [], "reason": "approval request is pending"})
+    assert report()["status"] == "awaiting QA approval"
+
+    workflow.sign_request(vsr, "sam.qa", PINS["sam.qa"], "approved")
+    live = report()
+    assert live["status"] == "approved" and live["approval_id"] == vsr
+    assert live["qa_signature"]["signer"] == "sam.qa" and "reason" not in live
+    assert live["summary"] == {"total": 1}  # build-time fields are kept
+
+    doc.write_text("summary v2 (edited after QA approval)", encoding="utf-8")
+    edited = report()
+    assert edited["status"] == "approval invalid — the report changed after QA signed"
+    assert "qa_signature" not in edited and "changed after approval" in edited["reason"]
+
+    # A record this store has no request for keeps its build label; "approved" is not trusted.
+    build({"status": "awaiting QA approval", "record_id": "VSR-9"})
+    assert report()["status"] == "awaiting QA approval"
+    build({"status": "approved", "record_id": "VSR-9"})
+    assert report()["status"] == "approval unconfirmed"

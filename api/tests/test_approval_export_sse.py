@@ -51,6 +51,45 @@ def test_demo_approval_flow_with_a7(client: TestClient, design_id: str) -> None:
     assert r.status_code == 409
 
 
+def test_versions_listing_reports_the_decided_status(client: TestClient, design_id: str) -> None:
+    """GET /versions syncs the approval decision like GET /scenarios and GET /scenarios/{id}."""
+    if not _a7_active(client):
+        pytest.skip("A7 compliance package not importable")
+    s = save_scenario(client, design_id)
+    approval_id = client.post(f"/api/scenarios/{s['id']}/submit", headers=AUTHOR).json()["approval_id"]
+    assert [v["status"] for v in client.get(f"/api/scenarios/{s['id']}/versions").json()] == [
+        "submitted"]
+    assert _sign(client, approval_id, REVIEWER, "reviewed").status_code == 200
+    assert _sign(client, approval_id, QA, "approved").status_code == 200
+
+    # First read after the decision goes through /versions (no GET of the scenario before it).
+    assert [v["status"] for v in client.get(f"/api/scenarios/{s['id']}/versions").json()] == [
+        "approved"]
+    assert audit_actions(client, s["id"])[-1] == "scenario.approved"
+    assert client.get(f"/api/scenarios/{s['id']}").json()["status"] == "approved"
+
+
+def test_saved_scenario_cannot_be_submitted_through_the_approvals_route(
+    client: TestClient, design_id: str,
+) -> None:
+    """POST /api/approvals for a saved scenario is refused: only /submit freezes the row, so an
+    approval created here would sign a draft that can still change."""
+    if not _a7_active(client):
+        pytest.skip("A7 compliance package not importable")
+    s = save_scenario(client, design_id)
+    r = client.post("/api/approvals", headers=AUTHOR, json={
+        "record_type": "scenario", "record_id": s["id"], "record_hash": s["record_hash"]})
+    assert r.status_code == 409 and r.json()["error"] == "submit_via_scenario"
+    assert r.json()["details"]["submit_path"] == f"/api/scenarios/{s['id']}/submit"
+    assert client.get("/api/approvals", params={"record_id": s["id"]}).json()["items"] == []
+    assert client.post("/api/approvals", json={  # identity is still checked first
+        "record_type": "scenario", "record_id": s["id"]}).status_code == 401
+
+    sub = client.post(f"/api/scenarios/{s['id']}/submit", headers=AUTHOR)
+    assert sub.status_code == 200 and sub.json()["status"] == "submitted"
+    assert len(client.get("/api/approvals", params={"record_id": s["id"]}).json()["items"]) == 1
+
+
 @pytest.mark.req("URS-023")
 def test_compliance_errors_use_the_app_error_shape(
     client: TestClient, tmp_path: Path, monkeypatch: pytest.MonkeyPatch,

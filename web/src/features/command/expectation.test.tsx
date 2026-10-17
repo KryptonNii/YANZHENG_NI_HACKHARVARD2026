@@ -5,7 +5,7 @@
 import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import type { Alert, Intervention } from "@/app/contracts";
+import type { Alert, Intervention, MetricRangeUnit } from "@/app/contracts";
 import type { AlertOptions, EffectDetail, Expectation, Reconciliation } from "./api";
 import { AlertsPanel } from "./AlertsPanel";
 import { InterventionsPanel } from "./InterventionsPanel";
@@ -14,7 +14,7 @@ const ON_DEMAND = "Switch the site to on-demand (IRT-triggered) resupply and ret
 const TRANSFER = "Transfer excess kits to the regional depot before they expire";
 const FEASIBILITY = "Hold a feasibility call with the site to review its pre-screening log";
 
-const range = (p10: number, p50: number, p90: number, unit: string) => ({ p10, p50, p90, unit });
+const range = (p10: number, p50: number, p90: number, unit: MetricRangeUnit) => ({ p10, p50, p90, unit });
 
 const alert: Alert = {
   id: "alert-1",
@@ -34,7 +34,7 @@ const options: AlertOptions = {
   ranked_by: "net_usd P50 (cost avoided minus action cost)",
   model_label: "Planning model with assumed parameters. A prediction, not an observed result.",
   computed_at_day: 406,
-  baseline: { delay_days: null, cost_usd: range(49000, 105000, 187000, "usd") as never, description: "Doing nothing" },
+  baseline: { delay_days: null, cost_usd: range(49000, 105000, 187000, "usd"), description: "Doing nothing" },
   best_net_positive: true,
   items: [
     {
@@ -126,7 +126,7 @@ const expectation: Expectation = {
 function effectWith(reconciliation: Partial<Reconciliation>): EffectDetail {
   return {
     estimate: {
-      intervention_id: "iv-1", method: "diff_in_diff", effect: range(-80, -75, -70, "kits") as never,
+      intervention_id: "iv-1", method: "diff_in_diff", effect: range(-80, -75, -70, "kits"),
       treated_change: -80, control_change: -5, verdict: "likely_worked", explanation: "The change exceeds the controls.",
     },
     expectation,

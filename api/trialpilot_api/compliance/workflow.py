@@ -299,3 +299,28 @@ def approval_status(
                 "signatures": v["signatures"]}
     return {"approved": True, "approval_id": latest["id"], "status": "approved", "reason": None,
             "signatures": v["signatures"]}
+
+
+def report_approval(record_id: str, *, store: Store | None = None) -> dict[str, Any]:
+    """QA sign-off of a validation summary report, labelled for people.
+
+    The one label mapping shared by `tpv report` (written into the validation package) and
+    `GET /api/validation/package` (refreshed on every read). Unsigned stays
+    "awaiting QA approval". Returns `{status, approval_id, signatures}` plus `qa_signature`
+    when approved, or `reason` otherwise.
+    """
+    st = approval_status("validation_report", record_id, store=store)
+    if st["approved"]:
+        qa = [s for s in st["signatures"] if s["meaning"] == "approved"]
+        return {"status": "approved", "approval_id": st["approval_id"],
+                "signatures": st["signatures"], "qa_signature": qa[-1] if qa else None}
+    if st["status"] == "pending":
+        label = "awaiting QA approval"
+    elif st["approval_id"] is None:
+        label = "not submitted"
+    elif st["status"] == "approved":
+        label = "approval invalid — the report changed after QA signed"
+    else:
+        label = f"{st['status']} ({st['reason']})"
+    return {"status": label, "approval_id": st["approval_id"], "signatures": st["signatures"],
+            "reason": st["reason"]}

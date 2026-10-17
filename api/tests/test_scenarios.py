@@ -260,6 +260,22 @@ def test_only_author_submits(client: TestClient, design_id: str) -> None:
     assert r.status_code == 403 and r.json()["error"] == "not_author"
 
 
+def test_admin_cannot_submit_someone_elses_draft(client: TestClient, design_id: str) -> None:
+    """Admin holds no approval.submit permission; before this was refused, the approval request
+    and its audit entry named the author as the one who submitted."""
+    s = save_scenario(client, design_id)
+    r = client.post(f"/api/scenarios/{s['id']}/submit", headers=ADMIN)
+    assert r.status_code == 403 and r.json()["error"] == "not_author"
+    assert client.get(f"/api/scenarios/{s['id']}").json()["status"] == "draft"
+    assert client.get("/api/approvals", params={"record_id": s["id"]}).json()["items"] == []
+    assert audit_actions(client, s["id"]) == ["scenario.create"]
+
+    r = client.post(f"/api/scenarios/{s['id']}/submit", headers=AUTHOR)
+    assert r.status_code == 200 and r.json()["status"] == "submitted"
+    entries = client.get("/api/audit", params={"object_id": r.json()["approval_id"]}).json()["items"]
+    assert [(e["action"], e["actor"]) for e in entries] == [("approval.submit", "alex.author")]
+
+
 @pytest.mark.req("URS-010")
 def test_new_version_leaves_submitted_row_untouched(client: TestClient, design_id: str) -> None:
     s = save_scenario(client, design_id)
