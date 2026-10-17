@@ -1,0 +1,45 @@
+[project]
+name = "trialpilot-engine"
+version = "0.1.0"
+description = "TrialPilot calculation engine: cost, site staff time, patient burden, carbon, uncertainty, provenance (pure functions, no I/O)"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+    "numpy>=1.26",
+    "pydantic>=2.7,<3",
+    "trialpilot-contracts",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["trialpilot_engine"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["perf: performance test (skip with TP_SKIP_PERF=1 on slow machines)"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+plugins = ["pydantic.mypy"]
+
+[tool.uv.sources]
+trialpilot-contracts = { path = "../contracts", editable = true }
+
+[dependency-groups]
+dev = [
+    "mypy>=1.11",
+    "pytest>=8.2",
+    "ruff>=0.6",
+]
