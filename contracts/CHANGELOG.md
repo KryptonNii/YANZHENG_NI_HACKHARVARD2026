@@ -3,6 +3,41 @@
 Decisions on `handoffs/*_CONTRACT_CHANGES.md`. Accepted changes are applied to `trialpilot_contracts/models.py`,
 regenerated (`contracts/schema/`, `web/src/contracts.ts`) and listed here. A §2 rule is never weakened.
 
+## Recorded rules — 2026-10-16 ET — no schema change
+
+### A4 deterministic UUIDv5 — ACCEPTED as a producer convention
+`id` fields stay `str`. The contract does not check the UUID version nibble, and it does not reject the
+existing non-UUID fixture ids (`site-1`, `sig1`, and the same shape in the valid fixtures). Both UUID4 and
+UUIDv5 strings already validate. No consumer migration.
+
+**Rule.**
+- Records created in the app may be UUID4 strings. A6's operations feed formats a deterministic SHA-256
+  prefix as RFC 4122 version 4 (`api/trialpilot_api/ops/simulator.py` `event_uuid`). Fixture and test ids
+  may remain plain strings.
+- Records derived from an external identifier are UUIDv5 in a fixed namespace. A4's importer
+  (`api/trialpilot_api/importers/ctgov.py`) uses namespace `6f1c3c3e-8a43-4d0e-9b55-1f2a5e0c7a11`:
+  - `TrialDesign.id = uuid5(namespace, "ctgov:<NCT>")`
+  - `Site.id = uuid5(namespace, "ctgov:<NCT>:site:<key>#<n>")` where `<n>` is the 1-based count of that site key
+- Protocol extraction ids (`api/trialpilot_api/importers/protocol_extract.py`) use a second namespace,
+  `0b8f5d0e-5a3c-4c55-9f7e-2c1d7a9e4b21`. They are not `TrialDesign.id`.
+  - live extract: `uuid5(namespace, "<pdf_sha256>:<method>:<model>")`
+  - BOREAS build-time cache: `uuid5(namespace, "<pdf_sha256>:transcription:<model>")`
+- Re-importing the same study must keep the same design and site ids. The name strings above are the rule;
+  do not hash the NCT id alone or the PDF sha256 alone.
+
+**Why no schema change.** Tightening `id` to a UUID type would reject current fixtures and every in-app string
+id. A4 already emits values that pass `uuid.UUID(...)`. Search at the time of the proposal found no consumer
+that checks the version nibble.
+
+### A10 `Visit.patient_share` — DEFERRED (known limitation)
+Not added. `handoffs/A10_CONTRACT_CHANGES.md` asks for `Visit.patient_share: float = 1.0` so a visit can apply
+to a fraction of `enrollment_target`. PRIMETIME's five mammogram visits would use 1623/1962. The current
+`Visit` model has no such field, so every scheduled visit is counted for the full cohort.
+
+This needs the engine activity math, the science designs, and any API or UI that builds visits to change
+together. That sync is out of scope for this integration pass. The published engine gaps stay as A10 and A2
+recorded them. Do not invent a share in one module only.
+
 ## v4 — 2026-10-16 ET — ACCEPTED: forecast / supply views, count unit, site activation (A3, A6, A8)
 **Accepted changes.**
 - A3's `handoffs/A3.md` unit request and A8's unit note: add `"count"` to `MetricRange.unit`.

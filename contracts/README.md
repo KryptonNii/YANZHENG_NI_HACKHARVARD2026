@@ -5,7 +5,7 @@ Owned by A1. Everyone else reads it and proposes changes in `handoffs/<agent>_CO
 
 | File | What |
 |---|---|
-| `trialpilot_contracts/models.py` | §5 pydantic v2 models, verbatim |
+| `trialpilot_contracts/models.py` | §5 pydantic v2 models, plus the accepted changes in `CHANGELOG.md` |
 | `trialpilot_contracts/constants.py` | §6 module ids (`CARBON_MODULES`, …), `ALERT_IMPACT_KEYS` |
 | `trialpilot_contracts/params.py` | `load_params(dir)`, `param_set_version(params)`, CLI validator |
 | `schema/*.json` | JSON Schema per model (generated) |
@@ -26,6 +26,11 @@ from trialpilot_contracts import load_params, param_set_version, CARBON_MODULES
 ```
 
 TypeScript: `import type { ScenarioResult } from "../../contracts";` (from `web/src/features/<x>/`).
+The generated file is `web/src/contracts.ts`. It is tracked. Do not hand-edit it and do not keep a second copy.
+
+Identifier convention (no schema constraint; see `CHANGELOG.md`): app-created ids may be UUID4 or plain
+strings; ClinicalTrials.gov imports use UUIDv5 with the namespaces and name strings recorded there.
+`Visit` has no `patient_share`. A visit applies to the whole enrolled cohort until that field is accepted.
 
 ## Parameter library
 

@@ -67,8 +67,11 @@ Copyrighted documents (e.g. GAMP 5) are linked, never committed.
 |---|---|---|---|---|
 | ClinicalTrials.gov API v2 (trial registry data) | No charge; redistribution terms below (confirmed in handoffs/A4.md, 2026-10-16) | trial import (cached fixtures) | A4 | https://clinicaltrials.gov/about-site/terms-conditions |
 | GeoNames | CC BY 4.0 (confirmed in handoffs/A4.md, 2026-10-16) | offline geocoding of trial sites | A4 | https://www.geonames.org/about.html |
-| UK Government GHG Conversion Factors | to confirm by A10 | emission factors | A10 | https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting |
-| Griffiths, Fox, Williamson et al., BMJ Open 2024 (Low Carbon Clinical Trials Group method) | to confirm by A10 | carbon module framework; CASPS/PRIMETIME published values (cited, not copied) | A10 | https://bmjopen.bmj.com/content/14/1/e075755 |
+| UK Government GHG Conversion Factors (DESNZ 2022/2025/2026) | Open Government Licence v3.0 (recorded in docs/sources.md §11, 2026-10-16) | emission factors; cell-cited values, workbooks not committed | A10 | https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting |
+| DfT National Travel Survey | Open Government Licence v3.0 (recorded in docs/sources.md §11, 2026-10-16) | patient-travel distance and mode shares | A10 | https://www.gov.uk/government/statistical-data-sets/nts04-purpose-of-trips |
+| Ember yearly electricity data | CC BY 4.0 (recorded in docs/sources.md §11, 2026-10-16) | grid emission intensity outside the UK | A10 | https://ember-energy.org/data/yearly-electricity-data/ |
+| Australian National Greenhouse Accounts Factors 2026 | CC BY 4.0 (recorded in docs/sources.md §11, 2026-10-16) | Australian grid factors | A10 | https://www.dcceew.gov.au/climate-change/publications/national-greenhouse-accounts-factors-2026 |
+| Griffiths, Fox, Williamson et al., BMJ Open 2024 (Low Carbon Clinical Trials Group method) | CC BY 4.0 (recorded in docs/sources.md §11, 2026-10-16) | carbon module framework; CASPS/PRIMETIME published values (cited, not copied) | A10 | https://bmjopen.bmj.com/content/14/1/e075755 |
 | ISPE GAMP 5 Guide | copyrighted — linked only, never committed | validation approach reference | A7 | https://ispe.org/publications/guidance-documents/gamp-5-guide-2nd-edition |
 
 ClinicalTrials.gov: [A4's source review](handoffs/A4.md) records the
@@ -82,3 +85,12 @@ Contains data from [GeoNames](https://www.geonames.org/about.html), licensed und
 [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
 Modifications (name normalization, alternate-name filtering, coordinate rounding and
 column selection) are listed in the [offline index notes](data/fixtures/ctgov/geonames/README.md).
+
+UK Government GHG Conversion Factors and the DfT National Travel Survey: [A10's source index](docs/sources.md)
+§11 records the gov.uk footer, "All content is available under the Open Government Licence v3.0,
+except where otherwise stated." Factor values are copied with workbook cell references. The
+workbooks themselves are not committed.
+
+Griffiths et al., BMJ Open 2024, Ember yearly electricity data, and the Australian National
+Greenhouse Accounts Factors 2026 are CC BY 4.0 in that same index. Published numbers are transcribed
+and cited. The paper PDFs are not committed.

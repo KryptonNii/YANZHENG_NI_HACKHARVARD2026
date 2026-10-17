@@ -1,7 +1,10 @@
-# TrialPilot for judges:  docker compose up --build   →  http://127.0.0.1:8000
-# One image (built by A5's Dockerfile) serves the FastAPI backend under /api and the built web app at /.
-# Ports are bound to 127.0.0.1 only; put a reverse proxy (Caddy, see deploy/) in front to expose it.
-# Runs offline by default (cached fixtures, no network calls). Set DEMO_OFFLINE=0 in .env for live imports.
+# TrialPilot, local only:  docker compose up --build
+# Then open http://127.0.0.1:8000 . That address is the compose port bind, not a deployed URL.
+# Docker was not installed in the integration environment, so this file has not been executed.
+# One image (api/Dockerfile) serves FastAPI under /api and the built web app at /.
+# The image command is the Dockerfile CMD: python -m trialpilot_api.seed, then
+# uvicorn trialpilot_api.main:app . `make dev` uses the equivalent factory create_app.
+# Ports are bound to 127.0.0.1 only. Runs offline by default. Set DEMO_OFFLINE=0 in .env for live imports.
 name: trialpilot
 
 services:
