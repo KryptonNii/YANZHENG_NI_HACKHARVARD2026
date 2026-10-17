@@ -104,7 +104,7 @@ async def main() -> None:
     if args.large:
         d = large_design()
         r = httpx.post(f"{args.base}/api/designs", json=d,
-                       headers={"X-User": "loadtest", "X-Role": "author"}, timeout=60)
+                       headers={"X-User": "alex.author", "X-Role": "author"}, timeout=60)
         r.raise_for_status()
         args.design_id = d["id"]
     if not args.design_id:

@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 
 import pytest
-from conftest import AUTHOR, VIEWER, audit_actions, make_design
+from a5_support import AUTHOR, VIEWER, audit_actions, make_design
 from fastapi import APIRouter, FastAPI
 from fastapi.testclient import TestClient
 
@@ -27,10 +27,12 @@ def test_health_reports_status_offline_and_modules(client: TestClient) -> None:
     assert set(body["modules"]) >= {"importers", "ops", "compliance", "web"}
 
 
+@pytest.mark.req("URS-029")
 def test_health_offline_flag(make_client) -> None:  # type: ignore[no-untyped-def]
     assert make_client(demo_offline=True).get("/api/health").json()["offline"] is True
 
 
+@pytest.mark.req("URS-029")
 def test_offline_flag_read_from_environment(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("DEMO_OFFLINE", "1")
     assert Settings().demo_offline is True
@@ -89,6 +91,7 @@ def test_design_id_generated_when_missing(client: TestClient) -> None:
     assert len(r.json()["id"]) == 36
 
 
+@pytest.mark.req("URS-023")
 def test_design_validation_and_identity(client: TestClient) -> None:
     bad = make_design()
     del bad["sites"]
@@ -104,6 +107,38 @@ def test_design_validation_and_identity(client: TestClient) -> None:
     r = client.post("/api/designs", json=make_design(), headers={"X-User": "a b"})
     assert r.status_code == 400
     assert client.get("/api/designs/unknown").json()["error"] == "design_not_found"
+
+
+@pytest.mark.req("URS-023")
+def test_role_comes_from_the_user_registry(client: TestClient) -> None:
+    assert client.get("/api/health").json()["compliance"]["roles"] == "registry"
+    # Claiming a higher role than the registered one is refused.
+    r = client.post("/api/designs", json=make_design(), headers={**AUTHOR, "X-Role": "qa"})
+    assert r.status_code == 403 and r.json()["error"] == "role_mismatch"
+    assert r.json()["details"]["registered_role"] == "author"
+    # Unregistered users cannot change data.
+    r = client.post("/api/designs", json=make_design(),
+                    headers={"X-User": "mallory", "X-Role": "author"})
+    assert r.status_code == 403 and r.json()["error"] == "unknown_user"
+    # Without X-Role the registered role is used and audited.
+    r = client.post("/api/designs", json=make_design("d-qa"), headers={"X-User": "sam.qa"})
+    assert r.status_code == 201, r.text
+    entries = client.get("/api/audit", params={"object_id": "d-qa"}).json()["items"]
+    assert [(e["actor"], e["role"]) for e in entries] == [("sam.qa", "qa")]
+    # A registered viewer is still read-only even if it claims nothing.
+    r = client.post("/api/designs", json=make_design(), headers={"X-User": "val.viewer"})
+    assert r.status_code == 403 and r.json()["error"] == "forbidden_role"
+
+
+@pytest.mark.req("URS-015")
+def test_stub_mode_falls_back_to_the_role_header(make_client) -> None:  # type: ignore[no-untyped-def]
+    c = make_client(mount_optional_routers=False)
+    assert c.get("/api/health").json()["compliance"]["roles"] == "header"
+    r = c.post("/api/designs", json=make_design("d-stub"),
+               headers={"X-User": "someone", "X-Role": "reviewer"})
+    assert r.status_code == 201, r.text
+    entry = c.app.state.services.compliance.stub_entries("d-stub")[0]  # type: ignore[attr-defined]
+    assert (entry.actor, entry.role) == ("someone", "reviewer")
 
 
 def test_fixture_designs_are_seeded(make_client, tmp_path: Path) -> None:  # type: ignore[no-untyped-def]

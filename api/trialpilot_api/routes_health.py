@@ -32,5 +32,9 @@ def health(svc: Any = Depends(services)) -> dict[str, Any]:
         "compliance": dict(svc.compliance.status),
         "modules": svc.modules,
         "science_results": svc.settings.resolved_science_results.is_file(),
-        "identity": "demo headers X-User / X-Role (no login; prototype only)",
+        "identity": (
+            "demo header X-User (no login; prototype only); role from the user registry"
+            if svc.compliance.has_user_registry
+            else "demo headers X-User / X-Role (no login; prototype only)"
+        ),
     }

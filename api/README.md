@@ -17,9 +17,11 @@ Interactive docs: `http://localhost:8000/docs`.
 
 - **Errors** (every endpoint): `{"error": "<code>", "message": "<plain English>", "details": {...}}`;
   `details.request_id` matches the `X-Request-ID` response header and the JSON log line.
-- **Demo identity only**: changes need `X-User` (e.g. `alex.author`) and `X-Role`
-  (`author | reviewer | qa | admin | viewer`). There is no login; `viewer` cannot change data.
-  Signing (A7) re-authenticates with a demo PIN.
+- **Demo identity only**: changes need `X-User` (e.g. `alex.author`). The role comes from A7's user
+  registry (URS-023), never from the request: `X-Role` is optional, and if sent it must match the
+  registered role (`403 role_mismatch`); unregistered users get `403 unknown_user`; `viewer` cannot
+  change data. There is no login. Signing (A7) re-authenticates with a demo PIN. Only if A7's package
+  cannot be imported (stub mode, `/api/health` → `compliance.roles: "header"`) is `X-Role` trusted.
 - **Every change is audited** before it is applied (A7 `audit.append`; a hash-chained stub if A7 is
   absent). If the change then fails, a compensating `<action>.failed` entry is appended.
 - **Ranges and unknowns**: every metric is `{p10, p50, p90, unit}`. A metric the engine cannot compute
@@ -124,6 +126,8 @@ with `TP_DEMO_PINS`).
 | `TP_CORS_ORIGINS` | Vite dev ports 5173, 5178 | comma-separated |
 | `TP_DEFAULT_DRAWS` / `TP_MAX_DRAWS` / `TP_DEFAULT_SEED` | 2000 / 20000 / 7 | Monte Carlo |
 | `TP_COMPUTE_CACHE_SIZE` | 256 | in-process LRU entries |
+| `TP_COMPUTE_CONCURRENCY` | 2 | engine runs at once; the rest queue (`X-Queue-Ms`) |
+| `TP_MCP_API_URL` | — | MCP server only: query this running API instead of running it in-process |
 | `TP_LOG_LEVEL` / `TP_LOG_JSON` | INFO / 1 | structured JSON logs with request ids |
 
 ## For other modules
@@ -134,3 +138,35 @@ with `TP_DEMO_PINS`).
 - **Audit (A4/A6)**: `request.app.state.services.compliance.append(actor, role, action, object_type,
   object_id, before_hash, after_hash, reason)` (A7's function, or the stub), or A7's `audit.append` directly.
 - **Scenario record hash (A7)**: registered with `compliance.records.register_resolver("scenario", ...)`.
+
+## MCP server (Claude Code / agents)
+
+`trialpilot_api/mcp_server.py` exposes the engine to MCP clients with the official MCP Python SDK
+(`mcp` 2.3.0, MIT, `MCPServer`, stdio transport). Six **read-only** tools: `list_designs`,
+`list_scenarios`, `compute_scenario`, `compare_scenarios`, `explain_metric`, `get_parameter`. No tool
+saves, submits, approves or signs (AI never writes results or signatures); every call goes through
+this API, so validation, error codes, caching and parameter versions are the same as in the web app.
+
+```bash
+# add to Claude Code (from the repo root)
+claude mcp add trialpilot -- uv run --project api python -m trialpilot_api.mcp_server
+# run it directly (stdio); logs go to stderr
+uv run --project api python -m trialpilot_api.mcp_server
+# query a running API instead of starting one in-process
+TP_MCP_API_URL=http://localhost:8000 uv run --project api python -m trialpilot_api.mcp_server
+```
+
+- `compute_scenario(design_id, levers?, seed=7, draws=2000)` → six metrics as P10/P50/P90 + unit,
+  per-module cost/CO2e, warnings, parameter-set version, `compute_ms`, `cache`. Unknown lever keys
+  come back as a tool error (`validation_error`), never silently dropped.
+- `compare_scenarios(a_id, b_id)` → per-draw deltas B − A for two saved scenarios, each with a
+  direction (`increase` / `decrease` / `no change` / `uncertain` when the P10–P90 range includes 0).
+- `explain_metric(metric, design_id | scenario_id, levers?, top=5)` → the metric's range, the formulas
+  that feed it (module, formula id, description, contribution range, inputs, parameter ids,
+  assumptions; largest first) and the top variance drivers with sources. Duration and drug waste come
+  from A3's forecast / supply simulation, which has no per-module formula items; the tool says so.
+
+Recorded session (real stdio transport, real engine, temporary database):
+[`MCP_DEMO.md`](MCP_DEMO.md), regenerate with `uv run --project api python api/scripts/mcp_demo.py
+--out api/MCP_DEMO.md`. In-process mode builds the API on the first call (a few seconds); times in
+the transcript depend on machine load. Tests: `api/tests/test_mcp_server.py` (SDK client in-process).

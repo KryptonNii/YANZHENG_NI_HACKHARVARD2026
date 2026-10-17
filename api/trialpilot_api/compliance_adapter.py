@@ -63,11 +63,13 @@ class ComplianceAdapter:
         self._audit_mod: Any = None
         self._workflow_mod: Any = None
         self._records_mod: Any = None
+        self._roles_mod: Any = None
         self.status: dict[str, str] = {}
         if use_a7:
             self._load_a7()
         self.status.setdefault("audit", "stub")
         self.status.setdefault("approvals", "stub")
+        self.status.setdefault("roles", "header")
 
     # ---------------------------------------------------------------- A7 discovery
     def _load_a7(self) -> None:
@@ -80,7 +82,27 @@ class ComplianceAdapter:
             self.status["reason"] = f"{type(exc).__name__}: {exc}"[:300]
             return
         self._audit_mod, self._workflow_mod, self._records_mod = audit, workflow, records
-        self.status.update(audit="a7", approvals="a7")
+        try:
+            roles = importlib.import_module("trialpilot_api.compliance.roles")
+            self._roles_mod = roles if callable(getattr(roles, "get_user", None)) else None
+        except Exception as exc:
+            log.warning("A7 user registry not usable", extra={"error": str(exc)})
+        self.status.update(audit="a7", approvals="a7",
+                           roles="registry" if self._roles_mod is not None else "header")
+
+    @property
+    def has_user_registry(self) -> bool:
+        return self._roles_mod is not None
+
+    def registered_role(self, username: str) -> str | None:
+        """Role of a registered user (A7 registry, URS-023); None if the user is unknown.
+
+        Only meaningful when `has_user_registry`; the stub has no registry.
+        """
+        if self._roles_mod is None:
+            return None
+        user = self._roles_mod.get_user(username)
+        return str(user.role) if user is not None else None
 
     def register_record_resolver(self, record_type: str, fn: RecordResolver) -> None:
         """Let A7 check, on every read, that a signed record still has the signed hash."""

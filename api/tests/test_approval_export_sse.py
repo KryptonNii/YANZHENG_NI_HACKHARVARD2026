@@ -7,7 +7,7 @@ import asyncio
 import threading
 
 import pytest
-from conftest import AUTHOR, PINS, QA, REVIEWER, audit_actions, make_design, save_scenario
+from a5_support import AUTHOR, PINS, QA, REVIEWER, audit_actions, make_design, save_scenario
 from fastapi.testclient import TestClient
 
 from trialpilot_api.sse import EventBroker, sse_response
@@ -50,6 +50,7 @@ def test_demo_approval_flow_with_a7(client: TestClient, design_id: str) -> None:
     assert r.status_code == 409
 
 
+@pytest.mark.req("URS-015")
 def test_stub_compliance_keeps_mutations_audited(make_client) -> None:  # type: ignore[no-untyped-def]
     c = make_client(mount_optional_routers=False)
     svc = c.app.state.services
@@ -79,6 +80,7 @@ def test_stub_audit_chain_detects_tampering(make_client) -> None:  # type: ignor
 
 
 # ------------------------------------------------------------------------------ export
+@pytest.mark.req("URS-028")
 def test_export_csv_and_pdf(client: TestClient, design_id: str) -> None:
     s = save_scenario(client, design_id, remote_monitoring_share=0.5)
     client.post(f"/api/scenarios/{s['id']}/submit", headers=AUTHOR)
@@ -97,6 +99,7 @@ def test_export_csv_and_pdf(client: TestClient, design_id: str) -> None:
     assert client.get("/api/export/scenario/nope.csv").status_code == 404
 
 
+@pytest.mark.req("URS-028")
 def test_export_pdf_lists_signatures(client: TestClient, design_id: str) -> None:
     if not _a7_active(client):
         pytest.skip("A7 compliance package not importable")
@@ -151,6 +154,7 @@ def test_sse_response_uses_15s_heartbeat_and_last_event_id() -> None:
     assert resp.headers["cache-control"] == "no-cache"
 
 
+@pytest.mark.req("URS-004")
 def test_unknown_metrics_survive_save_and_export(make_client, fake_engine) -> None:  # type: ignore[no-untyped-def]
     """The engine reports a metric it cannot compute as NaN (unknown, never 0): JSON shows null,
     storage round-trips it, exports say 'unknown'."""

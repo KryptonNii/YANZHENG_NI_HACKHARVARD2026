@@ -5,13 +5,22 @@ from __future__ import annotations
 import sqlite3
 
 import pytest
-from conftest import ADMIN, AUTHOR, REVIEWER, FakeEngine, audit_actions, make_design, save_scenario
+from a5_support import (
+    ADMIN,
+    AUTHOR,
+    REVIEWER,
+    FakeEngine,
+    audit_actions,
+    make_design,
+    save_scenario,
+)
 from fastapi.testclient import TestClient
 
 from trialpilot_api.engine_adapter import EngineFns
 
 
 # ------------------------------------------------------------------------------ compute
+@pytest.mark.req("URS-004")
 def test_compute_happy_path_returns_ranges_and_headers(client: TestClient, design_id: str) -> None:
     r = client.post("/api/scenarios/compute", json={
         "design_id": design_id, "levers": {"remote_monitoring_share": 0.5}})
@@ -26,6 +35,7 @@ def test_compute_happy_path_returns_ranges_and_headers(client: TestClient, desig
     assert r.headers["x-parameter-set-version"] == body["parameter_set_version"]
 
 
+@pytest.mark.req("URS-005")
 def test_compute_cache_hit_on_identical_request(
     client: TestClient, design_id: str, fake_engine: FakeEngine
 ) -> None:
@@ -108,6 +118,7 @@ def test_engine_not_ready_and_engine_errors(make_client, fake_engine: FakeEngine
 
 
 # ------------------------------------------------------------------------------ saved scenarios
+@pytest.mark.req("URS-015")
 def test_save_scenario_is_draft_and_audited(client: TestClient, design_id: str) -> None:
     s = save_scenario(client, design_id, remote_monitoring_share=0.5)
     assert s["status"] == "draft" and s["version"] == 1 and s["lineage_id"] == s["id"]
@@ -134,6 +145,7 @@ def test_draft_edit_by_author_only(client: TestClient, design_id: str) -> None:
     assert audit_actions(client, s["id"]) == ["scenario.create", "scenario.update"]
 
 
+@pytest.mark.req("URS-010")
 def test_submitted_scenario_is_immutable(client: TestClient, design_id: str) -> None:
     s = save_scenario(client, design_id)
     r = client.post(f"/api/scenarios/{s['id']}/submit", headers=AUTHOR)
@@ -153,6 +165,7 @@ def test_submitted_scenario_is_immutable(client: TestClient, design_id: str) -> 
     assert audit_actions(client, s["id"]) == ["scenario.create", "scenario.submit"]
 
 
+@pytest.mark.req("URS-010")
 def test_database_refuses_changes_to_submitted_rows(client: TestClient, design_id: str) -> None:
     s = save_scenario(client, design_id)
     client.post(f"/api/scenarios/{s['id']}/submit", headers=AUTHOR)
@@ -176,6 +189,7 @@ def test_only_author_submits(client: TestClient, design_id: str) -> None:
     assert r.status_code == 403 and r.json()["error"] == "not_author"
 
 
+@pytest.mark.req("URS-010")
 def test_new_version_leaves_submitted_row_untouched(client: TestClient, design_id: str) -> None:
     s = save_scenario(client, design_id)
     client.post(f"/api/scenarios/{s['id']}/submit", headers=AUTHOR)
@@ -229,6 +243,7 @@ def test_drivers_for_saved_and_unsaved(client: TestClient, design_id: str) -> No
     assert r.status_code == 422 and r.json()["error"] == "invalid_metric"
 
 
+@pytest.mark.req("URS-023")
 def test_mutations_need_identity(client: TestClient, design_id: str) -> None:
     r = client.post("/api/scenarios", json={"name": "x", "design_id": design_id})
     assert r.status_code == 401

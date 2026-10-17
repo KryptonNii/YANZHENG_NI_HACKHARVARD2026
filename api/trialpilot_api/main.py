@@ -42,8 +42,9 @@ DESCRIPTION = """TrialPilot API — scenario simulator + command center for clin
 Every metric is a P10/P50/P90 range with provenance. Error shape for every endpoint:
 `{"error": "<code>", "message": "<plain English>", "details": {...}}`.
 
-**Demo identity only:** mutations take the acting user from `X-User` and the role from `X-Role`
-(author, reviewer, qa, admin, viewer). There is no login in this prototype.
+**Demo identity only:** mutations take the acting user from `X-User`; the role (author, reviewer,
+qa, admin, viewer) comes from the user registry, and an `X-Role` header that disagrees with it is
+refused (403 `role_mismatch`). There is no login in this prototype.
 """
 
 

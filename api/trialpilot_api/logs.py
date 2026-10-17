@@ -8,7 +8,7 @@ import sys
 import time
 import uuid
 from datetime import UTC, datetime
-from typing import Any
+from typing import Any, TextIO
 
 request_id_var: contextvars.ContextVar[str | None] = contextvars.ContextVar("request_id", default=None)
 
@@ -39,12 +39,16 @@ class _RequestIdFilter(logging.Filter):
         return True
 
 
-def configure_logging(level: str = "INFO", as_json: bool = True) -> None:
+def configure_logging(
+    level: str = "INFO", as_json: bool = True, stream: TextIO | None = None
+) -> None:
+    """One handler on the `trialpilot` logger (stdout by default; the MCP stdio server passes
+    stderr because its stdout is the protocol channel). Later calls keep the first handler."""
     root = logging.getLogger("trialpilot")
     root.setLevel(level.upper())
     if any(getattr(h, "_trialpilot", False) for h in root.handlers):
         return
-    handler = logging.StreamHandler(sys.stdout)
+    handler = logging.StreamHandler(stream or sys.stdout)
     handler._trialpilot = True  # type: ignore[attr-defined]
     handler.addFilter(_RequestIdFilter())
     handler.setFormatter(JsonFormatter() if as_json else logging.Formatter(
