@@ -1,0 +1,271 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "Procedure": {
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "site_minutes": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Site Minutes"
+        },
+        "ships_sample": {
+          "default": false,
+          "title": "Ships Sample",
+          "type": "boolean"
+        },
+        "sample_temp": {
+          "anyOf": [
+            {
+              "enum": [
+                "ambient",
+                "refrigerated",
+                "frozen_-20",
+                "frozen_-80"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sample Temp"
+        }
+      },
+      "required": [
+        "code",
+        "label"
+      ],
+      "title": "Procedure",
+      "type": "object"
+    },
+    "Site": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "city": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "City"
+        },
+        "country": {
+          "title": "Country",
+          "type": "string"
+        },
+        "lat": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Lat"
+        },
+        "lon": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Lon"
+        },
+        "expected_enrollment": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expected Enrollment"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "country"
+      ],
+      "title": "Site",
+      "type": "object"
+    },
+    "Visit": {
+      "properties": {
+        "number": {
+          "title": "Number",
+          "type": "integer"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "week": {
+          "title": "Week",
+          "type": "number"
+        },
+        "procedures": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Procedure"
+          },
+          "title": "Procedures",
+          "type": "array"
+        },
+        "can_be_remote": {
+          "default": false,
+          "title": "Can Be Remote",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "number",
+        "label",
+        "week"
+      ],
+      "title": "Visit",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "source": {
+      "enum": [
+        "ctgov",
+        "protocol_pdf",
+        "manual",
+        "published_paper",
+        "fixture"
+      ],
+      "title": "Source",
+      "type": "string"
+    },
+    "registry_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Registry Id"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "phase": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Phase"
+    },
+    "conditions": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Conditions",
+      "type": "array"
+    },
+    "enrollment_target": {
+      "title": "Enrollment Target",
+      "type": "integer"
+    },
+    "duration_months": {
+      "title": "Duration Months",
+      "type": "number"
+    },
+    "sites": {
+      "items": {
+        "$ref": "#/$defs/Site"
+      },
+      "title": "Sites",
+      "type": "array"
+    },
+    "visits": {
+      "items": {
+        "$ref": "#/$defs/Visit"
+      },
+      "title": "Visits",
+      "type": "array"
+    },
+    "drug_type": {
+      "default": "unknown",
+      "enum": [
+        "small_molecule",
+        "biologic",
+        "device",
+        "none",
+        "unknown"
+      ],
+      "title": "Drug Type",
+      "type": "string"
+    },
+    "missing_fields": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Missing Fields",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "source",
+    "title",
+    "enrollment_target",
+    "duration_months",
+    "sites",
+    "visits"
+  ],
+  "title": "TrialDesign",
+  "type": "object"
+}

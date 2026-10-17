@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "MetricRange": {
+      "properties": {
+        "p10": {
+          "title": "P10",
+          "type": "number"
+        },
+        "p50": {
+          "title": "P50",
+          "type": "number"
+        },
+        "p90": {
+          "title": "P90",
+          "type": "number"
+        },
+        "unit": {
+          "enum": [
+            "usd",
+            "hours",
+            "kg_co2e",
+            "months",
+            "patients",
+            "percent",
+            "kits"
+          ],
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "p10",
+        "p50",
+        "p90",
+        "unit"
+      ],
+      "title": "MetricRange",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "trial_id": {
+      "title": "Trial Id",
+      "type": "string"
+    },
+    "site_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Site Id"
+    },
+    "kind": {
+      "enum": [
+        "enrollment_lag",
+        "query_backlog",
+        "drug_overstock",
+        "drug_shortfall",
+        "costly_shipping_mode",
+        "monitoring_inefficiency",
+        "milestone_at_risk",
+        "vendor_delay"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "severity": {
+      "enum": [
+        "info",
+        "warning",
+        "critical"
+      ],
+      "title": "Severity",
+      "type": "string"
+    },
+    "detected_at": {
+      "format": "date-time",
+      "title": "Detected At",
+      "type": "string"
+    },
+    "summary": {
+      "title": "Summary",
+      "type": "string"
+    },
+    "est_impact": {
+      "additionalProperties": {
+        "$ref": "#/$defs/MetricRange"
+      },
+      "title": "Est Impact",
+      "type": "object"
+    },
+    "recommended_actions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Recommended Actions",
+      "type": "array"
+    },
+    "status": {
+      "enum": [
+        "open",
+        "acknowledged",
+        "action_planned",
+        "resolved",
+        "dismissed"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "trial_id",
+    "site_id",
+    "kind",
+    "severity",
+    "detected_at",
+    "summary",
+    "est_impact",
+    "recommended_actions",
+    "status"
+  ],
+  "title": "Alert",
+  "type": "object"
+}

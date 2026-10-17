@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "Levers": {
+      "properties": {
+        "remote_monitoring_share": {
+          "default": 0.0,
+          "title": "Remote Monitoring Share",
+          "type": "number"
+        },
+        "home_visit_numbers": {
+          "default": [],
+          "items": {
+            "type": "integer"
+          },
+          "title": "Home Visit Numbers",
+          "type": "array"
+        },
+        "remote_visit_numbers": {
+          "default": [],
+          "items": {
+            "type": "integer"
+          },
+          "title": "Remote Visit Numbers",
+          "type": "array"
+        },
+        "local_lab_share": {
+          "default": 0.0,
+          "title": "Local Lab Share",
+          "type": "number"
+        },
+        "drug_supply_strategy": {
+          "default": "upfront",
+          "enum": [
+            "upfront",
+            "on_demand"
+          ],
+          "title": "Drug Supply Strategy",
+          "type": "string"
+        },
+        "removed_procedures": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Removed Procedures",
+          "type": "array"
+        },
+        "excluded_site_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Excluded Site Ids",
+          "type": "array"
+        }
+      },
+      "title": "Levers",
+      "type": "object"
+    },
+    "MetricRange": {
+      "properties": {
+        "p10": {
+          "title": "P10",
+          "type": "number"
+        },
+        "p50": {
+          "title": "P50",
+          "type": "number"
+        },
+        "p90": {
+          "title": "P90",
+          "type": "number"
+        },
+        "unit": {
+          "enum": [
+            "usd",
+            "hours",
+            "kg_co2e",
+            "months",
+            "patients",
+            "percent",
+            "kits"
+          ],
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "p10",
+        "p50",
+        "p90",
+        "unit"
+      ],
+      "title": "MetricRange",
+      "type": "object"
+    },
+    "ModuleBreakdown": {
+      "properties": {
+        "module": {
+          "title": "Module",
+          "type": "string"
+        },
+        "cost_usd": {
+          "$ref": "#/$defs/MetricRange"
+        },
+        "co2e_kg": {
+          "$ref": "#/$defs/MetricRange"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/ProvenanceItem"
+          },
+          "title": "Provenance",
+          "type": "array"
+        }
+      },
+      "required": [
+        "module",
+        "cost_usd",
+        "co2e_kg",
+        "provenance"
+      ],
+      "title": "ModuleBreakdown",
+      "type": "object"
+    },
+    "ProvenanceItem": {
+      "properties": {
+        "formula_id": {
+          "title": "Formula Id",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "inputs": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "title": "Inputs",
+          "type": "object"
+        },
+        "parameter_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Parameter Ids",
+          "type": "array"
+        },
+        "assumptions": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "formula_id",
+        "description",
+        "inputs",
+        "parameter_ids"
+      ],
+      "title": "ProvenanceItem",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "design_id": {
+      "title": "Design Id",
+      "type": "string"
+    },
+    "levers": {
+      "$ref": "#/$defs/Levers"
+    },
+    "cost_usd": {
+      "$ref": "#/$defs/MetricRange"
+    },
+    "site_staff_hours": {
+      "$ref": "#/$defs/MetricRange"
+    },
+    "patient_travel_hours": {
+      "$ref": "#/$defs/MetricRange"
+    },
+    "co2e_kg": {
+      "$ref": "#/$defs/MetricRange"
+    },
+    "duration_months": {
+      "$ref": "#/$defs/MetricRange"
+    },
+    "drug_waste_share": {
+      "$ref": "#/$defs/MetricRange"
+    },
+    "modules": {
+      "items": {
+        "$ref": "#/$defs/ModuleBreakdown"
+      },
+      "title": "Modules",
+      "type": "array"
+    },
+    "warnings": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Warnings",
+      "type": "array"
+    },
+    "parameter_set_version": {
+      "title": "Parameter Set Version",
+      "type": "string"
+    },
+    "computed_at": {
+      "format": "date-time",
+      "title": "Computed At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "design_id",
+    "levers",
+    "cost_usd",
+    "site_staff_hours",
+    "patient_travel_hours",
+    "co2e_kg",
+    "duration_months",
+    "drug_waste_share",
+    "modules",
+    "parameter_set_version",
+    "computed_at"
+  ],
+  "title": "ScenarioResult",
+  "type": "object"
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "formula_id": {
+      "title": "Formula Id",
+      "type": "string"
+    },
+    "description": {
+      "title": "Description",
+      "type": "string"
+    },
+    "inputs": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "title": "Inputs",
+      "type": "object"
+    },
+    "parameter_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Parameter Ids",
+      "type": "array"
+    },
+    "assumptions": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Assumptions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "formula_id",
+    "description",
+    "inputs",
+    "parameter_ids"
+  ],
+  "title": "ProvenanceItem",
+  "type": "object"
+}

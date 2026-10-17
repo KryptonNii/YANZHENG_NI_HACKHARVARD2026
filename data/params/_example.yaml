@@ -1,0 +1,33 @@
+# Schema demo ONLY — these are placeholders, not real numbers.
+# Files starting with "_" are skipped by load_params() unless include_examples=True.
+# Format: data/params/SCHEMA.md
+parameters:
+  - id: example.ef.travel.car.average_km
+    label: "EXAMPLE ONLY: average car emission factor"
+    value_low: 1.0
+    value_mid: 2.0
+    value_high: 3.0
+    unit: kg_co2e/km
+    assumption: true
+    rationale: schema example
+    region: global
+
+  - id: example.cost.monitoring.onsite_visit
+    label: "EXAMPLE ONLY: cost of one on-site monitoring visit"
+    value_low: 1.0
+    value_mid: 2.0
+    value_high: 3.0
+    unit: usd/visit
+    assumption: true
+    rationale: schema example
+    region: global
+
+  - id: example.time.site.blood_draw
+    label: "EXAMPLE ONLY: site staff minutes per blood draw"
+    value_low: 1.0
+    value_mid: 2.0
+    value_high: 3.0
+    unit: minutes/procedure
+    assumption: true
+    rationale: schema example
+    region: global

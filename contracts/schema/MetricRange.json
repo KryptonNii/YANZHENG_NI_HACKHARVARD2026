@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "p10": {
+      "title": "P10",
+      "type": "number"
+    },
+    "p50": {
+      "title": "P50",
+      "type": "number"
+    },
+    "p90": {
+      "title": "P90",
+      "type": "number"
+    },
+    "unit": {
+      "enum": [
+        "usd",
+        "hours",
+        "kg_co2e",
+        "months",
+        "patients",
+        "percent",
+        "kits"
+      ],
+      "title": "Unit",
+      "type": "string"
+    }
+  },
+  "required": [
+    "p10",
+    "p50",
+    "p90",
+    "unit"
+  ],
+  "title": "MetricRange",
+  "type": "object"
+}

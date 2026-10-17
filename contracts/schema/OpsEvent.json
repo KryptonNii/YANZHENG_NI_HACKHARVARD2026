@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "trial_id": {
+      "title": "Trial Id",
+      "type": "string"
+    },
+    "site_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Site Id"
+    },
+    "type": {
+      "enum": [
+        "visit_completed",
+        "visit_missed",
+        "patient_enrolled",
+        "patient_withdrawn",
+        "query_opened",
+        "query_closed",
+        "monitoring_trip",
+        "sample_shipment",
+        "drug_shipment",
+        "drug_dispensed",
+        "drug_expired",
+        "vendor_milestone",
+        "budget_spend"
+      ],
+      "title": "Type",
+      "type": "string"
+    },
+    "occurred_at": {
+      "format": "date-time",
+      "title": "Occurred At",
+      "type": "string"
+    },
+    "payload": {
+      "additionalProperties": true,
+      "title": "Payload",
+      "type": "object"
+    },
+    "source_system": {
+      "enum": [
+        "EDC",
+        "CTMS",
+        "IRT",
+        "TRAVEL",
+        "COURIER",
+        "FINANCE",
+        "VENDOR"
+      ],
+      "title": "Source System",
+      "type": "string"
+    },
+    "simulated": {
+      "default": true,
+      "title": "Simulated",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "trial_id",
+    "site_id",
+    "type",
+    "occurred_at",
+    "payload",
+    "source_system"
+  ],
+  "title": "OpsEvent",
+  "type": "object"
+}

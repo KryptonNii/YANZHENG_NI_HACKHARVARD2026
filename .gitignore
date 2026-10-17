@@ -1,0 +1,46 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Node ---
+node_modules/
+web/dist/
+*.tsbuildinfo
+npm-debug.log*
+pnpm-debug.log*
+
+# --- Secrets & local state ---
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+*.db
+
+# --- Generated outputs ---
+validation/out/
+science/out/
+playwright-report/
+test-results/
+
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Agent workspace (never in git) ---
+.briefs/
+.claude/
+docs/agents/

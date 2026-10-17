@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "remote_monitoring_share": {
+      "default": 0.0,
+      "title": "Remote Monitoring Share",
+      "type": "number"
+    },
+    "home_visit_numbers": {
+      "default": [],
+      "items": {
+        "type": "integer"
+      },
+      "title": "Home Visit Numbers",
+      "type": "array"
+    },
+    "remote_visit_numbers": {
+      "default": [],
+      "items": {
+        "type": "integer"
+      },
+      "title": "Remote Visit Numbers",
+      "type": "array"
+    },
+    "local_lab_share": {
+      "default": 0.0,
+      "title": "Local Lab Share",
+      "type": "number"
+    },
+    "drug_supply_strategy": {
+      "default": "upfront",
+      "enum": [
+        "upfront",
+        "on_demand"
+      ],
+      "title": "Drug Supply Strategy",
+      "type": "string"
+    },
+    "removed_procedures": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Removed Procedures",
+      "type": "array"
+    },
+    "excluded_site_ids": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Excluded Site Ids",
+      "type": "array"
+    }
+  },
+  "title": "Levers",
+  "type": "object"
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "trial_id": {
+      "title": "Trial Id",
+      "type": "string"
+    },
+    "alert_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Alert Id"
+    },
+    "action": {
+      "title": "Action",
+      "type": "string"
+    },
+    "owner": {
+      "title": "Owner",
+      "type": "string"
+    },
+    "due_date": {
+      "format": "date-time",
+      "title": "Due Date",
+      "type": "string"
+    },
+    "target_site_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Target Site Ids",
+      "type": "array"
+    },
+    "metric": {
+      "title": "Metric",
+      "type": "string"
+    },
+    "started_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Started At"
+    },
+    "status": {
+      "enum": [
+        "planned",
+        "in_progress",
+        "done"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "trial_id",
+    "alert_id",
+    "action",
+    "owner",
+    "due_date",
+    "target_site_ids",
+    "metric",
+    "status"
+  ],
+  "title": "Intervention",
+  "type": "object"
+}

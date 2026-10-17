@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "MetricRange": {
+      "properties": {
+        "p10": {
+          "title": "P10",
+          "type": "number"
+        },
+        "p50": {
+          "title": "P50",
+          "type": "number"
+        },
+        "p90": {
+          "title": "P90",
+          "type": "number"
+        },
+        "unit": {
+          "enum": [
+            "usd",
+            "hours",
+            "kg_co2e",
+            "months",
+            "patients",
+            "percent",
+            "kits"
+          ],
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "p10",
+        "p50",
+        "p90",
+        "unit"
+      ],
+      "title": "MetricRange",
+      "type": "object"
+    },
+    "ProvenanceItem": {
+      "properties": {
+        "formula_id": {
+          "title": "Formula Id",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "inputs": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "title": "Inputs",
+          "type": "object"
+        },
+        "parameter_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Parameter Ids",
+          "type": "array"
+        },
+        "assumptions": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "formula_id",
+        "description",
+        "inputs",
+        "parameter_ids"
+      ],
+      "title": "ProvenanceItem",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "module": {
+      "title": "Module",
+      "type": "string"
+    },
+    "cost_usd": {
+      "$ref": "#/$defs/MetricRange"
+    },
+    "co2e_kg": {
+      "$ref": "#/$defs/MetricRange"
+    },
+    "provenance": {
+      "items": {
+        "$ref": "#/$defs/ProvenanceItem"
+      },
+      "title": "Provenance",
+      "type": "array"
+    }
+  },
+  "required": [
+    "module",
+    "cost_usd",
+    "co2e_kg",
+    "provenance"
+  ],
+  "title": "ModuleBreakdown",
+  "type": "object"
+}

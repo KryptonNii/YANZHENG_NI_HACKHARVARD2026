@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "Signature": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "signer": {
+          "title": "Signer",
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "author",
+            "reviewer",
+            "qa",
+            "admin",
+            "viewer"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "meaning": {
+          "enum": [
+            "authored",
+            "reviewed",
+            "approved",
+            "executed",
+            "verified"
+          ],
+          "title": "Meaning",
+          "type": "string"
+        },
+        "signed_at": {
+          "format": "date-time",
+          "title": "Signed At",
+          "type": "string"
+        },
+        "record_type": {
+          "title": "Record Type",
+          "type": "string"
+        },
+        "record_id": {
+          "title": "Record Id",
+          "type": "string"
+        },
+        "record_hash": {
+          "title": "Record Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "signer",
+        "role",
+        "meaning",
+        "signed_at",
+        "record_type",
+        "record_id",
+        "record_hash"
+      ],
+      "title": "Signature",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "record_type": {
+      "enum": [
+        "scenario",
+        "test_protocol",
+        "validation_report",
+        "change_record"
+      ],
+      "title": "Record Type",
+      "type": "string"
+    },
+    "record_id": {
+      "title": "Record Id",
+      "type": "string"
+    },
+    "author": {
+      "title": "Author",
+      "type": "string"
+    },
+    "required_meanings": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Required Meanings",
+      "type": "array"
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "signatures": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Signature"
+      },
+      "title": "Signatures",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "record_type",
+    "record_id",
+    "author",
+    "required_meanings",
+    "status"
+  ],
+  "title": "ApprovalRequest",
+  "type": "object"
+}

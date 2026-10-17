@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "seq": {
+      "title": "Seq",
+      "type": "integer"
+    },
+    "at": {
+      "format": "date-time",
+      "title": "At",
+      "type": "string"
+    },
+    "actor": {
+      "title": "Actor",
+      "type": "string"
+    },
+    "role": {
+      "enum": [
+        "author",
+        "reviewer",
+        "qa",
+        "admin",
+        "viewer"
+      ],
+      "title": "Role",
+      "type": "string"
+    },
+    "action": {
+      "title": "Action",
+      "type": "string"
+    },
+    "object_type": {
+      "title": "Object Type",
+      "type": "string"
+    },
+    "object_id": {
+      "title": "Object Id",
+      "type": "string"
+    },
+    "before_hash": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Before Hash"
+    },
+    "after_hash": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "After Hash"
+    },
+    "reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Reason"
+    },
+    "prev_entry_hash": {
+      "title": "Prev Entry Hash",
+      "type": "string"
+    },
+    "entry_hash": {
+      "title": "Entry Hash",
+      "type": "string"
+    }
+  },
+  "required": [
+    "seq",
+    "at",
+    "actor",
+    "role",
+    "action",
+    "object_type",
+    "object_id",
+    "before_hash",
+    "after_hash",
+    "reason",
+    "prev_entry_hash",
+    "entry_hash"
+  ],
+  "title": "AuditEntry",
+  "type": "object"
+}
