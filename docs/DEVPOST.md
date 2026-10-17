@@ -1,60 +1,65 @@
 # TrialPilot — Devpost draft
 
-**DRAFT — requires human review.** Confirm final feature claims against completed module handoffs. Do not submit unresolved placeholders. A11 does not publish or submit this draft.
+**DRAFT — requires human review.** Prepared against tested code `e5c386b1fb0b6edf362bf5d37b97cc17066dfd07`. This file has not been submitted or published.
 
 ## Inspiration
 
-We wanted to help a study team inspect the consequences of changing a trial design: cost, site workload, timing and patient travel, with carbon as another metric. Historical research identifies procedures and site activity as cost drivers, while existing products already offer design and monitoring tools. We explored whether an open implementation could make a decision's assumptions and software evidence easier to inspect. [Context and sources](EVIDENCE.md).
+Study-design choices affect cost, site workload, patient travel and timing. We wanted to make their assumptions and evidence easier to inspect, with carbon as an additional consequence. Historical research identifies procedures, staffing and monitoring as major cost drivers. The $19.0m pivotal-trial median is historical estimated direct cost from a 2015–2016 cohort, not our product's savings. [Original sources and qualifications](EVIDENCE.md).
 
 ## What it does
 
-TrialPilot's intended workflow imports registry metadata or a human-reviewed protocol candidate, exposes missing fields and compares activity changes such as remote monitoring, eligible home visits or on-demand supply. Results carry ranges and provenance. A command center demonstrates alerts and interventions with synthetic operating feeds. Approval controls and a validation toolkit connect saved decisions with software-check records when those paths pass integration.
+TrialPilot imports registry records, distinguishes facts from missing inputs, and presents protocol candidates with page/quote evidence for review. The simulator compares hypothetical activity choices across cost, site hours, patient travel, duration and carbon, with model ranges and provenance. Calculation, saving and comparison carry the design version; stale updates produce a conflict.
 
-**Simulated feeds are synthetic.** Registry records and published references keep their source labels. Modelled differences are scenario estimates, not observed clinical or financial outcomes. A UI mock is a separate mode and cannot prove backend behavior.
+The command center shows completed-week site/country enrollment, alerts, interventions and qualified effect estimates from **synthetic feeds**. Saved scenario approvals reject self-approval and bind reviewer/QA demonstration signatures to record hashes. Audit verification and a downloadable validation package expose the actual execution and its scope.
+
+The [180-second application recording](assets/trialpilot-demo.webm) uses the real local API, not UI mocks. Cached registry/protocol inputs, synthetic operations and fictional identities remain labelled. It is a silent recording with [English captions](assets/trialpilot-demo.en.vtt) and a [local player](assets/demo-player.html), not a human-narrated video.
 
 ## How we built it
 
-The repository uses shared Pydantic contracts, a Python activity-based engine, FastAPI with SQLite, and a React/TypeScript interface. The design calls for seeded sampling and visible assumptions. Carbon uses the LCCT method with a separate drug-supply extension. The validation toolkit is intended to connect requirements, approved protocols and actual execution. [Architecture](../README.md), [stack/API/model/data disclosures and licences](STACK_AND_LICENSES.md), [direct dependencies](../THIRD_PARTY.md).
+Shared Pydantic contracts connect a Python activity-based engine, FastAPI/SQLite and React/TypeScript. Seeded sampling exposes uncertainty and assumptions; forecasts and supply report their own actual draw counts. The carbon method follows LCCT with a separately disclosed drug-supply extension. The validation toolkit links requirements, protocols, executed checks, traceability and evidence hashes. [Architecture](../README.md), [methods](model.md), [forecast/supply](model_forecast.md).
 
-AI-assisted protocol extraction produces candidates for human confirmation. AI validation text is a draft. Human reviewers provide approvals and signatures. Disclose A4's actual extraction provider, model and terms from the final configuration; none is assumed here.
+Optional live extraction uses the official Anthropic SDK and Messages API; `EXTRACT_MODEL` selects the model, with source default `claude-opus-5-5`. This is a configuration disclosure, not a verified live-provider run. The video uses a cached build-time transcription. Code and documents were assisted by OpenAI Codex. Original code/docs are MIT; data, fonts, provider services and dependencies retain separate terms. [Inventory](../THIRD_PARTY.md), [licenses and disclosure](STACK_AND_LICENSES.md).
 
-## Challenges
+## Challenges and accomplishments
 
-Registry records may omit the activity schedule, requiring a distinction between recorded facts and assumptions. A deterministic model can still mislead when parameters or boundaries are wrong. Demo identities, synthetic operations and the scope of a hash chain need clear disclosure.
+Separating sourced facts, missing inputs and human-review candidates matters as much as rendering a number. We fixed version races so that the saved result corresponds to the screen, made unknown metrics explicit, retained real approval/audit controls and exposed package-specific counts.
 
-Evinova already describes timeline, cost, patient-experience and carbon comparisons. Monitoring and validation vendors cover related workflows. We focus on inspectability and reproducibility without claiming these functions are new. [Opened competitor sources](EVIDENCE.md#opened-external-evidence).
+| Check | Result and scope |
+|---|---|
+| Complete isolated execution | **576 passed, 0 failed/errors/skipped**, **32/32 requirements passed**, exact code `e5c386b`; [summary](../validation/out/clean-clone/20261017T041438Z/summary.json) |
+| Frontend checks | Typecheck + production build passed; **48 unit tests** in preflight; **12 real-API browser tests** in executed evidence; a separate **1/1** final-package browser download check |
+| Evidence downloads | **114/114** package files downloaded and hash-verified; generation-time audit chain intact across 12 entries; final post-packaging audit 14 |
+| Cold compute | **147.8 ms median** from seven distinct seeds, `X-Cache: miss`, 2,000 forecast draws, server `X-Compute-Ms`; target <300 ms passed in this run |
+| Earlier performance | Standalone **308.2 ms** missed the target; historical full run at `38e2073` had **664.1 ms**; preserved, not replaced by a pass |
+| CASPS | Engine/library P50 **88,758.48 kg CO2e**, **+23.38%** vs published 71,938.8; P10–P90 64,601.50–123,510.08 |
+| PRIMETIME | Engine/library P50 **109,685.91 kg CO2e**, **+22.75%** vs published 89,360.2; P10–P90 87,891.34–142,685.69 |
+| Separate paper arithmetic | **+0.01% / −0.16%**; seed 7, 2,000 draws for engine comparisons, parameter set 1249d0f0eed8; [JSON](../science/out/results.json) |
+| Extraction | Historical synthetic parser recovered **7/7 visits, 50/50 procedure items** on a generated protocol; **live LLM accuracy unmeasured**, per [A4](../handoffs/A4.md) |
+| Defect experiment | **6/6 at d616645**, historical, unsigned and **not blind**; same author planted defects and wrote checks, per [A7](../handoffs/A7.md) |
 
-## Accomplishments
+The science comparison excludes `drug_supply`, counts direct/WTT once each and has substantial module gaps. PRIMETIME applies visits to all 1,962 rather than a 1,623 subgroup; hospital utilities, some sample activity and audits are absent. Both published totals lie in model ranges, which does not validate coverage or other metrics. Old +5%/+7% claims are obsolete.
 
-The presentation package includes architecture, a timed walkthrough, a claim ledger and explicit unfinished-work disclosures. Product measurements require the owning teammate's handoff:
-
-| Measurement | Submission value | Evidence required |
-|---|---|---|
-| Protocol extraction accuracy | [[NUMBER]]% | A4: scoring rule, numerator/denominator, corpus, model and evidence path |
-| Planted defects detected | [[NUMBER]] | A7: detected/attempted, executed report and run identity |
-| CASPS reproduction gap | [[NUMBER]]% | A10 + generated JSON: gap definition, boundaries and engine/reference path |
-| PRIMETIME reproduction gap | [[NUMBER]]% | A10 + generated JSON with the same definitions |
-| Compute latency P50 | [[NUMBER]] ms | A2/A5: hardware, draws, warm/cold and cache state, evidence |
-
-The seeded-defect count is not a detection count. Reference arithmetic does not demonstrate integrated-engine reproduction. Never fill these values from mock constants, targets in the brief or inferred measurements.
+The report remains **awaiting QA approval**. Demo signatures are automated fixtures, not human approvals. Human validation effort, real LLM accuracy and observed clinical/financial savings are unmeasured. Successful tests do not establish regulatory acceptance.
 
 ## What we learned
 
-An explanation needs to distinguish a sourced input, an assumption and a calculated result. Ranges need an interpretation. Test execution also needs a clear boundary from generated text and approval. These distinctions shaped our specification and demo narrative.
+A reproducible calculation can still be misleading if boundaries are wrong. Versioning, source labels and explicit unknowns make disagreement inspectable. Packaging evidence, passing tests and obtaining human approval are distinct steps.
+
+Evinova, SHC/iLCCT, Medidata and ValGenesis already cover related design, carbon, monitoring and validation functions. Our focus is an inspectable MIT implementation connecting them, not a first-of-kind or superiority claim. [Vendor sources](EVIDENCE.md).
 
 ## What's next
 
-Complete integration, independent review and evidence. Then define a pilot with a sponsor and site team using permitted data. Future work includes production identity controls, authorized system connectors, workload/forecast calibration and SMI reporting mapping. The current prototype does not establish those outcomes.
+A permitted-data pilot with a sponsor and site team should calibrate workload/forecast estimates and measure live extraction quality and review effort against prospective criteria. Production identity/security, authorized connectors, independent QA, Docker/deployment verification and potential SMI mapping remain future work.
 
-## Submission fields to complete
+## Submission gaps
 
 | Field | State |
 |---|---|
-| Repository URL | Human supplies public URL after final local integration |
-| Demo URL | Local walkthrough documented; hosting not established |
-| Video URL | Recording/upload pending, based on [03:00 script](VIDEO_SCRIPT.md) |
-| Screenshots | Actual captures pending, retaining synthetic/mock labels |
-| Track wording | Confirm original sheets; mapping currently from supplied brief |
-| Attribution | Reconcile [THIRD_PARTY.md](../THIRD_PARTY.md) and [supplement](STACK_AND_LICENSES.md) with final manifests |
+| Public repository URL | Not supplied; no push performed |
+| Deployment URL | Not established; Docker unavailable and container run unverified |
+| Video upload URL | Local 180-second WebM exists; no upload/publish performed |
+| Screenshots/deck | Actual [captures](assets/screenshots/), [12-slide PowerPoint](assets/trialpilot-deck.pptx) and [source](DECK.md) |
+| Sponsor titles/rules | Mapping from supplied A11 brief; original sheets still unavailable |
+| Human QA and timing | Awaiting human approval; effort unmeasured |
 
-Remove this editing table and draft note only after resolution. If a measurement cannot be established, replace its claim with an explicit unmeasured limitation.
+Keep these gaps explicit until resolved by a person with the required evidence and publishing authorization.

@@ -1,123 +1,77 @@
-# TrialPilot — three-minute demo runbook
+# TrialPilot — demo runbook
 
-**Status: rehearsal draft.** A11 checked existing source labels, not a running end-to-end application. Missing integration results, trial selection and A9 interior controls are explicit gates below. Do not present unverified steps as demonstrated behavior.
+Verified code: **e5c386b1fb0b6edf362bf5d37b97cc17066dfd07**. Complete run: **576 passed / 0 failed**, 32/32 requirements passed; report **awaiting QA approval**. [Summary](../validation/out/clean-clone/20261017T041438Z/summary.json). The [180-second recording](assets/trialpilot-demo.webm) uses the actual local application and this package, with a fresh temporary database. Its subtitle track is available in the [player](assets/demo-player.html); no voice-over is included.
 
-The live demo follows the same [180-second script](VIDEO_SCRIPT.md). Open the app, problem slide, closing slide and terminal before the timer starts. Recordings must retain prototype, simulated and mock disclosures. Cost, site workload, patient travel and timeline come before carbon.
+## Isolated setup on Windows
 
-## Readiness gates
+Use the existing `dev` checkout and already prepared Python/web dependencies. Do not reset a shared database or stop another task's service. API **8008** and UI **5181** are this frontend task's ports; **8007/5180** belong to backend validation. Inspect whether ports are free before starting.
 
-| Gate | Required preparation | State at A11 draft |
-|---|---|---|
-| G1 | API and built UI start; `/api/health` reports offline; UI has no Mock API badge | Not executed by A11 |
-| G2 | A4 selects a real cached Phase 3 trial and confirms identity, site count, locations and visit assumptions | Trial id pending A4 |
-| G3 | A2/A3/A5 computation and A8 UI produce matching ranges and provenance | Integration evidence pending |
-| G4 | Pick exactly three clinically eligible visit numbers and one optional removable procedure for the selected fixture | Fixture choices pending; do not invent eligibility |
-| G5 | Save and submit works; author denial returns `self_approval_forbidden`; Riley then Sam signs; chain verifies | A7 execution evidence / integrated UI rehearsal pending |
-| G6 | A6/A9 provides a reproducible labelled synthetic overstock alert and qualified effect comparison | Controls, reset interface and fixture pending |
-| G7 | A10 supplies generated JSON and distinguishes paper arithmetic, engine reproduction and library sensitivity | Pending; published references alone do not satisfy gate |
-| G8 | A7 supplies package CLI options, package index, executed evidence and detected/attempted defect report | Pending |
-| G9 | Actual UI captures and local 03:00 backup video are checked | Not recorded |
-| G10 | Disconnect after caches are prepared and repeat the chosen walkthrough successfully | Not executed |
+In a first PowerShell terminal at the repository root:
 
-The original Regeneron sheets are also needed to verify sponsor quotations and Tufts figures. The existing deck uses independently sourced context and identifies the title mapping as brief-provided.
-
-## Rehearsal setup
-
-Human/judge defaults: API `8000`, development UI `5173`; Docker serves both UI and API on `8000`. A11 may start only its own servers on API `8011` and UI `5184`. Do not run a repo-wide test command while others build.
-
-From a configured Bash shell at the repository root, with dependencies already installed:
-
-```bash
-make dev API_PORT=8011 WEB_PORT=5184 DEMO_OFFLINE=1 \
-  TP_DB_PATH="$PWD/docs/.rehearsal.sqlite" \
-  TP_CORS_ORIGINS=http://localhost:5184,http://127.0.0.1:5184
+```powershell
+$tpDemo = Join-Path $env:TEMP ('trialpilot-demo-' + [guid]::NewGuid().ToString('N'))
+New-Item -ItemType Directory -Path $tpDemo | Out-Null
+$tpValidation = Join-Path $tpDemo 'validation'
+New-Item -ItemType Directory -Path $tpValidation | Out-Null
+Copy-Item -LiteralPath 'validation/out/clean-clone/20261017T041438Z/package' -Destination $tpValidation -Recurse
+$env:DEMO_OFFLINE = '1'
+$env:TP_SEED_FIXTURE_DESIGNS = '0'
+$env:TP_DB_PATH = Join-Path $tpDemo 'demo.sqlite'
+$env:TP_DATA_DIR = $tpDemo
+$env:TP_VALIDATION_OUT = $tpValidation
+api/.venv/Scripts/python.exe -m uvicorn trialpilot_api.main:app --host 127.0.0.1 --port 8008
 ```
 
-Open `http://localhost:5184/`. Confirm `Offline mode — cached data` and absence of `Mock API — fictional data`. Those labels come from `web/src/app/Layout.tsx`. An API unreachable badge or mock mode means G1 fails. The initial install and container build can require a network even when the demo runtime is offline.
+In a second terminal, also at the root:
 
-Before the timer, fill this presenter card from actual owner handoffs and rehearsal:
+```powershell
+$env:API_TARGET = 'http://127.0.0.1:8008'
+$env:VITE_MOCK_API = '0'
+Set-Location web
+node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5181 --strictPort
+```
 
-| Presenter card item | Value |
+Open [local app](http://127.0.0.1:5181). Verify **Offline mode — cached data**, no Mock API badge, and API health at [8008](http://127.0.0.1:8008/api/health). The recorded offline mode uses cached data; physically disconnecting the network was not separately tested. Dependency installation and optional live extraction require connectivity. Container build/run and public deployment remain unverified.
+
+Reset by stopping **only these two foreground commands** with Ctrl+C and starting a new unique temporary directory. Keep previous run evidence. Do not kill processes by a broad name, delete another database, or reuse the backend validation ports.
+
+## Presenter card
+
+| Item | Value |
 |---|---|
-| Build commit and rehearsal timestamp | Pending |
-| Cached NCT id / trial title / site count | Pending A4 evidence |
-| Visit numbers approved for Home | Pending fixture review |
-| Optional procedure code / rationale | Pending fixture review, otherwise omit |
-| Rehearsed cost-increase example | Pending computed result, otherwise explain it as a possibility |
-| Scenario / design / approval ids | Capture from rehearsal responses, never invent UUIDs |
-| Synthetic overstock / effect cases and reset controls | Pending A6/A9 |
-| Science output identity and engine/reference status | Pending A10 |
-| Package output directory / index / defect report | Pending A7 |
-| Backup video path and checked duration | `docs/assets/trialpilot-demo.mp4`, not created |
+| Primary trial | BOREAS, NCT03930732; registry snapshot: 939 enrolled, 275 sites, 24 countries, 48.6 months |
+| Protocol input | Cached build-time transcription; 19 candidate visits, page/quote evidence; not measured live LLM output |
+| Demo changes | 50% remote monitoring and On-demand resupply; hypothetical inputs |
+| Patient visits / procedures | No home-visit change or procedure removal in the recorded demo; eligibility review not established |
+| Design/scenario versions | Read the page and saved row; do not invent UUIDs or hardcode version 1 |
+| Demo identities | Alex Author / 1111; Riley Reviewer / 2222; Sam QA / 3333 — fictional |
+| Operations | `/command/demo-40`; synthetic 40-site feed; S14 overstock |
+| Science | `science/out/results.json`; parameter set 1249d0f0eed8; seed 7, 2,000 draws |
+| Package | `validation/out/clean-clone/20261017T041438Z/package` |
+| QA | Validation report awaiting QA approval; automated scenario signatures do not approve the report |
+| Recording | `docs/assets/trialpilot-demo.webm`, exactly 180.000 seconds; silent with WebVTT captions |
 
-## Exact controls confirmed in current source
+## Full walkthrough
 
-| Target | Interaction | Source checked |
-|---|---|---|
-| Import page | Click **Import** in main navigation | `web/src/app/Layout.tsx` |
-| Registry import | Enter the presenter card's NCT id in **ClinicalTrials.gov ID**, click the form's **Import**, inspect **Missing & assumed**, then **Open scenario simulator →** | `ImportPage.tsx`, test ids `nct-input`, `nct-submit`, `open-simulator` |
-| Simulator | Click **Simulator** after a design is selected | Same file; uses last selected design id |
-| Monitoring | Focus slider **Monitoring visits done remotely**, press Home, then Right Arrow ten times for 50% (5-point steps) | `LeversPanel.tsx`, test id `lever-remote-monitoring` |
-| Home visits | In each selected **Visit {number} {label} location** group, click **Home** | `LeversPanel.tsx`; eligibility must be confirmed separately |
-| Supply | In **Drug supply strategy**, click **On-demand resupply** | `LeversPanel.tsx` |
-| Optional procedure | In **Remove procedures**, tick the rehearsed procedure label | `LeversPanel.tsx`; removes that code from all visits |
-| Provenance | On a metric card, click **How is this calculated?** | `MetricCard.tsx` |
-| Close provenance | Click **Close panel** or press Escape | `web/src/app/ui/index.tsx` |
-| Save | Click **Save scenario**, enter `Scenario B` in **Name**, then click **Save** | `ScenarioPage.tsx` |
-| Submit | In **Saved scenarios & approval**, select Scenario B, then click **Submit for approval** | `VersionsPanel.tsx` |
-| Sign in simulator | In the embedded **Approval** panel, enter the current user's demo PIN in **Re-enter your PIN** and click **Sign: reviewed**, then **Sign: approved** after review | `ApprovalPanel.tsx`; current required meaning controls button text |
-| Lever reset | Click **Reset to baseline** | `LeversPanel.tsx` |
-| Identity | Select **Alex · Author**, **Riley · Reviewer**, or **Sam · QA** in **Demo identities** | `IdentitySwitcher.tsx` / `identity.ts` |
-| Other pages | Click **Approvals**, **Audit**, **Command center**, **Science**, **Validation** | `Layout.tsx`; route existence alone does not verify page behavior |
+1. **Import** → BOREAS chip (or enter NCT03930732 and click **Import**). Inspect **Missing & assumed** and the registry/map source notes. A new trial is stored before **Open scenario simulator →** becomes available.
+2. **Use the registry protocol (cached extraction)**. Inspect draft, page, quote, procedure-group names and counts. **Edit visit** then blank the week: **Done** is disabled; a blank is never converted to week zero. Restore the week or cancel editing. **Accept all remaining** is a demonstration of bulk review; it is logged as a subset of accepted rows, not extra approvals or extraction accuracy. **Apply to design** saves a new version and clears only resolved template warnings.
+3. Import the same NCT again. The stored confirmed protocol is retained. Use the explicit replacement control only if intentionally replacing a template in this temporary demo.
+4. **Open scenario simulator →**. Read the design vN badge. Set **Monitoring visits done remotely** to 50% and choose **On-demand resupply**. Wait for computation and enabled **Save scenario**. Metrics, forecast and supply remain pinned to this design version; unknown fields display unknown and missing curves are not fabricated.
+5. **How is this calculated?** on carbon, duration or waste opens provenance. Inspect formula, input, parameter source/assumption and draw counts. **Close panel** or Escape returns to the page.
+6. **Save scenario** → descriptive **Name** → **Save**. The saved row contains the same computation and design version. **Submit for approval** → Alex's PIN 1111 → **Sign: reviewed** is rejected with “Authors can't approve their own work.” Select Riley, PIN 2222, **Sign: reviewed**; then Sam, PIN 3333, **Sign: approved**. Show signatures, UTC timestamps and record hashes. These are automated fictional demos.
+7. Optional compare: save a baseline and altered scenario at the same design version, tick both rows, open **Compare**. Show **P10–P90 of the difference**. Different design versions instead show a version warning and differences of P50s. Do not compare them as paired draws.
+8. Optional concurrency: keep the simulator open while a second editor changes the design. The original page computes/saves its original vN. Stale **Edit facts → Save changes** returns a visible version conflict instead of silently overwriting the new design. Automated evidence verifies JSON equality of computed and saved metrics, forecast and supply.
+9. **Audit → Verify chain** → intact result; inspect rows and **Export CSV**. A broken-chain unit fixture shows a damaged state, but the live demo database is not deliberately corrupted. **Approvals** also exposes pending/approved records and the same independent roles.
+10. `/command/demo-40` → **Start simulation** (or **Restart simulation**). Keep **Simulated feed** visible. **Sites** and **Countries** show completed weeks; current totals can include the open partial week. Backup sites retain zero enrollment plans. Country plan bands sum site bands, rather than a new joint percentile calculation.
+11. S14 drug-overstock alert → **Acknowledge** → **Plan intervention** → **Save intervention** → **Start intervention** → **Advance 6 weeks**. Show the effect verdict and explanation. The card reports bootstrap P10–P90; the explanation's 95% interval is wider and determines the verdict. Do not describe them as the same interval. The synthetic comparison does not prove causation or clinical effectiveness.
+12. **Science**: CASPS +23.38%, PRIMETIME +22.75% engine/library P50 gaps, with module boundaries. **Validation**: actual tested commit e5c386b, 576/0 counts, draft/QA status and evidence attachments. **Download evidence manifest**, **Download package manifest** or **Download Markdown**; the final backend run verified all 114 package files and hashes.
 
-The simulator's embedded approval panel supplies the confirmed signing controls, so approval can use that route without relying on A9's separate Approvals page. A9 audit, simulation and intervention interior controls still need final labels. Every control still needs a running integration rehearsal. The timeline identifies remaining gaps explicitly.
+## Re-recording and evidence
 
-## Timed live sequence
+[record-demo.mjs](assets/record-demo.mjs) drives real UI actions against these services without API response mocks. Set `TP_CAPTURE_DIR` to a new directory, and optionally `TP_VIDEO_DIR` to an OS temporary output folder; Playwright's portable ffmpeg dependency must already be prepared. Run `node docs/assets/record-demo.mjs` from the repository root. Without `TP_VIDEO_DIR` it performs a fast rehearsal. With it, stage deadlines target the [180-second script](VIDEO_SCRIPT.md); inspect the capture log, trim only initial loading/tail to 180 seconds, verify duration and representative frames, and do not claim success if an action fails.
 
-Intervals have inclusive starts and exclusive ends. Move to the next segment at the boundary, including after failure. Do not add recovery time.
+The delivered media manifest records codec, duration, source hashes and inspection points. Raw capture and temporary database were retained in the frontend run root documented in [FRONTEND_FINAL.md](../handoffs/FRONTEND_FINAL.md). Evidence checks are read-only; do not regenerate or overwrite original validation files while recording.
 
-| Time | Exact navigation / action | Required visible evidence / failure action |
-|---|---|---|
-| 00:00–00:08 | Start on **Import**, title visible | Prototype and offline badges; no Mock API badge |
-| 00:08–00:24 | Switch to deck slide 2, then back to **Import** | Historical cost context with date/source; no unsourced Tufts claim |
-| 00:24–00:40 | Enter the cached id in **ClinicalTrials.gov ID**, click the form's **Import**, inspect **Missing & assumed**, then **Open scenario simulator →** | Registry facts and assumed schedule; fixture identity still pending A4, otherwise use the script fallback |
-| 00:40–01:08 | Monitoring slider Home + Right Arrow ×10; click **Home** for the three confirmed visits; click **On-demand resupply**; tick optional procedure only if confirmed | Wait for recomputation to finish; compare actual ranges and trade-off; no numeric claim if computation fails |
-| 01:08–01:24 | Click **How is this calculated?** on the selected metric; inspect, then **Close panel** | Actual formula, inputs, parameter versions and sources; fallback if drawer unavailable |
-| 01:24–01:37 | Select **Alex · Author**; **Save scenario**, **Name** = `Scenario B`, **Save**; in **Saved scenarios & approval** click **Submit for approval** | Record saved version and approval id; keep embedded Approval panel visible |
-| 01:37–01:49 | As Alex, enter the documented demo PIN in **Re-enter your PIN**, click **Sign: reviewed** once | Show actual `self_approval_forbidden` denial; absence of a button does not prove server enforcement |
-| 01:49–02:07 | Select Riley, enter their PIN, **Sign: reviewed**; select Sam, enter their PIN, **Sign: approved**; click **Audit** and verify | Reviewer before QA, signature manifestations and current hash; audit verify control pending A9, or show the actual API verification response |
-| 02:07–02:29 | Click **Command center**; use prepared synthetic alert/intervention/effect case | Visible synthetic label, alert, assignment and qualified effect; interior controls/reset pending A6/A9 |
-| 02:29–02:42 | Click **Science** | Generated results and computation path, or say pending; current script uses pending narration |
-| 02:42–02:54 | Click **Validation**; show package index, traceability and executed evidence if available | Do not treat package presence as execution/approval; interior controls pending A9/A7 |
-| 02:54–03:00 | Switch to deck slide 12 | Limits and proposed pilot; stop at exactly 03:00 |
+## Failure handling
 
-## Approval preparation and API fallback
-
-A7's source requires `reviewed` then `approved` for scenarios. Its handoff defines fictional demo users `alex.author`, `riley.reviewer`, `sam.qa`; use its documented demo PINs only, entered by the presenter, without reading private environment values. A distinct reviewer is required before QA. Do not skip directly to QA after the author denial.
-
-If the UI cannot show a denial but the API is working, pre-open the exact request in a local API client during preparation. Use `POST /api/approvals/{actual_approval_id}/sign`, `X-User: alex.author`, and body `{ "meaning": "approved", "pin": "<documented-demo-PIN>" }`. Expected HTTP 403/code `self_approval_forbidden` follows current A7 source but still requires execution evidence. Reviewer uses `meaning: reviewed`, then QA uses `meaning: approved`, each under their own identity. `GET /api/audit/verify` provides the backend verification result. If this fallback is used, show the actual response and disclose that this step uses the API client.
-
-This is an operator fallback, not a claim that A11 executed or signed approvals. Never generate a human signature or validation execution result for the presenter.
-
-## Reset between takes
-
-1. Stop only the rehearsal processes started in the rehearsal terminal with Ctrl+C. Confirm their ports are no longer served by those processes.
-2. For a clean backend state, choose a **new, previously unused** A11 database path such as `docs/.rehearsal-take-2.sqlite` in the setup command. Leave earlier SQLite files, WAL/SHM files, shared `var/` state and Compose volumes untouched.
-3. Clear only TrialPilot rehearsal-origin local storage in the browser. Current A8 keys are `tp.identity` and `tp.lastDesignId`; a fresh browser profile is also acceptable. This does not reset backend records.
-4. Restart on 8011/5184 with offline mode and the isolated path. Re-import the selected cached trial and recapture real ids. Click **Reset to baseline**, then ensure Home/Tele choices, supply, removed procedures and excluded sites match baseline.
-5. Reset operations only through A6's documented interface after it is supplied. Never guess a reset endpoint or reuse stale intervention ids across databases.
-6. A7 owns generated validation evidence. Reuse a dated verified package as a disclosed recording artifact or follow A7's clean execution instructions; do not edit evidence/signatures to make a take look fresh.
-
-Do not commit `.rehearsal*.sqlite` files, local logs or recordings containing private data. Stage only the named A11 documentation paths.
-
-## Offline and failure handling
-
-Cached backend mode (`DEMO_OFFLINE=1`) differs from browser mock mode (`VITE_MOCK_API=1`). A successful mock UI rehearsal provides no proof of engine, compliance or real registry mapping. Keep its fictional-data badge and describe it accordingly.
-
-If a cached import is missing, use only another verified fixture prepared by A4 or the script's documented-flow fallback. A real cached record may still have an assumed visit schedule. If any live step fails, use the matching [fallback narration](VIDEO_SCRIPT.md#in-segment-fallback-narration), display a clearly labelled documented flow or dated real recording, and continue at the original boundary.
-
-**Backup video:** the planned path is `docs/assets/trialpilot-demo.mp4`; it does not exist at this draft. Once recorded, check duration, source commit, labels and audio offline. Keep it loaded in a local media player before judging. On total live failure, say “The live session is unavailable; this is a recording of the stated build,” then play the verified recording from its start. If the recording is unavailable, display the Markdown deck as a concept walkthrough and explicitly say the product demo is unavailable.
-
-## Final lock
-
-Reconcile every measured Devpost value against the named handoff. Verify source-sheet quotations and competitor references in A10's source index. Record pass/fail for each gate, actual click labels, the final commit, recording duration and known gaps in `handoffs/A11.md`. A11 does not enter review phase until the human says “review.”
+If a control fails live, state the failure and switch to the verified local recording. Do not substitute a mock result as real. If the final package is unavailable, show “No validation package yet” and name the absent file; never replace it with historical passing counts. Human QA, live LLM accuracy, human effort timing, Docker and deployment remain gaps even after successful playback.

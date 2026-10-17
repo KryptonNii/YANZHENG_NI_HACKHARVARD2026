@@ -1,0 +1,107 @@
+{
+  "tested_commit": "e5c386b1fb0b6edf362bf5d37b97cc17066dfd07",
+  "frontend_commit": "e425ca25541e69b40328337aba0ef5145fcd8d91",
+  "backend_commit": "f91cdb2",
+  "validation_path": "validation/out/clean-clone/20261017T041438Z",
+  "counts": {
+    "passed": 576,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0,
+    "not_run": 0,
+    "total": 576
+  },
+  "trace": {
+    "pass": 32,
+    "fail": 0,
+    "incomplete": 0,
+    "not run": 0,
+    "no test": 0
+  },
+  "qa_status": "awaiting QA approval",
+  "cold_median_ms": 147.8,
+  "cold_samples_ms": [
+    143.8,
+    142.7,
+    148.2,
+    143.7,
+    147.8,
+    150.5,
+    151.0
+  ],
+  "package_hashes_verified": 114,
+  "package_downloads_verified": 114,
+  "science_parameter_set": "1249d0f0eed8",
+  "science_seed": 7,
+  "science_draws": 2000,
+  "science_sha256": "51b307a5a85795969551bf4bde514044f95cc988484f83f8c3600082668358a2",
+  "validation_summary_sha256": "d2906ff0c25a005b44f1b7532ead85e384b9e789eb35e16c223482e4463325cf",
+  "science": {
+    "casps": {
+      "method": {
+        "diff_pct": 0.01,
+        "explanation": null,
+        "label": "Total",
+        "module": "total",
+        "ours": {
+          "p10": 71943.18,
+          "p50": 71943.18,
+          "p90": 71943.18,
+          "unit": "kg_co2e"
+        },
+        "published_kg": 71938.8,
+        "published_within_range": false,
+        "status": "match"
+      },
+      "engine_library": {
+        "diff_pct": 23.38,
+        "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90. Module allocation differs (initiation trips, storage) and the engine lacks hospital utilities and audits while assuming industry-level monitoring, so the module rows matter more than the total. Travel and freight now include direct and well-to-tank once; the former direct-only +5% result is obsolete. In the paper-factor variant, identified DESNZ 2022 combined factors are split into their documented components; the unidentified road factor is counted once with no extra WTT (its split remains unknown).",
+        "label": "Total",
+        "module": "total",
+        "ours": {
+          "p10": 64601.5,
+          "p50": 88758.48,
+          "p90": 123510.08,
+          "unit": "kg_co2e"
+        },
+        "published_kg": 71938.8,
+        "published_within_range": true,
+        "status": "gap"
+      }
+    },
+    "primetime": {
+      "method": {
+        "diff_pct": -0.16,
+        "explanation": null,
+        "label": "Total",
+        "module": "total",
+        "ours": {
+          "p10": 89221.19,
+          "p50": 89221.19,
+          "p90": 89221.19,
+          "unit": "kg_co2e"
+        },
+        "published_kg": 89360.2,
+        "published_within_range": false,
+        "status": "match"
+      },
+      "engine_library": {
+        "diff_pct": 22.75,
+        "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90. Travel and freight include direct and well-to-tank once; the former direct-only +7% result is obsolete. Extra initiation and close-out trips, supplies and excess patient-visits partly offset missing hospital utilities, samples and laboratory. The paper-factor variant separates documented direct/WTT components; unidentified road freight is counted once with no additional WTT.",
+        "label": "Total",
+        "module": "total",
+        "ours": {
+          "p10": 87891.34,
+          "p50": 109685.91,
+          "p90": 142685.69,
+          "unit": "kg_co2e"
+        },
+        "published_kg": 89360.2,
+        "published_within_range": true,
+        "status": "gap"
+      }
+    }
+  }
+}

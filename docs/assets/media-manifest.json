@@ -1,0 +1,426 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-17T04:35:10.009787+00:00",
+  "application_code_commit": "e5c386b1fb0b6edf362bf5d37b97cc17066dfd07",
+  "frontend_commit": "e425ca25541e69b40328337aba0ef5145fcd8d91",
+  "backend_receipt_commit": "0579470",
+  "scope": "Original actual-app media. Application code unchanged after the tested commit; docs/media are later revisions.",
+  "recording": {
+    "path": "docs/assets/trialpilot-demo.webm",
+    "duration_seconds": 180.0,
+    "width": 1440,
+    "height": 900,
+    "fps": 25,
+    "frame_count": 4500,
+    "codec": "VP9",
+    "container": "WebM",
+    "audio_tracks": 0,
+    "voiceover": false,
+    "raw_duration_seconds": 184.24,
+    "raw_trim_start_seconds": 2.24,
+    "raw_path": "C:\\Users\\ol735\\AppData\\Local\\Temp\\tp-frontend-9e83bff8d4154ba7a5a779c29daa3243\\video-raw\\page@99558bdef0064615e35724acf5f39493.webm",
+    "capture_started_at": "2026-10-17T04:22:15.975Z",
+    "isolated_api_port": 8008,
+    "isolated_web_port": 5181,
+    "database": "C:\\Users\\ol735\\AppData\\Local\\Temp\\tp-frontend-9e83bff8d4154ba7a5a779c29daa3243\\media.sqlite",
+    "real_api": true,
+    "ui_response_mocks": false,
+    "cached_protocol_transcription": true,
+    "synthetic_operations": true,
+    "fictional_automated_signatures": true,
+    "caption_file": "docs/assets/trialpilot-demo.en.vtt",
+    "caption_cues": 18,
+    "caption_words": 300,
+    "visual_inspection_seconds": [
+      0,
+      23,
+      56,
+      79,
+      98,
+      116,
+      137,
+      157,
+      167,
+      177,
+      179
+    ],
+    "terminal_frame_check": "sequential decode plus Edge browser seeking",
+    "browser_playback": {
+      "passed": true,
+      "metadata": {
+        "duration": 180,
+        "width": 1440,
+        "height": 900,
+        "caption_cues": 18
+      },
+      "checked": [
+        {
+          "second": 1,
+          "caption": "TrialPilot compares trial choices with visible assumptions and evidence. This is a real local API demo."
+        },
+        {
+          "second": 23,
+          "caption": "Review 19 protocol candidates with pages and quotations. This cached transcription is not measured live LLM accuracy."
+        },
+        {
+          "second": 79,
+          "caption": "Open carbon provenance: formulas, activity inputs, direct and upstream factors, and explicit assumptions. Model precision is not empirical accuracy."
+        },
+        {
+          "second": 117,
+          "caption": "Sam demonstrates QA approval of this scenario. These fictional automated signatures are not human approval of the software or validation report."
+        },
+        {
+          "second": 177,
+          "caption": "Tested code e5c386b: 576 passed, zero failed. Download the actual evidence. The report remains awaiting human QA approval."
+        },
+        {
+          "second": 179,
+          "caption": "Tested code e5c386b: 576 passed, zero failed. Download the actual evidence. The report remains awaiting human QA approval."
+        }
+      ]
+    }
+  },
+  "deck": {
+    "path": "docs/assets/trialpilot-deck.pptx",
+    "slides": 12,
+    "size_px": [
+      1280,
+      720
+    ],
+    "font": "Arial",
+    "native_tables": 3,
+    "visual_inspection": "All 12 slides at full size; slide 5 reinspected after raw-frame replacement; other slides unchanged.",
+    "package_findings": 0,
+    "layout_findings": 0,
+    "first_party_import_passed": true,
+    "source_numbers_checked_against_science_json": true,
+    "native_powerpoint_playback_verified": false,
+    "private_receipt": "C:\\Users\\ol735\\AppData\\Local\\Temp\\tp-frontend-9e83bff8d4154ba7a5a779c29daa3243\\deck-build-4\\.codex-finalizer\\deck.validation.json"
+  },
+  "sources": {
+    "tested_commit": "e5c386b1fb0b6edf362bf5d37b97cc17066dfd07",
+    "frontend_commit": "e425ca25541e69b40328337aba0ef5145fcd8d91",
+    "backend_commit": "f91cdb2",
+    "validation_path": "validation/out/clean-clone/20261017T041438Z",
+    "counts": {
+      "passed": 576,
+      "failed": 0,
+      "error": 0,
+      "skipped": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "not_run": 0,
+      "total": 576
+    },
+    "trace": {
+      "pass": 32,
+      "fail": 0,
+      "incomplete": 0,
+      "not run": 0,
+      "no test": 0
+    },
+    "qa_status": "awaiting QA approval",
+    "cold_median_ms": 147.8,
+    "cold_samples_ms": [
+      143.8,
+      142.7,
+      148.2,
+      143.7,
+      147.8,
+      150.5,
+      151.0
+    ],
+    "package_hashes_verified": 114,
+    "package_downloads_verified": 114,
+    "science_parameter_set": "1249d0f0eed8",
+    "science_seed": 7,
+    "science_draws": 2000,
+    "science_sha256": "51b307a5a85795969551bf4bde514044f95cc988484f83f8c3600082668358a2",
+    "validation_summary_sha256": "d2906ff0c25a005b44f1b7532ead85e384b9e789eb35e16c223482e4463325cf",
+    "science": {
+      "casps": {
+        "method": {
+          "diff_pct": 0.01,
+          "explanation": null,
+          "label": "Total",
+          "module": "total",
+          "ours": {
+            "p10": 71943.18,
+            "p50": 71943.18,
+            "p90": 71943.18,
+            "unit": "kg_co2e"
+          },
+          "published_kg": 71938.8,
+          "published_within_range": false,
+          "status": "match"
+        },
+        "engine_library": {
+          "diff_pct": 23.38,
+          "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90. Module allocation differs (initiation trips, storage) and the engine lacks hospital utilities and audits while assuming industry-level monitoring, so the module rows matter more than the total. Travel and freight now include direct and well-to-tank once; the former direct-only +5% result is obsolete. In the paper-factor variant, identified DESNZ 2022 combined factors are split into their documented components; the unidentified road factor is counted once with no extra WTT (its split remains unknown).",
+          "label": "Total",
+          "module": "total",
+          "ours": {
+            "p10": 64601.5,
+            "p50": 88758.48,
+            "p90": 123510.08,
+            "unit": "kg_co2e"
+          },
+          "published_kg": 71938.8,
+          "published_within_range": true,
+          "status": "gap"
+        }
+      },
+      "primetime": {
+        "method": {
+          "diff_pct": -0.16,
+          "explanation": null,
+          "label": "Total",
+          "module": "total",
+          "ours": {
+            "p10": 89221.19,
+            "p50": 89221.19,
+            "p90": 89221.19,
+            "unit": "kg_co2e"
+          },
+          "published_kg": 89360.2,
+          "published_within_range": false,
+          "status": "match"
+        },
+        "engine_library": {
+          "diff_pct": 22.75,
+          "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90. Travel and freight include direct and well-to-tank once; the former direct-only +7% result is obsolete. Extra initiation and close-out trips, supplies and excess patient-visits partly offset missing hospital utilities, samples and laboratory. The paper-factor variant separates documented direct/WTT components; unidentified road freight is counted once with no additional WTT.",
+          "label": "Total",
+          "module": "total",
+          "ours": {
+            "p10": 87891.34,
+            "p50": 109685.91,
+            "p90": 142685.69,
+            "unit": "kg_co2e"
+          },
+          "published_kg": 89360.2,
+          "published_within_range": true,
+          "status": "gap"
+        }
+      }
+    }
+  },
+  "checks": {
+    "exact_duration_ffmpeg": true,
+    "exact_duration_edge": true,
+    "downloaded_evidence_manifest_matches_original": true,
+    "local_markdown_links_checked": 115,
+    "local_markdown_missing_links": 0,
+    "deck_points_and_notes_per_slide": 3,
+    "qa_questions": 15,
+    "caption_continuity_seconds": 180,
+    "application_diff_after_tested_commit": "empty across web/contracts/engine/api source/science/data parameters"
+  },
+  "files": [
+    {
+      "path": "docs/assets/build-deck.mjs",
+      "bytes": 8412,
+      "sha256": "a4ecfaadf174276bb8ae67aafbab70f2f359da7e966b7582b299e06b2d961e42"
+    },
+    {
+      "path": "docs/assets/caption-cues.json",
+      "bytes": 3089,
+      "sha256": "711e124dd5093b592d84129f58f7dd6bdb1096cce8afbd8a681cb3115bc8042b"
+    },
+    {
+      "path": "docs/assets/demo-player.html",
+      "bytes": 4166,
+      "sha256": "4d2b2002c4f2fd6b4aca196b03e9e43faadbd5fe05ea92e9933ab7d410debe0a"
+    },
+    {
+      "path": "docs/assets/record-demo.mjs",
+      "bytes": 9122,
+      "sha256": "c2123e5e536e00a9a6615582a12c21de29d144c31046b2c240575dd1052057e6"
+    },
+    {
+      "path": "docs/assets/release-data.json",
+      "bytes": 3706,
+      "sha256": "e8a4ae6efb58f95730a539d904b3d742466462ad430419fec9d433320d7abf8a"
+    },
+    {
+      "path": "docs/assets/screenshots/01-home.png",
+      "bytes": 167177,
+      "sha256": "3fd1b31999fd29dd95269e753ef05b822c55f9080bc79e65284c23aa60d5b346"
+    },
+    {
+      "path": "docs/assets/screenshots/02-import.png",
+      "bytes": 200955,
+      "sha256": "2a14c8a9ace5c6fa0c5c146966c7321ed9005115e28179e3ffcb30181476279b"
+    },
+    {
+      "path": "docs/assets/screenshots/03-protocol-review.png",
+      "bytes": 192131,
+      "sha256": "4fef9cda5b29a1eb3cf83a437f3599932df215a0e5474b6b8099e36f90613a46"
+    },
+    {
+      "path": "docs/assets/screenshots/04-protocol-applied.png",
+      "bytes": 253458,
+      "sha256": "7519fd83def527ed3bc0399416f0cd429e68cdb8fa8559191099757347fc8f55"
+    },
+    {
+      "path": "docs/assets/screenshots/05-simulator-baseline.png",
+      "bytes": 212940,
+      "sha256": "7d7731489fd6cd5f5bd0a61d0d59a4eacde6196ecee1c0b76951695b3064d1af"
+    },
+    {
+      "path": "docs/assets/screenshots/06-simulator-scenario.png",
+      "bytes": 221568,
+      "sha256": "fbbb64d331fe1dbdaa68b3fb7761172c62a140a469d7a4c78f2c462223df339d"
+    },
+    {
+      "path": "docs/assets/screenshots/07-forecast.png",
+      "bytes": 272388,
+      "sha256": "c1434a04ec6be832d50e555d077ca9371f4d73a6eb18dd18d30799d2b7d8e2c9"
+    },
+    {
+      "path": "docs/assets/screenshots/08-provenance.png",
+      "bytes": 855866,
+      "sha256": "bdb1ac92113b32132607a4fab25412049711473a26b875b10adf510e07b5c142"
+    },
+    {
+      "path": "docs/assets/screenshots/09-self-approval-blocked.png",
+      "bytes": 270776,
+      "sha256": "f0dff465aad6bfe4b388a720b6122f9a7077a171f5fa596a52ba4fae7595d27a"
+    },
+    {
+      "path": "docs/assets/screenshots/10-demo-approved.png",
+      "bytes": 288331,
+      "sha256": "02a3d312a60ad454a690d307729697ea6aa687cb275f971fc6a12e6ac1adf0c3"
+    },
+    {
+      "path": "docs/assets/screenshots/11-audit.png",
+      "bytes": 160203,
+      "sha256": "bc66e683391d2ec65f0425614d329f6e4bedf5ed73b363c9e60a477dd1ab00e4"
+    },
+    {
+      "path": "docs/assets/screenshots/12-command.png",
+      "bytes": 213982,
+      "sha256": "5bf9db8bc8485cfbea5c0689f08157b7642e43967555648003eef7aa9bc689ec"
+    },
+    {
+      "path": "docs/assets/screenshots/13-intervention.png",
+      "bytes": 155010,
+      "sha256": "d40ca921338ef51396a5c8593dc70582ee20364204f10574d6e4e28ca2fb2a86"
+    },
+    {
+      "path": "docs/assets/screenshots/14-effect.png",
+      "bytes": 147377,
+      "sha256": "d243c14f82eca6ac2c7160944c7fb9a28e707ce9fc184c8e8b37ba01336ac892"
+    },
+    {
+      "path": "docs/assets/screenshots/15-science.png",
+      "bytes": 213231,
+      "sha256": "ae5dd7e3caee67c6e2c36fd8836960c1422c495c720d84489f3aa4656db5cb98"
+    },
+    {
+      "path": "docs/assets/screenshots/16-validation.png",
+      "bytes": 161782,
+      "sha256": "d65be7c8d8887b41adf928c146ebf10f1d9c966166e61dd0c7fb2db3d58b8e60"
+    },
+    {
+      "path": "docs/assets/screenshots/17-validation-qa.png",
+      "bytes": 121334,
+      "sha256": "2279c37867152d1d1996959676518c08b66dcdba13239d1b051002b0af4cd13f"
+    },
+    {
+      "path": "docs/assets/screenshots/18-country-weeks.png",
+      "bytes": 208707,
+      "sha256": "2fc24a2729b9e89b1274745e64efd0b398dd4c0d77cedcd48731bb3b7aaad555"
+    },
+    {
+      "path": "docs/assets/screenshots/19-site-weeks.png",
+      "bytes": 224071,
+      "sha256": "94e28c0babe75d5d546d6e0e6ce66fe3a828e58bc095a64e70eb279f536a2aaa"
+    },
+    {
+      "path": "docs/assets/screenshots/capture-log.json",
+      "bytes": 3757,
+      "sha256": "8b54d946ea414d41fe2a34bfd266934bb59b33a67ee22a712e33a6162ed36342"
+    },
+    {
+      "path": "docs/assets/screenshots/downloaded-evidence-manifest.json",
+      "bytes": 24051,
+      "sha256": "284165a738957d494fd67f7651f0fd757c98c63239e0b525583d2d1902b296fb"
+    },
+    {
+      "path": "docs/assets/slides/slide-01.png",
+      "bytes": 47410,
+      "sha256": "339edfd579cdbc531005a572ecce1d7c67dac294f9a17043b862c18256530120"
+    },
+    {
+      "path": "docs/assets/slides/slide-02.png",
+      "bytes": 75138,
+      "sha256": "03cfdd835944309202fc6f8f6bdbfbf201b1cf708eff3d864fd665a415cbc9d1"
+    },
+    {
+      "path": "docs/assets/slides/slide-03.png",
+      "bytes": 170129,
+      "sha256": "ec4d02f88ae9283169763321e24dfeff4f46a9a8ea54135686ddabb6ce450944"
+    },
+    {
+      "path": "docs/assets/slides/slide-04.png",
+      "bytes": 200033,
+      "sha256": "7fe842393eb91d4d443ae0c34ae16b69b357fe202753f5f3be88d16d89ef3d14"
+    },
+    {
+      "path": "docs/assets/slides/slide-05.png",
+      "bytes": 413305,
+      "sha256": "1fd47de2dd39710454c54081048f251702703918ef90b7752633dea11b3bd90f"
+    },
+    {
+      "path": "docs/assets/slides/slide-06.png",
+      "bytes": 159643,
+      "sha256": "196a7f7fce073a0c404ef830e7992a1f5e3443988a8049b244e4126fe107063a"
+    },
+    {
+      "path": "docs/assets/slides/slide-07.png",
+      "bytes": 209112,
+      "sha256": "7b68294d84c0a55e0e626d5ca6f1a39371f8390808205afb406aa09d5b7160bd"
+    },
+    {
+      "path": "docs/assets/slides/slide-08.png",
+      "bytes": 73303,
+      "sha256": "89cb3eda59232939b2e778890a3e44bec9ee16fd6d5f76373437c2bd8022cdc8"
+    },
+    {
+      "path": "docs/assets/slides/slide-09.png",
+      "bytes": 153709,
+      "sha256": "81d692a7799dffc919221c1dd18f0da867ac7fd255dc3db9954d52ac8ae2bbcd"
+    },
+    {
+      "path": "docs/assets/slides/slide-10.png",
+      "bytes": 62399,
+      "sha256": "e7a6600759306b972d153c567ebfe909e272123406092d28c94e2df14688418d"
+    },
+    {
+      "path": "docs/assets/slides/slide-11.png",
+      "bytes": 60137,
+      "sha256": "de81e6a5f71a31e34490acc0fb3b3b2039be5f552d1f73aa594cf941b82f2042"
+    },
+    {
+      "path": "docs/assets/slides/slide-12.png",
+      "bytes": 53170,
+      "sha256": "6c902b573c63dfb55c289c854f41ef05d9bd1679e9cfb46b0240adf280e24216"
+    },
+    {
+      "path": "docs/assets/trialpilot-deck.pptx",
+      "bytes": 1895550,
+      "sha256": "1e5568daae606f7ae50ab3ce2e0f88951e04c0c74d78c36c671e3208a8aace1c"
+    },
+    {
+      "path": "docs/assets/trialpilot-demo.en.vtt",
+      "bytes": 2692,
+      "sha256": "fedddab256afd67b3d8f55a142dd52fb84cda24fc45de3729e260953e5e0113b"
+    },
+    {
+      "path": "docs/assets/trialpilot-demo.webm",
+      "bytes": 16601645,
+      "sha256": "2d5766d78911aabac28db6b0bc873e6761d84a869ee742d5acc1f959392bca5e"
+    }
+  ]
+}
