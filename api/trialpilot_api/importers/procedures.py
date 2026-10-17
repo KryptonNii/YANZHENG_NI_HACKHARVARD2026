@@ -34,6 +34,8 @@ def clean_label(label: str) -> str:
     s = " ".join(label.replace("\n", " ").split())
     # footnote letters must be separated ("X-ray e", "Spirometry n,o") or carets ("X-ray^e")
     s = re.sub(r"(\s|\^)[a-z](,[a-z])*$", "", s) if len(s) > 3 else s
+    # footnote numbers glued to a word ("IOP8", "Vital signs12", "sample16, 17"); keeps "VFQ-25", "Eotaxin-3"
+    s = re.sub(r"(?<=[A-Za-z)])\d{1,2}(,\s*\d{1,2})*$", "", s) if len(s) > 3 else s
     s = re.sub(r"\s*\((footnote|note)\s*[a-z0-9,]+\)$", "", s, flags=re.I)
     return s.strip(" *:,;")
 

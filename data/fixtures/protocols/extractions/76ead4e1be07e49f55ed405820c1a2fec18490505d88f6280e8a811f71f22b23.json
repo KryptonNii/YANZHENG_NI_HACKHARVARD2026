@@ -1,0 +1,4790 @@
+{
+ "extraction_id": "2c372d07-ab7f-5518-9dd4-78a77d45eaed",
+ "pdf_sha256": "76ead4e1be07e49f55ed405820c1a2fec18490505d88f6280e8a811f71f22b23",
+ "page_count": 109,
+ "soa_pages": [
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20
+ ],
+ "method": "llm_vision",
+ "model": "claude-opus-5-5 (build-time transcription by the A4 coding agent from page images; not the runtime EXTRACT_MODEL)",
+ "extracted_at": "2026-10-16T21:40:00Z",
+ "candidates": [
+  {
+   "visit": {
+    "number": 1,
+    "label": "Visit 1 - Screening",
+    "week": -4.0,
+    "procedures": [
+     {
+      "code": "informed_consent",
+      "label": "Informed consent",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "demographics",
+      "label": "Patient demography",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "medical_history",
+      "label": "Previous medical and surgical history",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "x_ray",
+      "label": "Chest X-ray",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "eligibility_check",
+      "label": "Inclusion/exclusion",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "physical_exam",
+      "label": "Physical examination",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "ecg",
+      "label": "Electrocardiogram (12 lead)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "blood_draw",
+      "label": "Hematology, biochemistry, urinalysis including cotinine",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "blood_draw",
+      "label": "Hepatitis and HIV Serology tests",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "blood_draw",
+      "label": "Pregnancy (β-HCG blood) test",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (post-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "Screening | VISIT 1 | WEEK W-4 to W-1",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": [
+    -4.0,
+    -1.0
+   ],
+   "procedures": [
+    {
+     "code": "informed_consent",
+     "label": "Informed consent",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Informed consent",
+     "confidence": 0.9
+    },
+    {
+     "code": "demographics",
+     "label": "Patient demography",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Patient demography",
+     "confidence": 0.9
+    },
+    {
+     "code": "medical_history",
+     "label": "Previous medical and surgical history",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Previous medical and surgical history",
+     "confidence": 0.9
+    },
+    {
+     "code": "x_ray",
+     "label": "Chest X-ray",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Chest X-ray",
+     "confidence": 0.9
+    },
+    {
+     "code": "eligibility_check",
+     "label": "Inclusion/exclusion",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Inclusion/exclusion",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "physical_exam",
+     "label": "Physical examination",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Physical examination",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "ecg",
+     "label": "Electrocardiogram (12 lead)",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Electrocardiogram (12 lead)",
+     "confidence": 0.9
+    },
+    {
+     "code": "blood_draw",
+     "label": "Hematology, biochemistry, urinalysis including cotinine",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Hematology, biochemistry, urinalysis including cotinine",
+     "confidence": 0.9
+    },
+    {
+     "code": "blood_draw",
+     "label": "Hepatitis and HIV Serology tests",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Hepatitis and HIV Serology tests",
+     "confidence": 0.9
+    },
+    {
+     "code": "blood_draw",
+     "label": "Pregnancy (β-HCG blood) test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Pregnancy (β-HCG blood) test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (post-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (post-BD)",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 2,
+    "label": "Visit 2 - Randomization/Baseline",
+    "week": 0.0,
+    "procedures": [
+     {
+      "code": "eligibility_check",
+      "label": "Inclusion/exclusion",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "six_minute_walk",
+      "label": "BODE score, includes 6-minute walk test and mMRC Dyspnea scale",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "randomization",
+      "label": "Randomization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "imp_administration",
+      "label": "IMP administration",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "physical_exam",
+      "label": "Physical examination",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "ecg",
+      "label": "Electrocardiogram (12 lead)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "blood_draw",
+      "label": "Hematology, biochemistry, urinalysis including cotinine",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "urine_sample",
+      "label": "Urine pregnancy test",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "pk_sample",
+      "label": "Serum PK samples for dupilumab concentration",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "ada_sample",
+      "label": "Anti-dupilumab antibody",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "feno",
+      "label": "FeNO post-bronchodilator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "PARC",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Eotaxin-3",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Total IgE",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "blood_draw",
+      "label": "Fibrinogen",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "sputum_sample",
+      "label": "Induced/spontaneous sputum (optional)",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Whole blood RNA (optional)",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "DNA (optional)",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Serum/plasma for archival samples (optional)",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (post-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "SGRQ",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "EQ-5D-5L",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Health care utilization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "Randomization/ Baseline | VISIT 2 | WEEK 0",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "eligibility_check",
+     "label": "Inclusion/exclusion",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Inclusion/exclusion",
+     "confidence": 0.9
+    },
+    {
+     "code": "six_minute_walk",
+     "label": "BODE score, includes 6-minute walk test and mMRC Dyspnea scale",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "BODE score, includes 6-minute walk test and mMRC Dyspnea scale",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "randomization",
+     "label": "Randomization",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Randomization",
+     "confidence": 0.9
+    },
+    {
+     "code": "imp_administration",
+     "label": "IMP administration",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "IMP administration",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "physical_exam",
+     "label": "Physical examination",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Physical examination",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "ecg",
+     "label": "Electrocardiogram (12 lead)",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Electrocardiogram (12 lead)",
+     "confidence": 0.9
+    },
+    {
+     "code": "blood_draw",
+     "label": "Hematology, biochemistry, urinalysis including cotinine",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Hematology, biochemistry, urinalysis including cotinine",
+     "confidence": 0.9
+    },
+    {
+     "code": "urine_sample",
+     "label": "Urine pregnancy test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Urine pregnancy test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "pk_sample",
+     "label": "Serum PK samples for dupilumab concentration",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Serum PK samples for dupilumab concentration",
+     "confidence": 0.9
+    },
+    {
+     "code": "ada_sample",
+     "label": "Anti-dupilumab antibody",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Anti-dupilumab antibody",
+     "confidence": 0.9
+    },
+    {
+     "code": "feno",
+     "label": "FeNO post-bronchodilator",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "FeNO post-bronchodilator",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "PARC",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "PARC",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Eotaxin-3",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Eotaxin-3",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Total IgE",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Total IgE",
+     "confidence": 0.9
+    },
+    {
+     "code": "blood_draw",
+     "label": "Fibrinogen",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Fibrinogen",
+     "confidence": 0.9
+    },
+    {
+     "code": "sputum_sample",
+     "label": "Induced/spontaneous sputum (optional)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Induced/spontaneous sputum (optional)",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Whole blood RNA (optional)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Whole blood RNA (optional)",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "DNA (optional)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "DNA (optional)",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Serum/plasma for archival samples (optional)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Serum/plasma for archival samples (optional)",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (post-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (post-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "SGRQ",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "SGRQ",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "EQ-5D-5L",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "EQ-5D-5L",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Health care utilization",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Health care utilization",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 3,
+    "label": "Visit 3 - Week 2",
+    "week": 2.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "imp_administration",
+      "label": "IMP administration",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "pk_sample",
+      "label": "Serum PK samples for dupilumab concentration",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (post-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 3 | WEEK 2",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "imp_administration",
+     "label": "IMP administration",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "IMP administration",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "pk_sample",
+     "label": "Serum PK samples for dupilumab concentration",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Serum PK samples for dupilumab concentration",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (post-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (post-BD)",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 4,
+    "label": "Visit 4 - Week 4",
+    "week": 4.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "imp_administration",
+      "label": "IMP administration",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "blood_draw",
+      "label": "Hematology, biochemistry, urinalysis including cotinine",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "urine_sample",
+      "label": "Urine pregnancy test",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "pk_sample",
+      "label": "Serum PK samples for dupilumab concentration",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "feno",
+      "label": "FeNO post-bronchodilator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Eotaxin-3",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Serum/plasma for archival samples (optional)",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (post-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "SGRQ",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Health care utilization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 4 | WEEK 4",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "imp_administration",
+     "label": "IMP administration",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "IMP administration",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "blood_draw",
+     "label": "Hematology, biochemistry, urinalysis including cotinine",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Hematology, biochemistry, urinalysis including cotinine",
+     "confidence": 0.9
+    },
+    {
+     "code": "urine_sample",
+     "label": "Urine pregnancy test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Urine pregnancy test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "pk_sample",
+     "label": "Serum PK samples for dupilumab concentration",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Serum PK samples for dupilumab concentration",
+     "confidence": 0.9
+    },
+    {
+     "code": "feno",
+     "label": "FeNO post-bronchodilator",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "FeNO post-bronchodilator",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Eotaxin-3",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Eotaxin-3",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Serum/plasma for archival samples (optional)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Serum/plasma for archival samples (optional)",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (post-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (post-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "SGRQ",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "SGRQ",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Health care utilization",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Health care utilization",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 5,
+    "label": "Visit 5 - Week 8",
+    "week": 8.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "imp_administration",
+      "label": "IMP administration",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "blood_draw",
+      "label": "Hematology, biochemistry, urinalysis including cotinine",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "urine_sample",
+      "label": "Urine pregnancy test",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "pk_sample",
+      "label": "Serum PK samples for dupilumab concentration",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "feno",
+      "label": "FeNO post-bronchodilator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (post-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Health care utilization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 5 | WEEK 8",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "imp_administration",
+     "label": "IMP administration",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "IMP administration",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "blood_draw",
+     "label": "Hematology, biochemistry, urinalysis including cotinine",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Hematology, biochemistry, urinalysis including cotinine",
+     "confidence": 0.9
+    },
+    {
+     "code": "urine_sample",
+     "label": "Urine pregnancy test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Urine pregnancy test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "pk_sample",
+     "label": "Serum PK samples for dupilumab concentration",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Serum PK samples for dupilumab concentration",
+     "confidence": 0.9
+    },
+    {
+     "code": "feno",
+     "label": "FeNO post-bronchodilator",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "FeNO post-bronchodilator",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (post-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (post-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Health care utilization",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Health care utilization",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 6,
+    "label": "Visit 6 - Week 12",
+    "week": 12.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "imp_administration",
+      "label": "IMP administration",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "ecg",
+      "label": "Electrocardiogram (12 lead)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "blood_draw",
+      "label": "Hematology, biochemistry, urinalysis including cotinine",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "urine_sample",
+      "label": "Urine pregnancy test",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "pk_sample",
+      "label": "Serum PK samples for dupilumab concentration",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "ada_sample",
+      "label": "Anti-dupilumab antibody",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "feno",
+      "label": "FeNO post-bronchodilator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Eotaxin-3",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Total IgE",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Serum/plasma for archival samples (optional)",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (post-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "SGRQ",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Health care utilization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 6 | WEEK 12",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "imp_administration",
+     "label": "IMP administration",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "IMP administration",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "ecg",
+     "label": "Electrocardiogram (12 lead)",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Electrocardiogram (12 lead)",
+     "confidence": 0.9
+    },
+    {
+     "code": "blood_draw",
+     "label": "Hematology, biochemistry, urinalysis including cotinine",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Hematology, biochemistry, urinalysis including cotinine",
+     "confidence": 0.9
+    },
+    {
+     "code": "urine_sample",
+     "label": "Urine pregnancy test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Urine pregnancy test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "pk_sample",
+     "label": "Serum PK samples for dupilumab concentration",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Serum PK samples for dupilumab concentration",
+     "confidence": 0.9
+    },
+    {
+     "code": "ada_sample",
+     "label": "Anti-dupilumab antibody",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Anti-dupilumab antibody",
+     "confidence": 0.9
+    },
+    {
+     "code": "feno",
+     "label": "FeNO post-bronchodilator",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "FeNO post-bronchodilator",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Eotaxin-3",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Eotaxin-3",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Total IgE",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Total IgE",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Serum/plasma for archival samples (optional)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Serum/plasma for archival samples (optional)",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (post-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (post-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "SGRQ",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "SGRQ",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Health care utilization",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Health care utilization",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 7,
+    "label": "Visit 7 - Week 16",
+    "week": 16.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "imp_administration",
+      "label": "IMP administration",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "urine_sample",
+      "label": "Urine pregnancy test",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "pk_sample",
+      "label": "Serum PK samples for dupilumab concentration",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Health care utilization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 7 | WEEK 16",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "imp_administration",
+     "label": "IMP administration",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "IMP administration",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "urine_sample",
+     "label": "Urine pregnancy test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Urine pregnancy test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "pk_sample",
+     "label": "Serum PK samples for dupilumab concentration",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Serum PK samples for dupilumab concentration",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Health care utilization",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Health care utilization",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 8,
+    "label": "Visit 8 - Week 20",
+    "week": 20.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "imp_administration",
+      "label": "IMP administration",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "urine_sample",
+      "label": "Urine pregnancy test",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Health care utilization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 8 | WEEK 20",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "imp_administration",
+     "label": "IMP administration",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "IMP administration",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "urine_sample",
+     "label": "Urine pregnancy test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Urine pregnancy test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Health care utilization",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Health care utilization",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 9,
+    "label": "Visit 9 - Week 24",
+    "week": 24.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "imp_administration",
+      "label": "IMP administration",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "physical_exam",
+      "label": "Physical examination",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "ecg",
+      "label": "Electrocardiogram (12 lead)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "blood_draw",
+      "label": "Hematology, biochemistry, urinalysis including cotinine",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "urine_sample",
+      "label": "Urine pregnancy test",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "pk_sample",
+      "label": "Serum PK samples for dupilumab concentration",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "ada_sample",
+      "label": "Anti-dupilumab antibody",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "feno",
+      "label": "FeNO post-bronchodilator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Eotaxin-3",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "blood_draw",
+      "label": "Fibrinogen",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "sputum_sample",
+      "label": "Induced/spontaneous sputum (optional)",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Whole blood RNA (optional)",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Serum/plasma for archival samples (optional)",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (post-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "SGRQ",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Health care utilization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 9 | WEEK 24",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "imp_administration",
+     "label": "IMP administration",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "IMP administration",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "physical_exam",
+     "label": "Physical examination",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Physical examination",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "ecg",
+     "label": "Electrocardiogram (12 lead)",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Electrocardiogram (12 lead)",
+     "confidence": 0.9
+    },
+    {
+     "code": "blood_draw",
+     "label": "Hematology, biochemistry, urinalysis including cotinine",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Hematology, biochemistry, urinalysis including cotinine",
+     "confidence": 0.9
+    },
+    {
+     "code": "urine_sample",
+     "label": "Urine pregnancy test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Urine pregnancy test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "pk_sample",
+     "label": "Serum PK samples for dupilumab concentration",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Serum PK samples for dupilumab concentration",
+     "confidence": 0.9
+    },
+    {
+     "code": "ada_sample",
+     "label": "Anti-dupilumab antibody",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Anti-dupilumab antibody",
+     "confidence": 0.9
+    },
+    {
+     "code": "feno",
+     "label": "FeNO post-bronchodilator",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "FeNO post-bronchodilator",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Eotaxin-3",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Eotaxin-3",
+     "confidence": 0.9
+    },
+    {
+     "code": "blood_draw",
+     "label": "Fibrinogen",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Fibrinogen",
+     "confidence": 0.9
+    },
+    {
+     "code": "sputum_sample",
+     "label": "Induced/spontaneous sputum (optional)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Induced/spontaneous sputum (optional)",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Whole blood RNA (optional)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Whole blood RNA (optional)",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Serum/plasma for archival samples (optional)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Serum/plasma for archival samples (optional)",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (post-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (post-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "SGRQ",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "SGRQ",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Health care utilization",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Health care utilization",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 10,
+    "label": "Visit 10 - Week 28",
+    "week": 28.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "imp_administration",
+      "label": "IMP administration",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "urine_sample",
+      "label": "Urine pregnancy test",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Health care utilization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 10 | WEEK 28",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "imp_administration",
+     "label": "IMP administration",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "IMP administration",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "urine_sample",
+     "label": "Urine pregnancy test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Urine pregnancy test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Health care utilization",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Health care utilization",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 11,
+    "label": "Visit 11 - Week 32",
+    "week": 32.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "imp_administration",
+      "label": "IMP administration",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "urine_sample",
+      "label": "Urine pregnancy test",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Health care utilization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 11 | WEEK 32",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "imp_administration",
+     "label": "IMP administration",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "IMP administration",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "urine_sample",
+     "label": "Urine pregnancy test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Urine pregnancy test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Health care utilization",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Health care utilization",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 12,
+    "label": "Visit 12 - Week 36",
+    "week": 36.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "imp_administration",
+      "label": "IMP administration",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "ecg",
+      "label": "Electrocardiogram (12 lead)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "blood_draw",
+      "label": "Hematology, biochemistry, urinalysis including cotinine",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "urine_sample",
+      "label": "Urine pregnancy test",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "pk_sample",
+      "label": "Serum PK samples for dupilumab concentration",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "feno",
+      "label": "FeNO post-bronchodilator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Serum/plasma for archival samples (optional)",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (post-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "SGRQ",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Health care utilization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 12 | WEEK 36",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "imp_administration",
+     "label": "IMP administration",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "IMP administration",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "ecg",
+     "label": "Electrocardiogram (12 lead)",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Electrocardiogram (12 lead)",
+     "confidence": 0.9
+    },
+    {
+     "code": "blood_draw",
+     "label": "Hematology, biochemistry, urinalysis including cotinine",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Hematology, biochemistry, urinalysis including cotinine",
+     "confidence": 0.9
+    },
+    {
+     "code": "urine_sample",
+     "label": "Urine pregnancy test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Urine pregnancy test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "pk_sample",
+     "label": "Serum PK samples for dupilumab concentration",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Serum PK samples for dupilumab concentration",
+     "confidence": 0.9
+    },
+    {
+     "code": "feno",
+     "label": "FeNO post-bronchodilator",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "FeNO post-bronchodilator",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Serum/plasma for archival samples (optional)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Serum/plasma for archival samples (optional)",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (post-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (post-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "SGRQ",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "SGRQ",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Health care utilization",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Health care utilization",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 13,
+    "label": "Visit 13 - Week 40",
+    "week": 40.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "imp_administration",
+      "label": "IMP administration",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "urine_sample",
+      "label": "Urine pregnancy test",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Health care utilization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 13 | WEEK 40",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "imp_administration",
+     "label": "IMP administration",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "IMP administration",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "urine_sample",
+     "label": "Urine pregnancy test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Urine pregnancy test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Health care utilization",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Health care utilization",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 14,
+    "label": "Visit 14 - Week 44",
+    "week": 44.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "imp_administration",
+      "label": "IMP administration",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "urine_sample",
+      "label": "Urine pregnancy test",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Health care utilization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 14 | WEEK 44",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "imp_administration",
+     "label": "IMP administration",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "IMP administration",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "urine_sample",
+     "label": "Urine pregnancy test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Urine pregnancy test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Health care utilization",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Health care utilization",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 15,
+    "label": "Visit 15 - Week 48",
+    "week": 48.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "imp_administration",
+      "label": "IMP administration",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "urine_sample",
+      "label": "Urine pregnancy test",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Health care utilization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 15 | WEEK 48",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "imp_administration",
+     "label": "IMP administration",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "IMP administration",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "urine_sample",
+     "label": "Urine pregnancy test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Urine pregnancy test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Health care utilization",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Health care utilization",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 16,
+    "label": "Visit 16 - Week 52 (End of treatment)",
+    "week": 52.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "physical_exam",
+      "label": "Physical examination",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "ecg",
+      "label": "Electrocardiogram (12 lead)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "blood_draw",
+      "label": "Hematology, biochemistry, urinalysis including cotinine",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "urine_sample",
+      "label": "Urine pregnancy test",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "pk_sample",
+      "label": "Serum PK samples for dupilumab concentration",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "ada_sample",
+      "label": "Anti-dupilumab antibody",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "feno",
+      "label": "FeNO post-bronchodilator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "PARC",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Eotaxin-3",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Total IgE",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "blood_draw",
+      "label": "Fibrinogen",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "sputum_sample",
+      "label": "Induced/spontaneous sputum (optional)",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Whole blood RNA (optional)",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Serum/plasma for archival samples (optional)",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (post-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "SGRQ",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Health care utilization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 16 | WEEK 52 (EOT)",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "physical_exam",
+     "label": "Physical examination",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Physical examination",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "ecg",
+     "label": "Electrocardiogram (12 lead)",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Electrocardiogram (12 lead)",
+     "confidence": 0.9
+    },
+    {
+     "code": "blood_draw",
+     "label": "Hematology, biochemistry, urinalysis including cotinine",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Hematology, biochemistry, urinalysis including cotinine",
+     "confidence": 0.9
+    },
+    {
+     "code": "urine_sample",
+     "label": "Urine pregnancy test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Urine pregnancy test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "pk_sample",
+     "label": "Serum PK samples for dupilumab concentration",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Serum PK samples for dupilumab concentration",
+     "confidence": 0.9
+    },
+    {
+     "code": "ada_sample",
+     "label": "Anti-dupilumab antibody",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Anti-dupilumab antibody",
+     "confidence": 0.9
+    },
+    {
+     "code": "feno",
+     "label": "FeNO post-bronchodilator",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "FeNO post-bronchodilator",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "PARC",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "PARC",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Eotaxin-3",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Eotaxin-3",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Total IgE",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Total IgE",
+     "confidence": 0.9
+    },
+    {
+     "code": "blood_draw",
+     "label": "Fibrinogen",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Fibrinogen",
+     "confidence": 0.9
+    },
+    {
+     "code": "sputum_sample",
+     "label": "Induced/spontaneous sputum (optional)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Induced/spontaneous sputum (optional)",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Whole blood RNA (optional)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Whole blood RNA (optional)",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Serum/plasma for archival samples (optional)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Serum/plasma for archival samples (optional)",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (post-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (post-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "SGRQ",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "SGRQ",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Health care utilization",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Health care utilization",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 17,
+    "label": "Visit 17 - Week 56",
+    "week": 56.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "pk_sample",
+      "label": "Serum PK samples for dupilumab concentration",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 17 | WEEK 56",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "pk_sample",
+     "label": "Serum PK samples for dupilumab concentration",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Serum PK samples for dupilumab concentration",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 18,
+    "label": "Visit 18 - Week 60",
+    "week": 60.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "pk_sample",
+      "label": "Serum PK samples for dupilumab concentration",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 18 | WEEK 60",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "pk_sample",
+     "label": "Serum PK samples for dupilumab concentration",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Serum PK samples for dupilumab concentration",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "visit": {
+    "number": 19,
+    "label": "Visit 19 - Week 64 (End of study)",
+    "week": 64.0,
+    "procedures": [
+     {
+      "code": "other:smoking_status",
+      "label": "Smoking status",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "concomitant_meds",
+      "label": "Prior & concomitant medications",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "irt_contact",
+      "label": "Call IVRS/IWRS",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Review electronic diary",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "physical_exam",
+      "label": "Physical examination",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "vital_signs",
+      "label": "Vital signs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "ecg",
+      "label": "Electrocardiogram (12 lead)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "blood_draw",
+      "label": "Hematology, biochemistry, urinalysis including cotinine",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "urine_sample",
+      "label": "Urine pregnancy test",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "adverse_events",
+      "label": "Adverse event reporting, including SAEs",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "pk_sample",
+      "label": "Serum PK samples for dupilumab concentration",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "ada_sample",
+      "label": "Anti-dupilumab antibody",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "feno",
+      "label": "FeNO post-bronchodilator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "PARC",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Eotaxin-3",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "biomarker_sample",
+      "label": "Total IgE",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "blood_draw",
+      "label": "Fibrinogen",
+      "site_minutes": null,
+      "ships_sample": true,
+      "sample_temp": null
+     },
+     {
+      "code": "other:copd_exacerbation_reporting_by_the_investigator",
+      "label": "COPD exacerbation reporting by the Investigator",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (pre-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "spirometry",
+      "label": "Spirometry (post-BD)",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "SGRQ",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     },
+     {
+      "code": "questionnaire",
+      "label": "Health care utilization",
+      "site_minutes": null,
+      "ships_sample": false,
+      "sample_temp": null
+     }
+    ],
+    "can_be_remote": false
+   },
+   "source_page": 13,
+   "quote": "VISIT 19 | WEEK 64 (EOS)",
+   "quote_kind": "image_transcription",
+   "quote_verified": null,
+   "confidence": 0.9,
+   "week_window": null,
+   "procedures": [
+    {
+     "code": "other:smoking_status",
+     "label": "Smoking status",
+     "mapped": false,
+     "source_page": 13,
+     "quote": "Smoking status",
+     "confidence": 0.9
+    },
+    {
+     "code": "concomitant_meds",
+     "label": "Prior & concomitant medications",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Prior & concomitant medications",
+     "confidence": 0.9
+    },
+    {
+     "code": "irt_contact",
+     "label": "Call IVRS/IWRS",
+     "mapped": true,
+     "source_page": 13,
+     "quote": "Call IVRS/IWRS",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Review electronic diary",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Review electronic diary",
+     "confidence": 0.9
+    },
+    {
+     "code": "physical_exam",
+     "label": "Physical examination",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Physical examination",
+     "confidence": 0.9
+    },
+    {
+     "code": "vital_signs",
+     "label": "Vital signs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Vital signs",
+     "confidence": 0.9
+    },
+    {
+     "code": "ecg",
+     "label": "Electrocardiogram (12 lead)",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Electrocardiogram (12 lead)",
+     "confidence": 0.9
+    },
+    {
+     "code": "blood_draw",
+     "label": "Hematology, biochemistry, urinalysis including cotinine",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Hematology, biochemistry, urinalysis including cotinine",
+     "confidence": 0.9
+    },
+    {
+     "code": "urine_sample",
+     "label": "Urine pregnancy test",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Urine pregnancy test",
+     "confidence": 0.9
+    },
+    {
+     "code": "adverse_events",
+     "label": "Adverse event reporting, including SAEs",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Adverse event reporting, including SAEs",
+     "confidence": 0.9
+    },
+    {
+     "code": "pk_sample",
+     "label": "Serum PK samples for dupilumab concentration",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Serum PK samples for dupilumab concentration",
+     "confidence": 0.9
+    },
+    {
+     "code": "ada_sample",
+     "label": "Anti-dupilumab antibody",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Anti-dupilumab antibody",
+     "confidence": 0.9
+    },
+    {
+     "code": "feno",
+     "label": "FeNO post-bronchodilator",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "FeNO post-bronchodilator",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "PARC",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "PARC",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Eotaxin-3",
+     "mapped": true,
+     "source_page": 14,
+     "quote": "Eotaxin-3",
+     "confidence": 0.9
+    },
+    {
+     "code": "biomarker_sample",
+     "label": "Total IgE",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Total IgE",
+     "confidence": 0.9
+    },
+    {
+     "code": "blood_draw",
+     "label": "Fibrinogen",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Fibrinogen",
+     "confidence": 0.9
+    },
+    {
+     "code": "other:copd_exacerbation_reporting_by_the_investigator",
+     "label": "COPD exacerbation reporting by the Investigator",
+     "mapped": false,
+     "source_page": 15,
+     "quote": "COPD exacerbation reporting by the Investigator",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (pre-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (pre-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "spirometry",
+     "label": "Spirometry (post-BD)",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Spirometry (post-BD)",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "SGRQ",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "SGRQ",
+     "confidence": 0.9
+    },
+    {
+     "code": "questionnaire",
+     "label": "Health care utilization",
+     "mapped": true,
+     "source_page": 15,
+     "quote": "Health care utilization",
+     "confidence": 0.9
+    }
+   ]
+  }
+ ],
+ "excluded_columns": [
+  "Unnumbered columns at weeks 6, 10, 14, 18, 22, 26, 30, 34, 38, 42, 46 and 50 (page 13): IMP administration only - footnote f (page 16) says the IMP is given every 2 weeks at the patient's home or in a health care facility.",
+  "EXACT (page 15): 'Every day (diary) from screening to week 52' - daily e-diary at home, not a visit procedure.",
+  "At-home spirometry (FEV1), optional, US/Canada only (page 15): twice-daily home measurements, not a visit procedure."
+ ],
+ "warnings": [
+  "Pages 18-19 hold Section 1.3.2, the schedule for patients who stop treatment early; it was not used for the planned visits.",
+  "Footnote a (page 16): visit windows are +/-1 week (screening), +/-3 days (treatment period) and +/-5 days (post-treatment).",
+  "Footnote f (page 16): after Week 8, IMP injections not done at home are given at the site as unscheduled visits (not modelled here).",
+  "2 procedure label(s) are not in the controlled vocabulary and were kept as other:<label>: COPD exacerbation reporting by the Investigator, Smoking status."
+ ],
+ "notice": "DRAFT - machine-extracted candidates. A human must accept, edit or reject each item before use.",
+ "vocabulary_version": 1,
+ "provenance": {
+  "pipeline": "page images -> transcription (build time) -> validation",
+  "transcription_file": "data/fixtures/protocols/NCT03930732_soa_transcription.yaml",
+  "document_url": "https://cdn.clinicaltrials.gov/large-docs/32/NCT03930732/Prot_000.pdf",
+  "table": "Section 1.3.1 Schedule of activities for patients who complete the planned treatment (pages 13-15)",
+  "footnote_quotes": {
+   "f": {
+    "page": 16,
+    "quote": "IMP (Dupilumab or placebo) is to be administered every 2 weeks by patient, caregiver or healthcare professional at the patient's home"
+   },
+   "a": {
+    "page": 16,
+    "quote": "The visit schedule should be adhered to within ±1 week for the screening period, ±3 days for the randomized IMP treatment period"
+   }
+  },
+  "human_verified": false
+ }
+}

@@ -15,7 +15,7 @@ codes:
   - code: informed_consent
     label: Informed consent
     param: true
-    match: ['informed consent', '\bconsent\b']
+    match: ['informed consent', '\bconsent\b', '\bicf\b']
   - code: eligibility_check
     label: Inclusion / exclusion criteria review
     match: ['inclusion', 'exclusion', 'eligibility']
@@ -43,7 +43,7 @@ codes:
     match: ['dispens']
   - code: imp_administration
     label: Study drug administration at site
-    match: ['imp administration', 'study (drug|treatment|intervention) administration', 'injection', 'infusion', 'intravitreal', '\bdosing\b', 'administration of (study|imp)']
+    match: ['^study drug\b', 'imp administration', 'study (drug|treatment|intervention) administration', 'injection', 'infusion', 'intravitreal', '\bdosing\b', 'administration of (study|imp)']
   - code: physical_exam
     label: Physical examination
     param: true
@@ -92,12 +92,12 @@ codes:
   - code: urine_sample
     label: Urine sample / urine pregnancy test
     param: true
-    match: ['urine pregnancy', 'urinalysis$', '^urine', 'urine sample']
+    match: ['urine pregnancy', '^urinalysis', '^urine', 'urine sample', '\bupcr\b']
   - code: blood_draw
     label: Safety laboratory blood draw
     param: true
     ships_sample: true
-    match: ['hematology', 'haematology', 'biochemistry', 'clinical chemistry', 'serum chemistry', 'clinical laboratory', 'safety lab', 'serology', 'hepatitis', '\bhiv\b', 'pregnancy .*(blood|serum)', 'serum pregnancy', 'fibrinogen', 'hba1c', 'lipid', 'coagulation', 'blood sample']
+    match: ['hematology', 'haematology', 'biochemistry', '\bchemistry\b', 'clinical laboratory', 'safety lab', 'serology', 'hepatitis', '\bhiv\b', 'pregnancy .*(blood|serum)', 'serum pregnancy', 'fibrinogen', 'hba1c', 'lipid', 'coagulation', 'blood sample']
   - code: biomarker_sample
     label: Exploratory biomarker / genetic sample
     ships_sample: true
@@ -126,11 +126,11 @@ codes:
     match: ['visual acuity', '\bbcva\b', '\betdrs\b']
   - code: retinal_imaging
     label: Retinal imaging (OCT / fundus photography / angiography)
-    match: ['optical coherence', '\boct\b', 'fundus photo', 'fluorescein', 'angiograph']
+    match: ['optical coherence', '\boct\b', '\bocta\b', 'fundus photo', 'fluorescein', 'angiograph', '^fa\b', '\bfp\b']
   - code: questionnaire
     label: Questionnaire / patient-reported outcome / diary review
     param: true
-    match: ['questionnaire', '\bsgrq\b', 'eq-?5d', 'diary', '\bexact\b', '\bpro\b', 'mmrc', '\bcat\b', 'health ?care utili[sz]ation', 'quality of life', 'score']
+    match: ['questionnaire', '\bsgrq\b', '\bvfq\b', 'eq-?5d', 'diary', '\bexact\b', '\bpro\b', 'mmrc', '\bcat\b', 'health ?care utili[sz]ation', 'quality of life', 'score']
   - code: telephone_contact
     label: Telephone / remote contact
     match: ['telephone', 'phone call', 'phone contact']

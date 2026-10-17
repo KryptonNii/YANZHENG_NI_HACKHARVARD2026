@@ -1,0 +1,104 @@
+# Schedule of Activities of the BOREAS protocol (NCT03930732), transcribed for the offline demo.
+#
+# WHY THIS FILE EXISTS: the SoA in this protocol (pages 13-15, 18-19) is embedded as page images, so
+# text extraction cannot read it and the live path needs a vision LLM. No API key was available while
+# building, so the A4 coding agent (Claude Opus 5.5, model id claude-opus-5-5) read the rendered page
+# images (150-220 dpi) on 2026-10-16 and transcribed the grid below. It is an LLM transcription like
+# the runtime one and goes through the same validator (protocol_extract.candidates_from_transcription);
+# it is NOT human-verified. The UI shows every item as a candidate for a human to accept/edit/reject.
+#
+# The PDF itself is NOT committed: it is a sponsor document ("Property of the Sanofi Group") posted on
+# ClinicalTrials.gov, whose terms note third-party copyright. Only facts (which assessment at which
+# visit) and short quotes (<= 25 words) are stored here. Source: url below.
+nct_id: NCT03930732
+document:
+  label: Study Protocol
+  filename: Prot_000.pdf
+  url: https://cdn.clinicaltrials.gov/large-docs/32/NCT03930732/Prot_000.pdf
+  protocol_date: "2018-11-07"
+  size_bytes: 2507823
+  sha256: 76ead4e1be07e49f55ed405820c1a2fec18490505d88f6280e8a811f71f22b23
+  page_count: 109
+model: "claude-opus-5-5 (build-time transcription by the A4 coding agent from page images; not the runtime EXTRACT_MODEL)"
+extracted_at: "2026-10-16T21:40:00Z"
+soa_pages: [13, 14, 15, 16, 17, 18, 19, 20]
+table: "Section 1.3.1 Schedule of activities for patients who complete the planned treatment (pages 13-15)"
+default_confidence: 0.9
+
+# Numbered (site) visit columns. header = the column's cells as printed (VISIT row | WEEK row).
+visits:
+  - {n: 1,  label: "Visit 1 - Screening",              week: -4, window: [-4, -1], header: "Screening | VISIT 1 | WEEK W-4 to W-1"}
+  - {n: 2,  label: "Visit 2 - Randomization/Baseline", week: 0,  header: "Randomization/ Baseline | VISIT 2 | WEEK 0"}
+  - {n: 3,  label: "Visit 3 - Week 2",   week: 2,  header: "VISIT 3 | WEEK 2"}
+  - {n: 4,  label: "Visit 4 - Week 4",   week: 4,  header: "VISIT 4 | WEEK 4"}
+  - {n: 5,  label: "Visit 5 - Week 8",   week: 8,  header: "VISIT 5 | WEEK 8"}
+  - {n: 6,  label: "Visit 6 - Week 12",  week: 12, header: "VISIT 6 | WEEK 12"}
+  - {n: 7,  label: "Visit 7 - Week 16",  week: 16, header: "VISIT 7 | WEEK 16"}
+  - {n: 8,  label: "Visit 8 - Week 20",  week: 20, header: "VISIT 8 | WEEK 20"}
+  - {n: 9,  label: "Visit 9 - Week 24",  week: 24, header: "VISIT 9 | WEEK 24"}
+  - {n: 10, label: "Visit 10 - Week 28", week: 28, header: "VISIT 10 | WEEK 28"}
+  - {n: 11, label: "Visit 11 - Week 32", week: 32, header: "VISIT 11 | WEEK 32"}
+  - {n: 12, label: "Visit 12 - Week 36", week: 36, header: "VISIT 12 | WEEK 36"}
+  - {n: 13, label: "Visit 13 - Week 40", week: 40, header: "VISIT 13 | WEEK 40"}
+  - {n: 14, label: "Visit 14 - Week 44", week: 44, header: "VISIT 14 | WEEK 44"}
+  - {n: 15, label: "Visit 15 - Week 48", week: 48, header: "VISIT 15 | WEEK 48"}
+  - {n: 16, label: "Visit 16 - Week 52 (End of treatment)", week: 52, header: "VISIT 16 | WEEK 52 (EOT)"}
+  - {n: 17, label: "Visit 17 - Week 56", week: 56, header: "VISIT 17 | WEEK 56"}
+  - {n: 18, label: "Visit 18 - Week 60", week: 60, header: "VISIT 18 | WEEK 60"}
+  - {n: 19, label: "Visit 19 - Week 64 (End of study)", week: 64, header: "VISIT 19 | WEEK 64 (EOS)"}
+
+# One entry per procedure row: label as printed (footnote letters dropped), page, marked visit numbers.
+rows:
+  - {label: "Informed consent", page: 13, at: [1]}
+  - {label: "Patient demography", page: 13, at: [1]}
+  - {label: "Previous medical and surgical history", page: 13, at: [1]}
+  - {label: "Chest X-ray", page: 13, at: [1]}
+  - {label: "Inclusion/exclusion", page: 13, at: [1, 2]}
+  - {label: "BODE score, includes 6-minute walk test and mMRC Dyspnea scale", page: 13, at: [2]}
+  - {label: "Smoking status", page: 13, at: all}
+  - {label: "Prior & concomitant medications", page: 13, at: all}
+  - {label: "Call IVRS/IWRS", page: 13, at: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 19]}
+  - {label: "Randomization", page: 13, at: [2]}
+  - {label: "IMP administration", page: 13, at: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]}
+  - {label: "Review electronic diary", page: 14, at: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 19]}
+  - {label: "Physical examination", page: 14, at: [1, 2, 9, 16, 19]}
+  - {label: "Vital signs", page: 14, at: all}
+  - {label: "Electrocardiogram (12 lead)", page: 14, at: [1, 2, 6, 9, 12, 16, 19]}
+  - {label: "Hematology, biochemistry, urinalysis including cotinine", page: 14, at: [1, 2, 4, 5, 6, 9, 12, 16, 19]}
+  - {label: "Hepatitis and HIV Serology tests", page: 14, at: [1]}
+  - {label: "Pregnancy (β-HCG blood) test", page: 14, at: [1]}
+  - {label: "Urine pregnancy test", page: 14, at: [2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 19]}
+  - {label: "Adverse event reporting, including SAEs", page: 14, at: all}
+  - {label: "Serum PK samples for dupilumab concentration", page: 14, at: [2, 3, 4, 5, 6, 7, 9, 12, 16, 17, 18, 19]}
+  - {label: "Anti-dupilumab antibody", page: 14, at: [2, 6, 9, 16, 19]}
+  - {label: "FeNO post-bronchodilator", page: 14, at: [2, 4, 5, 6, 9, 12, 16, 19]}
+  - {label: "PARC", page: 14, at: [2, 16, 19]}
+  - {label: "Eotaxin-3", page: 14, at: [2, 4, 6, 9, 16, 19]}
+  - {label: "Total IgE", page: 15, at: [2, 6, 16, 19]}
+  - {label: "Fibrinogen", page: 15, at: [2, 9, 16, 19]}
+  - {label: "Induced/spontaneous sputum (optional)", page: 15, at: [2, 9, 16]}
+  - {label: "Whole blood RNA (optional)", page: 15, at: [2, 9, 16]}
+  - {label: "DNA (optional)", page: 15, at: [2]}
+  - {label: "Serum/plasma for archival samples (optional)", page: 15, at: [2, 4, 6, 9, 12, 16]}
+  - {label: "COPD exacerbation reporting by the Investigator", page: 15, at: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]}
+  - {label: "Spirometry (pre-BD)", page: 15, at: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 16, 17, 18, 19]}
+  - {label: "Spirometry (post-BD)", page: 15, at: [1, 2, 3, 4, 5, 6, 9, 12, 16, 19]}
+  - {label: "SGRQ", page: 15, at: [2, 4, 6, 9, 12, 16, 19]}
+  - {label: "EQ-5D-5L", page: 15, at: [2]}
+  - {label: "Health care utilization", page: 15, at: [2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 19]}
+
+# Schedule items that are not site visits (kept visible, never silently dropped).
+excluded_columns:
+  - "Unnumbered columns at weeks 6, 10, 14, 18, 22, 26, 30, 34, 38, 42, 46 and 50 (page 13): IMP administration only - footnote f (page 16) says the IMP is given every 2 weeks at the patient's home or in a health care facility."
+  - "EXACT (page 15): 'Every day (diary) from screening to week 52' - daily e-diary at home, not a visit procedure."
+  - "At-home spirometry (FEV1), optional, US/Canada only (page 15): twice-daily home measurements, not a visit procedure."
+
+warnings:
+  - "Pages 18-19 hold Section 1.3.2, the schedule for patients who stop treatment early; it was not used for the planned visits."
+  - "Footnote a (page 16): visit windows are +/-1 week (screening), +/-3 days (treatment period) and +/-5 days (post-treatment)."
+  - "Footnote f (page 16): after Week 8, IMP injections not done at home are given at the site as unscheduled visits (not modelled here)."
+
+# Verbatim footnote quotes (<= 25 words) supporting the exclusions above.
+footnote_quotes:
+  f: {page: 16, quote: "IMP (Dupilumab or placebo) is to be administered every 2 weeks by patient, caregiver or healthcare professional at the patient's home"}
+  a: {page: 16, quote: "The visit schedule should be adhered to within ±1 week for the screening period, ±3 days for the randomized IMP treatment period"}
