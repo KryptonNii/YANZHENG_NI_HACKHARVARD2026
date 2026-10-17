@@ -94,7 +94,8 @@ def test_retry_once_then_success_writes_cache(isolated_dirs: dict[str, Path]) ->
     r = fetch_study_result(NEW_NCT, client=_client(flaky))
     assert not r.cached and calls["study"] == 2
     assert r.meta["data_timestamp"] == "2026-10-16T09:00:05"
-    assert (isolated_dirs["cache"] / f"{NEW_NCT}.json").exists()
+    assert (isolated_dirs["runtime"] / "ctgov" / f"{NEW_NCT}.json").exists()  # writable dir, not fixtures
+    assert not (isolated_dirs["cache"] / f"{NEW_NCT}.json").exists()
     assert NEW_NCT in cached_study_ids()
     # second call is served from disk
     assert fetch_study_result(NEW_NCT, client=_client(lambda _: httpx.Response(500))).cached
@@ -112,6 +113,22 @@ def test_refresh_with_network_down_falls_back_to_stale_cache() -> None:
 
     r = fetch_study_result(DEMO_NCT, client=_client(down), refresh=True)
     assert r.cached and r.stale_fallback
+
+
+def test_docker_data_dir_keeps_reading_committed_fixtures(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    """A5 sets TP_DATA_DIR to a writable volume: fixtures still come from data/fixtures, writes go to the volume."""
+    monkeypatch.delenv("TP_RUNTIME_CACHE_DIR")
+    monkeypatch.setenv("TP_DATA_DIR", str(tmp_path / "volume"))
+    monkeypatch.setenv("DEMO_OFFLINE", "1")
+    assert fetch_study_result(DEMO_NCT).cached
+    monkeypatch.setenv("DEMO_OFFLINE", "0")
+
+    def ok(req: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, json={} if req.url.path.endswith("/version") else _study_json(NEW_NCT))
+
+    fetch_study_result(NEW_NCT, client=_client(ok))
+    assert (tmp_path / "volume" / "importers" / "ctgov" / f"{NEW_NCT}.json").exists()
+    assert {DEMO_NCT, NEW_NCT} <= set(cached_study_ids())
 
 
 def test_all_demo_fixtures_present_with_metadata() -> None:

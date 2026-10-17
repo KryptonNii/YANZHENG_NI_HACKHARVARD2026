@@ -35,6 +35,8 @@ def isolated_dirs(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> dict[str, 
     monkeypatch.setenv("TP_RUNTIME_CACHE_DIR", str(runtime))
     monkeypatch.setenv("TP_GEONAMES_DIR", str(REAL_FIXTURES / "ctgov" / "geonames"))
     monkeypatch.delenv("DEMO_OFFLINE", raising=False)
+    monkeypatch.delenv("TP_DATA_DIR", raising=False)
+    monkeypatch.delenv("TP_FIXTURES_DIR", raising=False)
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
     monkeypatch.delenv("ANTHROPIC_AUTH_TOKEN", raising=False)
     monkeypatch.setattr(ctgov, "MIN_INTERVAL_S", 0.0)

@@ -63,7 +63,7 @@ def main(nct: str) -> None:
     src = protocols_dir() / f"{nct}_soa_transcription.yaml"
     t = yaml.safe_load(src.read_text(encoding="utf-8"))
     res = candidates_from_transcription(transcription_to_llm_shape(t))
-    out = save_cached(res)
+    out = save_cached(res, protocols_dir() / "extractions")  # committed demo cache
     n_proc = sum(len(c.visit.procedures) for c in res.candidates)
     print(f"{nct}: {len(res.candidates)} visits, {n_proc} visit-procedures, {len(res.warnings)} warnings -> {out}")
 

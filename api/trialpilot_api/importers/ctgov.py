@@ -25,7 +25,7 @@ import httpx
 
 from ._contracts import Site, TrialDesign, Visit
 from .geocode import Geocoder, default_geocoder
-from .paths import ctgov_cache_dir, demo_offline
+from .paths import ctgov_read_dirs, ctgov_write_dir, demo_offline
 from .templates import TemplateLibrary, default_templates, treatment_weeks_from_registry
 
 API_BASE = "https://clinicaltrials.gov/api/v2"
@@ -127,18 +127,23 @@ def _get_json(client: httpx.Client, url: str, params: dict[str, str] | None = No
     )
 
 
-def _cache_paths(nct: str, cache_dir: Path | None) -> tuple[Path, Path]:
-    d = cache_dir or ctgov_cache_dir()
-    return d / f"{nct}.json", d / f"{nct}.meta.json"
+def _cache_paths(nct: str, cache_dir: Path) -> tuple[Path, Path]:
+    return cache_dir / f"{nct}.json", cache_dir / f"{nct}.meta.json"
+
+
+def _read_dirs(cache_dir: Path | None) -> list[Path]:
+    return [cache_dir] if cache_dir is not None else ctgov_read_dirs()
 
 
 def _read_cache(nct: str, cache_dir: Path | None) -> tuple[dict[str, Any], dict[str, Any]] | None:
-    raw_p, meta_p = _cache_paths(nct, cache_dir)
-    if not raw_p.exists():
-        return None
-    raw = json.loads(raw_p.read_text(encoding="utf-8"))
-    meta = json.loads(meta_p.read_text(encoding="utf-8")) if meta_p.exists() else {}
-    return raw, meta
+    """Writable runtime cache first, then the committed fixtures."""
+    for d in _read_dirs(cache_dir):
+        raw_p, meta_p = _cache_paths(nct, d)
+        if raw_p.exists():
+            raw = json.loads(raw_p.read_text(encoding="utf-8"))
+            meta = json.loads(meta_p.read_text(encoding="utf-8")) if meta_p.exists() else {}
+            return raw, meta
+    return None
 
 
 def _atomic_write(path: Path, text: str) -> None:
@@ -214,7 +219,7 @@ def fetch_study_result(
         "data_timestamp": version.get("dataTimestamp"),
         "attribution": "ClinicalTrials.gov, U.S. National Library of Medicine",
     }
-    raw_p, meta_p = _cache_paths(nct, cache_dir)
+    raw_p, meta_p = _cache_paths(nct, cache_dir or ctgov_write_dir())
     _atomic_write(raw_p, json.dumps(raw, ensure_ascii=False, indent=1))
     _atomic_write(meta_p, json.dumps(meta, indent=2))
     return FetchResult(raw, False, meta)
@@ -226,8 +231,7 @@ def fetch_study(nct_id: str) -> dict[str, Any]:
 
 
 def cached_study_ids(cache_dir: Path | None = None) -> list[str]:
-    d = cache_dir or ctgov_cache_dir()
-    return sorted(p.stem for p in d.glob("NCT*.json") if NCT_RE.match(p.stem))
+    return sorted({p.stem for d in _read_dirs(cache_dir) for p in d.glob("NCT*.json") if NCT_RE.match(p.stem)})
 
 
 # ---------------------------------------------------------------- mapping helpers

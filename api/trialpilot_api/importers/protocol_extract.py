@@ -27,7 +27,7 @@ from pydantic import BaseModel, Field
 
 from ._contracts import Procedure, Visit
 from .llm import LLMCall, LLMUnavailable, anthropic_call, extract_model, llm_configured
-from .paths import demo_offline, protocols_dir
+from .paths import demo_offline, extractions_read_dirs, extractions_write_dir
 from .procedures import Vocabulary, default_vocabulary
 
 MAX_QUOTE_WORDS = 25
@@ -567,24 +567,24 @@ def pdf_sha256(pdf_bytes: bytes) -> str:
     return hashlib.sha256(pdf_bytes).hexdigest()
 
 
-def extraction_cache_dir() -> Path:
-    return protocols_dir() / "extractions"
-
-
 def load_cached(sha: str) -> ExtractionResult | None:
-    p = extraction_cache_dir() / f"{sha}.json"
-    if not p.exists():
-        return None
-    res = ExtractionResult.model_validate_json(p.read_text(encoding="utf-8"))
-    res.from_cache = True
-    return res
+    """Writable runtime cache first, then the committed extractions."""
+    for d in extractions_read_dirs():
+        p = d / f"{sha}.json"
+        if p.exists():
+            res = ExtractionResult.model_validate_json(p.read_text(encoding="utf-8"))
+            res.from_cache = True
+            return res
+    return None
 
 
-def save_cached(res: ExtractionResult) -> Path:
-    d = extraction_cache_dir()
+def save_cached(res: ExtractionResult, directory: Path | None = None) -> Path:
+    d = directory or extractions_write_dir()
     d.mkdir(parents=True, exist_ok=True)
     p = d / f"{res.pdf_sha256}.json"
-    p.write_text(res.model_dump_json(indent=1, exclude={"from_cache"}), encoding="utf-8", newline="\n")
+    tmp = p.with_suffix(".tmp")
+    tmp.write_text(res.model_dump_json(indent=1, exclude={"from_cache"}), encoding="utf-8", newline="\n")
+    tmp.replace(p)
     return p
 
 
