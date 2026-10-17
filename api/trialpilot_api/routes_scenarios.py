@@ -381,6 +381,13 @@ def sync_status(svc: Any, session: Session, row: ScenarioRow) -> ApprovalRequest
     return approval
 
 
+def _sync_submitted(svc: Any, session: Session, rows: list[ScenarioRow]) -> None:
+    """`sync_status` for every submitted row, so listings report the decided status."""
+    for r in rows:
+        if r.status == "submitted":
+            sync_status(svc, session, r)
+
+
 def resolve_scenario_hash(engine: Any, record_id: str) -> str | None:
     """For A7 (records.register_resolver): the current content hash of a saved scenario,
     recomputed from the stored row, so a signature on changed content shows as invalid."""
@@ -596,9 +603,7 @@ def list_scenarios(
     if lineage_id:
         q = q.where(ScenarioRow.lineage_id == lineage_id)
     rows = list(session.exec(q.order_by(col(ScenarioRow.created_at).desc())).all())
-    for r in rows:
-        if r.status == "submitted":
-            sync_status(svc, session, r)
+    _sync_submitted(svc, session, rows)
     if status:
         rows = [r for r in rows if r.status == status]
     if latest_only:
@@ -623,13 +628,14 @@ def get_scenario(
 
 @router.get("/{scenario_id}/versions", response_model=list[ScenarioSummary])
 def scenario_versions(
-    scenario_id: str, session: Session = Depends(get_session)
+    scenario_id: str, session: Session = Depends(get_session), svc: Any = Depends(services)
 ) -> list[ScenarioSummary]:
     row = _get_row(session, scenario_id)
-    rows = session.exec(
+    rows = list(session.exec(
         select(ScenarioRow).where(ScenarioRow.lineage_id == row.lineage_id)
         .order_by(col(ScenarioRow.version))
-    ).all()
+    ).all())
+    _sync_submitted(svc, session, rows)
     return [_summary(r) for r in rows]
 
 
@@ -729,7 +735,9 @@ def submit(
         raise ApiError(409, "already_submitted",
                        f"This scenario is already {row.status}; it cannot be submitted again.",
                        {"status": row.status, "approval_id": row.approval_id})
-    if ident.user != row.author and ident.role != "admin":
+    # Author only, no admin bypass: admin holds no approval.submit permission, and the approval
+    # request is filed under the author (its segregation-of-duties key) whoever calls this.
+    if ident.user != row.author:
         raise ApiError(403, "not_author", "Only the author can submit a scenario for approval.",
                        {"author": row.author})
     rid, record_hash, author = row.id, row.record_hash, row.author

@@ -7,7 +7,7 @@ import type { Alert, EffectEstimate, Intervention, OpsEvent, ProvenanceItem } fr
 
 export { ApiError };
 
-export const DEMO_TRIAL_ID = "demo-40";
+export { DEMO_TRIAL_ID } from "@/app/lastDesign";
 
 export interface ClockInfo {
   trial_id: string;

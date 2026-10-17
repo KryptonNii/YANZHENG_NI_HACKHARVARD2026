@@ -131,22 +131,8 @@ def status(ctx: Ctx) -> dict[str, Any]:
     if cur is None:
         return {"status": "not generated"}
     c = identity.compliance()
-    st = c.workflow.approval_status("validation_report", cur["record_id"])
-    if st["approved"]:
-        qa = [s for s in st["signatures"] if s["meaning"] == "approved"]
-        return {"status": "approved", "record_id": cur["record_id"], "approval_id":
-                st["approval_id"], "signatures": st["signatures"],
-                "qa_signature": qa[-1] if qa else None}
-    if st["status"] == "pending":
-        label = "awaiting QA approval"
-    elif st["approval_id"] is None:
-        label = "not submitted"
-    elif st["status"] == "approved":
-        label = "approval invalid — the report changed after QA signed"
-    else:
-        label = f"{st['status']} ({st['reason']})"
-    return {"status": label, "record_id": cur["record_id"], "approval_id": st["approval_id"],
-            "signatures": st["signatures"], "reason": st["reason"]}
+    st = c.workflow.report_approval(cur["record_id"])
+    return {"status": st.pop("status"), "record_id": cur["record_id"], **st}
 
 
 def submit(ctx: Ctx, username: str | None) -> dict[str, Any]:

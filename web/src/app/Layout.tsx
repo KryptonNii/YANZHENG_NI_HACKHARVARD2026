@@ -3,7 +3,7 @@ import { MOCK_API, useHealth } from "./health";
 import { IdentitySwitcher } from "./IdentitySwitcher";
 import { useTranslation } from "./i18n";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { getLastDesignId } from "./lastDesign";
+import { DEMO_TRIAL_ID, getLastDesignId } from "./lastDesign";
 import { Badge, Dot } from "./ui";
 
 function Logo() {
@@ -77,7 +77,7 @@ export function Layout() {
               {t("Compare", "对比")}
             </NavLink>
             <span className="ml-3 mr-1 hidden text-[11px] font-bold uppercase tracking-wider text-ink-400 xl:inline">{t("Run", "执行")}</span>
-            <NavLink to={`/command/${encodeURIComponent(last ?? "demo")}`} className={navCls}>
+            <NavLink to={`/command/${encodeURIComponent(last ?? DEMO_TRIAL_ID)}`} className={navCls}>
               {t("Command center", "指挥中心")}
             </NavLink>
             <span className="ml-3 mr-1 hidden text-[11px] font-bold uppercase tracking-wider text-ink-400 xl:inline">{t("Prove", "验证")}</span>

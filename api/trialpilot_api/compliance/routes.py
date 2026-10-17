@@ -16,7 +16,7 @@ from fastapi import APIRouter, Header, Query, Request
 from fastapi.responses import FileResponse, JSONResponse, PlainTextResponse, Response
 from pydantic import BaseModel, Field
 
-from . import audit, esign, roles, workflow
+from . import audit, esign, records, roles, workflow
 from .config import validation_out_dir
 from .errors import ComplianceError
 from .hashing import fs_path
@@ -114,6 +114,16 @@ def get_approvals(
 @router.post("/api/approvals", status_code=201)
 def post_approval(body: ApprovalCreate, x_user: str | None = Header(None)) -> Any:
     author = roles.require_identity(x_user)
+    if body.record_type == "scenario" and records.current_hash("scenario", body.record_id):
+        # A saved scenario is submitted through its own route, which freezes the row first.
+        # Approving it here would leave the draft editable and its signatures invalid.
+        raise ComplianceError(
+            409, "submit_via_scenario",
+            "Submit a saved scenario with POST /api/scenarios/{id}/submit, which freezes it "
+            "for review.",
+            {"record_id": body.record_id,
+             "submit_path": f"/api/scenarios/{body.record_id}/submit"},
+        )
     req = workflow.create_request(
         body.record_type, body.record_id, author, record_hash=body.record_hash,
         reason=body.reason, title=body.title,
@@ -220,9 +230,27 @@ def get_validation_package() -> Any:
                 d["approval"] = {k: st.get(k) for k in ("approved", "approval_id", "status",
                                                          "reason")}
                 d["status"] = _live_status(d.get("status", "draft"), st)
+        report = data.get("report")
+        if isinstance(report, dict) and report.get("record_id"):
+            _refresh_report(report, workflow.report_approval(report["record_id"]))
     except ComplianceError:
         pass
     return data
+
+
+def _refresh_report(report: dict[str, Any], live: dict[str, Any]) -> None:
+    """Make the package's QA sign-off line follow the live approval, like the deliverables.
+
+    With no approval request in this store (the package was built against another database),
+    the build label stays, except that "approved" becomes "approval unconfirmed".
+    """
+    if live["approval_id"] is None:
+        if report.get("status") == "approved":
+            report["status"] = "approval unconfirmed"
+        return
+    for key in ("approval_id", "signatures", "qa_signature", "reason"):
+        report.pop(key, None)
+    report.update(live)
 
 
 @router.get("/api/validation/package/files/{file_path:path}")
