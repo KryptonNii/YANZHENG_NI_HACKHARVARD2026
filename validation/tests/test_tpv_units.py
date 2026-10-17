@@ -128,6 +128,23 @@ def test_defect_set_is_complete(real: Ctx) -> None:
         assert d["id"] in key and d["patch"] in key
 
 
+def test_archived_defect_results_are_labelled_and_local_runs_take_precedence(fx: Ctx) -> None:
+    from trialpilot_validation.context import write_json
+
+    assert defects.latest(fx) is None
+    measured = {"head": "abc123", "started_at": "2026-01-01T00:00:00Z", "finished_at":
+                "2026-01-01T00:01:00Z", "note": "Test fixture", "planted": 0, "applied": 0,
+                "detected": 0, "rows": []}
+    write_json(fx.vdir / "defects" / "LAST_RUN.json", measured)
+    archived = defects.latest(fx)
+    assert archived is not None and archived["archived"] is True
+    text = defects.render_md(archived)
+    assert "Archived experiment" in text and "not measurements of the current checkout" in text
+    write_json(fx.out / "defects" / "results.json", {**measured, "head": "def456"})
+    local = defects.latest(fx)
+    assert local is not None and local["head"] == "def456" and "archived" not in local
+
+
 @pytest.mark.req("URS-025")
 def test_plan_marks_system_category_as_draft_for_humans(real: Ctx) -> None:
     text = docs.plan_md(real)

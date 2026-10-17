@@ -47,3 +47,23 @@ Other commands: `tpv status` · `tpv impact --base <ref> --head <ref> [--submit 
 
 The compliance database is the API's SQLite file (`TP_DB_PATH`, default `var/trialpilot.sqlite`), so
 approvals given in the app unlock `tpv execute` and vice versa.
+
+## Check a clean local clone
+
+```bash
+uv run --project validation python validation/scripts/check_clean_clone.py --e2e
+```
+
+This clones committed code into a temporary directory, installs locked dependencies, checks the
+approval gate, self-approval and signing order, runs the real suites (plus Playwright with `--e2e`),
+and builds the package. It verifies evidence and package hashes. Results are in
+`validation/out/clean-clone/<UTC timestamp>/summary.json` and `package/index.html`; the clone is
+preserved for inspection. Exit 1 means tests or a suite failed; the package still records the
+actual results. Missing requirement coverage is reported in the trace and summary report.
+
+Signatures in this isolated automated check use published **fictional demo identities** as test
+fixtures. They are not human approvals or regulatory validation evidence. The generated report
+remains **awaiting QA approval**. The shared database and checkout are not used for execution.
+
+`validation/defects/LAST_RUN.json` preserves a historical measured defects experiment. If no local
+defects run exists, the package includes that archive, labelled with the commit it actually tested.

@@ -1,0 +1,162 @@
+{
+  "started_at": "2026-10-17T01:38:28Z",
+  "head": "d61664572163b674f1a4ede2903b96a204c40b57",
+  "planted": 6,
+  "rows": [
+    {
+      "id": "D1",
+      "type": "calculation bug",
+      "patch": "D1_car_factor_unit_error.patch",
+      "requirement": "URS-003",
+      "expected_stages": [
+        "unit test"
+      ],
+      "applied": true,
+      "detected": true,
+      "stages": [
+        "unit test"
+      ],
+      "new_failures": [
+        "validation/tests/oq/test_oq_parameters.py::test_emission_factors_are_plausible_for_their_unit"
+      ],
+      "new_trace_flags": [],
+      "broken_controls": []
+    },
+    {
+      "id": "D2",
+      "type": "missing audit entry",
+      "patch": "D2_design_save_not_audited.patch",
+      "requirement": "URS-015",
+      "expected_stages": [
+        "unit test"
+      ],
+      "applied": true,
+      "detected": true,
+      "stages": [
+        "unit test"
+      ],
+      "new_failures": [
+        "api/tests/test_app_basics.py::test_design_create_get_list_and_versions",
+        "api/tests/test_app_basics.py::test_fixture_designs_are_seeded",
+        "api/tests/test_approval_export_sse.py::test_stub_compliance_keeps_mutations_audited",
+        "validation/tests/oq/test_oq_api.py::test_audit_export_has_every_row",
+        "validation/tests/oq/test_oq_api.py::test_design_create_and_update_are_audited",
+        "validation/tests/oq/test_oq_api.py::test_every_api_mutation_lands_in_a_verifiable_chain"
+      ],
+      "new_trace_flags": [],
+      "broken_controls": []
+    },
+    {
+      "id": "D3",
+      "type": "role can self-approve",
+      "patch": "D3_qa_can_self_approve.patch",
+      "requirement": "URS-021",
+      "expected_stages": [
+        "unit test",
+        "workflow check"
+      ],
+      "applied": true,
+      "detected": true,
+      "stages": [
+        "unit test",
+        "workflow check"
+      ],
+      "new_failures": [
+        "api/tests/compliance/test_compliance_workflow.py::test_no_role_is_exempt_from_segregation_of_duties[sam.qa]",
+        "validation/tests/test_tpv_units.py::test_all_control_probes_hold_on_this_code"
+      ],
+      "new_trace_flags": [],
+      "broken_controls": [
+        "C1b no role (not even QA) approves its own record: no error raised — control did not hold"
+      ]
+    },
+    {
+      "id": "D4",
+      "type": "export drops rows",
+      "patch": "D4_audit_export_drops_last_row.patch",
+      "requirement": "URS-028",
+      "expected_stages": [
+        "unit test",
+        "workflow check"
+      ],
+      "applied": true,
+      "detected": true,
+      "stages": [
+        "unit test",
+        "workflow check"
+      ],
+      "new_failures": [
+        "api/tests/compliance/test_compliance_api.py::test_audit_list_and_export",
+        "api/tests/compliance/test_compliance_audit.py::test_export_contains_every_entry",
+        "validation/tests/oq/test_oq_api.py::test_audit_export_has_every_row",
+        "validation/tests/test_tpv_units.py::test_all_control_probes_hold_on_this_code"
+      ],
+      "new_trace_flags": [],
+      "broken_controls": [
+        "C6 audit export contains every entry: 7 exported rows vs 8 entries"
+      ]
+    },
+    {
+      "id": "D5",
+      "type": "wrong configuration value",
+      "patch": "D5_offline_default_on.patch",
+      "requirement": "URS-029",
+      "expected_stages": [
+        "unit test"
+      ],
+      "applied": true,
+      "detected": true,
+      "stages": [
+        "unit test"
+      ],
+      "new_failures": [
+        "validation/tests/oq/test_oq_config.py::test_documented_and_coded_offline_default_is_off"
+      ],
+      "new_trace_flags": [],
+      "broken_controls": []
+    },
+    {
+      "id": "D6",
+      "type": "requirement with no test",
+      "patch": "D6_requirement_without_test.patch",
+      "requirement": "URS-033",
+      "expected_stages": [
+        "trace check"
+      ],
+      "applied": true,
+      "detected": true,
+      "stages": [
+        "trace check"
+      ],
+      "new_failures": [],
+      "new_trace_flags": [
+        "no test: URS-033"
+      ],
+      "broken_controls": []
+    }
+  ],
+  "note": "Unsigned experiment, not GxP evidence. Only committed code (HEAD) is tested.",
+  "baseline": {
+    "counts": {
+      "passed": 266,
+      "failed": 3,
+      "error": 0,
+      "skipped": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "not_run": 0,
+      "total": 269
+    },
+    "trace": {
+      "pass": 20,
+      "fail": 0,
+      "incomplete": 0,
+      "not run": 0,
+      "no test": 12
+    },
+    "controls_holding": 10
+  },
+  "applied": 6,
+  "detected": 6,
+  "finished_at": "2026-10-17T01:53:03Z"
+}

@@ -27,3 +27,16 @@ and reports what — if anything — flagged the defect.
   detected. Regenerate with `uv run --project validation python validation/defects/make_patches.py`.
 - The detection count in the package and the HANDOFF is the number measured by the latest
   `tpv defects-run`, copied from `validation/out/defects/results.json`.
+
+## Completed experiment (archived)
+
+`LAST_RUN.json` preserves the completed experiment at commit
+`d61664572163b674f1a4ede2903b96a204c40b57`, from 2026-10-16 21:38:28 to 21:53:03 EDT.
+All six patches applied and **6 of 6 were detected**: D1/D2/D5 by tests, D3/D4 by tests plus
+workflow checks, D6 by traceability. The unmodified baseline had 269 tests (266 passed,
+3 failed), 10 of 10 control probes holding, and 12 requirements without a tagged test.
+The three baseline failures concerned unknown metric handling in engine/API tests; only
+new failures or flags relative to that baseline counted as defect detections.
+
+Packages without a local run include this archive with its tested commit and an explicit
+historical-results label. It does not claim the current checkout has been tested again.

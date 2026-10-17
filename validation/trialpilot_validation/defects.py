@@ -194,9 +194,15 @@ def defects_run(ctx: Ctx, *, only_defects: list[str] | None = None,
 
 def latest(ctx: Ctx) -> dict[str, Any] | None:
     p = ctx.out / "defects" / "results.json"
+    archived = False
     if not p.exists():
-        return None
+        p = ctx.vdir / "defects" / "LAST_RUN.json"
+        archived = True
+        if not p.exists():
+            return None
     data: dict[str, Any] = json.loads(p.read_text(encoding="utf-8"))
+    if archived:
+        data = {**data, "archived": True, "source": "validation/defects/LAST_RUN.json"}
     return data
 
 
@@ -205,6 +211,10 @@ def render_md(r: dict[str, Any]) -> str:
              f"Commit `{r['head'][:10]}` · {r['started_at']} → {r.get('finished_at')} · "
              f"**detected {r['detected']} of {r['planted']}** planted defects "
              f"({r['applied']} applied).", "", f"> {r['note']}", ""]
+    if r.get("archived"):
+        lines += ["Archived experiment from `validation/defects/LAST_RUN.json`. The commit above "
+                  "identifies the code tested; these are not measurements of the current checkout. "
+                  "Run `tpv defects-run` to measure the current commit.", ""]
     if r.get("baseline"):
         b = r["baseline"]["counts"]
         lines += [f"Baseline (no defect): {b['total']} tests — passed {b['passed']}, failed "
