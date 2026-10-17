@@ -16,7 +16,7 @@ SHELL := bash
 PY_PACKAGES := contracts engine api validation science
 API_PORT ?= 8000
 WEB_PORT ?= 5173
-API_APP ?= trialpilot_api.main:app
+API_APP ?= trialpilot_api.main:create_app
 UV ?= uv
 PNPM ?= pnpm
 
@@ -42,7 +42,7 @@ install:
 dev:
 	@trap 'kill 0' INT TERM EXIT; \
 	if [ -f api/pyproject.toml ]; then \
-	  $(UV) run --project api uvicorn $(API_APP) --host 127.0.0.1 --port $(API_PORT) --reload --reload-dir api --reload-dir engine & \
+	  $(UV) run --project api uvicorn --factory $(API_APP) --host 127.0.0.1 --port $(API_PORT) --reload --reload-dir api --reload-dir engine & \
 	else echo "-- api/ not there yet, skipped"; fi; \
 	if [ -n "$(has_web)" ]; then \
 	  WEB_PORT=$(WEB_PORT) API_TARGET=http://localhost:$(API_PORT) $(PNPM) --dir web dev --port $(WEB_PORT) --strictPort & \
@@ -50,7 +50,7 @@ dev:
 	wait
 
 api:
-	$(UV) run --project api uvicorn $(API_APP) --host 127.0.0.1 --port $(API_PORT) --reload
+	$(UV) run --project api uvicorn --factory $(API_APP) --host 127.0.0.1 --port $(API_PORT) --reload
 
 web:
 	WEB_PORT=$(WEB_PORT) API_TARGET=http://localhost:$(API_PORT) $(PNPM) --dir web dev --port $(WEB_PORT) --strictPort
