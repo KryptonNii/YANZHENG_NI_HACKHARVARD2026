@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import type { ScenarioResult } from "@/app/contracts";
+import type { ModuleBreakdown } from "@/app/contracts";
+import type { ScenarioResultX } from "@/app/api/types";
 import { formatBare, formatSignedValue, formatValue } from "@/app/format";
 import { Segmented, Skeleton } from "@/app/ui";
 import { isExcludedByDefault, isExtensionModule, moduleLabel } from "../metrics";
@@ -29,8 +30,8 @@ export function ModuleChart({
   current,
   onSelectModule,
 }: {
-  baseline: ScenarioResult | null;
-  current: ScenarioResult | null;
+  baseline: ScenarioResultX | null;
+  current: ScenarioResultX | null;
   onSelectModule: (module: string) => void;
 }) {
   const [basis, setBasis] = useState<Basis>("cost_usd");
@@ -44,16 +45,17 @@ export function ModuleChart({
   }, [baseline, current]);
 
   const rows = useMemo(() => {
-    const pick = (r: ScenarioResult | null, m: string) => r?.modules.find((x) => x.module === m)?.[basis].p50 ?? null;
+    const pick = (r: { modules: ModuleBreakdown[] } | null, m: string) => r?.modules.find((x) => x.module === m)?.[basis].p50 ?? null;
     return modules.map((m) => ({ module: m, base: pick(baseline, m), cur: pick(current, m) }));
   }, [modules, baseline, current, basis]);
 
   const chartData = useMemo(() => {
-    const toRow = (name: string, r: ScenarioResult | null) => {
+    const toRow = (name: string, r: { modules: ModuleBreakdown[] } | null) => {
       const row: Record<string, number | string> = { name };
       r?.modules.forEach((m) => {
-        // carbon in tonnes on the axis for readability
-        row[m.module] = basis === "co2e_kg" ? m.co2e_kg.p50 / 1000 : m.cost_usd.p50;
+        const raw = basis === "co2e_kg" ? m.co2e_kg.p50 : m.cost_usd.p50;
+        // Unknown stays off the axis. A missing P50 is not drawn as zero.
+        if (typeof raw === "number") row[m.module] = basis === "co2e_kg" ? raw / 1000 : raw;
       });
       return row;
     };

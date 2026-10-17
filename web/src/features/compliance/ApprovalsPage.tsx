@@ -93,12 +93,14 @@ export function ApprovalsPage() {
                 <li key={sig.id} className="text-sm">
                   <span className="font-semibold capitalize">{sig.meaning}</span> · <Validity sig={sig} />
                   <span className="mt-0.5 block text-xs text-ink-600">{sig.manifestation ?? `${displayName(sig.signer)} · ${formatUtc(sig.signed_at)}`}</span>
+                  <span className="mt-1 block text-xs text-ink-600">{sig.signer_name ?? sig.signer} · {sig.signer} · {sig.role} · {sig.meaning.toUpperCase()} · {formatUtc(sig.signed_at)}</span>
+                  <span className="mt-1 block break-all font-mono text-[11px] text-ink-500">Record sha256 {sig.record_hash}</span>
                 </li>
               ))}
             </ul>
             <RecordPreview item={item} />
             {item.status === "pending" && item.next_meaning && (
-              <button type="button" className="btn-primary mt-3" onClick={() => setSigning(item)}>
+              <button type="button" className="btn-primary mt-3" disabled={item.record_changed} onClick={() => setSigning(item)}>
                 Sign this record
               </button>
             )}
@@ -106,11 +108,12 @@ export function ApprovalsPage() {
         ))}
       </ul>
       <SignDialog
+        key={me.user}
         approval={signing}
         onClose={() => setSigning(null)}
         onSigned={(next) => {
           setSigning(null);
-          setItems((cur) => cur?.map((row) => (row.id === next.id ? next : row)) ?? [next]);
+          setItems((cur) => (cur?.map((row) => (row.id === next.id ? next : row)) ?? [next]).filter((row) => status === "all" || row.status === status));
         }}
       />
     </div>
@@ -164,6 +167,7 @@ function RecordPreview({ item }: { item: ApprovalView }) {
 }
 
 function SignDialog({ approval, onClose, onSigned }: { approval: ApprovalView | null; onClose: () => void; onSigned: (a: ApprovalView) => void }) {
+  const me = useIdentity();
   const meaning = (approval?.next_meaning ?? null) as SignatureMeaning | null;
   const [pin, setPin] = useState("");
   const [busy, setBusy] = useState(false);
@@ -175,7 +179,7 @@ function SignDialog({ approval, onClose, onSigned }: { approval: ApprovalView | 
   }, [approval?.id]);
 
   const sign = async () => {
-    if (!approval || !meaning) return;
+    if (!approval || !meaning || busy || !pin.trim()) return;
     setBusy(true);
     setError(null);
     try {
@@ -222,6 +226,8 @@ function SignDialog({ approval, onClose, onSigned }: { approval: ApprovalView | 
             <p className="mt-1 text-xs text-ink-500">Only the next meaning in order can be signed.</p>
           </div>
           <p className="text-sm text-ink-800">By signing, I confirm that I have {meaning} this {approval.record_type.replaceAll("_", " ")}.</p>
+          <p className="text-sm">Signing as {me.name} ({me.user}, {me.roleLabel})</p>
+          <p className="break-all font-mono text-xs text-ink-500">{approval.record_type}/{approval.record_id} · sha256 {recordHash(approval) ?? "unavailable"}</p>
           <div>
             <label className="label" htmlFor="sign-pin">
               PIN

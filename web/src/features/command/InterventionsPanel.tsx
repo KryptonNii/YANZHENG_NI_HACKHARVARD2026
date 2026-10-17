@@ -1,15 +1,27 @@
+import { useState } from "react";
 import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import type { Intervention } from "@/app/contracts";
 import { formatUtc, isNum } from "@/app/format";
 import { Badge } from "@/app/ui";
 import type { EffectDetail } from "./api";
+import { startIntervention } from "./api";
 import { VERDICT, rangeText } from "./present";
 
-export function InterventionsPanel({ interventions, effects }: { interventions: Intervention[]; effects: EffectDetail[] }) {
+export function InterventionsPanel({ trialId, interventions, effects, onChanged }: { trialId: string; interventions: Intervention[]; effects: EffectDetail[]; onChanged: () => Promise<void> }) {
+  const [busy, setBusy] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const start = async (id: string) => {
+    setBusy(id);
+    setError(null);
+    try { await startIntervention(trialId, id); await onChanged(); }
+    catch (err) { setError(err instanceof Error ? err.message : String(err)); }
+    finally { setBusy(null); }
+  };
   const byId = new Map(effects.map((e) => [e.estimate.intervention_id, e]));
   return (
     <section className="card p-4" data-testid="intervention-list" aria-label="Interventions">
       <h2 className="card-title mb-3">Interventions</h2>
+      {error && <p role="alert" className="mb-3 text-sm text-worse-900">{error}</p>}
       {interventions.length === 0 && <p className="text-sm text-ink-500">No interventions yet. Plan one from an alert.</p>}
       <ul className="space-y-4">
         {interventions.map((iv) => {
@@ -24,6 +36,7 @@ export function InterventionsPanel({ interventions, effects }: { interventions: 
               <p className="mt-1 text-xs text-ink-500">
                 Owner {iv.owner} · due {formatUtc(iv.due_date)} · metric {iv.metric.replaceAll("_", " ")} · sites {iv.target_site_ids.join(", ") || "—"}
               </p>
+              {iv.status === "planned" && <button type="button" className="btn-secondary mt-2" disabled={busy !== null} onClick={() => void start(iv.id)}>{busy === iv.id ? "Starting…" : "Start intervention"}</button>}
               {effect && verdict ? (
                 <EffectCard effect={effect} />
               ) : (
@@ -69,8 +82,8 @@ function EffectCard({ effect }: { effect: EffectDetail }) {
               <YAxis tick={{ fontSize: 11, fill: "#64748b" }} width={40} />
               <Tooltip />
               <Legend />
-              <Line type="monotone" dataKey="treated" name="Treated" stroke="#0f766e" strokeWidth={2} dot />
-              <Line type="monotone" dataKey="control" name="Control sites" stroke="#64748b" strokeWidth={2} strokeDasharray="4 3" dot />
+              <Line type="linear" dataKey="treated" name="Treated" stroke="#0f766e" strokeWidth={2} dot isAnimationActive={false} />
+              <Line type="linear" dataKey="control" name="Control sites" stroke="#64748b" strokeWidth={2} strokeDasharray="4 3" dot isAnimationActive={false} />
             </LineChart>
           </ResponsiveContainer>
         </div>

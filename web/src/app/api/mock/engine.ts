@@ -97,6 +97,12 @@ export function mockCompute(design: TrialDesign, levers: Levers): ScenarioResult
     [
       item("cost.patient_visits.mock", "site visits × visit cost + home visits × nurse cost + telehealth visits × telehealth cost", { site_visits: siteVisits, home_visits: homeVisits, telehealth_visits: teleVisits }, ["mock.cost.site_visit", "mock.cost.home_nurse_visit", "mock.cost.telehealth_visit"]),
       item("carbon.patient_travel.mock", "site visits × round-trip km × car factor (+ nurse travel for home visits)", { site_visits: siteVisits, home_visits: homeVisits, roundtrip_km: km }, ["mock.travel.roundtrip_km", "mock.ef.car_km"]),
+      item(
+        "carbon.patient_travel_wtt.v1",
+        "same activity × the well-to-tank car factor",
+        { site_visits: siteVisits, roundtrip_km: km, result: "unknown — mock library has no ef.wtt factor" },
+        ["ef.wtt.travel.car.average_km"],
+      ),
       item("burden.patient_travel.mock", "site visits × travel hours per visit", { site_visits: siteVisits }, ["mock.travel.hours_per_visit"]),
       item("workload.site_visits.mock", "patients × (procedure minutes + overhead per visit) ÷ 60", { patients: N, procedure_minutes_per_patient: procMinutesPerPatient, site_visits_per_patient: siteVisitsPerPatient }, ["mock.staff.minutes_per_visit_overhead"]),
     ],
@@ -115,8 +121,12 @@ export function mockCompute(design: TrialDesign, levers: Levers): ScenarioResult
   ]);
 
   const counted = modules.filter((m) => m.module !== "intervention");
-  const cost = counted.reduce((a, m) => a + m.cost_usd.p50, 0);
-  const co2 = counted.reduce((a, m) => a + m.co2e_kg.p50, 0);
+  const known = (r: MetricRange) => {
+    if (typeof r.p50 !== "number") throw new Error("mock range is missing a P50");
+    return r.p50;
+  };
+  const cost = counted.reduce((a, m) => a + known(m.cost_usd), 0);
+  const co2 = counted.reduce((a, m) => a + known(m.co2e_kg), 0);
   const staffHours = (N * procMinutesPerPatient + siteVisits * mid("mock.staff.minutes_per_visit_overhead")) / 60 + remoteReviews * mid("mock.staff.remote_review_hours") + homeVisits * 0.3;
   const travelHours = siteVisits * mid("mock.travel.hours_per_visit");
 
@@ -141,6 +151,7 @@ export function mockCompute(design: TrialDesign, levers: Levers): ScenarioResult
     parameter_set_version: "mock-1",
     computed_at: new Date().toISOString(),
     forecast: {
+      draws_requested: null, draws_used: null, curve_draws_used: null, provenance: [],
       months_to_full_enrollment: range(enrollMonths + 2, "months", 0.2),
       milestone_dates: {
         first_patient_in: range(2, "months", 0.25),
@@ -150,11 +161,12 @@ export function mockCompute(design: TrialDesign, levers: Levers): ScenarioResult
       enrollment_curve: curve,
     },
     supply: {
+      draws_requested: null, draws_used: null, provenance: [],
       kits_needed: range(kitsNeeded, "kits", 0.1),
       kits_produced: range(kitsProduced, "kits", 0.1),
       kits_wasted: range(kitsWasted, "kits", 0.25),
       waste_share: range(wasteShare, "percent", 0.2),
-      shipments: range(kitShipments, "kits", 0.2),
+      shipments: range(kitShipments, "count", 0.2),
       stockout_probability: levers.drug_supply_strategy === "upfront" ? 0.01 : 0.06,
     },
   };

@@ -12,17 +12,29 @@ import { mockCompute, mockDrivers } from "./engine";
 /** Same demo PINs as A7's roles.py (fictional users). */
 export const MOCK_PINS: Record<string, string> = { "alex.author": "1111", "riley.reviewer": "2222", "sam.qa": "3333" };
 const NAMES: Record<string, string> = { "alex.author": "Alex Author", "riley.reviewer": "Riley Reviewer", "sam.qa": "Sam QA" };
-const STORE_KEY = "tp.mock.store.v2";
+const STORE_KEY = "tp.mock.store.v3";
 
 type Row = Omit<SavedScenario, "approval" | "metrics"> & { levers: Levers; result: ScenarioResultX };
 
+interface StoredDesign {
+  design: TrialDesign;
+  version: number;
+  hash: string;
+}
+
 interface Store {
-  designs: TrialDesign[];
+  designs: StoredDesign[];
+  designHistory: StoredDesign[];
   scenarios: Row[];
   approvals: ApprovalRequest[];
 }
 
-const fresh = (): Store => ({ designs: [structuredClone(MOCK_DESIGN)], scenarios: [], approvals: [] });
+const fresh = (): Store => ({
+  designs: [{ design: structuredClone(MOCK_DESIGN), version: 1, hash: "mock-hash-1" }],
+  designHistory: [],
+  scenarios: [],
+  approvals: [],
+});
 
 function load(): Store {
   try {
@@ -52,8 +64,11 @@ export function resetMockStore(): void {
 const uuid = () => (crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`);
 const hex = (n = 64) => Array.from({ length: n }, () => Math.floor(Math.random() * 16).toString(16)).join("");
 
-function json(body: unknown, status = 200): Response {
-  return new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
+function json(body: unknown, status = 200, extra: Record<string, string> = {}): Response {
+  return new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json", ...extra } });
+}
+function designHeaders(row: StoredDesign): Record<string, string> {
+  return { "X-Design-Version": String(row.version), ETag: `"${row.hash}"` };
 }
 function err(status: number, error: string, message: string, details: Record<string, unknown> = {}): Response {
   return json({ error, message, details }, status);
@@ -88,8 +103,9 @@ const full = (s: Row) => {
   return { ...s, metrics: metricsOf(s.result), approval: a ? approvalView(a) : null };
 };
 
-function designOr404(id: unknown): TrialDesign | Response {
-  return store.designs.find((x) => x.id === id) ?? err(404, "design_not_found", `No trial design with id ${JSON.stringify(id)}.`);
+function designOr404(id: unknown, version?: number): StoredDesign | Response {
+  return [...store.designs, ...store.designHistory].find((x) => x.design.id === id && (version === undefined || x.version === version))
+    ?? err(404, "design_not_found", `No trial design with id ${JSON.stringify(id)}${version === undefined ? "" : ` at version ${version}`}.`);
 }
 
 function requireEditor(h: Headers): Response | null {
@@ -111,15 +127,28 @@ on("GET", /^\/api\/health$/, () => json({ status: "ok", offline: false, version:
 on("POST", /^\/api\/import\/ctgov\/([^/]+)$/, (m) => {
   const id = decodeURIComponent(m[1]).toUpperCase();
   if (!/^NCT\d{8}$/.test(id)) return err(400, "invalid_registry_id", `“${id}” is not a valid ClinicalTrials.gov ID (NCT + 8 digits).`);
-  const design = store.designs.find((d) => d.id === MOCK_DESIGN.id) ?? structuredClone(MOCK_DESIGN);
+  const stored = id === "NCT01234567" ? store.designs.find((d) => d.design.id === MOCK_DESIGN.id) : store.designs.find((d) => d.design.registry_id === id);
+  const design = stored?.design ?? {
+    ...structuredClone(MOCK_DESIGN),
+    id: `import-${id}`,
+    registry_id: id,
+    title: `Imported ${id}`,
+    enrollment_target: 120,
+    missing_fields: ["visits", "sites.expected_enrollment"],
+  };
   return json({
     design,
     raw_cached: true,
     missing_fields: design.missing_fields,
     notes: [
       `Mock API: ClinicalTrials.gov is not contacted; ${id} returns the fictional mock trial.`,
-      "Visit schedule is not in the registry: filled with an assumed template (mock).",
+      "Enrollment 120 is the actual number enrolled (ACTUAL).",
+      "Visit schedule is NOT in the registry: filled with assumed template 'phase3_default' (11 visits).",
     ],
+    notes_by_field: {
+      enrollment_target: { text: "Enrollment 120 is the actual number enrolled (ACTUAL).", field: "enrollment_target", assumption: false },
+      visits: { text: "Visit schedule is NOT in the registry: filled with assumed template 'phase3_default' (11 visits).", field: "visits", assumption: true },
+    },
     field_sources: { visits: "assumption: mock template", sites: "mock fixture" },
     sponsor: "Fictional sponsor",
     collaborators: [],
@@ -176,9 +205,9 @@ on("POST", /^\/api\/import\/protocol$/, async (_m, { form }) => {
 
 on("GET", /^\/api\/designs$/, () =>
   json(
-    store.designs.map((d) => ({
+    store.designs.map(({ design: d, version }) => ({
       id: d.id,
-      version: 1,
+      version,
       title: d.title,
       source: d.source,
       registry_id: d.registry_id,
@@ -196,29 +225,40 @@ on("GET", /^\/api\/designs$/, () =>
   ),
 );
 on("GET", /^\/api\/designs\/([^/]+)$/, (m) => {
-  const d = designOr404(decodeURIComponent(m[1]));
-  return d instanceof Response ? d : json(d);
+  const row = designOr404(decodeURIComponent(m[1]));
+  return row instanceof Response ? row : json(row.design, 200, designHeaders(row));
 });
 on("POST", /^\/api\/designs$/, (_m, { body, headers }) => {
   const denied = requireEditor(headers);
   if (denied) return denied;
   const d = { ...(body as TrialDesign) };
   if (!d.id) d.id = uuid();
-  const i = store.designs.findIndex((x) => x.id === d.id);
-  if (i >= 0) store.designs[i] = d;
-  else store.designs.push(d);
+  const i = store.designs.findIndex((x) => x.design.id === d.id);
+  if (i >= 0 && JSON.stringify(store.designs[i].design) === JSON.stringify(d)) {
+    return json(d, 200, designHeaders(store.designs[i]));
+  }
+  if (i >= 0 && headers.get("If-Match") !== `"${store.designs[i].hash}"`) {
+    const current = store.designs[i];
+    return err(409, "design_changed", `This design changed while you were editing — it is now design v${current.version}.`, {
+      version: current.version,
+      design_hash: current.hash,
+    });
+  }
+  const next: StoredDesign = { design: d, version: i >= 0 ? store.designs[i].version + 1 : 1, hash: hex(16) };
+  if (i >= 0) { store.designHistory.push(store.designs[i]); store.designs[i] = next; }
+  else store.designs.push(next);
   persist();
-  return json(d, i >= 0 ? 200 : 201);
+  return json(d, 201, designHeaders(next));
 });
 
 on("POST", /^\/api\/scenarios\/compute$/, async (_m, { body }) => {
-  const b = body as { design_id?: string; levers?: Levers };
-  const d = designOr404(b.design_id);
-  if (d instanceof Response) return d;
+  const b = body as { design_id?: string; design_version?: number; levers?: Levers };
+  const row = designOr404(b.design_id, b.design_version);
+  if (row instanceof Response) return row;
   const bad = validLevers(b.levers);
-  if (bad) return err(422, "invalid_levers", `Invalid levers: ${bad}`);
+  if (bad || !b.levers) return err(422, "invalid_levers", `Invalid levers: ${bad}`);
   await delay(120 + Math.random() * 120);
-  return json(mockCompute(d, b.levers!));
+  return json(mockCompute(row.design, b.levers), 200, designHeaders(row));
 });
 on("POST", /^\/api\/scenarios\/drivers$/, async (_m, { body }) => {
   const b = body as { metric?: string };
@@ -230,12 +270,15 @@ on("POST", /^\/api\/scenarios\/compare$/, (_m, { body }) => {
   const a = store.scenarios.find((s) => s.id === a_id);
   const b = store.scenarios.find((s) => s.id === b_id);
   if (!a || !b) return err(404, "scenario_not_found", "No saved scenario with this id.");
-  if (a.design_id !== b.design_id) return err(422, "compare_needs_same_design", "Per-draw comparison needs both scenarios on the same trial design version.");
+  if (a.design_id !== b.design_id || a.design_version !== b.design_version) return err(422, "compare_needs_same_design", "Per-draw comparison needs both scenarios on the same trial design version.");
   // mock "per draw" deltas: P50 difference with a band — illustrative only
   const deltas: Record<string, MetricRange> = {};
   for (const k of HEADLINE) {
-    const d = b.result[k].p50 - a.result[k].p50;
-    const w = Math.abs(d) * 0.3 + Math.abs(a.result[k].p50) * 0.01;
+    const left = a.result[k].p50;
+    const right = b.result[k].p50;
+    if (typeof left !== "number" || typeof right !== "number") continue;
+    const d = right - left;
+    const w = Math.abs(d) * 0.3 + Math.abs(left) * 0.01;
     deltas[k] = { p10: d - w, p50: d, p90: d + w, unit: a.result[k].unit };
   }
   return json({ a_id, b_id, deltas, seed: 7, draws: 2000, parameter_set_version: "mock-1", a_metrics: metricsOf(a.result), b_metrics: metricsOf(b.result), same_parameter_set: true, warnings: [] });
@@ -254,7 +297,7 @@ on("GET", /^\/api\/scenarios\/([^/]+)$/, (m) => {
   return s ? json(full(s)) : err(404, "scenario_not_found", "No saved scenario with this id.");
 });
 
-function newRow(design: TrialDesign, name: string, levers: Levers, author: string, lineage?: Row): Row {
+function newRow(design: TrialDesign, name: string, levers: Levers, author: string, designVersion: number, lineage?: Row): Row {
   const id = uuid();
   return {
     id,
@@ -263,7 +306,7 @@ function newRow(design: TrialDesign, name: string, levers: Levers, author: strin
     parent_id: lineage?.id ?? null,
     name,
     design_id: design.id,
-    design_version: 1,
+    design_version: designVersion,
     status: "draft",
     author,
     created_at: new Date().toISOString(),
@@ -278,12 +321,13 @@ function newRow(design: TrialDesign, name: string, levers: Levers, author: strin
 on("POST", /^\/api\/scenarios$/, (_m, { body, headers }) => {
   const denied = requireEditor(headers);
   if (denied) return denied;
-  const b = body as { design_id: string; name: string; levers: Levers };
-  const d = designOr404(b.design_id);
+  const b = body as { design_id: string; name: string; levers: Levers; design_version?: number };
+  if (b.design_version === undefined) return err(422, "design_version_required", "Send the design version on screen.");
+  const d = designOr404(b.design_id, b.design_version);
   if (d instanceof Response) return d;
   const bad = validLevers(b.levers);
   if (bad) return err(422, "invalid_levers", `Invalid levers: ${bad}`);
-  const row = newRow(d, b.name, b.levers, actor(headers).user);
+  const row = newRow(d.design, b.name, b.levers, actor(headers).user, b.design_version ?? d.version);
   store.scenarios.push(row);
   persist();
   return json(full(row), 201);
@@ -293,10 +337,10 @@ on("POST", /^\/api\/scenarios\/([^/]+)\/versions$/, (m, { body, headers }) => {
   if (denied) return denied;
   const base = store.scenarios.find((x) => x.id === decodeURIComponent(m[1]));
   if (!base) return err(404, "scenario_not_found", "No saved scenario with this id.");
-  const d = designOr404(base.design_id);
+  const patch = (body ?? {}) as { levers?: Levers; name?: string; design_version?: number };
+  const d = designOr404(base.design_id, patch.design_version ?? base.design_version ?? undefined);
   if (d instanceof Response) return d;
-  const patch = (body ?? {}) as { levers?: Levers; name?: string };
-  const row = newRow(d, patch.name ?? base.name, patch.levers ?? base.levers, actor(headers).user, base);
+  const row = newRow(d.design, patch.name ?? base.name, patch.levers ?? base.levers, actor(headers).user, patch.design_version ?? d.version, base);
   store.scenarios.push(row);
   persist();
   return json(full(row), 201);
@@ -313,8 +357,11 @@ on("POST", /^\/api\/scenarios\/([^/]+)\/submit$/, (m, { headers }) => {
     record_type: "scenario",
     record_id: s.id,
     author: s.author,
+    record_hash: s.record_hash ?? hex(),
     required_meanings: ["reviewed", "approved"],
     status: "pending",
+    created_at: new Date().toISOString(),
+    title: s.name,
     signatures: [],
   };
   store.approvals.push(a);
@@ -362,6 +409,7 @@ on("POST", /^\/api\/approvals\/([^/]+)\/sign$/, (m, { body, headers }) => {
     id: uuid(),
     signer: me.user,
     role: me.role as Signature["role"],
+    signer_name: NAMES[me.user] ?? me.user,
     meaning,
     signed_at: new Date().toISOString(),
     record_type: a.record_type,

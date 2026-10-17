@@ -161,6 +161,7 @@ export function VersionsPanel({
                       </button>
                       <span className="block text-xs text-ink-500">
                         {displayName(s.author)} · {formatUtc(s.created_at)}
+                        {s.design_version != null ? ` · design v${s.design_version}` : ""}
                       </span>
                     </td>
                     <td className="whitespace-nowrap py-1.5 pl-2 text-right tabular text-ink-800">{cost && isKnownRange(cost) ? formatValue(cost.p50, "usd") : cost ? "unknown" : "—"}</td>

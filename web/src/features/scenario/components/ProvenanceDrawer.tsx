@@ -20,14 +20,31 @@ function fmtInput(v: number | string): string {
   return v.toLocaleString("en-US", { maximumSignificantDigits: 4 });
 }
 
+function isWellToTank(formulaId: string): boolean {
+  return /_wtt(?:\.|$)/.test(formulaId);
+}
+
 function FormulaCard({ item }: { item: Item }) {
   const inputs = Object.entries(item.inputs);
+  const wtt = isWellToTank(item.formula_id);
   return (
     <li className="rounded-lg border border-ink-200 p-3" data-testid="provenance-formula">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <code className="rounded bg-ink-100 px-1.5 py-0.5 font-mono text-xs text-ink-800">{item.formula_id}</code>
-        <span className="text-xs text-ink-500">{moduleLabel(item.module)}</span>
+        <span className="flex items-center gap-1.5 text-xs text-ink-500">
+          {wtt && (
+            <span className="chip border-accent-300 bg-accent-50 text-accent-800" data-testid="wtt-label">
+              Well-to-tank
+            </span>
+          )}
+          {moduleLabel(item.module)}
+        </span>
       </div>
+      {wtt && (
+        <p className="mt-2 text-xs text-ink-600">
+          Upstream fuel production and distribution, kept as its own term beside the direct emissions. A missing well-to-tank factor stays unknown and is not added as zero.
+        </p>
+      )}
       <p className="mt-2 text-sm text-ink-800">{item.description}</p>
       {inputs.length > 0 && (
         <table className="mt-2 w-full text-xs">
@@ -36,7 +53,7 @@ function FormulaCard({ item }: { item: Item }) {
             {inputs.map(([k, v]) => (
               <tr key={k} className="border-t border-ink-100">
                 <th scope="row" className="py-1 pr-3 text-left font-mono font-normal text-ink-600">{k}</th>
-                <td className="py-1 text-right tabular text-ink-900">{fmtInput(v)}</td>
+                <td className={`py-1 text-right tabular ${typeof v === "string" && v.toLowerCase().includes("unknown") ? "font-semibold text-caution-900" : "text-ink-900"}`}>{fmtInput(v)}</td>
               </tr>
             ))}
           </tbody>
@@ -123,6 +140,9 @@ function ParameterRow({ id, param }: { id: string; param: Parameter | undefined 
         ) : (
           !param.assumption && <p className="text-caution-900">No source recorded.</p>
         )}
+        {param.id.startsWith("ef.wtt.") && (
+          <p className="mt-1 text-ink-600">Well-to-tank factor. The source line above is the library entry; it is not a modelled default.</p>
+        )}
         {param.assumption && (
           <p className="mt-1">
             <span className="font-semibold">Rationale:</span> {param.rationale ?? "No rationale recorded."}
@@ -166,6 +186,7 @@ export function ProvenanceDrawer({
   target,
   result,
   designId,
+  designVersion,
   levers,
   onClose,
 }: {
@@ -173,6 +194,7 @@ export function ProvenanceDrawer({
   result: ScenarioResultX | null;
   /** design + levers of the shown result, for the top-drivers ranking */
   designId: string | null;
+  designVersion: number | null;
   levers: Levers | null;
   onClose: () => void;
 }) {
@@ -206,7 +228,7 @@ export function ProvenanceDrawer({
     const ctrl = new AbortController();
     setDriversState("loading");
     api
-      .drivers(designId, levers, metricForDrivers, { signal: ctrl.signal, silent: true })
+      .drivers(designId, levers, metricForDrivers, { signal: ctrl.signal, silent: true, designVersion })
       .then((d) => {
         setDrivers(d);
         setDriversState("idle");
@@ -217,7 +239,7 @@ export function ProvenanceDrawer({
     return () => ctrl.abort();
     // leversKey stands in for the levers object
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [metricForDrivers, designId, leversKey]);
+  }, [metricForDrivers, designId, designVersion, leversKey]);
 
   const paramIds = useMemo(() => [...new Set((view?.items ?? []).flatMap((i) => i.parameter_ids))], [view]);
 

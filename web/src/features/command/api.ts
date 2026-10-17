@@ -46,12 +46,20 @@ export interface SiteRow {
   city: string | null;
   country: string;
   status: string;
+  backup: boolean;
+  weekly_enrollment: WeeklyEnrollment | null;
   enrolled: number;
   planned_to_date: Band;
   open_queries: number;
   median_query_age_days: number | null;
   drug_on_hand_kits: number;
   drug_need_kits: Band | null;
+}
+
+/** Week k ends on day 7*(k+1). Nulls are gaps, never zero observations. */
+export interface WeeklyEnrollment {
+  actual_cumulative: (number | null)[];
+  plan: (Band | null)[];
 }
 
 export interface CountryRow {
@@ -144,8 +152,27 @@ function band(v: unknown): Band | null {
   return { p10, p50, p90, unit: typeof v.unit === "string" ? v.unit : undefined };
 }
 
-function normalizeHealth(raw: unknown): HealthSnapshot {
+function weeklyEnrollment(raw: unknown, completeWeeks?: number): WeeklyEnrollment | null {
+  if (!isObj(raw) || !Array.isArray(raw.actual_cumulative) || !Array.isArray(raw.plan)) return null;
+  const actual = raw.actual_cumulative;
+  const plan = raw.plan;
+  const length = Math.min(Math.max(actual.length, plan.length), completeWeeks ?? Infinity);
+  return {
+    actual_cumulative: Array.from({ length }, (_, i) => {
+      const n = num(actual[i]);
+      return n !== null && n >= 0 ? n : null;
+    }),
+    plan: Array.from({ length }, (_, i) => {
+      const b = band(plan[i]);
+      return b && b.p10 >= 0 && b.p10 <= b.p50 && b.p50 <= b.p90 ? b : null;
+    }),
+  };
+}
+
+export function normalizeHealth(raw: unknown): HealthSnapshot {
   const d = isObj(raw) ? raw : {};
+  const day = num(isObj(d.clock) ? d.clock.clock_day : d.clock_day);
+  const completeWeeks = day === null ? undefined : Math.max(0, Math.floor(day / 7));
   const kpis = asItems<unknown>(isObj(d) && Array.isArray(d.kpis) ? d.kpis : []).map((row) => {
     const k = isObj(row) ? row : {};
     return {
@@ -166,6 +193,8 @@ function normalizeHealth(raw: unknown): HealthSnapshot {
       city: typeof s.city === "string" ? s.city : null,
       country: typeof s.country === "string" ? s.country : "",
       status: typeof s.status === "string" ? s.status : "unknown",
+      backup: s.backup === true,
+      weekly_enrollment: weeklyEnrollment(s.weekly_enrollment, completeWeeks),
       enrolled: num(s.enrolled) ?? 0,
       planned_to_date: band(s.planned_to_date) ?? { p10: 0, p50: 0, p90: 0, unit: "patients" },
       open_queries: num(s.open_queries) ?? 0,
@@ -261,6 +290,12 @@ export function createIntervention(
   body: { alert_id?: string; action: string; owner: string; target_site_ids: string[]; metric?: string },
 ) {
   return request<Intervention>("POST", `/ops/${enc(trialId)}/interventions`, { body, silent: true });
+}
+
+export function startIntervention(trialId: string, id: string) {
+  return request<Intervention>("POST", `/ops/${enc(trialId)}/interventions/${enc(id)}`, {
+    body: { status: "in_progress" }, silent: true,
+  });
 }
 
 export async function listEffects(trialId: string): Promise<EffectDetail[]> {

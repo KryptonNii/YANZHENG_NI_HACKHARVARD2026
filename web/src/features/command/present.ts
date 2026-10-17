@@ -45,6 +45,12 @@ export function rangeText(range: { p10?: number | null; p50?: number | null; p90
   return formatRange(range as MetricRange);
 }
 
+/** Alert impact keeps the unit on the range (delay arrives as months). A missing or unknown range is not an estimate. */
+export function impactText(range: { p10?: number | null; p50?: number | null; p90?: number | null; unit?: string } | null | undefined): string {
+  if (!range || !isNum(range.p10) || !isNum(range.p50) || !isNum(range.p90) || !range.unit) return "not estimated";
+  return formatRange(range as MetricRange);
+}
+
 export function bandText(band: Band | null | undefined): string {
   if (!band) return "Unknown";
   return rangeText({ ...band, unit: band.unit ?? "patients" });

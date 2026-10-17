@@ -1,7 +1,7 @@
 import type { MetricRange } from "@/app/contracts";
 import { formatRange, formatSignedPct, formatSignedValue, formatValue, splitValue } from "@/app/format";
 import { Skeleton } from "@/app/ui";
-import { delta, isKnownRange, type MetricDef } from "../metrics";
+import { delta, isKnownRange, type KnownRange, type MetricDef } from "../metrics";
 
 /** Delta vs baseline with sign, arrow and words — never colour alone. */
 export function DeltaText({ current, baseline, testId }: { current: MetricRange; baseline: MetricRange; testId?: string }) {
@@ -36,7 +36,7 @@ export function DeltaText({ current, baseline, testId }: { current: MetricRange;
 }
 
 /** A small P10–P90 bar with the P50 tick; baseline band drawn faintly behind it. */
-function RangeBar({ current, baseline }: { current: MetricRange; baseline: MetricRange | null }) {
+function RangeBar({ current, baseline }: { current: KnownRange; baseline: KnownRange | null }) {
   const lo = Math.min(current.p10, baseline?.p10 ?? current.p10);
   const hi = Math.max(current.p90, baseline?.p90 ?? current.p90);
   const span = hi - lo || 1;
@@ -94,7 +94,7 @@ export function MetricCard({
             <span className="mt-1 block text-[11px] font-semibold uppercase tracking-wide text-ink-500">P10–P90 range</span>
             <span className="block whitespace-nowrap text-sm text-ink-700 tabular">{formatRange(current)}</span>
           </button>
-          <RangeBar current={current} baseline={isKnownRange(baseline) ? baseline : null} />
+          {isKnownRange(current) && <RangeBar current={current} baseline={isKnownRange(baseline) ? baseline : null} />}
           <div className="mt-3 min-h-[2.5rem]">
             {baseline ? <DeltaText current={current} baseline={baseline} testId={`metric-${def.key}-delta`} /> : <Skeleton className="h-4 w-40" />}
           </div>

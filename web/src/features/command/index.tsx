@@ -217,7 +217,7 @@ export default function CommandPage() {
             <Drilldown health={snapshot.health} />
             <AlertsPanel trialId={trialId} alerts={snapshot.alerts} owner={me.user} onChanged={load} />
           </div>
-          <InterventionsPanel interventions={snapshot.interventions} effects={snapshot.effects} />
+          <InterventionsPanel trialId={trialId} interventions={snapshot.interventions} effects={snapshot.effects} onChanged={load} />
           {(snapshot.health.plan_notes ?? []).length > 0 && (
             <details className="text-sm text-ink-600">
               <summary className="cursor-pointer font-semibold">Plan notes</summary>

@@ -1,4 +1,4 @@
-import type { MetricRange, ModuleBreakdown, ProvenanceItem, ScenarioResult } from "@/app/contracts";
+import type { MetricRange, ModuleBreakdown, ProvenanceItem } from "@/app/contracts";
 import { EXTENSION_MODULES, EXCLUDED_BY_DEFAULT_MODULES } from "@/app/contracts";
 import { humanize } from "@/app/format";
 
@@ -27,7 +27,9 @@ export const METRIC_BY_KEY = Object.fromEntries(METRICS.map((m) => [m.key, m])) 
  * §2 rule 2: unknown ≠ zero. The engine reports a metric it cannot compute (missing input) as
  * NaN, which arrives as null (or a string) in JSON; such a range is shown as "Unknown".
  */
-export function isKnownRange(r: MetricRange | null | undefined): r is MetricRange {
+export type KnownRange = MetricRange & { p10: number; p50: number; p90: number };
+
+export function isKnownRange(r: MetricRange | null | undefined): r is KnownRange {
   return !!r && [r.p10, r.p50, r.p90].every((v) => typeof v === "number" && Number.isFinite(v));
 }
 
@@ -39,20 +41,27 @@ export interface Delta {
 }
 
 /** Change of P50 vs baseline. |pct| < 0.5 % counts as "same" (below display precision). */
-export function delta(current: MetricRange, baseline: MetricRange): Delta {
+export function delta(current: KnownRange, baseline: KnownRange): Delta {
   const abs = current.p50 - baseline.p50;
   const pct = baseline.p50 !== 0 ? (abs / Math.abs(baseline.p50)) * 100 : abs === 0 ? 0 : Number.POSITIVE_INFINITY;
   const direction = Math.abs(pct) < 0.5 ? "same" : abs < 0 ? "lower" : "higher";
   return { abs, pct, direction };
 }
 
-export function allProvenance(result: ScenarioResult): Array<ProvenanceItem & { module: string }> {
-  return result.modules.flatMap((m) => m.provenance.map((p) => ({ ...p, module: m.module })));
+type ProvenanceSource = { modules: ModuleBreakdown[]; forecast?: { provenance: ProvenanceItem[] } | null; supply?: { provenance: ProvenanceItem[] } | null };
+
+export function allProvenance(result: ProvenanceSource): Array<ProvenanceItem & { module: string }> {
+  return [
+    ...result.modules.flatMap((m) => m.provenance.map((p) => ({ ...p, module: m.module }))),
+    ...(result.forecast?.provenance ?? []).map((p) => ({ ...p, module: "forecast" })),
+    ...(result.supply?.provenance ?? []).map((p) => ({ ...p, module: "drug_supply" })),
+  ];
 }
 
 /** Provenance items that explain a metric; falls back to every item when no prefix matches. */
-export function provenanceForMetric(result: ScenarioResult, key: MetricKey): { items: Array<ProvenanceItem & { module: string }>; matched: boolean } {
+export function provenanceForMetric(result: ProvenanceSource, key: MetricKey): { items: Array<ProvenanceItem & { module: string }>; matched: boolean } {
   const all = allProvenance(result);
+  if (key === "duration_months" && result.forecast?.provenance.length) return { items: all.filter((p) => p.module === "forecast"), matched: true };
   const prefixes = METRIC_BY_KEY[key].formulaPrefixes;
   const items = all.filter((p) => prefixes.some((pre) => p.formula_id.startsWith(pre)));
   return items.length ? { items, matched: true } : { items: all, matched: false };
@@ -79,6 +88,6 @@ export function moduleLabel(m: string): string {
   return MODULE_LABELS[m] ?? humanize(m);
 }
 
-export function findModule(result: ScenarioResult, module: string): ModuleBreakdown | undefined {
+export function findModule(result: { modules: ModuleBreakdown[] }, module: string): ModuleBreakdown | undefined {
   return result.modules.find((m) => m.module === module);
 }

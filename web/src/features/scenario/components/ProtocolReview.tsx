@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import type { Visit } from "@/app/contracts";
-import type { ExtractionCandidate } from "@/app/api/types";
+import type { ExtractionCandidate, ProtocolReviewStats } from "@/app/api/types";
 import { DraftStamp } from "@/app/ui";
 
 type RowStatus = "pending" | "accepted" | "edited" | "rejected";
@@ -11,6 +11,11 @@ interface Row {
   visit: Visit;
   status: RowStatus;
   editing: boolean;
+  /** True once Edit was opened, so a later bulk accept is not "unopened". */
+  opened: boolean;
+  /** True when Accept all remaining set this row, and it was never opened. */
+  viaBulk: boolean;
+  weekDraft: string;
 }
 
 const STATUS_CHIP: Record<RowStatus, { text: string; cls: string }> = {
@@ -35,10 +40,19 @@ export function ProtocolReview({
   warnings: string[];
   canApply: boolean;
   applying: boolean;
-  onApply: (visits: Visit[], stats: { accepted: number; edited: number; rejected: number }) => void;
+  onApply: (visits: Visit[], stats: ProtocolReviewStats) => void;
 }) {
   const [rows, setRows] = useState<Row[]>(() =>
-    candidates.map((c, i) => ({ key: i, candidate: c, visit: structuredClone(c.visit), status: "pending", editing: false })),
+    candidates.map((c, i) => ({
+      key: i,
+      candidate: c,
+      visit: structuredClone(c.visit),
+      status: "pending",
+      editing: false,
+      opened: false,
+      viaBulk: false,
+      weekDraft: String(c.visit.week),
+    })),
   );
 
   const update = (key: number, patch: Partial<Row>) => setRows((rs) => rs.map((r) => (r.key === key ? { ...r, ...patch } : r)));
@@ -48,13 +62,28 @@ export function ProtocolReview({
     return c;
   }, [rows]);
 
+  const weekValid = (draft: string) => draft.trim() !== "" && Number.isFinite(Number(draft));
+
   const apply = () => {
     const visits = rows
       .filter((r) => r.status === "accepted" || r.status === "edited")
       .map((r) => r.visit)
       .sort((a, b) => a.week - b.week || a.number - b.number);
-    onApply(visits, { accepted: counts.accepted, edited: counts.edited, rejected: counts.rejected });
+    onApply(visits, {
+      accepted: counts.accepted,
+      edited: counts.edited,
+      rejected: counts.rejected,
+      bulk_accepted: rows.filter((r) => r.status === "accepted" && r.viaBulk).length,
+    });
   };
+
+  const acceptRemaining = () =>
+    setRows((rs) =>
+      rs.map((r) => {
+        if (r.status !== "pending" || r.editing) return r;
+        return { ...r, status: "accepted", viaBulk: !r.opened };
+      }),
+    );
 
   return (
     <div data-testid="protocol-review">
@@ -70,7 +99,7 @@ export function ProtocolReview({
           <button
             type="button"
             className="btn-ghost py-1.5 text-xs"
-            onClick={() => setRows((rs) => rs.map((r) => (r.status === "pending" ? { ...r, status: "accepted" } : r)))}
+            onClick={acceptRemaining}
             disabled={counts.pending === 0}
           >
             Accept all remaining
@@ -133,11 +162,14 @@ export function ProtocolReview({
                       type="number"
                       step="0.5"
                       aria-label={`Visit ${r.visit.number} week`}
-                      value={r.visit.week}
-                      onChange={(e) => update(r.key, { visit: { ...r.visit, week: Number(e.target.value) } })}
+                      value={r.weekDraft}
+                      onChange={(e) => update(r.key, { weekDraft: e.target.value })}
                     />
                   ) : (
                     r.visit.week
+                  )}
+                  {r.editing && !weekValid(r.weekDraft) && (
+                    <span className="mt-1 block text-xs font-medium text-worse-700">Enter a week. An empty week is not saved as 0.</span>
                   )}
                 </td>
                 <td className="px-3 py-2">
@@ -171,15 +203,30 @@ export function ProtocolReview({
                 </td>
                 <td className="whitespace-nowrap px-3 py-2 text-right">
                   {r.editing ? (
-                    <button type="button" className="btn-secondary px-2 py-1 text-xs" onClick={() => update(r.key, { editing: false, status: "edited" })}>
+                    <button
+                      type="button"
+                      className="btn-secondary px-2 py-1 text-xs"
+                      disabled={!weekValid(r.weekDraft)}
+                      onClick={() => {
+                        const week = Number(r.weekDraft);
+                        const visit = { ...r.visit, week };
+                        const changed = visit.label !== r.candidate.visit.label || visit.week !== r.candidate.visit.week || visit.procedures.length !== r.candidate.visit.procedures.length;
+                        update(r.key, { editing: false, visit, weekDraft: String(week), status: changed ? "edited" : "accepted", viaBulk: false, opened: true });
+                      }}
+                    >
                       Done
                     </button>
                   ) : (
                     <div className="flex justify-end gap-1">
-                      <button type="button" className="btn-ghost px-2 py-1 text-xs" onClick={() => update(r.key, { status: "accepted" })} aria-label={`Accept visit ${r.visit.number}`}>
+                      <button type="button" className="btn-ghost px-2 py-1 text-xs" onClick={() => update(r.key, { status: "accepted", viaBulk: false })} aria-label={`Accept visit ${r.visit.number}`}>
                         Accept
                       </button>
-                      <button type="button" className="btn-ghost px-2 py-1 text-xs" onClick={() => update(r.key, { editing: true })} aria-label={`Edit visit ${r.visit.number}`}>
+                      <button
+                        type="button"
+                        className="btn-ghost px-2 py-1 text-xs"
+                        onClick={() => update(r.key, { editing: true, opened: true, viaBulk: false, weekDraft: String(r.visit.week) })}
+                        aria-label={`Edit visit ${r.visit.number}`}
+                      >
                         Edit
                       </button>
                       <button type="button" className="btn-ghost px-2 py-1 text-xs text-worse-700" onClick={() => update(r.key, { status: "rejected" })} aria-label={`Reject visit ${r.visit.number}`}>

@@ -33,11 +33,12 @@ function describeLevers(l: Levers): string[] {
 
 type SaveMode = "new" | "version";
 
-function SaveDialog({ open, onClose, onSave, saving, defaultName, base }: {
+function SaveDialog({ open, onClose, onSave, saving, ready, defaultName, base }: {
   open: boolean;
   onClose: () => void;
   onSave: (name: string, mode: SaveMode) => void;
   saving: boolean;
+  ready: boolean;
   defaultName: string;
   /** the selected saved scenario, offered as the base for a new version */
   base: SavedScenario | null;
@@ -60,7 +61,7 @@ function SaveDialog({ open, onClose, onSave, saving, defaultName, base }: {
           <button type="button" className="btn-secondary" onClick={onClose}>
             Cancel
           </button>
-          <button type="submit" form={`${id}-form`} className="btn-primary" disabled={saving || !name.trim()} data-testid="save-confirm">
+          <button type="submit" form={`${id}-form`} className="btn-primary" disabled={saving || !ready || !name.trim()} data-testid="save-confirm">
             {saving ? "Saving…" : mode === "version" && base ? `Save as v${base.version + 1}` : "Save"}
           </button>
         </>
@@ -70,7 +71,7 @@ function SaveDialog({ open, onClose, onSave, saving, defaultName, base }: {
         id={`${id}-form`}
         onSubmit={(e) => {
           e.preventDefault();
-          if (name.trim()) onSave(name.trim(), mode);
+          if (ready && !saving && name.trim()) onSave(name.trim(), mode);
         }}
       >
         {base && (
@@ -93,13 +94,13 @@ function SaveDialog({ open, onClose, onSave, saving, defaultName, base }: {
           Name
         </label>
         <input id={id} className="input mt-1" value={name} onChange={(e) => setName(e.target.value)} maxLength={200} data-testid="save-name" />
-        <p className="mt-2 text-xs text-ink-500">Saved with the current levers, the computed result and the parameter-set version, as a draft you can submit for approval.</p>
+        <p className="mt-2 text-xs text-ink-500">Saved with the current levers, the computed result and the parameter-set version, against the design version on this page, as a draft you can submit for approval.</p>
       </form>
     </Modal>
   );
 }
 
-function TrialHeader({ design }: { design: TrialDesign }) {
+function TrialHeader({ design, version }: { design: TrialDesign; version: number | null }) {
   const countries = new Set(design.sites.map((s) => s.country)).size;
   return (
     <div className="min-w-0">
@@ -128,6 +129,11 @@ function TrialHeader({ design }: { design: TrialDesign }) {
         <Badge>{design.duration_months} months planned</Badge>
         <Badge>{humanize(design.drug_type)}</Badge>
         <Badge>{design.visits.length} visits</Badge>
+        {version != null && (
+          <Badge>
+            <span data-testid="design-version">design v{version}</span>
+          </Badge>
+        )}
       </div>
     </div>
   );
@@ -139,6 +145,7 @@ export function ScenarioPage() {
   const toast = useToast();
 
   const [design, setDesign] = useState<TrialDesign | null>(null);
+  const [designVersion, setDesignVersion] = useState<number | null>(null);
   const [designError, setDesignError] = useState<ApiError | Error | null>(null);
   const [levers, setLevers] = useState<Levers>({ ...DEFAULT_LEVERS });
   const [drawer, setDrawer] = useState<ProvenanceTarget | null>(null);
@@ -154,13 +161,15 @@ export function ScenarioPage() {
     if (!designId) return;
     const ctrl = new AbortController();
     setDesign(null);
+    setDesignVersion(null);
     setDesignError(null);
     setLevers({ ...DEFAULT_LEVERS });
     api
       .getDesign(designId, { signal: ctrl.signal, silent: true })
-      .then((d) => {
-        setDesign(d);
-        setLastDesignId(d.id);
+      .then((rec) => {
+        setDesign(rec.design);
+        setDesignVersion(rec.version);
+        setLastDesignId(rec.design.id);
       })
       .catch((err) => {
         if (!isAbort(err)) setDesignError(err);
@@ -182,8 +191,9 @@ export function ScenarioPage() {
     refreshScenarios();
   }, [refreshScenarios]);
 
-  const compute = useScenarioCompute(design?.id, levers, design !== null);
+  const compute = useScenarioCompute(design?.id, levers, design !== null && designVersion !== null, designVersion);
   const { baseline, current, computing } = compute;
+  const canSave = current !== null && designVersion !== null && !computing && !compute.currentError;
 
   const selected = scenarios.find((s) => s.id === selectedId) ?? null;
 
@@ -195,13 +205,13 @@ export function ScenarioPage() {
   };
 
   const save = async (name: string, mode: SaveMode) => {
-    if (!design) return;
+    if (!design || !current || !canSave || designVersion === null) return;
     setSaving(true);
     try {
       const s =
         mode === "version" && selected
-          ? await api.newVersion(selected.id, { levers, name })
-          : await api.saveScenario({ design_id: design.id, name, levers });
+          ? await api.newVersion(selected.id, { levers: current.levers, name, design_version: designVersion })
+          : await api.saveScenario({ design_id: design.id, design_version: designVersion, name, levers: current.levers });
       toast.push("success", `Saved “${s.name}” v${s.version}`);
       setSaveOpen(false);
       refreshScenarios();
@@ -257,12 +267,12 @@ export function ScenarioPage() {
   return (
     <div className="space-y-5">
       <div className="flex flex-wrap items-end justify-between gap-4">
-        <TrialHeader design={design} />
+        <TrialHeader design={design} version={designVersion} />
         <div className="flex items-center gap-2">
           <Link to={`/?design=${encodeURIComponent(design.id)}`} className="btn-ghost">
             Trial details
           </Link>
-          <button type="button" className="btn-primary" onClick={() => setSaveOpen(true)} data-testid="save-scenario">
+          <button type="button" className="btn-primary" disabled={!canSave || saving} onClick={() => setSaveOpen(true)} data-testid="save-scenario">
             Save scenario
           </button>
         </div>
@@ -292,7 +302,7 @@ export function ScenarioPage() {
             <ErrorPanel
               title="The engine could not compute this scenario"
               message={compute.currentError ?? compute.baselineError ?? undefined}
-              onRetry={() => setLevers((l) => ({ ...l }))}
+              onRetry={compute.retry}
             />
           )}
 
@@ -361,13 +371,14 @@ export function ScenarioPage() {
         </div>
       </div>
 
-      <ProvenanceDrawer target={drawer} result={current} designId={design.id} levers={current?.levers ?? levers} onClose={() => setDrawer(null)} />
+      <ProvenanceDrawer target={drawer} result={current} designId={design.id} designVersion={designVersion} levers={current?.levers ?? levers} onClose={() => setDrawer(null)} />
       <SaveDialog
         open={saveOpen}
         onClose={() => setSaveOpen(false)}
         onSave={(n, m) => void save(n, m)}
         base={selected}
         saving={saving}
+        ready={canSave}
         defaultName={leverSummary.length ? `Scenario — ${leverSummary.slice(0, 2).join(", ")}` : "Baseline"}
       />
     </div>

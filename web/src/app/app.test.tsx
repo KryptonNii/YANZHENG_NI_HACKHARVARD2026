@@ -1,8 +1,11 @@
-import { act, render, screen } from "@testing-library/react";
+import { existsSync, readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import { act, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it, vi } from "vitest";
+import { SciencePage } from "@/features/scenario/SciencePage";
 import { ApiError, api, onApiError, request } from "./api/client";
-import { normalizeApproval, normalizeDrivers, normalizeSavedScenario, normalizeScience } from "./api/normalize";
+import { normalizeApproval, normalizeDrivers, normalizeSavedScenario, normalizeScenarioResult, normalizeScience } from "./api/normalize";
 import { formatRange, formatSignedValue, formatValue, splitValue } from "./format";
 import { getIdentity, identityHeaders, setIdentity } from "./identity";
 import { IdentitySwitcher } from "./IdentitySwitcher";
@@ -123,10 +126,189 @@ describe("normalisers", () => {
     expect(d[0].label).toBe("P0");
   });
 
-  it("accepts science results keyed by trial", () => {
+  it("accepts a legacy science total keyed by trial", () => {
     const r = normalizeScience({ trials: { CASPS: { published_total_kg: 1000, ours_total: { p10: 800, p50: 950, p90: 1200, unit: "kg_co2e" }, modules: [] } } });
     expect(r.trials[0].name).toBe("CASPS");
-    expect(r.trials[0].ours_total?.p50).toBe(950);
+    expect(r.trials[0].checks[0].id).toBe("engine_library");
+    expect(r.trials[0].checks[0].total?.ours?.p50).toBe(950);
+    expect(r.trials[0].published.total_kg).toBe(1000);
+  });
+
+  it("keeps A10 checks, gap explanations, findings and tonne-labelled industry totals", () => {
+    const r = normalizeScience({
+      simulated: false,
+      data_label: "Real published data",
+      paper: { url: "https://bmjopen.bmj.com/content/14/1/e075755" },
+      thresholds_pct: { match: 1, close: 10 },
+      engine: { available: true, reason: null },
+      trials: [
+        {
+          id: "casps",
+          name: "CASPS",
+          published: { total_kg: 71938.8, modules: { samples: 1000 } },
+          summary: ["Reproduces to +0.01%.", "Engine total is inside the range."],
+          findings: [{ id: "casps-f1", severity: "large", summary: "Centrifuge watts treated as kilowatts.", detail: "About 1000×.", lines: ["L1"], effect_kg: -811.7 }],
+          checks: [
+            {
+              id: "engine_library",
+              title: "Engine + library",
+              description: "Rebuilt design.",
+              available: true,
+              total: { module: "total", label: "Total", published_kg: 71938.8, ours: { p10: 56718, p50: 75734, p90: 103307, unit: "kg_co2e" }, diff_pct: 5.28, published_within_range: true, status: "close", explanation: "Inside the range." },
+              modules: [
+                { module: "laboratory", label: "Laboratory", published_kg: 12000, ours: { p10: 100, p50: 200, p90: 300, unit: "kg_co2e" }, diff_pct: -98.4, status: "gap", published_within_range: false, explanation: "Freezer storage is not in the engine the same way." },
+              ],
+            },
+          ],
+        },
+      ],
+      industry_band: {
+        low_t: 1437,
+        high_t: 2498,
+        trials_t: [1437, 1632, 2498],
+        demo_trials: [
+          { design_id: "boreas", title: "BOREAS: a COPD study", available: true, within_band: false, total_t: { p10: 954, p50: 1360, p90: 1930, unit: "kg_co2e" } },
+        ],
+      },
+    });
+    expect(r.trials[0].checks[0].modules[0].explanation).toMatch(/Freezer/);
+    expect(r.trials[0].checks[0].modules[0].status).toBe("gap");
+    expect(r.trials[0].findings[0].effect_kg).toBe(-811.7);
+    expect(r.industry_band?.demo_trials[0].total_t?.p50).toBe(1360);
+    expect(r.industry_band?.demo_trials[0].total_t?.unit).toBe("kg_co2e");
+    expect(r.simulated).toBe(false);
+  });
+
+  it("normalises the generated science/out/results.json when it is present", () => {
+    const path = resolve(import.meta.dirname, "../../../science/out/results.json");
+    if (!existsSync(path)) return;
+    const source = JSON.parse(readFileSync(path, "utf8")) as { industry_band: { demo_trials: Array<{ title: string; total_t: { p50: number; unit: string }; within_band: boolean }> } };
+    const r = normalizeScience(source);
+    const casps = r.trials.find((t) => t.id === "casps");
+    const engine = casps?.checks.find((c) => c.id === "engine_library");
+    expect(casps?.summary).toHaveLength(2);
+    expect(casps?.findings.length).toBeGreaterThan(0);
+    expect(engine?.modules.some((m) => m.status === "gap" && m.explanation)).toBe(true);
+    const notus = r.industry_band?.demo_trials.find((t) => t.title.startsWith("NOTUS"));
+    const sourceNotus = source.industry_band.demo_trials.find((t) => t.title.startsWith("NOTUS"));
+    expect(sourceNotus).toBeDefined();
+    expect(notus?.within_band).toBe(sourceNotus?.within_band);
+    expect(notus?.total_t?.p50).toBe(sourceNotus?.total_t.p50);
+    expect(notus?.total_t?.unit).toBe("t_co2e");
+  });
+});
+
+const SCIENCE_FIXTURE = {
+  simulated: false,
+  data_label: "Real published data, not simulated.",
+  paper: { url: "https://bmjopen.bmj.com/content/14/1/e075755" },
+  parameter_set_version: "p-set",
+  seed: 7,
+  draws: 2000,
+  thresholds_pct: { match: 1, close: 10 },
+  engine: { available: true, reason: null },
+  trials: [
+    {
+      id: "casps",
+      name: "CASPS",
+      registry_id: "ISRCTN63733470",
+      phase: "Phase 2",
+      patients: 47,
+      sites: 12,
+      countries: ["GB"],
+      published: { total_kg: 71938.8, modules: {} },
+      summary: ["The paper's arithmetic reproduces to +0.01%.", "The engine total sits inside P10–P90."],
+      findings: [{ id: "casps-f1", severity: "large", summary: "Centrifuge watts treated as kilowatts.", detail: "About 1000×.", effect_kg: -811.7, lines: [] }],
+      checks: [
+        {
+          id: "method",
+          title: "Method check: the paper's own arithmetic",
+          description: "Adds up the paper's own lines.",
+          available: true,
+          total: { module: "total", label: "Total", published_kg: 71938.8, ours: { p10: 71943, p50: 71943, p90: 71943, unit: "kg_co2e" }, diff_pct: 0.01, status: "match", published_within_range: false },
+          modules: [],
+        },
+        {
+          id: "engine_library",
+          title: "Engine check: TrialPilot engine + library",
+          description: "Rebuilt design through the simulator engine.",
+          available: true,
+          total: { module: "total", label: "Total", published_kg: 71938.8, ours: { p10: 56718, p50: 75734, p90: 103307, unit: "kg_co2e" }, diff_pct: 5.28, status: "close", published_within_range: true, explanation: "Published total is inside the range." },
+          modules: [
+            { module: "laboratory", label: "Laboratory", published_kg: 12000, ours: { p10: 100, p50: 200, p90: 300, unit: "kg_co2e" }, diff_pct: -98.4, status: "gap", explanation: "Freezer storage is not in the engine the same way." },
+          ],
+        },
+      ],
+    },
+  ],
+  industry_band: {
+    low_t: 1437,
+    high_t: 2498,
+    trials_t: [1437, 1632, 2498],
+    note: "Different method, includes drug manufacture.",
+    source: "Mackillop 2023",
+    demo_trials: [
+      { design_id: "notus", title: "NOTUS: a COPD study", registry_id: "NCT04456673", available: true, within_band: true, total_t: { p10: 1117, p50: 1578, p90: 2241, unit: "kg_co2e" } },
+    ],
+  },
+};
+
+describe("compute response extensions", () => {
+  it("accepts forecast and supply when the imported contract does not list them", () => {
+    const r = normalizeScenarioResult({
+      design_id: "d1",
+      warnings: ["ok"],
+      modules: [],
+      forecast: {
+        months_to_full_enrollment: { p10: 8, p50: 10, p90: 14, unit: "months" },
+        milestone_dates: { full_enrollment: { p10: 8, p50: 10, p90: 14, unit: "months" } },
+        enrollment_curve: [[0, 0, 0, 0], [10, 80, 100, 120]],
+        warnings: ["extra"],
+      },
+      supply: {
+        kits_needed: { p10: 10, p50: 20, p90: 30, unit: "kits" },
+        kits_produced: { p10: 12, p50: 22, p90: 34, unit: "kits" },
+        kits_wasted: { p10: 1, p50: 2, p90: 4, unit: "kits" },
+        waste_share: { p10: 5, p50: 9, p90: 12, unit: "percent" },
+        shipments: { p10: 4, p50: 6, p90: 9, unit: "count" },
+        stockout_probability: 0.06,
+        kits_expired: 3,
+      },
+    });
+    expect(r.forecast?.months_to_full_enrollment?.p50).toBe(10);
+    expect(r.forecast?.enrollment_curve).toEqual([
+      [0, 0, 0, 0],
+      [10, 80, 100, 120],
+    ]);
+    expect(r.supply?.kits_produced?.p50).toBe(22);
+    expect(r.supply?.shipments?.unit).toBe("count");
+    expect(r.supply?.stockout_probability).toBe(0.06);
+  });
+});
+
+describe("science page", () => {
+  it("renders the engine check, the gap explanation, and industry totals as tonnes", async () => {
+    vi.spyOn(window, "fetch").mockImplementation(async (input) => {
+      const url = String(input);
+      if (url.includes("/science/results")) return jsonResponse(SCIENCE_FIXTURE);
+      return jsonResponse({ error: "not_found", message: "missing" }, 404);
+    });
+    render(<SciencePage />);
+    const card = await screen.findByTestId("science-card");
+    expect(within(card).getByRole("heading", { name: "CASPS" })).toBeInTheDocument();
+    expect(within(card).getByText(/Freezer storage is not in the engine/)).toBeInTheDocument();
+    expect(within(card).getByText("Centrifuge watts treated as kilowatts.")).toBeInTheDocument();
+    expect(within(card).getByText("Gap")).toBeInTheDocument();
+    expect(screen.getByText("1,578 t")).toBeInTheDocument();
+    expect(screen.getByText("Inside the band")).toBeInTheDocument();
+    expect(screen.getByTestId("science-band-unit")).toHaveTextContent("kg_co2e");
+    expect(screen.queryByText(/1,578 kg/)).not.toBeInTheDocument();
+    expect(screen.queryByText("1.578 t")).not.toBeInTheDocument();
+    expect(screen.queryByText("1,578,000 t")).not.toBeInTheDocument();
+
+    await userEvent.click(within(card).getByRole("radio", { name: "Method" }));
+    expect(within(card).getByRole("heading", { name: /paper's own arithmetic/i })).toBeInTheDocument();
+    expect(within(card).queryByText(/Freezer storage/)).not.toBeInTheDocument();
   });
 });
 

@@ -38,11 +38,12 @@ export function formatMonths(v: number): string {
 }
 
 /** `percent` metrics are 0–100 (e.g. drug_waste_share 23.5 = 23.5 %). */
-export function formatPercent(v: number): string {
+export function formatPercent(v: number | null): string {
+  if (!isNum(v)) return "unknown";
   return `${v < 0 ? "−" : ""}${nf(Math.abs(v) >= 10 ? 0 : 1).format(Math.abs(v))}%`;
 }
 
-export function formatValue(v: number, unit: MetricRangeUnit | string): string {
+export function formatValue(v: number | null, unit: MetricRangeUnit | string): string {
   if (!isNum(v)) return "unknown";
   switch (unit) {
     case "usd":
@@ -59,13 +60,15 @@ export function formatValue(v: number, unit: MetricRangeUnit | string): string {
       return `${compact(v)} patients`;
     case "kits":
       return `${compact(v)} kits`;
+    case "count":
+      return compact(v);
     default:
       return `${compact(v)} ${unit}`;
   }
 }
 
 /** Big-number display: the figure and its unit separately, so the unit can be set smaller. */
-export function splitValue(v: number, unit: MetricRangeUnit | string): { num: string; unit: string } {
+export function splitValue(v: number | null, unit: MetricRangeUnit | string): { num: string; unit: string } {
   if (!isNum(v)) return { num: "unknown", unit: "" };
   switch (unit) {
     case "usd":
@@ -87,7 +90,7 @@ export function splitValue(v: number, unit: MetricRangeUnit | string): { num: st
 }
 
 /** Number without unit suffix, for compact range text ("1.2M – 1.9M"). */
-export function formatBare(v: number, unit: MetricRangeUnit | string): string {
+export function formatBare(v: number | null, unit: MetricRangeUnit | string): string {
   if (!isNum(v)) return "unknown";
   if (unit === "usd") return formatUsd(v);
   if (unit === "kg_co2e") return Math.abs(v) >= 1000 ? compact(v / 1000) : compact(v);

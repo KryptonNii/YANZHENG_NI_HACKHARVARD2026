@@ -3,6 +3,7 @@ import type { Levers, TrialDesign } from "@/app/contracts";
 import { DEFAULT_LEVERS } from "@/app/api/normalize";
 import { Segmented } from "@/app/ui";
 import { leversEqual } from "../hooks/useScenarioCompute";
+import { groupProcedures } from "../procedureGroups";
 
 type VisitMode = "site" | "home" | "remote";
 
@@ -79,17 +80,7 @@ function ShareSlider({ label, value, onChange, describe, testId }: {
 export function LeversPanel({ design, levers, onChange }: { design: TrialDesign; levers: Levers; onChange: (l: Levers) => void }) {
   const [siteFilter, setSiteFilter] = useState("");
 
-  const procedures = useMemo(() => {
-    const byCode = new Map<string, { code: string; label: string; visits: number }>();
-    for (const v of design.visits) {
-      for (const p of v.procedures) {
-        const e = byCode.get(p.code) ?? { code: p.code, label: p.label, visits: 0 };
-        e.visits += 1;
-        byCode.set(p.code, e);
-      }
-    }
-    return [...byCode.values()].sort((a, b) => a.label.localeCompare(b.label));
-  }, [design.visits]);
+  const procedures = useMemo(() => groupProcedures(design.visits), [design.visits]);
 
   const sites = useMemo(() => {
     const q = siteFilter.trim().toLowerCase();
@@ -197,25 +188,36 @@ export function LeversPanel({ design, levers, onChange }: { design: TrialDesign;
         </p>
       </Group>
 
-      <Group title="Remove procedures" hint="Removed from every visit." changed={levers.removed_procedures.length > 0}>
+      <Group
+        title="Remove procedures"
+        hint="One row per procedure code. Unticking it removes every assessment listed, on every visit where that code appears."
+        changed={levers.removed_procedures.length > 0}
+      >
         {procedures.length === 0 ? (
           <p className="text-sm text-ink-500">No procedures in the visit schedule.</p>
         ) : (
-          <ul className="max-h-56 space-y-0.5 overflow-y-auto pr-1">
+          <ul className="max-h-72 space-y-1 overflow-y-auto pr-1" data-testid="procedure-levers">
             {procedures.map((p) => {
               const removed = levers.removed_procedures.includes(p.code);
+              const labels = p.labels.filter((label) => label !== p.meaning);
+              const labelText = (labels.length > 0 ? labels : p.labels).join(", ");
               return (
-                <li key={p.code}>
-                  <label className="flex cursor-pointer items-center gap-2.5 rounded-md px-1 py-1 text-sm hover:bg-ink-50">
+                <li key={p.code} data-testid={`procedure-${p.code}`}>
+                  <label className="flex cursor-pointer items-start gap-2.5 rounded-md px-1 py-1 text-sm hover:bg-ink-50">
                     <input
                       type="checkbox"
-                      className="h-4 w-4 rounded border-ink-400 accent-worse-700"
+                      className="mt-0.5 h-4 w-4 rounded border-ink-400 accent-worse-700"
                       checked={removed}
+                      aria-label={`Remove ${p.meaning}`}
                       onChange={() => set({ removed_procedures: toggle(levers.removed_procedures, p.code) })}
                     />
-                    <span className={`flex-1 ${removed ? "text-ink-500 line-through" : "text-ink-800"}`}>{p.label}</span>
-                    <span className="text-xs text-ink-500 tabular">
-                      {p.visits} visit{p.visits === 1 ? "" : "s"}
+                    <span className={`min-w-0 flex-1 ${removed ? "text-ink-500 line-through" : "text-ink-800"}`}>
+                      <span className="block font-medium">{p.meaning}</span>
+                      {labelText !== p.meaning && <span className="mt-0.5 block text-xs text-ink-600">{labelText}</span>}
+                    </span>
+                    <span className="shrink-0 text-right text-xs text-ink-500 tabular">
+                      {p.occurrences} time{p.occurrences === 1 ? "" : "s"}
+                      <span className="block">at {p.visits} visit{p.visits === 1 ? "" : "s"}</span>
                     </span>
                   </label>
                 </li>

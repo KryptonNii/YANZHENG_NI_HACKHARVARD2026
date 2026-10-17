@@ -7,10 +7,10 @@ import { formatRange, formatSignedPct, formatSignedValue, formatUtc, formatValue
 import { displayName } from "@/app/identity";
 import { EmptyState, Skeleton, Spinner } from "@/app/ui";
 import { ScenarioStatusChip } from "./components/VersionsPanel";
-import { delta, isKnownRange, METRICS, moduleLabel } from "./metrics";
+import { delta, isKnownRange, METRICS, moduleLabel, type MetricKey } from "./metrics";
 
-const ROWS: Array<{ key: string; label: string }> = [
-  ...METRICS.map((m) => ({ key: m.key as string, label: m.label })),
+const ROWS: Array<{ key: MetricKey | "drug_waste_share"; label: string }> = [
+  ...METRICS.map((m) => ({ key: m.key, label: m.label })),
   { key: "drug_waste_share", label: "Drug waste share" },
 ];
 
@@ -23,17 +23,18 @@ function useFullScenario(id: string | null): { scenario: SavedScenario | null; l
       return;
     }
     const ctrl = new AbortController();
+    setScenario(null);
     setLoading(true);
     api
       .getScenario(id, { signal: ctrl.signal })
-      .then(setScenario)
+      .then((value) => { if (!ctrl.signal.aborted) setScenario(value); })
       .catch((err) => {
         if (!isAbort(err)) setScenario(null);
       })
-      .finally(() => setLoading(false));
+      .finally(() => { if (!ctrl.signal.aborted) setLoading(false); });
     return () => ctrl.abort();
   }, [id]);
-  return { scenario, loading };
+  return { scenario: scenario?.id === id ? scenario : null, loading };
 }
 
 function leverRows(a: Levers, b: Levers): Array<{ label: string; a: string; b: string; differs: boolean }> {
@@ -91,7 +92,7 @@ function Picker({ label, value, options, onChange, testId }: { label: string; va
         </option>
         {options.map((s) => (
           <option key={s.id} value={s.id}>
-            {s.name} v{s.version} — {displayName(s.author)} ({s.status})
+            {s.name} v{s.version} — design v{s.design_version ?? "?"} — {displayName(s.author)} ({s.status})
           </option>
         ))}
       </select>
@@ -122,7 +123,9 @@ export function ComparePage() {
   const B = useFullScenario(bId);
   const a = A.scenario;
   const b = B.scenario;
-  const sameDesign = !!a && !!b && a.design_id === b.design_id && a.design_version === b.design_version;
+  const sameDesign = !!a && !!b && a.design_version !== null && a.design_id === b.design_id && a.design_version === b.design_version;
+  const resultA = a?.result;
+  const resultB = b?.result;
 
   useEffect(() => {
     setCmp(null);
@@ -146,10 +149,10 @@ export function ComparePage() {
 
   const levers = useMemo(() => (a?.levers && b?.levers ? leverRows(a.levers, b.levers) : []), [a, b]);
   const modules = useMemo(() => {
-    if (!a?.result || !b?.result) return [];
-    const ids = [...new Set([...a.result.modules, ...b.result.modules].map((m) => m.module))];
-    return ids.map((m) => ({ module: m, a: a.result!.modules.find((x) => x.module === m), b: b.result!.modules.find((x) => x.module === m) }));
-  }, [a, b]);
+    if (!resultA || !resultB) return [];
+    const ids = [...new Set([...resultA.modules, ...resultB.modules].map((m) => m.module))];
+    return ids.map((m) => ({ module: m, a: resultA.modules.find((x) => x.module === m), b: resultB.modules.find((x) => x.module === m) }));
+  }, [resultA, resultB]);
 
   return (
     <div className="space-y-5">
@@ -176,8 +179,9 @@ export function ComparePage() {
 
       {a && b && !sameDesign && (
         <p className="rounded-lg border border-caution-300 bg-caution-50 px-4 py-2 text-sm text-caution-900">
-          These scenarios belong to different trial designs (or design versions), so the change is a plain difference of P50s and also reflects
-          the trials themselves.
+          These scenarios are not on the same design version
+          {a.design_version != null || b.design_version != null ? ` (design v${a.design_version ?? "?"} and design v${b.design_version ?? "?"})` : ""}.
+          Per-draw comparison stays off, because the difference would mix the design change with the levers.
         </p>
       )}
       {cmp && cmp.warnings.length > 0 && (
@@ -191,7 +195,7 @@ export function ComparePage() {
 
       {(A.loading || B.loading) && <Skeleton className="h-64 w-full" />}
 
-      {a && b && a.result && b.result && (
+      {a && b && resultA && resultB && (
         <>
           <div className="grid gap-4 md:grid-cols-2">
             {[a, b].map((s, i) => (
@@ -228,8 +232,8 @@ export function ComparePage() {
               </thead>
               <tbody>
                 {ROWS.map((m) => {
-                  const ra = a.result![m.key as keyof typeof a.result] as MetricRange;
-                  const rb = b.result![m.key as keyof typeof b.result] as MetricRange;
+                  const ra = resultA[m.key];
+                  const rb = resultB[m.key];
                   return (
                     <tr key={m.key} className="border-t border-ink-100 align-top">
                       <th scope="row" className="py-2 pr-3 text-left font-semibold text-ink-800">
@@ -295,8 +299,10 @@ export function ComparePage() {
                 </thead>
                 <tbody>
                   {modules.map(({ module, a: ma, b: mb }) => {
-                    const dc = ma && mb ? mb.cost_usd.p50 - ma.cost_usd.p50 : null;
-                    const dk = ma && mb ? mb.co2e_kg.p50 - ma.co2e_kg.p50 : null;
+                    const subtract = (left: number | null | undefined, right: number | null | undefined) =>
+                      typeof left === "number" && typeof right === "number" ? right - left : null;
+                    const dc = ma && mb ? subtract(ma.cost_usd.p50, mb.cost_usd.p50) : null;
+                    const dk = ma && mb ? subtract(ma.co2e_kg.p50, mb.co2e_kg.p50) : null;
                     const cls = (d: number | null) => (d === null || !Number.isFinite(d) || Math.abs(d) < 1e-9 ? "text-ink-500" : d < 0 ? "text-better-700" : "text-worse-700");
                     const txt = (d: number | null, unit: string) => (d === null ? "—" : Number.isFinite(d) && Math.abs(d) < 1e-9 ? "no change" : formatSignedValue(d, unit));
                     return (

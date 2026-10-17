@@ -20,6 +20,10 @@ export function AuditPage() {
   const [chain, setChain] = useState<ChainResult | null>(null);
   const [chainError, setChainError] = useState<string | null>(null);
   const [verifying, setVerifying] = useState(false);
+  const exportQuery = new URLSearchParams();
+  if (applied.actor) exportQuery.set("actor", applied.actor);
+  if (applied.action) exportQuery.set("action", applied.action);
+  if (applied.objectType) exportQuery.set("object_type", applied.objectType);
 
   const load = async (nextOffset = offset, filters = applied) => {
     setError(null);
@@ -72,9 +76,12 @@ export function AuditPage() {
           <h1 className="text-2xl font-semibold tracking-tight">Audit trail</h1>
           <p className="mt-1 text-sm text-ink-500">Append-only hash chain. Every row is the record of one change.</p>
         </div>
-        <button type="button" className="btn-primary" onClick={() => void verify()} disabled={verifying}>
-          {verifying ? "Verifying…" : "Verify chain"}
-        </button>
+        <div className="flex gap-2">
+          <a className="btn-secondary" href={`/api/audit/export.csv${exportQuery.size ? `?${exportQuery}` : ""}`} download>Export CSV</a>
+          <button type="button" className="btn-primary" onClick={() => void verify()} disabled={verifying}>
+            {verifying ? "Verifying…" : "Verify chain"}
+          </button>
+        </div>
       </header>
 
       {chain &&
@@ -84,7 +91,7 @@ export function AuditPage() {
           </p>
         ) : (
           <p data-testid="chain-result" role="alert" className="rounded-lg border border-worse-200 bg-worse-50 px-4 py-3 text-sm font-semibold text-worse-900">
-            Broken at seq {chain.first_bad_seq}
+            {chain.first_bad_seq == null ? "Chain verification failed" : `Broken at seq ${chain.first_bad_seq}`}
             {chain.problem ? ` — ${chain.problem}` : ""}
           </p>
         ))}

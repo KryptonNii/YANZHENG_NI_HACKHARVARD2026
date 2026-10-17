@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { Alert } from "@/app/contracts";
 import { Badge, Modal } from "@/app/ui";
 import { ApiError, patchAlert, createIntervention } from "./api";
-import { IMPACT_KEYS, IMPACT_LABEL, rangeText, statusTone } from "./present";
+import { IMPACT_KEYS, IMPACT_LABEL, impactText, statusTone } from "./present";
 
 const ACTIVE = new Set<Alert["status"]>(["open", "acknowledged", "action_planned"]);
 
@@ -74,7 +74,7 @@ export function AlertsPanel({
               {IMPACT_KEYS.map((key) => (
                 <div key={key}>
                   <dt className="text-ink-500">{IMPACT_LABEL[key]}</dt>
-                  <dd className="tabular font-medium text-ink-800">{alert.est_impact?.[key] ? rangeText(alert.est_impact[key]) : "not estimated"}</dd>
+                  <dd className="tabular font-medium text-ink-800">{impactText(alert.est_impact?.[key])}</dd>
                 </div>
               ))}
             </dl>

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import type { Levers } from "@/app/contracts";
 import { api, isAbort } from "@/app/api/client";
 import { DEFAULT_LEVERS } from "@/app/api/normalize";
@@ -28,69 +28,73 @@ export interface ComputeState {
   computing: boolean;
   baselineError: string | null;
   currentError: string | null;
+  retry: () => void;
 }
 
 /**
  * Baseline (default levers) once per design; current levers recomputed 150 ms after the last
  * change. In-flight requests are aborted when superseded, so sliders never wait on the network.
  */
-export function useScenarioCompute(designId: string | undefined, levers: Levers, enabled = true): ComputeState {
-  const [baseline, setBaseline] = useState<ScenarioResultX | null>(null);
-  const [current, setCurrent] = useState<ScenarioResultX | null>(null);
-  const [computing, setComputing] = useState(false);
-  const [baselineError, setBaselineError] = useState<string | null>(null);
-  const [currentError, setCurrentError] = useState<string | null>(null);
-  const inflight = useRef<AbortController | null>(null);
+export function useScenarioCompute(designId: string | undefined, levers: Levers, enabled = true, designVersion: number | null = null): ComputeState {
+  type Result = { designKey: string; leverKey: string; value: ScenarioResultX };
+  type Failure = { key: string; message: string };
+  const [baselineState, setBaseline] = useState<Result | null>(null);
+  const [currentState, setCurrent] = useState<Result | null>(null);
+  const [baselineFailure, setBaselineError] = useState<Failure | null>(null);
+  const [currentFailure, setCurrentError] = useState<Failure | null>(null);
+  const [attempt, setAttempt] = useState(0);
+  const designKey = JSON.stringify([designId, designVersion, attempt]);
+  const key = JSON.stringify(normalizeForCompare(levers));
+  const requestKey = JSON.stringify([designKey, key]);
+  const active = enabled && !!designId && designVersion !== null;
+  const baseline = active && baselineState?.designKey === designKey ? baselineState.value : null;
+  const atBaseline = leversEqual(levers, DEFAULT_LEVERS);
+  const current = atBaseline && baseline ? baseline : active && currentState?.designKey === designKey ? currentState.value : null;
+  const baselineError = baselineFailure?.key === designKey ? baselineFailure.message : null;
+  const currentError = currentFailure?.key === requestKey ? currentFailure.message : null;
+  const ready = (atBaseline && !!baseline) || (currentState?.designKey === designKey && currentState.leverKey === key);
+  const computing = active && !ready && !currentError;
 
   useEffect(() => {
-    if (!designId || !enabled) return;
+    if (!designId || !active) return;
     const ctrl = new AbortController();
     setBaseline(null);
     setBaselineError(null);
     api
-      .compute(designId, DEFAULT_LEVERS, { signal: ctrl.signal, silent: true })
-      .then(setBaseline)
+      .compute(designId, DEFAULT_LEVERS, { signal: ctrl.signal, silent: true, designVersion })
+      .then((value) => {
+        if (!ctrl.signal.aborted) setBaseline({ designKey, leverKey: JSON.stringify(normalizeForCompare(DEFAULT_LEVERS)), value });
+      })
       .catch((err) => {
-        if (!isAbort(err)) setBaselineError(err instanceof Error ? err.message : String(err));
+        if (!ctrl.signal.aborted && !isAbort(err)) setBaselineError({ key: designKey, message: err instanceof Error ? err.message : String(err) });
       });
     return () => ctrl.abort();
-  }, [designId, enabled]);
+  }, [designId, designVersion, designKey, active]);
 
-  const key = JSON.stringify(normalizeForCompare(levers));
   useEffect(() => {
-    if (!designId || !enabled) return;
-    if (leversEqual(levers, DEFAULT_LEVERS) && baseline) {
-      inflight.current?.abort();
-      setCurrent(baseline);
-      setComputing(false);
-      setCurrentError(null);
-      return;
-    }
-    setComputing(true);
+    if (!designId || !active || (atBaseline && baseline)) return;
+    const ctrl = new AbortController();
+    setCurrentError(null);
     const timer = window.setTimeout(() => {
-      inflight.current?.abort();
-      const ctrl = new AbortController();
-      inflight.current = ctrl;
       api
-        .compute(designId, levers, { signal: ctrl.signal })
+        .compute(designId, levers, { signal: ctrl.signal, designVersion })
         .then((r) => {
           if (ctrl.signal.aborted) return;
-          setCurrent(r);
+          setCurrent({ designKey, leverKey: key, value: r });
           setCurrentError(null);
-          setComputing(false);
         })
         .catch((err) => {
-          if (isAbort(err)) return;
-          setCurrentError(err instanceof Error ? err.message : String(err));
-          setComputing(false);
+          if (ctrl.signal.aborted || isAbort(err)) return;
+          setCurrentError({ key: requestKey, message: err instanceof Error ? err.message : String(err) });
         });
     }, RECOMPUTE_DEBOUNCE_MS);
-    return () => window.clearTimeout(timer);
+    return () => {
+      window.clearTimeout(timer);
+      ctrl.abort();
+    };
     // `key` captures every lever value; `levers` identity changes on each render
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [designId, key, baseline, enabled]);
+  }, [designId, designVersion, designKey, key, requestKey, baseline, active, atBaseline]);
 
-  useEffect(() => () => inflight.current?.abort(), []);
-
-  return { baseline, current, computing, baselineError, currentError };
+  return { baseline, current, computing, baselineError, currentError, retry: () => setAttempt((n) => n + 1) };
 }

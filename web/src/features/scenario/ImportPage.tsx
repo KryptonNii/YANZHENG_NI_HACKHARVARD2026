@@ -2,7 +2,8 @@ import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import type { TrialDesign, TrialDesignDrugType, Visit } from "@/app/contracts";
 import { ApiError, api, isAbort } from "@/app/api/client";
-import type { CachedStudy, DesignSummary, ImportCtgovResponse, ProtocolExtractionResponse } from "@/app/api/types";
+import type { CachedStudy, DesignRecord, DesignSummary, ImportCtgovResponse, ProtocolExtractionResponse, ProtocolReviewStats } from "@/app/api/types";
+import { useHealth } from "@/app/health";
 import { setLastDesignId } from "@/app/lastDesign";
 import { useToast } from "@/app/toast";
 import { Badge, Modal, SectionTitle, Spinner } from "@/app/ui";
@@ -11,16 +12,30 @@ import { ProtocolReview } from "./components/ProtocolReview";
 import { SiteMap } from "./components/SiteMap";
 import { TrialCard } from "./components/TrialCard";
 import { DEMO_TRIALS, nctError, normalizeNct, type DemoTrial } from "./demoTrials";
+import { assumptionCount, visibleNotes } from "./importNotes";
 
 const MAX_PDF_BYTES = 20 * 1024 * 1024;
 
-function EditFactsDialog({ design, open, onClose, onSaved }: { design: TrialDesign; open: boolean; onClose: () => void; onSaved: (d: TrialDesign) => void }) {
+function EditFactsDialog({
+  design,
+  etag,
+  open,
+  onClose,
+  onSaved,
+}: {
+  design: TrialDesign;
+  etag: string | null;
+  open: boolean;
+  onClose: () => void;
+  onSaved: (rec: DesignRecord) => void;
+}) {
   const id = useId();
   const [enrollment, setEnrollment] = useState(String(design.enrollment_target));
   const [duration, setDuration] = useState(String(design.duration_months));
   const [drugType, setDrugType] = useState<TrialDesignDrugType>(design.drug_type);
   const [phase, setPhase] = useState(design.phase ?? "");
   const [saving, setSaving] = useState(false);
+  const [conflict, setConflict] = useState<string | null>(null);
 
   useEffect(() => {
     if (!open) return;
@@ -28,6 +43,7 @@ function EditFactsDialog({ design, open, onClose, onSaved }: { design: TrialDesi
     setDuration(String(design.duration_months));
     setDrugType(design.drug_type);
     setPhase(design.phase ?? "");
+    setConflict(null);
   }, [open, design]);
 
   const save = async () => {
@@ -40,20 +56,24 @@ function EditFactsDialog({ design, open, onClose, onSaved }: { design: TrialDesi
     if (drugType !== design.drug_type) changed.add("drug_type");
     if ((phase || null) !== design.phase) changed.add("phase");
     setSaving(true);
+    setConflict(null);
     try {
-      const updated = await api.saveDesign({
-        ...design,
-        enrollment_target: Math.round(e),
-        duration_months: d,
-        drug_type: drugType,
-        phase: phase || null,
-        // a value a person entered is no longer "missing"
-        missing_fields: design.missing_fields.filter((f) => !changed.has(f)),
-      });
+      const updated = await api.saveDesign(
+        {
+          ...design,
+          enrollment_target: Math.round(e),
+          duration_months: d,
+          drug_type: drugType,
+          phase: phase || null,
+          // a value a person entered is no longer "missing"
+          missing_fields: design.missing_fields.filter((f) => !changed.has(f)),
+        },
+        { ifMatch: etag ?? undefined },
+      );
       onSaved(updated);
       onClose();
-    } catch {
-      // toast shown by the client
+    } catch (err) {
+      if (err instanceof ApiError && err.code === "design_changed") setConflict(err.message);
     } finally {
       setSaving(false);
     }
@@ -99,7 +119,12 @@ function EditFactsDialog({ design, open, onClose, onSaved }: { design: TrialDesi
           <input id={`${id}-p`} className="input mt-1" value={phase} placeholder="e.g. PHASE3" onChange={(e) => setPhase(e.target.value)} />
         </div>
       </div>
-      <p className="mt-3 text-xs text-ink-500">Edits are saved as a new design version and recorded in the audit trail.</p>
+      <p className="mt-3 text-xs text-ink-500">Edits are saved as a new design version and recorded in the audit trail. The save is refused if someone else stored a version after this one was loaded.</p>
+      {conflict && (
+        <p role="alert" className="mt-3 rounded-lg border border-worse-200 bg-worse-50 px-3 py-2 text-sm text-worse-900" data-testid="design-conflict">
+          {conflict}
+        </p>
+      )}
     </Modal>
   );
 }
@@ -117,7 +142,13 @@ export function ImportPage() {
   const [importing, setImporting] = useState<string | null>(null);
   const [importError, setImportError] = useState<string | null>(null);
   const [design, setDesign] = useState<TrialDesign | null>(null);
+  const [designVersion, setDesignVersion] = useState<number | null>(null);
+  const [designEtag, setDesignEtag] = useState<string | null>(null);
+  const [registryDesign, setRegistryDesign] = useState<TrialDesign | null>(null);
+  const [keptStored, setKeptStored] = useState(false);
+  const [conflict, setConflict] = useState<string | null>(null);
   const [info, setInfo] = useState<ImportCtgovResponse | null>(null);
+  const health = useHealth();
   const [recent, setRecent] = useState<DesignSummary[]>([]);
   const [cached, setCached] = useState<CachedStudy[]>([]);
   const [editOpen, setEditOpen] = useState(false);
@@ -138,21 +169,26 @@ export function ImportPage() {
   }, [design?.id]);
 
   useEffect(() => {
+    if (health.kind !== "ok") return;
     const ctrl = new AbortController();
     api
       .cachedStudies({ signal: ctrl.signal, silent: true })
       .then(setCached)
-      .catch(() => setCached([]));
+      .catch(() => undefined);
     return () => ctrl.abort();
-  }, []);
+  }, [health.kind]);
 
   useEffect(() => {
     if (!designParam || design?.id === designParam) return;
     const ctrl = new AbortController();
     api
       .getDesign(designParam, { signal: ctrl.signal })
-      .then((d) => {
-        setDesign(d);
+      .then((rec) => {
+        setDesign(rec.design);
+        setDesignVersion(rec.version);
+        setDesignEtag(rec.etag);
+        setRegistryDesign(null);
+        setKeptStored(false);
         setInfo(null);
       })
       .catch((err) => {
@@ -165,11 +201,13 @@ export function ImportPage() {
     if (design && window.location.hash === "#missing") document.getElementById("missing")?.scrollIntoView();
   }, [design]);
 
-  const showDesign = useCallback(
-    (d: TrialDesign) => {
-      setDesign(d);
-      setLastDesignId(d.id);
-      setSearch({ design: d.id }, { replace: true });
+  const showRecord = useCallback(
+    (rec: DesignRecord) => {
+      setDesign(rec.design);
+      setDesignVersion(rec.version);
+      setDesignEtag(rec.etag);
+      setLastDesignId(rec.design.id);
+      setSearch({ design: rec.design.id }, { replace: true });
     },
     [setSearch],
   );
@@ -184,12 +222,29 @@ export function ImportPage() {
     }
     setImporting(id);
     setImportError(null);
+    setConflict(null);
     setExtraction(null);
     try {
       const res = await api.importCtgov(id, { silent: true });
-      setInfo(res);
-      showDesign({ ...res.design, missing_fields: res.missing_fields });
-      toast.push("success", `Imported ${id}`, res.raw_cached ? "Served from the local cache" : undefined);
+      const imported = { ...res.design, missing_fields: res.missing_fields.length ? res.missing_fields : res.design.missing_fields };
+      let record: DesignRecord;
+      let kept = false;
+      try {
+        record = await api.getDesign(imported.id, { silent: true });
+        kept = true;
+      } catch (e) {
+        if (!(e instanceof ApiError && e.status === 404)) throw e;
+        record = await api.saveDesign(imported);
+      }
+      setInfo({ ...res, design: record.design, missing_fields: record.design.missing_fields });
+      setRegistryDesign(imported);
+      setKeptStored(kept);
+      showRecord(record);
+      toast.push(
+        "success",
+        kept ? `Opened saved ${id}` : `Imported ${id}`,
+        kept ? `Design v${record.version} is already stored` : res.raw_cached ? "Served from the local cache and saved" : "Saved for the simulator",
+      );
     } catch (e) {
       setImportError(e instanceof ApiError ? e.message : String(e));
     } finally {
@@ -234,26 +289,52 @@ export function ImportPage() {
     }
   };
 
-  const applyExtraction = async (visits: Visit[], stats: { accepted: number; edited: number; rejected: number }) => {
+  const applyExtraction = async (visits: Visit[], stats: ProtocolReviewStats) => {
     if (!design) return;
     setApplying(true);
+    setConflict(null);
     try {
       // A4 validates the confirmed schedule (weeks increasing, unique numbers) and audits it; A5 stores the new version
       const applied = await api.applyProtocol(design, visits, extraction?.extraction_id ?? null);
-      const updated = await api.saveDesign(applied);
-      if (extraction?.extraction_id) {
-        void api
-          .logProtocolReview({ extraction_id: extraction.extraction_id, design_id: design.id, ...stats }, { silent: true })
-          .catch(() => undefined);
-      }
-      showDesign(updated);
-      setInfo((i) => (i ? { ...i, missing_fields: updated.missing_fields } : i));
+      const updated = await api.saveDesign(applied, { ifMatch: designEtag ?? undefined });
+      const reviewId = extraction?.extraction_id;
+      showRecord(updated);
+      setKeptStored(false);
+      setInfo((i) => (i ? { ...i, missing_fields: updated.design.missing_fields, design: updated.design } : i));
       setExtraction(null);
-      toast.push("success", `Applied ${visits.length} visits to the design`, `${stats.accepted} accepted · ${stats.edited} edited · ${stats.rejected} rejected`);
-    } catch {
-      // toast shown by the client
+      toast.push(
+        "success",
+        `Applied ${visits.length} visits to the design`,
+        `${stats.accepted} accepted · ${stats.edited} edited · ${stats.rejected} rejected · design v${updated.version}`,
+      );
+      if (reviewId) {
+        try {
+          await api.logProtocolReview({ extraction_id: reviewId, design_id: design.id, ...stats }, { silent: true });
+        } catch {
+          toast.push("error", "Design saved, but review counts were not recorded", "The protocol schedule is saved. Extraction review statistics are unavailable for this application.");
+        }
+      }
+    } catch (err) {
+      if (err instanceof ApiError && err.code === "design_changed") setConflict(err.message);
     } finally {
       setApplying(false);
+    }
+  };
+
+  const reimportRegistry = async () => {
+    if (!registryDesign || !designEtag) return;
+    setConflict(null);
+    setImporting(registryDesign.registry_id);
+    try {
+      const updated = await api.saveDesign(registryDesign, { ifMatch: designEtag });
+      showRecord(updated);
+      setKeptStored(false);
+      setInfo((i) => (i ? { ...i, missing_fields: updated.design.missing_fields, design: updated.design } : i));
+      toast.push("success", `Stored the registry copy as design v${updated.version}`);
+    } catch (err) {
+      if (err instanceof ApiError && err.code === "design_changed") setConflict(err.message);
+    } finally {
+      setImporting(null);
     }
   };
 
@@ -265,7 +346,14 @@ export function ImportPage() {
         note: [c.title, c.sponsor && `Sponsor: ${c.sponsor}`].filter(Boolean).join(" — "),
       }))
     : DEMO_TRIALS;
-  const warnings = info?.warnings ?? [];
+  const notes = visibleNotes(design?.missing_fields ?? [], info?.notes ?? []);
+  const assumedTotal = assumptionCount(design?.missing_fields ?? [], info?.notes ?? []);
+  const registryDiffers =
+    !!registryDesign &&
+    !!design &&
+    (registryDesign.visits.length !== design.visits.length ||
+      registryDesign.missing_fields.join("|") !== design.missing_fields.join("|") ||
+      registryDesign.enrollment_target !== design.enrollment_target);
   const registryProtocol = info?.documents.find((d) => d.has_protocol) ?? null;
 
   return (
@@ -320,7 +408,7 @@ export function ImportPage() {
           {(chips.length > 0 || recent.length > 0) && (
             <div className="mt-5">
               <p className="text-xs font-semibold uppercase tracking-wide text-ink-500">{chips.length ? "Demo trials (cached — work offline)" : "Recent trials"}</p>
-              <div className="mt-2 flex flex-wrap gap-2" data-testid="demo-chips">
+              <div className="mt-2 flex flex-wrap gap-2" data-testid={chips.length ? "demo-chips" : "recent-trials"}>
                 {chips.map((t) => (
                   <button
                     key={t.registryId}
@@ -349,7 +437,10 @@ export function ImportPage() {
                           .then((full) => {
                             setInfo(null);
                             setExtraction(null);
-                            showDesign(full);
+                            setRegistryDesign(null);
+                            setKeptStored(false);
+                            setConflict(null);
+                            showRecord(full);
                           })
                           .catch(() => undefined);
                       }}
@@ -380,6 +471,29 @@ export function ImportPage() {
       {design && (
         <>
           <TrialCard design={design} info={info} onEdit={() => setEditOpen(true)} />
+          {designVersion != null && (
+            <p className="text-sm text-ink-600" data-testid="import-design-version">
+              Saved as <strong>design v{designVersion}</strong>. The simulator computes and saves against this version.
+            </p>
+          )}
+          {keptStored && (
+            <div className="rounded-xl border border-ink-200 bg-ink-50 px-5 py-3 text-sm text-ink-800" data-testid="stored-design-banner">
+              <p>
+                This trial was already saved{designVersion != null ? ` as design v${designVersion}` : ""}. That copy is shown, including a protocol schedule if one was confirmed.
+                The registry response is not written over it.
+              </p>
+              {registryDiffers && designEtag && (
+                <button type="button" className="btn-secondary mt-2" onClick={() => void reimportRegistry()} disabled={importing !== null} data-testid="reimport-registry">
+                  Re-import from registry
+                </button>
+              )}
+            </div>
+          )}
+          {conflict && (
+            <p role="alert" className="rounded-lg border border-worse-200 bg-worse-50 px-3 py-2 text-sm text-worse-900" data-testid="design-conflict">
+              {conflict}
+            </p>
+          )}
 
           <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-accent-200 bg-accent-50 px-5 py-3">
             <p className="text-sm text-accent-900">
@@ -393,12 +507,12 @@ export function ImportPage() {
 
           <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
             <section className="card p-5" id="missing" aria-labelledby="missing-title">
-              <SectionTitle aside={<Badge tone="caution">{design.missing_fields.length + warnings.length}</Badge>}>
+              <SectionTitle aside={<Badge tone="caution"><span data-testid="missing-count">{assumedTotal}</span></Badge>}>
                 <span id="missing-title">Missing &amp; assumed</span>
               </SectionTitle>
               <MissingAssumed
                 missing={design.missing_fields}
-                warnings={warnings}
+                notes={notes}
                 onEdit={() => setEditOpen(true)}
                 onProtocol={() => protocolRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
               />
@@ -433,9 +547,9 @@ export function ImportPage() {
             />
             Choose protocol PDF…
           </label>
-          {registryProtocol && design?.registry_id && (
+          {design?.registry_id && (registryProtocol || design.registry_id.startsWith("NCT")) && (
             <button type="button" className="btn-secondary" onClick={() => void extractFromRegistry()} disabled={extracting} data-testid="extract-registry">
-              Use the registry protocol{registryProtocol.extraction_cached ? " (cached extraction)" : ""}
+              Use the registry protocol{registryProtocol?.extraction_cached ? " (cached extraction)" : ""}
             </button>
           )}
           <span className="text-xs text-ink-500">PDF up to 20 MB{design ? ` · will be applied to ${design.registry_id ?? "this design"}` : " · import the trial first to apply results"}</span>
@@ -487,7 +601,19 @@ export function ImportPage() {
         )}
       </section>
 
-      {design && <EditFactsDialog design={design} open={editOpen} onClose={() => setEditOpen(false)} onSaved={showDesign} />}
+      {design && (
+        <EditFactsDialog
+          design={design}
+          etag={designEtag}
+          open={editOpen}
+          onClose={() => setEditOpen(false)}
+          onSaved={(rec) => {
+            showRecord(rec);
+            setKeptStored(false);
+            setInfo((i) => (i ? { ...i, missing_fields: rec.design.missing_fields, design: rec.design } : i));
+          }}
+        />
+      )}
       {!design && recent.length === 0 && DEMO_TRIALS.length === 0 && (
         <p className="text-center text-sm text-ink-500">
           New here? Read <Link className="link" to="/about">how TrialPilot calculates</Link>.

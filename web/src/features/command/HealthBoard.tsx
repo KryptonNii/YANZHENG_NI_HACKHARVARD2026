@@ -1,7 +1,8 @@
 import { useMemo, useState } from "react";
 import type { ProvenanceItem } from "@/app/contracts";
 import { Badge, Drawer } from "@/app/ui";
-import type { CountryRow, HealthSnapshot, SiteRow } from "./api";
+import type { CountryRow, HealthSnapshot, SiteRow, WeeklyEnrollment } from "./api";
+import { countryEnrollment, EnrollmentChart } from "./EnrollmentChart";
 import { bandText, displayStatus, kpiCaption, kpiHeadline, siteStatusLabel, statusLabel, statusTone } from "./present";
 
 function BandSpark({ value, band }: { value: number; band: { p10: number; p50: number; p90: number } }) {
@@ -89,7 +90,8 @@ export function Drilldown({ health }: { health: HealthSnapshot }) {
       <header className="flex flex-wrap items-center justify-between gap-2 border-b border-ink-200 px-4 py-3">
         <div>
           <h2 className="card-title">Study → country → site</h2>
-          <p className="mt-1 text-xs text-ink-500">Enrollment against the plan band. The dot is actual; the bar is P10–P90.</p>
+          <p className="mt-1 text-xs text-ink-500">Complete weeks: teal actual cumulative, dashed plan P50, shaded P10–P90. Current totals include the open week, which is excluded from the curve.</p>
+          {level === "countries" && <p className="mt-1 text-xs text-ink-500">Country curves sum all site observations and plan bounds by week; summed bounds are not country forecast quantiles. Missing site data stays unknown.</p>}
         </div>
         <div className="flex items-center gap-2">
           {country && (
@@ -144,7 +146,7 @@ export function Drilldown({ health }: { health: HealthSnapshot }) {
                   <td className="px-3 py-2 tabular">{c.n_sites}</td>
                   <td className="px-3 py-2 tabular">{c.stalled_sites}</td>
                   <td className="px-3 py-2">
-                    <EnrollmentCell value={c.enrolled} band={c.planned_to_date} />
+                    <EnrollmentCell value={c.enrolled} band={c.planned_to_date} series={countryEnrollment(c, health.sites)} />
                   </td>
                   <td className="px-3 py-2 tabular">{c.open_queries}</td>
                 </tr>
@@ -169,13 +171,14 @@ export function Drilldown({ health }: { health: HealthSnapshot }) {
                   <td className="px-4 py-2">
                     <span className="font-semibold text-ink-900">{s.name}</span>
                     <span className="ml-2 font-mono text-xs text-ink-400">{s.site_id}</span>
+                    {s.backup && <span className="mt-1 block text-xs text-ink-500">Backup site · zero plan</span>}
                   </td>
                   <td className="px-3 py-2">{s.country}</td>
                   <td className="px-3 py-2">
                     <Badge tone={statusTone(s.status)}>{siteStatusLabel(s.status)}</Badge>
                   </td>
                   <td className="px-3 py-2">
-                    <EnrollmentCell value={s.enrolled} band={s.planned_to_date} />
+                    <EnrollmentCell value={s.enrolled} band={s.planned_to_date} series={s.weekly_enrollment} />
                   </td>
                   <td className="px-3 py-2 tabular">
                     {s.open_queries}
@@ -200,14 +203,12 @@ export function Drilldown({ health }: { health: HealthSnapshot }) {
   );
 }
 
-function EnrollmentCell({ value, band }: { value: number; band: { p10: number; p50: number; p90: number } }) {
+function EnrollmentCell({ value, band, series }: { value: number; band: { p10: number; p50: number; p90: number }; series: WeeklyEnrollment | null }) {
   return (
-    <div className="flex items-center gap-2">
-      <BandSpark value={value} band={band} />
-      <span className="tabular text-ink-800">
-        {value}
-        <span className="ml-1 text-xs text-ink-500">/ {Math.round(band.p50)}</span>
-      </span>
+    <div className="space-y-1">
+      <EnrollmentChart series={series} />
+      <span className="block text-xs tabular text-ink-800">Current {value} · plan P50 {Math.round(band.p50)}</span>
+      {!series && <BandSpark value={value} band={band} />}
     </div>
   );
 }

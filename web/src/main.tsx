@@ -11,7 +11,9 @@ async function start() {
     const { installMockApi } = await import("./app/api/mock");
     installMockApi();
   }
-  createRoot(document.getElementById("root")!).render(
+  const root = document.getElementById("root");
+  if (!root) throw new Error("TrialPilot root element is missing");
+  createRoot(root).render(
     <StrictMode>
       <App />
     </StrictMode>,

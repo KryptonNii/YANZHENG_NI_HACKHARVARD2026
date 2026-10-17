@@ -1,3 +1,4 @@
+import type { ImportNote } from "@/app/api/types";
 import { humanize } from "@/app/format";
 import { EmptyState } from "@/app/ui";
 
@@ -12,16 +13,16 @@ const FIELD_HELP: Record<string, { why: string; fix: "protocol" | "edit" | null 
 /** "Missing & assumed": what the importer could not get and what fills the gap (§2: unknown ≠ zero). */
 export function MissingAssumed({
   missing,
-  warnings,
+  notes,
   onEdit,
   onProtocol,
 }: {
   missing: string[];
-  warnings: string[];
+  notes: ImportNote[];
   onEdit: () => void;
   onProtocol: () => void;
 }) {
-  if (missing.length === 0 && warnings.length === 0) {
+  if (missing.length === 0 && notes.length === 0) {
     return <EmptyState title="Nothing missing">Every field came from the source.</EmptyState>;
   }
   return (
@@ -55,12 +56,17 @@ export function MissingAssumed({
           </li>
         );
       })}
-      {warnings.map((w) => (
-        <li key={w} className="py-2.5 text-sm text-ink-700">
-          <span className="mr-1.5 inline-block rounded bg-ink-100 px-1.5 text-[11px] font-bold uppercase tracking-wide text-ink-700">note</span>
-          {w}
-        </li>
-      ))}
+      {notes.map((note) => {
+        const counted = note.assumption && (!note.field || !missing.includes(note.field));
+        return (
+          <li key={`${note.field ?? ""}:${note.text}`} className="py-2.5 text-sm text-ink-700">
+            <span className={`mr-1.5 inline-block rounded px-1.5 text-[11px] font-bold uppercase tracking-wide ${counted ? "bg-caution-100 text-caution-900" : "bg-ink-100 text-ink-700"}`}>
+              {counted ? "assumed" : "note"}
+            </span>
+            {note.text}
+          </li>
+        );
+      })}
     </ul>
   );
 }

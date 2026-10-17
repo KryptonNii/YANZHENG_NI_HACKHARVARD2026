@@ -21,6 +21,7 @@ const alert = {
   est_impact: {
     cost_usd: { p10: 1000, p50: 2000, p90: 4000, unit: "usd" },
     co2e_kg: { p10: 10, p50: 20, p90: 40, unit: "kg_co2e" },
+    delay_days: { p10: 1.2, p50: 2.5, p90: 4.1, unit: "months" },
   },
   recommended_actions: [ACTION],
   status: "open",
@@ -137,7 +138,12 @@ describe("command center", () => {
 
     expect(await screen.findByText(/Site 14 drug overstock/)).toBeInTheDocument();
     expect(screen.getByText("Simulated feed")).toBeInTheDocument();
-    expect(screen.getAllByText("not estimated").length).toBeGreaterThan(0);
+    expect(screen.getByRole("img", { name: "Actual 8, plan band 6 to 14, P50 10" })).toBeInTheDocument();
+    const delay = screen.getByText("Delay").closest("div");
+    expect(delay).toHaveTextContent("1.2 mo – 4.1 mo");
+    const hours = screen.getByText("Site hours").closest("div");
+    expect(hours).toHaveTextContent("not estimated");
+    expect(hours).not.toHaveTextContent("0");
 
     await userEvent.click(screen.getByRole("button", { name: "Plan intervention" }));
     await userEvent.click(screen.getByRole("button", { name: "Save intervention" }));

@@ -21,7 +21,8 @@ export function ForecastChart({ result, target }: { result: ScenarioResultX | nu
     );
   }
   const curve = result.forecast?.enrollment_curve ?? [];
-  const data = curve.map(([month, p10, p50, p90]) => ({ month, base: p10, band: Math.max(p90 - p10, 0), p10, p50, p90 }));
+  const data = curve.map(([month, p10, p50, p90]) => ({ month, base: p10, band: p90 !== null && p10 !== null ? p90 - p10 : null, p10, p50, p90 }));
+  const hasCurve = data.filter((row) => row.p50 !== null).length > 1;
   const milestones = Object.entries(result.forecast?.milestone_dates ?? {});
 
   return (
@@ -32,7 +33,10 @@ export function ForecastChart({ result, target }: { result: ScenarioResultX | nu
         </h2>
         <span className="text-xs text-ink-500">Cumulative patients · P10–P90 band, P50 line · target {target.toLocaleString("en-US")}</span>
       </div>
-      {data.length > 1 ? (
+      {result.forecast && <p className="mb-2 text-xs text-ink-500" data-testid="forecast-sampling">
+        Forecast draws: {result.forecast.draws_used ?? "unknown"} of {result.forecast.draws_requested ?? "unknown"} requested. Curve draws: {result.forecast.curve_draws_used ?? "unknown"}.
+      </p>}
+      {hasCurve ? (
         <div className="h-48" role="img" aria-label={`Enrollment forecast. Time to full enrollment ${result.forecast?.months_to_full_enrollment ? formatRange(result.forecast.months_to_full_enrollment) : "not reported"}.`}>
           <ResponsiveContainer width="100%" height="100%">
             <ComposedChart data={data} margin={{ left: 0, right: 12, top: 6, bottom: 0 }}>
@@ -40,9 +44,9 @@ export function ForecastChart({ result, target }: { result: ScenarioResultX | nu
               <XAxis dataKey="month" type="number" domain={["dataMin", "dataMax"]} tick={{ fontSize: 12, fill: "#64748b" }} tickFormatter={(m: number) => `${m} mo`} />
               <YAxis tick={{ fontSize: 12, fill: "#64748b" }} width={44} />
               <Tooltip
-                formatter={(_v: number, name: string, item: { payload?: { p10: number; p50: number; p90: number } }) => {
+                formatter={(_v: number, name: string, item: { payload?: { p10: number | null; p50: number | null; p90: number | null } }) => {
                   const p = item.payload;
-                  if (!p) return ["", name];
+                  if (!p || p.p10 === null || p.p50 === null || p.p90 === null) return ["unknown", name];
                   if (name === "band") return [`${Math.round(p.p10)} – ${Math.round(p.p90)}`, "P10–P90"];
                   if (name === "p50") return [Math.round(p.p50), "P50"];
                   return [null, null];
@@ -56,12 +60,16 @@ export function ForecastChart({ result, target }: { result: ScenarioResultX | nu
           </ResponsiveContainer>
         </div>
       ) : (
-        <div className="rounded-lg bg-ink-50 px-4 py-3 text-sm text-ink-600">
+        <div className="rounded-lg bg-ink-50 px-4 py-3 text-sm text-ink-600" data-testid="forecast-missing">
           <p>
             Duration (P50) <strong className="tabular text-ink-900">{formatValue(result.duration_months.p50, "months")}</strong>, P10–P90{" "}
             <span className="tabular">{formatRange(result.duration_months)}</span>.
           </p>
-          <p className="mt-1 text-xs text-ink-500">The API did not return an enrollment curve for this scenario, so only the duration range is shown.</p>
+          <p className="mt-1 text-xs text-ink-500">
+            {result.forecast
+              ? "The compute response included a forecast, but no enrollment curve. Nothing is drawn from the duration alone."
+              : "This compute response has no enrollment forecast. The duration above is the only timeline figure. No curve is estimated."}
+          </p>
         </div>
       )}
       {milestones.length > 0 && (

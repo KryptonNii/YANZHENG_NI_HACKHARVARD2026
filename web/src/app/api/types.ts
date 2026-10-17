@@ -6,11 +6,13 @@
  */
 import type {
   ApprovalRequest,
+  ForecastView,
   Levers,
   MetricRange,
   ScenarioResult,
   Signature,
   SignatureMeaning,
+  SupplyView,
   TrialDesign,
   Visit,
 } from "../contracts";
@@ -36,13 +38,22 @@ export interface RegistryDocument {
   extraction_cached: boolean;
 }
 
+/** One A4 import note. `assumption` is set only when A4 tags it, or it is the visit-template sentence. */
+export interface ImportNote {
+  text: string;
+  field: string | null;
+  assumption: boolean;
+  clears_when_present?: boolean;
+}
+
 /** A4: POST /api/import/ctgov/{nct_id} (extra fields are A4's import report). */
 export interface ImportCtgovResponse {
   design: TrialDesign;
   raw_cached: boolean;
   missing_fields: string[];
-  /** A4 calls these `notes`: what was assumed or derived, in plain English */
+  /** Plain-text notes, including facts. The assumption badge does not count these. */
   warnings: string[];
+  notes: ImportNote[];
   field_sources: Record<string, string>;
   sponsor: string | null;
   collaborators: string[];
@@ -50,6 +61,13 @@ export interface ImportCtgovResponse {
   overall_status: string | null;
   attribution: string | null;
   documents: RegistryDocument[];
+}
+
+/** A5: TrialDesign plus the version and hash from `X-Design-Version` and `ETag`. */
+export interface DesignRecord {
+  design: TrialDesign;
+  version: number;
+  etag: string | null;
 }
 
 /** A4: GET /api/import/ctgov — studies available in the local cache (work offline). */
@@ -86,16 +104,16 @@ export interface ProtocolExtractionResponse {
   notice: string | null;
 }
 
-/** Proposed optional extension of ScenarioResult (handoffs/A8_CONTRACT_CHANGES.md): A3 ForecastResult. */
-export interface ForecastDetail {
+/** Display adaptation of generated ForecastView, preserving missing detail and curve gaps. */
+export interface ForecastDetail extends Omit<ForecastView, "months_to_full_enrollment" | "enrollment_curve"> {
   months_to_full_enrollment: MetricRange | null;
   milestone_dates: Record<string, MetricRange>;
   /** (month, p10, p50, p90) cumulative patients */
-  enrollment_curve: Array<[number, number, number, number]>;
+  enrollment_curve: Array<[number, number | null, number | null, number | null]>;
 }
 
-/** Proposed optional extension of ScenarioResult (handoffs/A8_CONTRACT_CHANGES.md): A3 SupplyResult. */
-export interface SupplyDetail {
+/** Display adaptation of generated SupplyView, preserving missing detail. */
+export interface SupplyDetail extends Omit<SupplyView, "kits_needed" | "kits_produced" | "kits_wasted" | "waste_share" | "shipments" | "stockout_probability"> {
   kits_needed: MetricRange | null;
   kits_produced: MetricRange | null;
   kits_wasted: MetricRange | null;
@@ -104,10 +122,13 @@ export interface SupplyDetail {
   stockout_probability: number | null;
 }
 
-/** ScenarioResult plus the optional extensions the UI renders when the API provides them. */
-export type ScenarioResultX = ScenarioResult & {
-  forecast?: ForecastDetail | null;
-  supply?: SupplyDetail | null;
+/**
+ * ScenarioResult with forecast/supply widened so a missing curve, kit count, or nested
+ * range stays null. The generated ForecastView/SupplyView require those objects.
+ */
+export type ScenarioResultX = Omit<ScenarioResult, "forecast" | "supply"> & {
+  forecast: ForecastDetail | null;
+  supply: SupplyDetail | null;
 };
 
 export type ScenarioStatus = "draft" | "submitted" | "approved" | "rejected";
@@ -120,10 +141,10 @@ export interface DesignSummary {
   source: string;
   registry_id: string | null;
   phase: string | null;
-  enrollment_target: number;
-  duration_months: number;
-  site_count: number;
-  visit_count: number;
+  enrollment_target: number | null;
+  duration_months: number | null;
+  site_count: number | null;
+  visit_count: number | null;
   countries: string[];
   drug_type: string;
   missing_fields: string[];
@@ -176,8 +197,17 @@ export interface SavedScenario {
 
 export interface SaveScenarioRequest {
   design_id: string;
+  design_version: number;
   name: string;
   levers: Levers;
+}
+
+export interface ProtocolReviewStats {
+  accepted: number;
+  edited: number;
+  rejected: number;
+  /** Rows accepted by "Accept all remaining" without opening them. A4 excludes these from the accuracy share. */
+  bulk_accepted: number;
 }
 
 /** One "top driver" of a metric's variance; share is 0..1 of total variance. */
@@ -207,32 +237,130 @@ export interface SignRequest {
 export type { ApprovalRequest };
 
 // ---------- Science check (A10 science/out/results.json, normalised) ----------
+/** A range from the science file. `unit` is whatever the file says (industry-band totals are tonnes labelled kg_co2e). */
+export interface ScienceRange {
+  p10: number;
+  p50: number;
+  p90: number;
+  unit: string;
+}
+
+export type ScienceRowStatus = "match" | "close" | "gap" | "not_reported" | "unavailable";
+
 export interface ScienceModuleRow {
   module: string;
+  label: string;
   published_kg: number | null;
-  ours: MetricRange | null;
-  pct_diff: number | null;
-  note: string | null;
+  ours: ScienceRange | null;
+  /** (ours.p50 − published) / published × 100 */
+  diff_pct: number | null;
+  published_within_range: boolean | null;
+  status: ScienceRowStatus;
+  explanation: string | null;
+}
+
+export interface ScienceLineChange {
+  line_id: string;
+  module: string;
+  item: string;
+  paper_factor: number | null;
+  paper_kg: number | null;
+  library_factor_p50: number | null;
+  library_kg: ScienceRange | null;
+  parameter_ids: string[];
+  kind: string;
+  note: string;
+}
+
+/** One reproduction: method, corrected, library, engine_library, or engine_paper_factors. */
+export interface ScienceCheck {
+  id: string;
+  title: string;
+  description: string;
+  available: boolean;
+  unavailable_reason: string | null;
+  total: ScienceModuleRow | null;
+  modules: ScienceModuleRow[];
+  notes: string[];
+  line_changes: ScienceLineChange[];
+}
+
+export interface ScienceFinding {
+  id: string;
+  severity: "large" | "medium" | "info" | string;
+  summary: string;
+  detail: string;
+  lines: string[];
+  effect_kg: number | null;
+}
+
+export interface ScienceDesignInput {
+  field: string;
+  value: string;
+  origin: string;
+  ref: string;
+}
+
+export interface SciencePublished {
+  total_kg: number | null;
+  total_main_text_kg: number | null;
+  modules: Record<string, number>;
 }
 
 export interface ScienceTrial {
   id: string;
   name: string;
   registry_id: string | null;
-  paper_url: string | null;
-  paper_title: string | null;
-  published_total_kg: number | null;
-  ours_total: MetricRange | null;
-  pct_diff: number | null;
-  modules: ScienceModuleRow[];
-  matched: string[];
-  not_matched: string[];
-  explanation: string | null;
-  check: string | null;
+  title: string | null;
+  phase: string | null;
+  patients: number | null;
+  sites: number | null;
+  countries: string[];
+  duration_years: number | null;
+  published: SciencePublished;
+  source: string | null;
+  checks: ScienceCheck[];
+  findings: ScienceFinding[];
+  design_inputs: ScienceDesignInput[];
+  /** Two sentences on match quality. */
+  summary: string[];
+}
+
+export interface ScienceBandTrial {
+  design_id: string;
+  title: string;
+  registry_id: string | null;
+  available: boolean;
+  reason: string | null;
+  /**
+   * Tonnes CO₂e. A10's file sets `unit` to `kg_co2e` but the numbers are tonnes
+   * (they sit on the 1,437–2,498 t band). Do not pass them through formatCo2e.
+   */
+  total_t: ScienceRange | null;
+  within_band: boolean | null;
+}
+
+export interface ScienceIndustryBand {
+  low_t: number | null;
+  high_t: number | null;
+  trials_t: number[];
+  source: string | null;
+  note: string | null;
+  demo_trials: ScienceBandTrial[];
 }
 
 export interface ScienceResults {
+  schema_version: number | null;
+  title: string | null;
+  simulated: boolean;
+  data_label: string | null;
+  paper: Record<string, string>;
+  parameter_set_version: string | null;
+  seed: number | null;
+  draws: number | null;
+  thresholds_pct: { match: number | null; close: number | null };
+  engine: { available: boolean; reason: string | null } | null;
   trials: ScienceTrial[];
-  generated_at: string | null;
-  notes: string[];
+  industry_band: ScienceIndustryBand | null;
+  how_to_reproduce: string | null;
 }

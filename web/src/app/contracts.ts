@@ -1,4 +1,3 @@
-// The ONE import point for the shared contract (§5) in the web app.
-// Until contracts/READY exists this re-exports A1's generated file via a local copy;
-// then this line becomes `export * from "../contracts";` and _contracts_local.ts is deleted.
-export * from "./_contracts_local";
+// The one import point for the shared contract (§5) in the web app.
+// This re-exports A1's generated file. Do not edit web/src/contracts.ts.
+export * from "../contracts";

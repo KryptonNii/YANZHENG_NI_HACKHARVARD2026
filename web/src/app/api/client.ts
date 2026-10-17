@@ -23,11 +23,13 @@ import type {
   ApprovalView,
   CachedStudy,
   CompareResult,
+  DesignRecord,
   DesignSummary,
   Driver,
   HealthResponse,
   ImportCtgovResponse,
   ProtocolExtractionResponse,
+  ProtocolReviewStats,
   SavedScenario,
   SaveScenarioRequest,
   ScenarioResultX,
@@ -68,6 +70,18 @@ export interface RequestOptions {
   signal?: AbortSignal;
   /** Do not toast this error (the caller shows it inline). */
   silent?: boolean;
+  /** A5 design concurrency: If-Match the ETag (`design_hash`) of the version being replaced. */
+  ifMatch?: string;
+  /** Pinned design version for compute, drivers, save and new scenario versions. */
+  designVersion?: number | null;
+}
+
+/** Plain-English text for A5's 409 design_changed. */
+export function designConflictMessage(err: ApiError): string | null {
+  if (err.code !== "design_changed") return null;
+  const version = err.details.version ?? err.details.design_version ?? err.details.current_version;
+  const shown = typeof version === "number" ? `design v${version}` : "a newer version";
+  return `This design changed while you were editing — it is now ${shown}. Reload it before saving so a confirmed protocol schedule is not replaced.`;
 }
 
 export function isAbort(err: unknown): boolean {
@@ -108,8 +122,9 @@ async function parseError(res: Response): Promise<ApiError> {
   return new ApiError(res.status, `http_${res.status}`, `Request failed (HTTP ${res.status}).`);
 }
 
-export async function request<T = unknown>(method: string, path: string, opts: RequestOptions = {}): Promise<T> {
+export async function requestFull<T = unknown>(method: string, path: string, opts: RequestOptions = {}): Promise<{ data: T; response: Response }> {
   const headers: Record<string, string> = { Accept: "application/json", ...identityHeaders() };
+  if (opts.ifMatch) headers["If-Match"] = `"${opts.ifMatch.replaceAll('"', "")}"`;
   let body: BodyInit | undefined;
   if (opts.form) {
     body = opts.form;
@@ -131,9 +146,28 @@ export async function request<T = unknown>(method: string, path: string, opts: R
     if (!opts.silent) errorListeners.forEach((l) => l(e));
     throw e;
   }
-  if (res.status === 204) return undefined as T;
+  if (res.status === 204) return { data: undefined as T, response: res };
   const text = await res.text();
-  return (text ? JSON.parse(text) : undefined) as T;
+  return { data: (text ? JSON.parse(text) : undefined) as T, response: res };
+}
+
+export async function request<T = unknown>(method: string, path: string, opts: RequestOptions = {}): Promise<T> {
+  const { data } = await requestFull<T>(method, path, opts);
+  return data;
+}
+
+function designRecord(design: TrialDesign, response: Response): DesignRecord {
+  const raw = Number(response.headers.get("X-Design-Version"));
+  const etag = response.headers.get("ETag")?.replace(/^W\//, "").replaceAll('"', "").trim() || null;
+  if (!Number.isInteger(raw) || raw < 1 || !etag || response.headers.get("ETag")?.startsWith("W/")) {
+    throw new ApiError(502, "design_version_missing", "The API did not provide a valid design version and strong ETag. Reload before editing or computing.");
+  }
+  return { design, version: raw, etag };
+}
+
+function withVersion(body: Record<string, unknown>, version: number | null | undefined): Record<string, unknown> {
+  if (typeof version === "number" && version >= 1) return { ...body, design_version: version };
+  return body;
 }
 
 const enc = encodeURIComponent;
@@ -162,10 +196,11 @@ export const api = {
       ...opts,
       body: { design, visits, extraction_id: extractionId },
     });
-    return res?.design ?? { ...design, visits, missing_fields: design.missing_fields.filter((f) => f !== "visits") };
+    if (!res?.design) throw new ApiError(502, "protocol_design_missing", "The API did not return the reviewed design. Nothing was saved; retry applying the protocol.");
+    return res.design;
   },
-  /** Accepted / edited / rejected counts — the extraction accuracy metric. */
-  logProtocolReview: (body: { extraction_id: string; design_id?: string; accepted: number; edited: number; rejected: number }, opts: RequestOptions = {}) =>
+  /** Accepted / edited / rejected counts — the extraction accuracy metric. `bulk_accepted` is rows never opened. */
+  logProtocolReview: (body: { extraction_id: string; design_id?: string } & ProtocolReviewStats, opts: RequestOptions = {}) =>
     request("POST", "/import/protocol/review", { ...opts, body }),
 
   // ---- A5 designs (POST with an existing id stores a new version) ----
@@ -173,15 +208,62 @@ export const api = {
     asArray<unknown>(await request("GET", "/designs", opts), "designs")
       .map(normalizeDesignSummary)
       .filter((d): d is DesignSummary => d !== null),
-  getDesign: (id: string, opts: RequestOptions = {}) => request<TrialDesign>("GET", `/designs/${enc(id)}`, opts),
-  saveDesign: (design: TrialDesign, opts: RequestOptions = {}) => request<TrialDesign>("POST", "/designs", { ...opts, body: design }),
+  getDesign: async (id: string, opts: RequestOptions = {}): Promise<DesignRecord> => {
+    const { data, response } = await requestFull<TrialDesign>("GET", `/designs/${enc(id)}`, opts);
+    return designRecord(data, response);
+  },
+  /**
+   * Store a design. When `ifMatch` is set, refuse to post if the stored hash has moved (and send
+   * that hash as If-Match so A5 can answer 409 design_changed).
+   */
+  saveDesign: async (design: TrialDesign, opts: RequestOptions = {}): Promise<DesignRecord> => {
+    if (opts.ifMatch) {
+      try {
+        const current = await api.getDesign(design.id, { signal: opts.signal, silent: true });
+        if (current.etag && current.etag !== opts.ifMatch) {
+          const err = new ApiError(
+            409,
+            "design_changed",
+            `This design changed while you were editing — it is now design v${current.version}. Reload it before saving so a confirmed protocol schedule is not replaced.`,
+            { version: current.version, design_hash: current.etag },
+          );
+          if (!opts.silent) errorListeners.forEach((l) => l(err));
+          throw err;
+        }
+      } catch (err) {
+        if (!(err instanceof ApiError && err.status === 404)) throw err;
+      }
+    }
+    try {
+      const { data, response } = await requestFull<TrialDesign>("POST", "/designs", { ...opts, silent: true, body: design });
+      return designRecord(data, response);
+    } catch (err) {
+      if (err instanceof ApiError) {
+        const message = err.code === "design_changed" ? (designConflictMessage(err) ?? err.message) : err.message;
+        const wrapped = message === err.message ? err : new ApiError(err.status, err.code, message, err.details);
+        if (!opts.silent) errorListeners.forEach((l) => l(wrapped));
+        throw wrapped;
+      }
+      throw err;
+    }
+  },
 
   // ---- A5 scenarios ----
-  compute: async (designId: string, levers: Levers, opts: RequestOptions = {}): Promise<ScenarioResultX> =>
-    normalizeScenarioResult(await request("POST", "/scenarios/compute", { ...opts, body: { design_id: designId, levers } })),
-  /** Top-5 drivers for an unsaved lever set. */
+  compute: async (designId: string, levers: Levers, opts: RequestOptions = {}): Promise<ScenarioResultX> => {
+    const { data, response } = await requestFull("POST", "/scenarios/compute", { ...opts, body: withVersion({ design_id: designId, levers }, opts.designVersion) });
+    if (opts.designVersion != null && Number(response.headers.get("X-Design-Version")) !== opts.designVersion) {
+      throw new ApiError(502, "compute_version_mismatch", "The calculation did not confirm the design version on screen. Retry before saving.");
+    }
+    return normalizeScenarioResult(data);
+  },
+  /** Top-5 drivers for an unsaved lever set, on the same design version as the numbers on screen. */
   drivers: async (designId: string, levers: Levers, metric: string, opts: RequestOptions = {}): Promise<Driver[]> =>
-    normalizeDrivers(await request("POST", "/scenarios/drivers", { ...opts, body: { design_id: designId, levers, metric, top: 5 } })),
+    normalizeDrivers(
+      await request("POST", "/scenarios/drivers", {
+        ...opts,
+        body: withVersion({ design_id: designId, levers, metric, top: 5 }, opts.designVersion),
+      }),
+    ),
   compare: async (aId: string, bId: string, opts: RequestOptions = {}): Promise<CompareResult> =>
     normalizeCompare(await request("POST", "/scenarios/compare", { ...opts, body: { a_id: aId, b_id: bId } })),
   listScenarios: async (designId?: string, opts: RequestOptions = {}): Promise<SavedScenario[]> => {
@@ -194,8 +276,8 @@ export const api = {
   saveScenario: async (req: SaveScenarioRequest, opts: RequestOptions = {}): Promise<SavedScenario> =>
     normalizeSavedScenario(await request("POST", "/scenarios", { ...opts, body: req })),
   /** New draft version in the same lineage (the base row is never modified). */
-  newVersion: async (baseId: string, patch: { levers?: Levers; name?: string }, opts: RequestOptions = {}): Promise<SavedScenario> =>
-    normalizeSavedScenario(await request("POST", `/scenarios/${enc(baseId)}/versions`, { ...opts, body: patch })),
+  newVersion: async (baseId: string, patch: { levers?: Levers; name?: string; design_version?: number }, opts: RequestOptions = {}): Promise<SavedScenario> =>
+    normalizeSavedScenario(await request("POST", `/scenarios/${enc(baseId)}/versions`, { ...opts, body: withVersion(patch, patch.design_version) })),
   /** Freezes the draft and creates the ApprovalRequest (A7); returns the scenario with it embedded. */
   submitScenario: async (id: string, opts: RequestOptions = {}): Promise<SavedScenario> =>
     normalizeSavedScenario(await request("POST", `/scenarios/${enc(id)}/submit`, { ...opts, body: {} })),

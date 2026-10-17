@@ -21,7 +21,7 @@ const channel = process.env.PW_CHANNEL ?? (process.platform === "win32" ? "msedg
 const runDir = mkdtempSync(join(tmpdir(), "tp-e2e-"));
 
 const web = {
-  command: `pnpm exec vite --host 127.0.0.1 --port ${WEB_PORT} --strictPort`,
+  command: `corepack pnpm exec vite --host 127.0.0.1 --port ${WEB_PORT} --strictPort`,
   url: `http://127.0.0.1:${WEB_PORT}`,
   reuseExistingServer: !CI,
   timeout: 60_000,
@@ -39,6 +39,7 @@ const apiServer = {
   timeout: 120_000,
   env: {
     DEMO_OFFLINE: "1",
+    TP_SEED_FIXTURE_DESIGNS: "0",
     TP_DB_PATH: join(runDir, "e2e.sqlite"),
     TP_VALIDATION_OUT: join(runDir, "validation-out"),
     TP_LOG_JSON: "0",
