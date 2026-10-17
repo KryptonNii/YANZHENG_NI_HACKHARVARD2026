@@ -285,24 +285,49 @@ class ForecastResult:
 # ---------------------------------------------------------------------------------------------
 
 
-def _invert_cumulative_intensity(starts: FloatArray, rates: FloatArray, target: FloatArray) -> FloatArray:
-    """Per row d: the t with Σᵢ rates[d,i]·(t − starts[d,i])⁺ = target[d] (inf if unreachable)."""
-    order = np.argsort(starts, axis=1, kind="stable")
-    s = np.take_along_axis(starts, order, axis=1)
-    r = np.take_along_axis(rates, order, axis=1)
-    slope = np.cumsum(r, axis=1)  # slope of M on [s_k, s_{k+1})
-    m_at = np.zeros_like(s)  # M at each breakpoint
-    m_at[:, 1:] = np.cumsum(slope[:, :-1] * np.diff(s, axis=1), axis=1)
-    k = (m_at <= target[:, None]).sum(axis=1) - 1
-    rows = np.arange(s.shape[0])
-    sl = slope[rows, k]
-    with np.errstate(divide="ignore", invalid="ignore"):
-        t = s[rows, k] + (target - m_at[rows, k]) / sl
-    return np.asarray(np.where(sl > 0, t, np.inf), dtype=np.float64)
+class _Intensity:
+    """Cumulative intensity M_d(t) = Σᵢ rates[d,i]·(t − starts[d,i])⁺ per draw d: piecewise linear
+    with breakpoints at the sorted start times. Sorted once; inverted / evaluated many times."""
 
+    _ROW_OFFSET = 1e7  # > any time span in months, makes per-row sorted breakpoints globally sorted
 
-def _cumulative_intensity(starts: FloatArray, rates: FloatArray, t: float) -> FloatArray:
-    return np.asarray((rates * np.clip(t - starts, 0.0, None)).sum(axis=1), dtype=np.float64)
+    def __init__(self, starts: FloatArray, rates: FloatArray) -> None:
+        order = np.argsort(starts, axis=1)  # ties are harmless: zero-length segments
+        self.s = np.take_along_axis(starts, order, axis=1)
+        self.slope = np.cumsum(np.take_along_axis(rates, order, axis=1), axis=1)  # on [s_k, s_k+1)
+        self.m_at = np.zeros_like(self.s)  # M at each breakpoint
+        self.m_at[:, 1:] = np.cumsum(self.slope[:, :-1] * np.diff(self.s, axis=1), axis=1)
+        self.rows = np.arange(self.s.shape[0])
+
+    def head(self, n: int) -> _Intensity:
+        """The first n draws, without re-sorting."""
+        out = object.__new__(_Intensity)
+        out.s, out.slope, out.m_at = self.s[:n], self.slope[:n], self.m_at[:n]
+        out.rows = self.rows[:n]
+        return out
+
+    def invert(self, target: FloatArray) -> FloatArray:
+        """Per draw: the t with M(t) = target (inf if every rate is zero)."""
+        k = (self.m_at <= target[:, None]).sum(axis=1) - 1
+        sl = self.slope[self.rows, k]
+        with np.errstate(divide="ignore", invalid="ignore"):
+            t = self.s[self.rows, k] + (target - self.m_at[self.rows, k]) / sl
+        return np.asarray(np.where(sl > 0, t, np.inf), dtype=np.float64)
+
+    def at(self, times: FloatArray) -> FloatArray:
+        """M at each time for each draw → (draws, len(times))."""
+        n, s = self.s.shape
+        if s == 0:
+            return np.zeros((n, len(times)), dtype=np.float64)
+        off = self.rows[:, None] * self._ROW_OFFSET
+        flat = (self.s + off).ravel()
+        q = (np.asarray(times, dtype=np.float64)[None, :] + off).ravel()
+        k = (np.searchsorted(flat, q, side="right") - 1).reshape(n, -1) - self.rows[:, None] * s
+        before = k < 0
+        k = np.clip(k, 0, s - 1)
+        r = self.rows[:, None]
+        m = self.m_at[r, k] + self.slope[r, k] * (np.asarray(times)[None, :] - self.s[r, k])
+        return np.asarray(np.where(before, 0.0, m), dtype=np.float64)
 
 
 def _bridge_counts(
@@ -548,13 +573,13 @@ def _setup(
 
     alpha = np.maximum(draw_parameter(shape_p, seed, d), 1e-3)
     n_sites = len(sites)
-    activation = np.empty((d, n_sites))
-    rates = np.empty((d, n_sites))
-    for j, site in enumerate(sites):
-        u = _stream(seed, "site.activation", site.id).random(d)
-        activation[:, j] = _tri_ppf(u, act.value_low, act.value_mid, act.value_high)
-        g = _stream(seed, "site.rate", site.id).standard_gamma(alpha)
-        rates[:, j] = rate_mean * weights[j] * g / alpha
+    # One column per DESIGN site, then drop excluded ones: excluding a site leaves every other
+    # site's draws unchanged (common random numbers across lever scenarios).
+    n_all = len(design.sites)
+    u = _stream(seed, "site.activation").random((d, n_all))[:, keep]
+    activation = _tri_ppf(u, act.value_low, act.value_mid, act.value_high)
+    g = _stream(seed, "site.rate").standard_gamma(np.broadcast_to(alpha[:, None], (d, n_all)))
+    rates = rate_mean[:, None] * weights[None, :] * g[:, keep] / alpha[:, None]
 
     inputs: dict[str, float | str] = {
         "sites_active": float(n_sites),
@@ -675,18 +700,18 @@ def forecast(
     rng = _stream(seed, "forecast.arrivals")
     e1 = rng.standard_exponential(st.n_draws)
     gamma_n = e1 + rng.standard_gamma(np.maximum(st.n_needed - 1, 0).astype(np.float64))
-    t_full = _invert_cumulative_intensity(st.activation, st.rates, gamma_n)
+    intensity = _Intensity(st.activation, st.rates)
+    t_full = intensity.invert(gamma_n)
     _check_reachable(t_full)
-    fpi = _invert_cumulative_intensity(st.activation, st.rates, e1)
+    fpi = intensity.invert(e1)
     milestones, dbl = _milestones(fpi, t_full, st.followup, st.closeout)
 
     grid = _curve_grid(float(np.percentile(t_full, 95)) + 1.0)
     crng = _stream(seed, "forecast.curve")
     c = min(st.n_draws, _CURVE_DRAWS)
-    act_c, rates_c = st.activation[:c], st.rates[:c]
+    m_grid = intensity.head(c).at(grid)
     counts = [
-        _bridge_counts(_cumulative_intensity(act_c, rates_c, float(t)), gamma_n[:c], st.n_needed[:c], crng)
-        for t in grid
+        _bridge_counts(m_grid[:, j], gamma_n[:c], st.n_needed[:c], crng) for j in range(len(grid))
     ]
     warnings = st.warnings + st.resolver.warnings()
     _horizon_warning(t_full, warnings)
@@ -784,15 +809,11 @@ def update_with_actuals(
     tau = np.clip(t_now - act, 0.0, None)
     beta = st.alpha[:, None] / np.maximum(st.rate_mean[:, None] * st.weights[None, :], 1e-12)
 
-    post = np.empty_like(st.rates)
-    k_sim = np.zeros((d, n_sites), dtype=np.int64)
-    for j, site in enumerate(st.sites):
-        if reported[j]:
-            g = _stream(seed, "site.rate.post", site.id).standard_gamma(st.alpha + k_obs[j])
-            post[:, j] = g / (beta[:, j] + tau[:, j])
-        else:
-            post[:, j] = st.rates[:, j]
-            k_sim[:, j] = _stream(seed, "site.unreported", site.id).poisson(st.rates[:, j] * tau[:, j])
+    g_post = _stream(seed, "site.rate.post").standard_gamma(st.alpha[:, None] + k_obs[None, :])
+    post = np.where(reported[None, :], g_post / (beta + tau), st.rates)
+    k_sim = np.where(
+        reported[None, :], 0, _stream(seed, "site.unreported").poisson(st.rates * tau)
+    ).astype(np.int64)
     k_fixed = np.where(reported[None, :], k_obs[None, :], k_sim)
     k_total = k_fixed.sum(axis=1)
     remaining = np.maximum(st.n_needed - k_total, 0)
@@ -800,14 +821,15 @@ def update_with_actuals(
     starts = np.maximum(act, t_now)
     e1 = rng.standard_exponential(d)
     gamma_r = e1 + rng.standard_gamma(np.maximum(remaining - 1, 0).astype(np.float64))
-    t_full = np.where(remaining > 0, _invert_cumulative_intensity(starts, post, gamma_r), t_now)
+    future = _Intensity(starts, post)
+    t_full = np.where(remaining > 0, future.invert(gamma_r), t_now)
     _check_reachable(t_full)
 
     if k_obs.sum() > 0:
         fpi = np.full(d, float(first_pos.min()))
     else:
-        unrep_fpi = _invert_cumulative_intensity(st.activation, st.rates, e1)
-        next_fpi = _invert_cumulative_intensity(starts, post, e1)
+        unrep_fpi = _Intensity(st.activation, st.rates).invert(e1)
+        next_fpi = future.invert(e1)
         fpi = np.where(k_total > 0, np.minimum(unrep_fpi, t_now), next_fpi)
     milestones, dbl = _milestones(fpi, t_full, st.followup, st.closeout)
 
@@ -815,19 +837,20 @@ def update_with_actuals(
     grid = _curve_grid(float(np.percentile(t_full, 95)) + 1.0, start=t_now)
     crng = _stream(seed, "update.curve")
     unrep = ~reported
-    m_unrep_now = _cumulative_intensity(st.activation[:, unrep], st.rates[:, unrep], t_now)
+    past = _Intensity(st.activation[:, unrep], st.rates[:, unrep])
+    m_past = past.at(np.append(grid, t_now))
+    m_unrep_now = m_past[:, -1]
+    m_future = future.at(grid)
     k_unrep = k_sim[:, unrep].sum(axis=1)
     counts: list[FloatArray] = []
-    for t in grid:
+    for j, t in enumerate(grid):
         if t <= t_now:
             seen = sum(_step_value(obs[s.id], float(t)) for s in st.sites if s.id in obs)
-            m_t = _cumulative_intensity(st.activation[:, unrep], st.rates[:, unrep], float(t))
             with np.errstate(divide="ignore", invalid="ignore"):
-                p = np.where(m_unrep_now > 0, np.clip(m_t / m_unrep_now, 0.0, 1.0), 1.0)
+                p = np.where(m_unrep_now > 0, np.clip(m_past[:, j] / m_unrep_now, 0.0, 1.0), 1.0)
             counts.append(seen + crng.binomial(k_unrep, p).astype(np.float64))
         else:
-            m_t = _cumulative_intensity(starts, post, float(t))
-            counts.append(k_total + _bridge_counts(m_t, gamma_r, remaining, crng))
+            counts.append(k_total + _bridge_counts(m_future[:, j], gamma_r, remaining, crng))
 
     n_rep = int(reported.sum())
     note = (
