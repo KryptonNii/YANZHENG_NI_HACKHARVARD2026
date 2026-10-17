@@ -1118,19 +1118,19 @@
           ],
           "title": "Engine check: TrialPilot engine + library on the rebuilt design",
           "total": {
-            "diff_pct": 23.25,
-            "explanation": "Published total lies inside the engine's P10-P90. Module allocation differs (initiation trips, storage) and the engine lacks hospital utilities and audits while assuming industry-level monitoring, so the module rows matter more than the total.",
+            "diff_pct": 5.28,
+            "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90. Module allocation differs (initiation trips, storage) and the engine lacks hospital utilities and audits while assuming industry-level monitoring, so the module rows matter more than the total.",
             "label": "Total",
             "module": "total",
             "ours": {
-              "p10": 67682.17,
-              "p50": 88663.48,
-              "p90": 117667.14,
+              "p10": 56717.55,
+              "p50": 75733.89,
+              "p90": 103306.95,
               "unit": "kg_co2e"
             },
             "published_kg": 71938.8,
             "published_within_range": true,
-            "status": "gap"
+            "status": "close"
           },
           "unavailable_reason": null
         },
@@ -1313,19 +1313,19 @@
           ],
           "title": "Engine check with the paper's own factors",
           "total": {
-            "diff_pct": 23.27,
-            "explanation": "Published total lies inside the engine's P10-P90. Module allocation differs (initiation trips, storage) and the engine lacks hospital utilities and audits while assuming industry-level monitoring, so the module rows matter more than the total.",
+            "diff_pct": 6.21,
+            "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90. Module allocation differs (initiation trips, storage) and the engine lacks hospital utilities and audits while assuming industry-level monitoring, so the module rows matter more than the total.",
             "label": "Total",
             "module": "total",
             "ours": {
-              "p10": 67366.36,
-              "p50": 88677.22,
-              "p90": 117553.88,
+              "p10": 57415.96,
+              "p50": 76402.69,
+              "p90": 104015.79,
               "unit": "kg_co2e"
             },
             "published_kg": 71938.8,
             "published_within_range": true,
-            "status": "gap"
+            "status": "close"
           },
           "unavailable_reason": null
         }
@@ -1493,7 +1493,7 @@
       "source": "Griffiths J, Fox L, Williamson PR, on behalf of the Low Carbon Clinical Trials Group. Quantifying the carbon footprint of clinical trials: guidance development and case studies. BMJ Open 2024;14:e075755. doi:10.1136/bmjopen-2023-075755. Online supplemental appendix C (CC BY 4.0).",
       "summary": [
         "CASPS: the paper's own arithmetic reproduces to +0.01% of the published 71,939 kg CO2e (71,943 kg); fixing the errors we documented moves it to 70,495 kg (-2.0%).",
-        "With TrialPilot's library factors the same activity data give 59,893 kg (P10-P90 57,818-62,709, -16.7% vs published), driven mostly by -80 C freezer storage (-5,048 kg); CTU office electricity (-2,882 kg). The full TrialPilot engine on the rebuilt design gives 88,663 kg (P10-P90 67,682-117,667, +23%), published total inside the range, with module-level differences explained per module."
+        "With TrialPilot's library factors the same activity data give 59,893 kg (P10-P90 57,818-62,709, -16.7% vs published), driven mostly by -80 C freezer storage (-5,048 kg); CTU office electricity (-2,882 kg). The full TrialPilot engine on the rebuilt design gives 75,734 kg (P10-P90 56,718-103,307, +5%), published total inside the range, with module-level differences explained per module."
       ],
       "title": "Cediranib in patients with alveolar soft-part sarcoma (CASPS)"
     },
@@ -2509,7 +2509,7 @@
           "title": "Engine check: TrialPilot engine + library on the rebuilt design",
           "total": {
             "diff_pct": 7.23,
-            "explanation": "Published total lies inside the engine's P10-P90; the closeness is partly offsetting errors (extra initiation and close-out trips and supplies vs missing hospital utilities, samples and laboratory).",
+            "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90; the closeness is partly offsetting errors (extra initiation and close-out trips and supplies vs missing hospital utilities, samples and laboratory).",
             "label": "Total",
             "module": "total",
             "ours": {
@@ -2705,7 +2705,7 @@
           "title": "Engine check with the paper's own factors",
           "total": {
             "diff_pct": 7.67,
-            "explanation": "Published total lies inside the engine's P10-P90; the closeness is partly offsetting errors (extra initiation and close-out trips and supplies vs missing hospital utilities, samples and laboratory).",
+            "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90; the closeness is partly offsetting errors (extra initiation and close-out trips and supplies vs missing hospital utilities, samples and laboratory).",
             "label": "Total",
             "module": "total",
             "ours": {

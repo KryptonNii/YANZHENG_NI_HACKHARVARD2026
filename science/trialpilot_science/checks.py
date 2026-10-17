@@ -256,7 +256,21 @@ def engine_check(
         if ours is None:
             expl = "Engine returned no finite value for this module (see engine warnings). " + (expl or "")
         rows.append(_row(m, pub, ours, expl if status not in ("match",) else expl))
-    total = _row("total", ledger.published_total_kg, _engine_range(result.co2e_kg), notes_by_module.get("total"))
+    # The published method excludes drug manufacture: compare totals WITHOUT the drug_supply extension (per draw).
+    total_range = _engine_range(result.co2e_kg)
+    try:
+        from trialpilot_engine import scenario_draws
+        sd = scenario_draws(result)
+    except Exception:
+        sd = None
+    if sd is not None and "co2e_kg" in sd.metrics:
+        tot = np.asarray(sd.metrics["co2e_kg"], dtype=np.float64)
+        ds = np.nan_to_num(np.asarray(sd.metrics.get("co2e_kg.drug_supply", np.zeros_like(tot)), dtype=np.float64))
+        if np.all(np.isfinite(tot)):
+            total_range = _range(tot - ds)
+    total_note = "Total excludes the drug_supply extension (not in the published method). " + (
+        notes_by_module.get("total") or "")
+    total = _row("total", ledger.published_total_kg, total_range, total_note.strip())
     return Check(id=check_id, title=title, description=description, available=True,  # type: ignore[arg-type]
                  total=total, modules=rows,
                  notes=[f"parameter_set_version {result.parameter_set_version}", *result.warnings])
