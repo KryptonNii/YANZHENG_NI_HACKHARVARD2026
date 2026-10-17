@@ -135,7 +135,7 @@ def main() -> int:
         TPV_REPO=str(repo), TP_VALIDATION_OUT=str(output),
         TP_COMPLIANCE_DB=str(repo / "var" / "clean-clone-test.sqlite"),
         TP_SECRET_PEPPER="clean-clone-test-fixture-not-a-production-secret",
-        TP_DEMO_PINS="", DEMO_OFFLINE="1", E2E_API_PORT="8007", E2E_WEB_PORT="5180",
+        TP_DEMO_PINS="", DEMO_OFFLINE="1", CI="1", E2E_API_PORT="8007", E2E_WEB_PORT="5180",
         TP_RUNTIME_CACHE_DIR=str(repo / "var" / "importers"),
     )
     if args.e2e:

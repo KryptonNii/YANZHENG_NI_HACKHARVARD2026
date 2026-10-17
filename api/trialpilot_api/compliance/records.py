@@ -15,7 +15,7 @@ from collections.abc import Callable
 from pathlib import Path
 
 from .config import repo_root
-from .hashing import file_sha256, iso_utc, now
+from .hashing import file_sha256, fs_path, iso_utc, now
 from .store import Store, get_store
 
 Resolver = Callable[[str], str | None]
@@ -77,6 +77,6 @@ def current_hash(record_type: str, record_id: str, *, store: Store | None = None
         except Exception:  # an owner's resolver failing must not break approvals reads
             return None
     path = file_for(record_type, record_id, store=store)
-    if path is not None and path.is_file():
+    if path is not None and fs_path(path).is_file():
         return file_sha256(path)
     return None

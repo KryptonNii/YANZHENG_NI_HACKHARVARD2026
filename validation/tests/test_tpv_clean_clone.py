@@ -39,6 +39,7 @@ def test_clean_clone_does_not_leak_database_overrides_into_suites(
     assert Path(env["TP_COMPLIANCE_DB"]).is_relative_to(tmp_path / "clone")
     assert env["TP_VALIDATION_OUT"] == str(output)
     assert env["DEMO_OFFLINE"] == "1"
+    assert env["CI"] == "1"  # Playwright must start fresh servers rather than reuse another app.
 
 
 @pytest.mark.req("URS-026", "URS-027")

@@ -11,7 +11,18 @@ from pathlib import Path
 from typing import Any
 
 from . import __version__, defects, docs, effort, execute, identity, protocol, report, trace
-from .context import DRAFT_STAMP, Ctx, TpvError, md_escape, read_json, sha256_file, utc_now, write_json, write_text
+from .context import (
+    DRAFT_STAMP,
+    Ctx,
+    TpvError,
+    fs_path,
+    md_escape,
+    read_json,
+    sha256_file,
+    utc_now,
+    write_json,
+    write_text,
+)
 from .render import page
 
 
@@ -47,7 +58,7 @@ def _signoff_md(title: str, appr: dict[str, Any] | None) -> str:
 def build(ctx: Ctx) -> dict[str, Any]:
     pkg = ctx.out / "package"
     if pkg.exists():
-        shutil.rmtree(pkg)
+        shutil.rmtree(fs_path(pkg))
     pkg.mkdir(parents=True)
     git = ctx.git_info()
     c = identity.compliance()
@@ -96,7 +107,7 @@ def build(ctx: Ctx) -> dict[str, Any]:
     if run:
         problems = execute.verify_manifest(run["dir"])
         dest = pkg / "evidence" / run["run_id"]
-        shutil.copytree(run["dir"], dest)
+        shutil.copytree(fs_path(run["dir"]), fs_path(dest))
         m = run["manifest"]
         lines = [f"# Executed evidence — {run['run_id']}", "",
                  f"Executor: {m['executor_name']} ({m['executor']}) · {m['started_at']} → "
@@ -190,8 +201,9 @@ def build(ctx: Ctx) -> dict[str, Any]:
     write_text(pkg / "index.md", index_md(index))
     write_text(pkg / "index.html", page("TrialPilot validation package", index_md(index),
                                         back=False))
-    files = [{"path": p.relative_to(pkg).as_posix(), "sha256": sha256_file(p)}
-             for p in sorted(pkg.rglob("*")) if p.is_file()]
+    pkg_root = fs_path(pkg)
+    files = [{"path": p.relative_to(pkg_root).as_posix(), "sha256": sha256_file(p)}
+             for p in sorted(pkg_root.rglob("*")) if p.is_file()]
     write_json(pkg / "package_manifest.json", {"generated_at": index["generated_at"],
                                                "files": files})
     identity.audit_event("validation.package", "validation_package", index["generated_at"],

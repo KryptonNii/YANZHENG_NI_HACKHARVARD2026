@@ -124,3 +124,21 @@ def test_validation_package_missing_then_served(client: TestClient, tmp_path: Pa
     assert r.status_code == 200 and r.text.startswith("# Plan")
     assert client.get("/api/validation/package/files/..%2F..%2Fsecret").status_code in (400, 404)
     assert client.get("/api/validation/package/files/nope.md").status_code == 404
+
+
+@pytest.mark.req("URS-026", "URS-028")
+def test_deep_evidence_paths_can_be_hashed_and_downloaded(client: TestClient, tmp_path: Path) -> None:
+    from trialpilot_api.compliance import records
+
+    relative = Path("evidence") / ("scenario-" + "x" * 80) / ("attachments-" + "y" * 80)
+    relative /= "screenshot-" + "z" * 60 + ".png"
+    path = tmp_path / "vout" / "package" / relative
+    assert len(str(path)) > 260
+    target = hashing.fs_path(path)
+    target.parent.mkdir(parents=True)
+    target.write_bytes(b"PNG fixture")
+    records.register_file("test_artifact", "long-path", path)
+    assert records.current_hash("test_artifact", "long-path") == hashing.sha256_hex(b"PNG fixture")
+    response = client.get(f"/api/validation/package/files/{relative.as_posix()}")
+    assert response.status_code == 200 and response.content == b"PNG fixture"
+    assert response.headers["content-type"] == "image/png"

@@ -19,6 +19,7 @@ from pydantic import BaseModel, Field
 from . import audit, esign, roles, workflow
 from .config import validation_out_dir
 from .errors import ComplianceError
+from .hashing import fs_path
 
 router = APIRouter(tags=["compliance"])
 
@@ -197,7 +198,7 @@ def _package_dir() -> Path:
 
 @router.get("/api/validation/package")
 def get_validation_package() -> Any:
-    index = _package_dir() / "package_index.json"
+    index = fs_path(_package_dir() / "package_index.json")
     if not index.is_file():
         return error_response(ComplianceError(
             404, "package_not_built",
@@ -225,6 +226,7 @@ def get_validation_file(file_path: str) -> Any:
     target = (base / file_path).resolve()
     if base not in target.parents and target != base:
         return error_response(ComplianceError(400, "invalid_path", "Path escapes the package."))
+    target = fs_path(target)
     if not target.is_file():
         return error_response(ComplianceError(404, "file_not_found", f"{file_path} not found."))
     media = mimetypes.guess_type(target.name)[0] or "application/octet-stream"

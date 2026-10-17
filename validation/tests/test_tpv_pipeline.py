@@ -4,11 +4,12 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from typing import Any
 
 import pytest
 
 from trialpilot_validation import cli, execute, package, protocol, report, trace
-from trialpilot_validation.context import Ctx, read_json, sha256_file
+from trialpilot_validation.context import Ctx, fs_path, read_json, sha256_file, write_text
 
 from .conftest import PINS, approve_current_protocol
 
@@ -213,6 +214,40 @@ def test_package_without_anything_lists_missing(fx: Ctx) -> None:
     status = {d["id"]: d["status"] for d in ix["deliverables"]}
     assert status["D4"] == "missing" and status["D5"] == "missing" and status["D7"] == "missing"
     assert ix["execution"] is None
+
+
+@pytest.mark.req("URS-026", "URS-028")
+def test_package_preserves_and_hashes_deep_browser_artifact_paths(
+    fx: Ctx, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    original = execute.run_all
+    relative = Path("e2e-artifacts") / ("scenario-" + "x" * 80) / ("attachments-" + "y" * 80)
+    relative /= "screenshot-" + "a" * 60 + ".png"
+
+    def with_artifact(ctx: Ctx, evdir: Path, **kwargs: Any) -> dict[str, Any]:
+        result = original(ctx, evdir, **kwargs)
+        write_text(evdir / relative, "Browser artifact fixture")
+        assert len(str(evdir / relative)) > 260
+        return result
+
+    monkeypatch.setattr(execute, "run_all", with_artifact)
+    protocol.generate(fx)
+    approve_current_protocol(fx)
+    monkeypatch.setenv("TPV_PIN", PINS["alex.author"])
+    result = execute.execute(fx, username="alex.author")
+    manifest = read_json(result["evidence_dir"] / execute.MANIFEST)
+    assert relative.as_posix() in {item["path"] for item in manifest["files"]}
+    assert execute.verify_manifest(result["evidence_dir"]) == []
+    ix = package.build(fx)
+    copied = fx.out / "package" / "evidence" / ix["execution"]["run_id"] / relative
+    assert fs_path(copied).read_text(encoding="utf-8") == "Browser artifact fixture"
+    packaged = read_json(fx.out / "package" / "package_manifest.json")
+    packaged_relative = copied.relative_to(fx.out / "package").as_posix()
+    assert packaged_relative in {item["path"] for item in packaged["files"]}
+    assert all(sha256_file(fx.out / "package" / item["path"]) == item["sha256"]
+               for item in packaged["files"])
+    write_text(result["evidence_dir"] / relative, "Changed fixture")
+    assert execute.verify_manifest(result["evidence_dir"]) == [f"hash mismatch: {relative.as_posix()}"]
 
 
 @pytest.mark.req("URS-022")

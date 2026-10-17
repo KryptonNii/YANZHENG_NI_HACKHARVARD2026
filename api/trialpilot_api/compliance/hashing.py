@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from collections.abc import Callable
 from datetime import UTC, datetime
 from pathlib import Path
@@ -87,9 +88,21 @@ def record_hash(content: Any) -> str:
     return sha256_hex(canonical_json(content))
 
 
+def fs_path(path: Path) -> Path:
+    """Use Windows extended paths for I/O, retaining ordinary paths in metadata."""
+    if os.name != "nt":
+        return path
+    absolute = os.path.abspath(path)
+    if absolute.startswith("\\\\?\\"):
+        return Path(absolute)
+    if absolute.startswith("\\\\"):
+        return Path("\\\\?\\UNC\\" + absolute[2:])
+    return Path("\\\\?\\" + absolute)
+
+
 def file_sha256(path: str | Path) -> str:
     h = hashlib.sha256()
-    with open(path, "rb") as fh:
+    with open(fs_path(Path(path)), "rb") as fh:
         for chunk in iter(lambda: fh.read(1 << 16), b""):
             h.update(chunk)
     return h.hexdigest()

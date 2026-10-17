@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any
 
 import yaml
+from trialpilot_api.compliance.hashing import fs_path
 
 REQ_ID = re.compile(r"^URS-\d{3}$")
 RISKS = ("H", "M", "L")
@@ -33,7 +34,7 @@ def utc_now() -> str:
 
 def sha256_file(path: Path) -> str:
     h = hashlib.sha256()
-    with open(path, "rb") as fh:
+    with open(fs_path(path), "rb") as fh:
         for chunk in iter(lambda: fh.read(1 << 16), b""):
             h.update(chunk)
     return h.hexdigest()
@@ -44,9 +45,10 @@ def sha256_text(text: str) -> str:
 
 
 def write_text(path: Path, text: str) -> Path:
-    path.parent.mkdir(parents=True, exist_ok=True)
+    target = fs_path(path)
+    target.parent.mkdir(parents=True, exist_ok=True)
     # newline="\n": identical bytes (and hashes) on Windows and Linux
-    with open(path, "w", encoding="utf-8", newline="\n") as fh:
+    with open(target, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(text)
     return path
 
@@ -56,7 +58,7 @@ def write_json(path: Path, data: Any) -> Path:
 
 
 def read_json(path: Path) -> Any:
-    return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads(fs_path(path).read_text(encoding="utf-8"))
 
 
 def find_repo(start: Path | None = None) -> Path:

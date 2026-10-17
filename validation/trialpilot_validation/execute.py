@@ -23,7 +23,7 @@ from pathlib import Path
 from typing import Any
 
 from . import __version__, identity, protocol
-from .context import Ctx, Refused, TpvError, read_json, sha256_file, utc_now, write_json
+from .context import Ctx, Refused, TpvError, fs_path, read_json, sha256_file, utc_now, write_json
 from .runner import e2e_outcomes, load_suite_tests, run_e2e, run_suite, scan_e2e
 
 MANIFEST = "evidence_manifest.json"
@@ -105,11 +105,12 @@ def _env_info(ctx: Ctx) -> dict[str, Any]:
 
 def build_manifest(evdir: Path, meta: dict[str, Any]) -> dict[str, Any]:
     files = []
-    for p in sorted(evdir.rglob("*")):
+    root = fs_path(evdir)
+    for p in sorted(root.rglob("*")):
         if p.is_file() and p.name not in (MANIFEST, SIGNATURE):
             st = p.stat()
             files.append({
-                "path": p.relative_to(evdir).as_posix(),
+                "path": p.relative_to(root).as_posix(),
                 "sha256": sha256_file(p),
                 "bytes": st.st_size,
                 "modified_utc": datetime.fromtimestamp(st.st_mtime, UTC).strftime(
@@ -206,15 +207,16 @@ def verify_manifest(evdir: Path) -> list[str]:
     manifest = read_json(evdir / MANIFEST)
     problems = []
     listed = set()
+    root = fs_path(evdir)
     for f in manifest["files"]:
         listed.add(f["path"])
-        p = evdir / f["path"]
+        p = root / f["path"]
         if not p.exists():
             problems.append(f"missing: {f['path']}")
         elif sha256_file(p) != f["sha256"]:
             problems.append(f"hash mismatch: {f['path']}")
-    for p in evdir.rglob("*"):
-        rel = p.relative_to(evdir).as_posix()
+    for p in root.rglob("*"):
+        rel = p.relative_to(root).as_posix()
         if p.is_file() and p.name not in (MANIFEST, SIGNATURE) and rel not in listed:
             problems.append(f"not in manifest: {rel}")
     return problems
