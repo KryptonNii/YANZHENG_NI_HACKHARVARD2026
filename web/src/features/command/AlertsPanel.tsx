@@ -1,5 +1,6 @@
 import { displayText } from "./displayText";
 import { useTranslation } from "@/app/i18n";
+import { localizeCopy } from "@/app/localize";
 import { useEffect, useState } from "react";
 import type { Alert } from "@/app/contracts";
 import { Badge, Modal } from "@/app/ui";
@@ -61,7 +62,7 @@ export function AlertsPanel({
       </header>
       {error && (
         <p role="alert" className="mx-4 mt-3 rounded-md border border-worse-200 bg-worse-50 px-3 py-2 text-sm text-worse-900">
-          {error}
+          {localizeCopy(error)}
         </p>
       )}
       <ul className="max-h-[36rem] space-y-3 overflow-auto p-4">

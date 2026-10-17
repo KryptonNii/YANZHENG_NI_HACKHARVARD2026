@@ -1,5 +1,6 @@
 import { displayText } from "../command/displayText";
 import { useTranslation } from "@/app/i18n";
+import { localizeCopy } from "@/app/localize";
 import { useEffect, useState } from "react";
 import { formatUtc } from "@/app/format";
 import { Badge, DraftStamp, EmptyState, ErrorPanel, Spinner } from "@/app/ui";
@@ -228,7 +229,7 @@ function Execution({ pkg }: { pkg: ValidationPackage }) {
       <p className="text-sm">{t("Recorded evidence integrity:", "已记录证据的完整性：")} {run.integrity_problems ? run.integrity_problems.length ? run.integrity_problems.join("; ") : t("all files matched at package generation", "生成验证包时所有文件均匹配") : t("not reported", "未报告")}</p>
       {run.executed_signature?.manifestation && <p className="text-xs text-ink-600">{run.executed_signature.manifestation}</p>}
       {dir && <a className="inline-block text-sm font-semibold text-accent-700" href={packageFileUrl(`${dir}/evidence_manifest.json`)} download>{t("Download evidence manifest", "下载证据清单")}</a>}
-      {error && <p role="alert" className="text-sm text-worse-900">{t("Could not load evidence attachments:", "无法加载证据附件：")} {error}</p>}
+      {error && <p role="alert" className="text-sm text-worse-900">{t("Could not load evidence attachments:", "无法加载证据附件：")} {localizeCopy(error)}</p>}
       <details data-testid="evidence-attachments"><summary className="cursor-pointer text-sm font-semibold">{t("Evidence files and attachments (", "证据文件与附件（")}{files.length})</summary><ul className="mt-2 max-h-80 space-y-2 overflow-auto text-xs">{files.map((f) => <li key={f.path} className="break-all"><a className="font-semibold text-accent-700 underline" href={packageFileUrl(`${dir}/${f.path}`)} download>{f.path}</a><span className="block font-mono text-ink-500">{f.bytes ?? t("unknown", "未知")} {t("bytes · sha256", "字节 · sha256")} {f.sha256 ?? t("unknown", "未知")}</span></li>)}</ul></details>
     </>}
   </section>;

@@ -1,4 +1,5 @@
 import { useTranslation, translate as tr } from "@/app/i18n";
+import { localizeCopy } from "@/app/localize";
 import { Fragment, useEffect, useState } from "react";
 import { ApiError, api, isAbort } from "@/app/api/client";
 import type {
@@ -181,7 +182,7 @@ function ModuleTable({ rows }: { rows: ScienceModuleRow[] }) {
           {m.explanation && (
             <tr>
               <td colSpan={3} className="pb-2 text-xs leading-snug text-ink-600">
-                {m.explanation}
+                {localizeCopy(m.explanation)}
               </td>
             </tr>
           )}
@@ -221,7 +222,7 @@ function TotalStrip({ row }: { row: ScienceModuleRow }) {
         </div>
       </dl>
       {inside && <p className="mt-2 text-sm text-ink-700">{inside}</p>}
-      {row.explanation && <p className="mt-2 text-sm text-ink-700">{row.explanation}</p>}
+      {row.explanation && <p className="mt-2 text-sm text-ink-700">{localizeCopy(row.explanation)}</p>}
     </div>
   );
 }
@@ -254,9 +255,9 @@ function Findings({ findings }: { findings: ScienceFinding[] }) {
               <Badge tone={SEVERITY_TONE[f.severity] ?? "neutral"} className="mr-2 align-middle">
                 {tr(f.severity, ({ large: "较大", medium: "中等", info: "信息" } as Record<string, string>)[f.severity] ?? f.severity)}
               </Badge>
-              {f.summary}
+              {localizeCopy(f.summary)}
             </p>
-            {f.detail && <p className="mt-1 text-xs leading-snug text-ink-600">{f.detail}</p>}
+            {f.detail && <p className="mt-1 text-xs leading-snug text-ink-600">{localizeCopy(f.detail)}</p>}
             {effectText(f.effect_kg) && <p className="mt-1 text-xs tabular text-ink-500">{effectText(f.effect_kg)}</p>}
           </li>
         ))}
@@ -293,7 +294,7 @@ function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: s
       {trial.summary.length > 0 && (
         <div className="mt-3 space-y-2 text-sm leading-relaxed text-ink-800">
           {trial.summary.map((s) => (
-            <p key={s}>{s}</p>
+            <p key={s}>{localizeCopy(s)}</p>
           ))}
         </div>
       )}
@@ -316,10 +317,10 @@ function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: s
 
       {check && (
         <div className="mt-3" data-testid="science-check">
-          <h3 className="text-sm font-semibold text-ink-900">{check.title}</h3>
-          {check.description && <p className="mt-1 text-sm text-ink-600">{check.description}</p>}
+          <h3 className="text-sm font-semibold text-ink-900">{localizeCopy(check.title)}</h3>
+          {check.description && <p className="mt-1 text-sm text-ink-600">{localizeCopy(check.description)}</p>}
           {!check.available ? (
-            <p className="mt-3 text-sm text-ink-700" role="status">{tr("This check is unavailable. ", "此项检验不可用。")}{check.unavailable_reason ?? tr("The reproduction did not produce it.", "复现过程未生成此结果。")}
+            <p className="mt-3 text-sm text-ink-700" role="status">{tr("This check is unavailable. ", "此项检验不可用。")}{check.unavailable_reason ? localizeCopy(check.unavailable_reason) : tr("The reproduction did not produce it.", "复现过程未生成此结果。")}
             </p>
           ) : (
             <>
@@ -332,7 +333,7 @@ function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: s
               {check.notes.length > 0 && (
                 <ul className="mt-3 list-disc space-y-1 pl-5 text-xs text-ink-600">
                   {check.notes.map((n) => (
-                    <li key={n}>{n}</li>
+                    <li key={n}>{localizeCopy(n)}</li>
                   ))}
                 </ul>
               )}
@@ -348,9 +349,9 @@ function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: s
                         </p>
                         <p className="mt-0.5 tabular">{tr("Paper ", "论文")}{line.paper_kg !== null ? formatCo2e(line.paper_kg) : "—"}
                           {line.library_kg ? tr(` · library P50 ${formatCo2e(line.library_kg.p50)}`, ` · 参数库 P50 ${formatCo2e(line.library_kg.p50)}`) : ""}
-                          {` · ${line.kind.replace(/_/g, " ")}`}
+                          {` · ${localizeCopy(line.kind.replace(/_/g, " "))}`}
                         </p>
-                        {line.note && <p className="mt-0.5">{line.note}</p>}
+                        {line.note && <p className="mt-0.5">{localizeCopy(line.note)}</p>}
                       </li>
                     ))}
                   </ul>
@@ -407,7 +408,7 @@ function IndustryBand({ band }: { band: ScienceIndustryBand }) {
           ? `${formatTonnes(band.low_t)} – ${formatTonnes(band.high_t)} CO₂e`
           : tr("Band not reported", "未报告区间")}
         {band.trials_t.length > 0 ? tr(` (published trials ${band.trials_t.map((t) => formatTonnes(t)).join(", ")})`, `（已发表试验 ${band.trials_t.map((t) => formatTonnes(t)).join("、")}）`) : ""}{tr(". Sanity check only — a different method, and it includes drug manufacture.", "。仅用于合理性检验：其方法不同，且包含药物制造。")}</p>
-      {band.note && <p className="mt-2 text-sm text-ink-600">{band.note}</p>}
+      {band.note && <p className="mt-2 text-sm text-ink-600">{localizeCopy(band.note)}</p>}
       {fileUnits.length > 0 && (
         <p className="mt-2 text-xs text-ink-500" data-testid="science-band-unit">{tr("Demo trial totals are shown in tonnes. The results file labels them ", "演示试验的总量以吨显示。结果文件中的单位标注为")}{fileUnits.join(", ")}{tr(". These numbers are not rescaled.", "。数值未进行换算。")}{fileUnits.includes("kg_co2e") ? tr(" The file still says kg_co2e; the figures are displayed as stored.", " 文件仍标注为 kg_co2e；此处按存储值显示。") : ""}
         </p>
@@ -428,7 +429,7 @@ function IndustryBand({ band }: { band: ScienceIndustryBand }) {
               <tr key={t.design_id} className="border-t border-ink-100">
                 <th scope="row" className="py-2 pr-2 text-left font-medium text-ink-800">
                   {bandName(t.title, t.registry_id)}
-                  {!t.available && t.reason && <span className="mt-0.5 block text-xs font-normal text-ink-500">{t.reason}</span>}
+                  {!t.available && t.reason && <span className="mt-0.5 block text-xs font-normal text-ink-500">{localizeCopy(t.reason)}</span>}
                 </th>
                 <td className="py-2 text-right tabular">{t.total_t ? formatTonnes(t.total_t.p50) : "—"}</td>
                 <td className="py-2 text-right tabular text-ink-600">{t.total_t ? formatTonneRange(t.total_t) : "—"}</td>
@@ -442,7 +443,7 @@ function IndustryBand({ band }: { band: ScienceIndustryBand }) {
           </tbody>
         </table>
       )}
-      {band.source && <p className="mt-3 text-xs text-ink-500">{band.source}</p>}
+      {band.source && <p className="mt-3 text-xs text-ink-500">{localizeCopy(band.source)}</p>}
     </section>
   );
 }
@@ -490,7 +491,7 @@ export function SciencePage() {
             </Badge>
           )}
         </div>
-        {data?.data_label && !data.simulated && <p className="mt-2 text-xs text-ink-500">{data.data_label}</p>}
+        {data?.data_label && !data.simulated && <p className="mt-2 text-xs text-ink-500">{localizeCopy(data.data_label)}</p>}
         {(data?.parameter_set_version || data?.draws) && (
           <p className="mt-1 text-xs text-ink-500">
             {data.parameter_set_version ? tr(`Parameter set ${data.parameter_set_version}`, `参数集 ${data.parameter_set_version}`) : ""}
@@ -513,7 +514,7 @@ export function SciencePage() {
       ) : data && data.trials.length > 0 ? (
         <>
           {data.engine && !data.engine.available && data.engine.reason && (
-            <p className="text-sm text-ink-700" role="status">{tr("Engine checks were not run. ", "尚未运行引擎检验。")}{data.engine.reason}
+            <p className="text-sm text-ink-700" role="status">{tr("Engine checks were not run. ", "尚未运行引擎检验。")}{localizeCopy(data.engine.reason)}
             </p>
           )}
           <div className="space-y-5">

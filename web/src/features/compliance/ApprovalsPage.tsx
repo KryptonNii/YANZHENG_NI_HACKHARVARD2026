@@ -5,7 +5,8 @@ import type { SignatureMeaning } from "@/app/contracts";
 import { ApiError, api } from "@/app/api/client";
 import type { ApprovalView, SavedScenario, SignatureView } from "@/app/api/types";
 import { formatRange, formatUtc } from "@/app/format";
-import { displayName, useIdentity } from "@/app/identity";
+import { displayName, roleName, useIdentity } from "@/app/identity";
+import { localizeCopy } from "@/app/localize";
 import { Badge, EmptyState, ErrorPanel, Modal, Spinner } from "@/app/ui";
 import { signErrorMessage } from "./errors";
 
@@ -55,7 +56,7 @@ export function ApprovalsPage() {
       <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">{t("Approvals", "审批")}</h1>
-          <p className="mt-1 text-sm text-ink-500">{t("Signing as", "签署人")} {me.name} ({me.roleLabel}{t("). An author cannot approve their own record.", "）。作者不能批准自己的记录。")}</p>
+          <p className="mt-1 text-sm text-ink-500">{t("Signing as", "签署人")} {me.name} ({roleName(me.role)}{t("). An author cannot approve their own record.", "）。作者不能批准自己的记录。")}</p>
         </div>
         <div role="tablist" aria-label={t("Approval status", "审批状态")} className="inline-flex rounded-lg border border-ink-300 bg-ink-100 p-0.5">
           {STATUSES.map((id) => (
@@ -155,7 +156,7 @@ function RecordPreview({ item }: { item: ApprovalView }) {
         <div className="rounded-lg bg-ink-50 p-3 text-sm text-ink-700">
           {scenario ? (
             <>
-              <p className="font-semibold text-ink-900">{scenario.name}</p>
+              <p className="font-semibold text-ink-900">{localizeCopy(scenario.name)}</p>
               <p className="mt-1 text-xs text-ink-500">
                 {displayText(scenario.status)} {t("· version", "· 版本")} {scenario.version}
                 {scenario.metrics.cost_usd ? t(` · cost ${formatRange(scenario.metrics.cost_usd)}`, ` · 成本 ${formatRange(scenario.metrics.cost_usd)}`) : ""}
@@ -232,7 +233,7 @@ function SignDialog({ approval, onClose, onSigned }: { approval: ApprovalView | 
             <p className="mt-1 text-xs text-ink-500">{t("Only the next meaning in order can be signed.", "只能按顺序签署下一个含义。")}</p>
           </div>
           <p className="text-sm text-ink-800">{t(`By signing, I confirm that I have ${meaning} this ${approval.record_type.replaceAll("_", " ")}.`, `签署即确认我已对该${displayText(approval.record_type)}完成${displayText(meaning)}。`)}</p>
-          <p className="text-sm">{t("Signing as", "签署人")} {me.name} ({me.user}, {me.roleLabel})</p>
+          <p className="text-sm">{t("Signing as", "签署人")} {me.name} ({me.user}, {roleName(me.role)})</p>
           <p className="break-all font-mono text-xs text-ink-500">{approval.record_type}/{approval.record_id} · sha256 {recordHash(approval) ?? t("unavailable", "不可用")}</p>
           <div>
             <label className="label" htmlFor="sign-pin">
@@ -242,7 +243,7 @@ function SignDialog({ approval, onClose, onSigned }: { approval: ApprovalView | 
           </div>
           {error && (
             <p role="alert" data-testid="sign-error" className="rounded-md border border-worse-200 bg-worse-50 px-3 py-2 text-sm font-medium text-worse-900">
-              {error}
+              {localizeCopy(error)}
             </p>
           )}
         </form>

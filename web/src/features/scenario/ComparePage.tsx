@@ -6,6 +6,7 @@ import { api, isAbort } from "@/app/api/client";
 import type { CompareResult, SavedScenario } from "@/app/api/types";
 import { humanize, formatRange, formatSignedPct, formatSignedValue, formatUtc, formatValue } from "@/app/format";
 import { displayName } from "@/app/identity";
+import { localizeCopy } from "@/app/localize";
 import { EmptyState, Skeleton, Spinner } from "@/app/ui";
 import { ScenarioStatusChip } from "./components/VersionsPanel";
 import { delta, isKnownRange, METRICS, metricLabel, moduleLabel, type MetricKey } from "./metrics";
@@ -94,7 +95,7 @@ function Picker({ label, value, options, onChange, testId }: { label: string; va
         <option value="" disabled>{tr("Choose a saved scenario…", "选择已保存的方案…")}</option>
         {options.map((s) => (
           <option key={s.id} value={s.id}>
-            {s.name} v{s.version}{tr(" — design v", "— 设计 v")}{s.design_version ?? "?"} — {displayName(s.author)} ({tr(s.status, humanize(s.status))})
+            {localizeCopy(s.name)} v{s.version}{tr(" — design v", "— 设计 v")}{s.design_version ?? "?"} — {displayName(s.author)} ({tr(s.status, humanize(s.status))})
           </option>
         ))}
       </select>
@@ -197,7 +198,7 @@ export function ComparePage() {
                 <p className="text-xs font-semibold uppercase tracking-wide text-ink-500">{tr("Scenario ", "方案")}{i === 0 ? "A" : "B"}</p>
                 <div className="mt-1 flex flex-wrap items-center gap-2">
                   <p className="text-lg font-bold text-ink-900">
-                    {s.name} <span className="font-normal text-ink-500">v{s.version}</span>
+                    {localizeCopy(s.name)} <span className="font-normal text-ink-500">v{s.version}</span>
                   </p>
                   <ScenarioStatusChip status={s.status} />
                 </div>

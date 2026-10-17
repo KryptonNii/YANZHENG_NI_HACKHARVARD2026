@@ -5,6 +5,7 @@ import { api, isAbort } from "@/app/api/client";
 import type { ApprovalView, SavedScenario } from "@/app/api/types";
 import { formatUtc, formatValue } from "@/app/format";
 import { displayName } from "@/app/identity";
+import { localizeCopy } from "@/app/localize";
 import { useToast } from "@/app/toast";
 import { Badge, EmptyState, Spinner } from "@/app/ui";
 import { isKnownRange } from "../metrics";
@@ -153,14 +154,14 @@ export function VersionsPanel({
                       <input
                         type="checkbox"
                         className="h-4 w-4 accent-accent-700"
-                        aria-label={t(`Select ${s.name} v${s.version} for comparison`, `选择 ${s.name} v${s.version} 进行比较`)}
+                        aria-label={t(`Select ${s.name} v${s.version} for comparison`, `选择 ${localizeCopy(s.name)} v${s.version} 进行比较`)}
                         checked={compareIds.includes(s.id)}
                         onChange={() => toggleCompare(s.id)}
                       />
                     </td>
                     <td className="py-1.5">
                       <button type="button" className="text-left font-semibold text-ink-900 hover:underline" onClick={() => onSelect(s.id)} aria-pressed={s.id === selectedId}>
-                        {s.name} <span className="font-normal text-ink-500">v{s.version}</span>
+                        {localizeCopy(s.name)} <span className="font-normal text-ink-500">v{s.version}</span>
                       </button>
                       <span className="block text-xs text-ink-500">
                         {displayName(s.author)} · {formatUtc(s.created_at)}
@@ -188,7 +189,7 @@ export function VersionsPanel({
         <div className="mt-4 grid gap-3 border-t border-ink-100 pt-4 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]" data-testid="selected-scenario">
           <div>
             <p className="text-sm font-semibold text-ink-900">
-              {selected.name} <span className="font-normal text-ink-500">v{selected.version}</span> <ScenarioStatusChip status={selected.status} />
+              {localizeCopy(selected.name)} <span className="font-normal text-ink-500">v{selected.version}</span> <ScenarioStatusChip status={selected.status} />
             </p>
             <p className="mt-0.5 text-xs text-ink-500">
               {t("Parameter set", "参数集")} <code className="font-mono">{selected.parameter_set_version ?? "—"}</code>

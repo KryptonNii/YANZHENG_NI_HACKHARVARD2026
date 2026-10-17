@@ -3,6 +3,7 @@
  */
 import { useEffect, useId, useRef, type ReactNode } from "react";
 import { useTranslation } from "../i18n";
+import { localizeCopy } from "../localize";
 
 // ---------------------------------------------------------------- badges
 type Tone = "neutral" | "accent" | "caution" | "better" | "worse" | "dark";
@@ -86,7 +87,7 @@ export function ErrorPanel({ title, message, onRetry }: { title: string; message
   return (
     <div role="alert" className="rounded-xl border border-worse-200 bg-worse-50 px-5 py-4">
       <p className="font-semibold text-worse-900">{title}</p>
-      {message && <p className="mt-1 text-sm text-worse-800">{message}</p>}
+      {message && <p className="mt-1 text-sm text-worse-800">{localizeCopy(message)}</p>}
       {onRetry && (
         <button type="button" className="btn-secondary mt-3" onClick={onRetry}>
           {t("Try again", "重试")}

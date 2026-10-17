@@ -1,6 +1,7 @@
 import { useTranslation, translate as t } from "@/app/i18n";
 import type { ImportNote } from "@/app/api/types";
 import { humanize } from "@/app/format";
+import { localizeCopy } from "@/app/localize";
 import { EmptyState } from "@/app/ui";
 
 const FIELD_HELP: Record<string, { why: string; fix: "protocol" | "edit" | null }> = {
@@ -65,7 +66,7 @@ export function MissingAssumed({
             <span className={`mr-1.5 inline-block rounded px-1.5 text-[11px] font-bold uppercase tracking-wide ${counted ? "bg-caution-100 text-caution-900" : "bg-ink-100 text-ink-700"}`}>
               {counted ? t("assumed", "假设") : t("note", "备注")}
             </span>
-            {note.text}
+            {localizeCopy(note.text)}
           </li>
         );
       })}

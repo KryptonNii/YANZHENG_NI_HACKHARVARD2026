@@ -4,7 +4,8 @@ import type { SignatureMeaning } from "@/app/contracts";
 import { api } from "@/app/api/client";
 import type { ApprovalView, SignatureView } from "@/app/api/types";
 import { formatUtc } from "@/app/format";
-import { displayName, useIdentity } from "@/app/identity";
+import { displayName, roleName, useIdentity } from "@/app/identity";
+import { localizeCopy } from "@/app/localize";
 import { MOCK_API } from "@/app/health";
 import { Badge } from "@/app/ui";
 import { signErrorMessage } from "@/features/compliance/errors";
@@ -91,7 +92,7 @@ export function ApprovalPanel({ approval, onChange }: { approval: ApprovalView; 
                 <span className="min-w-0">
                   <span className="font-semibold capitalize text-ink-900">{meaningLabel(sig.meaning)}</span> {t("by", "签署人")}{" "}
                   <span className="font-semibold">{sig.signer_name ?? displayName(sig.signer)}</span>
-                  {sig.signer_name ? ` (${sig.signer}, ${sig.role})` : ""} <Validity sig={sig} />
+                  {sig.signer_name ? ` (${sig.signer}, ${roleName(sig.role)})` : ""} <Validity sig={sig} />
                   <span className="block text-xs tabular text-ink-500">
                     {formatUtc(sig.signed_at)} {t("· record sha256", "· 记录 SHA256")} <code className="font-mono">{sig.record_hash.slice(0, 12)}…</code>
                   </span>
@@ -114,7 +115,7 @@ export function ApprovalPanel({ approval, onChange }: { approval: ApprovalView; 
           }}
         >
           <p className="text-sm text-ink-800">
-            {t("Sign as", "签署身份")} <strong>{me.name}</strong> ({me.roleLabel}) {t("with meaning", "签署含义")} <strong className="capitalize">{meaningLabel(next)}</strong>
+            {t("Sign as", "签署身份")} <strong>{me.name}</strong> ({roleName(me.role)}) {t("with meaning", "签署含义")} <strong className="capitalize">{meaningLabel(next)}</strong>
           </p>
           <p className="mt-1 text-xs text-ink-500">
             {t("By signing, I confirm that I have", "签署即确认我已对该方案完成")} {meaningLabel(next)} {t("this scenario. The signature is bound to the exact record hash and recorded in the audit trail.", "操作。签名与记录的精确哈希值绑定，并记入审计记录。")}
@@ -143,7 +144,7 @@ export function ApprovalPanel({ approval, onChange }: { approval: ApprovalView; 
           {MOCK_API && <p className="mt-1 text-[11px] text-ink-500">{t("Mock API demo PINs: Alex 1111 · Riley 2222 · Sam 3333.", "模拟 API 演示 PIN：Alex 1111 · Riley 2222 · Sam 3333。")}</p>}
           {error && (
             <p role="alert" className="mt-2 rounded-md border border-worse-200 bg-worse-50 px-3 py-2 text-sm font-medium text-worse-900" data-testid="sign-error">
-              {error}
+              {localizeCopy(error)}
             </p>
           )}
         </form>

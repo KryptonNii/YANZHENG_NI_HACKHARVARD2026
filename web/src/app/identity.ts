@@ -68,8 +68,22 @@ export function useIdentity(): DemoIdentity {
   return useSyncExternalStore(subscribeIdentity, getIdentity, getIdentity);
 }
 
+const ROLE_EN: Record<string, string> = {
+  author: "Author", reviewer: "Reviewer", qa: "QA", admin: "Admin", viewer: "Viewer",
+  Author: "Author", Reviewer: "Reviewer", QA: "QA", Admin: "Admin", Viewer: "Viewer",
+};
+const ROLE_ZH: Record<string, string> = {
+  author: "作者", reviewer: "审核员", qa: "质量保证", admin: "管理员", viewer: "查看者",
+  Author: "作者", Reviewer: "审核员", QA: "质量保证", Admin: "管理员", Viewer: "查看者",
+};
+
+/** Role label for the current language. English labels stay Author / Reviewer / QA. */
+export function roleName(role: string): string {
+  return translate(ROLE_EN[role] ?? role, ROLE_ZH[role] ?? ROLE_ZH[ROLE_EN[role] ?? ""] ?? role);
+}
+
 /** "alex.author" → "Alex (Author)"; unknown users are shown as-is. */
 export function displayName(user: string): string {
   const found = DEMO_IDENTITIES.find((i) => i.user === user);
-  return found ? `${found.name} (${translate(found.roleLabel, { author: "作者", reviewer: "审核员", qa: "质量保证", admin: "管理员", viewer: "查看者" }[found.role])})` : user;
+  return found ? `${found.name} (${roleName(found.role)})` : user;
 }

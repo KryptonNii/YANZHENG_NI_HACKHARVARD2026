@@ -1,4 +1,5 @@
 import { useTranslation, translate as t } from "@/app/i18n";
+import { localizeCopy } from "@/app/localize";
 import { useEffect, useId, useState } from "react";
 import { isAbort, request } from "@/app/api/client";
 import type { Levers, MetricRange, ProcedureEndpointRole } from "@/app/contracts";
@@ -198,7 +199,7 @@ function PinnedNextLever({ designId, designVersion, currentLevers, currentKey, o
       {!valid && <p role="alert">{t("A saved design version is required (design_version_required).", "需要已保存的设计版本（design_version_required）。")}</p>}
       {valid && !result && !error && <p role="status">{t("Comparing existing levers…", "正在比较现有调整项…")}</p>}
       {error && <div role="alert">
-        <p>{error}</p>
+        <p>{localizeCopy(error)}</p>
         <button type="button" onClick={retry}>{t("Retry advice", "重新获取建议")}</button>
       </div>}
       {result && <>
@@ -223,11 +224,11 @@ function SamplingAndPolicy({ result }: { result: NextLeverData }) {
     <p className="text-sm">
       {t("Ranking uses seed", "排序使用随机种子")} {result.seed} {t("and", "及")} {count.format(result.draws)} {t("draws. The formal scenario results use their own draw count (", "次抽样。正式方案结果采用各自的抽样次数（")}{count.format(result.scenario_draws)}{t("), so they can differ.", "），因此结果可能不同。")}
     </p>
-    <p className="text-xs text-ink-600">{result.sampling_note}</p>
+    <p className="text-xs text-ink-600">{localizeCopy(result.sampling_note)}</p>
     <div className="rounded-lg bg-ink-50 p-3 text-sm" aria-label={t("Recommendation policy", "推荐规则")}>
       <p>{t("Maximum duration P50 increase:", "持续时间 P50 最大增幅：")} {policy.max_duration_increase_months} {t("months.", "个月。")}
         {" "}{t("Maximum modeled stockout probability:", "模型允许的最高缺货概率：")} {percent.format(policy.max_stockout_probability)}.</p>
-      <p>{policy.note}</p>
+      <p>{localizeCopy(policy.note)}</p>
       <p>{t("These model constraints do not establish clinical safety or protocol acceptability.", "这些模型约束不代表已确认临床安全性或试验方案可接受性。")}</p>
     </div>
     <p className="text-sm">{t("Changes are candidate minus your current scenario; negative values are reductions.", "变化值为候选方案减去当前方案；负值表示减少。")}</p>
@@ -263,7 +264,7 @@ function RecommendationCard({ item, current, onPreview }: { item: LeverRecommend
   return (
     <li className="rounded-lg border border-ink-200 p-4">
       <h3 className="inline font-semibold">{adviceLabel(item.label)}</h3>
-      <p className="my-2 text-sm">{item.reason}</p>
+      <p className="my-2 text-sm">{localizeCopy(item.reason)}</p>
       {item.kind === "procedure_removal" && item.procedure && <p className="my-2 text-sm"><NotClinicalApproval code={item.procedure.code} /></p>}
       <DeltaTable label={adviceLabel(item.label)} delta={item.delta} />
       <p className="mt-2 text-sm">{t("Modeled stockout probability:", "模型估算的缺货概率：")} {riskText(item.stockout_probability)}.</p>
@@ -284,7 +285,7 @@ function StressScenarios({ items }: { items: StressScenario[] }) {
         {items.map((item) => <li key={item.id} className="rounded-lg border border-dashed border-caution-200 p-4">
           <h4 className="inline font-semibold">{adviceLabel(item.label)}</h4>{" "}
           <span className="inline-block rounded bg-caution-100 px-1.5 text-[11px] font-bold uppercase tracking-wide text-caution-900">{t("assumption", "假设")}</span>
-          <p className="my-2 text-sm">{item.reason}</p>
+          <p className="my-2 text-sm">{localizeCopy(item.reason)}</p>
           <p className="my-2 text-sm">
             {t("Assumed enrollment rate:", "假设入组速度：")} {percent.format(item.levers.enrollment_rate_multiplier)} {t("of plan. This tests your current scenario; it is not a recommendation.", "（相对于计划）。此项用于测试当前方案，不是推荐建议。")}
           </p>
@@ -304,7 +305,7 @@ function RejectedList({ items }: { items: RejectedCandidate[] }) {
       <h3 className="font-semibold">{t("Why other changes were not recommended", "其他更改未被推荐的原因")}</h3>
       <ul aria-label={t("Rejected changes", "未推荐的更改")} className="mt-2 space-y-2 text-sm">
         {items.map((item) => <li key={item.id}>
-          <strong>{adviceLabel(item.label)}:</strong> {item.reason}
+          <strong>{adviceLabel(item.label)}:</strong> {localizeCopy(item.reason)}
           {item.kind === "procedure_removal" && item.procedure && <> <NotClinicalApproval code={item.procedure.code} /></>}
         </li>)}
       </ul>
@@ -318,7 +319,7 @@ function BlockedList({ items }: { items: NextLeverData["blocked"] }) {
     <div>
       <h3 className="font-semibold">{t("Blocked procedure removals", "禁止移除的检查项目")}</h3>
       {items.length ? <ul aria-label={t("Blocked procedures", "禁止移除的检查项目")} className="mt-2 space-y-2 text-sm">
-        {items.map((item) => <li key={item.code}><code>{item.code}</code>: {item.reason}</li>)}
+        {items.map((item) => <li key={item.code}><code>{item.code}</code>: {localizeCopy(item.reason)}</li>)}
       </ul> : <p className="text-sm">
         {t("No procedure removal is blocked by endpoint linkage. Linkage alone does not show a procedure is unnecessary; any removal still requires manual protocol review of safety, eligibility and treatment needs.", "没有检查项目因终点关联而被禁止移除。仅凭关联信息无法判断检查项目是否必要；任何移除操作仍需人工审核试验方案，评估安全性、入选资格及治疗需求。")}
       </p>}
@@ -330,6 +331,6 @@ function AdviceWarnings({ items }: { items: string[] }) {
   useTranslation();
   if (!items.length) return null;
   return <ul aria-label={t("Advice warnings", "建议警告")} className="text-sm text-ink-600">
-    {items.map((warning) => <li key={warning}>{warning}</li>)}
+    {items.map((warning) => <li key={warning}>{localizeCopy(warning)}</li>)}
   </ul>;
 }

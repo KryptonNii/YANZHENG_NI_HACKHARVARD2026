@@ -1,4 +1,4 @@
-import { DEMO_IDENTITIES, setIdentity, useIdentity } from "./identity";
+import { DEMO_IDENTITIES, roleName, setIdentity, useIdentity } from "./identity";
 import { useTranslation } from "./i18n";
 
 /** Top-right demo identity switcher. Clearly labelled: these are not real accounts. */
@@ -22,7 +22,7 @@ export function IdentitySwitcher() {
       >
         {DEMO_IDENTITIES.map((i) => (
           <option key={i.user} value={i.user}>
-            {i.name} · {t(i.roleLabel, { author: "作者", reviewer: "审核员", qa: "质量保证", admin: "管理员", viewer: "查看者" }[i.role])}
+            {i.name} · {roleName(i.role)}
           </option>
         ))}
       </select>

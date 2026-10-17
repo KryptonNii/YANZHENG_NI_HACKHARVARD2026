@@ -1,5 +1,6 @@
 import { displayText } from "./displayText";
 import { useTranslation, translate } from "@/app/i18n";
+import { localizeCopy } from "@/app/localize";
 import { useState } from "react";
 import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import type { Intervention } from "@/app/contracts";
@@ -24,7 +25,7 @@ export function InterventionsPanel({ trialId, interventions, effects, onChanged 
   return (
     <section className="card p-4" data-testid="intervention-list" aria-label={t("Interventions", "干预")}>
       <h2 className="card-title mb-3">{t("Interventions", "干预")}</h2>
-      {error && <p role="alert" className="mb-3 text-sm text-worse-900">{error}</p>}
+      {error && <p role="alert" className="mb-3 text-sm text-worse-900">{localizeCopy(error)}</p>}
       {interventions.length === 0 && <p className="text-sm text-ink-500">{t("No interventions yet. Plan one from an alert.", "暂无干预。请从警报中规划干预。")}</p>}
       <ul className="space-y-4">
         {interventions.map((iv) => {

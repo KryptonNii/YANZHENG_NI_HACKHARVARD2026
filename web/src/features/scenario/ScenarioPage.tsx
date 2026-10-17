@@ -6,6 +6,7 @@ import { ApiError, api, isAbort } from "@/app/api/client";
 import { DEFAULT_LEVERS } from "@/app/api/normalize";
 import type { SavedScenario } from "@/app/api/types";
 import { humanize } from "@/app/format";
+import { localizeCopy } from "@/app/localize";
 import { setLastDesignId } from "@/app/lastDesign";
 import { useToast } from "@/app/toast";
 import { Badge, ErrorPanel, Modal, Skeleton } from "@/app/ui";
@@ -81,7 +82,7 @@ function SaveDialog({ open, onClose, onSave, saving, ready, defaultName, base }:
             <legend className="label mb-1">{tr("Save as", "保存为")}</legend>
             <label className="flex items-start gap-2 text-sm">
               <input type="radio" name={`${id}-mode`} className="mt-0.5 accent-accent-700" checked={mode === "version"} onChange={() => setMode("version")} />
-              <span>{tr("New version of ", "新版本：")}<strong>{base.name}</strong> (v{base.version} → v{base.version + 1})
+              <span>{tr("New version of ", "新版本：")}<strong>{localizeCopy(base.name)}</strong> (v{base.version} → v{base.version + 1})
                 <span className="block text-xs text-ink-500">v{base.version}{tr(" stays unchanged", "保持不变")}{base.status !== "draft" ? tr(` — it is ${base.status} and immutable`, ` — 当前状态为${humanize(base.status)}，不可修改`) : ""}.</span>
               </span>
             </label>
@@ -211,7 +212,7 @@ export function ScenarioPage() {
         mode === "version" && selected
           ? await api.newVersion(selected.id, { levers: current.levers, name, design_version: designVersion })
           : await api.saveScenario({ design_id: design.id, design_version: designVersion, name, levers: current.levers });
-      toast.push("success", tr(`Saved “${s.name}” v${s.version}`, `已保存“${s.name}”v${s.version}`));
+      toast.push("success", tr(`Saved “${s.name}” v${s.version}`, `已保存“${localizeCopy(s.name)}”v${s.version}`));
       setSaveOpen(false);
       refreshScenarios();
       select(s.id);
@@ -340,7 +341,7 @@ export function ScenarioPage() {
                   </li>
                 ))}
                 {warnings.map((w) => (
-                  <li key={`w-${w}`}>{w}</li>
+                  <li key={`w-${w}`}>{localizeCopy(w)}</li>
                 ))}
               </ul>
             </details>

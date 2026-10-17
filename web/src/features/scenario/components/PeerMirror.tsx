@@ -1,4 +1,5 @@
 import { useTranslation, translate as t } from "@/app/i18n";
+import { localizeCopy } from "@/app/localize";
 import { useEffect, useId, useState } from "react";
 import { isAbort, request } from "@/app/api/client";
 
@@ -240,10 +241,10 @@ function PinnedPeerMirror({ designId, designVersion, removedProcedures }: PeerMi
               )}</tbody>
             </table>
           </div>
-          <p className="text-xs text-ink-600">{costs.delta_method}</p>
+          <p className="text-xs text-ink-600">{localizeCopy(costs.delta_method)}</p>
           <p className="text-xs text-ink-600">{t("Parameter set:", "参数集：")} {costs.parameter_set_version}{t("; seed:", "；随机种子：")} {costs.seed}{t("; draws:", "；抽样次数：")} {costs.draws}.</p>
           {costs.warnings.length > 0 && <details><summary>{t("What assumptions does the engine use?", "引擎使用了哪些假设？")}</summary>
-            <ul>{costs.warnings.map((warning, i) => <li key={i}>{warning}</li>)}</ul>
+            <ul>{costs.warnings.map((warning, i) => <li key={i}>{localizeCopy(warning)}</li>)}</ul>
           </details>}
         </div>}
       </>}

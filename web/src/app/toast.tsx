@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { onApiError } from "./api/client";
 import { useTranslation } from "./i18n";
+import { localizeCopy } from "./localize";
 
 export type ToastKind = "error" | "success" | "info";
 
@@ -78,7 +79,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
             <div className="flex-1 px-3 py-2.5">
               <p className="text-sm font-semibold text-ink-900">
                 <span className="sr-only">{tr(KIND_LABEL[t.kind], { error: "错误", success: "完成", info: "提示" }[t.kind])}: </span>
-                {t.title}
+                {localizeCopy(t.title)}
               </p>
               {t.message && <p className="mt-0.5 text-xs text-ink-500">{t.message}</p>}
             </div>

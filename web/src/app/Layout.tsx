@@ -2,6 +2,7 @@ import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { MOCK_API, useHealth } from "./health";
 import { IdentitySwitcher } from "./IdentitySwitcher";
 import { useTranslation } from "./i18n";
+import { localizeCopy } from "./localize";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { DEMO_TRIAL_ID, getLastDesignId } from "./lastDesign";
 import { Badge, Dot } from "./ui";
@@ -35,7 +36,7 @@ function StatusBadges() {
         </Badge>
       )}
       {health.kind === "unreachable" && (
-        <Badge tone="worse" title="GET /api/health failed">
+        <Badge tone="worse" title={localizeCopy("GET /api/health failed")}>
           <Dot className="bg-worse-500" /> {t("API unreachable", "无法连接 API")}
         </Badge>
       )}
