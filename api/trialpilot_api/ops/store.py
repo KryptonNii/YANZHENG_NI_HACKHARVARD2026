@@ -21,7 +21,7 @@ from functools import wraps
 
 import numpy as np
 
-from . import actions, audit
+from . import actions, audit, expectation
 from ._contracts import Alert, EffectEstimate, Intervention, OpsEvent, ScenarioResult, TrialDesign
 from .detect import Detector, Finding
 from .effects import EffectDetails, direction_for, estimate_effect
@@ -82,6 +82,9 @@ class IvMeta:
     alert_kind: str | None
     system: bool
     label: str | None = None
+    expectation: dict | None = None  # prediction saved when the action was planned (never recomputed)
+    exp_draws: dict | None = None  # its frozen sampling, used only for the follow-up comparison
+    replan_flagged: bool = False  # the system already asked the user to re-plan this action
 
 
 class TrialState:
@@ -336,6 +339,10 @@ class TrialState:
                     raise OpsError(404, "alert_not_found", f"No alert {body['alert_id']} for this trial.")
             targets = list(body.get("target_site_ids") or ([alert.site_id] if alert and alert.site_id else []))
             known = {s.id for s in self.plan.sites}
+            option = self._quantified_option(alert, actions.action_code(body["action"])) if alert else None
+            if option is not None and option[0]["code"] == "activate_backup" and not any(
+                    t in known and self.plan.site(t).backup for t in targets):
+                targets = list(option[0]["target_site_ids"])  # the backup site that was predicted
             bad = [t for t in targets if t not in known]
             if not targets or bad:
                 raise OpsError(422, "invalid_targets", "target_site_ids must list sites of this trial.",
@@ -345,7 +352,8 @@ class TrialState:
             if status != "planned" and started_at is None:
                 started_at = self.plan.date(self.clock_day)
             self._check_start(started_at)
-            metric = body.get("metric") or actions.DEFAULT_METRIC.get(alert.kind if alert else "", "")
+            metric = (body.get("metric") or (option[0]["metric"] if option is not None else "")
+                      or actions.DEFAULT_METRIC.get(alert.kind if alert else "", ""))
             if not metric:
                 raise OpsError(422, "metric_required", "metric is required when the intervention has no alert.")
             iv = Intervention(id=str(uuid.uuid4()), trial_id=self.trial_id, alert_id=alert.id if alert else None,
@@ -356,6 +364,7 @@ class TrialState:
             self.iv_meta[iv.id] = IvMeta(actions.action_code(iv.action), alert.kind if alert else None, False)
             audit.append(actor=actor, role=role, action="ops.intervention.create", object_type="ops_intervention",
                          object_id=iv.id, after=iv, reason=body.get("reason"))
+            self._attach_expectation(iv, actor, role)
             if alert is not None and alert.status in ("open", "acknowledged"):
                 self._set_status(alert, "action_planned", actor, role, f"intervention {iv.id} planned",
                                  self.clock_day)
@@ -406,6 +415,8 @@ class TrialState:
                 self.iv_meta[iv_id].code = actions.action_code(new.action)
             audit.append(actor=actor, role=role, action="ops.intervention.update", object_type="ops_intervention",
                          object_id=iv_id, before=iv, after=new, reason=patch.get("reason"))
+            if iv.started_at is None and {"action", "target_site_ids", "metric"} & set(upd):
+                self._attach_expectation(new, actor, role)  # not started: a different action needs its own prediction
             self._after_iv_change(new, previous=iv)
             return new
 
@@ -442,7 +453,8 @@ class TrialState:
                                 direction=direction_for(self.iv_meta[iv.id].alert_kind), seed=self.seed)
             old = self.effects.get(iv.id)
             self.effects[iv.id] = d
-            if emit and (old is None or old.estimate.verdict != d.estimate.verdict
+            flagged = self._check_replan(iv, d, emit)
+            if emit and (flagged or old is None or old.estimate.verdict != d.estimate.verdict
                          or old.estimate.effect != d.estimate.effect):
                 self._emit("effect_update", d.estimate.model_dump(mode="json"))
 
@@ -460,6 +472,67 @@ class TrialState:
     def effect_list(self) -> list[EffectEstimate]:
         with self.lock:
             return [self.effect(i).estimate for i in self.interventions]
+
+    # ------------------------------------------------------------------ expectations
+    def _option_set(self, alert: Alert) -> expectation.OptionSet:
+        return expectation.options_for_alert(self.plan, self.feed, self.params, self.seed, self.clock_day, alert)
+
+    def _quantified_option(self, alert: Alert, code: str) -> tuple[dict, dict] | None:
+        if not alert.site_id or code not in expectation.QUANTIFIED.get(alert.kind, ()):
+            return None
+        found = self._option_set(alert)
+        item = next((o for o in found.payload["items"] if o["code"] == code and o["quantified"]), None)
+        return None if item is None else (item, found.draws[code])
+
+    def _attach_expectation(self, iv: Intervention, actor: str, role: str) -> None:
+        """Save the prediction as it stands now, if this action is one the planning model covers."""
+        meta = self.iv_meta[iv.id]
+        meta.expectation = meta.exp_draws = None
+        alert = self.alerts.get(iv.alert_id) if iv.alert_id else None
+        if meta.system or alert is None:
+            return
+        option = self._quantified_option(alert, meta.code)
+        if option is None:
+            return
+        item, draws = option
+        if item["metric"] != iv.metric or set(item["target_site_ids"]) != set(iv.target_site_ids):
+            return  # the follow-up would measure something else than was predicted
+        frozen = expectation.freeze(item, alert.id, self.clock_day, self.plan)
+        meta.expectation, meta.exp_draws = frozen, draws
+        audit.append(actor=actor, role=role, action="ops.intervention.expectation", object_type="ops_intervention",
+                     object_id=iv.id, after=frozen,
+                     reason="Prediction saved when the action was planned (planning model, assumed parameters)")
+
+    def expectation_of(self, iv_id: str) -> dict | None:
+        with self.lock:
+            meta = self.iv_meta.get(iv_id)
+            return None if meta is None else meta.expectation
+
+    def reconciliation(self, iv_id: str) -> dict | None:
+        with self.lock:
+            meta = self.iv_meta.get(iv_id)
+            if meta is None or meta.expectation is None or meta.exp_draws is None:
+                return None
+            return expectation.reconcile(self.plan, self.interventions[iv_id], meta.expectation, meta.exp_draws,
+                                         self.effect(iv_id))
+
+    def _check_replan(self, iv: Intervention, details: EffectDetails, emit: bool) -> bool:
+        """Once the observed effect is clearly below the saved prediction, reopen the alert and say so."""
+        meta = self.iv_meta[iv.id]
+        if meta.expectation is None or meta.exp_draws is None or meta.replan_flagged:
+            return False
+        rec = expectation.reconcile(self.plan, iv, meta.expectation, meta.exp_draws, details)
+        if not rec["needs_replan"]:
+            return False
+        meta.replan_flagged = True
+        reason = (f"'{iv.action}' is below its predicted effect after {rec['post_weeks']} weeks "
+                  f"({rec['verdict'].replace('_', ' ')}). Re-plan.")
+        alert = self.alerts.get(iv.alert_id) if iv.alert_id else None
+        if alert is not None and alert.status in ("action_planned", "acknowledged"):
+            self._set_status(alert, "open", audit.SYSTEM_ACTOR, "admin", reason, self.clock_day, emit)
+        audit.append(actor=audit.SYSTEM_ACTOR, role="admin", action="ops.intervention.replan",
+                     object_type="ops_intervention", object_id=iv.id, after=rec, reason=reason)
+        return True
 
     # ------------------------------------------------------------------ views
     def visible_events(self, since_day: float | None, limit: int, types: set[str] | None,
@@ -498,6 +571,7 @@ class TrialState:
                     "history": m["history"], "last_seen": self.plan.date(m["last_seen_day"]).isoformat(),
                     "interventions": [i.model_dump(mode="json") for i in self.interventions.values()
                                       if i.alert_id == alert_id],
+                    "options": self._option_set(a).payload if a.status in OPEN_STATES else None,
                     "simulated": True}
 
     def evaluation(self) -> dict:

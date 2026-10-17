@@ -261,7 +261,8 @@ def effects(trial_id: str, request: Request):
 def effect(trial_id: str, iv_id: str, request: Request):
     with errors():
         st = state(request, trial_id)
-        return {**st.effect(iv_id).to_dict(st.plan), "simulated": True}
+        return {**st.effect(iv_id).to_dict(st.plan), "expectation": st.expectation_of(iv_id),
+                "reconciliation": st.reconciliation(iv_id), "simulated": True}
 
 
 @router.get("/{trial_id}/events")

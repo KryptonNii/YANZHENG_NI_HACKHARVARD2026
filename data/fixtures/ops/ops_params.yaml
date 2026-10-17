@@ -225,3 +225,78 @@ parameters:
     value_high: 0.20
     unit: share/patient_year
     rationale: Simulation knob; also used for the planned visit volume.
+
+  # ---------------- action planning model (expectation.py) ----------------
+  # Planning priors used ONLY to predict what a recommended action might achieve. They are independent of the
+  # simulator's knobs above: the simulator never reads them and the predictor never reads the simulator.
+  # A prediction that misses the observed effect is a finding about these assumptions, not a bug to tune away.
+  - id: ops.effect.enrollment_retraining.gap_recovery
+    label: Share of a lagging site's enrollment gap (planned rate minus current rate) recovered by retraining
+    value_low: 0.05
+    value_mid: 0.25
+    value_high: 0.60
+    unit: share
+    rationale: Placeholder planning prior with no published source; retraining on eligibility and referral pathways is assumed to close part, not all, of the gap to the planned rate.
+  - id: ops.effect.backup_site.rate_share_of_plan
+    label: Enrollment rate of an activated backup site as a share of the mean planned rate of the study's active sites
+    value_low: 0.3
+    value_mid: 0.6
+    value_high: 1.0
+    unit: share
+    rationale: Placeholder planning prior with no published source; a newly opened backup site is assumed to enroll more slowly than an established planned site.
+  - id: ops.effect.action_lag_days
+    label: Days from starting an enrollment action until its effect appears
+    value_low: 7
+    value_mid: 21
+    value_high: 42
+    unit: days
+    rationale: Placeholder planning prior; training, referral set-up and site start-up take weeks to show in enrollment counts.
+  - id: ops.effect.supply_action_lag_days
+    label: Days from starting a drug-supply action until stock at the site changes
+    value_low: 2
+    value_mid: 7
+    value_high: 14
+    unit: days
+    rationale: Placeholder planning prior; return shipments and IRT reconfiguration take days, not weeks.
+  - id: ops.effect.excess_kit_return_share
+    label: Share of projected-to-expire kits recovered by a one-off transfer to the regional depot
+    value_low: 0.3
+    value_mid: 0.6
+    value_high: 0.9
+    unit: share
+    rationale: Placeholder planning prior; some excess is too close to expiry, already allocated or not transferable.
+  - id: ops.effect.on_demand_waste_avoided_share
+    label: Share of projected-to-expire kits avoided by switching the site to on-demand resupply and returning excess
+    value_low: 0.5
+    value_mid: 0.8
+    value_high: 1.0
+    unit: share
+    rationale: Placeholder planning prior; assumed higher than a one-off transfer because predictive resupply also stops further bulk pushes.
+  - id: ops.cost.action.enrollment_retraining
+    label: Cost of retraining one site on inclusion/exclusion criteria and referral pathways
+    value_low: 3000
+    value_mid: 8000
+    value_high: 20000
+    unit: usd/site
+    rationale: Placeholder for trainer and coordinator time, travel and materials; replace with sponsor or CRO rates.
+  - id: ops.cost.action.backup_site_activation
+    label: Cost of activating one backup site (contracting, ethics and regulatory set-up, training, supplies)
+    value_low: 15000
+    value_mid: 40000
+    value_high: 100000
+    unit: usd/site
+    rationale: Placeholder with no published source; start-up cost varies widely by country and site.
+  - id: ops.cost.action.on_demand_switch
+    label: Cost of switching one site to IRT-triggered resupply
+    value_low: 2000
+    value_mid: 6000
+    value_high: 15000
+    unit: usd/site
+    rationale: Placeholder for IRT reconfiguration, depot handling and site communication.
+  - id: ops.cost.action.kit_transfer
+    label: Cost of one excess-kit transfer shipment to the regional depot
+    value_low: 500
+    value_mid: 1500
+    value_high: 4000
+    unit: usd/shipment
+    rationale: Placeholder for a cold-chain return shipment and depot handling.

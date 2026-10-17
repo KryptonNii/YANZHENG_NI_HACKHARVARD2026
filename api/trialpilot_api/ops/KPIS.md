@@ -54,3 +54,27 @@ those counts are included in its country sum. The zero plan is a real plan of no
 missing value. Before the first complete week, including clock day 0, all three lists are empty.
 Other unknown health fields (`drug_need_kits` before day 42, median query age with no open queries,
 first patient in with no enrollment) stay null. Weekly enrollment does not use nulls inside the lists.
+
+## Predicted outcome of each action, and the follow-up
+
+An alert lists recommended actions. For site-level `enrollment_lag` and `drug_overstock` alerts, the alert detail
+(`GET /{trial}/alerts/{id}`, field `options`) ranks the quantified actions by predicted net value: cost avoided
+minus the action's own cost, P50. Four actions are quantified: `enrollment_retraining`, `activate_backup`,
+`supply_on_demand` and `transfer_excess`. Every other recommended action is listed as "not quantified" with a reason.
+The "do nothing" baseline equals the alert's own impact estimate (same seeds and formulas).
+
+The prediction uses only the observed feed and the labelled assumptions `ops.effect.*` and `ops.cost.action.*` in
+`ops_params.yaml`. It never reads the simulator or its withheld ground truth, and a test enforces that. Predicted
+days and dollars are model outputs, not observations.
+
+Planning an action saves the prediction as it stood then (`ops.intervention.expectation` in the audit trail). It is
+never recomputed. `GET /{trial}/effects/{id}` then carries `expectation` and `reconciliation`. The follow-up compares
+the observed difference-in-differences 95% interval with the predicted range for the weeks actually observed, diluted
+by the assumed start-up lag. Verdicts: `exceeded`, `met`, `partial`, `not_met`, `inconclusive`, `insufficient_data`.
+Only the metric the action moves is compared (kits on hand, enrollment rate); the days and dollars are not observed
+separately.
+
+When an action is `partial` or `not_met` after at least 6 observed weeks, the system reopens the alert, records
+`ops.intervention.replan` in the audit trail and the UI asks the user to plan a different action. This happens once
+per intervention. A single site's enrollment rate is too noisy to resolve small predicted effects: the options table
+warns about this when the predicted change is below the metric's detection floor.
