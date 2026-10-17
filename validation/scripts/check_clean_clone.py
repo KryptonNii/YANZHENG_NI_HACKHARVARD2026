@@ -86,6 +86,7 @@ def worker(repo: Path, output: Path, *, e2e: bool) -> int:
             "self_approval_refused": True,
             "out_of_order_refused": True,
             "counts": result["counts"],
+            "failed_tests": result["deviations"]["failed"],
             "suites": run["manifest"]["suites"],
             "trace": tr["summary"],
             "untested_requirements": tr["flags"]["untested_requirements"],
@@ -126,17 +127,16 @@ def main() -> int:
                    check=True)
     env = {k: v for k, v in os.environ.items()
            if k not in ("VIRTUAL_ENV", "PYTHONPATH", "PYTHONHOME", "UV_PROJECT_ENVIRONMENT",
-                        "TPV_PIN", "TPV_USER", "E2E_MOCK", "E2E_SCREENSHOTS")}
+                        "TPV_PIN", "TPV_USER", "E2E_MOCK", "E2E_SCREENSHOTS", "TP_DB_PATH",
+                        "TP_DATA_DIR", "TP_COMPLIANCE_DB")}
     env.update(
         UV_PYTHON=sys._base_executable,
         PYTHONIOENCODING="utf-8",
         TPV_REPO=str(repo), TP_VALIDATION_OUT=str(output),
-        TP_DB_PATH=str(repo / "var" / "clean-clone-test.sqlite"),
         TP_COMPLIANCE_DB=str(repo / "var" / "clean-clone-test.sqlite"),
         TP_SECRET_PEPPER="clean-clone-test-fixture-not-a-production-secret",
         TP_DEMO_PINS="", DEMO_OFFLINE="1", E2E_API_PORT="8007", E2E_WEB_PORT="5180",
         TP_RUNTIME_CACHE_DIR=str(repo / "var" / "importers"),
-        TP_DATA_DIR=str(repo / "var"),
     )
     if args.e2e:
         pnpm = shutil.which("pnpm")
