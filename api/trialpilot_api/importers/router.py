@@ -10,6 +10,11 @@ GET  /protocol/review/stats     running totals of those reviews (accuracy metric
 Errors use the shared shape {"error", "message", "details"}. Every successful import, apply and
 review writes an audit entry (A5's compliance adapter when mounted in the app, else A7's
 `compliance.audit.append`); if the audit trail cannot be written the request fails.
+
+Identity (URS-023): inside A5's app the role comes from A7's user registry via A5's
+`deps.resolve_identity`, never from `X-Role`. Importing and extracting read public data, so anonymous
+callers may do them (audited as anonymous); apply and review are human confirmations and need a
+registered person who may change data (not a viewer, never an `ai:` actor).
 """
 
 from __future__ import annotations
@@ -46,6 +51,7 @@ router = APIRouter(tags=["import"])
 
 MAX_UPLOAD_BYTES = 20 * 1024 * 1024
 _ROLES = {"author", "reviewer", "qa", "admin", "viewer"}
+_AI_ACTOR_PREFIX = "ai:"  # same convention as A7 (compliance/config.py)
 _sha_locks: dict[str, threading.Lock] = {}
 _sha_locks_guard = threading.Lock()
 
@@ -91,12 +97,35 @@ def get_auditor(request: Request) -> AuditFn:
         return _memory_audit
 
 
-def get_actor(x_user: str | None = Header(default=None), x_role: str | None = Header(default=None)) -> tuple[str, str]:
-    """Demo identity headers (A5 convention). Imports read public data, so anonymous callers are allowed and audited as such."""
+def get_actor(request: Request, x_user: str | None = Header(default=None),
+              x_role: str | None = Header(default=None)) -> tuple[str, str]:
+    """(user, role). In A5's app: A5's resolver (registry role; its ApiError -> 400/403 in the shared shape).
+    Standalone (no app services, e.g. this package's tests): the demo headers as given."""
+    if getattr(request.app.state, "services", None) is not None:
+        try:
+            from trialpilot_api.deps import resolve_identity
+        except ImportError:
+            pass
+        else:
+            ident = resolve_identity(request, x_user, x_role)
+            return ("anonymous", "viewer") if ident is None else (ident.user, ident.role)
     if not x_user:
         return "anonymous", "viewer"
     role = (x_role or "author").strip().lower()
     return x_user.strip()[:64], role if role in _ROLES else "viewer"
+
+
+def _require_confirmer(actor: tuple[str, str]) -> JSONResponse | None:
+    """Accepting extracted candidates is a human decision: a registered, non-viewer, non-AI identity."""
+    user, role = actor
+    if user == "anonymous":
+        return _error(401, "identity_required", "Send the demo identity header X-User to confirm a schedule.")
+    if user.startswith(_AI_ACTOR_PREFIX):
+        return _error(403, "ai_confirmation_forbidden",
+                      "AI actors may draft candidates but never confirm them; a person must.", {"user": user})
+    if role == "viewer":
+        return _error(403, "forbidden_role", "The viewer role cannot change data.", {"role": role})
+    return None
 
 
 def _audit(audit: AuditFn, actor: tuple[str, str], action: str, object_type: str, object_id: str,
@@ -286,7 +315,9 @@ class ApplyRequest(BaseModel):
 def apply_visits(body: ApplyRequest, actor: tuple[str, str] = Depends(get_actor),
                  audit: AuditFn = Depends(get_auditor)) -> Any:
     """Replace a design's visits with the schedule a human confirmed. Returns the new design; storing it is A5's job."""
-    weeks = [v.week for v in sorted(body.visits, key=lambda v: v.number)]
+    if (err := _require_confirmer(actor)):
+        return err
+    weeks =[v.week for v in sorted(body.visits, key=lambda v: v.number)]
     if weeks != sorted(weeks):
         return _error(422, "weeks_not_increasing", "Visit weeks must increase with the visit number.", {"weeks": weeks})
     if len({v.number for v in body.visits}) != len(body.visits):
@@ -333,7 +364,9 @@ def review_stats() -> dict[str, Any]:
 
 @router.post("/protocol/review")
 def log_review(body: ReviewLog, actor: tuple[str, str] = Depends(get_actor), audit: AuditFn = Depends(get_auditor)) -> Any:
-    entry = {**body.model_dump(), "actor": actor[0], "at": datetime.now(UTC).isoformat(timespec="seconds")}
+    if (err := _require_confirmer(actor)):
+        return err
+    entry ={**body.model_dump(), "actor": actor[0], "at": datetime.now(UTC).isoformat(timespec="seconds")}
     if (err := _audit(audit, actor, "import.protocol.review", "protocol_extraction", body.extraction_id, None,
                       record_hash(entry), f"accepted {body.accepted}, edited {body.edited}, rejected {body.rejected}")):
         return err

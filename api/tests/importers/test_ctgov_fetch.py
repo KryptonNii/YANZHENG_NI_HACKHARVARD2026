@@ -22,6 +22,7 @@ from trialpilot_api.importers.ctgov import (
 
 from .conftest import ALL_NCT, DEMO_NCT, REAL_FIXTURES
 
+pytestmark = pytest.mark.req("URS-001")
 NEW_NCT = "NCT09999999"
 
 
@@ -42,6 +43,7 @@ def test_normalize_nct() -> None:
             normalize_nct(bad)
 
 
+@pytest.mark.req("URS-029")
 def test_offline_serves_cache_without_network(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("DEMO_OFFLINE", "1")
 
@@ -53,6 +55,7 @@ def test_offline_serves_cache_without_network(monkeypatch: pytest.MonkeyPatch) -
     assert fetch_study(DEMO_NCT)["protocolSection"]["identificationModule"]["nctId"] == DEMO_NCT
 
 
+@pytest.mark.req("URS-029")
 def test_offline_cache_miss_is_clean_error(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("DEMO_OFFLINE", "1")
     with pytest.raises(OfflineCacheMiss) as e:
@@ -115,6 +118,7 @@ def test_refresh_with_network_down_falls_back_to_stale_cache() -> None:
     assert r.cached and r.stale_fallback
 
 
+@pytest.mark.req("URS-029")
 def test_docker_data_dir_keeps_reading_committed_fixtures(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """A5 sets TP_DATA_DIR to a writable volume: fixtures still come from data/fixtures, writes go to the volume."""
     monkeypatch.delenv("TP_RUNTIME_CACHE_DIR")
@@ -131,6 +135,7 @@ def test_docker_data_dir_keeps_reading_committed_fixtures(tmp_path: Path, monkey
     assert {DEMO_NCT, NEW_NCT} <= set(cached_study_ids())
 
 
+@pytest.mark.req("URS-029")
 def test_all_demo_fixtures_present_with_metadata() -> None:
     for nct in ALL_NCT:
         meta = json.loads((REAL_FIXTURES / "ctgov" / f"{nct}.meta.json").read_text(encoding="utf-8"))

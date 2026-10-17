@@ -18,6 +18,8 @@ from trialpilot_api.importers.ctgov import (
 
 from .conftest import ALL_NCT, DEMO_NCT, REAL_FIXTURES
 
+pytestmark = pytest.mark.req("URS-001")
+
 
 def _report(nct: str):  # type: ignore[no-untyped-def]
     r = fetch_study_result(nct, offline=True)

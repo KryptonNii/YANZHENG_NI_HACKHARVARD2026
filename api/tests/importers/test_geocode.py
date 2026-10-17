@@ -6,9 +6,13 @@ import json
 import math
 import statistics
 
+import pytest
+
 from trialpilot_api.importers.geocode import default_geocoder
 
 from .conftest import ALL_NCT, REAL_FIXTURES
+
+pytestmark = pytest.mark.req("URS-001", "URS-029")  # sites placed from an offline index, never a web geocoder
 
 
 def _km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:

@@ -22,7 +22,8 @@ from trialpilot_api.importers.tools.make_synthetic_protocol import (
     make_pdf,
 )
 
-BOREAS_SHA = "76ead4e1be07e49f55ed405820c1a2fec18490505d88f6280e8a811f71f22b23"
+pytestmark = pytest.mark.req("URS-002")
+BOREAS_SHA ="76ead4e1be07e49f55ed405820c1a2fec18490505d88f6280e8a811f71f22b23"
 
 
 def field_accuracy(result: Any) -> dict[str, float]:
@@ -82,6 +83,7 @@ def test_every_item_carries_page_quote_and_confidence(text_pdf: bytes) -> None:
     assert weeks == sorted(weeks)
 
 
+@pytest.mark.req("URS-029")
 def test_result_is_cached_by_pdf_hash(text_pdf: bytes) -> None:
     first = extract_schedule(text_pdf)
     assert not first.from_cache
@@ -173,12 +175,14 @@ def test_llm_failure_is_a_clean_error(image_pdf: bytes) -> None:
     assert e.value.status == 503 and e.value.code == "llm_unavailable"
 
 
+@pytest.mark.req("URS-029")
 def test_image_pdf_offline_without_cache_explains(image_pdf: bytes) -> None:
     with pytest.raises(ExtractionFailed) as e:
         extract_schedule(image_pdf, offline=True, use_cache=False, write_cache=False)
     assert e.value.code == "extraction_unavailable" and "offline" in e.value.message
 
 
+@pytest.mark.req("URS-029", "URS-030")
 def test_no_api_key_means_no_llm_call(image_pdf: bytes) -> None:
     with pytest.raises(ExtractionFailed) as e:  # ANTHROPIC_API_KEY removed by the autouse fixture
         extract_schedule(image_pdf, use_cache=False, write_cache=False)
@@ -243,6 +247,7 @@ def test_parse_week_cell(cell: str, unit: str, expected: Any) -> None:
 
 
 # ------------------------------------------------------------- demo protocol (cached transcription)
+@pytest.mark.req("URS-029")
 def test_boreas_cached_extraction_is_valid() -> None:
     r = load_cached(BOREAS_SHA)
     assert r is not None and r.from_cache and r.method == "llm_vision"

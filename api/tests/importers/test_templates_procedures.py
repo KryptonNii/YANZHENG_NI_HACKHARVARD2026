@@ -10,6 +10,8 @@ from trialpilot_api.importers.templates import _parse_timeframe_weeks, default_t
 
 from .conftest import REAL_FIXTURES
 
+pytestmark = pytest.mark.req("URS-001")
+
 
 @pytest.mark.parametrize(("text", "weeks"), [
     ("Baseline (Day 1) to Week 52", 52.0),
@@ -75,22 +77,26 @@ def test_template_uses_registry_length_when_given() -> None:
     ("Study drug dispensing", "drug_dispensing"),
     ("Vital signs12", "vital_signs"),
 ])
+@pytest.mark.req("URS-002")
 def test_label_mapping(label: str, code: str) -> None:
     proc, mapped = default_vocabulary().to_procedure(label)
     assert mapped and proc.code == code
 
 
+@pytest.mark.req("URS-002")
 def test_unknown_label_kept_as_other() -> None:
     proc, mapped = default_vocabulary().to_procedure("Smoking status")
     assert not mapped and proc.code == OTHER_PREFIX + "smoking_status" and proc.label == "Smoking status"
 
 
+@pytest.mark.req("URS-002")
 def test_code_hint_only_if_known() -> None:
     v = default_vocabulary()
     assert v.to_procedure("Weird thing", "ecg")[0].code == "ecg"
     assert v.to_procedure("Weird thing", "made_up_code")[0].code == "other:weird_thing"
 
 
+@pytest.mark.req("URS-002")
 def test_clean_label() -> None:
     assert clean_label("Chest X-ray e") == "Chest X-ray"
     assert clean_label("Vital signs") == "Vital signs"  # no letter eaten
