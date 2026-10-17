@@ -1,0 +1,546 @@
+{
+  "simulated": true,
+  "note": "Ground truth of the SIMULATED feed (planted problems and scripted interventions). The detection and effect-estimation code never reads it; it is only used for evaluation.",
+  "seed": 42,
+  "scenario": "demo",
+  "epoch": "2025-09-01T00:00:00+00:00",
+  "horizon_days": 600,
+  "season": {
+    "missed_visit_winter_months": {
+      "north": [
+        12,
+        1,
+        2
+      ],
+      "south": [
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  "problems": [
+    {
+      "id": "slow_S14",
+      "kind": "enrollment_lag",
+      "scope": "S14",
+      "onset_day": 36,
+      "detect_within_days": 450,
+      "description": "S14 enrolls at 35% of plan",
+      "onset_date": "2025-10-07"
+    },
+    {
+      "id": "slow_S26",
+      "kind": "enrollment_lag",
+      "scope": "S26",
+      "onset_day": 33,
+      "detect_within_days": 450,
+      "description": "S26 enrolls at 30% of plan",
+      "onset_date": "2025-10-04"
+    },
+    {
+      "id": "slow_S06",
+      "kind": "enrollment_lag",
+      "scope": "S06",
+      "onset_day": 6,
+      "detect_within_days": 450,
+      "description": "S06 enrolls at 30% of plan",
+      "onset_date": "2025-09-07"
+    },
+    {
+      "id": "never_S30",
+      "kind": "enrollment_lag",
+      "scope": "S30",
+      "onset_day": 38,
+      "detect_within_days": 150,
+      "description": "S30 never enrolls",
+      "onset_date": "2025-10-09"
+    },
+    {
+      "id": "backlog_S04",
+      "kind": "query_backlog",
+      "scope": "S04",
+      "onset_day": 8,
+      "detect_within_days": 240,
+      "description": "S04: high query rate and slow query closure -> growing backlog",
+      "onset_date": "2025-09-09"
+    },
+    {
+      "id": "backlog_S23",
+      "kind": "query_backlog",
+      "scope": "S23",
+      "onset_day": 27,
+      "detect_within_days": 240,
+      "description": "S23: high query rate and slow query closure -> growing backlog",
+      "onset_date": "2025-09-28"
+    },
+    {
+      "id": "backlog_S11",
+      "kind": "query_backlog",
+      "scope": "S11",
+      "onset_day": 15,
+      "detect_within_days": 280,
+      "description": "S11: growing backlog until staff retraining (intervention I1)",
+      "onset_date": "2025-09-16"
+    },
+    {
+      "id": "backlog_S27",
+      "kind": "query_backlog",
+      "scope": "S27",
+      "onset_day": 23,
+      "detect_within_days": 280,
+      "description": "S27: growing backlog until staff retraining (intervention I1)",
+      "onset_date": "2025-09-24"
+    },
+    {
+      "id": "overstock_S14",
+      "kind": "drug_overstock",
+      "scope": "S14",
+      "onset_day": 36,
+      "detect_within_days": 330,
+      "description": "S14: bulk upfront pushes sized to plan + slow enrollment -> expiry waste",
+      "onset_date": "2025-10-07"
+    },
+    {
+      "id": "shortfall_S36",
+      "kind": "drug_shortfall",
+      "scope": "S36",
+      "onset_day": 11,
+      "detect_within_days": 300,
+      "description": "S36: enrolls at 2.2x plan; IRT levels assume 8-day lead time, actual import lead time ~21 days",
+      "onset_date": "2025-09-12"
+    },
+    {
+      "id": "air_S15",
+      "kind": "costly_shipping_mode",
+      "scope": "S15",
+      "onset_day": 5,
+      "detect_within_days": 150,
+      "description": "S15: specimens flown although ground courier is within range",
+      "onset_date": "2025-09-06"
+    },
+    {
+      "id": "monitoring_ES",
+      "kind": "monitoring_inefficiency",
+      "scope": "ES",
+      "onset_day": 0,
+      "detect_within_days": 200,
+      "description": "ES: monitoring visits to sites in the same city are not batched",
+      "onset_date": "2025-09-01"
+    },
+    {
+      "id": "vendor_dm_cro",
+      "kind": "vendor_delay",
+      "scope": "M3",
+      "onset_day": 300,
+      "detect_within_days": 45,
+      "description": "Data-management CRO slips the DB-lock prerequisite (SDTM + edit checks)",
+      "onset_date": "2026-06-28"
+    },
+    {
+      "id": "milestone_dblock",
+      "kind": "milestone_at_risk",
+      "scope": "db_lock",
+      "onset_day": 300,
+      "detect_within_days": 120,
+      "description": "Vendor slip pushes the database-lock forecast past its target",
+      "onset_date": "2026-06-28"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "I1",
+      "code": "crf_retraining",
+      "target_site_ids": [
+        "S11",
+        "S27"
+      ],
+      "start_day": 280,
+      "start_date": "2026-06-08",
+      "action": "Retrain site staff on eCRF completion guidelines",
+      "metric": "query_rate_percent",
+      "true_effect": "works",
+      "expected_verdict": "likely_worked",
+      "mechanism": "query rate x0.35 and mean closure 10 days from the start day"
+    },
+    {
+      "id": "I2",
+      "code": "activate_backup",
+      "target_site_ids": [
+        "S39",
+        "S40"
+      ],
+      "start_day": 196,
+      "start_date": "2026-03-16",
+      "action": "Activate backup sites in the same country",
+      "metric": "regional_enrollment_rate_per_month",
+      "true_effect": "works",
+      "expected_verdict": "likely_worked",
+      "mechanism": "backup sites enroll 1.5/month from start + 14 d"
+    },
+    {
+      "id": "I3",
+      "code": "query_reminder_email",
+      "target_site_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S05",
+        "S08"
+      ],
+      "start_day": 250,
+      "start_date": "2026-05-09",
+      "action": "Send weekly open-query reminder e-mails to site coordinators",
+      "metric": "query_rate_percent",
+      "true_effect": "none",
+      "expected_verdict": "no_effect",
+      "mechanism": "no change in any simulator rate"
+    },
+    {
+      "id": "I4",
+      "code": "visit_reminder_sms",
+      "target_site_ids": [
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S25",
+        "S26",
+        "S27",
+        "S28"
+      ],
+      "start_day": 182,
+      "start_date": "2026-03-02",
+      "action": "Visit-reminder SMS programme for patients",
+      "metric": "missed_visit_rate_percent",
+      "true_effect": "coincidence",
+      "expected_verdict": "likely_coincidence",
+      "mechanism": "no effect; starts the day the northern winter ends, when missed visits fall at every northern site (winter multiplier on missed visits)"
+    }
+  ],
+  "site_truth": {
+    "S01": {
+      "rate_mult": 1.056,
+      "query_lambda": 0.309,
+      "query_close_mean_days": 11.1,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S02": {
+      "rate_mult": 0.956,
+      "query_lambda": 0.323,
+      "query_close_mean_days": 13.2,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S03": {
+      "rate_mult": 1.101,
+      "query_lambda": 0.372,
+      "query_close_mean_days": 13.6,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S04": {
+      "rate_mult": 1.075,
+      "query_lambda": 1.1,
+      "query_close_mean_days": 45.0,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S05": {
+      "rate_mult": 1.005,
+      "query_lambda": 0.329,
+      "query_close_mean_days": 9.0,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S06": {
+      "rate_mult": 0.3,
+      "query_lambda": 0.295,
+      "query_close_mean_days": 14.0,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S07": {
+      "rate_mult": 0.985,
+      "query_lambda": 0.311,
+      "query_close_mean_days": 12.2,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S08": {
+      "rate_mult": 1.191,
+      "query_lambda": 0.4,
+      "query_close_mean_days": 11.5,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S09": {
+      "rate_mult": 1.158,
+      "query_lambda": 0.349,
+      "query_close_mean_days": 13.3,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S10": {
+      "rate_mult": 0.93,
+      "query_lambda": 0.308,
+      "query_close_mean_days": 12.5,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S11": {
+      "rate_mult": 0.978,
+      "query_lambda": 1.0,
+      "query_close_mean_days": 40.0,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S12": {
+      "rate_mult": 0.933,
+      "query_lambda": 0.282,
+      "query_close_mean_days": 10.9,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S13": {
+      "rate_mult": 1.054,
+      "query_lambda": 0.413,
+      "query_close_mean_days": 12.0,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S14": {
+      "rate_mult": 0.35,
+      "query_lambda": 0.402,
+      "query_close_mean_days": 13.7,
+      "supply_policy": "push_bulk",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S15": {
+      "rate_mult": 1.083,
+      "query_lambda": 0.304,
+      "query_close_mean_days": 11.1,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "air_always"
+    },
+    "S16": {
+      "rate_mult": 0.996,
+      "query_lambda": 0.348,
+      "query_close_mean_days": 12.8,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S17": {
+      "rate_mult": 1.017,
+      "query_lambda": 0.386,
+      "query_close_mean_days": 9.5,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S18": {
+      "rate_mult": 1.14,
+      "query_lambda": 0.357,
+      "query_close_mean_days": 12.7,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S19": {
+      "rate_mult": 1.039,
+      "query_lambda": 0.349,
+      "query_close_mean_days": 12.3,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S20": {
+      "rate_mult": 0.922,
+      "query_lambda": 0.372,
+      "query_close_mean_days": 9.7,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S21": {
+      "rate_mult": 1.028,
+      "query_lambda": 0.309,
+      "query_close_mean_days": 13.3,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S22": {
+      "rate_mult": 1.193,
+      "query_lambda": 0.325,
+      "query_close_mean_days": 8.1,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S23": {
+      "rate_mult": 1.113,
+      "query_lambda": 1.1,
+      "query_close_mean_days": 45.0,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S24": {
+      "rate_mult": 1.142,
+      "query_lambda": 0.344,
+      "query_close_mean_days": 9.9,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S25": {
+      "rate_mult": 1.186,
+      "query_lambda": 0.301,
+      "query_close_mean_days": 12.2,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S26": {
+      "rate_mult": 0.3,
+      "query_lambda": 0.409,
+      "query_close_mean_days": 12.2,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S27": {
+      "rate_mult": 1.16,
+      "query_lambda": 1.0,
+      "query_close_mean_days": 40.0,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S28": {
+      "rate_mult": 1.045,
+      "query_lambda": 0.375,
+      "query_close_mean_days": 11.2,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S29": {
+      "rate_mult": 0.941,
+      "query_lambda": 0.387,
+      "query_close_mean_days": 13.7,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S30": {
+      "rate_mult": 0.0,
+      "query_lambda": 0.282,
+      "query_close_mean_days": 10.1,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S31": {
+      "rate_mult": 1.142,
+      "query_lambda": 0.309,
+      "query_close_mean_days": 12.3,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S32": {
+      "rate_mult": 0.91,
+      "query_lambda": 0.388,
+      "query_close_mean_days": 13.6,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S33": {
+      "rate_mult": 1.069,
+      "query_lambda": 0.377,
+      "query_close_mean_days": 11.8,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S34": {
+      "rate_mult": 0.967,
+      "query_lambda": 0.355,
+      "query_close_mean_days": 11.9,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S35": {
+      "rate_mult": 1.018,
+      "query_lambda": 0.292,
+      "query_close_mean_days": 10.5,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S36": {
+      "rate_mult": 2.2,
+      "query_lambda": 0.417,
+      "query_close_mean_days": 9.1,
+      "supply_policy": "predictive",
+      "lead_days": 21.0,
+      "ship_policy": "sop"
+    },
+    "S37": {
+      "rate_mult": 1.016,
+      "query_lambda": 0.354,
+      "query_close_mean_days": 13.5,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S38": {
+      "rate_mult": 1.025,
+      "query_lambda": 0.391,
+      "query_close_mean_days": 10.9,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S39": {
+      "rate_mult": 1.197,
+      "query_lambda": 0.385,
+      "query_close_mean_days": 12.2,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    },
+    "S40": {
+      "rate_mult": 1.078,
+      "query_lambda": 0.392,
+      "query_close_mean_days": 13.6,
+      "supply_policy": "predictive",
+      "lead_days": 8.0,
+      "ship_policy": "sop"
+    }
+  }
+}

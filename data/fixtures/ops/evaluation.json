@@ -1,0 +1,420 @@
+{
+  "simulated": true,
+  "evaluation_day": 599,
+  "seeds": [
+    42,
+    7,
+    19
+  ],
+  "detection_passed": 42,
+  "detection_total": 42,
+  "verdicts_correct": 11,
+  "verdicts_total": 12,
+  "confusion_matrix": {
+    "likely_worked": {
+      "likely_worked": 6
+    },
+    "no_effect": {
+      "no_effect": 2,
+      "inconclusive": 1
+    },
+    "likely_coincidence": {
+      "likely_coincidence": 3
+    }
+  },
+  "runs": [
+    {
+      "seed": 42,
+      "clock_day": 599.0,
+      "simulated": true,
+      "detection": [
+        {
+          "problem": "slow_S14",
+          "kind": "enrollment_lag",
+          "first_alert_day": 161.0,
+          "deadline_day": 486,
+          "detected_in_time": true
+        },
+        {
+          "problem": "slow_S26",
+          "kind": "enrollment_lag",
+          "first_alert_day": 224.0,
+          "deadline_day": 483,
+          "detected_in_time": true
+        },
+        {
+          "problem": "slow_S06",
+          "kind": "enrollment_lag",
+          "first_alert_day": 280.0,
+          "deadline_day": 456,
+          "detected_in_time": true
+        },
+        {
+          "problem": "never_S30",
+          "kind": "enrollment_lag",
+          "first_alert_day": 168.0,
+          "deadline_day": 188,
+          "detected_in_time": true
+        },
+        {
+          "problem": "backlog_S04",
+          "kind": "query_backlog",
+          "first_alert_day": 133.0,
+          "deadline_day": 248,
+          "detected_in_time": true
+        },
+        {
+          "problem": "backlog_S23",
+          "kind": "query_backlog",
+          "first_alert_day": 154.0,
+          "deadline_day": 267,
+          "detected_in_time": true
+        },
+        {
+          "problem": "backlog_S11",
+          "kind": "query_backlog",
+          "first_alert_day": 98.0,
+          "deadline_day": 295,
+          "detected_in_time": true
+        },
+        {
+          "problem": "backlog_S27",
+          "kind": "query_backlog",
+          "first_alert_day": 70.0,
+          "deadline_day": 303,
+          "detected_in_time": true
+        },
+        {
+          "problem": "overstock_S14",
+          "kind": "drug_overstock",
+          "first_alert_day": 126.0,
+          "deadline_day": 366,
+          "detected_in_time": true
+        },
+        {
+          "problem": "shortfall_S36",
+          "kind": "drug_shortfall",
+          "first_alert_day": 56.0,
+          "deadline_day": 311,
+          "detected_in_time": true
+        },
+        {
+          "problem": "air_S15",
+          "kind": "costly_shipping_mode",
+          "first_alert_day": 63.0,
+          "deadline_day": 155,
+          "detected_in_time": true
+        },
+        {
+          "problem": "monitoring_ES",
+          "kind": "monitoring_inefficiency",
+          "first_alert_day": 105.0,
+          "deadline_day": 200,
+          "detected_in_time": true
+        },
+        {
+          "problem": "vendor_dm_cro",
+          "kind": "vendor_delay",
+          "first_alert_day": 308.0,
+          "deadline_day": 345,
+          "detected_in_time": true
+        },
+        {
+          "problem": "milestone_dblock",
+          "kind": "milestone_at_risk",
+          "first_alert_day": 308.0,
+          "deadline_day": 420,
+          "detected_in_time": true
+        }
+      ],
+      "effects": [
+        {
+          "intervention": "I1",
+          "expected": "likely_worked",
+          "actual": "likely_worked",
+          "correct": true
+        },
+        {
+          "intervention": "I2",
+          "expected": "likely_worked",
+          "actual": "likely_worked",
+          "correct": true
+        },
+        {
+          "intervention": "I3",
+          "expected": "no_effect",
+          "actual": "no_effect",
+          "correct": true
+        },
+        {
+          "intervention": "I4",
+          "expected": "likely_coincidence",
+          "actual": "likely_coincidence",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "seed": 7,
+      "clock_day": 599.0,
+      "simulated": true,
+      "detection": [
+        {
+          "problem": "slow_S14",
+          "kind": "enrollment_lag",
+          "first_alert_day": 203.0,
+          "deadline_day": 486,
+          "detected_in_time": true
+        },
+        {
+          "problem": "slow_S26",
+          "kind": "enrollment_lag",
+          "first_alert_day": 378.0,
+          "deadline_day": 483,
+          "detected_in_time": true
+        },
+        {
+          "problem": "slow_S06",
+          "kind": "enrollment_lag",
+          "first_alert_day": 147.0,
+          "deadline_day": 456,
+          "detected_in_time": true
+        },
+        {
+          "problem": "never_S30",
+          "kind": "enrollment_lag",
+          "first_alert_day": 168.0,
+          "deadline_day": 188,
+          "detected_in_time": true
+        },
+        {
+          "problem": "backlog_S04",
+          "kind": "query_backlog",
+          "first_alert_day": 84.0,
+          "deadline_day": 248,
+          "detected_in_time": true
+        },
+        {
+          "problem": "backlog_S23",
+          "kind": "query_backlog",
+          "first_alert_day": 91.0,
+          "deadline_day": 267,
+          "detected_in_time": true
+        },
+        {
+          "problem": "backlog_S11",
+          "kind": "query_backlog",
+          "first_alert_day": 91.0,
+          "deadline_day": 295,
+          "detected_in_time": true
+        },
+        {
+          "problem": "backlog_S27",
+          "kind": "query_backlog",
+          "first_alert_day": 175.0,
+          "deadline_day": 303,
+          "detected_in_time": true
+        },
+        {
+          "problem": "overstock_S14",
+          "kind": "drug_overstock",
+          "first_alert_day": 126.0,
+          "deadline_day": 366,
+          "detected_in_time": true
+        },
+        {
+          "problem": "shortfall_S36",
+          "kind": "drug_shortfall",
+          "first_alert_day": 112.0,
+          "deadline_day": 311,
+          "detected_in_time": true
+        },
+        {
+          "problem": "air_S15",
+          "kind": "costly_shipping_mode",
+          "first_alert_day": 98.0,
+          "deadline_day": 155,
+          "detected_in_time": true
+        },
+        {
+          "problem": "monitoring_ES",
+          "kind": "monitoring_inefficiency",
+          "first_alert_day": 119.0,
+          "deadline_day": 200,
+          "detected_in_time": true
+        },
+        {
+          "problem": "vendor_dm_cro",
+          "kind": "vendor_delay",
+          "first_alert_day": 308.0,
+          "deadline_day": 345,
+          "detected_in_time": true
+        },
+        {
+          "problem": "milestone_dblock",
+          "kind": "milestone_at_risk",
+          "first_alert_day": 308.0,
+          "deadline_day": 420,
+          "detected_in_time": true
+        }
+      ],
+      "effects": [
+        {
+          "intervention": "I1",
+          "expected": "likely_worked",
+          "actual": "likely_worked",
+          "correct": true
+        },
+        {
+          "intervention": "I2",
+          "expected": "likely_worked",
+          "actual": "likely_worked",
+          "correct": true
+        },
+        {
+          "intervention": "I3",
+          "expected": "no_effect",
+          "actual": "inconclusive",
+          "correct": false
+        },
+        {
+          "intervention": "I4",
+          "expected": "likely_coincidence",
+          "actual": "likely_coincidence",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "seed": 19,
+      "clock_day": 599.0,
+      "simulated": true,
+      "detection": [
+        {
+          "problem": "slow_S14",
+          "kind": "enrollment_lag",
+          "first_alert_day": 140.0,
+          "deadline_day": 486,
+          "detected_in_time": true
+        },
+        {
+          "problem": "slow_S26",
+          "kind": "enrollment_lag",
+          "first_alert_day": 175.0,
+          "deadline_day": 483,
+          "detected_in_time": true
+        },
+        {
+          "problem": "slow_S06",
+          "kind": "enrollment_lag",
+          "first_alert_day": 175.0,
+          "deadline_day": 456,
+          "detected_in_time": true
+        },
+        {
+          "problem": "never_S30",
+          "kind": "enrollment_lag",
+          "first_alert_day": 168.0,
+          "deadline_day": 188,
+          "detected_in_time": true
+        },
+        {
+          "problem": "backlog_S04",
+          "kind": "query_backlog",
+          "first_alert_day": 196.0,
+          "deadline_day": 248,
+          "detected_in_time": true
+        },
+        {
+          "problem": "backlog_S23",
+          "kind": "query_backlog",
+          "first_alert_day": 77.0,
+          "deadline_day": 267,
+          "detected_in_time": true
+        },
+        {
+          "problem": "backlog_S11",
+          "kind": "query_backlog",
+          "first_alert_day": 126.0,
+          "deadline_day": 295,
+          "detected_in_time": true
+        },
+        {
+          "problem": "backlog_S27",
+          "kind": "query_backlog",
+          "first_alert_day": 147.0,
+          "deadline_day": 303,
+          "detected_in_time": true
+        },
+        {
+          "problem": "overstock_S14",
+          "kind": "drug_overstock",
+          "first_alert_day": 98.0,
+          "deadline_day": 366,
+          "detected_in_time": true
+        },
+        {
+          "problem": "shortfall_S36",
+          "kind": "drug_shortfall",
+          "first_alert_day": 63.0,
+          "deadline_day": 311,
+          "detected_in_time": true
+        },
+        {
+          "problem": "air_S15",
+          "kind": "costly_shipping_mode",
+          "first_alert_day": 42.0,
+          "deadline_day": 155,
+          "detected_in_time": true
+        },
+        {
+          "problem": "monitoring_ES",
+          "kind": "monitoring_inefficiency",
+          "first_alert_day": 91.0,
+          "deadline_day": 200,
+          "detected_in_time": true
+        },
+        {
+          "problem": "vendor_dm_cro",
+          "kind": "vendor_delay",
+          "first_alert_day": 308.0,
+          "deadline_day": 345,
+          "detected_in_time": true
+        },
+        {
+          "problem": "milestone_dblock",
+          "kind": "milestone_at_risk",
+          "first_alert_day": 308.0,
+          "deadline_day": 420,
+          "detected_in_time": true
+        }
+      ],
+      "effects": [
+        {
+          "intervention": "I1",
+          "expected": "likely_worked",
+          "actual": "likely_worked",
+          "correct": true
+        },
+        {
+          "intervention": "I2",
+          "expected": "likely_worked",
+          "actual": "likely_worked",
+          "correct": true
+        },
+        {
+          "intervention": "I3",
+          "expected": "no_effect",
+          "actual": "no_effect",
+          "correct": true
+        },
+        {
+          "intervention": "I4",
+          "expected": "likely_coincidence",
+          "actual": "likely_coincidence",
+          "correct": true
+        }
+      ]
+    }
+  ]
+}

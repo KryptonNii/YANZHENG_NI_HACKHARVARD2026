@@ -1,0 +1,227 @@
+# Operations (command-center) parameters — owner A6. Format: data/params/SCHEMA.md (validates with
+# `python -m trialpilot_contracts.params data/fixtures/ops/ops_params.yaml`).
+#
+# EVERY value below is an ASSUMPTION (assumption: true) with a wide range. None is presented as a published fact.
+# They drive (a) the SIMULATED feed and (b) the alert impact estimates. When A10's sourced parameter library
+# (data/params/) defines the alias listed in api/trialpilot_api/ops/params.py (LIBRARY_ALIASES), the sourced
+# value replaces the assumption automatically and provenance shows the source.
+defaults:
+  assumption: true
+  region: "global"
+  version: 1
+
+parameters:
+  # ---------------- money ----------------
+  - id: ops.cost.site_visit_fee
+    label: Site payment per completed patient visit
+    value_low: 300
+    value_mid: 600
+    value_high: 1200
+    unit: usd/visit
+    rationale: Order-of-magnitude placeholder for a per-visit investigator grant in a Phase 3 biologic trial; wide range until a sourced benchmark is added by A10.
+  - id: ops.cost.monitoring_site_day
+    label: On-site monitoring, CRA cost per site-day visited (excluding travel)
+    value_low: 800
+    value_mid: 1200
+    value_high: 2000
+    unit: usd/site_visit
+    rationale: Placeholder for a CRA day rate incl. preparation and report writing; replace with sourced cost.monitoring.onsite_visit.
+  - id: ops.cost.monitoring_trip_travel
+    label: Travel and expenses per monitoring trip (round trip)
+    value_low: 200
+    value_mid: 450
+    value_high: 1000
+    unit: usd/trip
+    rationale: Placeholder for fares, mileage, hotel and per diem of one CRA trip; this is what batching trips saves.
+  - id: ops.cost.courier_ground
+    label: Temperature-controlled specimen shipment by ground courier
+    value_low: 150
+    value_mid: 300
+    value_high: 550
+    unit: usd/shipment
+    rationale: Placeholder for a dry-ice / chilled ground shipment to a central lab within one region.
+  - id: ops.cost.courier_air
+    label: Temperature-controlled specimen shipment by air courier
+    value_low: 500
+    value_mid: 900
+    value_high: 1700
+    unit: usd/shipment
+    rationale: Placeholder; air specimen shipments are assumed roughly 2-4x the ground price for the same box.
+  - id: ops.cost.drug_kit
+    label: Cost of one investigational-product kit (manufacture, packaging, labelling, distribution)
+    value_low: 500
+    value_mid: 1500
+    value_high: 4000
+    unit: usd/kit
+    rationale: Very uncertain placeholder for a biologic kit; drives the value of expiry waste. Replace with sponsor data.
+  - id: ops.cost.emergency_resupply
+    label: Emergency (expedited) drug resupply shipment
+    value_low: 800
+    value_mid: 1500
+    value_high: 3500
+    unit: usd/shipment
+    rationale: Placeholder for an unplanned expedited cold-chain shipment to one site.
+  - id: ops.cost.trial_run_rate
+    label: Fixed operating cost of the running trial per month of extension
+    value_low: 150000
+    value_mid: 400000
+    value_high: 900000
+    unit: usd/month
+    rationale: Placeholder for CRO, vendor and sponsor running costs of a 40-site Phase 3 trial per extra month (excludes lost revenue). Wide range on purpose.
+  - id: ops.cost.site_staff_hour
+    label: Fully loaded site staff cost per hour (coordinator / nurse)
+    value_low: 40
+    value_mid: 70
+    value_high: 120
+    unit: usd/hour
+    rationale: Placeholder for a research coordinator's loaded hourly cost across countries.
+
+  # ---------------- time ----------------
+  - id: ops.time.query_resolution
+    label: Site staff time to resolve one data query
+    value_low: 10
+    value_mid: 20
+    value_high: 45
+    unit: minutes/query
+    rationale: Placeholder for looking up source documents, correcting the eCRF and answering the query.
+  - id: ops.time.patient_travel_per_visit
+    label: Patient round-trip travel time per on-site visit
+    value_low: 0.5
+    value_mid: 1.2
+    value_high: 2.5
+    unit: hours/visit
+    rationale: Placeholder; replaced by A2's distance-based patient travel model when the engine is available.
+  - id: ops.time.db_lock_cleaning
+    label: Time from last patient last visit to database lock
+    value_low: 30
+    value_mid: 45
+    value_high: 75
+    unit: days/milestone
+    rationale: Placeholder for final data cleaning, reconciliation and lock activities.
+
+  # ---------------- distances & logistics ----------------
+  - id: ops.dist.road_factor
+    label: Road distance / great-circle distance
+    value_low: 1.2
+    value_mid: 1.3
+    value_high: 1.4
+    unit: ratio/trip
+    rationale: Circuity assumption to turn straight-line distances into road distances.
+  - id: ops.dist.patient_round_trip
+    label: Patient round-trip distance per on-site visit
+    value_low: 20
+    value_mid: 40
+    value_high: 80
+    unit: km/visit
+    rationale: Placeholder until A2 computes patient travel from site locations.
+  - id: ops.ship.ground_max_km
+    label: Maximum road distance for a ground dry-ice specimen shipment (<= 48 h transit)
+    value_low: 700
+    value_mid: 900
+    value_high: 1200
+    unit: km/shipment
+    rationale: Operating-rule assumption; the simulator's shipping SOP and the costly_shipping_mode rule both use the mid value.
+  - id: ops.ship.specimen_package_kg
+    label: Gross weight of one specimen shipment (box, coolant, samples)
+    value_low: 4
+    value_mid: 8
+    value_high: 15
+    unit: kg/shipment
+    rationale: Placeholder for an insulated shipper with dry ice or gel packs.
+  - id: ops.ship.kit_kg
+    label: Shipped weight per drug kit incl. share of cold-chain packaging
+    value_low: 0.3
+    value_mid: 0.6
+    value_high: 1.2
+    unit: kg/kit
+    rationale: Placeholder for a pre-filled syringe kit with its share of an insulated shipper.
+
+  # ---------------- emission factors (to be replaced by A10's sourced factors) ----------------
+  - id: ops.ef.car_km
+    label: Average car, per km
+    value_low: 0.12
+    value_mid: 0.17
+    value_high: 0.22
+    unit: kg_co2e/km
+    rationale: Placeholder range for an average car; A10 alias ef.travel.car.average_km (UK government GHG conversion factors) replaces it.
+  - id: ops.ef.rail_pkm
+    label: Rail, per passenger-km
+    value_low: 0.005
+    value_mid: 0.035
+    value_high: 0.06
+    unit: kg_co2e/passenger_km
+    rationale: Placeholder range spanning low-carbon electric and diesel rail.
+  - id: ops.ef.flight_pkm
+    label: Short/medium-haul flight, per passenger-km (incl. non-CO2 uplift uncertainty)
+    value_low: 0.12
+    value_mid: 0.18
+    value_high: 0.28
+    unit: kg_co2e/passenger_km
+    rationale: Placeholder range; the high end reflects radiative-forcing uplift.
+  - id: ops.ef.freight_road_tkm
+    label: Courier van freight, per tonne-km
+    value_low: 0.3
+    value_mid: 0.6
+    value_high: 1.0
+    unit: kg_co2e/tonne_km
+    rationale: Placeholder; small-parcel van courier is far less efficient per tonne-km than full HGVs.
+  - id: ops.ef.freight_air_tkm
+    label: Air freight, per tonne-km (incl. non-CO2 uplift uncertainty)
+    value_low: 0.8
+    value_mid: 1.3
+    value_high: 2.2
+    unit: kg_co2e/tonne_km
+    rationale: Placeholder range for belly/dedicated air freight.
+  - id: ops.ef.drug_kit_production
+    label: Production footprint of one biologic kit
+    value_low: 2
+    value_mid: 10
+    value_high: 50
+    unit: kg_co2e/kit
+    rationale: Highly uncertain placeholder (no product-specific LCA available); counts only for wasted kits.
+
+  # ---------------- drug supply ----------------
+  - id: ops.supply.lead_time
+    label: Depot-to-site resupply lead time
+    value_low: 5
+    value_mid: 8
+    value_high: 14
+    unit: days/shipment
+    rationale: Placeholder for IRT order to site receipt incl. customs-free regional distribution.
+  - id: ops.supply.shelf_life_at_site
+    label: Remaining shelf life of a kit when it reaches the site
+    value_low: 240
+    value_mid: 300
+    value_high: 365
+    unit: days/kit
+    rationale: Placeholder; short remaining shelf life is what turns slow enrollment into expiry waste.
+
+  # ---------------- simulation knobs (feed realism; documented in ground_truth.json) ----------------
+  - id: ops.rate.missed_visit_base
+    label: Share of scheduled visits missed (outside winter)
+    value_low: 0.04
+    value_mid: 0.07
+    value_high: 0.10
+    unit: share/visit
+    rationale: Simulation knob; plausible range for an outpatient biologic trial.
+  - id: ops.rate.missed_visit_winter_mult
+    label: Winter multiplier on missed visits (respiratory season, local hemisphere)
+    value_low: 2.0
+    value_mid: 2.5
+    value_high: 3.0
+    unit: ratio/visit
+    rationale: Simulation knob that creates the seasonal effect the coincidence case relies on.
+  - id: ops.rate.queries_per_visit
+    label: Data queries opened per completed visit (normal site)
+    value_low: 0.2
+    value_mid: 0.35
+    value_high: 0.5
+    unit: queries/visit
+    rationale: Simulation knob for a typical site with standard edit checks.
+  - id: ops.rate.dropout_per_year
+    label: Patient withdrawal rate
+    value_low: 0.05
+    value_mid: 0.10
+    value_high: 0.20
+    unit: share/patient_year
+    rationale: Simulation knob; also used for the planned visit volume.
