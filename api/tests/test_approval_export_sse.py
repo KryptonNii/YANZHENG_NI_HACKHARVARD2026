@@ -105,7 +105,7 @@ def test_export_pdf_lists_signatures(client: TestClient, design_id: str) -> None
                               headers=AUTHOR).json()["approval_id"]
     _sign(client, approval_id, REVIEWER, "reviewed")
     r = client.get(f"/api/export/scenario/{s['id']}.csv")
-    assert "signature,riley.reviewer" in r.text
+    assert "signature,riley.reviewer" in r.text and "Riley" in r.text  # printed name
     assert client.get(f"/api/export/scenario/{s['id']}.pdf").content[:5] == b"%PDF-"
 
 

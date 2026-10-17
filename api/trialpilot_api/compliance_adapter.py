@@ -172,7 +172,8 @@ class ComplianceAdapter:
         meanings = REQUIRED_MEANINGS.get(record_type, ["approved"])
         req = ApprovalRequest(
             id=str(uuid.uuid4()), record_type=record_type, record_id=record_id,  # type: ignore[arg-type]
-            author=author, required_meanings=meanings, status="pending", signatures=[],
+            author=author, record_hash=record_hash, required_meanings=meanings, status="pending",
+            created_at=utcnow_iso(), title=title, signatures=[],
         )
         with Session(self.engine) as s:
             s.add(ApprovalStubRow(

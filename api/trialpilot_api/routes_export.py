@@ -125,8 +125,8 @@ def build_csv(data: dict[str, Any]) -> str:
         w.writerow(["approval", approval.id, "", "", "", "", approval.status])
         for s in approval.signatures:
             w.writerow(["signature", s.signer, "", "", "", "",
-                        f"{s.meaning} | role {s.role} | {s.signed_at.isoformat()} | "
-                        f"record_hash {s.record_hash}"])
+                        f"{s.signer_name} | {s.meaning} | "
+                        f"role {s.role} | {s.signed_at.isoformat()} | record_hash {s.record_hash}"])
     return buf.getvalue()
 
 
@@ -234,11 +234,12 @@ def build_pdf(data: dict[str, Any]) -> bytes:
     story += [Spacer(1, 4 * mm), p("Signatures", styles["Heading2"])]
     approval: ApprovalRequest | None = data["approval"]
     if approval and approval.signatures:
-        rows = [["Signer", "Role", "Meaning", "Signed (UTC)"]]
+        rows = [["Signer (printed name)", "Role", "Meaning", "Signed (UTC)"]]
         for s in approval.signatures:
-            rows.append([s.signer, s.role, s.meaning,
+            rows.append([p(f"{s.signer_name} ({s.signer})", small),
+                         s.role, s.meaning.upper(),
                          s.signed_at.isoformat(timespec="seconds").replace("+00:00", "Z")])
-        story.append(table(rows, [50 * mm, 30 * mm, 30 * mm, 60 * mm]))
+        story.append(table(rows, [60 * mm, 25 * mm, 30 * mm, 55 * mm]))
         story.append(p(f"Signatures are bound to record hash {row.record_hash}.", small))
     else:
         status = f"approval request {approval.id}: {approval.status}" if approval else row.status
