@@ -19,7 +19,7 @@ make dev       # API on http://localhost:8000, web on http://localhost:5173
 make test      # all Python + web tests
 ```
 
-Or with Docker: `docker compose up` (API :8000, web :5173).
+Or with Docker: `docker compose up --build`, then open http://127.0.0.1:8000 (API + web, offline by default).
 
 ## Repository layout
 

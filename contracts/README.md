@@ -30,7 +30,7 @@ TypeScript: `import type { ScenarioResult } from "../../contracts";` (from `web/
 ## Parameter library
 
 ```bash
-uv run --project contracts python -m trialpilot_contracts.params data/params
+uv run --project contracts python -m trialpilot_contracts data/params
 ```
 
 Format and rules: `data/params/SCHEMA.md`.

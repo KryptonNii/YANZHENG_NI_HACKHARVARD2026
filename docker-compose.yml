@@ -1,0 +1,32 @@
+# TrialPilot for judges:  docker compose up --build   →  http://127.0.0.1:8000
+# One image (built by A5's Dockerfile) serves the FastAPI backend under /api and the built web app at /.
+# Ports are bound to 127.0.0.1 only; put a reverse proxy (Caddy, see deploy/) in front to expose it.
+# Runs offline by default (cached fixtures, no network calls). Set DEMO_OFFLINE=0 in .env for live imports.
+name: trialpilot
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    image: trialpilot:local
+    ports:
+      - "127.0.0.1:${API_PORT:-8000}:8000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DEMO_OFFLINE: ${DEMO_OFFLINE:-1}
+      TP_DATA_DIR: /data
+    volumes:
+      - tp-data:/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=3)"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    restart: unless-stopped
+
+volumes:
+  tp-data:

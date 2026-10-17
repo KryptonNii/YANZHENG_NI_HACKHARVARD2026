@@ -2,7 +2,7 @@
 
     load_params("data/params")            -> dict[str, Parameter]  (sorted by id)
     param_set_version(params)             -> "3f9a1c0b2d4e"         (first 12 hex of sha256)
-    python -m trialpilot_contracts.params data/params   # validate from the command line
+    python -m trialpilot_contracts data/params   # validate from the command line
 """
 
 from __future__ import annotations

@@ -27,3 +27,17 @@ def test_generated_files_are_up_to_date() -> None:
         capture_output=True, text=True,
     )
     assert proc.returncode == 0, proc.stderr
+
+
+def test_generator_is_deterministic() -> None:
+    import importlib.util
+
+    spec = importlib.util.spec_from_file_location("tp_gen", REPO / "contracts" / "gen.py")
+    assert spec and spec.loader
+    gen = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(gen)
+    first, second = gen.render(), gen.render()
+    assert first == second
+    assert len(first) == 18  # 17 JSON Schemas + contracts.ts
+    for text in first.values():
+        assert "\r" not in text and text.endswith("\n")

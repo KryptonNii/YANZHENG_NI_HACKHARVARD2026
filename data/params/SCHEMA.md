@@ -48,7 +48,7 @@ parameters:
 All problems are reported at once. Check the library from the repo root:
 
 ```bash
-uv run --project contracts python -m trialpilot_contracts.params data/params
+uv run --project contracts python -m trialpilot_contracts data/params
 # OK: 42 parameters (7 assumptions) in data/params, parameter_set_version=3f9a1c0b2d4e
 ```
 
