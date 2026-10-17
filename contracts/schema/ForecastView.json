@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "MetricRange": {
+      "anyOf": [
+        {
+          "properties": {
+            "p10": {
+              "type": "number"
+            },
+            "p50": {
+              "type": "number"
+            },
+            "p90": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "properties": {
+            "p10": {
+              "type": "null"
+            },
+            "p50": {
+              "type": "null"
+            },
+            "p90": {
+              "type": "null"
+            }
+          }
+        }
+      ],
+      "description": "P10/P50/P90 of a metric. All three null = unknown (a required input is missing; \u00a72 rule 2: unknown \u2260 zero).",
+      "properties": {
+        "p10": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "P10"
+        },
+        "p50": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "P50"
+        },
+        "p90": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "P90"
+        },
+        "unit": {
+          "enum": [
+            "usd",
+            "hours",
+            "kg_co2e",
+            "months",
+            "patients",
+            "percent",
+            "kits",
+            "count"
+          ],
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "p10",
+        "p50",
+        "p90",
+        "unit"
+      ],
+      "title": "MetricRange",
+      "type": "object"
+    }
+  },
+  "description": "Forecast display subset; extra producer fields are ignored (v4, A8).",
+  "properties": {
+    "months_to_full_enrollment": {
+      "$ref": "#/$defs/MetricRange"
+    },
+    "milestone_dates": {
+      "additionalProperties": {
+        "$ref": "#/$defs/MetricRange"
+      },
+      "title": "Milestone Dates",
+      "type": "object"
+    },
+    "enrollment_curve": {
+      "items": {
+        "maxItems": 4,
+        "minItems": 4,
+        "prefixItems": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "number"
+          }
+        ],
+        "type": "array"
+      },
+      "title": "Enrollment Curve",
+      "type": "array"
+    }
+  },
+  "required": [
+    "months_to_full_enrollment"
+  ],
+  "title": "ForecastView",
+  "type": "object"
+}

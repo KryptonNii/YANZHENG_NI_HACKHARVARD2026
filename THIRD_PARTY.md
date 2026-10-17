@@ -14,12 +14,14 @@ packages — regenerate with `make licenses` after adding a dependency.
 | @testing-library/react | MIT | web (dev) | component tests | ok | node_modules/@testing-library/react@16.3.3 |
 | @testing-library/user-event | MIT | web (dev) | component tests | ok | node_modules/@testing-library/user-event@14.6.8 |
 | @types/d3-geo | MIT | web (dev) | type definitions | ok | node_modules/@types/d3-geo@3.1.1 |
+| @types/geojson | MIT | web (dev) | type definitions | ok | node_modules/@types/geojson@7946.0.16 |
 | @types/node | MIT | web (dev) | type definitions | ok | node_modules/@types/node@22.20.5 |
 | @types/react | MIT | web (dev) | type definitions | ok | node_modules/@types/react@18.3.31 |
 | @types/react-dom | MIT | web (dev) | type definitions | ok | node_modules/@types/react-dom@18.3.7 |
 | @types/topojson-client | MIT | web (dev) | type definitions | ok | node_modules/@types/topojson-client@3.1.5 |
 | @types/topojson-specification | MIT | web (dev) | type definitions | ok | node_modules/@types/topojson-specification@1.0.5 |
 | @vitejs/plugin-react | MIT | web (dev) | build | ok | node_modules/@vitejs/plugin-react@4.7.0 |
+| anthropic | MIT | api | protocol extraction LLM client | ok | anthropic-1.15.0.dist-info |
 | argon2-cffi | MIT | api | PIN hashing for e-signatures | ok | argon2_cffi-25.1.0.dist-info |
 | autoprefixer | MIT | web (dev) | CSS build | ok | node_modules/autoprefixer@10.6.1 |
 | cross-env | MIT | web (dev) | scripts | ok | node_modules/cross-env@7.0.3 |
@@ -27,21 +29,24 @@ packages — regenerate with `make licenses` after adding a dependency.
 | fastapi | MIT | api | HTTP API | ok | fastapi-0.143.3.dist-info |
 | httpx | BSD-3-Clause | api | HTTP client (ClinicalTrials.gov) / test client | ok | httpx-0.28.1.dist-info |
 | jsdom | MIT | web (dev) | test DOM | ok | node_modules/jsdom@25.0.1 |
-| jsonschema | MIT | contracts | contract tests | ok | jsonschema-4.26.0.dist-info |
+| jsonschema | MIT | contracts, science | contract tests | ok | jsonschema-4.26.0.dist-info |
+| markdown | BSD-3-Clause | validation |  | ok | markdown-3.11.1.dist-info |
+| mcp | MIT | api | read-only MCP server (official Python SDK) | ok | mcp-2.3.0.dist-info |
 | mypy | MIT | contracts, engine | type checking | ok | mypy-2.4.0.dist-info |
-| numpy | BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0 | api, engine | Monte Carlo sampling | ok | numpy-2.5.4.dist-info |
+| numpy | BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0 | api, engine, science | Monte Carlo sampling | ok | numpy-2.5.4.dist-info |
+| pdfplumber | MIT License | api | protocol PDF text/table extraction | ok | pdfplumber-0.11.10.dist-info |
 | postcss | MIT | web (dev) | CSS build | ok | node_modules/postcss@8.5.30 |
-| pydantic | MIT | api, contracts, engine | data models / validation (contracts) | ok | pydantic-2.14.1.dist-info |
+| pydantic | MIT | api, contracts, engine, science | data models / validation (contracts) | ok | pydantic-2.14.1.dist-info |
 | pydantic-settings | MIT | api | settings from env / .env | ok | pydantic_settings-2.16.0.dist-info |
-| pytest | MIT | api, contracts, engine | tests | ok | pytest-9.1.1.dist-info |
+| pytest | MIT | api, contracts, engine, science, validation | tests | ok | pytest-9.1.1.dist-info |
 | python-multipart | Apache-2.0 | api | PDF upload | ok | python_multipart-0.0.32.dist-info |
-| pyyaml | MIT | api, contracts | parameter library YAML | ok | pyyaml-6.0.3.dist-info |
+| pyyaml | MIT | api, contracts, science, validation | parameter library YAML | ok | pyyaml-6.0.3.dist-info |
 | react | MIT | web | UI | ok | node_modules/react@18.3.1 |
 | react-dom | MIT | web | UI | ok | node_modules/react-dom@18.3.1 |
 | react-router-dom | MIT | web | routing | ok | node_modules/react-router-dom@6.30.6 |
 | recharts | MIT | web | charts | ok | node_modules/recharts@2.15.4 |
 | reportlab | BSD License | api | PDF generation | ok | reportlab-5.0.1.dist-info |
-| ruff | MIT | api, contracts, engine | lint | ok | ruff-0.17.1.dist-info |
+| ruff | MIT | api, contracts, engine, science, validation | lint | ok | ruff-0.17.1.dist-info |
 | sqlmodel | MIT | api | SQLite ORM | ok | sqlmodel-0.0.48.dist-info |
 | sse-starlette | BSD-3-Clause | api | server-sent events (command center feed) | ok | sse_starlette-3.5.0.dist-info |
 | tailwindcss | MIT | web (dev) | styling | ok | node_modules/tailwindcss@3.4.19 |
@@ -60,8 +65,20 @@ Copyrighted documents (e.g. GAMP 5) are linked, never committed.
 
 | Source | Licence / terms | Used for | Owner | Check at |
 |---|---|---|---|---|
-| ClinicalTrials.gov API v2 (trial registry data) | to confirm by A4 | trial import (cached fixtures) | A4 | https://clinicaltrials.gov/about-site/terms-conditions |
-| GeoNames | CC BY 4.0 (per A4 plan) — to confirm | offline geocoding of trial sites | A4 | https://www.geonames.org/about.html |
+| ClinicalTrials.gov API v2 (trial registry data) | No charge; redistribution terms below (confirmed in handoffs/A4.md, 2026-10-16) | trial import (cached fixtures) | A4 | https://clinicaltrials.gov/about-site/terms-conditions |
+| GeoNames | CC BY 4.0 (confirmed in handoffs/A4.md, 2026-10-16) | offline geocoding of trial sites | A4 | https://www.geonames.org/about.html |
 | UK Government GHG Conversion Factors | to confirm by A10 | emission factors | A10 | https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting |
 | Griffiths, Fox, Williamson et al., BMJ Open 2024 (Low Carbon Clinical Trials Group method) | to confirm by A10 | carbon module framework; CASPS/PRIMETIME published values (cited, not copied) | A10 | https://bmjopen.bmj.com/content/14/1/e075755 |
 | ISPE GAMP 5 Guide | copyrighted — linked only, never committed | validation approach reference | A7 | https://ispe.org/publications/guidance-documents/gamp-5-guide-2nd-edition |
+
+ClinicalTrials.gov: [A4's source review](handoffs/A4.md) records the
+[terms](https://clinicaltrials.gov/about-site/terms-conditions) last updated January 31, 2023.
+Redistribution should credit ClinicalTrials.gov, keep the data current, include the date
+ClinicalTrials.gov processed it, and describe modifications. Some content may carry
+third-party copyright. Import attribution records the source, processing timestamp, fetch
+time and modifications; sponsor protocol PDFs are linked rather than committed.
+
+Contains data from [GeoNames](https://www.geonames.org/about.html), licensed under
+[Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
+Modifications (name normalization, alternate-name filtering, coordinate rounding and
+column selection) are listed in the [offline index notes](data/fixtures/ctgov/geonames/README.md).

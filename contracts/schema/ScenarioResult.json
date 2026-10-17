@@ -1,6 +1,49 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
+    "ForecastView": {
+      "description": "Forecast display subset; extra producer fields are ignored (v4, A8).",
+      "properties": {
+        "months_to_full_enrollment": {
+          "$ref": "#/$defs/MetricRange"
+        },
+        "milestone_dates": {
+          "additionalProperties": {
+            "$ref": "#/$defs/MetricRange"
+          },
+          "title": "Milestone Dates",
+          "type": "object"
+        },
+        "enrollment_curve": {
+          "items": {
+            "maxItems": 4,
+            "minItems": 4,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Enrollment Curve",
+          "type": "array"
+        }
+      },
+      "required": [
+        "months_to_full_enrollment"
+      ],
+      "title": "ForecastView",
+      "type": "object"
+    },
     "Levers": {
       "properties": {
         "remote_monitoring_share": {
@@ -130,7 +173,8 @@
             "months",
             "patients",
             "percent",
-            "kits"
+            "kits",
+            "count"
           ],
           "title": "Unit",
           "type": "string"
@@ -222,6 +266,42 @@
       ],
       "title": "ProvenanceItem",
       "type": "object"
+    },
+    "SupplyView": {
+      "description": "Supply display subset; extra producer fields are ignored (v4, A8).",
+      "properties": {
+        "kits_needed": {
+          "$ref": "#/$defs/MetricRange"
+        },
+        "kits_produced": {
+          "$ref": "#/$defs/MetricRange"
+        },
+        "kits_wasted": {
+          "$ref": "#/$defs/MetricRange"
+        },
+        "waste_share": {
+          "$ref": "#/$defs/MetricRange"
+        },
+        "shipments": {
+          "$ref": "#/$defs/MetricRange"
+        },
+        "stockout_probability": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Stockout Probability",
+          "type": "number"
+        }
+      },
+      "required": [
+        "kits_needed",
+        "kits_produced",
+        "kits_wasted",
+        "waste_share",
+        "shipments",
+        "stockout_probability"
+      ],
+      "title": "SupplyView",
+      "type": "object"
     }
   },
   "properties": {
@@ -273,6 +353,28 @@
       "format": "date-time",
       "title": "Computed At",
       "type": "string"
+    },
+    "forecast": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ForecastView"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "supply": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/SupplyView"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
     }
   },
   "required": [

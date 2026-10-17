@@ -30,7 +30,9 @@ pnpm-debug.log*
 
 # --- Generated outputs ---
 validation/out/
-science/out/
+science/out/*
+!science/out/results.json
+!science/out/results.schema.json
 playwright-report/
 test-results/
 

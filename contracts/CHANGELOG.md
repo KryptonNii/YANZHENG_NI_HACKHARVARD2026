@@ -3,6 +3,40 @@
 Decisions on `handoffs/*_CONTRACT_CHANGES.md`. Accepted changes are applied to `trialpilot_contracts/models.py`,
 regenerated (`contracts/schema/`, `web/src/contracts.ts`) and listed here. A §2 rule is never weakened.
 
+## v4 — 2026-10-16 ET — ACCEPTED: forecast / supply views, count unit, site activation (A3, A6, A8)
+**Accepted changes.**
+- A3's `handoffs/A3.md` unit request and A8's unit note: add `"count"` to `MetricRange.unit`.
+  Shipment counts can now pass normal validation; they must not be relabelled as kits.
+- A8 `handoffs/A8_CONTRACT_CHANGES.md`: add `ScenarioResult.forecast: Optional[ForecastView] = None`
+  and `supply: Optional[SupplyView] = None`. Existing inputs may omit both or send null.
+  `ForecastView` contains `months_to_full_enrollment: MetricRange`, `milestone_dates: dict[str, MetricRange]`
+  (default empty) and `enrollment_curve: list[tuple[float, float, float, float]]` (default empty),
+  with each JSON row `[month, p10, p50, p90]` representing cumulative patients.
+  `SupplyView` requires `kits_needed`, `kits_produced`, `kits_wasted`, `waste_share`, `shipments`
+  (all `MetricRange`) and `stockout_probability: float` (0..1, required, no zero default).
+  Both views ignore extra producer fields, as A8 proposed. They are re-exported by the package.
+- A6 `handoffs/A6_CONTRACT_CHANGES.md`: add `"site_activated"` to `EventType`.
+  A6's producer convention is a populated `site_id`, `source_system="CTMS"`, the existing `simulated` label,
+  and payload keys `activation_date`, `country`, `region`, `status="open_to_enrollment"`.
+  The existing generic `OpsEvent.payload: dict` is unchanged.
+- Generator: map tuple annotations to TypeScript tuples, so enrollment rows retain exactly four positions.
+  Regenerate all schemas and `web/src/contracts.ts` from the models.
+
+**Why accepted.** These are additive enum values and optional scenario fields; older scenario inputs remain valid.
+Every nested `MetricRange` still requires all three numbers or all three null: unknown is never replaced with zero.
+NaN normalization and infinity rejection are unchanged. Missing detail remains `None`, and missing stockout risk is
+rejected inside a supplied `SupplyView` rather than silently converted to 0. No changes to science-check JSON.
+
+**Rejected proposals.** None among the A3 count request, A6 site activation proposal and A8 forecast/supply proposal.
+No other contract proposals were triaged in this scoped update.
+
+**Consumer notes.** Producers may pass the display subset of A3's `to_dict()` output; additional producer keys are ignored.
+The contract does not synthesize these views. Consumers must handle null details and unknown nested percentiles.
+Generated TypeScript describes serialized output: both detail keys are present and nullable after model serialization.
+
+**Validation.** Regression tests cover omitted/null details, nested unknowns (including count), partial-unknown rejection
+in pydantic and JSON Schema, A3-style extra fields, four-number curve rows, stockout bounds and the CTMS activation event.
+
 ## v3 — 2026-10-16 21:44 ET — ACCEPTED (stricter than proposed): signature / approval fields (A7 proposals 1–3)
 **Change.**
 - `Signature.signer_name: str` — **required** (A7 proposed `Optional[str] = None`).

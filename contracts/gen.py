@@ -100,6 +100,11 @@ class TsWriter:
         if ann is list or origin is list:
             inner = self.ts(args[0], hint) if args else "unknown"
             return f"({inner})[]" if " | " in inner else f"{inner}[]"
+        if origin is tuple:
+            if len(args) == 2 and args[1] is Ellipsis:
+                inner = self.ts(args[0], hint)
+                return f"({inner})[]" if " | " in inner else f"{inner}[]"
+            return "[" + ", ".join(self.ts(a, hint) for a in args) + "]"
         if origin is Literal:
             return self.literal_name(ann, hint)
         if origin in (Union, types.UnionType):

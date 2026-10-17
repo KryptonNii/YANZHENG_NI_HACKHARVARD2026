@@ -21,7 +21,7 @@ class MetricRange(BaseModel):
     p10: Optional[float]  # null = unknown; then p50 and p90 are null too
     p50: Optional[float]
     p90: Optional[float]
-    unit: Literal["usd", "hours", "kg_co2e", "months", "patients", "percent", "kits"]
+    unit: Literal["usd", "hours", "kg_co2e", "months", "patients", "percent", "kits", "count"]
 
     @field_validator(*_PERCENTILES)
     @classmethod
@@ -111,6 +111,21 @@ class ModuleBreakdown(BaseModel):
     co2e_kg: MetricRange
     provenance: list[ProvenanceItem]
 
+class ForecastView(BaseModel):
+    """Forecast display subset; extra producer fields are ignored (v4, A8)."""
+    months_to_full_enrollment: MetricRange       # unit months
+    milestone_dates: dict[str, MetricRange] = Field(default_factory=dict)  # months from study start
+    enrollment_curve: list[tuple[float, float, float, float]] = Field(default_factory=list)  # (month, p10, p50, p90) cumulative patients
+
+class SupplyView(BaseModel):
+    """Supply display subset; extra producer fields are ignored (v4, A8)."""
+    kits_needed: MetricRange
+    kits_produced: MetricRange
+    kits_wasted: MetricRange
+    waste_share: MetricRange                    # unit percent
+    shipments: MetricRange                      # unit count
+    stockout_probability: float = Field(ge=0, le=1)  # share of draws with any stockout; no zero default
+
 class ScenarioResult(BaseModel):
     design_id: str
     levers: Levers
@@ -124,12 +139,15 @@ class ScenarioResult(BaseModel):
     warnings: list[str] = []
     parameter_set_version: str
     computed_at: datetime
+    forecast: Optional[ForecastView] = None
+    supply: Optional[SupplyView] = None
 
 # ---------- Operations (command center) ----------
 EventType = Literal[
   "visit_completed", "visit_missed", "patient_enrolled", "patient_withdrawn",
   "query_opened", "query_closed", "monitoring_trip", "sample_shipment",
-  "drug_shipment", "drug_dispensed", "drug_expired", "vendor_milestone", "budget_spend"]
+  "drug_shipment", "drug_dispensed", "drug_expired", "vendor_milestone", "budget_spend",
+  "site_activated"]
 
 class OpsEvent(BaseModel):
     id: str; trial_id: str; site_id: Optional[str]

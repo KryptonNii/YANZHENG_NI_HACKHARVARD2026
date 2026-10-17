@@ -21,7 +21,8 @@ export type EventType =
   | "drug_dispensed"
   | "drug_expired"
   | "vendor_milestone"
-  | "budget_spend";
+  | "budget_spend"
+  | "site_activated";
 
 export type Role = "author" | "reviewer" | "qa" | "admin" | "viewer";
 
@@ -34,7 +35,8 @@ export type MetricRangeUnit =
   | "months"
   | "patients"
   | "percent"
-  | "kits";
+  | "kits"
+  | "count";
 
 export type ProcedureSampleTemp = "ambient" | "refrigerated" | "frozen_-20" | "frozen_-80";
 
@@ -234,6 +236,27 @@ export interface ModuleBreakdown {
   provenance: ProvenanceItem[];
 }
 
+export interface ForecastView {
+  /** unit months */
+  months_to_full_enrollment: MetricRange;
+  /** months from study start */
+  milestone_dates: Record<string, MetricRange>;
+  /** (month, p10, p50, p90) cumulative patients */
+  enrollment_curve: [number, number, number, number][];
+}
+
+export interface SupplyView {
+  kits_needed: MetricRange;
+  kits_produced: MetricRange;
+  kits_wasted: MetricRange;
+  /** unit percent */
+  waste_share: MetricRange;
+  /** unit count */
+  shipments: MetricRange;
+  /** share of draws with any stockout; no zero default */
+  stockout_probability: number;
+}
+
 export interface ScenarioResult {
   design_id: string;
   levers: Levers;
@@ -249,6 +272,8 @@ export interface ScenarioResult {
   warnings: string[];
   parameter_set_version: string;
   computed_at: string;
+  forecast: ForecastView | null;
+  supply: SupplyView | null;
 }
 
 export interface OpsEvent {

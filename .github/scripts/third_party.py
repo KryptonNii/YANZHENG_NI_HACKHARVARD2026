@@ -46,6 +46,8 @@ USED_FOR: dict[str, str] = {
     "argon2-cffi": "PIN hashing for e-signatures",
     "reportlab": "PDF generation",
     "pdfplumber": "protocol PDF text/table extraction",
+    "anthropic": "protocol extraction LLM client",
+    "mcp": "read-only MCP server (official Python SDK)",
     "pytest": "tests",
     "jsonschema": "contract tests",
     "ruff": "lint",
@@ -76,9 +78,12 @@ USED_FOR: dict[str, str] = {
 
 # Data and documents: (name, licence as recorded by the owner, used for, owner, where to check).
 DATA: list[tuple[str, str, str, str, str]] = [
-    ("ClinicalTrials.gov API v2 (trial registry data)", "to confirm by A4", "trial import (cached fixtures)",
+    ("ClinicalTrials.gov API v2 (trial registry data)",
+     "No charge; redistribution terms below (confirmed in handoffs/A4.md, 2026-10-16)",
+     "trial import (cached fixtures)",
      "A4", "https://clinicaltrials.gov/about-site/terms-conditions"),
-    ("GeoNames", "CC BY 4.0 (per A4 plan) — to confirm", "offline geocoding of trial sites", "A4",
+    ("GeoNames", "CC BY 4.0 (confirmed in handoffs/A4.md, 2026-10-16)",
+     "offline geocoding of trial sites", "A4",
      "https://www.geonames.org/about.html"),
     ("UK Government GHG Conversion Factors", "to confirm by A10", "emission factors", "A10",
      "https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting"),
@@ -211,6 +216,20 @@ def render() -> tuple[str, list[str]]:
         "|---|---|---|---|---|",
     ]
     lines += [f"| {n} | {lic} | {use} | {own} | {url} |" for n, lic, use, own, url in DATA]
+    lines += [
+        "",
+        "ClinicalTrials.gov: [A4's source review](handoffs/A4.md) records the",
+        "[terms](https://clinicaltrials.gov/about-site/terms-conditions) last updated January 31, 2023.",
+        "Redistribution should credit ClinicalTrials.gov, keep the data current, include the date",
+        "ClinicalTrials.gov processed it, and describe modifications. Some content may carry",
+        "third-party copyright. Import attribution records the source, processing timestamp, fetch",
+        "time and modifications; sponsor protocol PDFs are linked rather than committed.",
+        "",
+        "Contains data from [GeoNames](https://www.geonames.org/about.html), licensed under",
+        "[Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).",
+        "Modifications (name normalization, alternate-name filtering, coordinate rounding and",
+        "column selection) are listed in the [offline index notes](data/fixtures/ctgov/geonames/README.md).",
+    ]
     return "\n".join(lines) + "\n", problems
 
 

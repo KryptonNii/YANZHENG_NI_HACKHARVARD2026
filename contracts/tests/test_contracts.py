@@ -13,7 +13,7 @@ def test_every_model_is_reexported() -> None:
         n for n, o in vars(models).items()
         if isinstance(o, type) and issubclass(o, models.BaseModel) and o.__module__ == models.__name__
     ]
-    assert len(model_names) == 17
+    assert len(model_names) == 19
     assert set(model_names) <= set(trialpilot_contracts.__all__)
 
 
@@ -38,6 +38,9 @@ def test_generator_is_deterministic() -> None:
     spec.loader.exec_module(gen)
     first, second = gen.render(), gen.render()
     assert first == second
-    assert len(first) == 18  # 17 JSON Schemas + contracts.ts
+    assert len(first) == 20  # 19 JSON Schemas + contracts.ts
+    assert "enrollment_curve: [number, number, number, number][];" in first[
+        REPO / "web" / "src" / "contracts.ts"
+    ]
     for text in first.values():
         assert "\r" not in text and text.endswith("\n")
