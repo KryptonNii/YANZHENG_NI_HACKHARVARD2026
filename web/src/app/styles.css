@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-ink-50 font-sans text-ink-900;
+    font-feature-settings: "cv11", "ss01";
+  }
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-accent-600;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-ink-200 bg-white shadow-card;
+  }
+  .card-title {
+    @apply text-sm font-semibold uppercase tracking-wide text-ink-500;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-3.5 py-2 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-accent-700 text-white hover:bg-accent-800;
+  }
+  .btn-secondary {
+    @apply btn border border-ink-300 bg-white text-ink-800 hover:bg-ink-50;
+  }
+  .btn-ghost {
+    @apply btn text-ink-700 hover:bg-ink-100;
+  }
+  .btn-danger {
+    @apply btn border border-worse-300 bg-white text-worse-700 hover:bg-worse-50;
+  }
+  .input {
+    @apply w-full rounded-lg border border-ink-300 bg-white px-3 py-2 text-sm text-ink-900 placeholder:text-ink-400 focus:border-accent-600 focus:outline-none focus:ring-2 focus:ring-accent-600/30;
+  }
+  .label {
+    @apply text-sm font-medium text-ink-700;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-xs font-semibold;
+  }
+  .link {
+    @apply font-medium text-accent-700 underline decoration-accent-700/30 underline-offset-2 hover:decoration-accent-700;
+  }
+  .num-button {
+    @apply rounded-md text-left transition-colors hover:bg-accent-50 focus-visible:bg-accent-50;
+  }
+}
+
+/* range inputs: a calm track with the accent thumb, large enough to grab on a projector */
+input[type="range"] {
+  @apply h-2 w-full cursor-pointer appearance-none rounded-full bg-ink-200;
+  accent-color: theme("colors.accent.700");
+}
+input[type="range"]::-webkit-slider-thumb {
+  @apply h-5 w-5 appearance-none rounded-full border-2 border-white bg-accent-700 shadow;
+}
+input[type="range"]::-moz-range-thumb {
+  @apply h-5 w-5 rounded-full border-2 border-white bg-accent-700 shadow;
+}
