@@ -1,0 +1,165 @@
+"""Unit tests for tpv pieces: requirements, roles doc, impact, controls, defects, effort, AI drafts."""
+
+from __future__ import annotations
+
+import re
+from pathlib import Path
+
+import pytest
+
+from trialpilot_validation import ai_draft, controls, defects, docs, effort, impact
+from trialpilot_validation.context import DRAFT_STAMP, Ctx, TpvError, load_ctx, load_requirements
+
+REPO = Path(__file__).resolve().parents[2]
+
+
+@pytest.fixture()
+def real() -> Ctx:
+    return load_ctx(REPO)
+
+
+@pytest.mark.req("URS-027")
+def test_repository_requirements_are_valid(real: Ctx) -> None:
+    reqs = real.requirements()
+    ids = [r["id"] for r in reqs]
+    assert len(reqs) >= 20
+    assert ids == sorted(ids) and len(set(ids)) == len(ids)
+    assert all(r["risk"] in "HML" and r["risk_rationale"].strip() for r in reqs)
+
+
+@pytest.mark.req("URS-027")
+def test_invalid_requirements_are_rejected_with_reasons(tmp_path: Path) -> None:
+    p = tmp_path / "r.yaml"
+    p.write_text("items:\n  - {id: URS-1, text: '', risk: X, gxp: maybe}\n"
+                 "  - {id: URS-002, text: ok, risk: H, risk_rationale: r, gxp: true}\n"
+                 "  - {id: URS-002, text: ok, risk: H, risk_rationale: r, gxp: true}\n",
+                 encoding="utf-8")
+    with pytest.raises(TpvError) as ei:
+        load_requirements(p)
+    msg = str(ei.value)
+    for needle in ("id must look like URS-001", "text is empty", "risk must be one of H/M/L",
+                   "risk_rationale is required", "gxp must be true or false", "duplicate id"):
+        assert needle in msg
+
+
+@pytest.mark.req("URS-023")
+def test_roles_doc_matches_code() -> None:
+    from trialpilot_api.compliance import roles, workflow
+
+    text = (REPO / "validation" / "ROLES.md").read_text(encoding="utf-8")
+    header = ["author", "reviewer", "qa", "admin", "viewer"]
+    doc: dict[str, set[str]] = {}
+    for line in text.splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) == 6 and cells[0] in roles.PERMISSIONS:
+            doc[cells[0]] = {header[i] for i, c in enumerate(cells[1:]) if c == "✓"}
+    assert doc == {k: set(v) for k, v in roles.PERMISSIONS.items()}
+    for rt, meanings in workflow.REQUIRED_MEANINGS.items():
+        assert re.search(rf"\| {rt} \| {' → '.join(meanings)} \| qa \|", text), rt
+    for u in roles.DEMO_USERS:
+        assert f"| {u.username} | {u.display_name} | {u.role} | {u.default_pin} |" in text
+
+
+@pytest.mark.req("URS-031")
+def test_impact_maps_changed_files_to_requirements(real: Ctx) -> None:
+    a = impact.analyse(real, ["api/trialpilot_api/compliance/workflow.py",
+                              "data/params/emission_factors.yaml", "README.md"])
+    assert a["components"]["api/trialpilot_api/compliance/workflow.py"] == ["compliance-workflow"]
+    assert {"URS-021", "URS-022", "URS-003", "URS-008"} <= set(a["requirements"])
+    assert a["unmapped"] == ["README.md"]
+
+
+@pytest.mark.req("URS-031")
+def test_impact_change_record_is_a_draft_for_humans(fx: Ctx) -> None:
+    from .conftest import git
+
+    (fx.repo / "demo" / "tests" / "test_demo.py").write_text("# changed\n", encoding="utf-8")
+    git(fx.repo, "-c", "user.email=t@example.com", "-c", "user.name=t", "commit", "-qam", "chg")
+    m = impact.run_impact(fx, "HEAD~1", "HEAD", submit_as="alex.author")
+    assert m["files"] == ["demo/tests/test_demo.py"]
+    assert m["requirements"] == ["URS-001", "URS-002"]
+    body = (fx.repo / m["path"]).read_text(encoding="utf-8")
+    assert DRAFT_STAMP in body and "_To be written by the change owner._" in body
+    from trialpilot_api.compliance import workflow
+
+    assert workflow.get_request(m["approval_id"]).required_meanings == ["reviewed", "approved"]
+
+
+def test_component_map_cites_only_known_requirements(real: Ctx) -> None:
+    comps = impact.load_map(real)
+    assert comps and all(c["requirements"] for c in comps)
+
+
+@pytest.mark.req("URS-016", "URS-017", "URS-018", "URS-020", "URS-021", "URS-022", "URS-025",
+                 "URS-028")
+def test_all_control_probes_hold_on_this_code() -> None:
+    probes = controls.run_probes()
+    assert [p["id"] for p in probes] == ["C1", "C1b", "C2", "C3", "C4", "C5", "C6", "C7", "C8",
+                                         "C9"]
+    failed = [p for p in probes if not p["holds"]]
+    assert failed == []
+
+
+def test_defect_comparison_attributes_stages() -> None:
+    base = {"tests": [{"id": "a", "outcome": "passed"}, {"id": "b", "outcome": "failed"}],
+            "collection_errors": [], "suites": [{"name": "s", "status": "ran"}],
+            "trace": {"untested": ["URS-003"], "unknown_refs": [], "below_min_depth": []},
+            "controls": [{"id": "C1", "control": "x", "holds": True, "detail": ""}]}
+    same = defects.compare(base, base)
+    assert same["detected"] is False and same["stages"] == []
+    exp = {**base, "tests": [{"id": "a", "outcome": "failed"}, {"id": "b", "outcome": "failed"}]}
+    r = defects.compare(base, exp)
+    assert r["stages"] == ["unit test"] and r["new_failures"] == ["a"]
+    exp = {**base, "trace": {"untested": ["URS-003", "URS-033"], "unknown_refs": [],
+                             "below_min_depth": []}}
+    assert defects.compare(base, exp)["stages"] == ["trace check"]
+    exp = {**base, "controls": [{"id": "C1", "control": "x", "holds": False, "detail": "d"}]}
+    assert defects.compare(base, exp)["stages"] == ["workflow check"]
+
+
+def test_defect_set_is_complete(real: Ctx) -> None:
+    items = defects.load_defects(real)
+    types = {d["type"] for d in items}
+    assert len(items) == 6
+    assert types == {"calculation bug", "missing audit entry", "role can self-approve",
+                     "export drops rows", "wrong configuration value", "requirement with no test"}
+    key = (REPO / "validation" / "defects" / "ANSWER_KEY.md").read_text(encoding="utf-8")
+    for d in items:
+        assert d["id"] in key and d["patch"] in key
+
+
+@pytest.mark.req("URS-025")
+def test_plan_marks_system_category_as_draft_for_humans(real: Ctx) -> None:
+    text = docs.plan_md(real)
+    cat = text.index("## 2. System category")
+    assert text.index(DRAFT_STAMP, cat) < text.index("GAMP 5 software category 5", cat)
+    assert "tpv does not decide it" in text
+
+
+@pytest.mark.req("URS-025")
+def test_ai_drafting_is_off_offline(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("DEMO_OFFLINE", "1")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "sk-test-not-used")
+    assert ai_draft.draft("anything") is None
+    monkeypatch.setenv("DEMO_OFFLINE", "0")
+    monkeypatch.delenv("ANTHROPIC_API_KEY")
+    assert ai_draft.draft("anything") is None
+
+
+@pytest.mark.req("URS-025")
+def test_ai_drafted_plan_paragraph_is_stamped(real: Ctx, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(ai_draft, "draft", lambda *a, **k: "Generated introduction text.")
+    text = docs.plan_md(real, ai=True)
+    stamp = text.index(DRAFT_STAMP + " (AI-drafted paragraph)")
+    assert stamp < text.index("Generated introduction text.")
+
+
+def test_effort_is_not_measured_until_a_human_times_it(fx: Ctx) -> None:
+    s = effort.summary(fx, None)
+    assert s["manual_oq_5_requirements_minutes"] == "not measured"
+    assert s["tpv_execute_minutes_all_requirements"] == "not measured"
+    effort.start(fx, "manual", "tester")
+    with pytest.raises(TpvError):
+        effort.start(fx, "manual", "tester")
+    done = effort.stop(fx, "manual", "5 requirements")
+    assert done["minutes"] is not None and done["minutes"] >= 0

@@ -1,0 +1,93 @@
+# Planted defects (the six types from the Regeneron "Software Speedrun" sheet).
+# `make_patches.py` turns each exact replacement into validation/defects/<patch> against HEAD.
+# `tpv defects-run` applies each patch in a throwaway worktree OUTSIDE the repo and reports what caught it.
+defects:
+  - id: D1
+    type: calculation bug
+    requirement: URS-003
+    patch: D1_car_factor_unit_error.patch
+    target: data/params/emission_factors.yaml
+    description: >-
+      Car emission factor transcribed in grams instead of kilograms (x1000) while the unit still says
+      kg_co2e/km.
+    expected_stages: [unit test]
+    old: |2-
+              value_low: 0.16591
+              value_mid: 0.16591
+              value_high: 0.17067
+              unit: kg_co2e/km
+    new: |2-
+              value_low: 165.91
+              value_mid: 165.91
+              value_high: 170.67
+              unit: kg_co2e/km
+  - id: D2
+    type: missing audit entry
+    requirement: URS-015
+    patch: D2_design_save_not_audited.patch
+    target: api/trialpilot_api/routes_designs.py
+    description: >-
+      Saving a trial design writes the row directly instead of through the audited write, so design
+      creates/updates leave no audit entry.
+    expected_stages: [unit test]
+    old: |2-
+          svc.audited_write(session, ident, action, "design", design.id,
+                            prev.design_hash if prev else None, h, write, reason)
+    new: |2-
+          session.rollback()
+          write(session)
+          session.commit()
+  - id: D3
+    type: role can self-approve
+    requirement: URS-021
+    patch: D3_qa_can_self_approve.patch
+    target: api/trialpilot_api/compliance/workflow.py
+    description: >-
+      Segregation-of-duties check exempts the QA role, so a QA user can review/approve a record they
+      authored.
+    expected_stages: [unit test, workflow check]
+    old: '    if meaning in SOD_MEANINGS and user.username == req["author"]:'
+    new: '    if meaning in SOD_MEANINGS and user.username == req["author"] and user.role != "qa":'
+  - id: D4
+    type: export drops rows
+    requirement: URS-028
+    patch: D4_audit_export_drops_last_row.patch
+    target: api/trialpilot_api/compliance/audit.py
+    description: Off-by-one in the audit-trail CSV export drops the newest entry.
+    expected_stages: [unit test, workflow check]
+    old: |2-
+          for e in entries:
+              d = e.model_dump()
+    new: |2-
+          for e in entries[:-1]:
+              d = e.model_dump()
+  - id: D5
+    type: wrong configuration value
+    requirement: URS-029
+    patch: D5_offline_default_on.patch
+    target: api/trialpilot_api/settings.py
+    description: >-
+      DEMO_OFFLINE defaults to on in code while .env.example documents 0, so a deployment silently
+      never uses live data sources.
+    expected_stages: [unit test]
+    old: |2-
+          demo_offline: bool = Field(
+              default=False,
+    new: |2-
+          demo_offline: bool = Field(
+              default=True,
+  - id: D6
+    type: requirement with no test
+    requirement: URS-033
+    patch: D6_requirement_without_test.patch
+    target: validation/requirements.yaml
+    description: A new requirement (audit-trail date-range filter) is added with no test written for it.
+    expected_stages: [trace check]
+    append: |2
+        - id: URS-033
+          area: audit
+          text: The audit trail can be filtered by a UTC date range.
+          risk: M
+          risk_rationale: Inspectors need to see what changed in a given period.
+          gxp: true
+          gxp_rationale: Review of the audit trail.

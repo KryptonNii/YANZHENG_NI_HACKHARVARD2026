@@ -52,6 +52,11 @@ def run_probes() -> list[dict[str, Any]]:
         add("C1", "URS-021", "author cannot approve own record", _expect_error(
             lambda: wf.sign_request(rid, "alex.author", PINS["alex.author"], "approved", store=st),
             "self_approval_forbidden", c))
+        qa_req = str(wf.create_request("change_record", "probe-qa", "sam.qa", record_hash=H1,
+                                       store=st).id)
+        add("C1b", "URS-021", "no role (not even QA) approves its own record", _expect_error(
+            lambda: wf.sign_request(qa_req, "sam.qa", PINS["sam.qa"], "reviewed", store=st),
+            "self_approval_forbidden", c))
         add("C2", "URS-022", "approval steps follow the required order", _expect_error(
             lambda: wf.sign_request(rid, "sam.qa", PINS["sam.qa"], "approved", store=st),
             "out_of_order", c))

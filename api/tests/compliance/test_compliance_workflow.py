@@ -128,6 +128,16 @@ def test_cannot_sign_a_record_that_changed_since_submission(db: store.Store,
 
 
 @pytest.mark.req("URS-021")
+@pytest.mark.parametrize("author", ["alex.author", "riley.reviewer", "sam.qa"])
+def test_no_role_is_exempt_from_segregation_of_duties(db: store.Store, author: str) -> None:
+    rid = workflow.create_request("change_record", f"CR-{author}", author, record_hash=H).id
+    for meaning in ("reviewed", "approved"):
+        e = _err(workflow.sign_request, rid, author, PINS[author], meaning)
+        assert (e.status, e.code) == (403, "self_approval_forbidden"), (author, meaning)
+    assert workflow.get_request(rid).signatures == []
+
+
+@pytest.mark.req("URS-021")
 def test_reject_needs_reason_and_non_author(db: store.Store) -> None:
     rid = _submit()
     e = _err(workflow.reject_request, rid, "sam.qa", PINS["sam.qa"], "  ")

@@ -115,6 +115,7 @@ class Store:
             self.conn.execute("PRAGMA journal_mode = WAL")
         self.conn.executescript(SCHEMA)
         self.seeded = False
+        self.closed = False
 
     @contextmanager
     def tx(self) -> Iterator[sqlite3.Connection]:
@@ -147,6 +148,7 @@ class Store:
     def close(self) -> None:
         with self._lock:
             self.conn.close()
+            self.closed = True
 
 
 _store: Store | None = None
@@ -167,6 +169,9 @@ def configure(path: str | Path | None = None) -> Store:
 
 
 def get_store() -> Store:
+    """The process-wide store; reopened at the same path if someone closed it."""
     if _store is None:
         return configure()
+    if _store.closed:
+        return configure(_store.path)
     return _store
