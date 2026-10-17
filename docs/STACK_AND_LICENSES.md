@@ -8,6 +8,7 @@ Every third-party runtime, build and development declaration in the currently pr
 
 | Package | Declared requirement | Used by | Metadata version checked | Licence metadata / evidence |
 |---|---|---|---|---|
+| anthropic | anthropic>=1.0 | api (runtime) | 1.15.0 | MIT ([PyPI](https://pypi.org/pypi/anthropic/1.15.0/json)); declaration appeared during final reconciliation, actual extraction model still pending A4 |
 | argon2-cffi | argon2-cffi>=25.1.0 | api (runtime) | 25.1.0 | MIT ([PyPI](https://pypi.org/pypi/argon2-cffi/25.1.0/json)) |
 | fastapi | fastapi>=0.115 | api (runtime) | 0.143.3 | MIT ([PyPI](https://pypi.org/pypi/fastapi/0.143.3/json)) |
 | hatchling | hatchling | api (build), contracts (build), engine (build), validation (build) | 1.32.4 | MIT ([PyPI](https://pypi.org/pypi/hatchling/1.32.4/json)) |
@@ -85,7 +86,7 @@ Observed package metadata was read from the installed `web/node_modules/<name>/p
 | ASPE, Moore et al., FDA, Clinical Trials Arena | Linked problem context, not copied full documents | Publisher terms apply; factual summaries and citations in EVIDENCE.md, no blanket MIT claim |
 | Synthetic operations and assumed visit templates | Demo inputs; label synthetic/assumption explicitly | Original team-created fixture content under repository MIT; no claim of real patient or sponsor data |
 | Protocol PDFs and extraction evaluation corpus | Exact final input set pending A4 | Rights vary by document; link source, record consent/terms, do not assume registry hosting relicenses attachments |
-| Optional extraction LLM / hosted provider | EXTRACT_MODEL and provider selection pending A4 implementation/configuration | Provider/model service terms, model identifier/version and API must be disclosed by A4; no model weights or default provider licence inferred |
+| Optional extraction LLM / hosted provider | Anthropic SDK declared in API manifest; actual EXTRACT_MODEL and routing selection pending A4 implementation/configuration | SDK MIT does not license the hosted model; provider/model service terms, identifier/version and API must be disclosed by A4; no model weights or default provider licence inferred |
 | AI coding/documentation assistance | A11 documentation drafted with OpenAI Codex | Provider service terms, not an embedded open-source library; project-wide assistant/model disclosure requires each owner confirmation |
 | ISPE GAMP 5 and other validation references | Method references only, exact selection pending A7 | Copyrighted; link permitted references, never commit the guide PDF or claim approval from its publisher |
 | Commercial competitor pages / SMI letter | Linked comparison and roadmap context | Publisher terms; links and concise paraphrases only; no vendor asset or logo reuse implied |
