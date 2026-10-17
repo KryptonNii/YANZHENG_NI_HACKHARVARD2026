@@ -369,6 +369,7 @@ def _new_row(
 
 def _set_compute_headers(response: Response, outcome: Any, result: ScenarioResult) -> None:
     response.headers["X-Compute-Ms"] = f"{outcome.compute_ms:.1f}"
+    response.headers["X-Queue-Ms"] = f"{outcome.queue_ms:.1f}"
     response.headers["X-Cache"] = "hit" if outcome.cache_hit else "miss"
     response.headers["X-Parameter-Set-Version"] = result.parameter_set_version
 

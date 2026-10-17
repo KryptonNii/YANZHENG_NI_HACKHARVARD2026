@@ -71,9 +71,13 @@ def _filename(row: ScenarioRow, ext: str) -> str:
 
 
 # ------------------------------------------------------------------------------------------ CSV
-def _num(v: float) -> float | str:
-    """Unknown (NaN/inf from the engine: missing inputs) is written as 'unknown', never 0."""
-    return v if math.isfinite(v) else "unknown"
+def _known(v: float | None) -> bool:
+    return v is not None and math.isfinite(v)
+
+
+def _num(v: float | None) -> float | str:
+    """Unknown (contract v2: None, = a missing input) is written as 'unknown', never 0."""
+    return v if v is not None and _known(v) else "unknown"
 
 
 def build_csv(data: dict[str, Any]) -> str:
@@ -138,8 +142,8 @@ def export_csv(
 
 
 # ------------------------------------------------------------------------------------------ PDF
-def _fmt(v: float, unit: str) -> str:
-    if not math.isfinite(v):
+def _fmt(v: float | None, unit: str) -> str:
+    if v is None or not _known(v):
         return "unknown"
     if unit == "usd":
         return f"${v:,.0f}"

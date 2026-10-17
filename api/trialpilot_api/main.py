@@ -60,7 +60,8 @@ def create_app(settings: Settings | None = None, *, engine_fns: EngineFns | None
         settings=settings,
         db_engine=db_engine,
         params=ParamStore(settings.resolved_params_dir, db_engine),
-        engine=EngineAdapter(engine_fns or load_engine(), settings.compute_cache_size),
+        engine=EngineAdapter(engine_fns or load_engine(), settings.compute_cache_size,
+                             settings.compute_concurrency),
         compliance=compliance,
         broker=EventBroker(),
     )
@@ -76,7 +77,7 @@ def create_app(settings: Settings | None = None, *, engine_fns: EngineFns | None
         allow_credentials=False,
         allow_methods=["*"],
         allow_headers=["*"],
-        expose_headers=["X-Compute-Ms", "X-Cache", "X-Parameter-Set-Version",
+        expose_headers=["X-Compute-Ms", "X-Queue-Ms", "X-Cache", "X-Parameter-Set-Version",
                         "X-Design-Version", "X-Request-ID", "ETag", "Location"],
     )
     app.add_middleware(RequestIdMiddleware)

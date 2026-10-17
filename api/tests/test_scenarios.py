@@ -234,3 +234,42 @@ def test_mutations_need_identity(client: TestClient, design_id: str) -> None:
     assert r.status_code == 401
     r = client.post("/api/scenarios", headers=AUTHOR, json={"name": "x", "design_id": "nope"})
     assert r.status_code == 404 and r.json()["error"] == "design_not_found"
+
+
+# ------------------------------------------------------------------------------ A3 caching
+def test_a3_forecast_and_supply_cached_on_the_levers_they_read(make_client) -> None:  # type: ignore[no-untyped-def]
+    calls = {"forecast": 0, "supply": 0}
+    fake = FakeEngine()
+
+    def compute(design, levers, params, seed=7, draws=2000, forecast=None, supply=None):  # type: ignore[no-untyped-def]
+        assert forecast == "FC" and supply == f"SP-{levers.drug_supply_strategy}"
+        return fake.compute_scenario(design, levers, params, seed, draws)
+
+    def forecast(design, levers, params, seed=7, draws=2000):  # type: ignore[no-untyped-def]
+        calls["forecast"] += 1
+        return "FC"
+
+    def simulate_supply(design, levers, params, forecast_draws, seed=7):  # type: ignore[no-untyped-def]
+        calls["supply"] += 1
+        return f"SP-{levers.drug_supply_strategy}"
+
+    fns = fake.fns()
+    fns.compute, fns.forecast, fns.simulate_supply = compute, forecast, simulate_supply
+    c = make_client(engine_fns=fns)
+    c.post("/api/designs", json=make_design(), headers=AUTHOR)
+
+    def run(**levers):  # type: ignore[no-untyped-def]
+        r = c.post("/api/scenarios/compute", json={"design_id": "design-test-1", "levers": levers})
+        assert r.status_code == 200, r.text
+        return dict(calls)
+
+    assert run() == {"forecast": 1, "supply": 1}
+    # remote monitoring / local labs / removed procedures are not read by A3: no re-run
+    assert run(remote_monitoring_share=0.7, local_lab_share=0.4,
+               removed_procedures=["ecg"]) == {"forecast": 1, "supply": 1}
+    # the supply strategy re-runs supply only
+    assert run(drug_supply_strategy="on_demand") == {"forecast": 1, "supply": 2}
+    # visits moved home change the forecast
+    assert run(home_visit_numbers=[3]) == {"forecast": 2, "supply": 3}
+    assert c.post("/api/scenarios/compute", json={"design_id": "design-test-1"}).headers[
+        "x-queue-ms"]

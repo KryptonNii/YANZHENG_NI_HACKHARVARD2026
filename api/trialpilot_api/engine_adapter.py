@@ -5,6 +5,8 @@ There is NO placeholder engine in production code (MASTER §2.1): if the engine 
 raises NotImplementedError the API answers 501 `engine_not_ready`. Tests inject a fake engine.
 
 Results are cached in-process by (design hash, levers hash, parameter_set_version, seed, draws).
+At most `max_concurrency` engine runs execute at once (numpy work in threads contends for the GIL;
+measured: 4 parallel runs were slower in total than queueing them), the rest wait for a slot.
 """
 
 from __future__ import annotations
@@ -15,9 +17,12 @@ import logging
 import threading
 import time
 from collections import OrderedDict
-from collections.abc import Callable
+from collections.abc import Callable, Iterator
+from contextlib import contextmanager
 from dataclasses import dataclass, field
 from typing import Any
+
+from trialpilot_contracts.params import param_set_version
 
 from ._contracts import Levers, MetricRange, Parameter, ScenarioResult, TrialDesign
 from .errors import ApiError
@@ -124,11 +129,40 @@ class ComputeCache:
                 self._data.popitem(last=False)
 
 
+class _LRU:
+    """Tiny thread-safe LRU for A3 results (treated as immutable, so no copies)."""
+
+    def __init__(self, size: int) -> None:
+        self.size = size
+        self._data: OrderedDict[tuple[Any, ...], Any] = OrderedDict()
+        self._lock = threading.Lock()
+
+    def get(self, key: tuple[Any, ...]) -> Any:
+        with self._lock:
+            if key in self._data:
+                self._data.move_to_end(key)
+                return self._data[key]
+            return None
+
+    def put(self, key: tuple[Any, ...], value: Any) -> None:
+        with self._lock:
+            self._data[key] = value
+            self._data.move_to_end(key)
+            while len(self._data) > self.size:
+                self._data.popitem(last=False)
+
+
+# Levers A3's forecast/supply do not read (checked against forecast.py / supply.py, 21:40 ET).
+# Listing the EXCLUDED fields means a lever field added later is part of the A3 cache key by default.
+NOT_READ_BY_A3 = {"remote_monitoring_share", "local_lab_share", "removed_procedures"}
+
+
 @dataclass
 class ComputeOutcome:
     result: ScenarioResult
     cache_hit: bool
-    compute_ms: float
+    compute_ms: float  # whole call, including queue_ms
+    queue_ms: float = 0.0  # time spent waiting for a free engine slot
 
 
 @dataclass
@@ -138,9 +172,18 @@ class A3Inputs:
 
 
 class EngineAdapter:
-    def __init__(self, fns: EngineFns, cache_size: int) -> None:
+    def __init__(self, fns: EngineFns, cache_size: int, max_concurrency: int = 2) -> None:
         self.fns = fns
         self.cache = ComputeCache(cache_size)
+        self._a3_cache = _LRU(64)
+        self._slots = threading.BoundedSemaphore(max(1, max_concurrency))
+
+    @contextmanager
+    def _slot(self) -> Iterator[float]:
+        """Wait for an engine slot; yields the milliseconds spent waiting."""
+        t = time.perf_counter()
+        with self._slots:
+            yield (time.perf_counter() - t) * 1000
 
     @property
     def ready(self) -> bool:
@@ -158,26 +201,43 @@ class EngineAdapter:
         params: dict[str, Parameter], seed: int, draws: int,
     ) -> A3Inputs:
         """Run A3's forecast and supply simulation when available and when `target` (an engine
-        function) takes them. Failures become honest warnings, never silent defaults."""
+        function) takes them. Failures become honest warnings, never silent defaults.
+
+        Both are cached on the inputs A3 reads: every lever except the ones in
+        NOT_READ_BY_A3, so a remote-monitoring slider drag never re-runs the ~1 s supply
+        simulation, while the supply strategy toggle re-runs supply but reuses the forecast."""
         kwargs: dict[str, Any] = {}
         warnings: list[str] = []
         if self.fns.forecast is None or not _accepts(target, "forecast"):
             return A3Inputs(kwargs, warnings)
-        try:
-            fc = self.fns.forecast(design, levers, params, seed=seed, draws=draws)
-            kwargs["forecast"] = fc
-        except Exception as exc:
-            log.warning("forecast failed", extra={"error": repr(exc)})
-            warnings.append(f"Enrollment forecast unavailable ({type(exc).__name__}: {exc}); "
-                            "duration is the design's planned duration.")
-            return A3Inputs(kwargs, warnings)
-        if self.fns.simulate_supply is not None and _accepts(target, "supply"):
+        a3_levers = levers.model_dump(exclude=NOT_READ_BY_A3)
+        base_key = (sha256_hex(design), param_set_version(params), seed, draws)
+        fc_key = (*base_key, sha256_hex({k: v for k, v in a3_levers.items()
+                                         if k != "drug_supply_strategy"}))
+        fc = self._a3_cache.get(("forecast", *fc_key))
+        if fc is None:
             try:
-                kwargs["supply"] = self.fns.simulate_supply(design, levers, params, fc, seed=seed)
+                fc = self.fns.forecast(design, levers, params, seed=seed, draws=draws)
             except Exception as exc:
-                log.warning("supply simulation failed", extra={"error": repr(exc)})
-                warnings.append(f"Drug supply simulation unavailable ({type(exc).__name__}: "
-                                f"{exc}); kit waste uses the parameter library.")
+                log.warning("forecast failed", extra={"error": repr(exc)})
+                warnings.append(f"Enrollment forecast unavailable ({type(exc).__name__}: {exc}); "
+                                "duration is the design's planned duration.")
+                return A3Inputs(kwargs, warnings)
+            self._a3_cache.put(("forecast", *fc_key), fc)
+        kwargs["forecast"] = fc
+        if self.fns.simulate_supply is not None and _accepts(target, "supply"):
+            sp_key = ("supply", *fc_key, levers.drug_supply_strategy)
+            sp = self._a3_cache.get(sp_key)
+            if sp is None:
+                try:
+                    sp = self.fns.simulate_supply(design, levers, params, fc, seed=seed)
+                except Exception as exc:
+                    log.warning("supply simulation failed", extra={"error": repr(exc)})
+                    warnings.append(f"Drug supply simulation unavailable ({type(exc).__name__}: "
+                                    f"{exc}); kit waste uses the parameter library.")
+                    return A3Inputs(kwargs, warnings)
+                self._a3_cache.put(sp_key, sp)
+            kwargs["supply"] = sp
         return A3Inputs(kwargs, warnings)
 
     # ---------------------------------------------------------------- compute
@@ -198,18 +258,23 @@ class EngineAdapter:
         compute = self.fns.compute
         if compute is None:
             raise _not_ready("compute_scenario")
-        a3 = self.a3_inputs(compute, design, levers, params, seed, draws)
-        kwargs: dict[str, Any] = {"seed": seed, **a3.kwargs}
-        if _accepts(compute, "draws"):
-            kwargs["draws"] = draws
-        try:
-            result = compute(design, levers, params, **kwargs)
-        except Exception as exc:
-            raise _engine_failure(exc, "compute_scenario") from exc
+        with self._slot() as queue_ms:
+            cached = self.cache.get(key)  # an identical request may have finished meanwhile
+            if cached is not None:
+                return ComputeOutcome(cached, True, (time.perf_counter() - start) * 1000,
+                                      queue_ms)
+            a3 = self.a3_inputs(compute, design, levers, params, seed, draws)
+            kwargs: dict[str, Any] = {"seed": seed, **a3.kwargs}
+            if _accepts(compute, "draws"):
+                kwargs["draws"] = draws
+            try:
+                result = compute(design, levers, params, **kwargs)
+            except Exception as exc:
+                raise _engine_failure(exc, "compute_scenario") from exc
         if a3.warnings:
             result = result.model_copy(update={"warnings": [*result.warnings, *a3.warnings]})
         self.cache.put(key, result)
-        return ComputeOutcome(result, False, (time.perf_counter() - start) * 1000)
+        return ComputeOutcome(result, False, (time.perf_counter() - start) * 1000, queue_ms)
 
     # ---------------------------------------------------------------- compare
     def compare(
@@ -234,7 +299,8 @@ class EngineAdapter:
                 if _accepts(fn, f"{name}_{side}"):
                     kwargs[f"{name}_{side}"] = value
         try:
-            _, _, deltas = fn(design, levers_a, levers_b, params, **kwargs)
+            with self._slot():
+                _, _, deltas = fn(design, levers_a, levers_b, params, **kwargs)
         except Exception as exc:
             raise _engine_failure(exc, "compare_levers") from exc
         return dict(deltas), list(dict.fromkeys([*a3a.warnings, *a3b.warnings]))
@@ -259,7 +325,8 @@ class EngineAdapter:
             if _accepts(fn, name):
                 kwargs[name] = value
         try:
-            out = fn(design, levers, params, **kwargs)
+            with self._slot():
+                out = fn(design, levers, params, **kwargs)
         except Exception as exc:
             raise _engine_failure(exc, "drivers") from exc
         return [(str(pid), float(share)) for pid, share in out], a3.warnings

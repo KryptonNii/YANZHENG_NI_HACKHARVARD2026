@@ -53,6 +53,10 @@ class Settings(BaseSettings):
     max_draws: int = Field(default=20000, ge=100, validation_alias="TP_MAX_DRAWS")
     default_seed: int = Field(default=7, validation_alias="TP_DEFAULT_SEED")
     compute_cache_size: int = Field(default=256, ge=0, validation_alias="TP_COMPUTE_CACHE_SIZE")
+    compute_concurrency: int = Field(
+        default=2, ge=1, le=32, validation_alias="TP_COMPUTE_CONCURRENCY",
+        description="Engine runs executing at once; further requests queue (X-Queue-Ms).",
+    )
     log_level: str = Field(default="INFO", validation_alias="TP_LOG_LEVEL")
     log_json: bool = Field(default=True, validation_alias="TP_LOG_JSON")
     seed_fixture_designs: bool = Field(default=True, validation_alias="TP_SEED_FIXTURE_DESIGNS")
