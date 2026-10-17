@@ -1,0 +1,91 @@
+# Default visit schedules (owner: A4). ClinicalTrials.gov does not publish a trial's visit
+# schedule, so when no protocol schedule has been confirmed by a human, the importer fills
+# TrialDesign.visits from one of these templates and lists "visits" in missing_fields.
+#
+# EVERY TEMPLATE HERE IS AN ASSUMPTION (assumption: true). None of the timings below is taken
+# from a published source; they are generic placeholder patterns chosen so the simulator has
+# something to compute on. The UI must show the schedule as "assumed (template <id>)" and offer
+# the protocol import to replace it. The ranges document how far real schedules plausibly differ;
+# the importer uses `mid`.
+#
+# Per-patient treatment length: taken from the registry when the primary outcome time frame
+# names a week/month (e.g. "Baseline (Day 1) to Week 52" -> 52 weeks); otherwise
+# `default_treatment_weeks` (also an assumption).
+version: 1
+templates:
+  - id: phase1_default
+    phases: ["Early Phase 1", "Phase 1", "Phase 1/2"]
+    assumption: true
+    rationale: >-
+      Placeholder: early-phase studies usually concentrate visits around first doses. Not from a
+      source; replace with the protocol schedule of activities.
+    default_treatment_weeks: {low: 4, mid: 12, high: 26}
+    screening_week: {low: -4, mid: -2, high: -1}
+    dense_phase_until_week: {low: 4, mid: 4, high: 8}
+    dense_interval_weeks: {low: 1, mid: 1, high: 2}
+    sparse_interval_weeks: {low: 2, mid: 4, high: 8}
+    follow_up_weeks_after_last: {low: 2, mid: 4, high: 8}
+    procedures:
+      screening: [informed_consent, eligibility_check, demographics, medical_history, physical_exam, vital_signs, ecg, blood_draw, urine_sample]
+      baseline: [eligibility_check, randomization, vital_signs, ecg, blood_draw, pk_sample, imp_administration, adverse_events]
+      treatment: [vital_signs, ecg, blood_draw, pk_sample, adverse_events, concomitant_meds]
+      end_of_treatment: [physical_exam, vital_signs, ecg, blood_draw, pk_sample, adverse_events, concomitant_meds]
+      follow_up: [vital_signs, adverse_events, concomitant_meds]
+
+  - id: phase2_default
+    phases: ["Phase 2"]
+    assumption: true
+    rationale: >-
+      Placeholder: monthly visits early, then every 8 weeks. Not from a source; replace with the
+      protocol schedule of activities.
+    default_treatment_weeks: {low: 12, mid: 24, high: 52}
+    screening_week: {low: -4, mid: -2, high: -1}
+    dense_phase_until_week: {low: 8, mid: 12, high: 16}
+    dense_interval_weeks: {low: 2, mid: 4, high: 4}
+    sparse_interval_weeks: {low: 4, mid: 8, high: 12}
+    follow_up_weeks_after_last: {low: 2, mid: 4, high: 12}
+    procedures:
+      screening: [informed_consent, eligibility_check, demographics, medical_history, physical_exam, vital_signs, ecg, blood_draw, urine_sample]
+      baseline: [eligibility_check, randomization, physical_exam, vital_signs, ecg, blood_draw, pk_sample, questionnaire, drug_dispensing, adverse_events]
+      treatment: [vital_signs, blood_draw, questionnaire, drug_dispensing, adverse_events, concomitant_meds]
+      end_of_treatment: [physical_exam, vital_signs, ecg, blood_draw, pk_sample, questionnaire, adverse_events, concomitant_meds]
+      follow_up: [vital_signs, adverse_events, concomitant_meds]
+
+  - id: phase3_default
+    phases: ["Phase 2/3", "Phase 3", "Phase 4"]
+    assumption: true
+    rationale: >-
+      Placeholder: every 4 weeks for the first 12 weeks, then every 12 weeks to end of
+      treatment, one follow-up visit. Not from a source; replace with the protocol schedule of
+      activities.
+    default_treatment_weeks: {low: 24, mid: 52, high: 104}
+    screening_week: {low: -4, mid: -2, high: -1}
+    dense_phase_until_week: {low: 8, mid: 12, high: 24}
+    dense_interval_weeks: {low: 2, mid: 4, high: 4}
+    sparse_interval_weeks: {low: 4, mid: 12, high: 12}
+    follow_up_weeks_after_last: {low: 2, mid: 4, high: 12}
+    procedures:
+      screening: [informed_consent, eligibility_check, demographics, medical_history, physical_exam, vital_signs, ecg, blood_draw, urine_sample]
+      baseline: [eligibility_check, randomization, physical_exam, vital_signs, ecg, blood_draw, questionnaire, drug_dispensing, adverse_events]
+      treatment: [vital_signs, blood_draw, questionnaire, drug_dispensing, adverse_events, concomitant_meds]
+      end_of_treatment: [physical_exam, vital_signs, ecg, blood_draw, questionnaire, adverse_events, concomitant_meds]
+      follow_up: [vital_signs, adverse_events, concomitant_meds]
+
+  - id: generic_default
+    phases: []          # used when the phase is missing or not listed above
+    assumption: true
+    rationale: >-
+      Placeholder used when the registry gives no usable phase. Not from a source; replace with
+      the protocol schedule of activities.
+    default_treatment_weeks: {low: 12, mid: 26, high: 52}
+    screening_week: {low: -4, mid: -2, high: -1}
+    dense_phase_until_week: {low: 4, mid: 12, high: 12}
+    dense_interval_weeks: {low: 2, mid: 4, high: 4}
+    sparse_interval_weeks: {low: 4, mid: 12, high: 12}
+    follow_up_weeks_after_last: {low: 2, mid: 4, high: 12}
+    procedures:
+      screening: [informed_consent, eligibility_check, medical_history, physical_exam, vital_signs, blood_draw]
+      baseline: [eligibility_check, vital_signs, blood_draw, adverse_events]
+      treatment: [vital_signs, adverse_events, concomitant_meds]
+      end_of_treatment: [physical_exam, vital_signs, blood_draw, adverse_events, concomitant_meds]
+      follow_up: [adverse_events, concomitant_meds]

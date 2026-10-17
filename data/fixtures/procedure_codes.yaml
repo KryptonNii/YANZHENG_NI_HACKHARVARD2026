@@ -1,0 +1,136 @@
+# Controlled vocabulary for Procedure.code (owner: A4). Used by the protocol extractor and the
+# default visit templates. Codes shared with the parameter library (A10, data/params/NEEDED.md
+# `time.site.procedure.<code>`) are marked `param: true`; the others fall back to
+# `time.site.procedure.default` in the engine.
+#
+# `match`: case-insensitive regular expressions tried against the procedure label as written in
+# the protocol, in file order — the FIRST matching code wins, so specific entries come first.
+# Labels that match nothing are kept as `other:<slug>` (never dropped, never guessed).
+#
+# `ships_sample` is a category default (does this activity normally produce a sample that is
+# shipped to a central/specialty lab?). It is not a number and can be overridden per protocol.
+# `sample_temp` is left empty on purpose: storage temperature must come from the protocol/lab manual.
+version: 1
+codes:
+  - code: informed_consent
+    label: Informed consent
+    param: true
+    match: ['informed consent', '\bconsent\b']
+  - code: eligibility_check
+    label: Inclusion / exclusion criteria review
+    match: ['inclusion', 'exclusion', 'eligibility']
+  - code: demographics
+    label: Demographics
+    match: ['demograph']
+  - code: medical_history
+    label: Medical / surgical history
+    match: ['medical history', 'surgical history', 'disease history']
+  - code: concomitant_meds
+    label: Prior and concomitant medication review
+    match: ['concomitant', 'prior (and|&) concomitant', 'prior medication']
+  - code: adverse_events
+    label: Adverse event review
+    match: ['adverse event', '\bsaes?\b']
+  - code: randomization
+    label: Randomization
+    match: ['randomi[sz]ation']
+  - code: irt_contact
+    label: IRT / IVRS / IWRS transaction
+    match: ['\bivrs\b', '\biwrs\b', '\birt\b', 'interactive (voice|web) response']
+  - code: drug_dispensing
+    label: Study drug dispensing
+    param: true
+    match: ['dispens']
+  - code: imp_administration
+    label: Study drug administration at site
+    match: ['imp administration', 'study (drug|treatment|intervention) administration', 'injection', 'infusion', 'intravitreal', '\bdosing\b', 'administration of (study|imp)']
+  - code: physical_exam
+    label: Physical examination
+    param: true
+    match: ['physical exam']
+  - code: vital_signs
+    label: Vital signs
+    param: true
+    match: ['vital sign', 'blood pressure', 'body weight', '\bheight\b']
+  - code: ecg
+    label: 12-lead electrocardiogram
+    param: true
+    match: ['electrocardiogram', '\becg\b', '\bekg\b']
+  - code: echocardiogram
+    label: Echocardiogram
+    param: true
+    match: ['echocardiog']
+  - code: x_ray
+    label: X-ray
+    param: true
+    match: ['x-?ray', 'radiograph']
+  - code: ct_scan
+    label: CT scan
+    param: true
+    match: ['\bct\b scan', 'computed tomography', '\bct\b']
+  - code: mri
+    label: MRI
+    param: true
+    match: ['\bmri\b', 'magnetic resonance']
+  - code: mammogram
+    label: Mammogram
+    param: true
+    match: ['mammogra']
+  - code: biopsy
+    label: Biopsy
+    param: true
+    match: ['biops']
+  - code: pk_sample
+    label: Pharmacokinetic blood sample
+    param: true
+    ships_sample: true
+    match: ['\bpk\b', 'pharmacokinetic', 'drug concentration']
+  - code: ada_sample
+    label: Anti-drug antibody (immunogenicity) sample
+    ships_sample: true
+    match: ['anti-?[a-z]+ ?antibod', 'anti-drug antibod', '\bada\b', 'immunogenicity']
+  - code: urine_sample
+    label: Urine sample / urine pregnancy test
+    param: true
+    match: ['urine pregnancy', 'urinalysis$', '^urine', 'urine sample']
+  - code: blood_draw
+    label: Safety laboratory blood draw
+    param: true
+    ships_sample: true
+    match: ['hematology', 'haematology', 'biochemistry', 'clinical chemistry', 'serum chemistry', 'clinical laboratory', 'safety lab', 'serology', 'hepatitis', '\bhiv\b', 'pregnancy .*(blood|serum)', 'serum pregnancy', 'fibrinogen', 'hba1c', 'lipid', 'coagulation', 'blood sample']
+  - code: biomarker_sample
+    label: Exploratory biomarker / genetic sample
+    ships_sample: true
+    match: ['biomarker', '\bparc\b', 'eotaxin', '\bige\b', '\brna\b', '\bdna\b', 'archival', 'exploratory', 'pharmacogen', 'serum/plasma']
+  - code: sputum_sample
+    label: Sputum sample
+    ships_sample: true
+    match: ['sputum']
+  - code: home_spirometry
+    label: At-home spirometry
+    match: ['at-?home spirometry', 'home spirometry']
+  - code: spirometry
+    label: Spirometry
+    match: ['spirometry', '\bfev1\b', 'lung function']
+  - code: feno
+    label: Fractional exhaled nitric oxide (FeNO)
+    match: ['\bfeno\b', 'exhaled nitric oxide']
+  - code: six_minute_walk
+    label: Six-minute walk test
+    match: ['6-?minute walk', 'six-?minute walk', '\bbode\b']
+  - code: ophthalmic_exam
+    label: Ophthalmic examination
+    match: ['ophthalm', 'slit.?lamp', 'fundus exam', 'intraocular pressure', '\biop\b', 'indirect ophthalmoscopy']
+  - code: visual_acuity
+    label: Best-corrected visual acuity
+    match: ['visual acuity', '\bbcva\b', '\betdrs\b']
+  - code: retinal_imaging
+    label: Retinal imaging (OCT / fundus photography / angiography)
+    match: ['optical coherence', '\boct\b', 'fundus photo', 'fluorescein', 'angiograph']
+  - code: questionnaire
+    label: Questionnaire / patient-reported outcome / diary review
+    param: true
+    match: ['questionnaire', '\bsgrq\b', 'eq-?5d', 'diary', '\bexact\b', '\bpro\b', 'mmrc', '\bcat\b', 'health ?care utili[sz]ation', 'quality of life', 'score']
+  - code: telephone_contact
+    label: Telephone / remote contact
+    match: ['telephone', 'phone call', 'phone contact']
