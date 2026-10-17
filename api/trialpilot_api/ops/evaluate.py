@@ -7,7 +7,6 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from . import audit
 from .fixtures import load_demo_design
 from .params import ops_data_dir
 from .store import TrialState
@@ -36,14 +35,13 @@ def evaluate_state(st):
 
 def evaluate(seeds=(42, 7, 19), day=599):
     reports, matrix = [], defaultdict(Counter)
-    with audit.bound(lambda **kwargs: None):
-        for seed in seeds:
-            st = TrialState("demo-40", load_demo_design(), None, seed, 0, "demo", day, 600,
-                            audit_sink=lambda **kwargs: None)
-            report = evaluate_state(st)
-            reports.append(report)
-            for row in report["effects"]:
-                matrix[row["expected"]][row["actual"]] += 1
+    for seed in seeds:
+        st = TrialState("demo-40", load_demo_design(), None, seed, 0, "demo", day, 600,
+                        audit_sink=lambda **kwargs: None)
+        report = evaluate_state(st)
+        reports.append(report)
+        for row in report["effects"]:
+            matrix[row["expected"]][row["actual"]] += 1
     detections = [r for report in reports for r in report["detection"]]
     effects = [r for report in reports for r in report["effects"]]
     return {"simulated": True, "evaluation_day": day, "seeds": list(seeds),
@@ -51,6 +49,16 @@ def evaluate(seeds=(42, 7, 19), day=599):
             "detection_total": len(detections), "verdicts_correct": sum(r["correct"] for r in effects),
             "verdicts_total": len(effects),
             "confusion_matrix": {k: dict(v) for k, v in matrix.items()}, "runs": reports}
+
+
+def write_ground_truth(path: Path | None = None) -> Path:
+    """Regenerate the simulator's keys of ground_truth.json; keys it does not produce are kept as they are."""
+    path = path or ops_data_dir() / "ground_truth.json"
+    st = TrialState("demo-40", load_demo_design(), None, 42, 0, "demo", 0, 600,
+                    audit_sink=lambda **kwargs: None)
+    existing = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    path.write_text(json.dumps({**existing, **st.sim.ground_truth}, indent=2) + "\n", encoding="utf-8")
+    return path
 
 
 def main():
@@ -62,10 +70,7 @@ def main():
     args = parser.parse_args()
     report = evaluate(args.seeds, args.day)
     if args.write_ground_truth:
-        st = TrialState("demo-40", load_demo_design(), None, 42, 0, "demo", 0, 600,
-                        audit_sink=lambda **kwargs: None)
-        (ops_data_dir() / "ground_truth.json").write_text(
-            json.dumps(st.sim.ground_truth, indent=2) + "\n", encoding="utf-8")
+        write_ground_truth()
     data = json.dumps(report, indent=2) + "\n"
     if args.output:
         args.output.write_text(data, encoding="utf-8")

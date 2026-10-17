@@ -1,0 +1,264 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01480882",
+   "orgStudyIdInfo": {
+    "id": "CT-11-HPP-001"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "NMRR-11-661-10072",
+     "type": "REGISTRY",
+     "domain": "National Medical Reseach Register (NMRR)"
+    }
+   ],
+   "organization": {
+    "fullName": "Penang Hospital, Malaysia",
+    "class": "OTHER_GOV"
+   },
+   "briefTitle": "Efficacy and Safety Study of a Percussion Device to Mobilise Sputum From Respiratory Passage",
+   "officialTitle": "\"A Prospective, Cross-over Randomized Trial to Assess the Efficacy and Safety of Mechanical Percussor \"LEGA\" Compared With Conventional Chest Physiotherapy in Adults With Chronic Bronchiectasis or Chronic Obstructive Pulmonary Disease (COPD",
+   "acronym": "LEGA"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2012-12",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2011-12"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2012-06",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2012-06",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2011-11-20",
+   "studyFirstSubmitQcDate": "2011-11-24",
+   "studyFirstPostDateStruct": {
+    "date": "2011-11-29",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2012-12-04",
+   "lastUpdatePostDateStruct": {
+    "date": "2012-12-06",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "PRINCIPAL_INVESTIGATOR",
+    "investigatorFullName": "Dr.Ong Loke Meng",
+    "investigatorTitle": "Head, Clinical Research Centre",
+    "investigatorAffiliation": "Penang Hospital, Malaysia"
+   },
+   "leadSponsor": {
+    "name": "Penang Hospital, Malaysia",
+    "class": "OTHER_GOV"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "A Malaysian company by name Formedic Technologies SDN BHD has devised a hand held machine which is supposed to mimic the chest percussion performed by professional physiotherapist to mobilize sputum through the respiratory passage.\n\nThe aim of this study is to compare the effectiveness and safety of this mechanical percussion device in the treatment of airway clearance with conventional chest physiotherapy carried out by qualified physiotherapists in patients suffering from bronchiectasis or Chronic obstructive Pulmonary disease (COPD).",
+   "detailedDescription": "This study will compare the amount of sputum expectorated during the two procedures and not intended to look at the clinical improvement of the patient."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Bronchiectasis",
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ],
+   "keywords": [
+    "Manual percussion",
+    "Mechanical percussion",
+    "Chronic bronchiectasis",
+    "Chronic Obstructive Pulmonary Disease",
+    "Wet sputum weight",
+    "Dry sputum weight"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "CROSSOVER",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "NONE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 20,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Conventional Chest PhysioTherapy",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Conventional Chest Physiotherapy (CCPT) is delivered by professional physiotherapist for 15 minutes.",
+     "interventionNames": [
+      "Procedure: Conventional Chest Physiotherapy (CCPT)"
+     ]
+    },
+    {
+     "label": "Mechanical percussion",
+     "type": "EXPERIMENTAL",
+     "description": "Mechanical percussion will be delivered by a device called \"LEGA\" for 15 minutes",
+     "interventionNames": [
+      "Device: Mechanical percussion (LEGA)"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "PROCEDURE",
+     "name": "Conventional Chest Physiotherapy (CCPT)",
+     "description": "Conventional chest percussion will be applied for a duration of 15 minutes.",
+     "armGroupLabels": [
+      "Conventional Chest PhysioTherapy"
+     ],
+     "otherNames": [
+      "Manual percussion"
+     ]
+    },
+    {
+     "type": "DEVICE",
+     "name": "Mechanical percussion (LEGA)",
+     "description": "Mechanical chest percussion will be delivered by a device for 15 minutes.",
+     "armGroupLabels": [
+      "Mechanical percussion"
+     ],
+     "otherNames": [
+      "LEGA"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Comparing the 'wet weight' and 'dry weight' of the sputum expectorated during 20 minutes of the two procedures.",
+     "description": "The patients will be instructed to cough out the sputum into a preweighed container during the 15 minutes of the procedure(Manual or mechanical percussion)and 5 minutes after the procedure.Container will be weighed to get the wet weight of the sputum then will be dried in a laboratory oven at 60degree c for 48 hours and weighed again to get the dry weight of the sputum",
+     "timeFrame": "6 days"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Change in FEV1 and FVC before and after the two methods of therapy",
+     "description": "Any changes in the lung function will be measured as - FEV1 (%predicted) and FVC (%predicted)",
+     "timeFrame": "15 minutes after completion of the procedure compared to baseline"
+    },
+    {
+     "measure": "Changes in pulse, blood pressure and respiratory rate",
+     "description": "Monitoring of Pulse, blood pressure, respiratory rate, skin colour and patients reaction to treatment.",
+     "timeFrame": "15 minutes after completion of treatment compared to baseline"
+    },
+    {
+     "measure": "Patient preference",
+     "description": "Patients will be participating in the study for 6 days. On the 6th day after completion of treatment they will be required to answer a simple questionnaire to find out if they prefer one procedure over the other and why.",
+     "timeFrame": "After completing 6 days of participation in the study"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1. Adult patients \\> 18 years of age\n2. Chronic sputum expectoration-(producing \\>30ml/day of sputum at baseline)\n3. Clinical diagnosis of bronchiectasis or COPD\n4. Not carrying out regular chest physiotherapy (for the purposes of this study this will be defined as less than two occasions per week)\n5. Clinically stable disease (defined as no requirement for antibiotics in the 4 weeks preceding study entry).\n6. FEV1 of \\> 35% of the predicted value in COPD patients\n\nExclusion Criteria:\n\n1. Primary diagnosis of asthma;\n2. Active sarcoidosis\n3. Active Pulmonary tuberculosis.\n4. History of brittle bones,\n5. History of broken ribs in the past one year.\n6. History of severe osteoporosis\n7. Bleeding from the lungs or haemoptysis\n8. Experiencing intense pain in the thoracic region\n9. Clinical suspicion of increased intracranial pressure.\n10. Have head or neck injuries\n11. Have collapsed lungs or a damaged chest wall;\n12. Recent myocardial infarction, unstable angina and stroke (Within 6 months prior to enrollment)\n13. Have a pulmonary embolism or lung abscess;\n14. Have an active hemorrhage\n15. Have injuries to the spine\n16. Have open wounds or burns in the thoracic region\n17. Have had recent surgery (Within six months prior to enrollment.)\n18. Any systemic steroids within 4/52 prior to enrollment\n19. Any antibiotics within 4/52 prior to enrollment",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Ong L Meng, MBBS, FRCP",
+     "affiliation": "Penang Hospital, Malaysia",
+     "role": "STUDY_CHAIR"
+    },
+    {
+     "name": "Mohd I Izmi, MBBS, MD",
+     "affiliation": "Penang Hospital, Malaysia",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Penang hospital",
+     "city": "George Town",
+     "state": "Pulau Pinang",
+     "zip": "10990",
+     "country": "Malaysia",
+     "geoPoint": {
+      "lat": 5.41123,
+      "lon": 100.33543
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "seeAlsoLinks": [
+    {
+     "label": "Click here for more information about this study- NMRR-11-661-10072",
+     "url": "http://www.nmrr.gov.my"
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

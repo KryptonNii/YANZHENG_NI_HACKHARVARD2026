@@ -1,0 +1,293 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT05844462",
+   "orgStudyIdInfo": {
+    "id": "APHP211052"
+   },
+   "organization": {
+    "fullName": "Assistance Publique - Hôpitaux de Paris",
+    "class": "OTHER"
+   },
+   "briefTitle": "Tadalafil for Severe Pulmonary Hypertension Due to Chronic Obstructive Pulmonary Disease",
+   "officialTitle": "Efficacy of Phosphodiesterase Type 5 Inhibitors in Severe Pulmonary Hypertension Due to Chronic Obstructive Pulmonary Disease",
+   "acronym": "ERASE PH-COPD"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-08",
+   "overallStatus": "RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2024-02-01",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2027-10",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2027-12",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2023-04-25",
+   "studyFirstSubmitQcDate": "2023-04-25",
+   "studyFirstPostDateStruct": {
+    "date": "2023-05-06",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-08-19",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-08-20",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Assistance Publique - Hôpitaux de Paris",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "ERASE PH-COPD is a randomized double-blind study, with 2 parallel groups. Patients with severe pulmonary hypertension due to chronic obstructive pulmonary disease, will be randomly assigned to receive Tadalafil orally or placebo.",
+   "detailedDescription": "Pulmonary hypertension (PH) is a frequent complication of chronic parenchymal lung diseases particularly in chronic obstructive pulmonary disease (COPD) and represents one of the major cause of all causes of PH. When present, PH contributes to more severe symptoms; exercise intolerance and can lead to right heart failure, which portends a worse prognosis and an increased mortality. Mechanisms of severe PH in chronic respiratory diseases are complex and include rarefaction of vascular bed, endothelial dysfunction and exaggerated pulmonary arterial remodeling. In patients with idiopathic pulmonary arterial hypertension (PAH), targeted medical therapies, including oral phosphodiesterase type 5 inhibitors (PDE5i), improve endothelial cell dysfunction, have vasodilatory and anti-proliferative effects on the pulmonary vasculature, reduce the right ventricular afterload and improve symptoms, exercise capacity, and clinical outcomes in randomized trials. Several studies suggested a potential effect of PDE5i in COPD on dyspnea, exertional capacity and quality of life. However, these results were based on including small number of patients with heterogenous severity of lung disease and usually without complete hemodynamic evaluation. Data are lacking regarding the benefit/risk ratio of these treatments in the context of severe PH due to COPD. The main objective to this randomized controlled trial (16 weeks) is to evaluate the efficacy and safety of an oral PDE5i, tadalafil, in patients with severe PH due to COPD."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Hypertension",
+    "Chronic Obstructive Pulmonary Disease"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 200,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Experimental arm",
+     "type": "EXPERIMENTAL",
+     "description": "Oral Tadalafil 40 mg or Tadalafil 20 mg \\[(mild or moderate chronic renal failure or liver cirrhosis (Child-Pugh A or B)\\].",
+     "interventionNames": [
+      "Drug: Tadalafil"
+     ]
+    },
+    {
+     "label": "Control arm",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Oral Placebo 40 mg or Placebo 20 mg \\[(mild or moderate chronic renal failure or liver cirrhosis (Child-Pugh A or B)\\].",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Tadalafil",
+     "description": "Oral Tadalafil",
+     "armGroupLabels": [
+      "Experimental arm"
+     ],
+     "otherNames": [
+      "Talmanco",
+      "ADCIRCA"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Oral Placebo",
+     "armGroupLabels": [
+      "Control arm"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "6 minute Walk",
+     "description": "The distance cover in meter during a 6-minute walk at week 16 post-randomization for patients treated with tadalafil compared to placebo",
+     "timeFrame": "16 weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Patients ≥ 18 and \\<85 years at inclusion,\n* Dyspnea WHO functional class II to IV,\n* Severe precapillary pulmonary hypertension defined by :\n\n  * a mean pulmonary artery pressure (mPAP) \\>20\n  * associated with normal pulmonary artery wedge pressure (PawP ≤15 mmHg)\n  * and pulmonary vascular resistance (PVR) \\>5 WU\n* COPD diagnosed according to current international recommendation with persistent airflow limitation defined by post-bronchodilatator Forced expiratory volume in 1 second (FEV1) / forced vital capacity (FVC): FEV1/FVC \\< 0.70,\n* Naive patients from PDE5i (sildenafil, tadalafil) PH treatments and who did not receive other specific PH treatment in the last 3 months (bosentan, ambrisentan, macitentan, riociguat, epoprostenol, treprostinil, iloprost),\n* Treatments for COPD need to be stable for at least 1 month before screening visit,\n* Patients who fulfill criteria for a supplemental long-term oxygen therapy need to be supplied sufficiently before study entry. The amount of supplemental oxygen and the delivery method need to be stable for at least 1 month before screening visit,\n* Patients who are able to understand and follow instructions and who are able to participate in the study for the entire period,\n* Patients must have given their written informed consent to participate in the study after having received adequate previous information and prior to any study-specific procedures,\n* Affiliation to a social security regime,\n\nExclusion Criteria:\n\n* Patients with a medical disorder, condition, or history of such that would impair the patient's ability to participate or complete this study in the opinion of the investigator,\n* Patients with underlying medical disorders and anticipated life expectancy below 12 months (eg active cancer disease with localized and/or metastasized tumor mass),\n* PH not due to chronic respiratory diseases (group 1, 2, 4 or 5 of the clinical classification of PH),\n* Other respiratory diseases: interstitial lung disease, sarcoidosis, lymphangioleiomyomatosis, histiocytosis, or untreated severe sleep apnea disorders,\n* 6-minutes walk distance \\< 50 m or patients unable to perform the 6-minutes walk test,\n* Exacerbation of the COPD requiring hospitalization in the last 8 weeks before screening,\n* COPD with mild (\\> 80% predicted value) or severe (FEV1 \\<30% predicted value) airflow limitation,\n* Patients listed for lung transplantation at the time of inclusion,\n* Systolic left ventricular dysfunction with left ventricular ejection fraction \\<40% on echocardiography,\n* Patient on AME (state medical aid),\n* Participation in another clinical trial during the preceding 3 months and during the study,\n* Pregnant women, or breast-feeding women, or women with childbearing potential not using a combination of condoms and a safe and highly effective contraception method (hormonal contraception with implants or oral contraceptives, or intrauterine devices) and one month after the end of the study, WOCBP include any woman who has experienced menarche and who has not undergone successful surgical sterilization (hysterectomy, bilateral tubal ligation, or bilateral oophorectomy) or is not postmenopausal \\[defined as amenorrhea ≥ 12 consecutive months; or women on hormone replacement therapy (HRT) with documented serum follicle stimulating hormone (FSH) level \\> 35 mIU/mL\\],\n* Patient under guardianship or curatorship\n\nNon-inclusion criteria related to treatment by tadalafil:\n\n* Contraindication to tadalafil:\n\n  * Severe renal failure (creatinine clearance \\< 30 mL/min/1,73 m2)\n  * Severe liver cirrhosis Child-Plugh C\n  * Severe systemic hypotension \\<90/50\n  * Recent myocardial infarction \\<90 days\n  * Medical history of anterior ischemic optic neuropathy\n  * Hypersensitivity to tadalafil or any of the excipients\n* Concomitant use of potent CYP3A4 inhibitors or inducers, soluble guanylate cyclase stimulator (riociguat), other PDE5 inhibitors or nitrates or doxazosin\n* Cardiovascular diseases:\n\n  * Clinically significant aortic and mitral valve disease\n  * Pericardial constriction\n  * Restrictive or congestive cardiomyopathy\n  * Significant left ventricular dysfunction\n  * Life-threatening arrhythmias\n  * Symptomatic coronary artery disease\n  * Uncontrolled hypertension.\n  * Angulation of the penis, cavernosal fibrosis, Peyronie's disease or history of priapism\n* Pulmonary or upper respiratory infection requiring antibiotics, or pulmonary embolism in the last 4 weeks before screening\n* Participation in a respiratory rehabilitation program within the 4 weeks prior to screening or scheduled during the study period\n* Right heart failure necessitating catecholamine support within the 4 weeks prior to screening.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "maximumAge": "85 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "David Pr MONTANI, PU-PH",
+     "role": "CONTACT",
+     "phone": "01 45 21 78 85",
+     "phoneExt": "+33",
+     "email": "david.montani@aphp.fr"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Kremlin Bicêtre",
+     "status": "RECRUITING",
+     "city": "Le Kremlin-Bicêtre",
+     "state": "France",
+     "zip": "94270",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "David Pr MONTANI",
+       "role": "CONTACT"
+      }
+     ],
+     "geoPoint": {
+      "lat": 48.81471,
+      "lon": 2.36073
+     }
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D006976",
+     "term": "Hypertension, Pulmonary"
+    },
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D006973",
+     "term": "Hypertension"
+    },
+    {
+     "id": "D014652",
+     "term": "Vascular Diseases"
+    },
+    {
+     "id": "D002318",
+     "term": "Cardiovascular Diseases"
+    },
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D000068581",
+     "term": "Tadalafil"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D002243",
+     "term": "Carbolines"
+    },
+    {
+     "id": "D011725",
+     "term": "Pyridines"
+    },
+    {
+     "id": "D006573",
+     "term": "Heterocyclic Compounds, 1-Ring"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D026121",
+     "term": "Indole Alkaloids"
+    },
+    {
+     "id": "D007211",
+     "term": "Indoles"
+    },
+    {
+     "id": "D006574",
+     "term": "Heterocyclic Compounds, 2-Ring"
+    },
+    {
+     "id": "D000072471",
+     "term": "Heterocyclic Compounds, Fused-Ring"
+    },
+    {
+     "id": "D006575",
+     "term": "Heterocyclic Compounds, 3-Ring"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

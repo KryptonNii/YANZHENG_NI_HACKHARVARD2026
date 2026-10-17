@@ -1,0 +1,373 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT05927155",
+   "orgStudyIdInfo": {
+    "id": "SRB-201903-052"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "P2019/239 CCB: B406201939717",
+     "type": "OTHER",
+     "domain": "local ethics committee"
+    }
+   ],
+   "organization": {
+    "fullName": "Erasme University Hospital",
+    "class": "OTHER"
+   },
+   "briefTitle": "Effects of Acute Long-acting Bronchodilation on Oxygenation and Peripheral Ventilation in COPD",
+   "officialTitle": "Comparison of Bronchodilation and Oxygenation Patterns Induced by Long-acting β2-agonists and Muscarinic Antagonists in Chronic Obstructive Pulmonary Disease (COPD)"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2023-06",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2021-06-15",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2022-03-30",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2022-03-30",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2023-06-10",
+   "studyFirstSubmitQcDate": "2023-06-23",
+   "studyFirstPostDateStruct": {
+    "date": "2023-07-03",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2023-06-23",
+   "lastUpdatePostDateStruct": {
+    "date": "2023-07-03",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "PRINCIPAL_INVESTIGATOR",
+    "investigatorFullName": "Silvia Perez Bogerd",
+    "investigatorTitle": "Chest physician, head of the COPD and Pulmonary Rehabilitation Clinic",
+    "investigatorAffiliation": "Erasme University Hospital"
+   },
+   "leadSponsor": {
+    "name": "Erasme University Hospital",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false,
+   "isUsExport": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The goal of this clinical trial was to compare the action of long-acting ß2-agonists (LABA-olodaterol) and muscarinic antagonists (LAMA-tiotropium) on tissue oxygenation in COPD considering their impact on proximal and peripheral ventilation and, eventually, on lung capillary volume. The hypothesis was that LABA would have a more peripheral effect than LAMA (due to the opposite gradient of their receptors) and better peripheral ventilation would result in a greater oxygenation.\n\nBefore and after LABA (visit 1) and LAMA (visit 2) inhalation, COPD participants were asked to perform single-breath washout and forced oscillation tests, double diffusion technique and spirometry, while transcutaneous oxygenation was continuously recorded.",
+   "detailedDescription": "Slopes of He (SHe) and SF6 (SSF6) from single-breath washout test (SBWO) (assessing ventilation heterogeneities at the level of pre- and intra-acinar bronchioles, respectively) (quadruple model, LR6000 Logan-Sinclair, Rochester, UK), respiratory system resistance (R5, R5-R19) and reactance (X5, AX, Fres) from forced oscillation test (FOT) (Resmon Pro, ResTech, Italy), lung capillary volume (Vc) from double diffusion of NO and CO (DLNO/DLCO) (Hyp'Air compact, Medisoft, Dinant, Belgium), and FEV1 from spirometry (Zan®, Oberthulba, Germany) were evaluated before and after LABD administered via a spacer device: during the first visit, before, 30 minutes and 2 hours after inhalation of 4 puffs of 2,5 µg of olodaterol (LABA); during the second visit, before, 40 minutes and 2 hours after the administration of 4 puffs of 2,5 µg of tiotropium (LAMA). Transcutaneous oximetry (Perimed232©, Järfälla, Sweden) was monitored continuously during the 2 hours of each visit."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ],
+   "keywords": [
+    "long-acting ß2-agonist",
+    "long-acting muscarinic antagonist",
+    "gas exchange",
+    "oxygen",
+    "small airways",
+    "lung capillary volume"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "NON_RANDOMIZED",
+    "interventionModel": "CROSSOVER",
+    "interventionModelDescription": "A prospective, clinical, uncontrolled, single-blind, cross-over trial that included 2 visits over 2-3 days. Assessments were performed before and after long-acting bronchodilation (LABD): during the first visit, before, 30 minutes and 2 hours after inhalation of olodaterol (LABA); during the second visit, before, 40 minutes and 2 hours after the administration of 4 puffs of 2,5 µg of tiotropium (LAMA).",
+    "primaryPurpose": "BASIC_SCIENCE",
+    "maskingInfo": {
+     "masking": "SINGLE",
+     "whoMasked": [
+      "PARTICIPANT"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 30,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "LABA (olodaterol)",
+     "type": "EXPERIMENTAL",
+     "description": "After 4-5 days washout period, during the first visit, participants received a long-acting beta2-agonist (LABA)",
+     "interventionNames": [
+      "Drug: LABA"
+     ]
+    },
+    {
+     "label": "LAMA (tiotropium)",
+     "type": "EXPERIMENTAL",
+     "description": "Two days after the first visit, during the second visit , participants received a long-acting muscarinic antagonist (LAMA)",
+     "interventionNames": [
+      "Drug: LAMA"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "LABA",
+     "description": "Inhalation of 4 puffs of 2,5 µg of a long-acting beta2-agonist (LABA-olodaterol) administered via a spacer device",
+     "armGroupLabels": [
+      "LABA (olodaterol)"
+     ],
+     "otherNames": [
+      "Olodaterol",
+      "Striverdi Respimat"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "LAMA",
+     "description": "Inhalation of 4 puffs of 2,5 µg of a long-acting muscarinic antagonist (LAMA-tiotropium) administered via a spacer device",
+     "armGroupLabels": [
+      "LAMA (tiotropium)"
+     ],
+     "otherNames": [
+      "Tiotropium",
+      "Spiriva Respimat"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Tissue oxygenation (TcO2) change from baseline",
+     "description": "Transcutaneous oxygen (TcO2) evaluated continuously with a transcutaneous oximeter",
+     "timeFrame": "120 minutes post-drug-administration"
+    },
+    {
+     "measure": "Tissue oxygenation (TcO2) change from baseline",
+     "description": "Transcutaneous oxygen (TcO2) evaluated continuously with a transcutaneous oximeter",
+     "timeFrame": "30 (LABA)/40 (LAMA) minutes post-drug administration"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Slope of Helium (SHe) change from baseline",
+     "description": "SHe from single-breath washout test (SBWO) assessing peripheral ventilation heterogeneities",
+     "timeFrame": "120 minutes post-drug administration"
+    },
+    {
+     "measure": "Slope of Helium (SHe) change from baseline",
+     "description": "SHe from single-breath washout test (SBWO) assessing peripheral ventilation heterogeneities",
+     "timeFrame": "30 (LABA)/40 (LAMA) minutes post-drug administration"
+    },
+    {
+     "measure": "Area under reactance curve from 5 Hz (AX) change from baseline",
+     "description": "AX from forced oscillation test (FOT) evaluating the peripheral lung function",
+     "timeFrame": "120 minutes post-drug administration"
+    },
+    {
+     "measure": "Area under reactance curve from 5 Hz (AX) change from baseline",
+     "description": "AX from forced oscillation test (FOT) evaluating the peripheral lung function",
+     "timeFrame": "30 (LABA)/40 (LAMA) minutes post-drug administration"
+    },
+    {
+     "measure": "Reactance at 5 Hz (X5) change from baseline",
+     "description": "X5 from forced oscillation test (FOT) also evaluating the peripheral lung function",
+     "timeFrame": "30 (LABA)/40 (LAMA) minutes post-drug administration"
+    },
+    {
+     "measure": "Resonant frequency (Fres) change from baseline",
+     "description": "Fres from forced oscillation test (FOT) also evaluating the peripheral lung function",
+     "timeFrame": "120 minutes post-drug administration"
+    },
+    {
+     "measure": "Resonant frequency (Fres) change from baseline",
+     "description": "Fres from forced oscillation test (FOT) also evaluating the peripheral lung function",
+     "timeFrame": "30 (LABA)/40 (LAMA) minutes post-drug administration"
+    },
+    {
+     "measure": "Peripheral resistance (R5-R19) change from baseline",
+     "description": "Peripheral resistance, assessed as frequency dependence of resistance (R5-R19) from forced oscillation test (FOT) also evaluating the peripheral lung function",
+     "timeFrame": "120 minutes post-drug administration"
+    },
+    {
+     "measure": "Peripheral resistance (R5-R19) change from baseline",
+     "description": "Peripheral resistance, assessed as frequency dependence of resistance (R5-R19) from forced oscillation test (FOT) also evaluating the peripheral lung function",
+     "timeFrame": "30 (LABA)/40 (LAMA) minutes post-drug administration"
+    },
+    {
+     "measure": "Lung capillary volume (Vc) change from baseline",
+     "description": "Vc from single-breath double diffusion technique of nitric oxide (NO) and carbon monoxide (CO) (DLNO/DLCO)",
+     "timeFrame": "120 minutes post-drug administration"
+    },
+    {
+     "measure": "Lung capillary volume (Vc) change from baseline",
+     "description": "Vc from single-breath double diffusion technique of nitric oxide (NO) and carbon monoxide (CO) (DLNO/DLCO)",
+     "timeFrame": "30 (LABA)/40 (LAMA) minutes post-drug administration"
+    },
+    {
+     "measure": "Forced Expiratory Volume in 1 Second (FEV1) change from baseline",
+     "description": "FEV1 from spirometry",
+     "timeFrame": "120 minutes post-drug administration"
+    },
+    {
+     "measure": "Forced Expiratory Volume in 1 Second (FEV1) change from baseline",
+     "description": "FEV1 from spirometry",
+     "timeFrame": "30 (LABA)/40 (LAMA) minutes post-drug administration"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* COPD diagnosis according to international criteria\n\nExclusion Criteria:\n\n* inability to perform the tests or to maintain the washout period\n* an exacerbation within the previous 6 weeks\n* a diagnosis of asthma or another chronic respiratory disease that could influence the results of the study",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Silvia Pérez Bogerd, MD",
+     "affiliation": "Erasme University Hospital",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Erasme University Hospital",
+     "city": "Brussels",
+     "zip": "1070",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.85045,
+      "lon": 4.34878
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "YES",
+   "description": "When published, the datasets used and/or analysed during the study will be available from the corresponding author on reasonable request.",
+   "infoTypes": [
+    "STUDY_PROTOCOL",
+    "SAP",
+    "ICF"
+   ],
+   "timeFrame": "After the publication of the results",
+   "accessCriteria": "The datasets used and/or analysed during the study will be available from the corresponding author on reasonable request."
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C549647",
+     "term": "olodaterol"
+    },
+    {
+     "id": "D000069447",
+     "term": "Tiotropium Bromide"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D012602",
+     "term": "Scopolamine Derivatives"
+    },
+    {
+     "id": "D014326",
+     "term": "Tropanes"
+    },
+    {
+     "id": "D053961",
+     "term": "Azabicyclo Compounds"
+    },
+    {
+     "id": "D001372",
+     "term": "Aza Compounds"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000470",
+     "term": "Alkaloids"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D019086",
+     "term": "Bridged Bicyclo Compounds, Heterocyclic"
+    },
+    {
+     "id": "D006572",
+     "term": "Heterocyclic Compounds, Bridged-Ring"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

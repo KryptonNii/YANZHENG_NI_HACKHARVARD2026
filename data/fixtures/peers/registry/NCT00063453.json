@@ -1,0 +1,349 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT00063453",
+   "nctIdAliases": [
+    "NCT00241865",
+    "NCT00782678"
+   ],
+   "orgStudyIdInfo": {
+    "id": "151"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "R01HL071022",
+     "type": "NIH",
+     "link": "https://reporter.nih.gov/quickSearch/R01HL071022"
+    }
+   ],
+   "organization": {
+    "fullName": "Cornell University",
+    "class": "OTHER"
+   },
+   "briefTitle": "Supplemental Selenium and Vitamin E and Pulmonary Function",
+   "officialTitle": "The Respiratory Ancillary Study (RAS) to SELECT"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2017-12",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2003-08"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2010-08",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2010-08",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2003-06-26",
+   "studyFirstSubmitQcDate": "2003-06-27",
+   "studyFirstPostDateStruct": {
+    "date": "2003-06-30",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2017-12-08",
+   "lastUpdatePostDateStruct": {
+    "date": "2017-12-12",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Cornell University",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "National Heart, Lung, and Blood Institute (NHLBI)",
+     "class": "NIH"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "To test whether supplementation with selenium and/or vitamin E affects pulmonary function.",
+   "detailedDescription": "BACKGROUND:\n\nThere is compelling evidence from observational epidemiologic studies that intakes of nutrients with antioxidant properties are associated with reduced risks of chronic obstructive disease (COPD) and increased lung function. This study is ancillary to the multisite Selenium and Vitamin E Cancer Prevention Trial (SELECT), a 4-arm placebo-controlled, double-blinded randomized trial in 35,000 men testing whether daily supplementation with vitamin E (400mg alpha-tocopherol), selenium (200 micrograms selenomethionine) or both vitamin E and selenium can prevent prostate cancer.\n\nDESIGN NARRATIVE:\n\nThis study is ancillary to the multisite Selenium and Vitamin E Cancer Prevention Trial (SELECT), a 4-arm placebo-controlled, double-blinded randomized trial in 35,000 men testing whether daily supplementation with vitamin E (400mg alpha-tocopherol), selenium (200 micrograms selenomethionine) or both vitamin E and selenium can prevent prostate cancer. A total of 3,000 SELECT participants will be enrolled for this respiratory ancillary study, and data collection will be extended to include pulmonary function, respiratory disease, and respiratory symptoms. Biological measures of nutrient exposure (serum vitamin E and selenium) and plasma lipids (total and high-density lipoprotein cholesterol) will be collected on all participants and oxidant burden (urinary F2-isoprostane) on a sub sample of heavy smokers and men with COPD. The primary outcome will be change over about 36 months in forced expiratory volume in the first second (FEV1). FEV1 is a valid and reliable measure of respiratory function that strongly predicts COPD and mortality. Extensive data on diet and dietary supplement use are being collected by the SELECT parent study. All specific aims examine pre-specified contrasts between the 4 arms of the SELECT randomized trial. The underlying hypothesis is that supplements will reduce the age related decline in FEV1 and thus at the 3-year follow-up FEV1, which will be tested in longitudinal and cross-sectional models. A secondary aim considers whether the effect of supplementation is greater among smokers (high burden of exogenous oxidants) who, by purposive selection of the study sites, will comprise about 25% of the sample."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease",
+    "Lung Diseases",
+    "Lung Diseases, Obstructive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "FACTORIAL",
+    "primaryPurpose": "PREVENTION",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 2920,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Vitamin E and selenium placebo",
+     "type": "EXPERIMENTAL",
+     "description": "Vitamin E alone",
+     "interventionNames": [
+      "Dietary Supplement: Vitamin E",
+      "Dietary Supplement: Selenium placebo"
+     ]
+    },
+    {
+     "label": "Selenium and vitamin E placebo",
+     "type": "EXPERIMENTAL",
+     "description": "Selenium alone",
+     "interventionNames": [
+      "Dietary Supplement: Selenium",
+      "Dietary Supplement: Vitamin E placebo"
+     ]
+    },
+    {
+     "label": "Vitamin E and selenium",
+     "type": "EXPERIMENTAL",
+     "description": "Vitamin E and selenium combined",
+     "interventionNames": [
+      "Dietary Supplement: Vitamin E",
+      "Dietary Supplement: Selenium"
+     ]
+    },
+    {
+     "label": "vitamin E Placebo and Selenium placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Double placebo",
+     "interventionNames": [
+      "Dietary Supplement: Vitamin E placebo",
+      "Dietary Supplement: Selenium placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DIETARY_SUPPLEMENT",
+     "name": "Vitamin E",
+     "description": "vitamin E (400 IU/day all rac-α-tocopheryl acetate)",
+     "armGroupLabels": [
+      "Vitamin E and selenium",
+      "Vitamin E and selenium placebo"
+     ],
+     "otherNames": [
+      "all rac-α-tocopheryl acetate"
+     ]
+    },
+    {
+     "type": "DIETARY_SUPPLEMENT",
+     "name": "Selenium",
+     "description": "selenium (200 μg/d L-selenomethionine)",
+     "armGroupLabels": [
+      "Selenium and vitamin E placebo",
+      "Vitamin E and selenium"
+     ],
+     "otherNames": [
+      "L-selenomethionine"
+     ]
+    },
+    {
+     "type": "DIETARY_SUPPLEMENT",
+     "name": "Vitamin E placebo",
+     "description": "placebo",
+     "armGroupLabels": [
+      "Selenium and vitamin E placebo",
+      "vitamin E Placebo and Selenium placebo"
+     ],
+     "otherNames": [
+      "Placebo"
+     ]
+    },
+    {
+     "type": "DIETARY_SUPPLEMENT",
+     "name": "Selenium placebo",
+     "description": "placebo",
+     "armGroupLabels": [
+      "Vitamin E and selenium placebo",
+      "vitamin E Placebo and Selenium placebo"
+     ],
+     "otherNames": [
+      "placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Change in pulmonary function over time by arm of study",
+     "timeFrame": "Outcome is assessed at annual and bi-annual study visits, during in-person visit of participant to the study site. Over a period of about 36 to 48 months, participants are assessed between 3 and 4 times"
+    }
+   ],
+   "otherOutcomes": [
+    {
+     "measure": "Effect of selenium and vitamin E supplementation on incidence of COPD",
+     "description": "The incidence of COPD will be assessed in the full SELECT trial, given this ancillary study added questionnaire data to assess self-reported incidence of lung disease in the full 35,000 participants",
+     "timeFrame": "Questionnaire data on incident lung disease is assessed at annual and biannual study visits, in all SELECT participants. These questionnaire data were collected through the end of SELECT active follow-up, which was December 2010"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Eligibility criteria:\n\n* age ≥ 55 y (≥ 50 y in African-Americans)\n* serum prostate-specific antigen ≤ 4ng/mL\n* no clinical evidence of prostate cancer\n\nExclusion criteria:\n\n* Off both SELECT supplements",
+   "healthyVolunteers": true,
+   "sex": "MALE",
+   "minimumAge": "50 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Patricia A. Cassano, PhD",
+     "affiliation": "Cornell University",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "27519183",
+     "type": "DERIVED",
+     "citation": "Goodman PJ, Tangen CM, Darke AK, Arnold KB, Hartline J, Yee M, Anderson K, Caban-Holt A, Christen WG, Cassano PA, Lance P, Klein EA, Crowley JJ, Minasian LM, Meyskens FL. Opportunities and challenges in incorporating ancillary studies into a cancer prevention randomized clinical trial. Trials. 2016 Aug 12;17:400. doi: 10.1186/s13063-016-1524-9."
+    },
+    {
+     "pmid": "27012420",
+     "type": "DERIVED",
+     "citation": "Guertin KA, Grant RK, Arnold KB, Burwell L, Hartline J, Goodman PJ, Minasian LM, Lippman SM, Klein E, Cassano PA. Effect of long-term vitamin E and selenium supplementation on urine F2-isoprostanes, a biomarker of oxidative stress. Free Radic Biol Med. 2016 Jun;95:349-56. doi: 10.1016/j.freeradbiomed.2016.03.010. Epub 2016 Mar 22."
+    },
+    {
+     "pmid": "25889509",
+     "type": "DERIVED",
+     "citation": "Cassano PA, Guertin KA, Kristal AR, Ritchie KE, Bertoia ML, Arnold KB, Crowley JJ, Hartline J, Goodman PJ, Tangen CM, Minasian LM, Lippman SM, Klein E. A randomized controlled trial of vitamin E and selenium on rate of decline in lung function. Respir Res. 2015 Mar 11;16(1):35. doi: 10.1186/s12931-015-0195-5."
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D014810",
+     "term": "Vitamin E"
+    },
+    {
+     "id": "D012643",
+     "term": "Selenium"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D001578",
+     "term": "Benzopyrans"
+    },
+    {
+     "id": "D011714",
+     "term": "Pyrans"
+    },
+    {
+     "id": "D006573",
+     "term": "Heterocyclic Compounds, 1-Ring"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D006574",
+     "term": "Heterocyclic Compounds, 2-Ring"
+    },
+    {
+     "id": "D000072471",
+     "term": "Heterocyclic Compounds, Fused-Ring"
+    },
+    {
+     "id": "D018011",
+     "term": "Chalcogens"
+    },
+    {
+     "id": "D004602",
+     "term": "Elements"
+    },
+    {
+     "id": "D007287",
+     "term": "Inorganic Chemicals"
+    },
+    {
+     "id": "D008903",
+     "term": "Minerals"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

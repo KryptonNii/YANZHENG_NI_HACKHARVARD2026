@@ -1,0 +1,384 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT07047092",
+   "orgStudyIdInfo": {
+    "id": "NOCOCA"
+   },
+   "organization": {
+    "fullName": "Assistance Publique - Hôpitaux de Paris",
+    "class": "OTHER"
+   },
+   "briefTitle": "Non-invasive Ventilation or CPAP in OSA-COPD Following Admission for an Acute Hypercapnic Respiratory Failure",
+   "officialTitle": "Non-invasive Ventilation or CPAP in OSA-COPD Following Admission for an Acute Hypercapnic Respiratory Failure"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-06",
+   "overallStatus": "RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2026-06-03",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2029-10",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2030-10",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2025-06-11",
+   "studyFirstSubmitQcDate": "2025-07-01",
+   "studyFirstPostDateStruct": {
+    "date": "2025-07-02",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-06-05",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-06-09",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Assistance Publique - Hôpitaux de Paris",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "Chronic obstructive pulmonary disease (COPD) is a major public health problem with 212.3 million prevalent cases of COPD worldwide and 3.3 million deaths related to COPD in 2019. Obstructive sleep apnoea (OSA) is the most common sleep disordered breathing. It is estimated that almost 1 billion adults have OSA worldwide.\n\nGiven the increasing prevalence of obesity, co-morbid OSA is frequently seen in patients with COPD. Co-morbid OSA has been shown to increase mortality, to reduce quality of life and to favour acute exacerbation of COPD. For those admitted for a life-threatening exacerbation of COPD requiring an intensive care admission for acute hypercapnic failure, they are more likely to get readmitted. For those admitted for an acute exacerbation in any ward, they are more likely to be re-admitted for another exacerbation within 180-days if their OSA is not treated.\n\nUnfortunately, data regarding the best management of OSA in patients with co-morbid COPD are lacking as they were often excluded from clinical trials involving patients with COPD. Therefore, CPAP or NIV are administered without scientific evidence establishing which treatment is the most appropriate.",
+   "detailedDescription": "Patients admitted for a severe exacerbation of COPD that required NIV or invasive ventilation or high flow therapy will be screened for the trial once they reach clinical stability that allow weaning of NIV, invasive ventilation, or high flow therapy.\n\nThe screening visit will take place during a standard consultation between 2 days following admission for acute hypercapnic respiratory failure and no later than 30 days following the discharge from the acute ward.\n\nThe inclusion visit will be performed no later than 30-days following discharge from the acute ward.\n\nFollow-up visits will be performed at 3, 6 months after inclusion with a +/-14 days window.\n\nVisits will be conducted in the hospital unless patient is unable to attend due to medical condition or healthcare crisis (infectious pandemic for example). In that case, a remote consultation will be performed to retrieve data available without physical attendance."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease Exacerbation",
+    "Obstructive Sleep Apnea Exacerbation"
+   ],
+   "keywords": [
+    "Chronic Obstructive Pulmonary Disease",
+    "Obstructive Sleep Apnea",
+    "Continuous Positive Airway Pressure",
+    "Non-invasive Ventilation"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "SINGLE",
+     "maskingDescription": "Clinical experts in charge of assessing whether a hospitalization was caused by a COPD exacerbation will blinded to the assigned treatment.",
+     "whoMasked": [
+      "PARTICIPANT"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 386,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Non-invasive Ventilation (NIV)",
+     "type": "EXPERIMENTAL",
+     "description": "Patients randomised to the intervention arm will be established on NIV before discharge to home.",
+     "interventionNames": [
+      "Device: Non-invasive Ventilation (NIV)"
+     ]
+    },
+    {
+     "label": "Continuous Positive Airway Pressure (CPAP)",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Patients randomised to the control arm will be established on CPAP before discharge to home.",
+     "interventionNames": [
+      "Device: Continous Positive Airway Pressure (CPAP)"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DEVICE",
+     "name": "Non-invasive Ventilation (NIV)",
+     "description": "Patients will receive a dedicated training for the use of their NIV in the home setting. The training is the same provided in the usual care of patients established on NIV. They will choose a home care provider for the delivery of NIV as per standard care in France. A telemonitoring of adherence to NIV will be performed.",
+     "armGroupLabels": [
+      "Non-invasive Ventilation (NIV)"
+     ]
+    },
+    {
+     "type": "DEVICE",
+     "name": "Continous Positive Airway Pressure (CPAP)",
+     "description": "Patients will receive a dedicated training the use of their CPAP in the home setting. The training is the same provided in the usual care of patients established on CPAP. They will choose a home care provider for the delivery of CPAP as per standard care in France. Follow-up of CPAP will be performed according to standard care in France and will therefore include a telemonitoring of adherence to CPAP.",
+     "armGroupLabels": [
+      "Continuous Positive Airway Pressure (CPAP)"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Demonstrate the superiority of home NIV versus home CPAP for the reduction of severe exacerbation of COPD or death.",
+     "description": "Reduction of severe exacerbation of COPD or death, defined by the time to occurrence of (i) death from any cause or (ii) hospitalization in relation to severe exacerbation of COPD during a follow up of 12 months after randomization.",
+     "timeFrame": "0-12 months from inclusion"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Evaluate the benefit of NIV over CPAP regarding control of sleep disordered breathing",
+     "description": "Control of sleep disordered breathing, defined as evolution between baseline and 1 year follow-up of the following combined criteria :\n\n* Apnea-hypopnea index (whilst unsupported breathing at baseline and when using the treatment overnight)\n* 3% Oxygen desaturation index (whilst unsupported breathing at baseline and when using the treatment overnight)\n* Proportion of time spent with SpO2 \\<90% (whilst unsupported breathing at baseline and when using the treatment overnight)\n* Change in 3% Oxygen desaturation index between baseline at 3- and 6-months follow-up when using the treatment overnight\n* Proportion of time spent with SpO2 \\<90% at 3 months and 6 months when using the treatment overnight.",
+     "timeFrame": "0-12 months from inclusion"
+    },
+    {
+     "measure": "Quality of life of NIV over CPAP",
+     "description": "HRQOL compared at 3 months follow-up using HRQOL questionnaires.",
+     "timeFrame": "At month 3"
+    },
+    {
+     "measure": "Quality of life of NIV over CPAP",
+     "description": "HRQOL compared at 12 months follow-up using HRQOL questionnaires.",
+     "timeFrame": "At month 12"
+    },
+    {
+     "measure": "Quality of sleep of NIV over CPAP (Pittsburgh Sleep Quality Index).",
+     "description": "Change in quality of sleep will be assessed using quality of sleep evaluation scales (Pittsburgh Sleep Quality Index).",
+     "timeFrame": "From Day 1 to Day 90"
+    },
+    {
+     "measure": "Quality of sleep of NIV over CPAP",
+     "description": "Change in quality of sleep will be assessed using quality of sleep evaluation scales (Epworth Sleepiness Scale).",
+     "timeFrame": "From Day 1 to Day 90"
+    },
+    {
+     "measure": "Quality of sleep of NIV over CPAP (Insomnia Severity Index).",
+     "description": "Change in quality of sleep will be assessed using quality of sleep evaluation scales (Insomnia Severity Index).",
+     "timeFrame": "From Day 1 to Day 90"
+    },
+    {
+     "measure": "Quality of sleep of NIV over CPAP",
+     "description": "Change in quality of sleep will be assessed using the difference from baseline and one-year follow-up using quality of sleep evaluation scales (Pittsburgh Sleep Quality Index).",
+     "timeFrame": "From Day 1 to Day 365"
+    },
+    {
+     "measure": "Quality of sleep of NIV over CPAP",
+     "description": "Change in quality of sleep will be assessed using the difference from baseline and one-year follow-up using quality of sleep evaluation scales (Epworth Sleepiness Scale).",
+     "timeFrame": "From Day 1 to Day 365"
+    },
+    {
+     "measure": "Quality of sleep of NIV over CPAP (Insomnia Severity Index).",
+     "description": "Change in quality of sleep will be assessed using the difference from baseline and one-year follow-up using quality of sleep evaluation scales (Insomnia Severity Index).",
+     "timeFrame": "From Day 1 to Day 365"
+    },
+    {
+     "measure": "Quality of sleep of NIV over CPAP in centres that will perform overnight polysomnography",
+     "description": "Quality of sleep,defined by variations between day 1 and 1 year in objective measures of sleep quality in centres that will perform overnight polysomnography : proportions of light, deep and REM sleep, wake since sleep onset, awakenings, arousals, sleep efficacy, sleep efficiency.",
+     "timeFrame": "From Day 1 to Day 365"
+    },
+    {
+     "measure": "Respiratory function benefit of NIV over CPAP",
+     "description": "Respiratory function defined as change in gas exchange from baseline (Pa02, PaCO2) and 1 year: Arterial blood gas (ABG) will be measured during daytime and will be performed after 30 min on room air).",
+     "timeFrame": "From Day 1 to Day 365"
+    },
+    {
+     "measure": "Respiratory function benefit of NIV over CPAP",
+     "description": "Respiratory function defined as change in Forced Expiratory Volume 1, at 1 year.",
+     "timeFrame": "At month 12"
+    },
+    {
+     "measure": "Exercise capacity benefit of NIV over CPAP",
+     "description": "Exercise capacity defined as change in distance walked during a 6MWT. 6MWT will be performed at discharge and at each follow-up visit. 6MWT will be performed according to ERS guidelines.",
+     "timeFrame": "At month 3"
+    },
+    {
+     "measure": "Exercise capacity benefit of NIV over CPAP",
+     "description": "Exercise capacity defined as change in distance walked during a 6MWT at 1 year. 6MWT will be performed at discharge and at each follow-up visit. 6MWT will be performed according to ERS guidelines.",
+     "timeFrame": "At month 12"
+    },
+    {
+     "measure": "Benefit of compliance and tolerance of NIV over CPAP",
+     "description": "Compliance of the treatment, defined as Daily use / % of day used \\>4hours / side effect questionnaire, assessed at each visit.",
+     "timeFrame": "From Day 1 to Day 90"
+    },
+    {
+     "measure": "Benefit of compliance and tolerance of NIV over CPAP",
+     "description": "Compliance of the treatment, defined as Daily use / % of day used \\>4hours / side effect questionnaire, assessed at each visit.",
+     "timeFrame": "From Day 1 to Day 180"
+    },
+    {
+     "measure": "Benefit of compliance and tolerance of NIV over CPAP",
+     "description": "Compliance of the treatment, defined as Daily use / % of day used \\>4hours / side effect questionnaire, assessed at each visit.",
+     "timeFrame": "From Day 1 to Day 365"
+    },
+    {
+     "measure": "Benefit of NIV over CPAP regarding usefulness of CPAP/NIV data to predict COPD severe acute exacerbation.",
+     "description": "Change in breathing frequency or other extractable parameters that may predict the onset of a severe exacerbation.",
+     "timeFrame": "At month 12"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age ≥ 18 and \\< 85 years\n2. Patient with a diagnosis of COPD according to GOLD guidelines\n3. Patient admitted for an acute exacerbation of COPD requiring acute NIV or invasive ventilation or high-flow therapy (pH \\<7.35 with PaCO2 \\>45mmHg/6kPa)\n4. Patient that has been weaned from acute NIV or invasive ventilation or high flow therapy\n5. Patient with an overnight polygraphy or polysomnography performed 2 to 30 days following weaning from acute NIV or invasive ventilation showing an obstructive apneahypopnea index \\>=15/h. For patients already diagnosed with OSA, results from their prior sleep study will be retrieved. If not accessible, overnight polygraphy or polysomnography will be repeated.\n6. Affiliated to the National Health Patients affiliated or, beneficiary of social security, excluding AME (Aide Médicale d'État)\n7. Patient who has read and understood the information letter and signed the consent form\n\nExclusion Criteria:\n\n1. Patient with NIV treatment\n2. Patients who decline any use of NIV or CPAP in the home setting\n3. Significant psychiatric disorder or dementia that would prevent adherence to study protocol\n4. Tobacco use \\<10 pack-year\n5. Expected survival \\<12 months due to any condition other than COPD.\n6. Patient deprived of liberty by administrative or judicial decision or placed under judicial protection (guardianship or supervision)\n7. Pregnant or breastfeeding women\n8. Patient already involved in an interventional research protocol that would impact the outcome measured in the current protocol.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "maximumAge": "84 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Maxime PATOUT, MD, PhD",
+     "role": "CONTACT",
+     "phone": "01 42 16 77 09",
+     "email": "maxime.patout@aphp.fr"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Hospital Pitié-Salpêtrière - Sleep unit, R3S Departement",
+     "status": "RECRUITING",
+     "city": "Paris",
+     "zip": "75013",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Maxime PATOUT, MD PhD",
+       "role": "CONTACT",
+       "phone": "+331 42 16 77 08",
+       "email": "maxime.patout@aphp.fr"
+      }
+     ],
+     "geoPoint": {
+      "lat": 48.85341,
+      "lon": 2.3488
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "UNDECIDED"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D020181",
+     "term": "Sleep Apnea, Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D012891",
+     "term": "Sleep Apnea Syndromes"
+    },
+    {
+     "id": "D001049",
+     "term": "Apnea"
+    },
+    {
+     "id": "D012120",
+     "term": "Respiration Disorders"
+    },
+    {
+     "id": "D020919",
+     "term": "Sleep Disorders, Intrinsic"
+    },
+    {
+     "id": "D020920",
+     "term": "Dyssomnias"
+    },
+    {
+     "id": "D012893",
+     "term": "Sleep Wake Disorders"
+    },
+    {
+     "id": "D009422",
+     "term": "Nervous System Diseases"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D063087",
+     "term": "Noninvasive Ventilation"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D012121",
+     "term": "Respiration, Artificial"
+    },
+    {
+     "id": "D058109",
+     "term": "Airway Management"
+    },
+    {
+     "id": "D013812",
+     "term": "Therapeutics"
+    },
+    {
+     "id": "D012138",
+     "term": "Respiratory Therapy"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

@@ -1,0 +1,2739 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT00931385",
+   "orgStudyIdInfo": {
+    "id": "1222.24"
+   },
+   "organization": {
+    "fullName": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Characterization of 24 Hour Spirometry Profiles of Inhaled BI 1744 CL and Inhaled Foradil in Patients With Chronic Obstructive Pulmonary Disease",
+   "officialTitle": "Characterisation of 24-hour FEV1-time Profiles of Inhaled BI 1744 CL and Inhaled Foradil Iin Patients With Chronic Obstructive Pulmonary Disease"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2014-05",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2009-06"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2010-04",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2009-07-01",
+   "studyFirstSubmitQcDate": "2009-07-01",
+   "studyFirstPostDateStruct": {
+    "date": "2009-07-02",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2014-03-28",
+   "resultsFirstSubmitQcDate": "2014-05-29",
+   "resultsFirstPostDateStruct": {
+    "date": "2014-07-01",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2014-05-29",
+   "lastUpdatePostDateStruct": {
+    "date": "2014-07-01",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "oldNameTitle": "Boehringer Ingelheim, Study Chair",
+    "oldOrganization": "Boehringer Ingelheim"
+   },
+   "leadSponsor": {
+    "name": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "The study is intended to characterize the lung function profile of BI1744 in COPD patients where patients will perform pulmonary function tests at regular intervals for 24 hours at the end of a 6 week treatment period. Each patient will receive all four treatments."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "CROSSOVER",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 99,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "BI 1744 (Olodaterol) Low Dose",
+     "type": "EXPERIMENTAL",
+     "description": "BI1744 Low Dose once daily",
+     "interventionNames": [
+      "Drug: bi1744"
+     ]
+    },
+    {
+     "label": "BI 1744 (Olodaterol) Med Dose",
+     "type": "EXPERIMENTAL",
+     "description": "BI 1744 Med Dose once daily",
+     "interventionNames": [
+      "Drug: BI 1744"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo once daily",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    },
+    {
+     "label": "Foradil",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Foradil 12 mcg twice daily",
+     "interventionNames": [
+      "Drug: Foradil"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "BI 1744",
+     "description": "BI1744 Respimat Med Dose Once Daily",
+     "armGroupLabels": [
+      "BI 1744 (Olodaterol) Med Dose"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "bi1744",
+     "description": "1744 low dose",
+     "armGroupLabels": [
+      "BI 1744 (Olodaterol) Low Dose"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Placebo Respimat and Foradil Placebo",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Foradil",
+     "description": "Foradil 12 mcg twice daily and Placebo Respimat",
+     "armGroupLabels": [
+      "Foradil"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "FEV1 Area Under Curve 0-12 h (AUC 0-12h) Response After Six Weeks of Treatment",
+     "description": "Response was defined as change from baseline. Study baseline FEV1 was defined as the mean of the -1 hour and -10 minute measurements performed in the morning of the first treatment visit, just prior to administration of the morning dose of randomized treatment. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random. FEV1 AUC 0-12h was calculated from 0-12 hours post-dose using the trapezoidal rule, divided by the observation time (12h) to report in litres.",
+     "timeFrame": "1 hour (h) and 10 minutes (min) prior to am dose on the first day of treatment (baseline) and -30 min (zero time), 30 min, 60 min, 2 hour (h) , 3 h, 4 h, 6 h, 8 h, 10 h, 11 h 50 min relative to am dose after six weeks of treatment"
+    },
+    {
+     "measure": "FEV1 Area Under Curve 12-24h (AUC 12-24h) Response After Six Weeks of Treatment",
+     "description": "Response was defined as change from baseline. Study baseline FEV1 was defined as the mean of the -1 hour and -10 minute measurements performed in the morning of the first treatment visit, just prior to administration of the morning dose of randomized treatment. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random. FEV1 AUC 12-24h was calculated from 12-24 hours post-dose using the trapezoidal rule, divided by the observation time (12h) to report in litres.",
+     "timeFrame": "1 h and 10 min prior to am dose on the first day of treatment (baseline) and 12 h 30 min, 13 h, 14 h, 22 h, 23 h, and 23 h 50 min relative to am dose after six weeks of treatment"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Forced Expiratory Volume in 1 Second (FEV1) Area Under Curve 0-24 h (AUC 0-24h) Response After Six Weeks of Treatment",
+     "description": "Response was defined as change from baseline. Study baseline FEV1 was defined as the mean of the available pre-dose FEV1 values at the randomisation visit. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random.FEV1 AUC 0-24h was calculated from 0-24 hours post-dose using the trapezoidal rule, divided by the observation time (24h) to report in litres.",
+     "timeFrame": "1 h and 10 min prior to am dose on the first day of treatment (baseline) and -30 min, 30 min, 60 min, 2h, 3h, 4h, 6h, 8h, 10h, 11 hr 50 min,12 h 30 min, 13 h, 14 h, 22 h, 23 h, and 23 h 50 min relative to am dose after six weeks of treatment."
+    },
+    {
+     "measure": "Forced Expiratory Volume in 1 Second (FEV1) Area Under Curve 0-3 h (AUC 0-3h) Response After Six Weeks of Treatment",
+     "description": "Response was defined as change from baseline. Study baseline FEV1 was defined as the mean of the available pre-dose FEV1 values at the randomisation visit. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random. FEV1 AUC 0-3h was calculated from 0-3hours post-dose using the trapezoidal rule, divided by the observation time (3 h) to report in litres.",
+     "timeFrame": "1 hour (h) prior and 10 minutes (min) prior to first dose (baseline) and -30 min, 30 min, 60 min, 2 h , 3 h, relative to the last am dose after six weeks of treatment"
+    },
+    {
+     "measure": "Peak FEV1 (0-3h) Response",
+     "description": "Response was defined as change from baseline. Study baseline peak FEV1 was defined as the mean of the available pre-dose peak FEV1 values at the randomisation visit. Peak (0-3h) values were obtained within 0 - 3 hours after the last am dose after six weeks of treatment. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random.",
+     "timeFrame": "Baseline and 6 weeks"
+    },
+    {
+     "measure": "Trough FEV1 Response",
+     "description": "Response was defined as change from baseline. Study baseline trough FEV1 was defined as the mean of the available pre-dose trough FEV1 values at the randomisation visit. Trough values were obtained 30 minutes prior to the last am dose of study drug after six weeks of treatment . Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random.",
+     "timeFrame": "Baseline and 6 weeks"
+    },
+    {
+     "measure": "Forced Vital Capacity (FVC) Area Under Curve 0-12 Hours (AUC 0-12h) Response",
+     "description": "Response was defined as change from baseline. Study baseline FVC was defined as the mean of the available pre-dose FVC values at the randomisation visit. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random. FVC AUC 0-12h was calculated using the trapezoidal rule, divided by the observation time to report in litres.",
+     "timeFrame": "1 hour (h) and 10 minutes (min) prior to am dose on the first day of treatment (baseline) and -30 min (zero time), 30 min, 60 min, 2 hour (h) , 3 h, 4 h, 6 h, 8 h, 10 h, 11 h 50 min relative to am dose after six weeks of treatment"
+    },
+    {
+     "measure": "FVC Area Under Curve 12-24 Hours (AUC 12-24h) Response",
+     "description": "Response was defined as change from baseline. Study baseline FVC was defined as the mean of the available pre-dose FVC values at the randomisation visit. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random. FVC AUC 12-24h was calculated using the trapezoidal rule, divided by the observation time to report in litres.",
+     "timeFrame": "1 h and 10 min prior to am dose on the first day of treatment (baseline) and 12 h 30 min, 13 h, 14 h, 22 h, 23 h, and 23 h 50 min relative to am dose after six weeks of treatment"
+    },
+    {
+     "measure": "FVC Area Under Curve 0-24 Hours (AUC 0-24h) Response",
+     "description": "Response was defined as change from baseline. Study baseline FVC was defined as the mean of the available pre-dose FVC values at the randomisation visit. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random. FVC AUC 0-24h was calculated using the trapezoidal rule, divided by the observation time to report in litres.",
+     "timeFrame": "1 h and 10 min prior to am dose on the first day of treatment (baseline) and -30 min, 30 min, 60 min, 2h, 3h, 4h, 6h, 8h, 10h, 11 hr 50 min,12 h 30 min, 13 h, 14 h, 22 h, 23 h, and 23 h 50 min relative to am dose after six weeks of treatment."
+    },
+    {
+     "measure": "Peak FVC (0-3h) Response",
+     "description": "Response was defined as change from baseline. Study baseline peak FVC was defined as the mean of the available pre-dose peak FVC values at the randomisation visit. Peak FVC (0-3h) was obtained within 0 - 3 hours after the last am dose of study drug after 6 weeks of treatment. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random.",
+     "timeFrame": "Baseline and 6 weeks"
+    },
+    {
+     "measure": "Trough FVC Response",
+     "description": "Response was defined as change from baseline. Study baseline trough FVC was defined as the mean of the available pre-dose trough FVC values at the randomisation visit. Trough values were obtained 30 minutes prior to the last am dose of study drug after six weeks of treatment . Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random.",
+     "timeFrame": "Baseline and 6 weeks"
+    },
+    {
+     "measure": "Clinical Relevant Abnormalities for Vital Signs, Blood Chemistry, Haematology, Urinalysis and ECG",
+     "description": "Clinical relevant Abnormalities for Vital Signs, Blood Chemistry, Haematology, Urinalysis and ECG. New abnormal findings or worsenings of baseline conditions were reported as Adverse Events related to treatment (cardiac disorders and investigations).",
+     "timeFrame": "6 weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Patients willing to participate with confirmed diagnosis of COPD\n* 40 years of age or older\n* having a 10 pack year smoking history\n* able to perform serial pulmonary function tests\n* able to use both a DPI and Respimat device\n\nExclusion Criteria:\n\n* Significant other disease\n* clinically relevant abnormal hematology, chemistry, or urinalysis\n* history of asthma\n* diagnosis of thyrotoxicosis\n* paroxysmal tachycardia related to beta agonists\n* history of MI within 1 year, cardiac arrhythmia, hospitalization for heart failure within 1 year\n* active tuberculosis, cystic fibrosis, clinically evident bronchiectasis\n* significant alcohol or drug use\n* pulmonary resection\n* taking oral beta adrenergics\n* taking unstable oral steroids\n* daytime oxygen\n* enrolled in rehabilitation program\n* enrolled in another study or taking investigational products\n* pregnant or nursing women, women of child bearing potential not willing to use two methods of birth control\n* those who are not willing to comply with pulmonary medication washouts",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Boehringer Ingelheim",
+     "affiliation": "Boehringer Ingelheim",
+     "role": "STUDY_CHAIR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "1222.24.24011 Boehringer Ingelheim Investigational Site",
+     "city": "Tampa",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.94752,
+      "lon": -82.45843
+     }
+    },
+    {
+     "facility": "1222.24.24009 Boehringer Ingelheim Investigational Site",
+     "city": "Overland Park",
+     "state": "Kansas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.98223,
+      "lon": -94.67079
+     }
+    },
+    {
+     "facility": "1222.24.24007 Boehringer Ingelheim Investigational Site",
+     "city": "Lafayette",
+     "state": "Louisiana",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.22409,
+      "lon": -92.01984
+     }
+    },
+    {
+     "facility": "1222.24.24002 Boehringer Ingelheim Investigational Site",
+     "city": "Cincinnati",
+     "state": "Ohio",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.12711,
+      "lon": -84.51439
+     }
+    },
+    {
+     "facility": "1222.24.24010 Boehringer Ingelheim Investigational Site",
+     "city": "Oklahoma City",
+     "state": "Oklahoma",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.46756,
+      "lon": -97.51643
+     }
+    },
+    {
+     "facility": "1222.24.24004 Boehringer Ingelheim Investigational Site",
+     "city": "Easley",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.82984,
+      "lon": -82.60152
+     }
+    },
+    {
+     "facility": "1222.24.24006 Boehringer Ingelheim Investigational Site",
+     "city": "Gaffney",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.07179,
+      "lon": -81.64982
+     }
+    },
+    {
+     "facility": "1222.24.24005 Boehringer Ingelheim Investigational Site",
+     "city": "Greenville",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.85262,
+      "lon": -82.39401
+     }
+    },
+    {
+     "facility": "1222.24.24008 Boehringer Ingelheim Investigational Site",
+     "city": "Greenville",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.85262,
+      "lon": -82.39401
+     }
+    },
+    {
+     "facility": "1222.24.24001 Boehringer Ingelheim Investigational Site",
+     "city": "Spartanburg",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.94957,
+      "lon": -81.93205
+     }
+    },
+    {
+     "facility": "1222.24.24003 Boehringer Ingelheim Investigational Site",
+     "city": "Union",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.71541,
+      "lon": -81.62371
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "25187881",
+     "type": "DERIVED",
+     "citation": "Feldman GJ, Bernstein JA, Hamilton A, Nivens MC, Korducki L, LaForce C. The 24-h FEV1 time profile of olodaterol once daily via Respimat(R) and formoterol twice daily via Aerolizer(R) in patients with GOLD 2-4 COPD: results from two 6-week crossover studies. Springerplus. 2014 Aug 9;3:419. doi: 10.1186/2193-1801-3-419. eCollection 2014."
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "This was a randomised, double-blind, double-dummy, placebo-controlled, 4-way crossover trial. The duration of each treatment period was 6 weeks with a 14 day washout period between treatments.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Olo 5mcg / Foradil 12mcg / Placebo / Olo 10mcg",
+     "description": "Patients were administered Olodaterol 5 mcg qd in the first period, Foradil 12 mcg bid in the second period, matching Placebo in the third period and Olodaterol 10 mcg qd in the fourth period. Olodaterol was administered via the Respimat inhaler, Foradil was administered via the Aerolizer inhaler."
+    },
+    {
+     "id": "FG001",
+     "title": "Foradil 12mcg / Olo 10mcg / Olo 5mcg / Placebo",
+     "description": "Patients were administered Foradil 12 mcg bid in the first period, Olodaterol 10 mcg qd in the second period, Olodaterol 5 mcg qd in the third period and matching Placebo in the fourth period. Olodaterol was administered via the Respimat inhaler, Foradil was administered via the Aerolizer inhaler."
+    },
+    {
+     "id": "FG002",
+     "title": "Olo 10mcg / Placebo / Foradil 12mcg / Olo 5mcg",
+     "description": "Patients were administered Olodaterol 10 mcg qd in the first period, matching Placebo in the second period, Foradil 12 mcg bid in the third period and Olodaterol 5 mcg qd in the fourth period. Olodaterol was administered via the Respimat inhaler, Foradil was administered via the Aerolizer inhaler."
+    },
+    {
+     "id": "FG003",
+     "title": "Placebo / Olo 5mcg / Olo 10mcg / Foradil 12mcg",
+     "description": "Patients were administered matching Placebo in the first period, Olodaterol 5 mcg qd in the second period, Olodaterol 10 mcg qd in the third period and Foradil 12 mcg bid in the fourth period. Olodaterol was administered via the Respimat inhaler, Foradil was administered via the Aerolizer inhaler."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "25"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "23"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "25"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "26"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "23"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "21"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "24"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "21"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "5"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "3"
+        }
+       ]
+      },
+      {
+       "type": "Protocol Violation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "1"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "populationDescription": "Treated set, i.e., all treated patients.",
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Study Total",
+     "description": "Total number of patients treated in the study. This was a randomised, double-blind, double dummy, placebo- and active-controlled, 4 way crossover trial. 99 patients were assigned randomly to one of 4 treatment sequences in which they received each of 4 treatments, two doses (5 microgram (mcg) or 10 mcg) of Olodaterol (Olo) once daily (qd) delivered via the Respimat inhaler or Foradil (Form) 12 mcg twice daily (bid) delivered via the Aerolizer inhaler or equivalent placebo delivered by Respimat Inhaler or Aerolizer Inhaler. The duration of each treatment period was 6 weeks with a 14 day washout period between treatments."
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "99"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "61.8",
+           "spread": "8.9"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "47"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "52"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "FEV1 Area Under Curve 0-12 h (AUC 0-12h) Response After Six Weeks of Treatment",
+     "description": "Response was defined as change from baseline. Study baseline FEV1 was defined as the mean of the -1 hour and -10 minute measurements performed in the morning of the first treatment visit, just prior to administration of the morning dose of randomized treatment. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random. FEV1 AUC 0-12h was calculated from 0-12 hours post-dose using the trapezoidal rule, divided by the observation time (12h) to report in litres.",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients with the baseline (pre-dose) data and any evaluable post-dosing data for the first co-primary endpoint FEV1AUC 0-12h.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "1 hour (h) and 10 minutes (min) prior to am dose on the first day of treatment (baseline) and -30 min (zero time), 30 min, 60 min, 2 hour (h) , 3 h, 4 h, 6 h, 8 h, 10 h, 11 h 50 min relative to am dose after six weeks of treatment",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler or Aerolizer Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "Form 12 mcg Bid",
+       "description": "Foradil 12 mcg bid (morning and evening) delivered by the Aerolizer Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "93"
+        },
+        {
+         "groupId": "OG001",
+         "value": "92"
+        },
+        {
+         "groupId": "OG002",
+         "value": "91"
+        },
+        {
+         "groupId": "OG003",
+         "value": "90"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.060",
+           "spread": "0.020"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.088",
+           "spread": "0.021"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.088",
+           "spread": "0.021"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.081",
+           "spread": "0.021"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.148",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.113",
+       "ciUpperLimit": "0.183",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.018",
+       "estimateComment": "Olo 5 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.148",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.113",
+       "ciUpperLimit": "0.183",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.018",
+       "estimateComment": "Olo 10 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.141",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.106",
+       "ciUpperLimit": "0.177",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.018",
+       "estimateComment": "Form 12 mcg bid minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "PRIMARY",
+     "title": "FEV1 Area Under Curve 12-24h (AUC 12-24h) Response After Six Weeks of Treatment",
+     "description": "Response was defined as change from baseline. Study baseline FEV1 was defined as the mean of the -1 hour and -10 minute measurements performed in the morning of the first treatment visit, just prior to administration of the morning dose of randomized treatment. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random. FEV1 AUC 12-24h was calculated from 12-24 hours post-dose using the trapezoidal rule, divided by the observation time (12h) to report in litres.",
+     "populationDescription": "FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "1 h and 10 min prior to am dose on the first day of treatment (baseline) and 12 h 30 min, 13 h, 14 h, 22 h, 23 h, and 23 h 50 min relative to am dose after six weeks of treatment",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat resp. Aerolizer Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "Form 12 mcg Bid",
+       "description": "Foradil 12 mcg bid (morning and evening) delivered by the Aerolizer Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "93"
+        },
+        {
+         "groupId": "OG001",
+         "value": "92"
+        },
+        {
+         "groupId": "OG002",
+         "value": "91"
+        },
+        {
+         "groupId": "OG003",
+         "value": "90"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.123",
+           "spread": "0.021"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.014",
+           "spread": "0.022"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.004",
+           "spread": "0.022"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.049",
+           "spread": "0.022"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.109",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.073",
+       "ciUpperLimit": "0.146",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019",
+       "estimateComment": "Olo 5 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.127",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.091",
+       "ciUpperLimit": "0.164",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019",
+       "estimateComment": "Olo 10 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.172",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.135",
+       "ciUpperLimit": "0.209",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019",
+       "estimateComment": "Form 12 mcg bid minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Forced Expiratory Volume in 1 Second (FEV1) Area Under Curve 0-24 h (AUC 0-24h) Response After Six Weeks of Treatment",
+     "description": "Response was defined as change from baseline. Study baseline FEV1 was defined as the mean of the available pre-dose FEV1 values at the randomisation visit. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random.FEV1 AUC 0-24h was calculated from 0-24 hours post-dose using the trapezoidal rule, divided by the observation time (24h) to report in litres.",
+     "populationDescription": "FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "1 h and 10 min prior to am dose on the first day of treatment (baseline) and -30 min, 30 min, 60 min, 2h, 3h, 4h, 6h, 8h, 10h, 11 hr 50 min,12 h 30 min, 13 h, 14 h, 22 h, 23 h, and 23 h 50 min relative to am dose after six weeks of treatment.",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat resp. Aerolizer Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "Form 12 mcg Bid",
+       "description": "Foradil 12 mcg bid (morning and evening) delivered by the Aerolizer Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "93"
+        },
+        {
+         "groupId": "OG001",
+         "value": "92"
+        },
+        {
+         "groupId": "OG002",
+         "value": "91"
+        },
+        {
+         "groupId": "OG003",
+         "value": "90"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.092",
+           "spread": "0.020"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.037",
+           "spread": "0.021"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.046",
+           "spread": "0.021"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.065",
+           "spread": "0.021"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.128",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.094",
+       "ciUpperLimit": "0.163",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Olo 5 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.137",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.103",
+       "ciUpperLimit": "0.172",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Olo 10 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.156",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.122",
+       "ciUpperLimit": "0.191",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.018",
+       "estimateComment": "Form 12 mcg bid minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Forced Expiratory Volume in 1 Second (FEV1) Area Under Curve 0-3 h (AUC 0-3h) Response After Six Weeks of Treatment",
+     "description": "Response was defined as change from baseline. Study baseline FEV1 was defined as the mean of the available pre-dose FEV1 values at the randomisation visit. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random. FEV1 AUC 0-3h was calculated from 0-3hours post-dose using the trapezoidal rule, divided by the observation time (3 h) to report in litres.",
+     "populationDescription": "FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "1 hour (h) prior and 10 minutes (min) prior to first dose (baseline) and -30 min, 30 min, 60 min, 2 h , 3 h, relative to the last am dose after six weeks of treatment",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat resp. Aerolizer Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "Form 12 mcg Bid",
+       "description": "Foradil 12 mcg bid (morning and evening) delivered by the Aerolizer Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "93"
+        },
+        {
+         "groupId": "OG001",
+         "value": "92"
+        },
+        {
+         "groupId": "OG002",
+         "value": "91"
+        },
+        {
+         "groupId": "OG003",
+         "value": "90"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.030",
+           "spread": "0.020"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.134",
+           "spread": "0.021"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.135",
+           "spread": "0.021"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.168",
+           "spread": "0.021"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.164",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.126",
+       "ciUpperLimit": "0.201",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019",
+       "estimateComment": "Olo 5 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.164",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.127",
+       "ciUpperLimit": "0.202",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019",
+       "estimateComment": "Olo 10 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.198",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.160",
+       "ciUpperLimit": "0.236",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019",
+       "estimateComment": "Form 12 mcg bid minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Peak FEV1 (0-3h) Response",
+     "description": "Response was defined as change from baseline. Study baseline peak FEV1 was defined as the mean of the available pre-dose peak FEV1 values at the randomisation visit. Peak (0-3h) values were obtained within 0 - 3 hours after the last am dose after six weeks of treatment. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random.",
+     "populationDescription": "FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "Baseline and 6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat resp. Aerolizer Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "Form 12 mcg Bid",
+       "description": "Foradil 12 mcg bid (morning and evening) delivered by the Aerolizer Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "93"
+        },
+        {
+         "groupId": "OG001",
+         "value": "92"
+        },
+        {
+         "groupId": "OG002",
+         "value": "91"
+        },
+        {
+         "groupId": "OG003",
+         "value": "90"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.034",
+           "spread": "0.022"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.208",
+           "spread": "0.022"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.200",
+           "spread": "0.022"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.251",
+           "spread": "0.022"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.174",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.135",
+       "ciUpperLimit": "0.214",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.020",
+       "estimateComment": "Olo 5 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.166",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.127",
+       "ciUpperLimit": "0.206",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.020",
+       "estimateComment": "Olo 10 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.218",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.178",
+       "ciUpperLimit": "0.257",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.020",
+       "estimateComment": "Form 12 mcg bid minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Trough FEV1 Response",
+     "description": "Response was defined as change from baseline. Study baseline trough FEV1 was defined as the mean of the available pre-dose trough FEV1 values at the randomisation visit. Trough values were obtained 30 minutes prior to the last am dose of study drug after six weeks of treatment . Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random.",
+     "populationDescription": "FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "Baseline and 6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat resp. Aerolizer Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "Form 12 mcg Bid",
+       "description": "Foradil 12 mcg bid (morning and evening) delivered by the Aerolizer Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "93"
+        },
+        {
+         "groupId": "OG001",
+         "value": "92"
+        },
+        {
+         "groupId": "OG002",
+         "value": "91"
+        },
+        {
+         "groupId": "OG003",
+         "value": "90"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.093",
+           "spread": "0.023"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.012",
+           "spread": "0.024"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.020",
+           "spread": "0.024"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.040",
+           "spread": "0.024"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.106",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.064",
+       "ciUpperLimit": "0.147",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.021",
+       "estimateComment": "Olo 5 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.113",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.072",
+       "ciUpperLimit": "0.155",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.021",
+       "estimateComment": "Olo 10 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.133",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.092",
+       "ciUpperLimit": "0.175",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.021",
+       "estimateComment": "Form 12 mcg bid minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Forced Vital Capacity (FVC) Area Under Curve 0-12 Hours (AUC 0-12h) Response",
+     "description": "Response was defined as change from baseline. Study baseline FVC was defined as the mean of the available pre-dose FVC values at the randomisation visit. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random. FVC AUC 0-12h was calculated using the trapezoidal rule, divided by the observation time to report in litres.",
+     "populationDescription": "FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "1 hour (h) and 10 minutes (min) prior to am dose on the first day of treatment (baseline) and -30 min (zero time), 30 min, 60 min, 2 hour (h) , 3 h, 4 h, 6 h, 8 h, 10 h, 11 h 50 min relative to am dose after six weeks of treatment",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat resp. Aerolizer Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "Form 12 mcg Bid",
+       "description": "Foradil 12 mcg bid (morning and evening) delivered by the Aerolizer Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "93"
+        },
+        {
+         "groupId": "OG001",
+         "value": "92"
+        },
+        {
+         "groupId": "OG002",
+         "value": "91"
+        },
+        {
+         "groupId": "OG003",
+         "value": "90"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.086",
+           "spread": "0.036"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.139",
+           "spread": "0.036"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.142",
+           "spread": "0.036"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.117",
+           "spread": "0.036"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.226",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.167",
+       "ciUpperLimit": "0.284",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.030",
+       "estimateComment": "Olo 5 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.229",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.170",
+       "ciUpperLimit": "0.287",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.030",
+       "estimateComment": "Olo 10 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.203",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.144",
+       "ciUpperLimit": "0.262",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.030",
+       "estimateComment": "Form 12 mcg bid minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "FVC Area Under Curve 12-24 Hours (AUC 12-24h) Response",
+     "description": "Response was defined as change from baseline. Study baseline FVC was defined as the mean of the available pre-dose FVC values at the randomisation visit. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random. FVC AUC 12-24h was calculated using the trapezoidal rule, divided by the observation time to report in litres.",
+     "populationDescription": "FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "1 h and 10 min prior to am dose on the first day of treatment (baseline) and 12 h 30 min, 13 h, 14 h, 22 h, 23 h, and 23 h 50 min relative to am dose after six weeks of treatment",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat resp. Aerolizer Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "Form 12 mcg Bid",
+       "description": "Foradil 12 mcg bid (morning and evening) delivered by the Aerolizer Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "93"
+        },
+        {
+         "groupId": "OG001",
+         "value": "92"
+        },
+        {
+         "groupId": "OG002",
+         "value": "91"
+        },
+        {
+         "groupId": "OG003",
+         "value": "90"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.164",
+           "spread": "0.036"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.016",
+           "spread": "0.037"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.008",
+           "spread": "0.037"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.088",
+           "spread": "0.037"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.147",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.087",
+       "ciUpperLimit": "0.207",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.030",
+       "estimateComment": "Olo 5 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.171",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.112",
+       "ciUpperLimit": "0.231",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.030",
+       "estimateComment": "Olo 10 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.251",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.191",
+       "ciUpperLimit": "0.311",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.030",
+       "estimateComment": "Form 12 mcg bid minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "FVC Area Under Curve 0-24 Hours (AUC 0-24h) Response",
+     "description": "Response was defined as change from baseline. Study baseline FVC was defined as the mean of the available pre-dose FVC values at the randomisation visit. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random. FVC AUC 0-24h was calculated using the trapezoidal rule, divided by the observation time to report in litres.",
+     "populationDescription": "FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "1 h and 10 min prior to am dose on the first day of treatment (baseline) and -30 min, 30 min, 60 min, 2h, 3h, 4h, 6h, 8h, 10h, 11 hr 50 min,12 h 30 min, 13 h, 14 h, 22 h, 23 h, and 23 h 50 min relative to am dose after six weeks of treatment.",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat resp. Aerolizer Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "Form 12 mcg Bid",
+       "description": "Foradil 12 mcg bid (morning and evening) delivered by the Aerolizer Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "93"
+        },
+        {
+         "groupId": "OG001",
+         "value": "92"
+        },
+        {
+         "groupId": "OG002",
+         "value": "91"
+        },
+        {
+         "groupId": "OG003",
+         "value": "90"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.125",
+           "spread": "0.035"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.061",
+           "spread": "0.035"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.075",
+           "spread": "0.035"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.102",
+           "spread": "0.035"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.186",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.132",
+       "ciUpperLimit": "0.241",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.028",
+       "estimateComment": "Olo 5 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.200",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.145",
+       "ciUpperLimit": "0.254",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.028",
+       "estimateComment": "Olo 10 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.227",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.172",
+       "ciUpperLimit": "0.282",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.028",
+       "estimateComment": "Form 12 mcg bid minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Peak FVC (0-3h) Response",
+     "description": "Response was defined as change from baseline. Study baseline peak FVC was defined as the mean of the available pre-dose peak FVC values at the randomisation visit. Peak FVC (0-3h) was obtained within 0 - 3 hours after the last am dose of study drug after 6 weeks of treatment. Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random.",
+     "populationDescription": "FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "Baseline and 6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat resp. Aerolizer Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "Form 12 mcg Bid",
+       "description": "Foradil 12 mcg bid (morning and evening) delivered by the Aerolizer Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "93"
+        },
+        {
+         "groupId": "OG001",
+         "value": "92"
+        },
+        {
+         "groupId": "OG002",
+         "value": "91"
+        },
+        {
+         "groupId": "OG003",
+         "value": "90"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.107",
+           "spread": "0.038"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.368",
+           "spread": "0.039"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.360",
+           "spread": "0.039"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.410",
+           "spread": "0.039"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.261",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.191",
+       "ciUpperLimit": "0.330",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.035",
+       "estimateComment": "Olo 5 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.252",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.183",
+       "ciUpperLimit": "0.322",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.036",
+       "estimateComment": "Olo 10 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.302",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.232",
+       "ciUpperLimit": "0.372",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.036",
+       "estimateComment": "Form 12 mcg bid minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Trough FVC Response",
+     "description": "Response was defined as change from baseline. Study baseline trough FVC was defined as the mean of the available pre-dose trough FVC values at the randomisation visit. Trough values were obtained 30 minutes prior to the last am dose of study drug after six weeks of treatment . Means are adjusted using a mixed effects model with center, treatment and period as fixed effects and patient within center as random.",
+     "populationDescription": "FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "Baseline and 6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat resp. Aerolizer Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "Form 12 mcg Bid",
+       "description": "Foradil 12 mcg bid (morning and evening) delivered by the Aerolizer Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "93"
+        },
+        {
+         "groupId": "OG001",
+         "value": "92"
+        },
+        {
+         "groupId": "OG002",
+         "value": "91"
+        },
+        {
+         "groupId": "OG003",
+         "value": "90"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.117",
+           "spread": "0.039"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.037",
+           "spread": "0.040"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.037",
+           "spread": "0.040"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.066",
+           "spread": "0.040"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.154",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.087",
+       "ciUpperLimit": "0.221",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.034",
+       "estimateComment": "Olo 5 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.154",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.086",
+       "ciUpperLimit": "0.221",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.034",
+       "estimateComment": "Olo 10 mcg qd minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted using a mixed model with center, treatment and period as fixed effects and patients within center as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.183",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.115",
+       "ciUpperLimit": "0.250",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.034",
+       "estimateComment": "Form 12 mcg bid minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Clinical Relevant Abnormalities for Vital Signs, Blood Chemistry, Haematology, Urinalysis and ECG",
+     "description": "Clinical relevant Abnormalities for Vital Signs, Blood Chemistry, Haematology, Urinalysis and ECG. New abnormal findings or worsenings of baseline conditions were reported as Adverse Events related to treatment (cardiac disorders and investigations).",
+     "populationDescription": "Treated set.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat resp. Aerolizer Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "Form 12 mcg",
+       "description": "Foradil 12 mcg bid (morning and evening) delivered by the Aerolizer Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "96"
+        },
+        {
+         "groupId": "OG001",
+         "value": "95"
+        },
+        {
+         "groupId": "OG002",
+         "value": "92"
+        },
+        {
+         "groupId": "OG003",
+         "value": "93"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Heart rate increased",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Tachycardia",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "1"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "6 weeks",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Placebo",
+     "description": "Matching Placebo delivered by the Respimat resp. Aerolizer Inhaler.",
+     "seriousNumAffected": 4,
+     "seriousNumAtRisk": 96,
+     "otherNumAffected": 5,
+     "otherNumAtRisk": 96
+    },
+    {
+     "id": "EG001",
+     "title": "Olo 5 mcg",
+     "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler.",
+     "seriousNumAffected": 4,
+     "seriousNumAtRisk": 95,
+     "otherNumAffected": 4,
+     "otherNumAtRisk": 95
+    },
+    {
+     "id": "EG002",
+     "title": "Olo 10 mcg",
+     "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler.",
+     "seriousNumAffected": 2,
+     "seriousNumAtRisk": 92,
+     "otherNumAffected": 1,
+     "otherNumAtRisk": 92
+    },
+    {
+     "id": "EG003",
+     "title": "Form 12 mcg",
+     "description": "Foradil 12 mcg bid (morning and evening) delivered by the Aerolizer Inhaler.",
+     "seriousNumAffected": 1,
+     "seriousNumAtRisk": 93,
+     "otherNumAffected": 3,
+     "otherNumAtRisk": 93
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Atrial fibrillation",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 13.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 96
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 95
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 92
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 93
+      }
+     ]
+    },
+    {
+     "term": "Cardio-respiratory arrest",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 13.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 96
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 95
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 92
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 93
+      }
+     ]
+    },
+    {
+     "term": "Myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 13.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 96
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 95
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 92
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 93
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 13.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 96
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 95
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 92
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 93
+      }
+     ]
+    },
+    {
+     "term": "Lumbar spinal stenosis",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA 13.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 96
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 95
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 92
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 93
+      }
+     ]
+    },
+    {
+     "term": "Cerebrovascular accident",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 13.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 96
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 95
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 92
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 93
+      }
+     ]
+    },
+    {
+     "term": "Radiculopathy",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 13.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 96
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 95
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 92
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 93
+      }
+     ]
+    },
+    {
+     "term": "Depression",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA 13.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 96
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 95
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 92
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 93
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 13.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 96
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 95
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 92
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 93
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 13.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 5,
+       "numAtRisk": 96
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 4,
+       "numAtRisk": 95
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 92
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 3,
+       "numAtRisk": 93
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "Any publication of the result of this trial must be consistent with the Boehringer Ingelheim publication policy. The rights of the investigator and of the sponsor with regard to publication"
+   },
+   "pointOfContact": {
+    "title": "Boehringer Ingelheim Call Center",
+    "organization": "Boehringer Ingelheim Pharmaceuticals",
+    "email": "clintriage.rdg@boehringer-ingelheim.com",
+    "phone": "1-800-243-0127"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C549647",
+     "term": "olodaterol"
+    },
+    {
+     "id": "D000068759",
+     "term": "Formoterol Fumarate"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D004983",
+     "term": "Ethanolamines"
+    },
+    {
+     "id": "D000605",
+     "term": "Amino Alcohols"
+    },
+    {
+     "id": "D000438",
+     "term": "Alcohols"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

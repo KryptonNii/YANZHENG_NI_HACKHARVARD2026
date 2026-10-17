@@ -1,0 +1,482 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT02205255",
+   "orgStudyIdInfo": {
+    "id": "s55829 - FarmEc Substudy"
+   },
+   "organization": {
+    "fullName": "KU Leuven",
+    "class": "OTHER"
+   },
+   "briefTitle": "BACE Trial Substudy 2 - FarmEc Substudy",
+   "officialTitle": "BACE Trial - The Pharmaco-economic Impact of the Azithromycin Intervention",
+   "acronym": "FarmEc"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2020-04",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2014-08-01",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2018-04",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2020-04",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2014-07-23",
+   "studyFirstSubmitQcDate": "2014-07-30",
+   "studyFirstPostDateStruct": {
+    "date": "2014-07-31",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2020-04-07",
+   "lastUpdatePostDateStruct": {
+    "date": "2020-04-08",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR_INVESTIGATOR",
+    "investigatorFullName": "Wim Janssens",
+    "investigatorTitle": "MD. PhD",
+    "investigatorAffiliation": "KU Leuven"
+   },
+   "leadSponsor": {
+    "name": "Wim Janssens",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false
+  },
+  "descriptionModule": {
+   "briefSummary": "A second sub-analysis of the BACE trial will include a detailed cost-effectiveness study.",
+   "detailedDescription": "Our multicenter randomized trial executed in one country will provide an excellent tool for more precise health economic assessments. In a first approach, rough estimates on savings of direct costs in the entire study cohort will be made by taking into account the Flemish average costs for a single hospitalization day at a respiratory ward, for a day at intensive care, for an emergency visit, for a home physician contact and for an antibiotic-steroid course. A more detailed cost-effectiveness and cost-utility analysis at 3 and 9 months interval will only be performed in case significant clinical benefits are found in favor of the active treatment.\n\nFor this purpose medical resource use data will be collected retrospectively via hospital invoices (direct costs including drugs, physician visits, laboratory tests, technical exams, medical imaging, hospital stay) but also prospectively via patient diaries, to cover direct and indirect costs during the entire outpatient period, and will be linked to EQ5D scores.\n\nPatient will have to give informed consent that additional to the clinical evaluation, invoices will be collected. However, individual patients can still opt out for these analyses (sub-study) and only participate in the medical intervention study (main study)."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ],
+   "keywords": [
+    "AECOPD",
+    "Chronic Obstructive Pulmonary Disease",
+    "Acute exacerbation",
+    "Hospitalization",
+    "Azithromycin",
+    "Macrolides",
+    "Randomized Controlled Trial",
+    "Placebo",
+    "Economic Impact",
+    "Cost-effectiveness",
+    "EQ5D"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 350,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Azithromycin",
+     "type": "EXPERIMENTAL",
+     "description": "N = 250 From day 1 up to and including day 3: 500 mg azithromycin PO once a day From day 4 up to and including day 90: 250 mg azithromycin PO once every 2 days",
+     "interventionNames": [
+      "Drug: Azithromycin"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "N = 250 From day 1 up to and including day 3: 500 mg placebo PO once a day From day 4 up to and including day 90: 250 mg placebo PO once every 2 days",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Azithromycin",
+     "description": "From day 1 up to and including day 3: 500 mg azithromycin or placebo PO once a day From day 4 up to and including day 90: 250 mg azithromycin or placebo PO once every 2 days",
+     "armGroupLabels": [
+      "Azithromycin"
+     ],
+     "otherNames": [
+      "Azitromcyine CF",
+      "ATC code: J01FA10"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "armGroupLabels": [
+      "Placebo"
+     ],
+     "otherNames": [
+      "Inactive substance"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Total cost (direct and Indirect cost) during the entire study participation",
+     "description": "Direct costs (including drugs, physician visits, laboratory tests, technical exams, medical imaging, hospital stay) will be assessed by collecting the medical resource use data retrospectively via hospital invoices and prospectively via patient diaries.\n\nIndirect costs (relating to time, convenience, and transportation) will be assessed by collecting the medical resource use data prospectively via patient diaries.\n\nThis outcome measure will also be analysed in following subgroups:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* Former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\< 60 years vs age 60 - 70 years vs age \\> 70 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "At 3 month interval"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Total cost (direct and Indirect cost) during the entire study participation",
+     "description": "Direct costs (including drugs, physician visits, laboratory tests, technical exams, medical imaging, hospital stay) will be assessed by collecting the medical resource use data retrospectively via hospital invoices and prospectively via patient diaries.\n\nIndirect costs (relating to time, convenience, and transportation) will be assessed by collecting the medical resource use data prospectively via patient diaries.\n\nThis outcome measure will also be analysed in following subgroups:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* Former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\< 60 years vs age 60 - 70 years vs age \\> 70 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "At 9 month interval"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Established diagnosis of COPD by medical doctor (based on clinical history OR pulmonary function test)\n* Smoking history of at least 10 pack-years (10 pack-years are defined as 20 cigarettes a day for 10 years, or 10 cigarettes a day for 20 years, etc.)\n* Current hospitalization for potential infectious AECOPD treated with standard therapy\n* History of at least one exacerbation during the last year (prior to the current hospital admission) for which systemic steroids and/or antibiotics were taken\n* ECG at admission\n\nExclusion Criteria:\n\n* Mechanical or non-invasive ventilation at moment of randomization (D1)\n* Long QT interval on ECG (QTc \\> 450msec for males or \\> 470msec for females)\n* History of life-threatening arrhythmias\n* Myocardial infarction (NSTEMI or STEMI) less than 6 weeks before start of study drug\n* Unstable angina pectoris or acute myocardial infarction (NSTEMI or STEMI) at admission\n* Drugs with high risk for long QT interval and torsade de pointes (amiodarone, flecainide, procainamide, sotalol, droperidol, haldol, citalopram, other macrolides)\n* Documented uncorrected severe hypokalemia (K+ \\< 3.0 mmol/L) or hypomagnesemia (Mg2+ \\< 0.5 mmol/L)\n* Chronic systemic steroids (\\> 4 mg methylprednisolone /day for ≥ 2 months)\n* Actual use of macrolides for at least 2 weeks\n* Allergy to macrolides\n* Active cancer treatment\n* Life expectancy \\< 3 months\n* Pregnant or breast-feeding subjects. Woman of childbearing potential must have a pregnancy test performed and a negative result must be documented before start of treatment",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Wim Janssens, MD PhD",
+     "affiliation": "KU Leuven",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "UZ Brussel",
+     "city": "Brussels",
+     "state": "Brussel Hoofdstedelijk Gewest",
+     "zip": "1090",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.85045,
+      "lon": 4.34878
+     }
+    },
+    {
+     "facility": "St. Pieterziekenhuis",
+     "city": "Brussels",
+     "state": "Brussels Capital",
+     "zip": "1000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.85045,
+      "lon": 4.34878
+     }
+    },
+    {
+     "facility": "ZNA Middelheim",
+     "city": "Antwerp",
+     "state": "Flanders",
+     "zip": "2020",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.22047,
+      "lon": 4.40026
+     }
+    },
+    {
+     "facility": "St. Augustinus Ziekenhuis",
+     "city": "Antwerp",
+     "state": "Flanders",
+     "zip": "2610",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.22047,
+      "lon": 4.40026
+     }
+    },
+    {
+     "facility": "Imelda Ziekenhuis",
+     "city": "Bonheiden",
+     "state": "Flanders",
+     "zip": "2820",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.02261,
+      "lon": 4.54714
+     }
+    },
+    {
+     "facility": "St. Jan Brugge Ziekenhuis",
+     "city": "Bruges",
+     "state": "Flanders",
+     "zip": "8000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.20892,
+      "lon": 3.22424
+     }
+    },
+    {
+     "facility": "Maria Middelaresziekenhuis",
+     "city": "Ghent",
+     "state": "Flanders",
+     "zip": "9000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.05,
+      "lon": 3.71667
+     }
+    },
+    {
+     "facility": "UZ Gent",
+     "city": "Ghent",
+     "state": "Flanders",
+     "zip": "9000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.05,
+      "lon": 3.71667
+     }
+    },
+    {
+     "facility": "Jessa Ziekenhuis",
+     "city": "Hasselt",
+     "state": "Flanders",
+     "zip": "3500",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.93106,
+      "lon": 5.33781
+     }
+    },
+    {
+     "facility": "AZ Groeninge Ziekenhuis",
+     "city": "Kortrijk",
+     "state": "Flanders",
+     "zip": "8500",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.82803,
+      "lon": 3.26487
+     }
+    },
+    {
+     "facility": "UZ Gasthuisberg",
+     "city": "Leuven",
+     "state": "Flanders",
+     "zip": "3000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.87959,
+      "lon": 4.70093
+     }
+    },
+    {
+     "facility": "Heilig Hart Ziekenhuis",
+     "city": "Roeselare",
+     "state": "Flanders",
+     "zip": "8800",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.94653,
+      "lon": 3.12269
+     }
+    },
+    {
+     "facility": "St. Andriesziekenhuis",
+     "city": "Tielt",
+     "state": "Flanders",
+     "zip": "8700",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.99931,
+      "lon": 3.32707
+     }
+    },
+    {
+     "facility": "CHU Charleroi",
+     "city": "Charleroi",
+     "state": "Wallonia",
+     "zip": "6110",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.41136,
+      "lon": 4.44448
+     }
+    },
+    {
+     "facility": "Grand Hôpital de Charleroi",
+     "city": "Gilly",
+     "state": "Wallonia",
+     "zip": "6060",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.42449,
+      "lon": 4.4789
+     }
+    },
+    {
+     "facility": "CHU Liège",
+     "city": "Liège",
+     "state": "Wallonia",
+     "zip": "4000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.63373,
+      "lon": 5.56749
+     }
+    },
+    {
+     "facility": "CHU Mont-Godinne",
+     "city": "Yvoir",
+     "state": "Wallonia",
+     "zip": "5530",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.3279,
+      "lon": 4.88059
+     }
+    },
+    {
+     "facility": "Onze-Lieve-Vrouwziekenhuis",
+     "city": "Aalst",
+     "zip": "9300",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.93604,
+      "lon": 4.0355
+     }
+    },
+    {
+     "facility": "Clinique Reine Astrid",
+     "city": "Malmedy",
+     "zip": "4960",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.42686,
+      "lon": 6.02794
+     }
+    },
+    {
+     "facility": "Clinique Sainte-Elisabeth",
+     "city": "Namur",
+     "zip": "5000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.4669,
+      "lon": 4.86746
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D017963",
+     "term": "Azithromycin"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D004917",
+     "term": "Erythromycin"
+    },
+    {
+     "id": "D018942",
+     "term": "Macrolides"
+    },
+    {
+     "id": "D061065",
+     "term": "Polyketides"
+    },
+    {
+     "id": "D007783",
+     "term": "Lactones"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

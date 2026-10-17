@@ -1,0 +1,276 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT02172807",
+   "orgStudyIdInfo": {
+    "id": "205.226"
+   },
+   "organization": {
+    "fullName": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Efficacy and Safety of Ba679BR Powder Inhalation in Patients With Chronic Obstructive Pulmonary Disease (COPD)",
+   "officialTitle": "A Multiple Dose Comparison of 18 µg, 36 µg of Ba679BR (Tiotropium) Inhalation Capsules and Oxitropium Metered Dose Inhaler (2 Puffs of 100µg) in a 4-week, Double-Blind, Double-Dummy, Safety and Efficacy Study in Patients With Chronic Obstructive Pulmonary Disease (COPD)"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2014-06",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2000-12"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2001-09",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2014-06-20",
+   "studyFirstSubmitQcDate": "2014-06-20",
+   "studyFirstPostDateStruct": {
+    "date": "2014-06-24",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2014-06-20",
+   "lastUpdatePostDateStruct": {
+    "date": "2014-06-24",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "Study to investigate the efficacy and safety of Ba679BR powder inhalation during the continuous once/day administration to the patients with COPD using oxitropium bromide (Tersigan® aerosol) as the comparator drug."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 201,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Tiotropium low & Placebo",
+     "type": "EXPERIMENTAL",
+     "description": "Tiotropium 18 µg inhalation capsule and Placebo MDI",
+     "interventionNames": [
+      "Drug: Tiotropium low",
+      "Drug: Placebo MDI"
+     ]
+    },
+    {
+     "label": "Tiotropium high & Placebo",
+     "type": "EXPERIMENTAL",
+     "description": "Tiotropium 36 µg inhalation capsule and Placebo MDI",
+     "interventionNames": [
+      "Drug: Tiotropium high",
+      "Drug: Placebo MDI"
+     ]
+    },
+    {
+     "label": "Oxitropium & Placebo",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Oxitropium MDI (100 µg/puff) and Placebo inhalation capsules",
+     "interventionNames": [
+      "Drug: Placebo inhalation capsule",
+      "Drug: Oxitropium"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Tiotropium low",
+     "description": "Tiotropium 18 µg inhalation capsule",
+     "armGroupLabels": [
+      "Tiotropium low & Placebo"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Tiotropium high",
+     "description": "Tiotropium 36 µg inhalation capsule",
+     "armGroupLabels": [
+      "Tiotropium high & Placebo"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo MDI",
+     "description": "Placebo metered dose inhaler (MDI)",
+     "armGroupLabels": [
+      "Tiotropium high & Placebo",
+      "Tiotropium low & Placebo"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo inhalation capsule",
+     "armGroupLabels": [
+      "Oxitropium & Placebo"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Oxitropium",
+     "description": "Oxitropium MDI (100 µg/puff)",
+     "armGroupLabels": [
+      "Oxitropium & Placebo"
+     ],
+     "otherNames": [
+      "Tersigan®"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Trough forced expiratory volume in one second (FEV1.0) response",
+     "timeFrame": "Day 1, week 2 and 4"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "FEV1.0 response at 1 hour after administration",
+     "timeFrame": "Day 1, week 2 and 4"
+    },
+    {
+     "measure": "Trough forced vital capacity (FVC) response",
+     "timeFrame": "Day 1, week 2 and 4"
+    },
+    {
+     "measure": "FVC response at 1 hour after administration",
+     "timeFrame": "Day 1, week 2 and 4"
+    },
+    {
+     "measure": "Peak expiratory flow rate (PEF)",
+     "timeFrame": "in the morning and at evening every day until week 4"
+    },
+    {
+     "measure": "COPD symptom scores",
+     "timeFrame": "until week 4"
+    },
+    {
+     "measure": "Frequency of rescue use of β2 stimulant",
+     "timeFrame": "until week 4"
+    },
+    {
+     "measure": "Patient's impression",
+     "timeFrame": "week 4"
+    },
+    {
+     "measure": "Physician's global evaluation",
+     "timeFrame": "week 4"
+    },
+    {
+     "measure": "Occurrence of Adverse Events",
+     "timeFrame": "up to 4 weeks"
+    },
+    {
+     "measure": "Change from baseline in blood pressure",
+     "timeFrame": "Baseline, week 4"
+    },
+    {
+     "measure": "Change from baseline in heart rate",
+     "timeFrame": "Baseline, week 4"
+    },
+    {
+     "measure": "Changes in ECG findings",
+     "timeFrame": "Baseline, week 4"
+    },
+    {
+     "measure": "Changes from baseline in laboratory values",
+     "timeFrame": "Baseline, week 4"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\nDiagnosis of COPD (chronic bronchitis, and emphysema) with stable symptoms:\n\n* Screening FEV1.0 ≤70% of predicted normal vale and screening FEV1.0/FVC ≤70% (the baseline FEV1.0 should also be ≤70% of predicted normal value on the initial day of administration)\n* Smoking history ≥ 10 pack-years (a peak-year is 20 cigarettes per day for one year or equivalent)\n* Male or female patients 40 years of age or older\n\nExclusion Criteria:\n\n* History of bronchial asthma\n* History of an atopic disease such as allergic rhinitis\n* Total blood eosinophil count ≥ 600/µL\n* Patient treated with antiallergic drugs or anti-histamine drugs\n* Patients using oral corticosteroid medication at unstable doses (i.e. less than one month on a stable dose) or at a dose in excess of the equivalent of 10 mg of prednisolone per day\n* Patients using inhaled steroid, oral β2 stimulant, theophylline preparation, expectorant or macrolide antibiotic at unstable doses (i.e. less than one month on a stable dose)\n* Patients using an ACE inhibitor at unstable doses (i.e. less than one month on a stable dose)\n* Patients with known narrow-angle glaucoma\n* Patients with known symptomatic prostatic hypertrophy\n* Patients with known hypersensitivity to anticholinergic drugs, lactose or any other components of the inhalation capsule delivery system\n* Patients with significant diseases who in the opinion of the investigator were not eligible for the study\n* Patients with clinically significant abnormal baseline laboratory test values (hematology, blood chemistry, urinalysis). Patients with serum glutamic-oxaloacetic transaminase (SGOT) and serum glutamic-pyruvic transaminase (SGPT) twice the upper limit of the normal range, bilirubin 150% or creatinine 125% of the upper limit of the normal range were excluded\n* Patients with a recent history (i.e. within the 3 months prior to the screening visit) of myocardial infarction or heart failure\n* Patients with any cardiac arrhythmia requiring drug therapy\n* Patients who were treated with Patients who were treated with β-blockers-blockers\n* Patients with regular use of daytime oxygen therapy\n* Patients with known active tuberculosis or with obvious sequela of tuberculosis\n* Patients with a history of cancer within the last 5 years. Patients with treated basal cell carcinoma were allowed\n* Patients with a history of cystic fibrosis or bronchiectasis\n* Patients with upper respiratory tract infection in the past one month prior to the screening visit or during the baseline period\n* Patients who had taken an investigational drug within one month or six half lives (whichever is greater) prior to the screening visit\n* Pregnant or nursing women or women of childbearing potential\n* Other than the above, patients who in the opinion of the investigator were not eligible for the study",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C017590",
+     "term": "oxitropium"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

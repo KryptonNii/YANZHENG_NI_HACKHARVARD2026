@@ -1,3 +1,5 @@
+import { displayText } from "./displayText";
+import { useTranslation } from "@/app/i18n";
 import { useMemo, useState } from "react";
 import type { ProvenanceItem } from "@/app/contracts";
 import { Badge, Drawer } from "@/app/ui";
@@ -6,6 +8,7 @@ import { countryEnrollment, EnrollmentChart } from "./EnrollmentChart";
 import { bandText, displayStatus, kpiCaption, kpiHeadline, siteStatusLabel, statusLabel, statusTone } from "./present";
 
 function BandSpark({ value, band }: { value: number; band: { p10: number; p50: number; p90: number } }) {
+  const t = useTranslation();
   const lo = band.p10;
   const hi = Math.max(band.p90, lo);
   const span = hi - lo || 1;
@@ -15,7 +18,7 @@ function BandSpark({ value, band }: { value: number; band: { p10: number; p50: n
   const x = (n: number) => ((n - min) / (max - min || 1)) * 100;
   const outside = value < lo || value > hi;
   return (
-    <svg viewBox="0 0 100 16" className="h-4 w-28 shrink-0" role="img" aria-label={`Actual ${value}, plan band ${lo} to ${hi}, P50 ${band.p50}`}>
+    <svg viewBox="0 0 100 16" className="h-4 w-28 shrink-0" role="img" aria-label={t(`Actual ${value}, plan band ${lo} to ${hi}, P50 ${band.p50}`, `实际 ${value}，计划范围 ${lo} 至 ${hi}，P50 ${band.p50}`)}>
       <rect x={x(lo)} y={5} width={Math.max(x(hi) - x(lo), 1.5)} height={6} rx={3} fill="#e2e8f0" />
       <circle cx={x(band.p50)} cy={8} r={1.8} fill="#64748b" />
       <circle cx={x(value)} cy={8} r={2.6} fill={outside ? "#b91c1c" : "#0f766e"} />
@@ -35,8 +38,9 @@ function SortHeader({ label, active, dir, onClick }: { label: string; active: bo
 }
 
 export function HealthBoard({ health, onOpenProvenance }: { health: HealthSnapshot; onOpenProvenance: (item: ProvenanceItem, title: string) => void }) {
+  const t = useTranslation();
   return (
-    <section aria-label="Study health" data-testid="kpi-grid">
+    <section aria-label={t("Study health", "研究运行状况")} data-testid="kpi-grid">
       <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-5">
         {health.kpis.map((kpi) => {
           const caption = kpiCaption(kpi, health.study);
@@ -44,14 +48,14 @@ export function HealthBoard({ health, onOpenProvenance }: { health: HealthSnapsh
           return (
             <li key={kpi.id} className="card flex flex-col p-3" data-testid={`kpi-${kpi.id}`}>
               <div className="flex items-start justify-between gap-2">
-                <p className="text-[11px] font-semibold uppercase leading-tight tracking-wide text-ink-500">{kpi.label}</p>
+                <p className="text-[11px] font-semibold uppercase leading-tight tracking-wide text-ink-500">{displayText(kpi.label)}</p>
                 <Badge tone={statusTone(displayStatus(kpi, health.study))}>{statusLabel(displayStatus(kpi, health.study))}</Badge>
               </div>
               <p className="mt-2 text-lg font-semibold leading-tight tabular text-ink-900">{kpiHeadline(kpi, health.study)}</p>
               {caption && <p className="mt-1 text-xs leading-snug text-ink-500">{caption}</p>}
               {prov && (
-                <button type="button" className="mt-2 self-start text-xs font-semibold text-accent-700 hover:underline" onClick={() => onOpenProvenance(prov, kpi.label)}>
-                  Why this number
+                <button type="button" className="mt-2 self-start text-xs font-semibold text-accent-700 hover:underline" onClick={() => onOpenProvenance(prov, displayText(kpi.label))}>
+                  {t("Why this number", "查看数值依据")}
                 </button>
               )}
             </li>
@@ -66,6 +70,7 @@ type SiteSort = "name" | "country" | "status" | "enrolled" | "queries";
 type CountrySort = "country" | "sites" | "stalled" | "enrolled" | "queries";
 
 export function Drilldown({ health }: { health: HealthSnapshot }) {
+  const t = useTranslation();
   const [level, setLevel] = useState<"countries" | "sites">("sites");
   const [country, setCountry] = useState<string | null>(null);
   const [siteSort, setSiteSort] = useState<{ key: SiteSort; dir: "asc" | "desc" }>({ key: "enrolled", dir: "desc" });
@@ -89,17 +94,17 @@ export function Drilldown({ health }: { health: HealthSnapshot }) {
     <section className="card overflow-hidden" data-testid="drilldown">
       <header className="flex flex-wrap items-center justify-between gap-2 border-b border-ink-200 px-4 py-3">
         <div>
-          <h2 className="card-title">Study → country → site</h2>
-          <p className="mt-1 text-xs text-ink-500">Complete weeks: teal actual cumulative, dashed plan P50, shaded P10–P90. Current totals include the open week, which is excluded from the curve.</p>
-          {level === "countries" && <p className="mt-1 text-xs text-ink-500">Country curves sum all site observations and plan bounds by week; summed bounds are not country forecast quantiles. Missing site data stays unknown.</p>}
+          <h2 className="card-title">{t("Study → country → site", "研究 → 国家 → 中心")}</h2>
+          <p className="mt-1 text-xs text-ink-500">{t("Complete weeks: teal actual cumulative, dashed plan P50, shaded P10–P90. Current totals include the open week, which is excluded from the curve.", "完整周数据：蓝绿色表示实际累计值，虚线表示计划 P50，阴影表示 P10–P90。当前总数包含未结束的一周，曲线不包含该周。")}</p>
+          {level === "countries" && <p className="mt-1 text-xs text-ink-500">{t("Country curves sum all site observations and plan bounds by week; summed bounds are not country forecast quantiles. Missing site data stays unknown.", "国家曲线按周汇总各中心的观测值和计划上下限；汇总上下限不代表国家预测分位数。缺失的中心数据仍标记为未知。")}</p>}
         </div>
         <div className="flex items-center gap-2">
           {country && (
             <button type="button" className="btn-ghost px-2 py-1 text-xs" onClick={() => setCountry(null)}>
-              Clear {country}
+              {t("Clear", "清除")} {country}
             </button>
           )}
-          <div role="tablist" aria-label="Drill-down level" className="inline-flex rounded-lg border border-ink-300 bg-ink-100 p-0.5">
+          <div role="tablist" aria-label={t("Drill-down level", "明细层级")} className="inline-flex rounded-lg border border-ink-300 bg-ink-100 p-0.5">
             {(["countries", "sites"] as const).map((id) => (
               <button
                 key={id}
@@ -109,7 +114,7 @@ export function Drilldown({ health }: { health: HealthSnapshot }) {
                 className={`rounded-md px-3 py-1 text-sm font-semibold capitalize ${level === id ? "bg-white text-ink-900 shadow-sm" : "text-ink-600"}`}
                 onClick={() => setLevel(id)}
               >
-                {id}
+                {displayText(id)}
               </button>
             ))}
           </div>
@@ -120,11 +125,11 @@ export function Drilldown({ health }: { health: HealthSnapshot }) {
           <table className="w-full text-left text-sm">
             <thead className="sticky top-0 bg-ink-50 text-xs uppercase tracking-wide">
               <tr>
-                <th className="px-4 py-2"><SortHeader label="Country" active={countrySort.key === "country"} dir={countrySort.dir} onClick={() => toggleCountry("country")} /></th>
-                <th className="px-3 py-2"><SortHeader label="Sites" active={countrySort.key === "sites"} dir={countrySort.dir} onClick={() => toggleCountry("sites")} /></th>
-                <th className="px-3 py-2"><SortHeader label="Stalled" active={countrySort.key === "stalled"} dir={countrySort.dir} onClick={() => toggleCountry("stalled")} /></th>
-                <th className="px-3 py-2"><SortHeader label="Enrolled vs plan" active={countrySort.key === "enrolled"} dir={countrySort.dir} onClick={() => toggleCountry("enrolled")} /></th>
-                <th className="px-3 py-2"><SortHeader label="Queries" active={countrySort.key === "queries"} dir={countrySort.dir} onClick={() => toggleCountry("queries")} /></th>
+                <th className="px-4 py-2"><SortHeader label={t("Country", "国家")} active={countrySort.key === "country"} dir={countrySort.dir} onClick={() => toggleCountry("country")} /></th>
+                <th className="px-3 py-2"><SortHeader label={t("Sites", "中心")} active={countrySort.key === "sites"} dir={countrySort.dir} onClick={() => toggleCountry("sites")} /></th>
+                <th className="px-3 py-2"><SortHeader label={t("Stalled", "停滞")} active={countrySort.key === "stalled"} dir={countrySort.dir} onClick={() => toggleCountry("stalled")} /></th>
+                <th className="px-3 py-2"><SortHeader label={t("Enrolled vs plan", "入组人数与计划")} active={countrySort.key === "enrolled"} dir={countrySort.dir} onClick={() => toggleCountry("enrolled")} /></th>
+                <th className="px-3 py-2"><SortHeader label={t("Queries", "质疑")} active={countrySort.key === "queries"} dir={countrySort.dir} onClick={() => toggleCountry("queries")} /></th>
               </tr>
             </thead>
             <tbody>
@@ -141,7 +146,7 @@ export function Drilldown({ health }: { health: HealthSnapshot }) {
                     >
                       {c.country}
                     </button>
-                    {c.region && <span className="ml-2 text-xs text-ink-500">{c.region}</span>}
+                    {c.region && <span className="ml-2 text-xs text-ink-500">{displayText(c.region)}</span>}
                   </td>
                   <td className="px-3 py-2 tabular">{c.n_sites}</td>
                   <td className="px-3 py-2 tabular">{c.stalled_sites}</td>
@@ -157,12 +162,12 @@ export function Drilldown({ health }: { health: HealthSnapshot }) {
           <table className="w-full text-left text-sm">
             <thead className="sticky top-0 bg-ink-50 text-xs uppercase tracking-wide">
               <tr>
-                <th className="px-4 py-2"><SortHeader label="Site" active={siteSort.key === "name"} dir={siteSort.dir} onClick={() => toggleSite("name")} /></th>
-                <th className="px-3 py-2"><SortHeader label="Country" active={siteSort.key === "country"} dir={siteSort.dir} onClick={() => toggleSite("country")} /></th>
-                <th className="px-3 py-2"><SortHeader label="Status" active={siteSort.key === "status"} dir={siteSort.dir} onClick={() => toggleSite("status")} /></th>
-                <th className="px-3 py-2"><SortHeader label="Enrolled vs plan" active={siteSort.key === "enrolled"} dir={siteSort.dir} onClick={() => toggleSite("enrolled")} /></th>
-                <th className="px-3 py-2"><SortHeader label="Queries" active={siteSort.key === "queries"} dir={siteSort.dir} onClick={() => toggleSite("queries")} /></th>
-                <th className="px-3 py-2">Kits on hand</th>
+                <th className="px-4 py-2"><SortHeader label={t("Site", "中心")} active={siteSort.key === "name"} dir={siteSort.dir} onClick={() => toggleSite("name")} /></th>
+                <th className="px-3 py-2"><SortHeader label={t("Country", "国家")} active={siteSort.key === "country"} dir={siteSort.dir} onClick={() => toggleSite("country")} /></th>
+                <th className="px-3 py-2"><SortHeader label={t("Status", "状态")} active={siteSort.key === "status"} dir={siteSort.dir} onClick={() => toggleSite("status")} /></th>
+                <th className="px-3 py-2"><SortHeader label={t("Enrolled vs plan", "入组人数与计划")} active={siteSort.key === "enrolled"} dir={siteSort.dir} onClick={() => toggleSite("enrolled")} /></th>
+                <th className="px-3 py-2"><SortHeader label={t("Queries", "质疑")} active={siteSort.key === "queries"} dir={siteSort.dir} onClick={() => toggleSite("queries")} /></th>
+                <th className="px-3 py-2">{t("Kits on hand", "现有药盒")}</th>
               </tr>
             </thead>
             <tbody>
@@ -171,7 +176,7 @@ export function Drilldown({ health }: { health: HealthSnapshot }) {
                   <td className="px-4 py-2">
                     <span className="font-semibold text-ink-900">{s.name}</span>
                     <span className="ml-2 font-mono text-xs text-ink-400">{s.site_id}</span>
-                    {s.backup && <span className="mt-1 block text-xs text-ink-500">Backup site · zero plan</span>}
+                    {s.backup && <span className="mt-1 block text-xs text-ink-500">{t("Backup site · zero plan", "备用中心 · 无计划入组")}</span>}
                   </td>
                   <td className="px-3 py-2">{s.country}</td>
                   <td className="px-3 py-2">
@@ -182,17 +187,17 @@ export function Drilldown({ health }: { health: HealthSnapshot }) {
                   </td>
                   <td className="px-3 py-2 tabular">
                     {s.open_queries}
-                    <span className="ml-1 text-xs text-ink-500">{s.median_query_age_days == null ? "" : `· ${s.median_query_age_days}d`}</span>
+                    <span className="ml-1 text-xs text-ink-500">{s.median_query_age_days == null ? "" : t(`· ${s.median_query_age_days}d`, `· ${s.median_query_age_days} 天`)}</span>
                   </td>
                   <td className="px-3 py-2 tabular text-ink-700">
                     {Math.round(s.drug_on_hand_kits)}
-                    {s.drug_need_kits && <span className="ml-1 text-xs text-ink-500">need {bandText(s.drug_need_kits)}</span>}
+                    {s.drug_need_kits && <span className="ml-1 text-xs text-ink-500">{t("need", "需求")} {bandText(s.drug_need_kits)}</span>}
                   </td>
                 </tr>
               ))}
               {sites.length === 0 && (
                 <tr>
-                  <td colSpan={6} className="px-4 py-6 text-center text-ink-500">No sites in this view.</td>
+                  <td colSpan={6} className="px-4 py-6 text-center text-ink-500">{t("No sites in this view.", "当前视图中没有中心。")}</td>
                 </tr>
               )}
             </tbody>
@@ -204,10 +209,11 @@ export function Drilldown({ health }: { health: HealthSnapshot }) {
 }
 
 function EnrollmentCell({ value, band, series }: { value: number; band: { p10: number; p50: number; p90: number }; series: WeeklyEnrollment | null }) {
+  const t = useTranslation();
   return (
     <div className="space-y-1">
       <EnrollmentChart series={series} />
-      <span className="block text-xs tabular text-ink-800">Current {value} · plan P50 {Math.round(band.p50)}</span>
+      <span className="block text-xs tabular text-ink-800">{t("Current", "当前")} {value} {t("· plan P50", "· 计划 P50")} {Math.round(band.p50)}</span>
       {!series && <BandSpark value={value} band={band} />}
     </div>
   );
@@ -230,23 +236,24 @@ function cmpCountry(a: CountryRow, b: CountryRow, key: CountrySort): number {
 }
 
 export function ProvenanceDrawer({ item, title, onClose }: { item: ProvenanceItem | null; title: string; onClose: () => void }) {
+  const t = useTranslation();
   return (
     <Drawer open={item !== null} title={title} subtitle={item?.formula_id} onClose={onClose}>
       {item && (
         <div className="space-y-4 text-sm">
-          <p className="text-ink-800">{item.description}</p>
+          <p className="text-ink-800">{displayText(item.description)}</p>
           {(item.assumptions ?? []).length > 0 && (
             <div>
-              <p className="card-title mb-1">Assumptions</p>
+              <p className="card-title mb-1">{t("Assumptions", "假设")}</p>
               <ul className="list-disc space-y-1 pl-4 text-ink-700">
                 {item.assumptions.map((a) => (
-                  <li key={a}>{a}</li>
+                  <li key={a}>{displayText(a)}</li>
                 ))}
               </ul>
             </div>
           )}
           <div>
-            <p className="card-title mb-1">Inputs</p>
+            <p className="card-title mb-1">{t("Inputs", "输入")}</p>
             <ul className="space-y-1 font-mono text-xs text-ink-700">
               {Object.entries(item.inputs).map(([k, v]) => (
                 <li key={k}>
@@ -255,7 +262,7 @@ export function ProvenanceDrawer({ item, title, onClose }: { item: ProvenanceIte
               ))}
             </ul>
           </div>
-          <p className="text-xs text-ink-500">Parameters: {item.parameter_ids.join(", ") || "none"}</p>
+          <p className="text-xs text-ink-500">{t("Parameters:", "参数：")} {item.parameter_ids.join(", ") || t("none", "无")}</p>
         </div>
       )}
     </Drawer>

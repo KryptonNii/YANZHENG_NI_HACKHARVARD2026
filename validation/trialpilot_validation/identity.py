@@ -49,6 +49,23 @@ def get_pin(username: str) -> str:
     raise TpvError(f"A PIN is required to sign as {username}: run interactively or set TPV_PIN.")
 
 
+def submit_for_approval(record_type: str, record_id: str, username: str | None, *, title: str,
+                        reason: str) -> dict[str, Any]:
+    """Submit a record for approval as `username` (or TPV_USER). Idempotent: a pending or approved
+    request for this record id is returned instead of a new one (`created` False)."""
+    c = compliance()
+    user = resolve_user(username)
+    st = c.workflow.approval_status(record_type, record_id)
+    if st["approval_id"] and st["status"] in ("pending", "approved"):
+        return {"approval_id": st["approval_id"], "status": st["status"], "created": False}
+    try:
+        req = c.workflow.create_request(record_type, record_id, user.username, title=title,
+                                        reason=reason)
+    except c.ComplianceError as exc:
+        raise TpvError(f"{exc.code}: {exc.message}") from exc
+    return {"approval_id": req.id, "status": req.status, "created": True}
+
+
 def audit_event(action: str, object_type: str, object_id: str, *, user: Any = None,
                 after_hash: str | None = None, reason: str | None = None) -> None:
     c = compliance()

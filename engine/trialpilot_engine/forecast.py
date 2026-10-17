@@ -30,6 +30,7 @@ import numpy as np
 from numpy.typing import NDArray
 
 from ._contracts import Levers, MetricRange, Parameter, ProvenanceItem, Site, TrialDesign
+from .levers import EngineInputError, _sites, unknown_excluded_site_warning
 
 __all__ = [
     "FORECAST_DEFAULTS",
@@ -207,10 +208,6 @@ def _tri_ppf(u: FloatArray, low: Any, mid: Any, high: Any) -> FloatArray:
 def draw_parameter(p: Parameter, seed: int, n: int) -> FloatArray:
     """n triangular(low, mid, high) draws of a parameter, keyed by (seed, parameter id)."""
     return _tri_ppf(_stream(seed, "param", p.id).random(n), p.value_low, p.value_mid, p.value_high)
-
-
-def _triangular_mean(p: Parameter) -> float:
-    return (p.value_low + p.value_mid + p.value_high) / 3.0
 
 
 def metric_range(x: FloatArray | Sequence[float], unit: Unit) -> MetricRange:
@@ -511,26 +508,45 @@ def _setup(
         raise ForecastError(
             f"enrollment_target must be at least 1 patient (got {design.enrollment_target})."
         )
-    if not design.sites:
+    if not design.sites and not levers.added_country_count:
         raise ForecastError("The design has no sites; add at least one site to forecast enrollment.")
     excluded = set(levers.excluded_site_ids)
     sites = [s for s in design.sites if s.id not in excluded]
-    if not sites:
+    if not sites and design.sites:
         raise ForecastError(
             f"All {len(design.sites)} sites are excluded by the levers; keep at least one site to "
             "forecast enrollment."
         )
     warnings: list[str] = []
     assumptions: list[str] = []
-    unknown = excluded - {s.id for s in design.sites}
-    if unknown:
-        warnings.append(f"Excluded site ids not in the design were ignored: {sorted(unknown)}")
+    reference_sites = list(design.sites)
+    added_sites: list[Site] = []
+    if levers.added_country_count:
+        try:
+            sites, site_notes = _sites(design, levers, params, warnings)
+        except EngineInputError as exc:
+            raise ForecastError(str(exc)) from exc
+        assumptions.extend(site_notes)
+        if not reference_sites:
+            reference_sites = [s for s in sites if not s.id.startswith("assumed-country-")]
+        reference_ids = {s.id for s in reference_sites}
+        added_sites = [s for s in sites if s.id not in reference_ids]
+    unknown = unknown_excluded_site_warning(design, levers)
+    if unknown and not levers.added_country_count:  # otherwise _sites above has added it
+        warnings.append(unknown)
 
     res = ParameterResolver(params, FORECAST_DEFAULTS)
     d = draws
-    all_weights = _site_weights(list(design.sites), warnings)
-    keep = np.array([s.id not in excluded for s in design.sites])
+    all_weights = _site_weights(reference_sites, warnings)
+    keep = np.array([s.id not in excluded for s in reference_sites])
     weights = all_weights[keep]
+    if added_sites:
+        known = [s.expected_enrollment for s in reference_sites
+                 if s.expected_enrollment is not None and s.expected_enrollment > 0]
+        mean_known = sum(known) / len(known) if known else None
+        added_weights = [s.expected_enrollment / mean_known
+                         if mean_known and s.expected_enrollment else 1.0 for s in added_sites]
+        weights = np.concatenate((weights, added_weights))
 
     act = res.get("site.activation_months")
     shape_p = res.get("site.enrollment_rate_shape")
@@ -588,7 +604,7 @@ def _setup(
         rate_mid = plan_rate * mult_p.value_mid
         assumptions.append(
             f"Mean recruitment rate derived from the registered plan: {n_mid} patients over a "
-            f"{window:.1f}-month enrollment window across {len(design.sites)} sites = "
+            f"{window:.1f}-month enrollment window across {len(reference_sites)} sites = "
             f"{plan_rate:.3f} patients/site/month (× {mult_p.id})."
         )
         rate_source = "plan"
@@ -606,24 +622,36 @@ def _setup(
             )
     rate_mean = rate_mean * (1.0 + uplift)
     rate_mid *= 1.0 + float(uplift_p.value_mid) * share
+    if levers.enrollment_rate_multiplier != 1.0:
+        rate_mean *= levers.enrollment_rate_multiplier
+        rate_mid *= levers.enrollment_rate_multiplier
+        assumptions.append(
+            "Enrollment rate scaled by the design lever; this is not a measured site rate."
+        )
 
     alpha = np.maximum(draw_parameter(shape_p, seed, d), 1e-3)
     n_sites = len(sites)
     # One column per DESIGN site, then drop excluded ones: excluding a site leaves every other
     # site's draws unchanged (common random numbers across lever scenarios).
-    n_all = len(design.sites)
+    n_all = len(reference_sites)
     u = _stream(seed, "site.activation").random((d, n_all))
-    activation = _tri_ppf(u if n_sites == n_all else u[:, keep], act.value_low, act.value_mid,
-                          act.value_high)
     g = _stream(seed, "site.rate").standard_gamma(np.broadcast_to(alpha[:, None], (d, n_all)))
+    u, g = u[:, keep], g[:, keep]
+    if added_sites:
+        u = np.concatenate((u, _stream(seed, "site.assumed.activation").random((d, len(added_sites)))), axis=1)
+        added_g = _stream(seed, "site.assumed.rate").standard_gamma(
+            np.broadcast_to(alpha[:, None], (d, len(added_sites)))
+        )
+        g = np.concatenate((g, added_g), axis=1)
+    activation = _tri_ppf(u, act.value_low, act.value_mid, act.value_high)
     rates = np.multiply(rate_mean[:, None], weights[None, :])  # (rate × weight) × g / α, in place
-    rates *= g if n_sites == n_all else g[:, keep]
+    rates *= g
     rates /= alpha[:, None]
     del u, g
 
     inputs: dict[str, float | str] = {
         "sites_active": float(n_sites),
-        "sites_excluded": float(len(design.sites) - n_sites),
+        "sites_excluded": float(len(reference_sites) - int(keep.sum())),
         "enrollment_target": float(target),
         "patients_to_randomise_mid": float(n_mid),
         "recruitment_rate_mid_per_site_month": round(rate_mid, 4),
@@ -637,6 +665,11 @@ def _setup(
         "draws": float(d),
         "seed": float(seed),
     }
+    if levers.enrollment_rate_multiplier != 1.0:
+        inputs["enrollment_rate_multiplier"] = levers.enrollment_rate_multiplier
+    if levers.added_country_count:
+        inputs["added_country_count"] = float(levers.added_country_count)
+        inputs["assumed_sites_added"] = float(len(added_sites))
     return _Setup(
         sites=sites, weights=weights, rate_mean=rate_mean,
         planned_rate=rate_mid * weights, alpha=alpha, activation=activation, rates=rates,

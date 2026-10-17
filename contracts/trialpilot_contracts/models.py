@@ -73,6 +73,9 @@ class Site(BaseModel):
 class Procedure(BaseModel):
     code: str                        # "blood_draw", "ecg", "mri", "pk_sample", ...
     label: str
+    endpoint_role: Literal["supports_primary", "supports_secondary", "not_linked", "unknown"] = "unknown"
+    endpoint_note: str = ""
+    link_basis: Literal["outcome_title", "human", "unmatched"] = "unmatched"
     site_minutes: Optional[float] = None
     ships_sample: bool = False
     sample_temp: Optional[Literal["ambient", "refrigerated", "frozen_-20", "frozen_-80"]] = None
@@ -97,6 +100,8 @@ class TrialDesign(BaseModel):
     missing_fields: list[str] = []             # what we could not get and therefore assumed
 
 class Levers(BaseModel):
+    enrollment_rate_multiplier: float = Field(default=1.0, ge=0.5, le=1.5)
+    added_country_count: int = Field(default=0, ge=0, le=5)
     remote_monitoring_share: float = 0.0       # 0..1 of monitoring visits done remotely
     home_visit_numbers: list[int] = []         # visit numbers moved to home nursing
     remote_visit_numbers: list[int] = []       # visit numbers moved to telehealth

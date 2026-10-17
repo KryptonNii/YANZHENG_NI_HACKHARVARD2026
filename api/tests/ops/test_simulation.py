@@ -2,15 +2,20 @@ from __future__ import annotations
 
 import inspect
 import json
+import os
+import subprocess
+import sys
 from dataclasses import asdict
+from pathlib import Path
 from uuid import UUID
 
 import numpy as np
 import pytest
 from trialpilot_engine.forecast import forecast, update_with_actuals
 
-from trialpilot_api.ops.detect import Detector
-from trialpilot_api.ops.evaluate import evaluate_state
+import trialpilot_api
+from trialpilot_api.ops.detect import Detector, _dominant_mode
+from trialpilot_api.ops.evaluate import evaluate_state, write_ground_truth
 from trialpilot_api.ops.fixtures import build_demo_design, load_demo_design
 from trialpilot_api.ops.metrics import Feed
 from trialpilot_api.ops.params import load_ops_params, ops_data_dir
@@ -76,6 +81,18 @@ def test_ctms_site_activation_matches_ground_truth(simulated):
     assert OpsEvent.model_validate_json(event.model_dump_json()).payload == sample.payload
 
 
+def test_write_ground_truth_keeps_keys_the_simulator_does_not_produce(tmp_path, simulated):
+    """Regenerating the answer key replaces the simulator's keys and keeps hand-authored ones."""
+    path = tmp_path / "ground_truth.json"
+    extra = {"source": "hand-authored answer key", "steps": [1, 2]}
+    path.write_text(json.dumps({"activations": [], "command_lock_recovery": extra}), encoding="utf-8")
+    assert write_ground_truth(path) == path
+    written = json.loads(path.read_text(encoding="utf-8"))
+    assert written["command_lock_recovery"] == extra
+    assert written["activations"] == simulated.ground_truth["activations"]
+    assert set(written) == set(simulated.ground_truth) | {"command_lock_recovery"}
+
+
 def test_a3_forecast_interface_still_matches_ops_adapter():
     """A3's current forecast / update_with_actuals signatures are what the ops adapter calls."""
     forecast_params = list(inspect.signature(forecast).parameters)
@@ -133,6 +150,42 @@ def test_impact_ranges_have_provenance(demo_state):
         for name, metric in alert.est_impact.items():
             assert metric.p10 <= metric.p50 <= metric.p90
             assert name in detail["provenance"], (alert.kind, name)
+
+
+# Two Madrid sites visited on separate trips, two by car and two by rail (a tie) in the 12-week window.
+_TIED_MODE_SCRIPT = """
+from types import SimpleNamespace
+from trialpilot_api.ops.detect import Detector
+from trialpilot_api.ops.params import load_ops_params
+
+sites = [SimpleNamespace(id=i, country="ES", city="Madrid") for i in ("A", "B")]
+trips = [{"t": 300.0 + 7 * k, "country": "ES", "city": "Madrid", "site_ids": [sid], "mode": mode,
+          "km": 600.0, "site_days": 1, "remote": False}
+         for k, (sid, mode) in enumerate([("A", "rail"), ("B", "car"), ("A", "car"), ("B", "rail")])]
+plan = SimpleNamespace(sites=sites, lplv_target_day=900)
+feed = SimpleNamespace(params=load_ops_params(42), trips=trips)
+[finding] = Detector(plan, feed, 42).monitoring(330.0)
+print(finding.provenance["co2e_kg"].inputs["mode"], finding.est_impact["co2e_kg"].p50)
+"""
+
+
+def test_monitoring_mode_tie_does_not_depend_on_hash_seed():
+    """Same seed, same impact range: a car/rail tie must not be decided by the process hash seed."""
+    api_root = str(Path(trialpilot_api.__file__).resolve().parents[1])
+    env = {**os.environ, "PYTHONPATH": os.pathsep.join(filter(None, [api_root, os.environ.get("PYTHONPATH")]))}
+    runs = {h: subprocess.Popen([sys.executable, "-c", _TIED_MODE_SCRIPT], stdout=subprocess.PIPE, text=True,
+                                cwd=api_root, env={**env, "PYTHONHASHSEED": str(h)}) for h in range(8)}
+    out = {h: run.communicate(timeout=300)[0].split() for h, run in runs.items()}
+    assert all(run.returncode == 0 for run in runs.values()), out
+    assert {mode for mode, _ in out.values()} == {"car"}, out
+    assert len({co2e for _, co2e in out.values()}) == 1, out
+
+
+def test_dominant_mode_breaks_ties_alphabetically():
+    assert _dominant_mode([]) == "car"
+    assert _dominant_mode(["rail", "car", "car", "rail"]) == "car"
+    assert _dominant_mode(["rail", "flight", "flight", "rail"]) == "flight"
+    assert _dominant_mode(["car", "rail", "rail"]) == "rail"
 
 
 def test_missing_values_remain_unknown_at_clock_zero():

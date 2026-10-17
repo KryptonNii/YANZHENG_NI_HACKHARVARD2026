@@ -138,6 +138,84 @@ def test_determinism_by_seed() -> None:
 # ---------------------------------------------------------------- levers
 
 
+@pytest.mark.parametrize(("source", "original_lock_p50"), [
+    ("library", 34.983371497279855),
+    ("plan", 35.96140015060051),
+    ("fallback", 39.10079011584257),
+])
+def test_default_design_levers_preserve_forecast(source: str, original_lock_p50: float) -> None:
+    d = design(duration=0 if source == "fallback" else 36)
+    library = params() if source == "library" else {}
+    legacy = Levers.model_validate({"excluded_site_ids": []})
+    explicit = Levers(enrollment_rate_multiplier=1.0, added_country_count=0)
+    baseline = forecast(d, legacy, library, draws=200)
+    unchanged = forecast(d, explicit, library, draws=200)
+    assert legacy.enrollment_rate_multiplier == 1.0 and legacy.added_country_count == 0
+    assert unchanged.to_dict() == baseline.to_dict()
+    # Recorded before these levers were added, using the same seed and 200 draws.
+    assert unchanged.milestone_dates["database_lock"].p50 == pytest.approx(original_lock_p50, abs=1e-10)
+    assert not any("scaled by the design lever" in a for p in unchanged.provenance for a in p.assumptions)
+    assert not any("Added countries" in w for w in unchanged.warnings)
+
+
+@pytest.mark.parametrize("source", ["library", "plan", "fallback"])
+def test_slower_enrollment_scales_resolved_rates_and_delays_database_lock(source: str) -> None:
+    d = design(duration=0 if source == "fallback" else 36)
+    library = params() if source == "library" else {}
+    base = forecast(d, Levers(), library, draws=200)
+    slow = forecast(d, Levers(enrollment_rate_multiplier=0.7), library, draws=200)
+    assert slow.milestone_dates["database_lock"].p50 > base.milestone_dates["database_lock"].p50
+    assert slow.draws is not None and base.draws is not None
+    np.testing.assert_allclose(slow.draws.rates, base.draws.rates * 0.7, rtol=1e-14)
+    np.testing.assert_allclose(slow.draws.planned_rate, base.draws.planned_rate * 0.7, rtol=1e-14)
+    assert np.array_equal(slow.draws.activation, base.draws.activation)
+    assert any("Enrollment rate scaled by the design lever; this is not a measured site rate." in p.assumptions
+               for p in slow.provenance)
+
+
+@pytest.mark.parametrize("source", ["library", "plan"])
+def test_added_country_sites_participate_in_forecast(source: str) -> None:
+    from trialpilot_engine.levers import _sites
+
+    d = design(n_sites=4, target=100)
+    d = d.model_copy(update={"sites": [s.model_copy(update={"expected_enrollment": float(10 * i)})
+                                     for i, s in enumerate(d.sites)]})
+    original = d.model_dump()
+    library = params() if source == "library" else {}
+    base = forecast(d, Levers(), library, draws=200)
+    levers = Levers(added_country_count=2, excluded_site_ids=[d.sites[0].id])
+    added = forecast(d, levers, library, draws=200)
+    sites, _ = _sites(d, levers, library, [])
+    assert added.draws is not None and base.draws is not None
+    assert added.draws.site_ids == tuple(s.id for s in sites)
+    assert len(added.draws.site_ids) == 5  # three retained sites + one site per added country
+    assert added.draws.site_ids[-2:] == ("assumed-country-1-site-1", "assumed-country-2-site-1")
+    assert all(s.expected_enrollment == 20 for s in sites[-2:])
+    assert np.all(added.draws.rates[:, -2:] > 0)
+    assert added.provenance[0].inputs["sites_excluded"] == 1
+    assert "Added countries are assumptions, not registry sites." in added.warnings
+    assert any("one site" in w and "median" in w and "(20)" in w for w in added.warnings)
+    assert added.milestone_dates["database_lock"].p50 < base.milestone_dates["database_lock"].p50
+    # Added sites do not recalibrate the original plan or disturb retained sites' random draws.
+    np.testing.assert_array_equal(added.draws.rates[:, :3], base.draws.rates[:, 1:])
+    np.testing.assert_array_equal(added.draws.activation[:, :3], base.draws.activation[:, 1:])
+    assert d.model_dump() == original
+
+
+def test_added_countries_with_missing_site_list_use_activity_fallback() -> None:
+    from trialpilot_engine.levers import _sites
+
+    d = design(n_sites=0, target=20)
+    library = params(assume__design__patients_per_site=p("assume.design.patients_per_site", 10))
+    levers = Levers(added_country_count=2)
+    sites, _ = _sites(d, levers, library, [])
+    fc = forecast(d, levers, library, draws=100)
+    assert fc.draws is not None
+    assert fc.draws.site_ids == tuple(s.id for s in sites)
+    assert len(sites) == 4  # two original fallback sites plus one per added country
+    assert "Added countries are assumptions, not registry sites." in fc.warnings
+
+
 def test_excluding_sites_lengthens_enrollment() -> None:
     d = design()
     base = forecast(d, Levers(), params())
@@ -282,3 +360,18 @@ def test_a2_engine_uses_the_forecast_duration(ranged_params: dict[str, Parameter
     result = compute_scenario(d, Levers(), ranged_params, seed=7, draws=2000, forecast=fc)
     assert result.duration_months.p50 == pytest.approx(fc.duration_months.p50)
     assert result.duration_months.p90 > result.duration_months.p10
+
+
+def test_unknown_excluded_site_warning_matches_the_a2_engine(ranged_params: dict[str, Parameter]) -> None:
+    from trialpilot_engine import compute_scenario
+
+    d = design(n_sites=5, target=50)
+    levers = Levers(excluded_site_ids=["zzz"])
+    fc = forecast(d, levers, ranged_params, draws=200)
+    result = compute_scenario(d, levers, ranged_params, seed=7, draws=200, forecast=fc)
+    expected = ["Excluded site ids not in the design were ignored: zzz."]
+    assert [w for w in fc.warnings if "Excluded site ids" in w] == expected
+    assert [w for w in result.warnings if "Excluded site ids" in w] == expected
+    # The API merges both lists, dropping exact duplicates: the user sees the warning once.
+    merged = list(dict.fromkeys([*result.warnings, *fc.warnings]))
+    assert sum("Excluded site ids" in w for w in merged) == 1

@@ -6,14 +6,16 @@ import { ScenarioPage } from "../features/scenario/ScenarioPage";
 import { SciencePage } from "../features/scenario/SciencePage";
 import { ExternalPages } from "./externalPages";
 import { Layout } from "./Layout";
+import { useTranslation } from "./i18n";
 import { ToastProvider } from "./toast";
 import { EmptyState } from "./ui";
 
 function NotFound() {
+  const t = useTranslation();
   return (
     <div className="mx-auto max-w-xl pt-10">
-      <EmptyState title="Page not found" action={<Link className="btn-secondary" to="/">Go to import</Link>}>
-        The address doesn't match any TrialPilot page.
+      <EmptyState title={t("Page not found", "页面未找到")} action={<Link className="btn-secondary" to="/">{t("Go to import", "前往导入页面")}</Link>}>
+        {t("The address doesn't match any TrialPilot page.", "该地址未匹配到任何 TrialPilot 页面。")}
       </EmptyState>
     </div>
   );

@@ -162,6 +162,21 @@ def test_dispensing_codes_follow_a2_and_a4_vocabulary() -> None:
     assert any("No dispensing procedure" in a for a in r2.provenance[0].assumptions)
 
 
+@pytest.mark.parametrize("code", ["IMP Administration", "Drug-Admin", "ip admin"])
+def test_supply_finds_the_same_dispensing_visits_as_the_a2_engine(code: str) -> None:
+    from trialpilot_engine.levers import build_activity
+
+    d = design(n_sites=5, target=40, n_disp=10, code="vital_signs")
+    d = d.model_copy(update={"visits": [
+        v.model_copy(update={"procedures": [Procedure(code=code, label="IP")]}) if v.number % 2 == 0 else v
+        for v in d.visits
+    ]})  # visits 2, 4, 6, 8, 10 dispense
+    r = simulate_supply(d, ON_DEMAND, {}, forecast(d, Levers(), {}, draws=50), draws=50)
+    a2_visits = build_activity(d, Levers(), {}).dispensing_visits
+    assert r.provenance[0].inputs["dispensing_visits_per_patient"] == a2_visits == 5
+    assert not any("No dispensing procedure" in a for a in r.provenance[0].assumptions)
+
+
 def test_designs_without_drug_report_zero_kits_with_warning() -> None:
     d = design(n_sites=5, target=40, drug_type="device")
     r = simulate_supply(d, ON_DEMAND, {}, forecast(d, Levers(), {}, draws=50))

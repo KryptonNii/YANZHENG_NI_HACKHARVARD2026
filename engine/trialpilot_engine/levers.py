@@ -7,6 +7,8 @@ This is the only place where levers change *activity*. Each lever's effect, in o
 - `drug_supply_strategy`: picks the kit waste share (or A3's simulation when passed in).
 - `removed_procedures`: drops those procedure codes from every visit.
 - `excluded_site_ids`: removes those sites; the enrollment target is redistributed over the others.
+- `added_country_count`: appends one explicitly assumed site per added country.
+- `enrollment_rate_multiplier`: scales recruitment rates in the forecast.
 Parameter *values* never appear here except the labelled fall-backs for incomplete designs.
 """
 
@@ -34,6 +36,12 @@ MONTHS_PER_YEAR = 12.0
 
 # Procedure codes that mean "investigational product handed out / given at this visit".
 DISPENSING_MARKERS = ("dispens", "imp_admin", "drug_admin", "ip_admin", "dosing", "infusion")
+
+
+def is_dispensing_code(code: str) -> bool:
+    """Whether a procedure dispenses study drug, matched on the code's slug ('Drug-Admin' does)."""
+    s = slug(code)
+    return any(m in s for m in DISPENSING_MARKERS)
 
 
 class EngineInputError(ValueError):
@@ -81,7 +89,7 @@ class PlannedVisit:
 
     @property
     def dispenses(self) -> bool:
-        return any(m in slug(p.code) for p in self.procedures for m in DISPENSING_MARKERS)
+        return any(is_dispensing_code(p.code) for p in self.procedures)
 
 
 @dataclass(frozen=True)
@@ -219,14 +227,28 @@ def _validate_levers(design: TrialDesign, levers: Levers) -> None:
         raise EngineInputError("invalid_design", "`duration_months` must not be negative.")
 
 
+def unknown_excluded_site_warning(design: TrialDesign, levers: Levers) -> str | None:
+    """The warning for `excluded_site_ids` that are not in the design, or None when all are."""
+    unknown = sorted(set(levers.excluded_site_ids) - {s.id for s in design.sites})
+    if not unknown:
+        return None
+    return f"Excluded site ids not in the design were ignored: {', '.join(unknown)}."
+
+
+def _enrollment_weight(site: Site) -> float | None:
+    """The site's expected enrollment if usable as a weight (positive and finite), else None."""
+    e = site.expected_enrollment
+    return e if e is not None and math.isfinite(e) and e > 0 else None
+
+
 def _sites(
     design: TrialDesign, levers: Levers, params: Mapping[str, Parameter], warnings: list[str]
 ) -> tuple[list[Site], list[str]]:
     notes: list[str] = []
     excluded = set(levers.excluded_site_ids)
-    unknown = sorted(excluded - {s.id for s in design.sites})
+    unknown = unknown_excluded_site_warning(design, levers)
     if unknown:
-        warnings.append(f"Excluded site ids not in the design were ignored: {', '.join(unknown)}.")
+        warnings.append(unknown)
     if not design.sites:
         per_site = _assumed_count(params, "assume.design.patients_per_site", "site list")
         n = max(1, math.ceil(design.enrollment_target / per_site)) if per_site > 0 else 1
@@ -235,16 +257,41 @@ def _sites(
             f"`assume.design.patients_per_site` {per_site:g}), country unknown → global parameters."
         )
         notes.append(f"{n} sites assumed from `assume.design.patients_per_site`.")
-        return [Site(id=f"assumed-{i + 1}", name=f"Assumed site {i + 1}", country="global") for i in range(n)], notes
-    active = [s for s in design.sites if s.id not in excluded]
+        active = [Site(id=f"assumed-{i + 1}", name=f"Assumed site {i + 1}", country="global") for i in range(n)]
+    else:
+        active = [s for s in design.sites if s.id not in excluded]
     if not active:
         raise EngineInputError("invalid_levers", "All sites are excluded; at least one site must remain.")
+    if levers.added_country_count:
+        known = [w for s in active if (w := _enrollment_weight(s)) is not None]
+        if known:
+            per_site = float(np.median(known))
+            assumption = (
+                "Each added country assumes one site; its expected enrollment weight is the median "
+                f"positive finite expected enrollment of existing active sites ({per_site:g})."
+            )
+        else:
+            per_site = _assumed_count(params, "assume.design.patients_per_site", "expected enrollment")
+            assumption = (
+                "Each added country assumes one site; no existing active site has positive finite "
+                "expected enrollment, so its enrollment weight comes from "
+                f"`assume.design.patients_per_site` ({per_site:g})."
+            )
+        notes.append(assumption)
+        active.extend(
+            Site(id=f"assumed-country-{n}-site-1", name=f"Assumed country {n}, site 1",
+                 country="assumed", expected_enrollment=per_site)
+            for n in range(1, levers.added_country_count + 1)
+        )
+        warnings.append("Added countries are assumptions, not registry sites.")
+        warnings.append(assumption)
     return active, notes
 
 
 def _allocate_patients(sites: list[Site], total: float, notes: list[str]) -> list[float]:
     """Split the enrollment target over active sites by expected enrollment (equal if unknown)."""
-    known = [s.expected_enrollment for s in sites if s.expected_enrollment is not None and s.expected_enrollment > 0]
+    site_weights = [_enrollment_weight(s) for s in sites]
+    known = [w for w in site_weights if w is not None]
     if not known:
         if len(sites) > 1:
             notes.append("Site expected enrollment not given: patients split equally across sites.")
@@ -255,10 +302,7 @@ def _allocate_patients(sites: list[Site], total: float, notes: list[str]) -> lis
             notes.append(
                 f"{len(sites) - len(known)} sites have no expected enrollment: given the mean of the others."
             )
-        weights = [
-            s.expected_enrollment if s.expected_enrollment is not None and s.expected_enrollment > 0 else fill
-            for s in sites
-        ]
+        weights = [fill if w is None else w for w in site_weights]
     scale = total / sum(weights)
     return [w * scale for w in weights]
 

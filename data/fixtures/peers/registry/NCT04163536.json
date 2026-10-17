@@ -1,0 +1,689 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT04163536",
+   "orgStudyIdInfo": {
+    "id": "P17/15_corticop"
+   },
+   "organization": {
+    "fullName": "Versailles Hospital",
+    "class": "OTHER"
+   },
+   "briefTitle": "Comparison of Corticosteroids vs Placebo on Duration of Ventilatory Support During Severe Acute Exacerbations of COPD Patients in the ICU",
+   "officialTitle": "Comparison of Corticosteroids Versus Placebo on Duration of Ventilatory Support During Severe Acute Exacerbations of COPD Patients in the Intensive Care Unit: a Multicentre Randomized Controlled Trial",
+   "acronym": "Corticop"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2023-10",
+   "overallStatus": "UNKNOWN",
+   "lastKnownStatus": "RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2021-10-25",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2025-10-25",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2026-03-01",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2019-10-29",
+   "studyFirstSubmitQcDate": "2019-11-12",
+   "studyFirstPostDateStruct": {
+    "date": "2019-11-14",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2023-10-16",
+   "lastUpdatePostDateStruct": {
+    "date": "2023-10-18",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "PRINCIPAL_INVESTIGATOR",
+    "investigatorFullName": "Alexis FERRE",
+    "investigatorTitle": "coordinating investigator",
+    "investigatorAffiliation": "Versailles Hospital"
+   },
+   "leadSponsor": {
+    "name": "Versailles Hospital",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The main objective of this study is to determine if the systemic (intravenous) administration of corticosteroids, as compared to placebo, increases the number of ventilator-free days (VFD) and alive at day 28 in COPD patients admitted to an ICU, a step-up unit or a respiratory care unit for an ACRF requiring ventilatory support, either invasive or non-invasive."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 440,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "cortisteroids arm",
+     "type": "ACTIVE_COMPARATOR",
+     "interventionNames": [
+      "Drug: Methylprednisolone"
+     ]
+    },
+    {
+     "label": "placebo arm",
+     "type": "PLACEBO_COMPARATOR",
+     "interventionNames": [
+      "Drug: Placebos"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Methylprednisolone",
+     "description": "In the experimental group, methylprednisolone will be administered intravenously for 5 days at a dose of 1 mg/kg/day. Methylprednisolone will be provided for reconstitution and dilution in 50 ml of NaCl 0.9% solution and administered over 15 minutes, once a day.",
+     "armGroupLabels": [
+      "cortisteroids arm"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebos",
+     "description": "in the control group, placebo will be administered intravenously for 5 days. Placebo will be identical (color and aspect) to experimental substance, will be provide as a 50 mL of NaCl 0.9% solution and administered intravenously over 15 minutes, once a day.",
+     "armGroupLabels": [
+      "placebo arm"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "the number of ventilator-free days (VFD) and alive at day 28.",
+     "description": "To determine if the systemic administration of corticosteroids, as compared to placebo, increases the number of ventilator-free days (VFD) and alive at day 28 in COPD patients admitted to an ICU, a step-up unit or a respiratory care unit for an ACRF requiring ventilatory support, either invasive or non-invasive.",
+     "timeFrame": "day 28"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "NIV failure rate",
+     "description": "NIV failure rate, defined by intubation within day 7",
+     "timeFrame": "day 7"
+    },
+    {
+     "measure": "Duration of NIV and of invasive mechanical ventilation",
+     "description": "Duration of Non Invasive Ventilation and of invasive mechanical ventilation",
+     "timeFrame": "at day 90"
+    },
+    {
+     "measure": "Circulatory and renal support-free days and alive at day 28",
+     "description": "Circulatory and renal support-free days and alive at day 28",
+     "timeFrame": "at day 28"
+    },
+    {
+     "measure": "Severe hyperglycemia requiring intravenous insulin during the five first days",
+     "description": "Severe hyperglycemia requiring intravenous insulin during the five first days",
+     "timeFrame": "during the five first days"
+    },
+    {
+     "measure": "Gastro-intestinal bleeding",
+     "description": "acute loss of 2 g/dL of hemoglobin requiring red blood cell transfusion or gastroscopic evaluation",
+     "timeFrame": "between inclusion and day 28"
+    },
+    {
+     "measure": "Uncontrolled arterial hypertension",
+     "description": "unusual hypertension requiring to introduce/add antihypertensive medication (compared to usual medications)",
+     "timeFrame": "between inclusion and day 28"
+    },
+    {
+     "measure": "ICU acquired weakness (MRC-score < 48/60) assessed on day 28 or at the time of ICU discharge",
+     "description": "Intensive Care Unit acquired weakness (MRC-score \\< 48/60) assessed on day 28 or at the time of ICU discharge",
+     "timeFrame": "at day 28"
+    },
+    {
+     "measure": "ICU-acquired infections (especially Ventilator-Associated Pneumonia)",
+     "description": "Intensive Care Unit -acquired infections (especially Ventilator-Associated Pneumonia)",
+     "timeFrame": "at the time of ICU discharge or day 90"
+    },
+    {
+     "measure": "Length of ICU and hospital stay",
+     "description": "Length of ICU and hospital stay",
+     "timeFrame": "at day 90"
+    },
+    {
+     "measure": "ICU and hospital mortality",
+     "description": "ICU and hospital mortality",
+     "timeFrame": "between inclusion and day 28 or day 90"
+    },
+    {
+     "measure": "Day 28 and Day 90 mortality",
+     "description": "Day 28 and Day 90 mortality",
+     "timeFrame": "at Day 28 and Day 90"
+    },
+    {
+     "measure": "Standardized mortality ratio (SMR)",
+     "description": "Standardized mortality ratio (SMR)",
+     "timeFrame": "between inclusion and day 90"
+    },
+    {
+     "measure": "Number of new exacerbation(s)/hospitalization(s) between hospital discharge and Day 90",
+     "description": "Number of new exacerbation(s)/hospitalization(s) between hospital discharge and Day 90",
+     "timeFrame": "at day 90"
+    },
+    {
+     "measure": "Dyspnea (patient reported outcome) at Day 90 evaluated by clinical assessment test and dyspnea mMRC score",
+     "description": "Dyspnea (patient reported outcome) at Day 90 evaluated by clinical assessment test and dyspnea mMRC score",
+     "timeFrame": "at day 90"
+    },
+    {
+     "measure": "respiratory comfort (patient reported outcome) at Day 90 evaluated by clinical assessment test and dyspnea mMRC score",
+     "description": "respiratory comfort (patient reported outcome) at Day 90 evaluated by clinical assessment test and dyspnea mMRC score",
+     "timeFrame": "at day 90"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1. Patients aged ≥ 40 years\n2. Strongly suspected or documented COPD, defined by the presence of the following criterias:\n\n   * Persistent respiratory symptoms (dyspnoea, chronic cough or sputum)\n   * History of exposure to a risk factor such as tobacco smoke\n   * If available, pulmonary function tests showing airflow limitation not fully reversible (post-bronchodilator ratio of FEV1/ FVC ratio \\< 0.7)\n3. ACRF, defined by the presence of the two following criteria:\n\n   * COPD exacerbation defined by a change in the patient baseline respiratory symptoms at least 24 hours and requiring a change in regular respiratory medication\n   * Acute respiratory failure \\<24h (polypnea ≥ 30 breaths.min-1 or use of accessory respiratory muscles) requiring ventilatory support, either invasive (implemented because of respiratory distress) or NIV (implemented because of hypercapnic acidosis with PaCO2 ≥ 45 mmHg and pH ≤ 7.35).\n4. Admission to an ICU, a step-up unit or a respiratory care unit\n5. Inform consent from the patient or his surrogates. In patients who are not able to consent on admission an emergency inclusion procedure will be allowed, with a mandatory delayed consent.\n6. Affiliation to (or benefit from) French health insurance system\n\nExclusion Criteria:\n\n* Previous diagnostic of asthma, according to \"GINA\" international guidelines (40)\n* Recent use of systemic corticosteroids, defined by systemic corticosteroids use in the past 7 days\n* Contra-indication of systemic corticosteroids treatment: allergy to corticosteroids, uncontrolled severe arterial hypertension, uncontrolled diabetes mellitus, gastro-intestinal ulcer bleeding\n* Pneumothorax at randomization\n* Extracorporeal life support (ECMO or ECCO2R) at inclusion\n* Moribund patient life expectancy \\< 3 months\n* Pregnancy\n* Patients protected by law\n* Exclusion period due to other interventional clinical trial enrolment which can influence primary outcome\n* Previous inclusion in the present study",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "virginie chatagner",
+     "role": "CONTACT",
+     "phone": "0139239776",
+     "email": "vchatagner@ght78sud.fr"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "André Mignot Hospital, Intensive care unit",
+     "status": "RECRUITING",
+     "city": "Le Chesnay",
+     "state": "Les Yvelines",
+     "zip": "78150",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Alexis FERRE",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 48.8222,
+      "lon": 2.12213
+     }
+    },
+    {
+     "facility": "CHU Angers",
+     "status": "RECRUITING",
+     "city": "Angers",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "françois beloncle",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 47.47156,
+      "lon": -0.55202
+     }
+    },
+    {
+     "facility": "CH métropole savoie",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Chambéry",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Vincent Peigne",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 45.56628,
+      "lon": 5.92079
+     }
+    },
+    {
+     "facility": "CHU Louis Mourier",
+     "status": "RECRUITING",
+     "city": "Colombes",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "jean damien ricard",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 48.91882,
+      "lon": 2.25404
+     }
+    },
+    {
+     "facility": "CHU Henri mondor",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Créteil",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Armand Mekontso-Dessap",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 48.79266,
+      "lon": 2.46569
+     }
+    },
+    {
+     "facility": "CHU Dijon",
+     "status": "RECRUITING",
+     "city": "Dijon",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Jean Pierre Quenot",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 47.31344,
+      "lon": 5.01391
+     }
+    },
+    {
+     "facility": "CHU Grenoble",
+     "status": "RECRUITING",
+     "city": "Grenoble",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Nicolas Terzi",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 45.17869,
+      "lon": 5.71479
+     }
+    },
+    {
+     "facility": "CHD Vendée",
+     "status": "RECRUITING",
+     "city": "La Roche-sur-Yon",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Gwenhaël Colin",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 46.66974,
+      "lon": -1.42757
+     }
+    },
+    {
+     "facility": "CHU de Bicêtre",
+     "status": "RECRUITING",
+     "city": "Le Kremlin-Bicêtre",
+     "zip": "94270",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Nadia Anguel",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 48.81471,
+      "lon": 2.36073
+     }
+    },
+    {
+     "facility": "CH Le Mans",
+     "status": "RECRUITING",
+     "city": "Le Mans",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Christophe Guitton",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 48.0021,
+      "lon": 0.20251
+     }
+    },
+    {
+     "facility": "CHRU lille",
+     "status": "RECRUITING",
+     "city": "Lille",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Saad NSEIR",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 50.63391,
+      "lon": 3.05512
+     }
+    },
+    {
+     "facility": "CHU Lyon",
+     "status": "RECRUITING",
+     "city": "Lyon",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Mehdi MEZIDI",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 45.74906,
+      "lon": 4.84789
+     }
+    },
+    {
+     "facility": "CH d'Annecy Genevois",
+     "status": "RECRUITING",
+     "city": "Metz-Tessy",
+     "zip": "74370",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Michel Muller, Dr",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 45.93343,
+      "lon": 6.10973
+     }
+    },
+    {
+     "facility": "CHU Nantes",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Nantes",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Jean Reignier",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 47.21725,
+      "lon": -1.55336
+     }
+    },
+    {
+     "facility": "CHR orléans",
+     "status": "RECRUITING",
+     "city": "Orléans",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Toufik Kamel",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 47.90248,
+      "lon": 1.90407
+     }
+    },
+    {
+     "facility": "CHU Cochin",
+     "status": "RECRUITING",
+     "city": "Paris",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Jean daniel Chiche",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 48.85341,
+      "lon": 2.3488
+     }
+    },
+    {
+     "facility": "Hôpital européen Georges pompidou",
+     "status": "RECRUITING",
+     "city": "Paris",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Benjamin Planquette",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 48.85341,
+      "lon": 2.3488
+     }
+    },
+    {
+     "facility": "Pitié-Salpêtrière",
+     "status": "RECRUITING",
+     "city": "Paris",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Alexandre Demoule",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 48.85341,
+      "lon": 2.3488
+     }
+    },
+    {
+     "facility": "CHU Poitiers",
+     "status": "RECRUITING",
+     "city": "Poitiers",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Arnaud Thille",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 46.58261,
+      "lon": 0.34348
+     }
+    },
+    {
+     "facility": "CHU de Rennes",
+     "status": "RECRUITING",
+     "city": "Rennes",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Arnaud Gacouin",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 48.11109,
+      "lon": -1.67431
+     }
+    },
+    {
+     "facility": "CHU de Rouen",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Rouen",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Gaëtan Beduneau",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 49.44313,
+      "lon": 1.09932
+     }
+    },
+    {
+     "facility": "Hopital Foch",
+     "status": "ACTIVE_NOT_RECRUITING",
+     "city": "Suresnes",
+     "country": "France",
+     "geoPoint": {
+      "lat": 48.87143,
+      "lon": 2.22929
+     }
+    },
+    {
+     "facility": "CHRU Tours",
+     "status": "RECRUITING",
+     "city": "Tours",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Stéphane Ehrmann",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 47.39484,
+      "lon": 0.70398
+     }
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D008775",
+     "term": "Methylprednisolone"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D011239",
+     "term": "Prednisolone"
+    },
+    {
+     "id": "D011246",
+     "term": "Pregnadienetriols"
+    },
+    {
+     "id": "D011245",
+     "term": "Pregnadienes"
+    },
+    {
+     "id": "D011278",
+     "term": "Pregnanes"
+    },
+    {
+     "id": "D013256",
+     "term": "Steroids"
+    },
+    {
+     "id": "D000072473",
+     "term": "Fused-Ring Compounds"
+    },
+    {
+     "id": "D011083",
+     "term": "Polycyclic Compounds"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

@@ -4,7 +4,7 @@
 * One alert per (kind, scope); repeated findings update it; a problem that is no longer present resolves it.
 * Creating/starting an intervention re-simulates the future with the simulator's response model; events
   before the clock are guaranteed unchanged (checked), so streamed event ids stay valid (replay-safe).
-* Every mutation is audited (ops.audit -> A7's audit log, stub until available).
+* Every mutation is audited through the trial's audit sink (ops.audit -> the app's compliance adapter).
 * State is in memory (re-created deterministically by POST /simulate); see HANDOFF for persistence notes.
 """
 
@@ -18,6 +18,7 @@ from copy import deepcopy
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 from functools import wraps
+from typing import Any
 
 import numpy as np
 
@@ -25,7 +26,6 @@ from . import actions, audit, expectation
 from ._contracts import Alert, EffectEstimate, Intervention, OpsEvent, ScenarioResult, TrialDesign
 from .detect import Detector, Finding
 from .effects import EffectDetails, direction_for, estimate_effect
-from .fixtures import load_demo_design
 from .health import compute_health
 from .metrics import Feed
 from .params import load_ops_params
@@ -60,15 +60,6 @@ def atomic(fn):
                 raise
     return wrapped
 
-DesignResolver = Callable[[str], "TrialDesign | None"]
-_design_resolver: DesignResolver | None = None
-
-
-def set_design_resolver(fn: DesignResolver | None) -> None:
-    """A5 can register a lookup (trial_id -> TrialDesign) so /simulate uses stored designs."""
-    global _design_resolver
-    _design_resolver = fn
-
 
 class OpsError(Exception):
     def __init__(self, status: int, code: str, message: str, details: dict | None = None):
@@ -90,7 +81,7 @@ class IvMeta:
 class TrialState:
     def __init__(self, trial_id: str, design: TrialDesign, scenario_result: ScenarioResult | None, seed: int,
                  speed: float, scenario: str, start_day: float, horizon_days: int,
-                 audit_sink=None, forecast_result=None):
+                 *, audit_sink: Callable[..., Any], forecast_result=None):
         self.lock = threading.RLock()
         self.audit_sink = audit_sink
         self.trial_id, self.seed, self.scenario = trial_id, seed, scenario
@@ -589,52 +580,3 @@ def _jsonable(x):
     if isinstance(x, np.generic):
         return x.item()
     return x
-
-
-# ---------------------------------------------------------------------- registry
-_states: dict[str, TrialState] = {}
-_reg_lock = threading.Lock()
-
-
-def resolve_design(trial_id: str, design: TrialDesign | None) -> TrialDesign:
-    if design is not None:
-        return design
-    if _design_resolver is not None:
-        found = _design_resolver(trial_id)
-        if found is not None:
-            return found
-    return load_demo_design()
-
-
-def start(trial_id: str, *, seed: int = DEFAULT_SEED, speed: float = 0.0, scenario: str = "demo",
-          start_day: float = DEFAULT_START_DAY, horizon_days: int = DEFAULT_HORIZON,
-          design: TrialDesign | None = None, scenario_result: ScenarioResult | None = None) -> TrialState:
-    if scenario not in ("demo", "healthy"):
-        raise OpsError(422, "invalid_scenario", "scenario must be 'demo' or 'healthy'.")
-    if not 30 <= horizon_days <= 1500:
-        raise OpsError(422, "invalid_horizon", "horizon_days must be between 30 and 1500.")
-    if not 0 <= start_day < horizon_days:
-        raise OpsError(422, "invalid_start_day", "start_day must be within the horizon.")
-    if not 0 <= speed <= 30:
-        raise OpsError(422, "invalid_speed", "speed (simulated days per second) must be between 0 and 30.")
-    st = TrialState(trial_id, resolve_design(trial_id, design), scenario_result, seed, speed, scenario, start_day,
-                    horizon_days)
-    with _reg_lock:
-        _states[trial_id] = st
-    return st
-
-
-def get(trial_id: str, auto_start: bool = True) -> TrialState:
-    with _reg_lock:
-        st = _states.get(trial_id)
-    if st is None:
-        if not auto_start:
-            raise OpsError(404, "not_simulated", f"No simulated feed for {trial_id}; POST /simulate first.")
-        st = start(trial_id)
-    st.tick()
-    return st
-
-
-def reset_all() -> None:
-    with _reg_lock:
-        _states.clear()

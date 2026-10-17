@@ -1,0 +1,750 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01032304",
+   "orgStudyIdInfo": {
+    "id": "ERD-01-08/EP"
+   },
+   "organization": {
+    "fullName": "Edmond Pharma",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "The Efficacy and Safety of Erdosteine in Chronic Obstructive Pulmonary Disease (COPD)",
+   "officialTitle": "The Efficacy and Safety of Erdosteine in the Long-term Therapy of Chronic Obstructive Pulmonary Disease (COPD). A 12-month, Randomised, Double-blind, Placebo-controlled, Parallel Group, Multicenter Study",
+   "acronym": "RESTORE"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2014-06",
+   "overallStatus": "UNKNOWN",
+   "lastKnownStatus": "ACTIVE_NOT_RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2009-08"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2014-03",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2015-09",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2009-12-11",
+   "studyFirstSubmitQcDate": "2009-12-13",
+   "studyFirstPostDateStruct": {
+    "date": "2009-12-15",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2014-06-12",
+   "lastUpdatePostDateStruct": {
+    "date": "2014-06-13",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Edmond Pharma",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "The aim of the study is to evaluate the effect of erdosteine, compared to placebo, on exacerbation rate over a 12-month treatment period in patients with moderate-to-severe COPD. Moreover, the effects of erdosteine on pulmonary function parameters, clinical symptoms and quality of life, and the long-term safety of the drug will be assessed."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 492,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Erdosteine",
+     "type": "EXPERIMENTAL",
+     "description": "600 mg/day for 12 months",
+     "interventionNames": [
+      "Drug: Erdosteine"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo for 12 months",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Erdosteine",
+     "description": "One 300 mg capsule twice a day",
+     "armGroupLabels": [
+      "Erdosteine"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "One capsule twice a day",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "number of acute exacerbations",
+     "timeFrame": "12 months"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "spirometry parameters",
+     "timeFrame": "12 months"
+    },
+    {
+     "measure": "COPD symptoms",
+     "timeFrame": "12 months"
+    },
+    {
+     "measure": "Quality of life",
+     "timeFrame": "12 months"
+    },
+    {
+     "measure": "Safety and tolerability of erdosteine",
+     "timeFrame": "12 months"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* COPD stage II-III GOLD\n* At least 2 exacerbations in the previous 2-12 months\n\nExclusion Criteria:\n\n* Acute exacerbations in the 2 months prior to enrolment\n* Diagnosis of asthma and/or other relevant lung diseases\n* COPD stage IV\n* Unstable concurrent diseases",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "locations": [
+    {
+     "facility": "Campus Gasthuisberg Dep.t Longfunctiemetingen",
+     "city": "Leuven",
+     "zip": "B-3000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.87959,
+      "lon": 4.70093
+     }
+    },
+    {
+     "facility": "ASMOH-MC \"Sveti Panteleiomon\"",
+     "city": "Sofia",
+     "zip": "1463",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Clinic for emergency Medicine and Intensive care, Pneumology and Physiatry",
+     "city": "Sofia",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Clinic of Pulmonary Disease-Military Medical Academy",
+     "city": "Sofia",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Clinical of Pneumology and Physiatry",
+     "city": "Varna",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.21912,
+      "lon": 27.91024
+     }
+    },
+    {
+     "facility": "Plicnì Ordinace",
+     "city": "Havlìckuv Brod",
+     "country": "Czechia"
+    },
+    {
+     "facility": "Poliklinica Moravsky Krumlov",
+     "city": "Moravský Krumlov",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.04893,
+      "lon": 16.31169
+     }
+    },
+    {
+     "facility": "Department of Respiratory Medicine, Faculty Hospital",
+     "city": "Olomouc",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.59552,
+      "lon": 17.25175
+     }
+    },
+    {
+     "facility": "Lipa Centrum Nove Butovice",
+     "city": "Prague",
+     "zip": "15900",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "Lerymed spol. s.r.o.",
+     "city": "Prague",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "Plicnì Ambulance",
+     "city": "Prostějov",
+     "zip": "79601",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.47188,
+      "lon": 17.11184
+     }
+    },
+    {
+     "facility": "Plicnì M.I.O., spol. s.r.o.",
+     "city": "Příbor",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.64094,
+      "lon": 18.14499
+     }
+    },
+    {
+     "facility": "Plicnì Ordinace",
+     "city": "Strakonice",
+     "zip": "38601",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.26141,
+      "lon": 13.90237
+     }
+    },
+    {
+     "facility": "Nemonice Znojmo",
+     "city": "Znojmo",
+     "zip": "66902",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 48.8555,
+      "lon": 16.0488
+     }
+    },
+    {
+     "facility": "Department of Respiratory Diseases, Copenhagen University Hospital",
+     "city": "Hvidovre",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.64297,
+      "lon": 12.47708
+     }
+    },
+    {
+     "facility": "Service de Pneumologie, Hopital Bichat",
+     "city": "Paris",
+     "country": "France",
+     "geoPoint": {
+      "lat": 48.85341,
+      "lon": 2.3488
+     }
+    },
+    {
+     "facility": "Service de Pneumologie, Hopital Bois-Guillaume",
+     "city": "Rouen",
+     "country": "France",
+     "geoPoint": {
+      "lat": 49.44313,
+      "lon": 1.09932
+     }
+    },
+    {
+     "facility": "UOC Pneumologia Riabilitativa INRCA",
+     "city": "Casatenovo",
+     "state": "Lecco",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.69514,
+      "lon": 9.31338
+     }
+    },
+    {
+     "facility": "UOC di Pneumologia-Ospedale Mater Salutis",
+     "city": "Legnago",
+     "state": "Verona",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.19365,
+      "lon": 11.30227
+     }
+    },
+    {
+     "facility": "Dip. Pneumologia Osp. G. Rummo",
+     "city": "Benevento",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 41.1307,
+      "lon": 14.77816
+     }
+    },
+    {
+     "facility": "U.O. Pneumologia",
+     "city": "Bussolengo",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.46903,
+      "lon": 10.85371
+     }
+    },
+    {
+     "facility": "UOC di Pneumologia- Ospedale Civile di Massa e Carrara",
+     "city": "Carrara",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 44.07926,
+      "lon": 10.09789
+     }
+    },
+    {
+     "facility": "Ospedale Careggi, Malattie dell'Apparato Respiratorio",
+     "city": "Florence",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 43.77925,
+      "lon": 11.24626
+     }
+    },
+    {
+     "facility": "UOC Pneumologia Osp. Vito Fazzi",
+     "city": "Lecce",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 40.35481,
+      "lon": 18.17244
+     }
+    },
+    {
+     "facility": "UO di Pneumologia Osp. San Paolo",
+     "city": "Milan",
+     "zip": "20100",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 42.78235,
+      "lon": 12.59836
+     }
+    },
+    {
+     "facility": "Ospedale San Carlo Borromeo, Dipartimento Broncocardiopneumologico",
+     "city": "Milan",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 42.78235,
+      "lon": 12.59836
+     }
+    },
+    {
+     "facility": "U.O. Pneumologia",
+     "city": "Province of Macerata",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 43.29789,
+      "lon": 13.45293
+     }
+    },
+    {
+     "facility": "Szpital Uniwersytecki 2",
+     "city": "Bydgoszczy",
+     "zip": "85168",
+     "country": "Poland"
+    },
+    {
+     "facility": "Klinika Pulmonologii II Katedry, Collegium Medicum Uniwersytetu",
+     "city": "Krakow",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.06143,
+      "lon": 19.93658
+     }
+    },
+    {
+     "facility": "Katedra Pulmunologii i Alergologii, Klinika Gruźlicy Uniwersytetu Medycznego",
+     "city": "Lodz",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 51.77058,
+      "lon": 19.47395
+     }
+    },
+    {
+     "facility": "Katedra i klinika Pulmonologii, Uniwersytet Medyczny",
+     "city": "Poznan",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.40692,
+      "lon": 16.92993
+     }
+    },
+    {
+     "facility": "NZOZ \"Darmeticus\"",
+     "city": "Warsaw",
+     "zip": "04364",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.22977,
+      "lon": 21.01178
+     }
+    },
+    {
+     "facility": "Katedra i Klinika Pneumonologii, Warszawski Uniwersytet Medyczny",
+     "city": "Warsaw",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.22977,
+      "lon": 21.01178
+     }
+    },
+    {
+     "facility": "Institutul de Pneumoftiziologie \"Marius Nasta\"",
+     "city": "Bucharest",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.43225,
+      "lon": 26.10626
+     }
+    },
+    {
+     "facility": "Novo Medica",
+     "city": "Bucharest",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.43225,
+      "lon": 26.10626
+     }
+    },
+    {
+     "facility": "Spitalul de Pneumoftiziologie \"Leon Daniello\"",
+     "city": "Cluj-Napoca",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 46.76667,
+      "lon": 23.6
+     }
+    },
+    {
+     "facility": "Spitalul Clinic de Pneumoftiziologie",
+     "city": "Iași",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 47.16667,
+      "lon": 27.6
+     }
+    },
+    {
+     "facility": "Clinica Pneumologie I, Spitalul Clinic Judetean Mureş",
+     "city": "Târgu Mureş",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 46.54245,
+      "lon": 24.55747
+     }
+    },
+    {
+     "facility": "Spitalul de Pneumoftiziologie \"Victor Babes\"",
+     "city": "Timișoara",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 45.75372,
+      "lon": 21.22571
+     }
+    },
+    {
+     "facility": "Nemocnica s Poliklinicou \"Svateho Jakuba\"n.o.",
+     "city": "Bardejov",
+     "zip": "08501",
+     "country": "Slovakia",
+     "geoPoint": {
+      "lat": 49.29175,
+      "lon": 21.27271
+     }
+    },
+    {
+     "facility": "Inspiro",
+     "city": "Humenné",
+     "zip": "06601",
+     "country": "Slovakia",
+     "geoPoint": {
+      "lat": 48.93707,
+      "lon": 21.91625
+     }
+    },
+    {
+     "facility": "Specializovana NemocnicaSvorada Zobor n.o.",
+     "city": "Nitra",
+     "zip": "94901",
+     "country": "Slovakia",
+     "geoPoint": {
+      "lat": 48.30763,
+      "lon": 18.08453
+     }
+    },
+    {
+     "facility": "Narodny Ustav Tuberculozy",
+     "city": "Vyšné Hágy",
+     "zip": "05984",
+     "country": "Slovakia",
+     "geoPoint": {
+      "lat": 49.11855,
+      "lon": 20.12464
+     }
+    },
+    {
+     "facility": "Regional Respiratory Centre, Belfast City Hospital",
+     "city": "Belfast",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 54.59682,
+      "lon": -5.92541
+     }
+    },
+    {
+     "facility": "Cardiovascular and Respiratory Studies Department",
+     "city": "Hull",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.7446,
+      "lon": -0.33525
+     }
+    },
+    {
+     "facility": "Aintree Chest Centre, University Hospital Aintree",
+     "city": "Liverpool",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.41058,
+      "lon": -2.97794
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "29025888",
+     "type": "DERIVED",
+     "citation": "Dal Negro RW, Wedzicha JA, Iversen M, Fontana G, Page C, Cicero AF, Pozzi E, Calverley PMA; RESTORE group; RESTORE study. Effect of erdosteine on the rate and duration of COPD exacerbations: the RESTORE study. Eur Respir J. 2017 Oct 12;50(4):1700711. doi: 10.1183/13993003.00711-2017. Print 2017 Oct."
+    }
+   ]
+  }
+ },
+ "annotationSection": {
+  "annotationModule": {
+   "unpostedAnnotation": {
+    "unpostedResponsibleParty": "Edmond Pharma",
+    "unpostedEvents": [
+     {
+      "type": "RELEASE",
+      "date": "2016-09-13"
+     },
+     {
+      "type": "RESET",
+      "date": "2016-11-02"
+     },
+     {
+      "type": "RELEASE",
+      "date": "2016-11-21"
+     },
+     {
+      "type": "UNRELEASE",
+      "dateUnknown": true
+     },
+     {
+      "type": "RELEASE",
+      "date": "2017-01-10"
+     },
+     {
+      "type": "RESET",
+      "date": "2017-02-28"
+     },
+     {
+      "type": "RELEASE",
+      "date": "2017-05-12"
+     },
+     {
+      "type": "UNRELEASE",
+      "dateUnknown": true
+     },
+     {
+      "type": "RELEASE",
+      "date": "2017-05-17"
+     },
+     {
+      "type": "RESET",
+      "date": "2017-12-18"
+     },
+     {
+      "type": "RELEASE",
+      "date": "2018-02-06"
+     },
+     {
+      "type": "RESET",
+      "date": "2018-02-07"
+     },
+     {
+      "type": "RELEASE",
+      "date": "2018-02-09"
+     },
+     {
+      "type": "RESET",
+      "date": "2018-10-26"
+     }
+    ]
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16",
+   "submissionTracking": {
+    "estimatedResultsFirstSubmitDate": "2016-09-13",
+    "submissionInfos": [
+     {
+      "releaseDate": "2016-09-13",
+      "resetDate": "2016-11-02"
+     },
+     {
+      "releaseDate": "2016-11-21",
+      "unreleaseDateUnknown": true
+     },
+     {
+      "releaseDate": "2017-01-10",
+      "resetDate": "2017-02-28"
+     },
+     {
+      "releaseDate": "2017-05-12",
+      "unreleaseDateUnknown": true
+     },
+     {
+      "releaseDate": "2017-05-17",
+      "resetDate": "2017-12-18"
+     },
+     {
+      "releaseDate": "2018-02-06",
+      "resetDate": "2018-02-07"
+     },
+     {
+      "releaseDate": "2018-02-09",
+      "resetDate": "2018-10-26"
+     }
+    ]
+   }
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C048498",
+     "term": "erdosteine"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

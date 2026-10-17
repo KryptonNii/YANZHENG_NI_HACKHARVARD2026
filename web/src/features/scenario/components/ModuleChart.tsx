@@ -1,3 +1,4 @@
+import { useTranslation, translate as t } from "@/app/i18n";
 import { useMemo, useState } from "react";
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import type { ModuleBreakdown } from "@/app/contracts";
@@ -34,6 +35,7 @@ export function ModuleChart({
   current: ScenarioResultX | null;
   onSelectModule: (module: string) => void;
 }) {
+  useTranslation();
   const [basis, setBasis] = useState<Basis>("cost_usd");
   const unit = basis === "cost_usd" ? "usd" : "kg_co2e";
 
@@ -68,16 +70,16 @@ export function ModuleChart({
     <section className="card p-4" aria-labelledby="module-chart-title" data-testid="module-chart">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
         <h2 id="module-chart-title" className="card-title">
-          Breakdown by module (P50)
+          {t("Breakdown by module (P50)", "按模块细分（P50）")}
         </h2>
         <Segmented
-          label="Breakdown basis"
+          label={t("Breakdown basis", "细分依据")}
           size="sm"
           value={basis}
           onChange={setBasis}
           options={[
-            { value: "cost_usd", label: "Cost" },
-            { value: "co2e_kg", label: "Carbon" },
+            { value: "cost_usd", label: t("Cost", "费用") },
+            { value: "co2e_kg", label: t("Carbon", "碳排放") },
           ]}
         />
       </div>
@@ -94,9 +96,10 @@ export function ModuleChart({
                   tick={{ fontSize: 12, fill: "#64748b" }}
                   tickFormatter={(v: number) => (basis === "co2e_kg" ? `${formatBare(v * 1000, "kg_co2e")} t` : formatBare(v, "usd"))}
                 />
-                <YAxis type="category" dataKey="name" width={70} tick={{ fontSize: 13, fill: "#334155", fontWeight: 600 }} />
+                <YAxis type="category" dataKey="name" tickFormatter={(name: string) => name === "Baseline" ? t("Baseline", "基线") : name === "Current" ? t("Current", "当前") : name} width={70} tick={{ fontSize: 13, fill: "#334155", fontWeight: 600 }} />
                 <Tooltip
                   cursor={{ fill: "rgba(15,118,110,0.06)" }}
+                  labelFormatter={(name: string) => name === "Baseline" ? t("Baseline", "基线") : name === "Current" ? t("Current", "当前") : name}
                   formatter={(v: number, name: string) => [
                     basis === "co2e_kg" ? formatValue(v * 1000, "kg_co2e") : formatValue(v, "usd"),
                     moduleLabel(name),
@@ -117,12 +120,12 @@ export function ModuleChart({
             </ResponsiveContainer>
           </div>
           <table className="w-full text-sm" data-testid="module-table">
-            <caption className="sr-only">Module breakdown, baseline versus current, P50</caption>
+            <caption className="sr-only">{t("Module breakdown, baseline versus current, P50", "模块细分：基线与当前值对比，P50")}</caption>
             <thead>
               <tr className="text-left text-xs uppercase tracking-wide text-ink-500">
-                <th scope="col" className="pb-1 font-semibold">Module</th>
-                <th scope="col" className="pb-1 text-right font-semibold">Current</th>
-                <th scope="col" className="pb-1 text-right font-semibold">Δ vs baseline</th>
+                <th scope="col" className="pb-1 font-semibold">{t("Module", "模块")}</th>
+                <th scope="col" className="pb-1 text-right font-semibold">{t("Current", "当前")}</th>
+                <th scope="col" className="pb-1 text-right font-semibold">{t("Δ vs baseline", "相对基线变化")}</th>
               </tr>
             </thead>
             <tbody>
@@ -134,13 +137,13 @@ export function ModuleChart({
                       <button type="button" className="num-button flex items-center gap-2 px-1 py-0.5" onClick={() => onSelectModule(r.module)}>
                         <span className="h-2.5 w-2.5 shrink-0 rounded-sm" style={{ background: colorFor(r.module, i) }} aria-hidden />
                         <span className="text-ink-800">{moduleLabel(r.module)}</span>
-                        {isExtensionModule(r.module) && <span className="chip border-ink-300 bg-ink-50 text-ink-600" title="Extension beyond the published LCCTG method">ext.</span>}
-                        {isExcludedByDefault(r.module) && <span className="chip border-ink-300 bg-ink-50 text-ink-600" title="Excluded from totals by default">excl.</span>}
+                        {isExtensionModule(r.module) && <span className="chip border-ink-300 bg-ink-50 text-ink-600" title={t("Extension beyond the published LCCTG method", "已发表 LCCTG 方法之外的扩展")}>{t("ext.", "扩展")}</span>}
+                        {isExcludedByDefault(r.module) && <span className="chip border-ink-300 bg-ink-50 text-ink-600" title={t("Excluded from totals by default", "默认不计入总量")}>{t("excl.", "排除")}</span>}
                       </button>
                     </th>
                     <td className="whitespace-nowrap py-1 pl-2 text-right tabular text-ink-800">{r.cur !== null ? formatValue(r.cur, unit) : "—"}</td>
                     <td className={`whitespace-nowrap py-1 pl-2 text-right tabular ${d === null || Math.abs(d) < 1e-9 ? "text-ink-500" : d < 0 ? "text-better-700" : "text-worse-700"}`}>
-                      {d === null ? "—" : Math.abs(d) < 1e-9 ? "no change" : `${d < 0 ? "▼" : "▲"} ${formatSignedValue(d, unit)}`}
+                      {d === null ? "—" : Math.abs(d) < 1e-9 ? t("no change", "无变化") : `${d < 0 ? "▼" : "▲"} ${formatSignedValue(d, unit)}`}
                     </td>
                   </tr>
                 );

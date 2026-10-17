@@ -1,0 +1,372 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT00791505",
+   "orgStudyIdInfo": {
+    "id": "04/UR/08-20"
+   },
+   "organization": {
+    "fullName": "University of Monastir",
+    "class": "OTHER"
+   },
+   "briefTitle": "Antibiotic/COPD in Acute Exacerbation of Chronic Obstructive Pulmonary Disease (COPD) Requiring Mechanical Ventilation",
+   "officialTitle": "Antibiotic Comparison Exacerbation COPD"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2020-02",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2002-07"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2005-06",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2005-06",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2008-11-12",
+   "studyFirstSubmitQcDate": "2008-11-13",
+   "studyFirstPostDateStruct": {
+    "date": "2008-11-14",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2020-02-20",
+   "lastUpdatePostDateStruct": {
+    "date": "2020-02-24",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "PRINCIPAL_INVESTIGATOR",
+    "investigatorFullName": "Pr. Semir Nouira",
+    "investigatorTitle": "MD Semir Nouira",
+    "investigatorAffiliation": "University of Monastir"
+   },
+   "leadSponsor": {
+    "name": "University of Monastir",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false
+  },
+  "descriptionModule": {
+   "briefSummary": "Although the use of antibiotics in the treatment of acute exacerbation of chronic obstructive pulmonary disease (COPD) is largely accepted, controversy remains regarding whether the choice of antibiotic has any impact on outcome. Our aim was to compare the effects of the combination of trimethoprim and sulfamethoxazole and ciprofloxacin in patients treated for severe COPD exacerbation requiring mechanical ventilation.",
+   "detailedDescription": "Antibiotic therapy has been shown to be beneficial in patients with severe acute exacerbation of chronic obstructive pulmonary disease (COPD). Although recent guidelines support the use of new antibiotics there is no evidence that newer antibiotics are any better than older agents. The choice of antibiotic to be used in this situation is challenging to the clinician who must choose between traditional antibiotics (cyclins, aminopénicillins, cotrimoxazole...) and new antimicrobial agents. Indeed, available comparative studies did not show an obvious superiority of new antibiotics compared to their predecessors . Taking into account bacterial agents associated to COPD exacerbations, one must choose an antibiotic which has the best activity against Haemophilus influenzae, Streptococcus pneumoniae and Branhamella catarrhalis. News quinolones are represented as an interesting alternative to standard antibiotics because of their large spectrum of action and of their pharmacokinetic advantages allowing high tissue penetration in the pulmonary parenchyma and tracheobronchial tree. Data on their use among patients having moderate exacerbation of COPD are encouraging but their effectiveness in more severe presentations is not established. The objective of this randomized controlled and double blind study is to evaluate the effectiveness and tolerance of ciprofloxacin compared to trimethoprim sulfamethoxazole in patients admitted to ICU for severe exacerbation of COPD requiring mechanical ventilation."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease",
+    "Sepsis",
+    "Antibiotics"
+   ],
+   "keywords": [
+    "chronic obstructive pulmonary disease",
+    "pulmonary infection",
+    "antibiotic"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 170,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Ciprofloxacin",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "750 mg a day during 10 days",
+     "interventionNames": [
+      "Drug: ciprofloxacin"
+     ]
+    },
+    {
+     "label": "trimethoprim-sulfamethoxazole",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "2000 mg a day for 10 days",
+     "interventionNames": [
+      "Drug: trimethoprim-sulfamethoxazole"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "ciprofloxacin",
+     "description": "1500 mg a day for 10 days",
+     "armGroupLabels": [
+      "Ciprofloxacin"
+     ],
+     "otherNames": [
+      "fluoroquinolone"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "trimethoprim-sulfamethoxazole",
+     "description": "2000 mg a day for 10 days",
+     "armGroupLabels": [
+      "trimethoprim-sulfamethoxazole"
+     ],
+     "otherNames": [
+      "sulfatrim",
+      "bactrim"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Two major criteria will be used for the determination of sample size and the estimate of the effectiveness of the treatments of the study: 1. mortality (in ICU and in the hospital) 2. rate of additional antibiotherapy course.",
+     "description": "The decision to initiate new antibiotics was left to the discretion of the treating physician, and if resistant species were cultured, the protocol treatment was not systematically changed unless the clinical course of the patient worsened",
+     "timeFrame": "30 day after starting protocol"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Mechanical ventilation duration",
+     "description": "duration of mechanical ventilation",
+     "timeFrame": "30 days after starting protocol"
+    },
+    {
+     "measure": "Duration of hospital stay",
+     "description": "duration of hospital stay",
+     "timeFrame": "30 days after starting protocol"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* All patients having a COPD (according to the definition of the American Thoracic Society) and having an acute exacerbation leading to an acute respiratory failure requiring the admission to ICU and mechanical ventilation.\n* The acute exacerbation of COPD is defined by increase in the frequency of cough, the volume and the purulence of expectoration and increase of baseline dyspnea. To be included, patients must have respiratory rate \\>30 cycles/min and one of the following blood gas criteria (with blood gases performed right before the initiation of mechanical ventilation): PaC02 \\> 6kPa and arterial pH \\<7.30.\n\nExclusion Criteria:\n\n* Pneumonia documented with chest radiography\n* Antibiotic treatment in the ten previous days of ICU admission\n* Former inclusion in the study\n* History of allergy to the quinolones and/or to trimethoprim sulfamethoxazole\n* Pregnancy or breast feeding\n* Severe chronic disease: heart, liver, kidney.\n* Known immunodeficiency (malignant hemopathy, AIDS...)\n* Digestive disease which could affect the absorption of the drugs\n* Concomitant infection which requires systemic antibiotic treatment",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "nouira semir, MD",
+     "affiliation": "research unit 04/UR/08-20",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "20536364",
+     "type": "DERIVED",
+     "citation": "Nouira S, Marghli S, Besbes L, Boukef R, Daami M, Nciri N, Elatrous S, Abroug F. Standard versus newer antibacterial agents in the treatment of severe acute exacerbation of chronic obstructive pulmonary disease: a randomized trial of trimethoprim-sulfamethoxazole versus ciprofloxacin. Clin Infect Dis. 2010 Jul 15;51(2):143-9. doi: 10.1086/653527."
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D018805",
+     "term": "Sepsis"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D007239",
+     "term": "Infections"
+    },
+    {
+     "id": "D018746",
+     "term": "Systemic Inflammatory Response Syndrome"
+    },
+    {
+     "id": "D007249",
+     "term": "Inflammation"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D002939",
+     "term": "Ciprofloxacin"
+    },
+    {
+     "id": "D024841",
+     "term": "Fluoroquinolones"
+    },
+    {
+     "id": "D015662",
+     "term": "Trimethoprim, Sulfamethoxazole Drug Combination"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D042462",
+     "term": "4-Quinolones"
+    },
+    {
+     "id": "D015363",
+     "term": "Quinolones"
+    },
+    {
+     "id": "D011804",
+     "term": "Quinolines"
+    },
+    {
+     "id": "D006574",
+     "term": "Heterocyclic Compounds, 2-Ring"
+    },
+    {
+     "id": "D000072471",
+     "term": "Heterocyclic Compounds, Fused-Ring"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D013420",
+     "term": "Sulfamethoxazole"
+    },
+    {
+     "id": "D000096926",
+     "term": "Benzenesulfonamides"
+    },
+    {
+     "id": "D013449",
+     "term": "Sulfonamides"
+    },
+    {
+     "id": "D000577",
+     "term": "Amides"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D013424",
+     "term": "Sulfanilamides"
+    },
+    {
+     "id": "D000814",
+     "term": "Aniline Compounds"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D001555",
+     "term": "Benzene Derivatives"
+    },
+    {
+     "id": "D006841",
+     "term": "Hydrocarbons, Aromatic"
+    },
+    {
+     "id": "D006844",
+     "term": "Hydrocarbons, Cyclic"
+    },
+    {
+     "id": "D006838",
+     "term": "Hydrocarbons"
+    },
+    {
+     "id": "D013450",
+     "term": "Sulfones"
+    },
+    {
+     "id": "D013457",
+     "term": "Sulfur Compounds"
+    },
+    {
+     "id": "D014295",
+     "term": "Trimethoprim"
+    },
+    {
+     "id": "D011743",
+     "term": "Pyrimidines"
+    },
+    {
+     "id": "D006573",
+     "term": "Heterocyclic Compounds, 1-Ring"
+    },
+    {
+     "id": "D004338",
+     "term": "Drug Combinations"
+    },
+    {
+     "id": "D004364",
+     "term": "Pharmaceutical Preparations"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

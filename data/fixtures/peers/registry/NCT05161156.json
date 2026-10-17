@@ -1,0 +1,456 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT05161156",
+   "orgStudyIdInfo": {
+    "id": "C2A01096"
+   },
+   "organization": {
+    "fullName": "Phargentis SA",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Bioequivalence Study of Tiotropium Bromide Inhalation Powder",
+   "officialTitle": "Multicentre,Randomized,Double-Blind,Double-Dummy,3period,6Seq,Crossover,Active&Placebo,SD PD Study to Evaluate Therapeutic Equivalence of Test Tiotropium Bromide Inh. Powder to Reference SPIRIVA® HANDIHALER in Subjects w/COPD*"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2023-04",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2022-03-24",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2022-11-29",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2022-11-29",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2021-12-02",
+   "studyFirstSubmitQcDate": "2021-12-02",
+   "studyFirstPostDateStruct": {
+    "date": "2021-12-17",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2023-04-07",
+   "lastUpdatePostDateStruct": {
+    "date": "2023-04-10",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Phargentis SA",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": true,
+   "isUnapprovedDevice": true
+  },
+  "descriptionModule": {
+   "briefSummary": "This study is to characterize the pharmacodynamic characteristics and to assess the therapeutic bioequivalence after single dose of Tiotropium Bromide Inhalation Powder-test relative to Tiotropium Bromide Inhalation Powder-reference in Adult Patients with Chronic Obstructive Pulmonary Disease (COPD) as primary objective",
+   "detailedDescription": "Pharmadynamic study conducted in accordance requirements and recommendations per the US FDA's 2017 product specific \"Draft Guidance on Tiotropium Bromide\""
+  },
+  "conditionsModule": {
+   "conditions": [
+    "COPD"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "CROSSOVER",
+    "interventionModelDescription": "Double-blind, double-dummy, placebo controlled",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 306,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Treatment A: 18 mcg of Test Product (tiotropium bromide inhalation powder)",
+     "type": "EXPERIMENTAL",
+     "description": "2 inhalations of test product, followed by 2 inhalations of reference placebo product",
+     "interventionNames": [
+      "Combination Product: Test Product (tiotropium bromide inhalation powder)",
+      "Combination Product: Placebo"
+     ]
+    },
+    {
+     "label": "Treatment B: 18 mcg of Reference Product (Spiriva)",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "2 inhalations of reference product, followed by 2 inhalations of test placebo product",
+     "interventionNames": [
+      "Combination Product: 18 mcg of Spiriva (Reference Product)",
+      "Combination Product: Placebo"
+     ]
+    },
+    {
+     "label": "Treatment C: Zero-dose (Placebo)",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "2 inhalations of reference placebo powder, followed by 2 inhalations of test placebo product",
+     "interventionNames": [
+      "Combination Product: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "COMBINATION_PRODUCT",
+     "name": "Test Product (tiotropium bromide inhalation powder)",
+     "description": "A single dose of test product",
+     "armGroupLabels": [
+      "Treatment A: 18 mcg of Test Product (tiotropium bromide inhalation powder)"
+     ]
+    },
+    {
+     "type": "COMBINATION_PRODUCT",
+     "name": "18 mcg of Spiriva (Reference Product)",
+     "description": "A single dose of reference product (Spiriva)",
+     "armGroupLabels": [
+      "Treatment B: 18 mcg of Reference Product (Spiriva)"
+     ],
+     "otherNames": [
+      "RLD",
+      "SPIRIVA HandiHaler"
+     ]
+    },
+    {
+     "type": "COMBINATION_PRODUCT",
+     "name": "Placebo",
+     "description": "A single dose of placebo",
+     "armGroupLabels": [
+      "Treatment A: 18 mcg of Test Product (tiotropium bromide inhalation powder)",
+      "Treatment B: 18 mcg of Reference Product (Spiriva)",
+      "Treatment C: Zero-dose (Placebo)"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Primary PD parameter - Adjusted area under the serial spirometry FEV1-time curve",
+     "description": "Baseline-adjusted area under the serial spirometry FEV1-time curve calculated from time 0 to 24 hours (AUC0-24h) following treatment",
+     "timeFrame": "24 hours"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1. Participant must sign an ICF and is willing to participate in the study\n2. Male or female participant must be of ≥ 40 years of age\n3. Be medically stable on the basis of physical examination, medical history, and vital signs, chest X-ray and 12-lead ECG performed at screening. Any abnormalities, must be consistent with the underlying illness in the study population and recorded\n4. Be medically stable on the basis of clinical laboratory tests performed at screening as defined.\n5. Participants with documented Diagnosis of COPD, as defined by American Thoracic Society (ATS) \\[GOLD criteria\\] at screening.\n6. Pre-bronchodilator FEV1 ≥ 35% and ≤ 80% of predicted at screening and visits 3-5 as defined.\n7. Demonstrate at screening, post-bronchodilator FEV1≤80% of predicted.\n8. Must demonstrate at screening, post-bronchodilator FEV1/FVC ratio ≤0.70\n9. Demonstrate ≥ 15 % reversibility of FEV1 within 45 minutes following 4 inhalations of bronchodilator inhalation aerosol (84 mcg).\n10. Must administer at least 70% doses of placebo during the run-in period.\n11. Current or former cigarette smokers with a history of cigarette smoking of ≥10 pack-years at Screening (visit 1)\n12. Not pregnant , breastfeeding, not a woman of childbearing potential (WOCBP) or WOCBP using an acceptable contraceptive\n13. Participants willing and able to adhere to the protocol lifestyle restrictions\n14. Participants able to understand and comply with the study procedures.\n\nExclusion Criteria:\n\n1. Participants with history of liver or defined renal insufficiency; significant cardiac, vascular, pulmonary, gastrointestinal, endocrine, neurologic, hematologic, rheumatologic, psychiatric, or metabolic disturbances.\n2. Known respiratory disorder other than COPD, including but not limited to the following: active tuberculosis, lung cancer, alpha-1-antitrypsin deficiency, cystic fibrosis, significant asthma, active bronchiectasis, sarcoidosis, lung fibrosis, pulmonary hypertension, pulmonary edema or interstitial lung disease\n3. Participants with α1-antitrypsin deficiency as the underlying cause of COPD at screening.\n4. Participants with history of paradoxical bronchospasm, narrow-angle glaucoma, prostatic hypertrophy, or bladder neck obstruction, which would contraindicate the use of an anticholinergic agent.\n5. Participants with history of allergy or hypersensitivity to anticholinergic/muscarinic receptor antagonist agent, beta-2 adrenergic agonists, lactose/milk proteins or specific intolerance to aerosolized tiotropium or ipratropium bromide-containing products or known hypersensitivity to any of the proposed ingredients or components of the delivery system.\n6. Participants with abnormal and clinically significant electrocardiogram (ECG) finding prior to the study screening and randomization as per investigator discretion.\n7. Participants with use of oral/parenteral corticosteroids or antibiotics for COPD within 6 weeks or depot corticosteroids within 3 months prior to screening.\n8. Participants with hospitalization for COPD or pneumonia within 12 weeks prior to study screening and randomization.\n9. Participants with treatment for COPD exacerbation within 12 weeks prior to study screening and randomization.\n10. Participants with acute (viral or bacterial) upper or lower respiratory tract infection, sinusitis, rhinitis, pharyngitis, urinary tract infection or illness within 6 weeks prior to screening.\n11. Patients with sign and/or symptoms suggestive of COVID 19 infection at the time of screening.\n12. Participants with lung volume reduction surgery within the previous 12 months of randomization.\n13. Participants with chronic oxygen uses for \\>12 hours/day.\n14. Participants with evidence or history of other clinically significant disease or abnormal (such as congestive heart failure, uncontrolled hypertension, uncontrolled coronary artery disease, myocardial infarction, stroke, glaucoma or cardiac dysrhythmia) condition for which participation would not be in the best interest of the participant or that could prevent, limit, or confound the protocol-specified assessments.\n15. Participants had major surgery, (e.g., requiring general anesthesia) within 8 weeks before screening, or will not have fully recovered from surgery, or has surgery planned during the time of the study.\n16. Participants with history of hepatitis B surface antigen (HBsAg) or hepatitis C antibody (anti-HCV) positive, or other clinically active liver disease, or tests positive for HBsAg or anti-HCV at Screening.\n17. Participants with history of human immunodeficiency virus (HIV) antibody positive, or tests positive for HIV at Screening.\n18. Participant is unable to stop the medications at the defined times prior to screening\n19. Participants with history of drug or alcohol abuse within 1 years before screening or positive test result(s) for alcohol or drugs of abuse at Screening.\n20. Intended use of over the counter or prescription medication including herbal medications within 14 days prior to dosing.\n21. Participants received an investigational intervention (including investigational vaccines) or used an invasive investigational medical device within 30 days or 5 half-lives prior to baseline, whichever is longer, or is currently enrolled in an investigational study.\n22. Participants who are medically unable to withhold participant's salbutamol for the at least 4-hour period required prior to spirometry testing at each study visit.\n23. Pregnant, or breast-feeding, or planning to become pregnant while enrolled in this study or within 2 weeks after the last dose of study intervention.\n24. Plans to father a child while enrolled in this study or within 2 weeks after the last dose of study intervention.\n25. Participants that experiences a moderate or a severe COPD exacerbation or pneumonia during the run-in period will be excluded.\n26. Participants requires nocturnal oxygen or continuous supplemental oxygen therapy.\n27. Participant that requires a change in COPD medication from rescue medication or participants required rescue medications more than acceptable frequency during the screening or run-in period will be excluded.\n28. Employee of the investigator or study site\n29. Participants unable to perform maneuver (correct inhalation technique) according to study requirement despite device training\n30. Participants unable to perform acceptable or repeatable spirometry or comply with other study procedures",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "locations": [
+    {
+     "facility": "Investigational Site 203",
+     "city": "Anderson",
+     "state": "South Carolina",
+     "zip": "29621",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.50344,
+      "lon": -82.65013
+     }
+    },
+    {
+     "facility": "Investigational Site 204",
+     "city": "Gaffney",
+     "state": "South Carolina",
+     "zip": "29340",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.07179,
+      "lon": -81.64982
+     }
+    },
+    {
+     "facility": "Investigational Site 205",
+     "city": "Union",
+     "state": "South Carolina",
+     "zip": "29379",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.71541,
+      "lon": -81.62371
+     }
+    },
+    {
+     "facility": "Investigational Site 119",
+     "city": "Ahmedabad",
+     "state": "Gujarat",
+     "zip": "380006",
+     "country": "India",
+     "geoPoint": {
+      "lat": 23.02579,
+      "lon": 72.58727
+     }
+    },
+    {
+     "facility": "Investigational Site 101",
+     "city": "Ahmedabad",
+     "state": "Gujarat",
+     "zip": "382345",
+     "country": "India",
+     "geoPoint": {
+      "lat": 23.02579,
+      "lon": 72.58727
+     }
+    },
+    {
+     "facility": "Investigational Site 120",
+     "city": "Gandhinagar",
+     "state": "Gujarat",
+     "zip": "382421",
+     "country": "India",
+     "geoPoint": {
+      "lat": 23.21667,
+      "lon": 72.68333
+     }
+    },
+    {
+     "facility": "Investigational Site 108",
+     "city": "Sābarmatī",
+     "state": "Gujarat",
+     "zip": "380005",
+     "country": "India",
+     "geoPoint": {
+      "lat": 23.08333,
+      "lon": 72.66667
+     }
+    },
+    {
+     "facility": "Investigational Site 114",
+     "city": "Surat",
+     "state": "Gujarat",
+     "zip": "395006",
+     "country": "India",
+     "geoPoint": {
+      "lat": 21.19594,
+      "lon": 72.83023
+     }
+    },
+    {
+     "facility": "Investigational Site 102",
+     "city": "Vadodara",
+     "state": "Gujarat",
+     "zip": "390012",
+     "country": "India",
+     "geoPoint": {
+      "lat": 22.29941,
+      "lon": 73.20812
+     }
+    },
+    {
+     "facility": "Investigational Site 107",
+     "city": "Vadodara",
+     "state": "Gujarat",
+     "zip": "390022",
+     "country": "India",
+     "geoPoint": {
+      "lat": 22.29941,
+      "lon": 73.20812
+     }
+    },
+    {
+     "facility": "Investigational Site 118",
+     "city": "Jammu",
+     "state": "Jammu and Kashmir",
+     "zip": "190001",
+     "country": "India",
+     "geoPoint": {
+      "lat": 32.73528,
+      "lon": 74.86167
+     }
+    },
+    {
+     "facility": "Investigational Site 106",
+     "city": "Nagpur",
+     "state": "Maharashtra",
+     "zip": "440009",
+     "country": "India",
+     "geoPoint": {
+      "lat": 21.14631,
+      "lon": 79.08491
+     }
+    },
+    {
+     "facility": "Investigational Site 105",
+     "city": "Nagpur",
+     "state": "Maharashtra",
+     "zip": "440015",
+     "country": "India",
+     "geoPoint": {
+      "lat": 21.14631,
+      "lon": 79.08491
+     }
+    },
+    {
+     "facility": "Investigational Site 121",
+     "city": "Nashik",
+     "state": "Maharashtra",
+     "zip": "422002",
+     "country": "India",
+     "geoPoint": {
+      "lat": 19.99727,
+      "lon": 73.79096
+     }
+    },
+    {
+     "facility": "Investigational Site 112",
+     "city": "Nashik",
+     "state": "Maharashtra",
+     "zip": "422101",
+     "country": "India",
+     "geoPoint": {
+      "lat": 19.99727,
+      "lon": 73.79096
+     }
+    },
+    {
+     "facility": "Investigational Site 111",
+     "city": "Pune",
+     "state": "Maharashtra",
+     "zip": "411038",
+     "country": "India",
+     "geoPoint": {
+      "lat": 18.51957,
+      "lon": 73.85535
+     }
+    },
+    {
+     "facility": "Phargentis SA (Central Contact)",
+     "city": "Barbengo",
+     "zip": "6917",
+     "country": "Switzerland",
+     "geoPoint": {
+      "lat": 45.95882,
+      "lon": 8.91682
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D000069447",
+     "term": "Tiotropium Bromide"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D012602",
+     "term": "Scopolamine Derivatives"
+    },
+    {
+     "id": "D014326",
+     "term": "Tropanes"
+    },
+    {
+     "id": "D053961",
+     "term": "Azabicyclo Compounds"
+    },
+    {
+     "id": "D001372",
+     "term": "Aza Compounds"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000470",
+     "term": "Alkaloids"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D019086",
+     "term": "Bridged Bicyclo Compounds, Heterocyclic"
+    },
+    {
+     "id": "D006572",
+     "term": "Heterocyclic Compounds, Bridged-Ring"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

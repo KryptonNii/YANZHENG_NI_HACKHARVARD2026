@@ -1,0 +1,7469 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT00297115",
+   "orgStudyIdInfo": {
+    "id": "BY217/M2-125"
+   },
+   "organization": {
+    "fullName": "AstraZeneca",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Effect of Roflumilast on Exacerbation Rate in Patients With Chronic Obstructive Pulmonary Disease (COPD): The HERMES Study (BY217/M2-125)",
+   "officialTitle": "Effect of Roflumilast on Exacerbation Rate in Patients With COPD. The HERMES Study"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2016-09",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2006-03"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2008-04",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2008-08",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2006-02-27",
+   "studyFirstSubmitQcDate": "2006-02-27",
+   "studyFirstPostDateStruct": {
+    "date": "2006-02-28",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2011-03-17",
+   "resultsFirstSubmitQcDate": "2011-04-20",
+   "resultsFirstPostDateStruct": {
+    "date": "2011-05-19",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2016-10-03",
+   "lastUpdatePostDateStruct": {
+    "date": "2016-11-07",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "AstraZeneca",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "The aim of the study is to compare the effect of roflumilast on exacerbation rate and pulmonary function in patients with chronic obstructive pulmonary disease (COPD). Roflumilast will be administered orally once daily in the morning at one dose level. The study duration will be up to 56 weeks. The study will provide further data on safety and tolerability of roflumilast.\n\nFor additional information (for US patients only) see www.COPDSTUDY.net or dial 866-788-2673 (toll free)."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ],
+   "keywords": [
+    "Roflumilast",
+    "COPD",
+    "Chronic obstructive pulmonary disease"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 1568,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Roflumilast",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "500 mcg, once daily, oral administration in the morning",
+     "interventionNames": [
+      "Drug: Roflumilast"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "once daily",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Roflumilast",
+     "description": "500 mcg, once daily, oral administration in the morning",
+     "armGroupLabels": [
+      "Roflumilast"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "once daily",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Pre-bronchodilator Forced Expiratory Volume in First Second (FEV1)",
+     "description": "Mean change from baseline during the treatment period in pre-bronchodilator FEV1 \\[L\\]",
+     "timeFrame": "Change from baseline over 52 weeks of treatment"
+    },
+    {
+     "measure": "COPD Exacerbation Rate (Moderate or Severe)",
+     "description": "Mean rate of COPD exacerbations requiring oral or parenteral glucocorticosteroids (=moderate COPD exacerbations), or requiring hospitalization, or leading to death (=severe COPD exacerbations), per patient per year. A COPD exacerbation is an event in the natural course of the disease characterized by a change in the patient's baseline dyspnea, cough and/or sputum beyond day-to-day variability sufficient to warrant a change in management \\[American Thoracic Society (ATS) / European Respiratory Society (ERS) 2005\\].",
+     "timeFrame": "52 weeks treatment period"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Post-bronchodilator FEV1 [L]",
+     "description": "Mean change from baseline during the treatment period in post-bronchodilator FEV1 \\[L\\]",
+     "timeFrame": "Change from baseline over 52 weeks of treatment"
+    },
+    {
+     "measure": "Time to Mortality Due to Any Reason",
+     "timeFrame": "52 weeks treatment period"
+    },
+    {
+     "measure": "Natural Log-transformed C-reactive Protein (CRP)",
+     "description": "Mean change from baseline to the last post randomization measurement in natural log-transformed CRP",
+     "timeFrame": "Change from baseline to last post randomization measurement (52 weeks)"
+    },
+    {
+     "measure": "Mean Transition Dyspnea Index (TDI) Focal Score During the Treatment Period",
+     "description": "The TDI is a recognized questionnaire to measure dyspnea in an out patient COPD population. At baseline, 3 components of dyspnea, each graded with 4 questions, were asked: - Functional Impairment - Magnitude of Task - Magnitude of Effort At each of the post-randomization visits questions from the TDI were asked related to 3 components: Change in - Functional Impairment - Magnitude of Task - Magnitude of Effort Each question in the TDI is graded from -3 (major deterioration) to +3 (major improvement). This results in a TDI Focal Score ranging from -9 to +9.",
+     "timeFrame": "Change from baseline over 52 weeks of treatment"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Main Inclusion Criteria:\n\n* COPD patients having at least one exacerbation within last year\n* FEV1/FVC ratio (post-bronchodilator) ≤ 70%\n* FEV1 (post-bronchodilator) ≤ 50% of predicted\n\nMain Exclusion Criteria:\n\n* COPD exacerbation not resolved at first baseline visit\n* Diagnosis of asthma and/or other relevant lung disease",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "AstraZeneca AstraZeneca",
+     "affiliation": "AstraZeneca",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Bayou La Batre",
+     "state": "Alabama",
+     "zip": "36509",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.40352,
+      "lon": -88.24852
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "zip": "35249",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "zip": "35294",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Huntsville",
+     "state": "Alabama",
+     "zip": "35801",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.7304,
+      "lon": -86.58594
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Bullhead City",
+     "state": "Arizona",
+     "zip": "85442",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.14778,
+      "lon": -114.5683
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Phoenix",
+     "state": "Arizona",
+     "zip": "85012",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.44838,
+      "lon": -112.07404
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Phoenix",
+     "state": "Arizona",
+     "zip": "85023",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.44838,
+      "lon": -112.07404
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Fort Smith",
+     "state": "Arkansas",
+     "zip": "72917",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.38592,
+      "lon": -94.39855
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Little Rock",
+     "state": "Arkansas",
+     "zip": "72205",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.74648,
+      "lon": -92.28959
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Anaheim",
+     "state": "California",
+     "zip": "92801",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.83529,
+      "lon": -117.9145
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Burbank",
+     "state": "California",
+     "zip": "91505",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.18084,
+      "lon": -118.30897
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Carlsbad",
+     "state": "California",
+     "zip": "92008",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.15809,
+      "lon": -117.35059
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Fresno",
+     "state": "California",
+     "zip": "93720",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.74773,
+      "lon": -119.77237
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Lakewood",
+     "state": "California",
+     "zip": "90712",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.85363,
+      "lon": -118.13396
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Long Beach",
+     "state": "California",
+     "zip": "90822",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.76696,
+      "lon": -118.18923
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Los Alamitos",
+     "state": "California",
+     "zip": "90720",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.80307,
+      "lon": -118.07256
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Los Angeles",
+     "state": "California",
+     "zip": "90033",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Roseville",
+     "state": "California",
+     "zip": "95678",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.75212,
+      "lon": -121.28801
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Sacramento",
+     "state": "California",
+     "zip": "95831",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.58157,
+      "lon": -121.4944
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "San Diego",
+     "state": "California",
+     "zip": "92103",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.71571,
+      "lon": -117.16472
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "San Diego",
+     "state": "California",
+     "zip": "92120",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.71571,
+      "lon": -117.16472
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Sepulveda",
+     "state": "California",
+     "zip": "91343",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.16167,
+      "lon": -118.28285
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Stockton",
+     "state": "California",
+     "zip": "95207",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.9577,
+      "lon": -121.29078
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Denver",
+     "state": "Colorado",
+     "zip": "80206",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.73915,
+      "lon": -104.9847
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Waterbury",
+     "state": "Connecticut",
+     "zip": "6708",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.55815,
+      "lon": -73.0515
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Washington D.C.",
+     "state": "District of Columbia",
+     "zip": "20017",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.89511,
+      "lon": -77.03637
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Clearwater",
+     "state": "Florida",
+     "zip": "33756",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.96585,
+      "lon": -82.8001
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "DeLand",
+     "state": "Florida",
+     "zip": "32720",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.02832,
+      "lon": -81.30312
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Fort Lauderdale",
+     "state": "Florida",
+     "zip": "33316",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.12231,
+      "lon": -80.14338
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Jacksonville",
+     "state": "Florida",
+     "zip": "32204",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.33218,
+      "lon": -81.65565
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33173",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33176",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Miami Beach",
+     "state": "Florida",
+     "zip": "33140",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.79065,
+      "lon": -80.13005
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Ocala",
+     "state": "Florida",
+     "zip": "34471",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.1872,
+      "lon": -82.14009
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Ormand Beach",
+     "state": "Florida",
+     "zip": "32174",
+     "country": "United States"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Port Orange",
+     "state": "Florida",
+     "zip": "33127",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.13832,
+      "lon": -80.99561
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Tamarac",
+     "state": "Florida",
+     "zip": "33321",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.21286,
+      "lon": -80.24977
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Vero Beach",
+     "state": "Florida",
+     "zip": "32960",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.63864,
+      "lon": -80.39727
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Atlanta",
+     "state": "Georgia",
+     "zip": "30342",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.749,
+      "lon": -84.38798
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Blue Ridge",
+     "state": "Georgia",
+     "zip": "30513",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.86397,
+      "lon": -84.32409
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Columbus",
+     "state": "Georgia",
+     "zip": "31901",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.46098,
+      "lon": -84.98771
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Decatur",
+     "state": "Georgia",
+     "zip": "30033",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.77483,
+      "lon": -84.29631
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Fort Eisenhower",
+     "state": "Georgia",
+     "zip": "30905",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.35053,
+      "lon": -82.2388
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Marietta",
+     "state": "Georgia",
+     "zip": "30060",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.9526,
+      "lon": -84.54993
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Rincon",
+     "state": "Georgia",
+     "zip": "594",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.29603,
+      "lon": -81.23539
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Savannah",
+     "state": "Georgia",
+     "zip": "31406",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.08354,
+      "lon": -81.09983
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Twin Falls",
+     "state": "Idaho",
+     "zip": "83301",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.56297,
+      "lon": -114.46087
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Champaign",
+     "state": "Illinois",
+     "zip": "61820",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.11642,
+      "lon": -88.24338
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Chicago",
+     "state": "Illinois",
+     "zip": "60611",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.85003,
+      "lon": -87.65005
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Elk Grove Village",
+     "state": "Illinois",
+     "zip": "60007",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.00392,
+      "lon": -87.97035
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "North Chicago",
+     "state": "Illinois",
+     "zip": "60064",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.32558,
+      "lon": -87.84118
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Peoria",
+     "state": "Illinois",
+     "zip": "61603",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.69365,
+      "lon": -89.58899
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "River Forest",
+     "state": "Illinois",
+     "zip": "60305",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.89781,
+      "lon": -87.81395
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Elkhart",
+     "state": "Indiana",
+     "zip": "46514",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.68199,
+      "lon": -85.97667
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Indianapolis",
+     "state": "Indiana",
+     "zip": "46202",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.76838,
+      "lon": -86.15804
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Indianapolis",
+     "state": "Indiana",
+     "zip": "46254",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.76838,
+      "lon": -86.15804
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "New Albany",
+     "state": "Indiana",
+     "zip": "47150",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.28562,
+      "lon": -85.82413
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Dubuque",
+     "state": "Iowa",
+     "zip": "52001",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.50056,
+      "lon": -90.66457
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Fort Dodge",
+     "state": "Iowa",
+     "zip": "50501",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.49747,
+      "lon": -94.16802
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Iowa City",
+     "state": "Iowa",
+     "zip": "52242",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.66113,
+      "lon": -91.53017
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Waterloo",
+     "state": "Iowa",
+     "zip": "50702",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.49276,
+      "lon": -92.34296
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Olathe",
+     "state": "Kansas",
+     "zip": "66061",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.8814,
+      "lon": -94.81913
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Topeka",
+     "state": "Kansas",
+     "zip": "66606",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.04833,
+      "lon": -95.67804
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Campbellsville",
+     "state": "Kentucky",
+     "zip": "42718",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.3434,
+      "lon": -85.34191
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Hazard",
+     "state": "Kentucky",
+     "zip": "41701",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.24954,
+      "lon": -83.19323
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Louisville",
+     "state": "Kentucky",
+     "zip": "40207",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.25424,
+      "lon": -85.75941
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Metairie",
+     "state": "Louisiana",
+     "zip": "70006",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.98409,
+      "lon": -90.15285
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "West Monroe",
+     "state": "Louisiana",
+     "zip": "71291",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.51848,
+      "lon": -92.14764
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Columbia",
+     "state": "Maryland",
+     "zip": "21044",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.24038,
+      "lon": -76.83942
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Boston",
+     "state": "Massachusetts",
+     "zip": "02114",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.35843,
+      "lon": -71.05977
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Brighton",
+     "state": "Michigan",
+     "zip": "48114",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.52948,
+      "lon": -83.78022
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Interlochen",
+     "state": "Michigan",
+     "zip": "49643",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.64472,
+      "lon": -85.7673
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Livonia",
+     "state": "Michigan",
+     "zip": "48152",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.36837,
+      "lon": -83.35271
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Portage",
+     "state": "Michigan",
+     "zip": "49002",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.20115,
+      "lon": -85.58
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Saginaw",
+     "state": "Michigan",
+     "zip": "48602",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.41947,
+      "lon": -83.95081
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Duluth",
+     "state": "Minnesota",
+     "zip": "55805",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 46.78327,
+      "lon": -92.10658
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Edina",
+     "state": "Minnesota",
+     "zip": "55435",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.88969,
+      "lon": -93.34995
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Minneapolis",
+     "state": "Minnesota",
+     "zip": "55407",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.97997,
+      "lon": -93.26384
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Rochester",
+     "state": "Minnesota",
+     "zip": "55905",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.02163,
+      "lon": -92.4699
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Chesterfield",
+     "state": "Missouri",
+     "zip": "63017",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.66311,
+      "lon": -90.57707
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Jefferson City",
+     "state": "Missouri",
+     "zip": "65101",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.5767,
+      "lon": -92.17352
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Kansas City",
+     "state": "Missouri",
+     "zip": "64106",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.09973,
+      "lon": -94.57857
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Kansas City",
+     "state": "Missouri",
+     "zip": "64111",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.09973,
+      "lon": -94.57857
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "St Louis",
+     "state": "Missouri",
+     "zip": "63122",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.62727,
+      "lon": -90.19789
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "St Louis",
+     "state": "Missouri",
+     "zip": "63141",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.62727,
+      "lon": -90.19789
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Sunset",
+     "state": "Missouri",
+     "zip": "70584",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.55115,
+      "lon": -93.30769
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Bozeman",
+     "state": "Montana",
+     "zip": "59718",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 45.67965,
+      "lon": -111.03856
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Butte",
+     "state": "Montana",
+     "zip": "59701",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 46.00382,
+      "lon": -112.53474
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Omaha",
+     "state": "Nebraska",
+     "zip": "68131",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.25626,
+      "lon": -95.94043
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Las Vegas",
+     "state": "Nevada",
+     "zip": "89123",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.17497,
+      "lon": -115.13722
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Las Vegas",
+     "state": "Nevada",
+     "zip": "89176",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.17497,
+      "lon": -115.13722
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Absecon",
+     "state": "New Jersey",
+     "zip": "08201",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.42845,
+      "lon": -74.49571
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Hamilton",
+     "state": "New Jersey",
+     "zip": "08610",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.20706,
+      "lon": -74.08125
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "South Bound Brook",
+     "state": "New Jersey",
+     "zip": "08880",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.55344,
+      "lon": -74.53154
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Camillus",
+     "state": "New York",
+     "zip": "13031",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.03923,
+      "lon": -76.3041
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Corning",
+     "state": "New York",
+     "zip": "14830",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.14285,
+      "lon": -77.05469
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Cortland",
+     "state": "New York",
+     "zip": "13045",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.60118,
+      "lon": -76.18048
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "New Hyde Park",
+     "state": "New York",
+     "zip": "11040",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.7351,
+      "lon": -73.68791
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "New Hyde Park",
+     "state": "New York",
+     "zip": "11042",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.7351,
+      "lon": -73.68791
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Syracuse",
+     "state": "New York",
+     "zip": "13210",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.04812,
+      "lon": -76.14742
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Charlotte",
+     "state": "North Carolina",
+     "zip": "28207",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.22709,
+      "lon": -80.84313
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Huntersville",
+     "state": "North Carolina",
+     "zip": "28070",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.41069,
+      "lon": -80.84285
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Winston-Salem",
+     "state": "North Carolina",
+     "zip": "27103",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.09986,
+      "lon": -80.24422
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Canton",
+     "state": "Ohio",
+     "zip": "44718",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.79895,
+      "lon": -81.37845
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Cincinnati",
+     "state": "Ohio",
+     "zip": "45231",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.12711,
+      "lon": -84.51439
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Columbus",
+     "state": "Ohio",
+     "zip": "43215",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.96118,
+      "lon": -82.99879
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Sylvania",
+     "state": "Ohio",
+     "zip": "43560",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.71894,
+      "lon": -83.71299
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Toledo",
+     "state": "Ohio",
+     "zip": "43608",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.66394,
+      "lon": -83.55521
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Toledo",
+     "state": "Ohio",
+     "zip": "43614",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.66394,
+      "lon": -83.55521
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Toledo",
+     "state": "Ohio",
+     "zip": "43617",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.66394,
+      "lon": -83.55521
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Oklahoma City",
+     "state": "Oklahoma",
+     "zip": "73120",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.46756,
+      "lon": -97.51643
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Medford",
+     "state": "Oregon",
+     "zip": "97504",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.32652,
+      "lon": -122.87559
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Portland",
+     "state": "Oregon",
+     "zip": "97220",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 45.52345,
+      "lon": -122.67621
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Erie",
+     "state": "Pennsylvania",
+     "zip": "16506",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.12922,
+      "lon": -80.08506
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Hershey",
+     "state": "Pennsylvania",
+     "zip": "17033",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.28592,
+      "lon": -76.65025
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Philadelphia",
+     "state": "Pennsylvania",
+     "zip": "19107",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.95238,
+      "lon": -75.16362
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Philadelphia",
+     "state": "Pennsylvania",
+     "zip": "19140",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.95238,
+      "lon": -75.16362
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Pittsburgh",
+     "state": "Pennsylvania",
+     "zip": "15221",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.44062,
+      "lon": -79.99589
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Stoneboro",
+     "state": "Pennsylvania",
+     "zip": "16153",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.33922,
+      "lon": -80.10506
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Swarthmore",
+     "state": "Pennsylvania",
+     "zip": "19081",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.90206,
+      "lon": -75.34991
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Johnston",
+     "state": "Rhode Island",
+     "zip": "2919",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.82186,
+      "lon": -71.50675
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Charleston",
+     "state": "South Carolina",
+     "zip": "29406",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.77632,
+      "lon": -79.93275
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Greenville",
+     "state": "South Carolina",
+     "zip": "29605",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.85262,
+      "lon": -82.39401
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Greenville",
+     "state": "South Carolina",
+     "zip": "29615",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.85262,
+      "lon": -82.39401
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Greer",
+     "state": "South Carolina",
+     "zip": "29651",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.93873,
+      "lon": -82.22706
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Union",
+     "state": "South Carolina",
+     "zip": "29379",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.71541,
+      "lon": -81.62371
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Williamston",
+     "state": "South Carolina",
+     "zip": "29697",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.61845,
+      "lon": -82.47791
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Johnson City",
+     "state": "Tennessee",
+     "zip": "37604",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.31344,
+      "lon": -82.35347
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Knoxville",
+     "state": "Tennessee",
+     "zip": "37920",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.96064,
+      "lon": -83.92074
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Memphis",
+     "state": "Tennessee",
+     "zip": "38163",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.14953,
+      "lon": -90.04898
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Nashville",
+     "state": "Tennessee",
+     "zip": "37203",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.16589,
+      "lon": -86.78444
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "New Tazewell",
+     "state": "Tennessee",
+     "zip": "37825",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.44258,
+      "lon": -83.59963
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Boerne",
+     "state": "Texas",
+     "zip": "78006",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.79466,
+      "lon": -98.73197
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Corsicana",
+     "state": "Texas",
+     "zip": "75110",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.09543,
+      "lon": -96.46887
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Fort Worth",
+     "state": "Texas",
+     "zip": "76109",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.72541,
+      "lon": -97.32085
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Houston",
+     "state": "Texas",
+     "zip": "77005",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.76328,
+      "lon": -95.36327
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Houston",
+     "state": "Texas",
+     "zip": "77024",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.76328,
+      "lon": -95.36327
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Hurst",
+     "state": "Texas",
+     "zip": "76054",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.82346,
+      "lon": -97.17057
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "McKinney",
+     "state": "Texas",
+     "zip": "75069",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.19762,
+      "lon": -96.61527
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "San Antonio",
+     "state": "Texas",
+     "zip": "78205",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.42412,
+      "lon": -98.49363
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "San Antonio",
+     "state": "Texas",
+     "zip": "78229",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.42412,
+      "lon": -98.49363
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Seguin",
+     "state": "Texas",
+     "zip": "78155",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.56884,
+      "lon": -97.96473
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Tyler",
+     "state": "Texas",
+     "zip": "75708",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.35126,
+      "lon": -95.30106
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Salt Lake City",
+     "state": "Utah",
+     "zip": "84107",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.76078,
+      "lon": -111.89105
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Salt Lake City",
+     "state": "Utah",
+     "zip": "84124",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.76078,
+      "lon": -111.89105
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Lynchburg",
+     "state": "Virginia",
+     "zip": "24501",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.41375,
+      "lon": -79.14225
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Seattle",
+     "state": "Washington",
+     "zip": "98104",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.60621,
+      "lon": -122.33207
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Spokane",
+     "state": "Washington",
+     "zip": "99216",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.65966,
+      "lon": -117.42908
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Charleston",
+     "state": "West Virginia",
+     "zip": "25304",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.34982,
+      "lon": -81.63262
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Glendale",
+     "state": "Wisconsin",
+     "zip": "53212",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.13529,
+      "lon": -87.93564
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Glendale",
+     "state": "Wisconsin",
+     "zip": "53217",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.13529,
+      "lon": -87.93564
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Calgary",
+     "state": "Alberta",
+     "zip": "T2N 4N1",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 51.05011,
+      "lon": -114.08529
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Calgary",
+     "state": "Alberta",
+     "zip": "T3C 3P1",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 51.05011,
+      "lon": -114.08529
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Edmonton",
+     "state": "Alberta",
+     "zip": "T5C 0A3",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 53.55014,
+      "lon": -113.46871
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Spruce Grove",
+     "state": "Alberta",
+     "zip": "T7X 2Z8",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 53.53344,
+      "lon": -113.91874
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Burnaby",
+     "state": "British Columbia",
+     "zip": "V5G 1T4",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 49.26636,
+      "lon": -122.95263
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Penticton",
+     "state": "British Columbia",
+     "zip": "V2A 5C8",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 49.48062,
+      "lon": -119.58584
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Vancouver",
+     "state": "British Columbia",
+     "zip": "V5Z 4E1",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 49.24966,
+      "lon": -123.11934
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Truro",
+     "state": "Nova Scotia",
+     "zip": "B2N 1L2",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.36685,
+      "lon": -63.26538
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Chatham",
+     "state": "Ontario",
+     "zip": "N7M 1R2",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 42.41224,
+      "lon": -82.18494
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Hamilton",
+     "state": "Ontario",
+     "zip": "L8M 1K7",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.25011,
+      "lon": -79.84963
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "London",
+     "state": "Ontario",
+     "zip": "N5Y 5K7",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 42.98339,
+      "lon": -81.23304
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Mississauga",
+     "state": "Ontario",
+     "zip": "L5M 2V8",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.5789,
+      "lon": -79.6583
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Ottawa",
+     "state": "Ontario",
+     "zip": "K1Y 4E9",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.41117,
+      "lon": -75.69812
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Sarnia",
+     "state": "Ontario",
+     "zip": "N7T 4X3",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 42.97866,
+      "lon": -82.40407
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Scarborough Village",
+     "state": "Ontario",
+     "zip": "M1B 4Z8",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.73899,
+      "lon": -79.22124
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Toronto",
+     "state": "Ontario",
+     "zip": "M5S 2A5",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.70643,
+      "lon": -79.39864
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Montreal",
+     "state": "Quebec",
+     "zip": "H1V 1X5",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.50884,
+      "lon": -73.58781
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Montreal",
+     "state": "Quebec",
+     "zip": "H3S 2W1",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.50884,
+      "lon": -73.58781
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Saint Romuald",
+     "state": "Quebec",
+     "zip": "G6W 5M6",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 46.75818,
+      "lon": -71.23921
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Sainte-Foy",
+     "state": "Quebec",
+     "zip": "G1V4G5",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 46.78139,
+      "lon": -71.29217
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Sherbrooke",
+     "state": "Quebec",
+     "zip": "J1H 4J6",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.40008,
+      "lon": -71.89908
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Ste-Foy",
+     "state": "Quebec",
+     "zip": "G1W 4R4",
+     "country": "Canada"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Antigonish Nova Scotia",
+     "zip": "B2G2C2",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.61685,
+      "lon": -61.99858
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Bridgewater",
+     "zip": "B4V3N2",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 44.37856,
+      "lon": -64.51882
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Calgary",
+     "zip": "T1Y6J4",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 51.05011,
+      "lon": -114.08529
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Corunna",
+     "zip": "N0N1G0",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 42.88338,
+      "lon": -82.43313
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Edmonton",
+     "zip": "T5N4L8",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 53.55014,
+      "lon": -113.46871
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Fort Erie",
+     "zip": "L2A1Z3",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 42.90012,
+      "lon": -78.93286
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Grimsby",
+     "zip": "L3M1P3",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.20011,
+      "lon": -79.56631
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Hamilton",
+     "zip": "L8N3Z5",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.25011,
+      "lon": -79.84963
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Longueuil",
+     "zip": "J4N1E1",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.5152,
+      "lon": -73.46818
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Montreal",
+     "zip": "H2L2W5",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.50884,
+      "lon": -73.58781
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Ontario",
+     "zip": "L2R2Z9",
+     "country": "Canada"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Richmond Hill",
+     "zip": "L4C2N9",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.87111,
+      "lon": -79.43725
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Saint John",
+     "zip": "E3M3W5",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.27076,
+      "lon": -66.05616
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Saint-Jérôme",
+     "zip": "J7Z5T3",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.78036,
+      "lon": -74.00365
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Saint-Léonard",
+     "zip": "H1S3A9",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.58773,
+      "lon": -73.59501
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Sherbrooke",
+     "zip": "J1H5N4",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.40008,
+      "lon": -71.89908
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Toronto",
+     "zip": "M5G1X5",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.70643,
+      "lon": -79.39864
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Winnipeg",
+     "zip": "R2K3S8",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 49.8844,
+      "lon": -97.14704
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Berlin",
+     "zip": "10559",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Berlin",
+     "zip": "10717",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Berlin",
+     "zip": "10965",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Berlin",
+     "zip": "10969",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Berlin",
+     "zip": "12165",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Berlin",
+     "zip": "12203",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Berlin",
+     "zip": "13507",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Berlin",
+     "zip": "13597",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Donaustauf",
+     "zip": "93093",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.03258,
+      "lon": 12.20459
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Großhansdorf",
+     "zip": "22927",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.66528,
+      "lon": 10.28552
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Halle",
+     "zip": "6108",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.48158,
+      "lon": 11.97947
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Hamburg",
+     "zip": "20535",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Landsberg/Lech",
+     "zip": "86899",
+     "country": "Germany"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Neuruppin",
+     "zip": "16816",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.92815,
+      "lon": 12.80311
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Oschersleben",
+     "zip": "39387",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.03039,
+      "lon": 11.22898
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Potsdam",
+     "zip": "14464",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.39886,
+      "lon": 13.06566
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Potsdam",
+     "zip": "14467",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.39886,
+      "lon": 13.06566
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Regensburg",
+     "zip": "93059",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.01513,
+      "lon": 12.10161
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Rüdersdorf",
+     "zip": "15562",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.89744,
+      "lon": 11.95811
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Ulm",
+     "zip": "89073",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 48.39841,
+      "lon": 9.99155
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Bangalore",
+     "zip": "560 002",
+     "country": "India",
+     "geoPoint": {
+      "lat": 12.97194,
+      "lon": 77.59369
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Bangalore",
+     "zip": "560 034",
+     "country": "India",
+     "geoPoint": {
+      "lat": 12.97194,
+      "lon": 77.59369
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Bangalore, Karnataka",
+     "zip": "560 029",
+     "country": "India",
+     "geoPoint": {
+      "lat": 12.97194,
+      "lon": 77.59369
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Chennai",
+     "zip": "600 034",
+     "country": "India",
+     "geoPoint": {
+      "lat": 13.08784,
+      "lon": 80.27847
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Coimbatore",
+     "zip": "641 004",
+     "country": "India",
+     "geoPoint": {
+      "lat": 11.00555,
+      "lon": 76.96612
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Coimbatore",
+     "zip": "641 014",
+     "country": "India",
+     "geoPoint": {
+      "lat": 11.00555,
+      "lon": 76.96612
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Coimbatore, Tamilnadu",
+     "zip": "641 044",
+     "country": "India",
+     "geoPoint": {
+      "lat": 11.00555,
+      "lon": 76.96612
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Goa",
+     "zip": "403 002",
+     "country": "India",
+     "geoPoint": {
+      "lat": 24.60243,
+      "lon": 72.72583
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Hyderabad",
+     "zip": "12",
+     "country": "India",
+     "geoPoint": {
+      "lat": 17.38405,
+      "lon": 78.45636
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Indore, South Tukuganj",
+     "zip": "452001",
+     "country": "India",
+     "geoPoint": {
+      "lat": 22.71792,
+      "lon": 75.8333
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Mangalore",
+     "zip": "574 160",
+     "country": "India",
+     "geoPoint": {
+      "lat": 12.91723,
+      "lon": 74.85603
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Mangalore",
+     "zip": "575 001",
+     "country": "India",
+     "geoPoint": {
+      "lat": 12.91723,
+      "lon": 74.85603
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Mumbai",
+     "zip": "400022",
+     "country": "India",
+     "geoPoint": {
+      "lat": 19.07283,
+      "lon": 72.88261
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Mumbai, Byculla",
+     "zip": "400 008",
+     "country": "India"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Mumbai, Dadar (E)",
+     "zip": "400 014",
+     "country": "India"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Mysore",
+     "zip": "570004",
+     "country": "India",
+     "geoPoint": {
+      "lat": 12.29791,
+      "lon": 76.63925
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Nagpur",
+     "zip": "440 012",
+     "country": "India",
+     "geoPoint": {
+      "lat": 21.14631,
+      "lon": 79.08491
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Nagpur",
+     "zip": "440 013",
+     "country": "India",
+     "geoPoint": {
+      "lat": 21.14631,
+      "lon": 79.08491
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Nagpur",
+     "zip": "440012",
+     "country": "India",
+     "geoPoint": {
+      "lat": 21.14631,
+      "lon": 79.08491
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Pune",
+     "zip": "411 014",
+     "country": "India",
+     "geoPoint": {
+      "lat": 18.51957,
+      "lon": 73.85535
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Pune",
+     "zip": "411033",
+     "country": "India",
+     "geoPoint": {
+      "lat": 18.51957,
+      "lon": 73.85535
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Shastri Nagar, Jaipur",
+     "zip": "302 016",
+     "country": "India"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Bergamo",
+     "zip": "24100",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.69601,
+      "lon": 9.66721
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Bologna",
+     "zip": "40136",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 44.49381,
+      "lon": 11.33875
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Cassano Murge",
+     "zip": "70020",
+     "country": "Italy"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Florence",
+     "zip": "50134",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 43.77925,
+      "lon": 11.24626
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Milan",
+     "zip": "20142",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 42.78235,
+      "lon": 12.59836
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Parma",
+     "zip": "43100",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 44.79935,
+      "lon": 10.32618
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Pavia",
+     "zip": "27100",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.19205,
+      "lon": 9.15917
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Roma",
+     "zip": "135",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 44.99364,
+      "lon": 11.10642
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Trieste",
+     "zip": "34100",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.64953,
+      "lon": 13.77678
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Verona",
+     "zip": "37100",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.43854,
+      "lon": 10.9938
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Veruno",
+     "zip": "28010",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.68887,
+      "lon": 8.52863
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Chrzanów",
+     "zip": "32500",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.13546,
+      "lon": 19.40203
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Częstochowa",
+     "zip": "42200",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.79646,
+      "lon": 19.12409
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Działdowo",
+     "zip": "13-200",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 53.23958,
+      "lon": 20.17004
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Katowice",
+     "zip": "40-752",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.2597,
+      "lon": 19.02173
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Krakow",
+     "zip": "31-202",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.06143,
+      "lon": 19.93658
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Krakow",
+     "zip": "31202",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.06143,
+      "lon": 19.93658
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Lublin",
+     "zip": "20-718",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 51.25058,
+      "lon": 22.57009
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Poznan",
+     "zip": "60-569",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.40692,
+      "lon": 16.92993
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Warsaw",
+     "zip": "01-138",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.22977,
+      "lon": 21.01178
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Warsaw",
+     "zip": "1140",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.22977,
+      "lon": 21.01178
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Wodzisław Śląski",
+     "zip": "44300",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.00377,
+      "lon": 18.47205
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Zgierz",
+     "zip": "95100",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 51.85561,
+      "lon": 19.40623
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Bellville, Cape Town",
+     "zip": "7530",
+     "country": "South Africa"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Berea, Durban",
+     "zip": "4000",
+     "country": "South Africa"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Bloemfontein",
+     "zip": "9301",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -29.12107,
+      "lon": 26.214
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "C/O Netcare & Garsfontein Roads",
+     "zip": "44",
+     "country": "South Africa"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Cape Town",
+     "zip": "7764",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -33.92584,
+      "lon": 18.42322
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Cape Town",
+     "zip": "8001",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -33.92584,
+      "lon": 18.42322
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Cape Town, Tygerberg",
+     "zip": "7505",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -33.92584,
+      "lon": 18.42322
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Durban, Amanzimtoti",
+     "zip": "4126",
+     "country": "South Africa"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Durbanville / Cape Town",
+     "zip": "7550",
+     "country": "South Africa"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Mowbray, Cape Town",
+     "zip": "7925",
+     "country": "South Africa"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Paarl, Cape Town",
+     "zip": "7626",
+     "country": "South Africa"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Pretoria",
+     "zip": "181",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -25.74486,
+      "lon": 28.18783
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Somerset West",
+     "zip": "7130",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -34.08401,
+      "lon": 18.82113
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Badajoz",
+     "zip": "6080",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 38.87789,
+      "lon": -6.97061
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Calde (Lugo)",
+     "zip": "27210",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 42.95,
+      "lon": -7.61667
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Cartagena",
+     "zip": "30203",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 37.60197,
+      "lon": -0.98397
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Elda",
+     "zip": "3600",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 38.47783,
+      "lon": -0.79157
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Getafe",
+     "zip": "28905",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 40.30571,
+      "lon": -3.73295
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Guadalajara",
+     "zip": "19002",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 40.62862,
+      "lon": -3.16185
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Madrid",
+     "zip": "28006",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 40.4165,
+      "lon": -3.70256
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Madrid",
+     "zip": "28041",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 40.4165,
+      "lon": -3.70256
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Merida (Badajoz)",
+     "zip": "6800",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 38.91802,
+      "lon": -6.34292
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Partida de Bacarot (Alicante)",
+     "zip": "3114",
+     "country": "Spain"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Pontevedra",
+     "zip": "36071",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 42.431,
+      "lon": -8.64435
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Requena",
+     "zip": "46340",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 39.48834,
+      "lon": -1.10044
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Santiago de Compostela",
+     "zip": "15706",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 42.88052,
+      "lon": -8.54569
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Talavera de La Reina (Toledo)",
+     "zip": "45600",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 39.96348,
+      "lon": -4.83076
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Tarrasa (Barcelona)",
+     "zip": "8221",
+     "country": "Spain"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Toldeo",
+     "zip": "45004",
+     "country": "Spain"
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Valencia",
+     "zip": "46015",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 39.47391,
+      "lon": -0.37966
+     }
+    },
+    {
+     "facility": "Altana Pharma/Nycomed Investigational Site",
+     "city": "Valencia",
+     "zip": "46017",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 39.47391,
+      "lon": -0.37966
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "19716960",
+     "type": "RESULT",
+     "citation": "Calverley PM, Rabe KF, Goehring UM, Kristiansen S, Fabbri LM, Martinez FJ; M2-124 and M2-125 study groups. Roflumilast in symptomatic chronic obstructive pulmonary disease: two randomised clinical trials. Lancet. 2009 Aug 29;374(9691):685-94. doi: 10.1016/S0140-6736(09)61255-1."
+    },
+    {
+     "pmid": "28419462",
+     "type": "DERIVED",
+     "citation": "Facius A, Krause A, Claret L, Bruno R, Lahu G. Modeling and Simulation of Pivotal Clinical Trials Using Linked Models for Multiple Endpoints in Chronic Obstructive Pulmonary Disease With Roflumilast. J Clin Pharmacol. 2017 Aug;57(8):1042-1052. doi: 10.1002/jcph.885. Epub 2017 Apr 17."
+    },
+    {
+     "pmid": "24120253",
+     "type": "DERIVED",
+     "citation": "Hanania NA, Calverley PM, Dransfield MT, Karpel JP, Brose M, Zhu H, Goehring UM, Rowe P. Pooled subpopulation analyses of the effects of roflumilast on exacerbations and lung function in COPD. Respir Med. 2014 Feb;108(2):366-75. doi: 10.1016/j.rmed.2013.09.018. Epub 2013 Sep 30."
+    },
+    {
+     "pmid": "23117188",
+     "type": "DERIVED",
+     "citation": "Wedzicha JA, Rabe KF, Martinez FJ, Bredenbroker D, Brose M, Goehring UM, Calverley PMA. Efficacy of roflumilast in the COPD frequent exacerbator phenotype. Chest. 2013 May;143(5):1302-1311. doi: 10.1378/chest.12-1489."
+    },
+    {
+     "pmid": "20102307",
+     "type": "DERIVED",
+     "citation": "Cazzola M, Picciolo S, Matera MG. Roflumilast in chronic obstructive pulmonary disease: evidence from large trials. Expert Opin Pharmacother. 2010 Feb;11(3):441-9. doi: 10.1517/14656560903555201."
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Roflumilast",
+     "description": "500 mcg, once daily, oral administration in the morning"
+    },
+    {
+     "id": "FG001",
+     "title": "Placebo",
+     "description": "once daily"
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "comment": "Includes all randomized patients who took at least one dose of the investigational drug.",
+         "numSubjects": "772"
+        },
+        {
+         "groupId": "FG001",
+         "comment": "Includes all randomized patients who took at least one dose of the investigational drug.",
+         "numSubjects": "796"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "527"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "550"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "245"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "246"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Roflumilast",
+     "description": "500 mcg, once daily, oral administration in the morning"
+    },
+    {
+     "id": "BG001",
+     "title": "Placebo",
+     "description": "once daily"
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "772"
+      },
+      {
+       "groupId": "BG001",
+       "value": "796"
+      },
+      {
+       "groupId": "BG002",
+       "value": "1568"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "63.92",
+           "spread": "9.2"
+          },
+          {
+           "groupId": "BG001",
+           "value": "64.31",
+           "spread": "9.0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "64.12",
+           "spread": "9.1"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "162"
+          },
+          {
+           "groupId": "BG001",
+           "value": "148"
+          },
+          {
+           "groupId": "BG002",
+           "value": "310"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "610"
+          },
+          {
+           "groupId": "BG001",
+           "value": "648"
+          },
+          {
+           "groupId": "BG002",
+           "value": "1258"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Pre-bronchodilator Forced Expiratory Volume in First Second (FEV1)",
+     "description": "Mean change from baseline during the treatment period in pre-bronchodilator FEV1 \\[L\\]",
+     "populationDescription": "ITT (Intention to Treat) analysis. Number of participants analyzed = number of participants with data available.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "mL",
+     "timeFrame": "Change from baseline over 52 weeks of treatment",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "500 mcg, once daily, oral administration in the morning"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "once daily"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "730"
+        },
+        {
+         "groupId": "OG001",
+         "value": "766"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "33",
+           "spread": "7"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-25",
+           "spread": "7"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "No adjustment of the significance level was done as a hierarchical approach for hypotheses testing was used.",
+       "statisticalMethod": "ANCOVA",
+       "statisticalComment": "Repeated measurements analysis (change from baseline over 52 weeks of treatment taking all post-randomization measurements into account).",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "58",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "41",
+       "ciUpperLimit": "75",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "9"
+      }
+     ]
+    },
+    {
+     "type": "PRIMARY",
+     "title": "COPD Exacerbation Rate (Moderate or Severe)",
+     "description": "Mean rate of COPD exacerbations requiring oral or parenteral glucocorticosteroids (=moderate COPD exacerbations), or requiring hospitalization, or leading to death (=severe COPD exacerbations), per patient per year. A COPD exacerbation is an event in the natural course of the disease characterized by a change in the patient's baseline dyspnea, cough and/or sputum beyond day-to-day variability sufficient to warrant a change in management \\[American Thoracic Society (ATS) / European Respiratory Society (ERS) 2005\\].",
+     "populationDescription": "ITT analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "exacerbations per patient per year",
+     "timeFrame": "52 weeks treatment period",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "500 mcg, once daily, oral administration in the morning"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "once daily"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "772"
+        },
+        {
+         "groupId": "OG001",
+         "value": "796"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.210",
+           "lowerLimit": "1.074",
+           "upperLimit": "1.364"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.485",
+           "lowerLimit": "1.333",
+           "upperLimit": "1.655"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0035",
+       "pValueComment": "No adjustment of the significance level was done as a hierarchical approach for hypotheses testing was used.",
+       "statisticalMethod": "Poisson regression",
+       "paramType": "Rate ratio",
+       "paramValue": "0.815",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.710",
+       "ciUpperLimit": "0.935",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.057"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Post-bronchodilator FEV1 [L]",
+     "description": "Mean change from baseline during the treatment period in post-bronchodilator FEV1 \\[L\\]",
+     "populationDescription": "ITT analysis. Number of participants analyzed = number of participants with data available.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "mL",
+     "timeFrame": "Change from baseline over 52 weeks of treatment",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "500 mcg, once daily, oral administration in the morning"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "once daily"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "724"
+        },
+        {
+         "groupId": "OG001",
+         "value": "764"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "44",
+           "spread": "7"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-17",
+           "spread": "7"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "No adjustment of the significance level was done as a hierarchical approach for hypotheses testing was used.",
+       "statisticalMethod": "ANCOVA",
+       "statisticalComment": "Repeated measurements analysis (change from baseline over 52 weeks of treatment taking all post-randomization measurements into account).",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "61",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "44",
+       "ciUpperLimit": "79",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "9"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Time to Mortality Due to Any Reason",
+     "populationDescription": "ITT analysis. Number of participants analyzed = number of participants who died.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "days",
+     "timeFrame": "52 weeks treatment period",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "500 mcg, once daily, oral administration in the morning"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "once daily"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "25"
+        },
+        {
+         "groupId": "OG001",
+         "value": "25"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "201.0",
+           "spread": "116.9"
+          },
+          {
+           "groupId": "OG001",
+           "value": "214.6",
+           "spread": "137.3"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.5028",
+       "pValueComment": "No adjustment of the significance level was done as a hierarchical approach for hypotheses testing was used.",
+       "statisticalMethod": "Cox proportional hazards regression",
+       "paramType": "Hazard Ratio (HR)",
+       "paramValue": "1.213",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.689",
+       "ciUpperLimit": "2.137",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.350",
+       "estimateComment": "The statistical analysis is based on the ITT Analysis Set (n= 772 in the roflumilast group, n= 796 in the placebo group)."
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Natural Log-transformed C-reactive Protein (CRP)",
+     "description": "Mean change from baseline to the last post randomization measurement in natural log-transformed CRP",
+     "populationDescription": "ITT analysis. Number of participants analyzed = number of participants with data available.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "mg/L",
+     "timeFrame": "Change from baseline to last post randomization measurement (52 weeks)",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "500 mcg, once daily, oral administration in the morning"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "once daily"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "680"
+        },
+        {
+         "groupId": "OG001",
+         "value": "696"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.0840",
+           "lowerLimit": "0.9766",
+           "upperLimit": "1.2033"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.0233",
+           "lowerLimit": "0.9228",
+           "upperLimit": "1.1348"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.3627",
+       "pValueComment": "No adjustment of the significance level was done as a hierarchical approach for hypotheses testing was used.",
+       "statisticalMethod": "ANCOVA",
+       "statisticalComment": "ANCOVA model including last observation carried forward (LOCF) method",
+       "paramType": "Mean Difference calculated as ratio",
+       "paramValue": "1.0593",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.9356",
+       "ciUpperLimit": "1.1994"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Mean Transition Dyspnea Index (TDI) Focal Score During the Treatment Period",
+     "description": "The TDI is a recognized questionnaire to measure dyspnea in an out patient COPD population. At baseline, 3 components of dyspnea, each graded with 4 questions, were asked: - Functional Impairment - Magnitude of Task - Magnitude of Effort At each of the post-randomization visits questions from the TDI were asked related to 3 components: Change in - Functional Impairment - Magnitude of Task - Magnitude of Effort Each question in the TDI is graded from -3 (major deterioration) to +3 (major improvement). This results in a TDI Focal Score ranging from -9 to +9.",
+     "populationDescription": "ITT analysis. Number of participants analyzed = number of participants with data available.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "scores on a scale",
+     "timeFrame": "Change from baseline over 52 weeks of treatment",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "500 mcg, once daily, oral administration in the morning"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "once daily"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "729"
+        },
+        {
+         "groupId": "OG001",
+         "value": "769"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.662",
+           "spread": "0.087"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.376",
+           "spread": "0.084"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0059",
+       "pValueComment": "No adjustment of the significance level was done as a hierarchical approach for hypotheses testing was used.",
+       "statisticalMethod": "ANCOVA",
+       "statisticalComment": "Repeated measurements analysis (change from baseline over 52 weeks of treatment taking all post-randomization measurements into account).",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.286",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.082",
+       "ciUpperLimit": "0.489",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.104"
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "52 weeks treatment period",
+   "description": "The Safety Set was based on all randomized patients who took at least one dose of the investigational drug after randomization. Six patients randomized to placebo received roflumilast instead and were included in the roflumilast group for safety analyses.",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Roflumilast",
+     "description": "500 mcg, once daily, oral administration in the morning",
+     "seriousNumAffected": 157,
+     "seriousNumAtRisk": 778,
+     "otherNumAffected": 145,
+     "otherNumAtRisk": 778
+    },
+    {
+     "id": "EG001",
+     "title": "Placebo",
+     "description": "once daily",
+     "seriousNumAffected": 183,
+     "seriousNumAtRisk": 790,
+     "otherNumAffected": 81,
+     "otherNumAtRisk": 790
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 110,
+       "numAffected": 87,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 160,
+       "numAffected": 121,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 6,
+       "numAffected": 5,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Acute respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Bronchospasm",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Hypoxia",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Pulmonary embolism",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Respiratory arrest",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Cough",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Dyspnoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Hyperventilation",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Hypoventilation",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia aspiration",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Pneumothorax",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Pulmonary oedema",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Respiratory acidosis",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Respiratory distress",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 18,
+       "numAffected": 18,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 10,
+       "numAffected": 10,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Bronchopneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Lower respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Bronchitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Lobar pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Viral infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Appendicitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Cellulitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Clostridium difficile colitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Localised infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia primary atypical",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Pulmonary tuberculosis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Septic shock",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Urinary tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Urosepsis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Angina pectoris",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Atrial fibrillation",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Cardiac failure congestive",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Acute myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Cardiopulmonary failure",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Coronary artery disease",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Right ventricular failure",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Bradycardia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Cardiac arrest",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Cardiac failure",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Cardio-respiratory arrest",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Cor pulmonale",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Left ventricular failure",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Myocardial ischaemia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Ventricular extrasystoles",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Angina unstable",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Arteriosclerosis coronary artery",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Atrioventricular block",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Ischaemic cardiomyopathy",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Mitral valve stenosis",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Supraventricular tachyarrhythmia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Tachycardia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Ventricular fibrillation",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Ventricular tachycardia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Prostate cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Non-small cell lung cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Bladder cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Gastric cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Lung neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Plasmacytoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Renal cell carcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Acute myeloid leukaemia",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Adenoma benign",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Bladder neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Breast cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Bronchial carcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Carcinoid tumour of the small bowel",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Chronic lymphocytic leukaemia",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Colon cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Gastric cancer stage II",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Lung adenocarcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Lung neoplasm malignant",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Metastases to liver",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Metastasis",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Metastatic carcinoma of the bladder",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Neuroendocrine carcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Non-small cell lung cancer metastatic",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Oesophageal neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Small cell lung cancer stage unspecified",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Diarrhoea",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Pancreatitis acute",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Abdominal pain upper",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Gastrointestinal haemorrhage",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Haemorrhoids",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Intestinal polyp",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Lower gastrointestinal haemorrhage",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Colitis",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Haemorrhoidal haemorrhage",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Inguinal hernia",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Nausea",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Pancreatic cyst",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Small intestinal obstruction",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Upper gastrointestinal haemorrhage",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Vomiting",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Sudden death",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Chest pain",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Non-cardiac chest pain",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Death",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Asthenia",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Malaise",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Metaplasia",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Pyrexia",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Ulcer haemorrhage",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Cerebrovascular accident",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Cerebral infarction",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Syncope",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Anoxic encephalopathy",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Dizziness",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Encephalopathy",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Hypoxic encephalopathy",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Optic neuritis",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Transient ischaemic attack",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Wernicke's encephalopathy",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Ankle fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Cervical vertebral fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Comminuted fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Device dislocation",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Eye penetration",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Femur fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Fibula fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Foot fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Foreign body trauma",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Humerus fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Limb injury",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Procedural pain",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Tibia fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Wound dehiscence",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Arterial stenosis",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Femoral artery occlusion",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Haematoma",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Hypertension",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Hypotension",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Ischaemia",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Peripheral artery aneurysm",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Anaemia",
+     "organSystem": "Blood and lymphatic system disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Iron deficiency anaemia",
+     "organSystem": "Blood and lymphatic system disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Leukopenia",
+     "organSystem": "Blood and lymphatic system disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Polycythaemia",
+     "organSystem": "Blood and lymphatic system disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Hypokalaemia",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Dehydration",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Diabetes mellitus",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Diabetic ketoacidosis",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Hyponatraemia",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Malnutrition",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Metabolic acidosis",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Renal failure acute",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Micturition disorder",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Renal failure",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Depression",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Alcohol withdrawal syndrome",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Completed suicide",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Mental status changes",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Suicidal ideation",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Eczema",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Leukocytoclastic vasculitis",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Rash",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Urticaria",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Cholecystitis acute",
+     "organSystem": "Hepatobiliary disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Cholelithiasis",
+     "organSystem": "Hepatobiliary disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Arthralgia",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Intervertebral disc degeneration",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Rotator cuff syndrome",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Coronary artery bypass",
+     "organSystem": "Surgical and medical procedures",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Endarterectomy",
+     "organSystem": "Surgical and medical procedures",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Knee arthroplasty",
+     "organSystem": "Surgical and medical procedures",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Cataract",
+     "organSystem": "Eye disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Blood creatine phosphokinase increased",
+     "organSystem": "Investigations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Blood creatinine increased",
+     "organSystem": "Investigations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Blood urea increased",
+     "organSystem": "Investigations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Benign prostatic hyperplasia",
+     "organSystem": "Reproductive system and breast disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Anti-neutrophil cytoplasmic antibody positive vasculitis",
+     "organSystem": "Immune system disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 790
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Diarrhoea",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "notes": "non-serious",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 71,
+       "numAffected": 64,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 25,
+       "numAffected": 23,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Weight decreased",
+     "organSystem": "Investigations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 67,
+       "numAffected": 65,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 20,
+       "numAffected": 20,
+       "numAtRisk": 790
+      }
+     ]
+    },
+    {
+     "term": "Nasopharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (11.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 43,
+       "numAffected": 35,
+       "numAtRisk": 778
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 57,
+       "numAffected": 47,
+       "numAtRisk": 790
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "The study results may be published and/or presented at scientific meetings. Prior to any submission, all manuscripts/abstracts must be presented to the sponsor for possible comments."
+   },
+   "pointOfContact": {
+    "title": "AstraZeneca Clinical Study Information Center",
+    "organization": "AstraZeneca",
+    "email": "information.center@astrazeneca.com",
+    "phone": "1-877-240-9479"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C424423",
+     "term": "Roflumilast"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

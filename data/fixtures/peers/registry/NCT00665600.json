@@ -1,0 +1,543 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT00665600",
+   "orgStudyIdInfo": {
+    "id": "051-914"
+   },
+   "organization": {
+    "fullName": "Sumitomo Pharma America, Inc.",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Efficacy and Safety of Levalbuterol in Chronic Obstructive Pulmonary Disease (COPD)",
+   "officialTitle": "A Double-Blind, Randomized, Multicenter, Parallel-Group Study of Levalbuterol in the Treatment of Subjects With Chronic Obstructive Pulmonary Disease"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2023-06",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2002-02"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2003-03",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2003-03",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2008-04-22",
+   "studyFirstSubmitQcDate": "2008-04-23",
+   "studyFirstPostDateStruct": {
+    "date": "2008-04-24",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2023-06-26",
+   "lastUpdatePostDateStruct": {
+    "date": "2023-06-27",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Sumitomo Pharma America, Inc.",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false
+  },
+  "descriptionModule": {
+   "briefSummary": "To investigate the efficacy and safety of repeated dosing of Levalbuterol over 6 weeks of treatment in COPD.",
+   "detailedDescription": "This study is a multi-center, randomized, double-blind, placebo and active controlled, parallel-group study of adult subjects with COPD. Approximately 250 subjects will be enrolled to randomize at least 200 subjects. Study participation will consist of a total of six study visits over nine weeks for each subject. This study was previously posted by Sepracor Inc. In October 2009, Sepracor Inc. was acquired by Dainippon Sumitomo Pharma., and in October 2010, Sepracor Inc's name was changed to Sunovion Pharmaceuticals Inc."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ],
+   "keywords": [
+    "COPD",
+    "Chronic Bronchitis",
+    "Chronic Emphysema"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 257,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "1",
+     "type": "EXPERIMENTAL",
+     "description": "Levalbuterol 0.63 mg TID",
+     "interventionNames": [
+      "Drug: Levalbuterol HCl"
+     ]
+    },
+    {
+     "label": "2",
+     "type": "EXPERIMENTAL",
+     "description": "Levalbuterol 1.25 mg TID",
+     "interventionNames": [
+      "Drug: Levalbuterol HCl"
+     ]
+    },
+    {
+     "label": "3",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Racemic Albuterol 2.5 mg TID",
+     "interventionNames": [
+      "Drug: Albuterol Sulfate"
+     ]
+    },
+    {
+     "label": "4",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo TID",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Levalbuterol HCl",
+     "description": "Levalbuterol 0.63 TID",
+     "armGroupLabels": [
+      "1"
+     ],
+     "otherNames": [
+      "Xopenex HCl Inhalation Solution"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Levalbuterol HCl",
+     "description": "Levabuterol 1.25 mg TID",
+     "armGroupLabels": [
+      "2"
+     ],
+     "otherNames": [
+      "Xopenex HCl Inhalation Solution"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Albuterol Sulfate",
+     "description": "Racemic albuterol 2.5 mg TID",
+     "armGroupLabels": [
+      "3"
+     ],
+     "otherNames": [
+      "Ventolin Inhalation Solution"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Placebo TID",
+     "armGroupLabels": [
+      "4"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "The primary efficacy endpoint was the time-normalized area under the percent change from visit predose in FEV1 curve (nAUC0-8 hours) averaged over the six week double-blind period.",
+     "timeFrame": "Days -21, -14, 0, 14, 28, and 42"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Spirometry parameters",
+     "timeFrame": "Days -21, -14, 0, 14, 28, and 42"
+    },
+    {
+     "measure": "Exacerbations of COPD",
+     "timeFrame": "Days -14, 0, 14, 28, 42"
+    },
+    {
+     "measure": "COPD symptom ratings",
+     "timeFrame": "Days 0, 14, 28, 42"
+    },
+    {
+     "measure": "Baseline dyspnea and transitional dyspnea indices",
+     "timeFrame": "Days 0, 14, 28, 42"
+    },
+    {
+     "measure": "Ipatropium Bromide MDI use",
+     "timeFrame": "Day 0, 14, 28, 42"
+    },
+    {
+     "measure": "Short acting Beta-agonist MDI use",
+     "timeFrame": "Days 0, 14, 28, 42"
+    },
+    {
+     "measure": "Subject and physician global evaluations",
+     "timeFrame": "Days 14, 28, 42"
+    },
+    {
+     "measure": "St. George's Hospital Respiratory Questionnaire (SGRQ).",
+     "timeFrame": "Days 0, 42"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Male and female subjects must be at least greater than or equal to 35 years of age at the time of consent.\n* Subjects must have a pre-established primary clinical diagnosis of COPD.\n* Subjects must have a baseline FEV1 less than or equal to 65%\n* Subjects must have a predicted and \\>0.70 Liter\n* subject was taking steroids (inhaled, oral, or nasal), short-acting xanthines, or leukotrienes, the dose must have been stable for 30 days\n* Subjects must have a FEV1/forced vital capacity (FVC) less than or equal to 70%\n* Subjects must have a greater than or equal to 15 pack-year smoking history\n* Subjects must have a baseline medical research council (MRC) dyspnea scale score greater than or equal to 2\n* Regular use of a prescribed therapy for control of COPD symptoms for 3 months prior to study entry.\n* No COPD exacerbations that have required an emergency room visit, hospital admission or intensive out-patient therapy within 1 month prior to study entry\n\nExclusion Criteria:\n\n* Females who are pregnant or lactating.\n* Concurrent requirement of oxygen therapy\n* Known history of asthma, or any chronic respiratory disease other than COPD (not including chronic bronchitis or emphysema).\n* Diagnosis of cancer within 5 years prior to study entry with the exception of non-melanoma skin cancer.\n* Lung resection of more than one full lobe.\n* Use of intravenous, intra-articular or intramuscular corticosteroids within 30 days of study entry\n* History of upper or lower respiratory infection within 14 days of study entry.\n* Participation in an investigational drug study within 30 days of study entry.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "35 Years",
+   "maximumAge": "99 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "locations": [
+    {
+     "city": "Carmichael",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.61713,
+      "lon": -121.32828
+     }
+    },
+    {
+     "city": "Spring Valley",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.74477,
+      "lon": -116.99892
+     }
+    },
+    {
+     "city": "Wheat Ridge",
+     "state": "Colorado",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.7661,
+      "lon": -105.07721
+     }
+    },
+    {
+     "city": "Largo",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.90979,
+      "lon": -82.78842
+     }
+    },
+    {
+     "city": "Miami",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "city": "Panama City",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.15946,
+      "lon": -85.65983
+     }
+    },
+    {
+     "city": "Atlanta",
+     "state": "Georgia",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.749,
+      "lon": -84.38798
+     }
+    },
+    {
+     "city": "Elk Grove Village",
+     "state": "Illinois",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.00392,
+      "lon": -87.97035
+     }
+    },
+    {
+     "city": "Hines",
+     "state": "Illinois",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.85364,
+      "lon": -87.8395
+     }
+    },
+    {
+     "city": "Wheaton",
+     "state": "Maryland",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.03983,
+      "lon": -77.05526
+     }
+    },
+    {
+     "city": "Springfield",
+     "state": "Massachusetts",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.10148,
+      "lon": -72.58981
+     }
+    },
+    {
+     "city": "Cadillac",
+     "state": "Michigan",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.25195,
+      "lon": -85.40116
+     }
+    },
+    {
+     "city": "Columbia",
+     "state": "Missouri",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.95171,
+      "lon": -92.33407
+     }
+    },
+    {
+     "city": "Missoula",
+     "state": "Montana",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 46.87215,
+      "lon": -113.994
+     }
+    },
+    {
+     "city": "Springfield",
+     "state": "New Jersey",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.70491,
+      "lon": -74.31723
+     }
+    },
+    {
+     "city": "Chapel Hill",
+     "state": "North Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.9132,
+      "lon": -79.05584
+     }
+    },
+    {
+     "city": "Mogadore",
+     "state": "Ohio",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.04645,
+      "lon": -81.39789
+     }
+    },
+    {
+     "city": "Providence",
+     "state": "Rhode Island",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.82399,
+      "lon": -71.41283
+     }
+    },
+    {
+     "city": "Austin",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.26715,
+      "lon": -97.74306
+     }
+    },
+    {
+     "city": "San Antonio",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.42412,
+      "lon": -98.49363
+     }
+    },
+    {
+     "city": "Calgary",
+     "state": "Alberta",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 51.05011,
+      "lon": -114.08529
+     }
+    },
+    {
+     "city": "Winnepeg",
+     "state": "Manitoba",
+     "country": "Canada"
+    },
+    {
+     "city": "Mississauga",
+     "state": "Ontario",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.5789,
+      "lon": -79.6583
+     }
+    },
+    {
+     "city": "Toronto",
+     "state": "Ontario",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.70643,
+      "lon": -79.39864
+     }
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D029481",
+     "term": "Bronchitis, Chronic"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D001991",
+     "term": "Bronchitis"
+    },
+    {
+     "id": "D012141",
+     "term": "Respiratory Tract Infections"
+    },
+    {
+     "id": "D007239",
+     "term": "Infections"
+    },
+    {
+     "id": "D001982",
+     "term": "Bronchial Diseases"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D000420",
+     "term": "Albuterol"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D004983",
+     "term": "Ethanolamines"
+    },
+    {
+     "id": "D000605",
+     "term": "Amino Alcohols"
+    },
+    {
+     "id": "D000438",
+     "term": "Alcohols"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D010627",
+     "term": "Phenethylamines"
+    },
+    {
+     "id": "D005021",
+     "term": "Ethylamines"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

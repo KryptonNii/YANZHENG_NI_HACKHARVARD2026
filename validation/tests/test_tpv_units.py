@@ -2,13 +2,23 @@
 
 from __future__ import annotations
 
+import os
 import re
+import tempfile
 from pathlib import Path
+from typing import Any
 
 import pytest
 
-from trialpilot_validation import ai_draft, controls, defects, docs, effort, impact
-from trialpilot_validation.context import DRAFT_STAMP, Ctx, TpvError, load_ctx, load_requirements
+from trialpilot_validation import ai_draft, cli, controls, defects, docs, effort, impact
+from trialpilot_validation.context import (
+    DRAFT_STAMP,
+    Ctx,
+    TpvError,
+    load_ctx,
+    load_requirements,
+    read_json,
+)
 
 REPO = Path(__file__).resolve().parents[2]
 
@@ -85,6 +95,31 @@ def test_impact_change_record_is_a_draft_for_humans(fx: Ctx) -> None:
     assert workflow.get_request(m["approval_id"]).required_meanings == ["reviewed", "approved"]
 
 
+@pytest.mark.req("URS-031")
+def test_impact_submit_uses_tpv_user_and_keeps_the_pending_request(
+        fx: Ctx, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]) -> None:
+    from trialpilot_api.compliance import workflow
+
+    from .conftest import git
+
+    (fx.repo / "demo" / "tests" / "test_demo.py").write_text("# changed\n", encoding="utf-8")
+    git(fx.repo, "-c", "user.email=t@example.com", "-c", "user.name=t", "commit", "-qam", "chg")
+    args = ["impact", "--base", "HEAD~1", "--head", "HEAD"]
+    assert cli.main([*args, "--as", "alex.author"]) == 0  # --as without --submit submits nothing
+    record_id = read_json(fx.out / "change" / "latest.json")["record_id"]
+    assert workflow.approval_status("change_record", record_id)["approval_id"] is None
+    monkeypatch.setenv("TPV_USER", "alex.author")
+    assert cli.main([*args, "--submit"]) == 0
+    first = workflow.approval_status("change_record", record_id)["approval_id"]
+    assert first is not None
+    assert cli.main([*args, "--submit"]) == 0  # unchanged record: the pending request is reused
+    assert workflow.approval_status("change_record", record_id)["approval_id"] == first
+    monkeypatch.delenv("TPV_USER")
+    capsys.readouterr()
+    assert cli.main([*args, "--submit"]) == 2
+    assert "Say who you are" in capsys.readouterr().err
+
+
 def test_component_map_cites_only_known_requirements(real: Ctx) -> None:
     comps = impact.load_map(real)
     assert comps and all(c["requirements"] for c in comps)
@@ -98,6 +133,49 @@ def test_all_control_probes_hold_on_this_code() -> None:
                                          "C9"]
     failed = [p for p in probes if not p["holds"]]
     assert failed == []
+
+
+def test_control_probes_remove_their_scratch_files_and_restore_env(
+        tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    made: list[str] = []
+    mkdtemp = tempfile.mkdtemp
+
+    def recording_mkdtemp(**kwargs: Any) -> str:
+        made.append(mkdtemp(dir=tmp_path, **kwargs))
+        return made[-1]
+
+    monkeypatch.setattr(controls.tempfile, "mkdtemp", recording_mkdtemp)
+    monkeypatch.setenv("TP_SECRET_PEPPER", "outer-pepper")
+    monkeypatch.delenv("TP_DEMO_PINS", raising=False)
+    probes = controls.run_probes()
+    assert [p for p in probes if not p["holds"]] == []
+    assert len(made) == 1 and not Path(made[0]).exists()
+    assert os.environ["TP_SECRET_PEPPER"] == "outer-pepper" and "TP_DEMO_PINS" not in os.environ
+
+
+def test_control_probes_restore_env_when_setup_fails(
+        tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    from trialpilot_api.compliance import roles
+
+    def broken_seed(store: Any) -> None:
+        raise RuntimeError("seed failed")
+
+    mkdtemp = tempfile.mkdtemp
+    monkeypatch.setattr(controls.tempfile, "mkdtemp", lambda **kw: mkdtemp(dir=tmp_path, **kw))
+    monkeypatch.setattr(roles, "seed_demo_users", broken_seed)
+    monkeypatch.setenv("TP_SECRET_PEPPER", "outer-pepper")
+    with pytest.raises(RuntimeError, match="seed failed"):
+        controls.run_probes()
+    assert os.environ["TP_SECRET_PEPPER"] == "outer-pepper"
+    assert list(tmp_path.iterdir()) == []
+
+
+def test_each_defect_old_text_occurs_once_in_its_target(real: Ctx) -> None:
+    """A stale `old` text means make_patches.py finds no match and defects-run cannot plant it."""
+    for d in defects.load_defects(real):
+        if not d.get("append"):
+            target = (REPO / d["target"]).read_text(encoding="utf-8")
+            assert target.count(d["old"]) == 1, f"{d['id']}: update `old` in defects.yaml"
 
 
 def test_defect_comparison_attributes_stages() -> None:
@@ -180,3 +258,18 @@ def test_effort_is_not_measured_until_a_human_times_it(fx: Ctx) -> None:
         effort.start(fx, "manual", "tester")
     done = effort.stop(fx, "manual", "5 requirements")
     assert done["minutes"] is not None and done["minutes"] >= 0
+
+
+def test_validation_out_falls_back_to_the_repo_dotenv(real: Ctx, tmp_path: Path,
+                                                      monkeypatch: pytest.MonkeyPatch) -> None:
+    from trialpilot_api.compliance import config
+
+    monkeypatch.setattr(config, "repo_root", lambda: tmp_path)
+    (tmp_path / ".env").write_text(f"TP_VALIDATION_OUT={tmp_path / 'dotenv-out'}\n",
+                                   encoding="utf-8")
+    monkeypatch.delenv("TP_VALIDATION_OUT", raising=False)
+    assert real.out == tmp_path / "dotenv-out"  # same directory the API and compliance DB use
+    monkeypatch.setenv("TP_VALIDATION_OUT", str(tmp_path / "env-wins"))
+    assert real.out == tmp_path / "env-wins"
+    monkeypatch.setenv("TP_VALIDATION_OUT", "")
+    assert real.out == real.vdir / "out"

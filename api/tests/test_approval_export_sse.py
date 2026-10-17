@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import asyncio
 import threading
+from pathlib import Path
 
 import pytest
 from a5_support import AUTHOR, PINS, QA, REVIEWER, audit_actions, make_design, save_scenario
@@ -48,6 +49,34 @@ def test_demo_approval_flow_with_a7(client: TestClient, design_id: str) -> None:
 
     r = client.patch(f"/api/scenarios/{s['id']}", headers=AUTHOR, json={"name": "after"})
     assert r.status_code == 409
+
+
+@pytest.mark.req("URS-023")
+def test_compliance_errors_use_the_app_error_shape(
+    client: TestClient, tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    """Compliance errors carry details.request_id like every other route; a malformed body is
+    still a 422 before the identity check."""
+    if not _a7_active(client):
+        pytest.skip("A7 compliance package not importable")
+    sign = {"meaning": "reviewed", "pin": PINS[REVIEWER["X-User"]]}
+
+    r = client.post("/api/approvals/nope/sign", headers=REVIEWER, json=sign)
+    assert r.status_code == 404 and r.json()["error"] == "approval_not_found"
+    assert r.json()["details"]["request_id"] == r.headers["x-request-id"]
+
+    r = client.post("/api/approvals/nope/sign", json=sign)
+    assert r.status_code == 401 and r.json()["error"] == "identity_required"
+    assert r.json()["details"]["request_id"] == r.headers["x-request-id"]
+
+    r = client.post("/api/approvals/nope/sign", json={"meaning": "bogus", "pin": "1"})
+    assert r.status_code == 422 and r.json()["error"] == "validation_error"
+
+    monkeypatch.setenv("TP_VALIDATION_OUT", str(tmp_path / "no-package-here"))
+    r = client.get("/api/validation/package")
+    assert r.status_code == 404 and r.json()["error"] == "package_not_built"
+    assert r.json()["details"]["expected_path"] == "validation/out/package/package_index.json"
+    assert r.json()["details"]["request_id"] == r.headers["x-request-id"]
 
 
 @pytest.mark.req("URS-015")

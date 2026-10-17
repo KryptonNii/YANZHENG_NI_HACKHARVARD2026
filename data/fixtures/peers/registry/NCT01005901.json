@@ -1,0 +1,4826 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01005901",
+   "orgStudyIdInfo": {
+    "id": "CNVA237A2304"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2009-013504-32",
+     "type": "EUDRACT_NUMBER"
+    },
+    {
+     "id": "2009",
+     "type": "NIH",
+     "link": "https://reporter.nih.gov/quickSearch/2009"
+    }
+   ],
+   "organization": {
+    "fullName": "Novartis",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "A Study to Assess the Safety, Tolerability and Efficacy of NVA237 Versus Placebo",
+   "officialTitle": "A 26-week Treatment, Randomized, Double-blind, Placebo-controlled, Parallel Group Study to Assess the Efficacy, Safety and Tolerability of NVA237 in Patients With Chronic Obstructive Pulmonary Disease",
+   "acronym": "GLOW 1"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2011-12",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2009-10"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2010-12",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2010-12",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2009-10-30",
+   "studyFirstSubmitQcDate": "2009-10-30",
+   "studyFirstPostDateStruct": {
+    "date": "2009-11-02",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2011-12-15",
+   "resultsFirstSubmitQcDate": "2012-03-15",
+   "resultsFirstPostDateStruct": {
+    "date": "2012-04-12",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2012-03-15",
+   "lastUpdatePostDateStruct": {
+    "date": "2012-04-12",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Novartis",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "A study to assess the safety, tolerability and efficacy of NVA237 versus placebo in patients with moderate-to-severe chronic obstructive pulmonary disease (COPD)."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ],
+   "keywords": [
+    "COPD",
+    "NVA",
+    "FEV1"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 1324,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Glycopyrronium bromide",
+     "type": "EXPERIMENTAL",
+     "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication.",
+     "interventionNames": [
+      "Drug: Glycopyrronium bromide"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication.",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Glycopyrronium bromide",
+     "description": "Glycopyrronium bromide 50µg was supplied as inhalation capsules for use via a Single Dose Dry Powder Inhaler (SDDPI)",
+     "armGroupLabels": [
+      "Glycopyrronium bromide"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Placebo inhalation capsules were provided for use via a SDDPI",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Trough Forced Expiratory Volume in 1 Second (FEV1) at 12 Weeks",
+     "description": "Spirometry was conducted according to internationally accepted standards. Trough FEV1 was defined as the average of the 23 hour 15 minute and 23 hour 45 minute post-dose FEV1 readings. Mixed model used baseline FEV1,baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "timeFrame": "12 weeks"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Transition Dyspnea Index (TDI) Focal Score After 26 Weeks of Treatment",
+     "description": "Transition Dyspnea Index (TDI) captures changes from baseline. The TDI score is based on three domains with each domain scored from -3 (major deterioration) to +3 (major improvement), to give an overall score of -9 to +9, a negative score indicating a deterioration from baseline. A TDI focal score of 1 is considered to be a clinically significant improvement from baseline. Mixed model used baseline TDI, baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "timeFrame": "26 weeks"
+    },
+    {
+     "measure": "Quality of Life Assessment With St. George's Respiratory Questionnaire (SGRQ) Total Score After 26 Weeks of Treatment",
+     "description": "SGRQ is a health related quality of life questionnaire consisting of 51 items in three components: symptoms, activity, and impacts. The lowest possible value is zero and the highest 100. Higher values correspond to greater impairment in quality of life. Mixed model used baseline SGRQ, baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "timeFrame": "26 weeks"
+    },
+    {
+     "measure": "Time to First Moderate or Severe Chronic Obstructive Pulmonary Disease (COPD) Exacerbation During 26 Weeks of Treatment",
+     "description": "The time to the first moderate or severe COPD exacerbation was the study day on which the patient experienced first moderate or severe COPD exacerbation. COPD exacerbations are considered to be moderate if treatment with systemic corticosteroids and/or antibiotics was required. COPD exacerbations are considered to be severe if treatment for moderate severity and hospitalization were required.",
+     "timeFrame": "26 weeks"
+    },
+    {
+     "measure": "Change From Baseline in the Mean Number of Puffs Per Day of Rescue Medication Over the Study Duration (Baseline to Week 26)",
+     "description": "Participants recorded the number of puffs of rescue medication taken in the previous 12 hours in the morning and evening. The total number of puffs of rescue medication per day over the full 26 weeks was calculated and divided by the total number of days with non-missing rescue medication data to derive the mean daily number of puffs of rescue medication taken for the patient.",
+     "timeFrame": "26 weeks"
+    },
+    {
+     "measure": "FEV1 at Each Time-point on Day 1 and Week 26",
+     "description": "Spirometry was conducted according to internationally accepted standards. FEV1 was measured at all time points up to 4 hours post-dose, and at 23 hours 15 min and 23 hours 45 min, by visit. Mixed model used baseline FEV1,baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "timeFrame": "Day 1 and Week 26"
+    },
+    {
+     "measure": "Forced Vital Capacity (FVC) at Each Time-point on Day 1 and Week 26",
+     "description": "Spirometry was conducted according to internationally accepted standards. FVC was calculated at each time point up to 4 hours post-dose and at 23 hours 15 min and 23 hours 45 min, by visit. Mixed model used baseline FVC, baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "timeFrame": "Day 1 and Week 26"
+    },
+    {
+     "measure": "FEV1 Area Under the Curve (AUC) (5 Min - 12 Hour) at Day 1, Week 12 and Week 26",
+     "description": "The standardized (with respect to the length of time) area under the curve (AUC) for FEV1 was calculated using trapezoidal rule between 5 min and 12 h post dose at Week 1 Day 1, Week 12 and Week 26 for every patient in the serial spirometry subgroup. Mixed model used baseline FEV1,baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "timeFrame": "Day 1, Week 12 and Week 26"
+    },
+    {
+     "measure": "FEV1 Area Under Curve (AUC) (5 Min - 23 Hour 45 Min) at Week 12 and Week 26",
+     "description": "The standardized (with respect to the length of time) area under the curve (AUC) for FEV1 was calculated using trapezoidal rule between 5 min and 23 h 45 min post dose at week12/week 13and week 26/week 27 where available for every patient in the serial spirometry subgroup. Mixed model used baseline FEV1,baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "timeFrame": "Week 12 and Week 26"
+    },
+    {
+     "measure": "Trough FEV1 and FVC at Day 1 and Week 26",
+     "description": "Spirometry was conducted according to internationally accepted standards. Trough FEV1 was defined as the average of the 23 hour 15 minute and 23 hour 45 minute post-dose FEV1 readings. Mixed model used baseline FEV1, baseline ICS use, FEV1 prior to inhalation of SABA, and FEV1 45 minutes post-inhalation of SABA as covariates.\n\nTrough FVC was defined as the average of the 23 hour 15 minute and 23 hour 45 minute post-dose FVC readings. Mixed model used baseline FVC, baseline ICS use, FEV1 prior to inhalation of SABA, and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "timeFrame": "Day 1 and Week 26"
+    },
+    {
+     "measure": "Change in 24-hourly Mean Heart Rate at Day 1, Week 12 and Week 26",
+     "description": "The mean heart rate was collected with a 24 hour Holter monitor in a sub-set of the safety population. The change between baseline and day 1, week 12 and week 26 was calculated. The analysis of the Holter recordings was performed by a central facility. Data on heart rate, heart rate variability, supraventricular and ventricular ectopy were collected and assessed.",
+     "timeFrame": "Baseline, Day 1, Week 12 and Week 26"
+    },
+    {
+     "measure": "Number of Participants With Adverse Events, Death, and Serious or Clinically Significant Adverse Events or Related Discontinuations",
+     "description": "Adverse events are defined as any unfavorable and unintended diagnosis, symptom, sign (including an abnormal laboratory finding), syndrome or disease which either occurs during study, having been absent at baseline, or, if present at baseline, appears to worsen. Serious adverse events are any untoward medical occurrences that result in death, are life threatening, require (or prolong) hospitalization, cause persistent or significant disability/incapacity, result in congenital anomalies or birth defects, or are other conditions which in judgment of investigators represent significant hazards.",
+     "timeFrame": "26 Weeks and 30 Day follow-up"
+    },
+    {
+     "measure": "Rate of Moderate or Severe COPD Exacerbations Over the 26 Week Treatment Period",
+     "description": "One overall rate is calculated for the entire study population. Rate is the number of moderate or severe exacerbations per year = total number of moderate or severe exacerbations for all participants/total number of treatment years for all participants. COPD exacerbations were considered to be moderate if treatment with systemic corticosteroids and/or antibiotics was required. COPD exacerbations were considered to be severe if treatment for moderate severity and hospitalization were required.",
+     "timeFrame": "26 weeks"
+    },
+    {
+     "measure": "Percentage of Nights With no Nighttime Awakenings Over the 26 Week Treatment Period",
+     "description": "The percentage of nights with no nighttime awakenings is defined as the total number of nights with no nighttime awakenings over the 26 week treatment period divided by the total number of night where diary recordings have been made.\n\nMixed model used baseline nighttime awakenings, baseline ICS use, FEV1 prior to inhalation of SABA, and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "timeFrame": "26 Weeks"
+    },
+    {
+     "measure": "Percentage of Days With no Daytime Symptoms Over the 26 Week Treatment Period",
+     "description": "The percentage of days with no daytime symptoms is defined as the total number of days with no daytime symptoms over the 26 week treatment period divided by the total number of days where diary recordings have been made.\n\nMixed model used baseline daytime symptoms, baseline ICS use, FEV1 prior to inhalation of SABA, and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "timeFrame": "26 Weeks"
+    },
+    {
+     "measure": "Percentage of Days Able to Perform Usual Daily Activities Over the 26 Week Treatment Period",
+     "description": "The percentage of days able to perform usual daily activities is defined as the total number of days able to perform usual activities over the 26 week treatment period divided by the total number of days where diary recordings have been made.\n\nMixed model used baseline ability to perform usual daily activities, baseline ICS use, FEV1 prior to inhalation of SABA, and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "timeFrame": "26 Weeks"
+    },
+    {
+     "measure": "Mean Daily Total Symptom Score Over the 26 Week Treatment Period",
+     "description": "The daily symptom score was calculated as the sum of the worst of the morning and evening assessments for each symptom (symptoms, cough, wheeze, sputum color/production, and breathlessness). The score can range from 0 to 18 with 0 indicating no symptoms. The higher the score, the worse the symptomatic status. A negative change (lower number) indicates improvement.\n\nMixed model used baseline symptom variables, baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "timeFrame": "26 Weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1\\. Diagnosis of COPD (moderate-to-severe as classified by the Global Initiative for Chronic Obstructive Lung Disease (GOLD) Guidelines, 2008) and:\n\n* Smoking history of at least 10 pack-years\n* Post-bronchodilator FEV1 \\< 80% and ≥ 30% of the predicted normal value\n* Post-bronchodilator FEV1/FVC (forced vital capacity) \\< 70%\n\nExclusion Criteria:\n\n1. Patients who have had a lower respiratory tract infection within 6 weeks prior to Visit 1\n2. Patients with concomitant pulmonary disease\n3. Patients with a history of asthma\n4. Any patient with lung cancer or a history of lung cancer\n5. Patients with a history of certain cardiovascular comorbid conditions\n6. Patients with a known history and diagnosis of alpha-1 antitrypsin deficiency\n7. Patients in the active phase of a supervised pulmonary rehabilitation program\n8. Patients contraindicated for tiotropium or ipratropium treatment or who have shown an untoward reaction to inhaled anticholinergic agents Other protocol-defined inclusion/exclusion criteria may apply",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Novartis Pharmaceuticals",
+     "affiliation": "Novartis Pharmaceuticals",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Fairhope",
+     "state": "Alabama",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.52297,
+      "lon": -87.90333
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Glendale",
+     "state": "Arizona",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.53865,
+      "lon": -112.18599
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Los Angeles",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Walnut Creek",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.90631,
+      "lon": -122.06496
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Newark",
+     "state": "Delaware",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.68372,
+      "lon": -75.74966
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Port Orange",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.13832,
+      "lon": -80.99561
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Tamarac",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.21286,
+      "lon": -80.24977
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Topeka",
+     "state": "Kansas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.04833,
+      "lon": -95.67804
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Madisonville",
+     "state": "Kentucky",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.3281,
+      "lon": -87.49889
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Slidell",
+     "state": "Louisiana",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.27519,
+      "lon": -89.78117
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Biddeford",
+     "state": "Maine",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.49258,
+      "lon": -70.45338
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Pikesville",
+     "state": "Maryland",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.37427,
+      "lon": -76.72247
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Ann Arbor",
+     "state": "Michigan",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.27756,
+      "lon": -83.74088
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Livonia",
+     "state": "Michigan",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.36837,
+      "lon": -83.35271
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Minneapolis",
+     "state": "Minnesota",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.97997,
+      "lon": -93.26384
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Kansas City",
+     "state": "Missouri",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.09973,
+      "lon": -94.57857
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Saint Charles",
+     "state": "Missouri",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.78394,
+      "lon": -90.48123
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Missoula",
+     "state": "Montana",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 46.87215,
+      "lon": -113.994
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bellevue",
+     "state": "Nebraska",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.13667,
+      "lon": -95.89084
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Omaha",
+     "state": "Nebraska",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.25626,
+      "lon": -95.94043
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Reno",
+     "state": "Nevada",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.52963,
+      "lon": -119.8138
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "New Brunswick",
+     "state": "New Jersey",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.48622,
+      "lon": -74.45182
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Rochester",
+     "state": "New York",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.15478,
+      "lon": -77.61556
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Cincinnati",
+     "state": "Ohio",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.12711,
+      "lon": -84.51439
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Oklahoma City",
+     "state": "Oklahoma",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.46756,
+      "lon": -97.51643
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Tulsa",
+     "state": "Oklahoma",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.15398,
+      "lon": -95.99277
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Lincoln",
+     "state": "Rhode Island",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.92111,
+      "lon": -71.435
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Johnson City",
+     "state": "Tennessee",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.31344,
+      "lon": -82.35347
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Corpus Christi",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.80058,
+      "lon": -97.39638
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "McKinney",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.19762,
+      "lon": -96.61527
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "San Antonio",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.42412,
+      "lon": -98.49363
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Richmond",
+     "state": "Virginia",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.55376,
+      "lon": -77.46026
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Daw Park SA",
+     "country": "Australia"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bridgewater",
+     "state": "Nova Scotia",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 44.37856,
+      "lon": -64.51882
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Courtice",
+     "state": "Ontario",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.91682,
+      "lon": -78.76626
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Mississuaga",
+     "state": "Ontario",
+     "country": "Canada"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "North York",
+     "state": "Ontario",
+     "country": "Canada"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Ottawa",
+     "state": "Ontario",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.41117,
+      "lon": -75.69812
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Toronto",
+     "state": "Ontario",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.70643,
+      "lon": -79.39864
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Montreal",
+     "state": "Quebec",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.50884,
+      "lon": -73.58781
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Asahikawa",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 43.77063,
+      "lon": 142.36489
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Hamakita",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.8,
+      "lon": 137.78333
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Himeji",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.81667,
+      "lon": 134.7
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Hitachi",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 36.6,
+      "lon": 140.65
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Kishiwada",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.46667,
+      "lon": 135.36667
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Kyoto",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 35.02107,
+      "lon": 135.75385
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Matsue",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 35.48333,
+      "lon": 133.05
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Matsusaka",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.57895,
+      "lon": 136.53706
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Moriya",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 35.93333,
+      "lon": 140.0
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Naka-gun",
+     "country": "Japan"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Obihiro",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 42.91722,
+      "lon": 143.20444
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Osaka",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.69379,
+      "lon": 135.50107
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Ōta-ku",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 35.56126,
+      "lon": 139.71605
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Ōtsu",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 35.0,
+      "lon": 135.86667
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Sapporo",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 43.06667,
+      "lon": 141.35
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Takatsuki",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.84833,
+      "lon": 135.61678
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Tokyo",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 35.6895,
+      "lon": 139.69171
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Yabu",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 35.40304,
+      "lon": 134.77118
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Yonezawa",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 37.91,
+      "lon": 140.11667
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Almelo",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.35667,
+      "lon": 6.6625
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Eindhoven",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 51.44083,
+      "lon": 5.47778
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Harderwijk",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.34167,
+      "lon": 5.62083
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Heerlen",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 50.88365,
+      "lon": 5.98154
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Zutphen",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.13833,
+      "lon": 6.20139
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bucharest",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.43225,
+      "lon": 26.10626
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Iași",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 47.16667,
+      "lon": 27.6
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Timișoara",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 45.75372,
+      "lon": 21.22571
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Irkutsk",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 52.29566,
+      "lon": 104.29076
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Kazan'",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 55.78874,
+      "lon": 49.12214
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Krasnodar",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 45.04534,
+      "lon": 38.98178
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Moscow",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 55.75204,
+      "lon": 37.61781
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Nizhny Novgorod",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 56.32867,
+      "lon": 44.00205
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Novosibirsk",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 55.02259,
+      "lon": 82.93175
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Sochy",
+     "country": "Russia"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Stavropol",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 45.03442,
+      "lon": 41.9642
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Yaroslavl",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 57.62987,
+      "lon": 39.87368
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Singapore",
+     "country": "Singapore",
+     "geoPoint": {
+      "lat": 1.28967,
+      "lon": 103.85007
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Daegu",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 35.87028,
+      "lon": 128.59111
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Pusan",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 36.3809,
+      "lon": 128.3681
+     }
+    },
+    {
+     "facility": "Novartis Investigative site",
+     "city": "Seoul",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Alicante",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 38.34517,
+      "lon": -0.48149
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Badalona",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.45004,
+      "lon": 2.24741
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Canet de Mar",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.59054,
+      "lon": 2.58116
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Cáceres",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 39.47649,
+      "lon": -6.37224
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Centelles",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.79746,
+      "lon": 2.21902
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Valencia",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 39.47391,
+      "lon": -0.37966
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Altunizade",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 41.01779,
+      "lon": 29.04794
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Aydin",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 37.84501,
+      "lon": 27.83963
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Diyarbakır",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 37.91363,
+      "lon": 40.21721
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Istanbul",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 41.01384,
+      "lon": 28.94966
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Izmir",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 38.41273,
+      "lon": 27.13838
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Kinikli/Denizli",
+     "country": "Turkey (Türkiye)"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Mersin",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 36.81196,
+      "lon": 34.63886
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Soke/Aydin",
+     "country": "Turkey (Türkiye)"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Yenisehir/Izmir",
+     "country": "Turkey (Türkiye)"
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "22151296",
+     "type": "RESULT",
+     "citation": "D'Urzo A, Ferguson GT, van Noord JA, Hirata K, Martin C, Horton R, Lu Y, Banerji D, Overend T. Efficacy and safety of once-daily NVA237 in patients with moderate-to-severe COPD: the GLOW1 trial. Respir Res. 2011 Dec 7;12(1):156. doi: 10.1186/1465-9921-12-156."
+    },
+    {
+     "pmid": "24156566",
+     "type": "DERIVED",
+     "citation": "D'Urzo A, Kerwin E, Overend T, D'Andrea P, Chen H, Goyal P. Once daily glycopyrronium for the treatment of COPD: pooled analysis of the GLOW1 and GLOW2 studies. Curr Med Res Opin. 2014 Mar;30(3):493-508. doi: 10.1185/03007995.2013.858618. Epub 2013 Nov 19."
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "1324 participants were screened. 822 participants entered the study.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Glycopyrronium Bromide",
+     "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+    },
+    {
+     "id": "FG001",
+     "title": "Placebo",
+     "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "552"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "270"
+        }
+       ]
+      },
+      {
+       "type": "Safety Population",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "550"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "267"
+        }
+       ]
+      },
+      {
+       "type": "Full Analysis Set",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "534"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "260"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "450"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "212"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "102"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "58"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "38"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "14"
+        }
+       ]
+      },
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "30"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "16"
+        }
+       ]
+      },
+      {
+       "type": "Administrative problems",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "21"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "13"
+        }
+       ]
+      },
+      {
+       "type": "Unsatisfactory therapeutic effect",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "5"
+        }
+       ]
+      },
+      {
+       "type": "Protocol Violation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "4"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "3"
+        }
+       ]
+      },
+      {
+       "type": "Death",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "3"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        }
+       ]
+      },
+      {
+       "type": "Patient's inability to use the device",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "No longer requires study drug",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Glycopyrronium Bromide",
+     "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+    },
+    {
+     "id": "BG001",
+     "title": "Placebo",
+     "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "550"
+      },
+      {
+       "groupId": "BG001",
+       "value": "267"
+      },
+      {
+       "groupId": "BG002",
+       "value": "817"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Customized",
+     "description": "All baseline measures are based on safety population.",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "classes": [
+      {
+       "title": "<65 years",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "278"
+          },
+          {
+           "groupId": "BG001",
+           "value": "134"
+          },
+          {
+           "groupId": "BG002",
+           "value": "412"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "65 to <75 years",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "199"
+          },
+          {
+           "groupId": "BG001",
+           "value": "98"
+          },
+          {
+           "groupId": "BG002",
+           "value": "297"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": ">=75 years",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "73"
+          },
+          {
+           "groupId": "BG001",
+           "value": "35"
+          },
+          {
+           "groupId": "BG002",
+           "value": "108"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "96"
+          },
+          {
+           "groupId": "BG001",
+           "value": "52"
+          },
+          {
+           "groupId": "BG002",
+           "value": "148"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "454"
+          },
+          {
+           "groupId": "BG001",
+           "value": "215"
+          },
+          {
+           "groupId": "BG002",
+           "value": "669"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Trough Forced Expiratory Volume in 1 Second (FEV1) at 12 Weeks",
+     "description": "Spirometry was conducted according to internationally accepted standards. Trough FEV1 was defined as the average of the 23 hour 15 minute and 23 hour 45 minute post-dose FEV1 readings. Mixed model used baseline FEV1,baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "populationDescription": "Full Analysis Set (FAS) The FAS included all randomized patients who received at least one dose of study medication. Patients in this group were analyzed according to the treatment to which they were randomized. Missing trough FEV1 values at week 12 were imputed using LOCF with pre-dose trough FEV1.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "512"
+        },
+        {
+         "groupId": "OG001",
+         "value": "243"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.408",
+           "spread": "0.0105"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.301",
+           "spread": "0.0137"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Transition Dyspnea Index (TDI) Focal Score After 26 Weeks of Treatment",
+     "description": "Transition Dyspnea Index (TDI) captures changes from baseline. The TDI score is based on three domains with each domain scored from -3 (major deterioration) to +3 (major improvement), to give an overall score of -9 to +9, a negative score indicating a deterioration from baseline. A TDI focal score of 1 is considered to be a clinically significant improvement from baseline. Mixed model used baseline TDI, baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "populationDescription": "Full Analysis Set (FAS) included all randomized patients who received at least one dose of study medication. Patients per treatment group with no missing data were included in this analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Units on a scale",
+     "timeFrame": "26 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "493"
+        },
+        {
+         "groupId": "OG001",
+         "value": "240"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.84",
+           "spread": "0.257"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.80",
+           "spread": "0.294"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Quality of Life Assessment With St. George's Respiratory Questionnaire (SGRQ) Total Score After 26 Weeks of Treatment",
+     "description": "SGRQ is a health related quality of life questionnaire consisting of 51 items in three components: symptoms, activity, and impacts. The lowest possible value is zero and the highest 100. Higher values correspond to greater impairment in quality of life. Mixed model used baseline SGRQ, baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "populationDescription": "Full Analysis Set (FAS) included all randomized patients who received at least one dose of study medication. Individual component score was imputed with LOCF (last observation carried forward).",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Units on a scale",
+     "timeFrame": "26 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "502"
+        },
+        {
+         "groupId": "OG001",
+         "value": "246"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "39.50",
+           "spread": "0.813"
+          },
+          {
+           "groupId": "OG001",
+           "value": "42.31",
+           "spread": "0.992"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Time to First Moderate or Severe Chronic Obstructive Pulmonary Disease (COPD) Exacerbation During 26 Weeks of Treatment",
+     "description": "The time to the first moderate or severe COPD exacerbation was the study day on which the patient experienced first moderate or severe COPD exacerbation. COPD exacerbations are considered to be moderate if treatment with systemic corticosteroids and/or antibiotics was required. COPD exacerbations are considered to be severe if treatment for moderate severity and hospitalization were required.",
+     "populationDescription": "Full Analysis Set (FAS) included all randomized patients who received at least one dose of study medication.\n\nThe median values were not estimable.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "Days",
+     "timeFrame": "26 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "534"
+        },
+        {
+         "groupId": "OG001",
+         "value": "260"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "NA",
+           "lowerLimit": "NA",
+           "upperLimit": "NA",
+           "comment": "The median values were not estimable because less than 50% of patients had a moderate or severe COPD exacerbation during the study."
+          },
+          {
+           "groupId": "OG001",
+           "value": "NA",
+           "lowerLimit": "NA",
+           "upperLimit": "NA",
+           "comment": "The median values were not estimable because less than 50% of patients had a moderate or severe COPD exacerbation during the study."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in the Mean Number of Puffs Per Day of Rescue Medication Over the Study Duration (Baseline to Week 26)",
+     "description": "Participants recorded the number of puffs of rescue medication taken in the previous 12 hours in the morning and evening. The total number of puffs of rescue medication per day over the full 26 weeks was calculated and divided by the total number of days with non-missing rescue medication data to derive the mean daily number of puffs of rescue medication taken for the patient.",
+     "populationDescription": "Full Analysis Set (FAS) included all randomized patients who received at least one dose of study medication. Patients with observations both at baseline and week 26 were included in this analysis",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Puffs per day",
+     "timeFrame": "26 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "529"
+        },
+        {
+         "groupId": "OG001",
+         "value": "259"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-1.21",
+           "spread": "0.122"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.75",
+           "spread": "0.156"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "FEV1 at Each Time-point on Day 1 and Week 26",
+     "description": "Spirometry was conducted according to internationally accepted standards. FEV1 was measured at all time points up to 4 hours post-dose, and at 23 hours 15 min and 23 hours 45 min, by visit. Mixed model used baseline FEV1,baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "populationDescription": "Full Analysis Set (FAS) included all randomized patients who received at least one dose of study medication. \"n\" indicates number of patients with observation at each time-point",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Day 1 and Week 26",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "519"
+        },
+        {
+         "groupId": "OG001",
+         "value": "253"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Day 1: 5 min (n = 497, 240)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.388",
+           "spread": "0.0057"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.295",
+           "spread": "0.0076"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 15 min (n = 503, 249)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.435",
+           "spread": "0.0066"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.292",
+           "spread": "0.0087"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 30 min (n = 511, 252)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.472",
+           "spread": "0.0070"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.299",
+           "spread": "0.0093"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 1 hour (n = 513, 253)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.493",
+           "spread": "0.0070"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.296",
+           "spread": "0.0094"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 2 hours (n = 514, 251)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.562",
+           "spread": "0.0076"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.355",
+           "spread": "0.0102"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 3 hours (n = 519, 248)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.544",
+           "spread": "0.0079"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.349",
+           "spread": "0.0108"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 4 hours (n = 514, 247)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.548",
+           "spread": "0.0077"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.365",
+           "spread": "0.0105"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 23 hours 15 min (n = 499, 244)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.400",
+           "spread": "0.0078"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.289",
+           "spread": "0.0103"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 23 hours 45 min (n = 498, 244)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.428",
+           "spread": "0.0083"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.328",
+           "spread": "0.0108"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: pre-dose trough (n = 447, 208)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.371",
+           "spread": "0.0100"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.256",
+           "spread": "0.0140"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: -45 min (n = 447, 208)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.373",
+           "spread": "0.0104"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.256",
+           "spread": "0.0145"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: -15 min (n = 443, 205)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.368",
+           "spread": "0.0104"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.252",
+           "spread": "0.0144"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 5 min (n = 439, 208)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.409",
+           "spread": "0.0106"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.255",
+           "spread": "0.0147"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 15 min (n = 435, 205)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.427",
+           "spread": "0.0109"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.269",
+           "spread": "0.0152"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 30 min (n = 440, 207)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.433",
+           "spread": "0.0112"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.259",
+           "spread": "0.0155"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 1 hour (n = 438, 206)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.459",
+           "spread": "0.0115"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.251",
+           "spread": "0.0159"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 2 hours (n = 438, 203)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.508",
+           "spread": "0.0114"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.299",
+           "spread": "0.0160"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 3 hours (n = 439, 204)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.504",
+           "spread": "0.0124"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.299",
+           "spread": "0.0170"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 4 hours (n = 438, 205)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.489",
+           "spread": "0.0114"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.312",
+           "spread": "0.0158"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 23 hours 15 min (n = 434, 206)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.386",
+           "spread": "0.0118"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.267",
+           "spread": "0.0158"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 23 hours 45 min (n = 434, 206)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.396",
+           "spread": "0.0116"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.282",
+           "spread": "0.0157"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Forced Vital Capacity (FVC) at Each Time-point on Day 1 and Week 26",
+     "description": "Spirometry was conducted according to internationally accepted standards. FVC was calculated at each time point up to 4 hours post-dose and at 23 hours 15 min and 23 hours 45 min, by visit. Mixed model used baseline FVC, baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "populationDescription": "Full Analysis Set (FAS) included all randomized patients who received at least one dose of study medication. \"n\" indicates number of patients with observation at each time-point.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Day 1 and Week 26",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "534"
+        },
+        {
+         "groupId": "OG001",
+         "value": "260"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Day 1: 5 min (n = 497, 240)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.887",
+           "spread": "0.0132"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.675",
+           "spread": "0.0173"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 15 min (n = 503, 249)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.943",
+           "spread": "0.0147"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.660",
+           "spread": "0.0188"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 30 min (n = 511, 252)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.948",
+           "spread": "0.0155"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.637",
+           "spread": "0.0199"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 1hour (n = 513, 253)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.019",
+           "spread": "0.0148"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.669",
+           "spread": "0.0198"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 2 hours (n = 514, 251)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.086",
+           "spread": "0.0166"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.754",
+           "spread": "0.0219"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 3 hours (n = 519, 248)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.096",
+           "spread": "0.0168"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.783",
+           "spread": "0.0227"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 4 hours (n = 514, 247)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.064",
+           "spread": "0.0161"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.760",
+           "spread": "0.0217"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 23 hours 15 min (n = 499, 244)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.895",
+           "spread": "0.0169"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.693",
+           "spread": "0.0221"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: 23 hours 45 min (n = 498, 244)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.907",
+           "spread": "0.0169"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.718",
+           "spread": "0.0219"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: Pre-dose trough (n = 447, 208)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.827",
+           "spread": "0.0238"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.623",
+           "spread": "0.0305"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: -45 min (n = 447, 208)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.859",
+           "spread": "0.0271"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.658",
+           "spread": "0.0337"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: -15 min (n = 443, 205)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.798",
+           "spread": "0.0235"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.589",
+           "spread": "0.0306"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 5 min (n = 439, 208)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.891",
+           "spread": "0.0251"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.639",
+           "spread": "0.0318"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 15 min (n = 435, 205)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.895",
+           "spread": "0.0240"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.660",
+           "spread": "0.0309"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 30 min (n = 440, 207)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.885",
+           "spread": "0.0239"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.603",
+           "spread": "0.0310"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 1 hour (n = 438, 206)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.938",
+           "spread": "0.0256"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.625",
+           "spread": "0.0329"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 2 hours (n = 438, 203)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.977",
+           "spread": "0.0225"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.687",
+           "spread": "0.0302"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 3 hours (n = 439, 204)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.016",
+           "spread": "0.0270"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.742",
+           "spread": "0.0345"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 4 hours (n = 438, 205)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.962",
+           "spread": "0.0225"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.709",
+           "spread": "0.0303"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 23 hours 15 min (n = 434, 206)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.884",
+           "spread": "0.0257"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.673",
+           "spread": "0.0322"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: 23 hours 45 min (n = 434, 206)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.859",
+           "spread": "0.0234"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.669",
+           "spread": "0.0306"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "FEV1 Area Under the Curve (AUC) (5 Min - 12 Hour) at Day 1, Week 12 and Week 26",
+     "description": "The standardized (with respect to the length of time) area under the curve (AUC) for FEV1 was calculated using trapezoidal rule between 5 min and 12 h post dose at Week 1 Day 1, Week 12 and Week 26 for every patient in the serial spirometry subgroup. Mixed model used baseline FEV1,baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "populationDescription": "Serial spirometry group, a sub-set of the full analysis set of patients. Twelve hour serial spirometry was conducted in this subset of patients in selected centers at Day 1. At week 12/13 and week 26/27 a 24 hour serial spirometry was performed. \"n\" is the number of patients with non-missing observations at each time point.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Day 1, Week 12 and Week 26",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "169"
+        },
+        {
+         "groupId": "OG001",
+         "value": "83"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Day 1 (n = 169, 83)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.475",
+           "spread": "0.0129"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.320",
+           "spread": "0.0173"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12 (n = 153, 75)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.433",
+           "spread": "0.0179"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.284",
+           "spread": "0.0244"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26 (n = 149, 70)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.445",
+           "spread": "0.0199"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.238",
+           "spread": "0.0274"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "FEV1 Area Under Curve (AUC) (5 Min - 23 Hour 45 Min) at Week 12 and Week 26",
+     "description": "The standardized (with respect to the length of time) area under the curve (AUC) for FEV1 was calculated using trapezoidal rule between 5 min and 23 h 45 min post dose at week12/week 13and week 26/week 27 where available for every patient in the serial spirometry subgroup. Mixed model used baseline FEV1,baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "populationDescription": "Serial spirometry group, a sub-set of the full analysis set of patients. Twelve hour serial spirometry was conducted in this subset of patients in selected centers at Day 1. At week 12/13 and week 26/27 a 24 hour serial spirometry was performed.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Week 12 and Week 26",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "169"
+        },
+        {
+         "groupId": "OG001",
+         "value": "83"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Week 12 (n = 153, 75)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.401",
+           "spread": "0.0167"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.268",
+           "spread": "0.0228"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26 (n = 149, 70)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.412",
+           "spread": "0.0185"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.213",
+           "spread": "0.0254"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Trough FEV1 and FVC at Day 1 and Week 26",
+     "description": "Spirometry was conducted according to internationally accepted standards. Trough FEV1 was defined as the average of the 23 hour 15 minute and 23 hour 45 minute post-dose FEV1 readings. Mixed model used baseline FEV1, baseline ICS use, FEV1 prior to inhalation of SABA, and FEV1 45 minutes post-inhalation of SABA as covariates.\n\nTrough FVC was defined as the average of the 23 hour 15 minute and 23 hour 45 minute post-dose FVC readings. Mixed model used baseline FVC, baseline ICS use, FEV1 prior to inhalation of SABA, and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "populationDescription": "Full Analysis Set (FAS) included all randomized patients who received at least one dose of study medication. If one of the 23 h 15 min or 23 h 45 min values are missing then the remaining non-missing value is taken as trough FEV1 or trough FVC. If both values are missing, then their trough FEV1 or trough FVC is regarded as missing",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Day 1 and Week 26",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "534"
+        },
+        {
+         "groupId": "OG001",
+         "value": "260"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Day 1: FEV1 (n = 508, 248)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.414",
+           "spread": "0.0075"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.309",
+           "spread": "0.0099"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: FEV1 (n = 461, 217)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.387",
+           "spread": "0.0112"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.275",
+           "spread": "0.0150"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1: FVC (n = 508, 248)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.901",
+           "spread": "0.0154"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.705",
+           "spread": "0.0202"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: FVC (n = 438, 208)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.867",
+           "spread": "0.0236"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.668",
+           "spread": "0.0300"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change in 24-hourly Mean Heart Rate at Day 1, Week 12 and Week 26",
+     "description": "The mean heart rate was collected with a 24 hour Holter monitor in a sub-set of the safety population. The change between baseline and day 1, week 12 and week 26 was calculated. The analysis of the Holter recordings was performed by a central facility. Data on heart rate, heart rate variability, supraventricular and ventricular ectopy were collected and assessed.",
+     "populationDescription": "The safety set included all patients who received at least one dose of study medication whether or not being randomized. A sub-set of the safety population had 24 hour Holter monitoring. \"n\" indicates patients with observations both at baseline and each endpoint.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "beats per minute",
+     "timeFrame": "Baseline, Day 1, Week 12 and Week 26",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "42"
+        },
+        {
+         "groupId": "OG001",
+         "value": "23"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Day 1: (n = 42, 23)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-1.77",
+           "spread": "7.583"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-1.28",
+           "spread": "8.676"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12: (n = 42, 20)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-1.99",
+           "spread": "7.489"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-1.70",
+           "spread": "7.230"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 26: (n = 37, 22)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-4.40",
+           "spread": "9.347"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-2.60",
+           "spread": "9.349"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Participants With Adverse Events, Death, and Serious or Clinically Significant Adverse Events or Related Discontinuations",
+     "description": "Adverse events are defined as any unfavorable and unintended diagnosis, symptom, sign (including an abnormal laboratory finding), syndrome or disease which either occurs during study, having been absent at baseline, or, if present at baseline, appears to worsen. Serious adverse events are any untoward medical occurrences that result in death, are life threatening, require (or prolong) hospitalization, cause persistent or significant disability/incapacity, result in congenital anomalies or birth defects, or are other conditions which in judgment of investigators represent significant hazards.",
+     "populationDescription": "The safety set included all patients who received at least one dose of study medication whether or not being randomized. Patients were randomized according to the treatment they received.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "26 Weeks and 30 Day follow-up",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "550"
+        },
+        {
+         "groupId": "OG001",
+         "value": "267"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Participants with at least one AE",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "317"
+          },
+          {
+           "groupId": "OG001",
+           "value": "174"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Death",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "SAE(s)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "41"
+          },
+          {
+           "groupId": "OG001",
+           "value": "24"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Discontinuation due to AE(s)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "32"
+          },
+          {
+           "groupId": "OG001",
+           "value": "19"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Discontinuation due to SAE(s)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "15"
+          },
+          {
+           "groupId": "OG001",
+           "value": "8"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Discontinuation due to non-SAE(s)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "18"
+          },
+          {
+           "groupId": "OG001",
+           "value": "11"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "AE leading to dose interruption",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "12"
+          },
+          {
+           "groupId": "OG001",
+           "value": "8"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "AE requiring significant additional therapy",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "246"
+          },
+          {
+           "groupId": "OG001",
+           "value": "155"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "AE leading to new or prolonged hospitalization",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "35"
+          },
+          {
+           "groupId": "OG001",
+           "value": "21"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Rate of Moderate or Severe COPD Exacerbations Over the 26 Week Treatment Period",
+     "description": "One overall rate is calculated for the entire study population. Rate is the number of moderate or severe exacerbations per year = total number of moderate or severe exacerbations for all participants/total number of treatment years for all participants. COPD exacerbations were considered to be moderate if treatment with systemic corticosteroids and/or antibiotics was required. COPD exacerbations were considered to be severe if treatment for moderate severity and hospitalization were required.",
+     "populationDescription": "Full Analysis Set (FAS) included all randomized patients who received at least one dose of study medication.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "exacerbations per year",
+     "timeFrame": "26 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "534"
+        },
+        {
+         "groupId": "OG001",
+         "value": "260"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.43"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.59"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Percentage of Nights With no Nighttime Awakenings Over the 26 Week Treatment Period",
+     "description": "The percentage of nights with no nighttime awakenings is defined as the total number of nights with no nighttime awakenings over the 26 week treatment period divided by the total number of night where diary recordings have been made.\n\nMixed model used baseline nighttime awakenings, baseline ICS use, FEV1 prior to inhalation of SABA, and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "populationDescription": "Full Analysis Set (FAS) included all randomized patients who received at least one dose of study medication. At 26 weeks, the analysis is based on only patients with a value at both baseline and post-baseline.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "percentage of nights with no awakenings",
+     "timeFrame": "26 Weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "527"
+        },
+        {
+         "groupId": "OG001",
+         "value": "258"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "55.96",
+           "spread": "1.537"
+          },
+          {
+           "groupId": "OG001",
+           "value": "54.37",
+           "spread": "1.970"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Percentage of Days With no Daytime Symptoms Over the 26 Week Treatment Period",
+     "description": "The percentage of days with no daytime symptoms is defined as the total number of days with no daytime symptoms over the 26 week treatment period divided by the total number of days where diary recordings have been made.\n\nMixed model used baseline daytime symptoms, baseline ICS use, FEV1 prior to inhalation of SABA, and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "populationDescription": "Full Analysis Set (FAS) included all randomized patients who received at least one dose of study medication. At 26 weeks, the analysis is based on only patients with a value at both baseline and post-baseline.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "percentage of days with no symptoms",
+     "timeFrame": "26 Weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "528"
+        },
+        {
+         "groupId": "OG001",
+         "value": "258"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "5.70",
+           "spread": "0.799"
+          },
+          {
+           "groupId": "OG001",
+           "value": "5.78",
+           "spread": "1.076"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Percentage of Days Able to Perform Usual Daily Activities Over the 26 Week Treatment Period",
+     "description": "The percentage of days able to perform usual daily activities is defined as the total number of days able to perform usual activities over the 26 week treatment period divided by the total number of days where diary recordings have been made.\n\nMixed model used baseline ability to perform usual daily activities, baseline ICS use, FEV1 prior to inhalation of SABA, and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "populationDescription": "Full Analysis Set (FAS) included all randomized patients who received at least one dose of study medication. At 26 weeks, the analysis is based on only patients with a value at both baseline and post-baseline.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "percentage of days",
+     "timeFrame": "26 Weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "528"
+        },
+        {
+         "groupId": "OG001",
+         "value": "258"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "40.31",
+           "spread": "1.473"
+          },
+          {
+           "groupId": "OG001",
+           "value": "35.19",
+           "spread": "1.907"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Mean Daily Total Symptom Score Over the 26 Week Treatment Period",
+     "description": "The daily symptom score was calculated as the sum of the worst of the morning and evening assessments for each symptom (symptoms, cough, wheeze, sputum color/production, and breathlessness). The score can range from 0 to 18 with 0 indicating no symptoms. The higher the score, the worse the symptomatic status. A negative change (lower number) indicates improvement.\n\nMixed model used baseline symptom variables, baseline inhaled corticosteroid (ICS) use, FEV1 prior to inhalation of short acting beta-agonist (SABA), and FEV1 45 minutes post-inhalation of SABA as covariates.",
+     "populationDescription": "Full Analysis Set (FAS) included all randomized patients who received at least one dose of study medication.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "units on a scale",
+     "timeFrame": "26 Weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Glycopyrronium Bromide",
+       "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "534"
+        },
+        {
+         "groupId": "OG001",
+         "value": "260"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-1.54",
+           "spread": "0.097"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-1.18",
+           "spread": "0.129"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Glycopyrronium Bromide",
+     "description": "Glycopyrronium bromide 50µg delivered once daily via Single Dose Dry Powder Inhaler (SDDPI). At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication.",
+     "seriousNumAffected": 41,
+     "seriousNumAtRisk": 550,
+     "otherNumAffected": 132,
+     "otherNumAtRisk": 550
+    },
+    {
+     "id": "EG001",
+     "title": "Placebo",
+     "description": "Placebo delivered once daily via SDDPI. At Visit 1 all patients were provided with a short acting β2-agonist (salbutamol/albuterol) which they were instructed to use throughout the study as rescue medication.",
+     "seriousNumAffected": 24,
+     "seriousNumAtRisk": 267,
+     "otherNumAffected": 85,
+     "otherNumAtRisk": 267
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Anaemia",
+     "organSystem": "Blood and lymphatic system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Atrial fibrillation",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Bradycardia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Cardiac arrest",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Cardiac failure congestive",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Myocardial ischaemia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Cataract",
+     "organSystem": "Eye disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Abdominal pain",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Colonic polyp",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Diverticulum intestinal haemorrhagic",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Dyspepsia",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Gastric ulcer",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Upper gastrointestinal haemorrhage",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Vomiting",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Death",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Pyrexia",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Hepatic cirrhosis",
+     "organSystem": "Hepatobiliary disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Lower respiratory tract infection bacterial",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 4,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Tracheobronchitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Upper respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Upper respiratory tract infection bacterial",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Urinary tract infection bacterial",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Fall",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Pelvic fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Rib fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Spinal compression fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Traumatic brain injury",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Dehydration",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Type 2 diabetes mellitus",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Intervertebral disc protrusion",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Bladder neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Hepatic neoplasm malignant",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Lipoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Lung neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Lung neoplasm malignant",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Metastasis",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Non-Hodgkin's lymphoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Squamous cell carcinoma of skin",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Thyroid cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Cerebrovascular accident",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Syncope",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Confusional state",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Depression",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Suicidal ideation",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Haematuria",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Renal failure acute",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Urinary retention",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Prostatomegaly",
+     "organSystem": "Reproductive system and breast disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Acute respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Atelectasis",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 9,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 11,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Dyspnoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Hypoxia",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Pleural effusion",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Dermatitis psoriasiform",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Aortic stenosis",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Deep vein thrombosis",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 267
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Nasopharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 28,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 21,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Upper respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 23,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 20,
+       "numAtRisk": 267
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 105,
+       "numAtRisk": 550
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 67,
+       "numAtRisk": 267
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "The terms and conditions of Novartis' agreements with its investigators may vary. However, Novartis does not prohibit any investigator from publishing. Any publications from a single-site are postponed until the publication of the pooled data (i.e., data from all sites) in the clinical trial."
+   },
+   "pointOfContact": {
+    "title": "Study Director",
+    "organization": "Novartis Pharmaceuticals",
+    "phone": "862-778-8300"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D006024",
+     "term": "Glycopyrrolate"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D000644",
+     "term": "Quaternary Ammonium Compounds"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D009861",
+     "term": "Onium Compounds"
+    },
+    {
+     "id": "D011759",
+     "term": "Pyrrolidines"
+    },
+    {
+     "id": "D006573",
+     "term": "Heterocyclic Compounds, 1-Ring"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

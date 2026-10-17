@@ -38,6 +38,14 @@ export type MetricRangeUnit =
   | "kits"
   | "count";
 
+export type ProcedureEndpointRole =
+  | "supports_primary"
+  | "supports_secondary"
+  | "not_linked"
+  | "unknown";
+
+export type ProcedureLinkBasis = "outcome_title" | "human" | "unmatched";
+
 export type ProcedureSampleTemp = "ambient" | "refrigerated" | "frozen_-20" | "frozen_-80";
 
 export type TrialDesignSource = "ctgov" | "protocol_pdf" | "manual" | "published_paper" | "fixture";
@@ -182,6 +190,9 @@ export interface Procedure {
   /** "blood_draw", "ecg", "mri", "pk_sample", ... */
   code: string;
   label: string;
+  endpoint_role: ProcedureEndpointRole;
+  endpoint_note: string;
+  link_basis: ProcedureLinkBasis;
   site_minutes: number | null;
   ships_sample: boolean;
   sample_temp: ProcedureSampleTemp | null;
@@ -214,6 +225,8 @@ export interface TrialDesign {
 }
 
 export interface Levers {
+  enrollment_rate_multiplier: number;
+  added_country_count: number;
   /** 0..1 of monitoring visits done remotely */
   remote_monitoring_share: number;
   /** visit numbers moved to home nursing */

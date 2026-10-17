@@ -1,0 +1,700 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT02135354",
+   "orgStudyIdInfo": {
+    "id": "s55829 - BACE trial"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2013-004420-11",
+     "type": "EUDRACT_NUMBER"
+    },
+    {
+     "id": "IWT-TBM 130233",
+     "type": "OTHER_GRANT",
+     "domain": "Agentschap voor Innovatie door Wetenschap en Technologie"
+    }
+   ],
+   "organization": {
+    "fullName": "KU Leuven",
+    "class": "OTHER"
+   },
+   "briefTitle": "Azithromycin for Acute Exacerbations Requiring Hospitalization",
+   "officialTitle": "Belgian Trial With Azithromycin During Acute COPD Exacerbations",
+   "acronym": "BACE"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2018-09",
+   "overallStatus": "TERMINATED",
+   "whyStopped": "slow recruitment",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2014-08-01",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2017-10",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2018-04",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2014-05-08",
+   "studyFirstSubmitQcDate": "2014-05-08",
+   "studyFirstPostDateStruct": {
+    "date": "2014-05-09",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2018-09-03",
+   "lastUpdatePostDateStruct": {
+    "date": "2018-09-05",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR_INVESTIGATOR",
+    "investigatorFullName": "Wim Janssens",
+    "investigatorTitle": "MD. PhD",
+    "investigatorAffiliation": "KU Leuven"
+   },
+   "leadSponsor": {
+    "name": "Wim Janssens",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "Agentschap voor Innovatie door Wetenschap en Technologie",
+     "class": "OTHER"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": false
+  },
+  "descriptionModule": {
+   "briefSummary": "This project (funded by the IWT-TBM program) will organize a randomized placebo-controlled multicenter intervention trial in 500 COPD patients to study the effectiveness and safety of azithromycin therapy in the acute setting of COPD exacerbations requiring hospital admission. Although long-term use of azithromycin is proven effective to prevent exacerbations, inherent risks outweigh the benefits. By reducing the dose and duration of the azithromycin treatment and by restricting the treatment to acute periods with highest risk for treatment failure, benefits may counterbalance potential side effects, which may result in a new treatment strategy for these acute events.\n\nThe present study is designed by the services of respiratory medicine of the Leuven and Ghent University hospitals but will run in total in 17 different large hospitals in Belgium, of which 12 are located in Flanders.",
+   "detailedDescription": "In this 9 month, randomized, placebo-controlled, parallel-group, multicenter intervention trial, 500 patients will be randomly assigned (1:1 ratio) to receive either azithromycin or placebo on top of standard therapy in the acute treatment of COPD exacerbations requiring hospitalization. The study drug (azithromycin or placebo) will be initiated and uploaded within 48 hours after hospital admission (500mg once a day for 3 days) and subsequently administered for a prolonged period of 3 months at a lower maintenance dose (250mg every 2 days). An additional follow-up period of 6 months without study drug will be foreseen to study relapse after study drug withdrawal."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ],
+   "keywords": [
+    "AECOPD",
+    "Chronic Obstructive Pulmonary Disease",
+    "Acute exacerbation",
+    "Hospitalization",
+    "Azithromycin",
+    "Macrolides",
+    "Randomized Controlled Trial",
+    "Placebo"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "maskingDescription": "* The identity of the study drug will be concealed by the use of a format that is identical in packaging, labelling, schedule of administration and appearance.\n* Patients will be randomly assigned in a 1:1 ratio to receive either azithromycin or placebo, with a permuted block size of ten and sequential assignment, stratified by the center.\n* Randomization of the study drug is based on an online generated randomization schedule (http://www.randomization.com). Unique randomization codes are locally obtained through a secured Web-based program.\n* At all times, randomization codes are kept strictly confidential during the study, with the exception of an ad hoc independent safety committee adjudicating cardiovascular side effects and mortality after 300 patients.\n* Nevertheless, code breaks will be available at the site and un-blinding may occur in the case of an emergency which will require knowledge of the treatment assignment.",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 301,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Azithromycin",
+     "type": "EXPERIMENTAL",
+     "description": "N = 250\n\n* From day 1 up to and including day 3: 500 mg azithromycin PO once a day\n* From day 4 up to and including day 90: 250 mg azithromycin PO once every 2 days",
+     "interventionNames": [
+      "Drug: Azithromycin"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "N = 250\n\n* From day 1 up to and including day 3: 500 mg placebo PO once a day\n* From day 4 up to and including day 90: 250 mg placebo PO once every 2 days",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Azithromycin",
+     "description": "* From day 1 up to and including day 3: 500 mg azithromycin PO once a day\n* From day 4 up to and including day 90: 250 mg azithromycin PO once every 2 days",
+     "armGroupLabels": [
+      "Azithromycin"
+     ],
+     "otherNames": [
+      "Azitromcyine CF",
+      "ATC code: J01FA10"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "* From day 1 up to and including day 3: 500 mg placebo PO once a day\n* From day 4 up to and including day 90: 250 mg placebo PO once every 2 days",
+     "armGroupLabels": [
+      "Placebo"
+     ],
+     "otherNames": [
+      "Inactive substance"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Time to clinical failure",
+     "description": "Clinical failure is a composite endpoint as multiple clinical interventions may indicate that an initiated therapy is failing. Clinical failure is defined as the composite of death, treatment intensification (additional dose of systemic steroids, switch antibiotics for respiratory reasons or new course of systemic steroids and/or antibiotics) and step up in hospital care for respiratory reasons (from ward to ICU during index event, or from home to ward or ICU (new admission) after discharge).\n\nPrimary outcome measure will also be analysed in following subgroups as an exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed between day 1 (from 1 hour after first drug intake) till day 90 (24 hours after last study drug intake)"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Number of clinical failures up to Day 90 (key secondary #1)",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase)"
+    },
+    {
+     "measure": "COPD Assessment Test (CAT) score at Day 90 (key secondary #2)",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase)"
+    },
+    {
+     "measure": "Total days of additional/prolonged systemic steroid use at Day 90 (key secondary #3)",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase)"
+    },
+    {
+     "measure": "Number of clinical failures up to Day 270",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Time to clinical failure up to Day 90 and up to Day 270",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase) and day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Time to new exacerbation within 90 and within 270 days",
+     "description": "A new exacerbation is defined as the composite of new course of systemic steroids and/or antibiotics, and hospitalization for respiratory reasons, all after the index event.\n\nSecondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase) and day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Number of new exacerbations up to 90 days and up to 270 days",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase) and day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Total days of hospital days within 90 and within 270 days",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase) and day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Total days in intensive care within 90 and within 270 days",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase) and day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Quality of Life - 5 Dimensions (EQ5D) score at Day 90 and at Day 270",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase) and day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "COPD Assessment Test (CAT) score at Day 270",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Modified Medical Research Council (mMRC) score at Day 90 and Day 270",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase) and day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Speech, Spatial and Qualities of Hearing (SSQ5) score at Day 90 and Day 270",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase) and day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Pre-bronchodilator forced expiratory volume in 1 second (FEV1) at Day 90 and Day 270",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase) and day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Total dose of additional/prolonged systemic steroids at Day 270",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Total days of additional/prolonged systemic steroid use at Day 270",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Total days of non-study antibiotic use at Day 90 and Day 270",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase) and day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Number of home physician contacts at Day 90 and Day 270",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase) and day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Average cost of hospitalization at Day 90 and Day 270 including the index hospitalization",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase) and day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Time to death within 90 and within 270 days",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase) and day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Time to first treatment intensification within 90 and within 270 days",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase) and day 270 (last day of follow-up phase)"
+    },
+    {
+     "measure": "Time to first step up in hospital care for respiratory reasons within 90 and within 270 days",
+     "description": "Secondary outcome measure will also be analysed in following subgroups as exploratory analysis:\n\n* Male vs female\n* Smoker vs ex-smoker (stopped smoking \\> 6 months)\n* GOLD A, B vs GOLD C vs GOLD D\n* former GOLD I, II vs III vs IV\n* High CRP (\\> 50 mg/dL) vs low CRP (\\< 50 mg/dL)\n* Age \\> 65 years vs ≤ 65 years\n* Anthonissen I vs Anthonissen II vs Anthonissen III at admission\n* ICS use vs no ICS use",
+     "timeFrame": "Will be assessed on day 90 (last day of treatment phase) and day 270 (last day of follow-up phase)"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Established diagnosis of COPD by medical doctor (based on clinical history OR pulmonary function test)\n* Smoking history of at least 10 pack-years (10 pack-years are defined as 20 cigarettes a day for 10 years, or 10 cigarettes a day for 20 years, etc.)\n* Current hospitalization for potential infectious AECOPD treated with standard therapy\n* History of at least one exacerbation during the last year (prior to the current hospital admission) for which systemic steroids and/or antibiotics were taken\n* ECG at admission\n\nExclusion Criteria:\n\n* Mechanical or non-invasive ventilation at moment of randomization (D1)\n* Long QT interval on ECG (QTc \\> 450msec for males or \\> 470msec for females)\n* History of life-threatening arrhythmias\n* Myocardial infarction (NSTEMI or STEMI) less than 6 weeks before start of study drug\n* Unstable angina pectoris or acute myocardial infarction (NSTEMI or STEMI) at admission\n* Drugs with high risk for long QT interval and torsade de pointes (amiodarone, flecainide, procainamide, sotalol, droperidol, haldol, citalopram, other macrolides)\n* Documented uncorrected severe hypokalemia (K+ \\< 3.0 mmol/L) or hypomagnesemia (Mg2+ \\< 0.5 mmol/L)\n* Chronic systemic steroids (\\> 4 mg methylprednisolone /day for ≥ 2 months)\n* Actual use of macrolides for at least 2 weeks\n* Allergy to macrolides\n* Active cancer treatment\n* Life expectancy \\< 3 months\n* Pregnant or breast-feeding subjects. Woman of childbearing potential must have a pregnancy test performed and a negative result must be documented before start of treatment",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Wim Janssens, MD. PhD",
+     "affiliation": "KU Leuven - UZ Leuven",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "UZ Brussel",
+     "city": "Brussels",
+     "state": "Brussel Hoofdstedelijk Gewest",
+     "zip": "1090",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.85045,
+      "lon": 4.34878
+     }
+    },
+    {
+     "facility": "St. Pieterziekenhuis",
+     "city": "Brussels",
+     "state": "Brussels Capital",
+     "zip": "1000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.85045,
+      "lon": 4.34878
+     }
+    },
+    {
+     "facility": "ZNA Middelheim",
+     "city": "Antwerp",
+     "state": "Flanders",
+     "zip": "2020",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.22047,
+      "lon": 4.40026
+     }
+    },
+    {
+     "facility": "St. Augustinus Ziekenhuis",
+     "city": "Antwerp",
+     "state": "Flanders",
+     "zip": "2610",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.22047,
+      "lon": 4.40026
+     }
+    },
+    {
+     "facility": "Imelda Ziekenhuis",
+     "city": "Bonheiden",
+     "state": "Flanders",
+     "zip": "2820",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.02261,
+      "lon": 4.54714
+     }
+    },
+    {
+     "facility": "St. Jan Brugge Ziekenhuis",
+     "city": "Bruges",
+     "state": "Flanders",
+     "zip": "8000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.20892,
+      "lon": 3.22424
+     }
+    },
+    {
+     "facility": "Maria Middelaresziekenhuis",
+     "city": "Ghent",
+     "state": "Flanders",
+     "zip": "9000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.05,
+      "lon": 3.71667
+     }
+    },
+    {
+     "facility": "UZ Gent",
+     "city": "Ghent",
+     "state": "Flanders",
+     "zip": "9000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.05,
+      "lon": 3.71667
+     }
+    },
+    {
+     "facility": "Jessa Ziekenhuis",
+     "city": "Hasselt",
+     "state": "Flanders",
+     "zip": "3500",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.93106,
+      "lon": 5.33781
+     }
+    },
+    {
+     "facility": "AZ Groeninge Ziekenhuis",
+     "city": "Kortrijk",
+     "state": "Flanders",
+     "zip": "8500",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.82803,
+      "lon": 3.26487
+     }
+    },
+    {
+     "facility": "UZ Gasthuisberg",
+     "city": "Leuven",
+     "state": "Flanders",
+     "zip": "3000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.87959,
+      "lon": 4.70093
+     }
+    },
+    {
+     "facility": "Heilig Hart Ziekenhuis",
+     "city": "Roeselare",
+     "state": "Flanders",
+     "zip": "8800",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.94653,
+      "lon": 3.12269
+     }
+    },
+    {
+     "facility": "St. Andriesziekenhuis",
+     "city": "Tielt",
+     "state": "Flanders",
+     "zip": "8700",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.99931,
+      "lon": 3.32707
+     }
+    },
+    {
+     "facility": "CHU Charleroi",
+     "city": "Charleroi",
+     "state": "Wallonia",
+     "zip": "6110",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.41136,
+      "lon": 4.44448
+     }
+    },
+    {
+     "facility": "Grand Hôpital de Charleroi",
+     "city": "Gilly",
+     "state": "Wallonia",
+     "zip": "6060",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.42449,
+      "lon": 4.4789
+     }
+    },
+    {
+     "facility": "CHU Liège",
+     "city": "Liège",
+     "state": "Wallonia",
+     "zip": "4000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.63373,
+      "lon": 5.56749
+     }
+    },
+    {
+     "facility": "CHU Mont-Godinne",
+     "city": "Yvoir",
+     "state": "Wallonia",
+     "zip": "5530",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.3279,
+      "lon": 4.88059
+     }
+    },
+    {
+     "facility": "Onze-Lieve-Vrouwziekenhuis",
+     "city": "Aalst",
+     "zip": "9300",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.93604,
+      "lon": 4.0355
+     }
+    },
+    {
+     "facility": "Clinique Reine Astrid",
+     "city": "Malmedy",
+     "zip": "4960",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.42686,
+      "lon": 6.02794
+     }
+    },
+    {
+     "facility": "Clinique Sainte-Elisabeth",
+     "city": "Namur",
+     "zip": "5000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.4669,
+      "lon": 4.86746
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "31665017",
+     "type": "DERIVED",
+     "citation": "Vermeersch K, Belmans A, Bogaerts K, Gyselinck I, Cardinaels N, Gabrovska M, Aumann J, Demedts IK, Corhay JL, Marchand E, Slabbynck H, Haenebalcke C, Vermeersch S, Verleden GM, Troosters T, Ninane V, Brusselle GG, Janssens W; BACE trial investigators. Treatment failure and hospital readmissions in severe COPD exacerbations treated with azithromycin versus placebo - a post-hoc analysis of the BACE randomized controlled trial. Respir Res. 2019 Oct 29;20(1):237. doi: 10.1186/s12931-019-1208-6."
+    },
+    {
+     "pmid": "27099485",
+     "type": "DERIVED",
+     "citation": "Vermeersch K, Gabrovska M, Deslypere G, Demedts IK, Slabbynck H, Aumann J, Ninane V, Verleden GM, Troosters T, Bogaerts K, Brusselle GG, Janssens W. The Belgian trial with azithromycin for acute COPD exacerbations requiring hospitalization: an investigator-initiated study protocol for a multicenter, randomized, double-blind, placebo-controlled trial. Int J Chron Obstruct Pulmon Dis. 2016 Mar 31;11:687-96. doi: 10.2147/COPD.S95501. eCollection 2016."
+    }
+   ],
+   "seeAlsoLinks": [
+    {
+     "label": "Protocol paper",
+     "url": "https://www.dovepress.com/the-belgian-trial-with-azithromycin-for-acute-copd-exacerbations-requi-peer-reviewed-article-COPD"
+    }
+   ],
+   "availIpds": [
+    {
+     "type": "Study Protocol",
+     "url": "https://www.researchgate.net/project/Azithromycin-for-acute-COPD-exacerbations-with-hospitalisation-The-BACE-trial"
+    },
+    {
+     "type": "Statistical Analysis Plan",
+     "url": "https://www.researchgate.net/project/Azithromycin-for-acute-COPD-exacerbations-with-hospitalisation-The-BACE-trial"
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "annotationSection": {
+  "annotationModule": {
+   "unpostedAnnotation": {
+    "unpostedResponsibleParty": "Wim Janssens, MD. PhD, KU Leuven",
+    "unpostedEvents": [
+     {
+      "type": "RELEASE",
+      "date": "2019-11-20"
+     },
+     {
+      "type": "RESET",
+      "date": "2019-12-09"
+     },
+     {
+      "type": "RELEASE",
+      "date": "2020-04-07"
+     },
+     {
+      "type": "RESET",
+      "date": "2020-04-17"
+     }
+    ]
+   }
+  }
+ },
+ "documentSection": {
+  "largeDocumentModule": {
+   "largeDocs": [
+    {
+     "typeAbbrev": "Prot",
+     "hasProtocol": true,
+     "hasSap": false,
+     "hasIcf": false,
+     "label": "Study Protocol",
+     "date": "2016-10-12",
+     "uploadDate": "2017-12-08T05:54",
+     "filename": "Prot_000.pdf",
+     "size": 13639094
+    },
+    {
+     "typeAbbrev": "SAP",
+     "hasProtocol": false,
+     "hasSap": true,
+     "hasIcf": false,
+     "label": "Statistical Analysis Plan",
+     "date": "2017-12-05",
+     "uploadDate": "2017-12-11T03:06",
+     "filename": "SAP_001.pdf",
+     "size": 3762501
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16",
+   "submissionTracking": {
+    "estimatedResultsFirstSubmitDate": "2019-11-20",
+    "submissionInfos": [
+     {
+      "releaseDate": "2019-11-20",
+      "resetDate": "2019-12-09"
+     },
+     {
+      "releaseDate": "2020-04-07",
+      "resetDate": "2020-04-17"
+     }
+    ]
+   }
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D017963",
+     "term": "Azithromycin"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D004917",
+     "term": "Erythromycin"
+    },
+    {
+     "id": "D018942",
+     "term": "Macrolides"
+    },
+    {
+     "id": "D061065",
+     "term": "Polyketides"
+    },
+    {
+     "id": "D007783",
+     "term": "Lactones"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

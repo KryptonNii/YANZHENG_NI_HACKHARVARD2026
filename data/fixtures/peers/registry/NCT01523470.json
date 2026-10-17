@@ -1,0 +1,221 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01523470",
+   "orgStudyIdInfo": {
+    "id": "withdrawalNIV"
+   },
+   "organization": {
+    "fullName": "United Christian Hospital",
+    "class": "OTHER"
+   },
+   "briefTitle": "Withdrawal of Non-invasive Ventilation in Chronic Obstructive Pulmonary Disease (COPD) Patients With Acute Hypercapnic Respiratory Failure",
+   "officialTitle": "A Pilot Randomised Controlled Trial of Withdrawal of Non-invasive Ventilation in COPD Patients With Acute Hypercapnic Respiratory Failure"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2012-01",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2010-11"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2011-10",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2011-10",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2012-01-14",
+   "studyFirstSubmitQcDate": "2012-01-31",
+   "studyFirstPostDateStruct": {
+    "date": "2012-02-01",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2012-01-31",
+   "lastUpdatePostDateStruct": {
+    "date": "2012-02-01",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "PRINCIPAL_INVESTIGATOR",
+    "investigatorFullName": "Lun Chung Tat",
+    "investigatorTitle": "Resident",
+    "investigatorAffiliation": "United Christian Hospital"
+   },
+   "leadSponsor": {
+    "name": "United Christian Hospital",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "The investigators design a pilot randomised, single-centred, controlled trial to compare different withdrawal methods of Non-invasive ventilation. Our study aims at comparing stepwise withdrawal of Non-invasive ventilation versus immediate withdrawal of Non-invasive ventilation. The primary endpoint is to compare the rate of success between two withdrawal methods. The investigators define success as no recurrence of acute hypercapnic respiratory failure or restitution of Non-invasive ventilation within 48 hours after NIV is stopped. The secondary endpoints include time to recurrence of acute hypercapnic respiratory failure measured from the time of randomisation, the total days of Non-invasive ventilation use and the days of hospitalisation. Results from this trial will inform design of future randomised trial in this area.",
+   "detailedDescription": "All patients would receive standard medical treatment with inhaled bronchodilator, systemic steroid, antibiotics according to our local bacteriology. Acute NIV was initiated by trained respiratory nurses according to standardised protocols. The nurses would be at the bedside during the initial acclimatization. BIPAP vision was used to provide bi-level pressure support ventilation. Interfacing with different types of nasal or full-mask would be individualised. NIV was used for as many as possible in the first day, at least 20 hrs. Throughout the NIV treatment, the following parameters will be monitored when NIV is started: arterial blood gases, respiratory rate, heart rate and blood pressure, mental state, pulse oximetry. If a patient failed to respond to NIV, he or she would be intubated if appropriate. Criteria for failure include lack of clinical improvement with increasing dyspnea and deterioration of blood gases, hemodynamic instability, uncontrolled ventricular arrythmia, development of hypercapnic coma and cardiopulmonary arrest.\n\nA patient would be considered suitable to withdraw from the ventilator if he or she fulfil the criteria at rest."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease",
+    "Hypercapnic Respiratory Failure"
+   ],
+   "keywords": [
+    "non-invasive ventilator"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "NONE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 60,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "stepwise withdrawal of NIV",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "On the day of decision of withdrawal (day0), the duration of non-invasive ventilator (NIV) will be decreased to 16 hours. On the following day (day1), the duration of NIV will be further decreased to 12 hours. The duration will be further decreased to 8 hours at night on the following day (day 2), and it will be stopped on the day after (day 3). Vital signs and blood gases will be monitored for a total of 5 days after withdrawal is planned (day 0 to day 5).",
+     "interventionNames": [
+      "Device: BIPAP Synchrony"
+     ]
+    },
+    {
+     "label": "immediate withdrawal of NIV",
+     "type": "EXPERIMENTAL",
+     "description": "The patient will have immediate withdrawal of non-invasive ventilator (NIV). Vital signs and blood gases will be monitored for 2 more days after NIV is stopped (day 0-2).",
+     "interventionNames": [
+      "Device: BIPAP Synchrony"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DEVICE",
+     "name": "BIPAP Synchrony",
+     "description": "BIPAP Synchrony is a machine for non-invasive ventilation for acute hypercapnic respiratory failure in chronic obstructive airway disease exacerbation. It is a temporary measure. It is proven to be effective and reduce mortality and intubation in COAD exacerbation. However, the method of withdrawal of the machine remained controversial.",
+     "armGroupLabels": [
+      "immediate withdrawal of NIV",
+      "stepwise withdrawal of NIV"
+     ],
+     "otherNames": [
+      "BIPAP Synchrony, Respironics INC, USA"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Success of NIV withdrawal",
+     "description": "Success of NIV withdrawal would be considered if there is no deterioration of clinical condition or arterial blood gases from time of randomisation to 48 hours after complete withdrawal of NIV.",
+     "timeFrame": "an average of 4.5 day (6 days in stepwise group and 3 days in immediate group)"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "time from randomisation to recurrence of hypercapnic respiratory failure",
+     "description": "time from randomisation to recurrence of hypercapnic respiratory failure",
+     "timeFrame": "an average of 1 week in hospital stay, upto 3 weeks"
+    },
+    {
+     "measure": "total stay in hospital",
+     "description": "to compare the length of stay in hospital between two groups",
+     "timeFrame": "an average of 1 week, upto 3 weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* COPD patients with AHRF requiring NIV\n* the patient is cooperative with NIV treatment\n* the patient is willing to give their written informed consent to participate in the study\n* patient is stabilised after acute treatment after NIV as evidenced by ALL of the below::\n\n  * normalisation of arterial pH\n  * clinical stability as evidenced by\n  * SpO2 \\> 88% on 2LO2 or less\n  * respiratory rate \\< 25\n  * heart rate \\< 120 bpm\n  * systolic blood pressure \\> 90 mmHg\n  * patient not in agitation, diaphoresis or anxiety\n\nExclusion Criteria:\n\n* patients with non-COPD causes of AHRF, for example, chest infection and heart failure\n* patients who are currently on home NIV\n* patients who have contraindications to NIV and those who refused or failed NIV during an initial 15 minutes acclimatization period\n* other significant co-morbid conditions that in the investigators' view , would confer an adverse prognosis during the study period",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "locations": [
+    {
+     "facility": "Department of Medicine, United Christian Hospital, Hong Kong",
+     "city": "Hong Kong",
+     "country": "Hong Kong",
+     "geoPoint": {
+      "lat": 22.27832,
+      "lon": 114.17469
+     }
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D012131",
+     "term": "Respiratory Insufficiency"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D012120",
+     "term": "Respiration Disorders"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

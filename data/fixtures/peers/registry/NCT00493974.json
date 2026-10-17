@@ -1,0 +1,1900 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT00493974",
+   "orgStudyIdInfo": {
+    "id": "0701M00621"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "U10HL074424",
+     "type": "NIH",
+     "link": "https://reporter.nih.gov/quickSearch/U10HL074424"
+    }
+   ],
+   "organization": {
+    "fullName": "University of Minnesota",
+    "class": "OTHER"
+   },
+   "briefTitle": "Zileuton to Treat Adults With Chronic Obstructive Pulmonary Disease (The LEUKO Study)",
+   "officialTitle": "Antileukotriene Therapy for COPD Exacerbations",
+   "acronym": "LEUKO"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2019-10",
+   "overallStatus": "TERMINATED",
+   "whyStopped": "Lack of feasibility due to low recruitment",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2007-03"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2008-12",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2008-12",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2007-06-28",
+   "studyFirstSubmitQcDate": "2007-06-28",
+   "studyFirstPostDateStruct": {
+    "date": "2007-06-29",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2009-12-18",
+   "resultsFirstSubmitQcDate": "2010-02-02",
+   "resultsFirstPostDateStruct": {
+    "date": "2010-03-03",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2019-10-30",
+   "lastUpdatePostDateStruct": {
+    "date": "2019-11-18",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "University of Minnesota",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "National Heart, Lung, and Blood Institute (NHLBI)",
+     "class": "NIH"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "Chronic obstructive pulmonary disease (COPD) is a long-term lung disease that is caused by cigarette smoking or by breathing in other lung irritants, including pollution, dust, or chemicals. The purpose of this study is to evaluate the effectiveness of zileuton, a medication that is used to control asthma symptoms, at reducing the length of a hospital stay for adults who are hospitalized for a COPD exacerbation, or worsening of COPD symptoms.",
+   "detailedDescription": "COPD is a disease in which the lung airways are partly damaged and obstructed, making it difficult to breathe. COPD is the fourth leading cause of death in the United States. Symptoms include coughing, excess mucus production, shortness of breath, wheezing, and chest tightness. Treatment usually includes inhaled bronchodilator or steroid medications that work by relaxing the muscles around the lung airways and reducing inflammation. Zileuton, a medication that is used to prevent asthma symptoms, may be beneficial in treating people who experience COPD exacerbations. Zileuton works by blocking the formation of substances that cause inflammation, fluid retention, and constriction in the lungs. The purpose of this study is to evaluate the effectiveness of zileuton at reducing the length of a hospital stay for adults who are hospitalized for a COPD exacerbation.\n\nThis study will enroll adults who are admitted to the hospital due to severe COPD symptoms. Participants will be randomly assigned to receive either zileuton or placebo four times a day for up to 14 days. While in the hospital, lung function testing and urine collection will occur. Study visits will occur at Days 14 and 30, and will include lung function testing, a medical history review, and a study drug adverse effects review."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ],
+   "keywords": [
+    "Chronic Obstructive Pulmonary Disease",
+    "COPD",
+    "Exacerbation",
+    "Anti-leukotriene",
+    "Length of Stay",
+    "LOS"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 119,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Zileuton",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Zileuton (Zyflo, 600 mg 4 times a day)",
+     "interventionNames": [
+      "Drug: Zileuton"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Zileuton",
+     "description": "Zyflo tablets, 600 mg, 4 times a day",
+     "armGroupLabels": [
+      "Zileuton"
+     ],
+     "otherNames": [
+      "Zyflo"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Placebo 4 x daily",
+     "armGroupLabels": [
+      "Placebo"
+     ],
+     "otherNames": [
+      "Inactive Matching Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Length of Hospital Stay",
+     "description": "Admission will begin at the time the subject has been admitted to an inpatient service. Length of Stay (LOS) will be recorded in days. The LOS will be based on the number of days spent in an acute medical ward or in the ICU. Subjects that are admitted and discharged in the same 24 hour period will be recorded as a LOS of 1 day, as will subjects discharged in the ensuing 24 hour period. LOS's greater than 10 days will be truncated to 10 days.",
+     "timeFrame": "Measured at Day 30"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Change in FEV1% Predicted",
+     "description": "Change in Post-bronchodilator FEV1% predicted comparing data at 30 day visit with baseline.",
+     "timeFrame": "Measured at Baseline and Day 30"
+    },
+    {
+     "measure": "Change in FEV1/FEV6 Levels",
+     "description": "Change in Post-bronchodilator FEV1/FEV6 ratio comparing data at discharge visit with baseline.",
+     "timeFrame": "from baseline to day of discharge"
+    },
+    {
+     "measure": "Treatment Failure",
+     "description": "Treatment failure is defined as death, intubation, readmission to a hospital for COPD, urgent visit to an outpatient or ED provider for symptoms of COPD or intensification of therapy \\[including second course of antibiotics for COPD, and second course of systemic steroids for COPD\\]) in the first 30 days after randomization.",
+     "timeFrame": "Baseline to day 30 visit"
+    },
+    {
+     "measure": "Health-related Quality of Life",
+     "description": "St. George's Respiratory Questionnaire - Total Score\n\nThe SGRQ was asked with respect to the last one month as validated for acute exacerbations of COPD by Doll et al.\n\nScale from 0 (no disability) to 100 (maximum disability).\n\nThe SGRQ total score summarizes the impact of airway specific disease on overall health status. Scores range from zero (no impairment) to 100 (maximum impairment). Scores were calculated using the SGRQ scoring Algorithm.",
+     "timeFrame": "Change from Baseline and 1 Month"
+    },
+    {
+     "measure": "Change in Urinary Leukotriene (LTE4) Levels",
+     "description": "Change in natural log-transformed LTE4 (ng/mg Cr.) from Baseline to 24 Hours",
+     "timeFrame": "Baseline and 24 hours"
+    },
+    {
+     "measure": "Change in Urinary Leukotriene (LTE4) Levels",
+     "description": "Change in natural log-transformed LTE4 (ng/mg Cr.) from Baseline to 72 Hours",
+     "timeFrame": "Baseline and 72 hours later"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Admitted to the hospital for a COPD exacerbation\n* FEV1 less than 60% of predicted level\n* At least 10 pack years of smoking\n\nExclusion Criteria:\n\n* Any uncontrolled systemic disease\n* Known hypersensitivity to zileuton\n* Asthma\n* Lobar pneumonia or pulmonary edema\n* Interstitial lung disease\n* Medical condition that is likely to limit survival to less than 30 days at the time of study entry\n* History of liver disease\n* Current use of theophylline\n* Participation in another clinical trial in the COPD Clinical Research Network\n* Incarceration\n* Institutionalization\n* Pregnant\n* History of a suicide attempt\n* Prior inpatient admission for a psychiatric disorder\n* Bipolar disorder\n\n'",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "45 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Prescott Woodruff, MD",
+     "affiliation": "University of California at San Francisco",
+     "role": "STUDY_CHAIR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "University of Alabama Lung Health Center",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "zip": "35249",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "Veteran's Administration Medical Center",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "zip": "35294",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "LA BioMed at Harbor, University of California",
+     "city": "Los Angeles",
+     "state": "California",
+     "zip": "90502",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "University of California San Francisco-Airway Clinical Research Center",
+     "city": "San Francisco",
+     "state": "California",
+     "zip": "94143",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.77493,
+      "lon": -122.41942
+     }
+    },
+    {
+     "facility": "Denver Health Medical Center",
+     "city": "Denver",
+     "state": "Colorado",
+     "zip": "80204",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.73915,
+      "lon": -104.9847
+     }
+    },
+    {
+     "facility": "National Jewish Medical and Research Center",
+     "city": "Denver",
+     "state": "Colorado",
+     "zip": "80206",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.73915,
+      "lon": -104.9847
+     }
+    },
+    {
+     "facility": "Veteran's Administration Medical Center",
+     "city": "Denver",
+     "state": "Colorado",
+     "zip": "80220",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.73915,
+      "lon": -104.9847
+     }
+    },
+    {
+     "facility": "University of Maryland Hospital",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21201",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "Fallon Clinic",
+     "city": "Boston",
+     "state": "Massachusetts",
+     "zip": "01605",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.35843,
+      "lon": -71.05977
+     }
+    },
+    {
+     "facility": "Brigham and Women's Hospital",
+     "city": "Boston",
+     "state": "Massachusetts",
+     "zip": "02115",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.35843,
+      "lon": -71.05977
+     }
+    },
+    {
+     "facility": "Veteran's Administration Medical Center",
+     "city": "Boston",
+     "state": "Massachusetts",
+     "zip": "02132",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.35843,
+      "lon": -71.05977
+     }
+    },
+    {
+     "facility": "Veteran's Administration Medical Center",
+     "city": "Ann Arbor",
+     "state": "Michigan",
+     "zip": "48105",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.27756,
+      "lon": -83.74088
+     }
+    },
+    {
+     "facility": "University of Michigan Medical Center",
+     "city": "Ann Arbor",
+     "state": "Michigan",
+     "zip": "48109",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.27756,
+      "lon": -83.74088
+     }
+    },
+    {
+     "facility": "Veteran's Administration Medical Center",
+     "city": "Minneapolis",
+     "state": "Minnesota",
+     "zip": "55417",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.97997,
+      "lon": -93.26384
+     }
+    },
+    {
+     "facility": "HealthPartners Research Foundation",
+     "city": "Minneapolis",
+     "state": "Minnesota",
+     "zip": "55440",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.97997,
+      "lon": -93.26384
+     }
+    },
+    {
+     "facility": "Mayo Clinic",
+     "city": "Rochester",
+     "state": "Minnesota",
+     "zip": "55905",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.02163,
+      "lon": -92.4699
+     }
+    },
+    {
+     "facility": "Temple University Lung Center",
+     "city": "Philadelphia",
+     "state": "Pennsylvania",
+     "zip": "19140",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.95238,
+      "lon": -75.16362
+     }
+    },
+    {
+     "facility": "University of Pittsburgh Emphysema Research Center",
+     "city": "Pittsburgh",
+     "state": "Pennsylvania",
+     "zip": "15213",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.44062,
+      "lon": -79.99589
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "21299475",
+     "type": "DERIVED",
+     "citation": "Woodruff PG, Albert RK, Bailey WC, Casaburi R, Connett JE, Cooper JA Jr, Criner GJ, Curtis JL, Dransfield MT, Han MK, Harnden SM, Kim V, Marchetti N, Martinez FJ, McEvoy CE, Niewoehner DE, Reilly JJ, Rice K, Scanlon PD, Scharf SM, Sciurba FC, Washko GR, Lazarus SC; Copd Clinical Research Network. Randomized trial of zileuton for treatment of COPD exacerbations requiring hospitalization. COPD. 2011 Feb;8(1):21-9. doi: 10.3109/15412555.2010.540273."
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "Participants were screened using the eligibility criteria before randomization.",
+   "recruitmentDetails": "Participants were recruited from ER's and inpatient units from 10 main clinical sites (and their affiliated hospitals) between September 2007 and October 2008.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Zileuton",
+     "description": "Zileuton (Zyflo, 600 mg 4 times a day)"
+    },
+    {
+     "id": "FG001",
+     "title": "Placebo",
+     "description": "Matching placebo 4 times a day"
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "60"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "59"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "47"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "45"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "13"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "14"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Death",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "8"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "6"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "4"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "6"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Zileuton",
+     "description": "Zileuton (Zyflo, 600 mg 4 times a day)"
+    },
+    {
+     "id": "BG001",
+     "title": "Placebo",
+     "description": "Matching placebo 4 times a day"
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "60"
+      },
+      {
+       "groupId": "BG001",
+       "value": "59"
+      },
+      {
+       "groupId": "BG002",
+       "value": "119"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "62.2",
+           "spread": "8.2"
+          },
+          {
+           "groupId": "BG001",
+           "value": "64.3",
+           "spread": "9.5"
+          },
+          {
+           "groupId": "BG002",
+           "value": "63.2",
+           "spread": "8.9"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "23"
+          },
+          {
+           "groupId": "BG001",
+           "value": "18"
+          },
+          {
+           "groupId": "BG002",
+           "value": "41"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "37"
+          },
+          {
+           "groupId": "BG001",
+           "value": "41"
+          },
+          {
+           "groupId": "BG002",
+           "value": "78"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Ethnicity (NIH/OMB)",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Hispanic or Latino",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "4"
+          },
+          {
+           "groupId": "BG001",
+           "value": "2"
+          },
+          {
+           "groupId": "BG002",
+           "value": "6"
+          }
+         ]
+        },
+        {
+         "title": "Not Hispanic or Latino",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "56"
+          },
+          {
+           "groupId": "BG001",
+           "value": "57"
+          },
+          {
+           "groupId": "BG002",
+           "value": "113"
+          }
+         ]
+        },
+        {
+         "title": "Unknown or Not Reported",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Race (NIH/OMB)",
+     "description": "All applicable categories were checked for each participant.",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "American Indian or Alaska Native",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "1"
+          }
+         ]
+        },
+        {
+         "title": "Asian",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1"
+          },
+          {
+           "groupId": "BG002",
+           "value": "1"
+          }
+         ]
+        },
+        {
+         "title": "Native Hawaiian or Other Pacific Islander",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Black or African American",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "16"
+          },
+          {
+           "groupId": "BG001",
+           "value": "24"
+          },
+          {
+           "groupId": "BG002",
+           "value": "40"
+          }
+         ]
+        },
+        {
+         "title": "White",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "36"
+          },
+          {
+           "groupId": "BG001",
+           "value": "31"
+          },
+          {
+           "groupId": "BG002",
+           "value": "67"
+          }
+         ]
+        },
+        {
+         "title": "More than one race",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "7"
+          },
+          {
+           "groupId": "BG001",
+           "value": "3"
+          },
+          {
+           "groupId": "BG002",
+           "value": "10"
+          }
+         ]
+        },
+        {
+         "title": "Unknown or Not Reported",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Length of Hospital Stay",
+     "description": "Admission will begin at the time the subject has been admitted to an inpatient service. Length of Stay (LOS) will be recorded in days. The LOS will be based on the number of days spent in an acute medical ward or in the ICU. Subjects that are admitted and discharged in the same 24 hour period will be recorded as a LOS of 1 day, as will subjects discharged in the ensuing 24 hour period. LOS's greater than 10 days will be truncated to 10 days.",
+     "populationDescription": "Participants were analyzed following intention to treat (ITT) method.\n\nOne participant randomized to Zileuton withdrew consent before hospital discharge.\n\nDays to discharge are set at a maximum of 10 days.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "Days",
+     "timeFrame": "Measured at Day 30",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Zileuton",
+       "description": "Zileuton (Zyflo, 600 mg 4 times a day)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matching placebo 4 times a day"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "59"
+        },
+        {
+         "groupId": "OG001",
+         "value": "59"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3",
+           "spread": "2.19"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3",
+           "spread": "3.06"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER_LEGACY",
+       "pValue": ".3876",
+       "statisticalMethod": "Wilcoxon (Mann-Whitney)",
+       "ciPctValue": "95"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change in FEV1% Predicted",
+     "description": "Change in Post-bronchodilator FEV1% predicted comparing data at 30 day visit with baseline.",
+     "populationDescription": "Participants were analyzed using the intent to treat method. The N is lower than total randomized due to participants that were unable to perform spirometry at baseline.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "percent predicted",
+     "timeFrame": "Measured at Baseline and Day 30",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Zileuton",
+       "description": "Zileuton (Zyflo, 600 mg 4 times a day)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matching placebo 4 times a day"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "14"
+        },
+        {
+         "groupId": "OG001",
+         "value": "9"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "6.8",
+           "spread": "4.2"
+          },
+          {
+           "groupId": "OG001",
+           "value": "8.0",
+           "spread": "4.4"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER_LEGACY",
+       "pValue": "0.6413",
+       "statisticalMethod": "Wilcoxon (Mann-Whitney)",
+       "ciPctValue": "95"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change in FEV1/FEV6 Levels",
+     "description": "Change in Post-bronchodilator FEV1/FEV6 ratio comparing data at discharge visit with baseline.",
+     "populationDescription": "Participants were analyzed using the intent to treat method. The N is lower than total randomized due to participants that were unable to perform spirometry at baseline and missing discharge data.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "ratio",
+     "timeFrame": "from baseline to day of discharge",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Zileuton",
+       "description": "Zileuton (Zyflo, 600 mg 4 times a day)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matching placebo 4 times a day"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "8"
+        },
+        {
+         "groupId": "OG001",
+         "value": "8"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.02",
+           "spread": "0.03"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.03",
+           "spread": "0.02"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER_LEGACY",
+       "pValue": "0.6433",
+       "statisticalMethod": "Wilcoxon (Mann-Whitney)",
+       "ciPctValue": "95"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Treatment Failure",
+     "description": "Treatment failure is defined as death, intubation, readmission to a hospital for COPD, urgent visit to an outpatient or ED provider for symptoms of COPD or intensification of therapy \\[including second course of antibiotics for COPD, and second course of systemic steroids for COPD\\]) in the first 30 days after randomization.",
+     "populationDescription": "Participants were analyzed following intention to treat (ITT) method.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "Baseline to day 30 visit",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Zileuton",
+       "description": "Zileuton (Zyflo, 600 mg 4 times a day)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matching placebo 4 times a day"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "60"
+        },
+        {
+         "groupId": "OG001",
+         "value": "59"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Death",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Intubation",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Hospital Readmission",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "7"
+          },
+          {
+           "groupId": "OG001",
+           "value": "7"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Urgent Visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "7"
+          },
+          {
+           "groupId": "OG001",
+           "value": "6"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Intensification of therapy",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "11"
+          },
+          {
+           "groupId": "OG001",
+           "value": "11"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Any Treatment Failure",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "14"
+          },
+          {
+           "groupId": "OG001",
+           "value": "16"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER_LEGACY",
+       "pValue": "0.63",
+       "statisticalMethod": "Chi-squared",
+       "ciPctValue": "95"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Health-related Quality of Life",
+     "description": "St. George's Respiratory Questionnaire - Total Score\n\nThe SGRQ was asked with respect to the last one month as validated for acute exacerbations of COPD by Doll et al.\n\nScale from 0 (no disability) to 100 (maximum disability).\n\nThe SGRQ total score summarizes the impact of airway specific disease on overall health status. Scores range from zero (no impairment) to 100 (maximum impairment). Scores were calculated using the SGRQ scoring Algorithm.",
+     "populationDescription": "Participants were analyzed using the intent to treat method and included those that had SGRQ data at baseline and 1 month.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "Units on a scale",
+     "timeFrame": "Change from Baseline and 1 Month",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Zileuton",
+       "description": "Zileuton (Zyflo, 600 mg 4 times a day)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matching placebo 4 times a day"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "46"
+        },
+        {
+         "groupId": "OG001",
+         "value": "43"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-10.6",
+           "spread": "14.8"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-8.5",
+           "spread": "14.6"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER_LEGACY",
+       "pValue": "0.4957",
+       "statisticalMethod": "t-test, 2 sided",
+       "ciPctValue": "95"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change in Urinary Leukotriene (LTE4) Levels",
+     "description": "Change in natural log-transformed LTE4 (ng/mg Cr.) from Baseline to 24 Hours",
+     "populationDescription": "Intent to Treat.\n\nParticipants with urine sample at both visits.",
+     "reportingStatus": "POSTED",
+     "paramType": "LOG_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "(ng/mg Cr.)",
+     "timeFrame": "Baseline and 24 hours",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Zileuton",
+       "description": "Zileuton (Zyflo, 600 mg 4 times a day)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matching placebo 4 times a day"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "46"
+        },
+        {
+         "groupId": "OG001",
+         "value": "42"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-1.38",
+           "spread": "0.17"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.14",
+           "spread": "0.22"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER_LEGACY",
+       "pValue": "<0.0001",
+       "statisticalMethod": "t-test, 2 sided",
+       "ciPctValue": "95"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change in Urinary Leukotriene (LTE4) Levels",
+     "description": "Change in natural log-transformed LTE4 (ng/mg Cr.) from Baseline to 72 Hours",
+     "populationDescription": "Intent to Treat.\n\nParticipants with urine sample at both visits.",
+     "reportingStatus": "POSTED",
+     "paramType": "LOG_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "(ng/mg Cr.)",
+     "timeFrame": "Baseline and 72 hours later",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Zileuton",
+       "description": "Zileuton (Zyflo, 600 mg 4 times a day)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matching placebo 4 times a day"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "22"
+        },
+        {
+         "groupId": "OG001",
+         "value": "20"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-1.32",
+           "spread": "0.40"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.26",
+           "spread": "0.38"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER_LEGACY",
+       "pValue": "0.006",
+       "statisticalMethod": "t-test, 2 sided",
+       "ciPctValue": "95"
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "Participants were followed for adverse events from randomization to the 30 day follow-up visit. AEs that continued past the end of the study period were followed until the Investigator believed it reached a stable clinical endpoint or resolved.",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Zileuton",
+     "description": "Zileuton (Zyflo, 600 mg 4 times a day)",
+     "seriousNumAffected": 17,
+     "seriousNumAtRisk": 60,
+     "otherNumAffected": 13,
+     "otherNumAtRisk": 60
+    },
+    {
+     "id": "EG001",
+     "title": "Placebo",
+     "description": "Matching placebo 4 times a day",
+     "seriousNumAffected": 20,
+     "seriousNumAtRisk": 59,
+     "otherNumAffected": 12,
+     "otherNumAtRisk": 59
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Allergic Reaction( to amiodarone)",
+     "organSystem": "Immune system disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "COPD Exacerbation",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 8,
+       "numAffected": 8,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 10,
+       "numAffected": 10,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "Cellulitis",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "Chest Pain",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "Colitis",
+     "organSystem": "Gastrointestinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "Congestive Heart Failure",
+     "organSystem": "Cardiac disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "Depressive disorder",
+     "organSystem": "Psychiatric disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "Heart Failure",
+     "organSystem": "Cardiac disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "Lung Cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "MRSA bursitis",
+     "organSystem": "Infections and infestations",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "Mycobacterium Avium Intracellular Complex",
+     "organSystem": "Infections and infestations",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "Myocardial Infarction",
+     "organSystem": "Cardiac disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "Rectal bleeding",
+     "organSystem": "Gastrointestinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "Renal Mass",
+     "organSystem": "Renal and urinary disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "Respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "Stroke",
+     "organSystem": "Vascular disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "Urinary Tract Infection",
+     "organSystem": "Gastrointestinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 59
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Dyspnea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 19,
+       "numAffected": 9,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 14,
+       "numAffected": 6,
+       "numAtRisk": 59
+      }
+     ]
+    },
+    {
+     "term": "COPD worsening",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 60
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 6,
+       "numAffected": 6,
+       "numAtRisk": 59
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "limitationsAndCaveats": {
+    "description": "Early termination leading to small numbers of subjects recruited"
+   },
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictiveAgreement": false
+   },
+   "pointOfContact": {
+    "title": "Sarah Lindberg",
+    "organization": "University of Minnesota",
+    "email": "slindberg@umn.edu",
+    "phone": "612-626-9011"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C063449",
+     "term": "zileuton"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

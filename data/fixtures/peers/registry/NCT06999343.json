@@ -1,0 +1,335 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT06999343",
+   "orgStudyIdInfo": {
+    "id": "AMICO"
+   },
+   "organization": {
+    "fullName": "Fundación Instituto de Investigación Sanitaria de Navarra",
+    "class": "OTHER"
+   },
+   "briefTitle": "Exploring the Anti-ageing Effects of Metformin in COPD",
+   "officialTitle": "Exploring the Anti-ageing Effects of Metformin in COPD",
+   "acronym": "AMICO"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2025-05",
+   "overallStatus": "NOT_YET_RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2025-09-01",
+    "type": "ESTIMATED"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2029-05-01",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2029-09-01",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2025-05-15",
+   "studyFirstSubmitQcDate": "2025-05-22",
+   "studyFirstPostDateStruct": {
+    "date": "2025-05-31",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2025-05-22",
+   "lastUpdatePostDateStruct": {
+    "date": "2025-05-31",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Fundación Instituto de Investigación Sanitaria de Navarra",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false,
+   "isUsExport": false
+  },
+  "descriptionModule": {
+   "briefSummary": "Prospective, multicentre, double-blind, placebo-controlled, randomised, prospective clinical trial comparing the effect of metformin 850 mg twice daily with placebo in COPD patients with evidence of emphysema (by CT scan or reduced DLCO) who are known to have a rapid decrease in FEV1.\n\nMain objective:\n\nTo compare the change in FEV1 at 3 years follow-up in patients receiving metformin versus placebo.\n\nParticipants will take metformin (850mg) or placebo twice daily for 3 years."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "COPD"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 212,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Experimental treatment",
+     "type": "EXPERIMENTAL",
+     "description": "Experimental treatment: Metformin Tolerance phase dose: 850mg/24h for 2 weeks. Treatment dose: 1700mg twice daily. Pharmaceutical form: 850 mg oral tablet. Duration of treatment: Treatment will last for 3 years.",
+     "interventionNames": [
+      "Drug: Metformin 850Mg Tab"
+     ]
+    },
+    {
+     "label": "Control treatment",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Control treatment: Placebo Tolerance phase dose: One tablet/24h for 2 weeks. Treatment dose: Two tablets twice a day. Pharmaceutical form: Tablets with the same appearance as metformin tablets. Duration of treatment: Treatment will last for 3 years.",
+     "interventionNames": [
+      "Other: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Metformin 850Mg Tab",
+     "description": "Tolerance phase dose: 850mg/24h for 2 weeks. Treatment dose: 1700 mg twice daily.",
+     "armGroupLabels": [
+      "Experimental treatment"
+     ]
+    },
+    {
+     "type": "OTHER",
+     "name": "Placebo",
+     "description": "Tolerance phase dose: One tablet/24h for 2 weeks. Treatment dose: Two tablets twice daily.",
+     "armGroupLabels": [
+      "Control treatment"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Forced expiratory volume in the first second (FEV1)",
+     "description": "The amount of air expelled during the first second of a maximal expiration, performed after a maximal inspiration.",
+     "timeFrame": "At inclusion and at 3-years follow-up"
+    },
+    {
+     "measure": "Carbon monoxide diffusion test (DLCO)",
+     "description": "Pulmonary function test, in which the diffusion of gases through the pulmonary alveoli into the blood is studied.",
+     "timeFrame": "At inclusion and at 3-years follow-up"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Age",
+     "description": "Years",
+     "timeFrame": "Baseline"
+    },
+    {
+     "measure": "Sex at birth",
+     "description": "Male/Female",
+     "timeFrame": "Baseline"
+    },
+    {
+     "measure": "Height",
+     "description": "Centimetres",
+     "timeFrame": "Baseline"
+    },
+    {
+     "measure": "Weight",
+     "description": "Kg",
+     "timeFrame": "Baseline and at 1 year, 2 years and 3 years"
+    },
+    {
+     "measure": "Smoking",
+     "description": "Cigarette packs/year",
+     "timeFrame": "Baseline"
+    },
+    {
+     "measure": "The percentage of lung volume with emphysema measured on a chest CT scan.",
+     "timeFrame": "At inclusion and at 3-years follow-up"
+    },
+    {
+     "measure": "6-minute walk distance (6MWT)",
+     "description": "Metres in 6 minutes",
+     "timeFrame": "Baseline and at 1 year, 2 years and 3 years"
+    },
+    {
+     "measure": "Grip strength with dynamometer",
+     "description": "Kg",
+     "timeFrame": "Baseline and at 1 year, 2 years and 3 years"
+    },
+    {
+     "measure": "BODE Index",
+     "description": "The BODE index will result in a score of zero to ten dependent upon FEV1, body-mass index, the distance walked in six minutes, and the modified MRC dyspnea scale where 0 is the best state of health and 10 is the worst.",
+     "timeFrame": "Baseline and month 6, 12, 18, 24, 30 and 36"
+    },
+    {
+     "measure": "Dyspnoea",
+     "description": "1, 2, 3, 4 or 5 grades where dyspnoea grade 1 is the best state of health and grade 5 is the worst state of health",
+     "timeFrame": "Baseline and at 1 year, 2 years and 3 years"
+    },
+    {
+     "measure": "Major cardiovascular events",
+     "description": "Select from a list (Myocardial infarction/new angina/stroke) if any of these events happen.",
+     "timeFrame": "Month 6, 12, 18, 24, 30 and 36"
+    },
+    {
+     "measure": "Cancer events",
+     "description": "Solid cancers Yes/No",
+     "timeFrame": "Month 6, 12, 18, 24, 30 and 36"
+    },
+    {
+     "measure": "Renal dysfunction (microalbuminuria)",
+     "description": "mg/g",
+     "timeFrame": "Month 6, 12, 18, 24, 30 and 36"
+    },
+    {
+     "measure": "Concomitant treatment",
+     "description": "EPOC concomitant treatment",
+     "timeFrame": "Month 6, 12, 18, 24, 30 and 36"
+    },
+    {
+     "measure": "Exacerbations",
+     "description": "YES/NO",
+     "timeFrame": "Month 6, 12, 18, 24, 30 and 36"
+    },
+    {
+     "measure": "Emergency room visits",
+     "description": "YES/NO",
+     "timeFrame": "Month 6, 12, 18, 24, 30 and 36"
+    },
+    {
+     "measure": "Hospitalisations",
+     "description": "YES/NO",
+     "timeFrame": "Month 6, 12, 18, 24, 30 and 36"
+    },
+    {
+     "measure": "Intubation",
+     "description": "YES/NO",
+     "timeFrame": "Month 6, 12, 18, 24, 30 and 36"
+    },
+    {
+     "measure": "Obstruction",
+     "description": "YES/NO",
+     "timeFrame": "Month 6, 12, 18, 24, 30 and 36"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Sign the informed consent form prior to any study-specific procedure.\n* Male or female, aged 40 to 75 years, inclusive, at the time of Screening.\n* Have a COPD clinic diagnostic according to Global Initiative for Obstructive Lung Disease (GOLD) 2022 with a post-bronchodilator FEV1/FVC \\<0.7 at Screening (Visit 1)\n* Have a post-bronchodilator FEV1 \\>40% ≤ 70% of the predicted value at Screening (Visit 1)\n* Smoking history of more than 10 pack/years (\\[number of cigarettes smoked per day x number of years smoked\\]/20)\n* Must have been able to understand and comply with the requirements of the study, as judged by the investigator.\n* Have some kind of emphysema (centrolobulillar or paraseptal) reported by an expert radiologist.\n* Have a certified decrease of the Lung Function in the last 3 years \\>40 ml/ml per year of FEV1.\n* Women in childbearing age with negative pregnancy test.\n\nExclusion Criteria:\n\n* Participating in another clinic trial with any commercially or investigational biological medicinal product within 4 months prior to Screening.\n* Patients who take oral corticosteroids chronically.\n* Respiratory track infection history (superior respiratory tract included) and pulmonary exarcerbation within 6 weeks prior to Screening.\n* Lung resection or lung volume reduction surgery within 12 months prior to Screening (Visit 1), or lung trasplant history, or, as judged by the investigator, patient may have required a thoracotomy or other lung surgery during the study.\n* Known active tuberculosis.\n* History of intersticial lung or massive pulmonary thromboembolic disease.\n* History of bronchiectasis secondary to respiratory diseasesother than COPD (e.g. cystic fibrosis, Kartagener's syndrome, etc.).\n* Any clinically significant disease or disorder (e.g. cardiovascular, gastrointestinal, hepatic, renal (GFR \\< 30 ml/min), neurological, musculoskeletal, endocrine, metabolic, psychiatric, and major physical impairment) that, in the opinion of the investigator, could have placed the patient at risk for participation in the study, could have influenced the study results, or could have affected the patient's ability to participate in the study.\n* Recent history (within 12 months prior to screening \\[Visit 1\\]) of myocardial infarction, recent history of heart failure (New York Heart Association \\[NYHA\\] classes III and IV), pulmonary oedema and/or cardiac arrhythmia.\n* History of cancer (within 5 years prior to Visit 1), except non-metastatic skin cancer and non-melanoma.\n* Patients who cannot perform spirometry manoeuvres or tolerate plethysmography.\n* Contraindications to the use of metformin: allergy to the drug, advanced renal failure (CKD stage 3 and above), patients on dialysis, chronic metabolic or respiratory acidosis or liver cirrhosis.\n* Patients with type 2 Diabetes Mellitus with or without previous use of metformin.\n* Pregnant women, nursing mothers or women of childbearing age who are not going to use contraceptive methods.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "75 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Alberto Labiano Tabar",
+     "role": "CONTACT",
+     "phone": "+34 848 42 32 36",
+     "email": "alberto.labiano.tabar@navarra.es"
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D008687",
+     "term": "Metformin"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D001645",
+     "term": "Biguanides"
+    },
+    {
+     "id": "D006146",
+     "term": "Guanidines"
+    },
+    {
+     "id": "D000578",
+     "term": "Amidines"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

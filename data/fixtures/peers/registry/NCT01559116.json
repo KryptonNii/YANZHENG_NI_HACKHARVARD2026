@@ -1,0 +1,4786 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01559116",
+   "orgStudyIdInfo": {
+    "id": "1237.20"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2011-004710-42",
+     "type": "EUDRACT_NUMBER",
+     "domain": "EudraCT"
+    }
+   ],
+   "organization": {
+    "fullName": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Characterization of 24-hour Lung Function Profiles of Inhaled Tiotropium + Olodaterol Fixed Dose Combination in Patients Suffering From Chronic Obstructive Pulmonary Disease",
+   "officialTitle": "Randomised, Double-blind, Placebo-controlled, 6 Treatment, 4 Period, Incomplete Cross-over Trial to Characterise the 24-hour Lung Function Profiles of Tiotropium + Olodaterol Fixed Dose Combination (2.5/5 µg, 5/5 µg), Tiotropium (2.5 µg, 5 µg) and Olodaterol (5 µg) (Oral Inhalation, Delivered by the Respimat® Inhaler) After 6 Weeks Once Daily Treatment in Patients With Chronic Obstructive Pulmonary Disease (COPD) [VIVACITOTM]"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2015-06",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2012-03"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2013-08",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2013-08",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2012-03-19",
+   "studyFirstSubmitQcDate": "2012-03-20",
+   "studyFirstPostDateStruct": {
+    "date": "2012-03-21",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2015-06-19",
+   "resultsFirstSubmitQcDate": "2015-06-19",
+   "resultsFirstPostDateStruct": {
+    "date": "2015-07-16",
+    "type": "ESTIMATED"
+   },
+   "dispFirstSubmitDate": "2014-04-03",
+   "dispFirstSubmitQcDate": "2014-04-03",
+   "dispFirstPostDateStruct": {
+    "date": "2014-04-30",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2015-06-19",
+   "lastUpdatePostDateStruct": {
+    "date": "2015-07-16",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "The primary objective of the trial is to determine the 24-hour FEV1-time profile of tiotropium + olodaterol FDC, administered once daily by the RESPIMAT Inhaler after 6 weeks of treatment."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "CROSSOVER",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 219,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "tiotropium+olodaterol FDC low dose",
+     "type": "EXPERIMENTAL",
+     "description": "tiotropium+olodaterol FDC low dose; 2 inhalations once daily (a.m. dosing)",
+     "interventionNames": [
+      "Drug: tiotropium + olodaterol",
+      "Device: Respimat"
+     ]
+    },
+    {
+     "label": "tiotropium+olodaterol FDC high dose",
+     "type": "EXPERIMENTAL",
+     "description": "tiotropium+olodaterol FDC high dose; 2 inhalations once daily (a.m. dosing)",
+     "interventionNames": [
+      "Drug: tiotropium + olodaterol",
+      "Device: Respimat"
+     ]
+    },
+    {
+     "label": "tiotropium low dose",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "tiotropium low dose; 2 inhalations once daily (a.m. dosing)",
+     "interventionNames": [
+      "Drug: tiotropium",
+      "Device: Respimat"
+     ]
+    },
+    {
+     "label": "tiotropium high dose",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "tiotropium high dose; 2 inhalations once daily (a.m. dosing)",
+     "interventionNames": [
+      "Drug: tiotropium",
+      "Device: Respimat"
+     ]
+    },
+    {
+     "label": "olodaterol",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "one dose only; 2 inhalations once daily (a.m. dosing)",
+     "interventionNames": [
+      "Drug: olodaterol",
+      "Device: Respimat"
+     ]
+    },
+    {
+     "label": "placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "2 inhalations once daily (a.m. dosing)",
+     "interventionNames": [
+      "Drug: Placebo",
+      "Device: Respimat"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "tiotropium + olodaterol",
+     "description": "low dose + one dose only",
+     "armGroupLabels": [
+      "tiotropium+olodaterol FDC high dose"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "tiotropium",
+     "description": "low dose",
+     "armGroupLabels": [
+      "tiotropium low dose"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "olodaterol",
+     "description": "one dose only",
+     "armGroupLabels": [
+      "olodaterol"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "tiotropium",
+     "description": "high dose",
+     "armGroupLabels": [
+      "tiotropium high dose"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "tiotropium + olodaterol",
+     "description": "low dose + one dose only",
+     "armGroupLabels": [
+      "tiotropium+olodaterol FDC low dose"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "placebo matching tiotropium+olodaterol FDC",
+     "armGroupLabels": [
+      "placebo"
+     ]
+    },
+    {
+     "type": "DEVICE",
+     "name": "Respimat",
+     "description": "Respimat inhaler",
+     "armGroupLabels": [
+      "olodaterol",
+      "placebo",
+      "tiotropium high dose",
+      "tiotropium low dose",
+      "tiotropium+olodaterol FDC high dose",
+      "tiotropium+olodaterol FDC low dose"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Forced Expiratory Volume in 1 Second (FEV1) AUC0-24h Response [L] After 6 Weeks Treatment.",
+     "description": "Area under the Forced Expiratory Volume in 1 second (FEV1) after 6 weeks treatement-time curve from 0 to 24 h post-dose, using the trapezoidal rule, divided by the duration (24 h) to report in litres.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean and standard error (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "day 1 and week 6"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "FEV1 AUC0-12h Response [L] After 6 Weeks Treatment.",
+     "description": "Area under the Forced Expiratory Volume in 1 second (FEV1) after 6 weeks treatement-time curve from 0 to 12 h post-dose, using the trapezoidal rule, divided by the duration (12h) to report in litres.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "day 1 and week 6"
+    },
+    {
+     "measure": "FEV1 AUC12-24h Response [L] After 6 Weeks Treatment.",
+     "description": "Area under the Forced Expiratory Volume in 1 second (FEV1) after 6 weeks treatement-time curve from 12 to 24 h post-dose using the trapezoidal rule, divided by the duration (12 h) to report in litres.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "day 1 and week 6"
+    },
+    {
+     "measure": "Trough FEV1 Response [L] After 6 Weeks Treatment.",
+     "description": "Trough Forced Expiratory Volume in 1 second (FEV1) response after 6 weeks treatment period.\n\nThe trough was defined as the mean of the 23 h and 23 h50 min measurements and Response was defined as the change from patient baseline.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "day 1 and week 6"
+    },
+    {
+     "measure": "Peak(0-3h) FEV1 Response [L] After 6 Weeks Treatment.",
+     "description": "Peak (0-3h) Forced Expiratory Volume in 1 second (FEV1) response.\n\nThe peak was defined as the maximum value measured within the first 3 h post dosing and response was defined as the change from patient baseline.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "day 1 and week 6"
+    },
+    {
+     "measure": "FVC AUC0-24h Response [L] After 6 Weeks Treatment.",
+     "description": "Area under the Forced Vital Capacity (FVC) after 6 weeks treatment period-time curve from 0 to 24 h post-dose using the trapezoidal rule, divided by the duration (24 h) to report in litres.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "day 1 and week 6"
+    },
+    {
+     "measure": "FVC AUC0-12h Response [L] After 6 Weeks Treatment.",
+     "description": "Area under the Forced Vital Capacity (FVC) after 6 weeks treatment period-time curve from 0 to 12 h post-dose using the trapezoidal rule, divided by the duration (12 h) to report in litres.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "day 1 and week 6"
+    },
+    {
+     "measure": "FVC AUC12-24h Response [L] After 6 Weeks Treatment.",
+     "description": "Area under the Forced Vital Capacity (FVC) after 6 weeks treatment period-time curve from 12 to 24 h post-dose using the trapezoidal rule, divided by the duration (12 h) to report in litres.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "day 1 and week 6"
+    },
+    {
+     "measure": "Trough FVC Response [L] After 6 Weeks Treatment.",
+     "description": "Trough Forced Vital Capacity (FVC) response after 6 weeks treatment period.\n\nThe trough was defined as the mean of the 23 h and 23 h50 min measurements and response was defined as the change from patient baseline.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "day1 and week 6"
+    },
+    {
+     "measure": "Peak (0-3h) FVC Response [L] After 6 Weeks Treatment.",
+     "description": "Peak (0-3h) Forced Vital Capacity (FVC) responses after 6 weeks treatment.\n\nPeak was defined as the maximum value measured within the first 3 h post dosing and response was defined as the change from patient baseline.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "day 1 and week 6"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion criteria:\n\n1. Diagnosis of chronic obstructive pulmonary disease\n2. Relatively stable airway obstruction with a post-bronchodilator FEV1\\< 80% of predicted normal and a post-bronchodilator FEV1/FVC \\<70%\n3. Male or female patients, 40 years of age or older\n4. Smoking history of more than 10 pack years\n5. Ability to perform technically acceptable pulmonary function tests and maintain records\n6. Ability to inhale medication in a competent manner from the RESPIMAT Inhaler and from a metered dose inhaler (MDI)\n\nExclusion criteria:\n\n1. significant disease other than COPD\n2. clinically relevant abnormal lab values\n3. history of asthma\n4. diagnosis of thyrotoxicosis\n5. diagnosis of paroxysmal tachycardia\n6. history of myocardial infarction\n7. unstable or life-threatening cardiac arrhythmia\n8. Hospitalization for heart failure within the past year\n9. known active tuberculosis\n10. malignancy for which patient has undergone resection, radiation therapy or chemotherapy within last five years\n11. history of life-threatening pulmonary obstruction\n12. history of cystic fibrosis\n13. clinically evident bronchiectasis\n14. history of significant alcohol or drug abuse\n15. history of thoracotomy with pulmonary resection\n16. oral or patch ß-adrenergics\n17. oral corticosteroid medication at unstable doses\n18. regular use daytime oxygen therapy for more than one hour per day\n19. Pulmonary rehabilitation program in the six weeks prior to the screening visit\n20. Investigational drug within one month or six half lives (whichever is greater) prior to screening visit\n21. Known hypersensitivity to ß-adrenergic drugs, BAC, EDTA\n22. Pregnant or nursing women\n23. Women of childbearing potential not using a highly effective method of birth control\n24. Patients who have previously been randomised in this study or are currently participating in another study\n25. Patients who are unable to comply with pulmonary medication restrictions prior to randomisation",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Boehringer Ingelheim",
+     "affiliation": "Boehringer Ingelheim",
+     "role": "STUDY_CHAIR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "1237.20.1204 Boehringer Ingelheim Investigational Site",
+     "city": "Jasper",
+     "state": "Alabama",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.83122,
+      "lon": -87.27751
+     }
+    },
+    {
+     "facility": "1237.20.1203 Boehringer Ingelheim Investigational Site",
+     "city": "Easley",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.82984,
+      "lon": -82.60152
+     }
+    },
+    {
+     "facility": "1237.20.1201 Boehringer Ingelheim Investigational Site",
+     "city": "Greenville",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.85262,
+      "lon": -82.39401
+     }
+    },
+    {
+     "facility": "1237.20.1202 Boehringer Ingelheim Investigational Site",
+     "city": "Spartanburg",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.94957,
+      "lon": -81.93205
+     }
+    },
+    {
+     "facility": "1237.20.32203 Boehringer Ingelheim Investigational Site",
+     "city": "Genk",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.965,
+      "lon": 5.50082
+     }
+    },
+    {
+     "facility": "1237.20.32201 Boehringer Ingelheim Investigational Site",
+     "city": "Ghent",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.05,
+      "lon": 3.71667
+     }
+    },
+    {
+     "facility": "1237.20.32204 Boehringer Ingelheim Investigational Site",
+     "city": "Jambes",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.45636,
+      "lon": 4.87166
+     }
+    },
+    {
+     "facility": "1237.20.02202 Boehringer Ingelheim Investigational Site",
+     "city": "Québec",
+     "state": "Quebec",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 46.81228,
+      "lon": -71.21454
+     }
+    },
+    {
+     "facility": "1237.20.02201 Boehringer Ingelheim Investigational Site",
+     "city": "Sherbrooke",
+     "state": "Quebec",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.40008,
+      "lon": -71.89908
+     }
+    },
+    {
+     "facility": "1237.20.45002 Boehringer Ingelheim Investigational Site",
+     "city": "Hvidovre",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.64297,
+      "lon": 12.47708
+     }
+    },
+    {
+     "facility": "1237.20.45003 Boehringer Ingelheim Investigational Site",
+     "city": "Odense C",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.40841,
+      "lon": 10.39538
+     }
+    },
+    {
+     "facility": "1237.20.45001 Boehringer Ingelheim Investigational Site",
+     "city": "Silkeborg",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 56.1697,
+      "lon": 9.54508
+     }
+    },
+    {
+     "facility": "1237.20.49205 Boehringer Ingelheim Investigational Site",
+     "city": "Berlin",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "1237.20.49204 Boehringer Ingelheim Investigational Site",
+     "city": "Großhansdorf",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.66528,
+      "lon": 10.28552
+     }
+    },
+    {
+     "facility": "1237.20.49203 Boehringer Ingelheim Investigational Site",
+     "city": "Hamburg",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "1237.20.49206 Boehringer Ingelheim Investigational Site",
+     "city": "Hamburg",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "1237.20.49201 Boehringer Ingelheim Investigational Site",
+     "city": "Mannheim",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.4891,
+      "lon": 8.46694
+     }
+    },
+    {
+     "facility": "1237.20.49207 Boehringer Ingelheim Investigational Site",
+     "city": "Mönchengladbach",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.18539,
+      "lon": 6.44172
+     }
+    },
+    {
+     "facility": "1237.20.49202 Boehringer Ingelheim Investigational Site",
+     "city": "Wiesbaden",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.08601,
+      "lon": 8.24435
+     }
+    },
+    {
+     "facility": "1237.20.36202 Boehringer Ingelheim Investigational Site",
+     "city": "Gödöllö",
+     "country": "Hungary"
+    },
+    {
+     "facility": "1237.20.36204 Boehringer Ingelheim Investigational Site",
+     "city": "Komárom",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.74318,
+      "lon": 18.11913
+     }
+    },
+    {
+     "facility": "1237.20.36203 Boehringer Ingelheim Investigational Site",
+     "city": "Pécs",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 46.07617,
+      "lon": 18.22814
+     }
+    },
+    {
+     "facility": "1237.20.36201 Boehringer Ingelheim Investigational Site",
+     "city": "Szarvas",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 46.86667,
+      "lon": 20.55
+     }
+    },
+    {
+     "facility": "1237.20.36205 Boehringer Ingelheim Investigational Site",
+     "city": "Százhalombatta",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.32949,
+      "lon": 18.93878
+     }
+    },
+    {
+     "facility": "1237.20.31205 Boehringer Ingelheim Investigational Site",
+     "city": "Almelo",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.35667,
+      "lon": 6.6625
+     }
+    },
+    {
+     "facility": "1237.20.31202 Boehringer Ingelheim Investigational Site",
+     "city": "Breda",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 51.58656,
+      "lon": 4.77596
+     }
+    },
+    {
+     "facility": "1237.20.31201 Boehringer Ingelheim Investigational Site",
+     "city": "Heerlen",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 50.88365,
+      "lon": 5.98154
+     }
+    },
+    {
+     "facility": "1237.20.31204 Boehringer Ingelheim Investigational Site",
+     "city": "Hengelo",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.26583,
+      "lon": 6.79306
+     }
+    },
+    {
+     "facility": "1237.20.31203 Boehringer Ingelheim Investigational Site",
+     "city": "Zutphen",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.13833,
+      "lon": 6.20139
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "25956072",
+     "type": "DERIVED",
+     "citation": "Beeh KM, Westerman J, Kirsten AM, Hebert J, Gronke L, Hamilton A, Tetzlaff K, Derom E. The 24-h lung-function profile of once-daily tiotropium and olodaterol fixed-dose combination in chronic obstructive pulmonary disease. Pulm Pharmacol Ther. 2015 Jun;32:53-9. doi: 10.1016/j.pupt.2015.04.002. Epub 2015 May 6."
+    }
+   ],
+   "seeAlsoLinks": [
+    {
+     "label": "Related Info",
+     "url": "http://trials.boehringer-ingelheim.com/"
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "This is a randomised, double-blind, placebo-controlled, 6 treatment, 4 period, incomplete cross-over design. Each patient was randomised to one of 30 treatment sequences. Each sequence consisted of four 6-week treatment periods separated by 3-week washout periods.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "All Subjects",
+     "description": "Randomised, double-blind, placebo-controlled, 6 treatment, 4 period, incomplete cross-over trial to characterise the 24-hour lung function profiles of tiotropium + olodaterol fixed dose combination (2.5/5 μg, 5/5 μg), tiotropium (2.5 μg, 5 μg) and olodaterol (5 μg) (oral inhalation, delivered by the Respimat® Inhaler) after 6 weeks once daily treatment in patients with Chronic Obstructive Pulmonary Disease (COPD) \\[VIVACITOTM\\]."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "comment": "Randomised",
+         "numSubjects": "219"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "comment": "Completed all 4 treatment periods",
+         "numSubjects": "193"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "26"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "10"
+        }
+       ]
+      },
+      {
+       "type": "Lack of Efficacy",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Protocol Violation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "4"
+        }
+       ]
+      },
+      {
+       "type": "other than stated above",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "9"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "populationDescription": "Treated Set (TS): This patient set includes all patients who were dispensed study medication and were documented to have taken at least one dose of investigational treatment.",
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "All Subjects",
+     "description": "Randomised, double-blind, placebo-controlled, 6 treatment, 4 period, incomplete cross-over trial to characterise the 24-hour lung function profiles of tiotropium + olodaterol fixed dose combination (2.5/5 μg, 5/5 μg), tiotropium (2.5 μg, 5 μg) and olodaterol (5 μg) (oral inhalation, delivered by the Respimat® Inhaler) after 6 weeks once daily treatment in patients with Chronic Obstructive Pulmonary Disease (COPD) \\[VIVACITOTM\\]."
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "219"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "61.1",
+           "spread": "7.7"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "90"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "129"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Forced Expiratory Volume in 1 Second (FEV1) AUC0-24h Response [L] After 6 Weeks Treatment.",
+     "description": "Area under the Forced Expiratory Volume in 1 second (FEV1) after 6 weeks treatement-time curve from 0 to 24 h post-dose, using the trapezoidal rule, divided by the duration (24 h) to report in litres.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean and standard error (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Full Analysis Set (FAS): This patient set included patients in the Treated Set (TS) who had any period baseline and any evaluable post-dose data for the primary efficacy endpoint at any Week 6 visits.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres (L)",
+     "timeFrame": "day 1 and week 6",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Placebo matching Tiotropium+Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT:2 Oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Olodaterol (5 µg)",
+       "description": "Olodaterol solution for inhalation - RESPIMAT\n\n2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium (2.5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium (5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG004",
+       "title": "Tiotropium+Olodaterol FDC (2.5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG005",
+       "title": "Tiotropium+Olodaterol FDC (5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "132"
+        },
+        {
+         "groupId": "OG001",
+         "value": "136"
+        },
+        {
+         "groupId": "OG002",
+         "value": "136"
+        },
+        {
+         "groupId": "OG003",
+         "value": "135"
+        },
+        {
+         "groupId": "OG004",
+         "value": "135"
+        },
+        {
+         "groupId": "OG005",
+         "value": "138"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.037",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.129",
+           "spread": "0.013"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.117",
+           "spread": "0.013"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.133",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG004",
+           "value": "0.241",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG005",
+           "value": "0.244",
+           "spread": "0.013"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.280",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.252",
+       "ciUpperLimit": "0.309",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.014",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.115",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.087",
+       "ciUpperLimit": "0.143",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.014",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.110",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.082",
+       "ciUpperLimit": "0.139",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.014",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.277",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.249",
+       "ciUpperLimit": "0.306",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.015",
+       "estimateComment": "Adjusted mean difference to placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Median Difference (Final Values)",
+       "paramValue": "0.111",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.083",
+       "ciUpperLimit": "0.140",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.014",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.124",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.096",
+       "ciUpperLimit": "0.152",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.014",
+       "estimateComment": "Adjusted mean difference to Tiotropium low dose (2.5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Median Difference (Final Values)",
+       "paramValue": "0.107",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.079",
+       "ciUpperLimit": "0.136",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.014",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "FEV1 AUC0-12h Response [L] After 6 Weeks Treatment.",
+     "description": "Area under the Forced Expiratory Volume in 1 second (FEV1) after 6 weeks treatement-time curve from 0 to 12 h post-dose, using the trapezoidal rule, divided by the duration (12h) to report in litres.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Full Analysis Set (FAS).",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres (L)",
+     "timeFrame": "day 1 and week 6",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Placebo matching Tiotropium+Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 Oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Olodaterol (5 µg)",
+       "description": "Olodaterol solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium (2.5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium (5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG004",
+       "title": "Tiotropium+Olodaterol FDC (2.5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG005",
+       "title": "Tiotropium+Olodaterol FDC (5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "132"
+        },
+        {
+         "groupId": "OG001",
+         "value": "136"
+        },
+        {
+         "groupId": "OG002",
+         "value": "136"
+        },
+        {
+         "groupId": "OG003",
+         "value": "135"
+        },
+        {
+         "groupId": "OG004",
+         "value": "135"
+        },
+        {
+         "groupId": "OG005",
+         "value": "138"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.013",
+           "spread": "0.015"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.179",
+           "spread": "0.015"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.171",
+           "spread": "0.015"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.186",
+           "spread": "0.015"
+          },
+          {
+           "groupId": "OG004",
+           "value": "0.310",
+           "spread": "0.015"
+          },
+          {
+           "groupId": "OG005",
+           "value": "0.305",
+           "spread": "0.015"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.319",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.289",
+       "ciUpperLimit": "0.349",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.015",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.126",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.096",
+       "ciUpperLimit": "0.156",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.015",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.119",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.089",
+       "ciUpperLimit": "0.149",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.015",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.323",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.293",
+       "ciUpperLimit": "0.354",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.015",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.131",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.101",
+       "ciUpperLimit": "0.161",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.015",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.139",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.109",
+       "ciUpperLimit": "0.169",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.015",
+       "estimateComment": "Adjusted mean difference to Tiotropium low dose (2.5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.124",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.093",
+       "ciUpperLimit": "0.154",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.015",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "FEV1 AUC12-24h Response [L] After 6 Weeks Treatment.",
+     "description": "Area under the Forced Expiratory Volume in 1 second (FEV1) after 6 weeks treatement-time curve from 12 to 24 h post-dose using the trapezoidal rule, divided by the duration (12 h) to report in litres.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Full Analysis Set (FAS).",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres (L)",
+     "timeFrame": "day 1 and week 6",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Placebo matching Tiotropium+Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 Oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Olodaterol (5 µg)",
+       "description": "Olodaterol solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium (2.5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium (5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG004",
+       "title": "Tiotropium+Olodaterol FDC (2.5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG005",
+       "title": "Tiotropium+Olodaterol FDC (5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "132"
+        },
+        {
+         "groupId": "OG001",
+         "value": "136"
+        },
+        {
+         "groupId": "OG002",
+         "value": "136"
+        },
+        {
+         "groupId": "OG003",
+         "value": "135"
+        },
+        {
+         "groupId": "OG004",
+         "value": "135"
+        },
+        {
+         "groupId": "OG005",
+         "value": "138"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.060",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.079",
+           "spread": "0.013"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.062",
+           "spread": "0.013"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.081",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG004",
+           "value": "0.172",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG005",
+           "value": "0.182",
+           "spread": "0.013"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.243",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.212",
+       "ciUpperLimit": "0.273",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.015",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Median Difference (Final Values)",
+       "paramValue": "0.103",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.074",
+       "ciUpperLimit": "0.133",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.015",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Median Difference (Final Values)",
+       "paramValue": "0.102",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.072",
+       "ciUpperLimit": "0.132",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.015",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.232",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.201",
+       "ciUpperLimit": "0.262",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.015",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.093",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.063",
+       "ciUpperLimit": "0.123",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.015",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.110",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.080",
+       "ciUpperLimit": "0.140",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.015",
+       "estimateComment": "Adjusted mean difference to Tiotropium low dose (2.5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.091",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.061",
+       "ciUpperLimit": "0.121",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.015",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Trough FEV1 Response [L] After 6 Weeks Treatment.",
+     "description": "Trough Forced Expiratory Volume in 1 second (FEV1) response after 6 weeks treatment period.\n\nThe trough was defined as the mean of the 23 h and 23 h50 min measurements and Response was defined as the change from patient baseline.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Full Analysis Set (FAS)",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres",
+     "timeFrame": "day 1 and week 6",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Placebo matching Tiotropium+Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 Oral inhalations once daily in the morning for 6 weeks.)"
+      },
+      {
+       "id": "OG001",
+       "title": "Olodaterol (5 µg)",
+       "description": "Olodaterol solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium (2.5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium (5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG004",
+       "title": "Tiotropium+Olodaterol FDC (2.5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG005",
+       "title": "Tiotropium+Olodaterol FDC (5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "132"
+        },
+        {
+         "groupId": "OG001",
+         "value": "136"
+        },
+        {
+         "groupId": "OG002",
+         "value": "136"
+        },
+        {
+         "groupId": "OG003",
+         "value": "135"
+        },
+        {
+         "groupId": "OG004",
+         "value": "135"
+        },
+        {
+         "groupId": "OG005",
+         "value": "138"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.006",
+           "spread": "0.015"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.109",
+           "spread": "0.015"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.095",
+           "spread": "0.015"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.122",
+           "spread": "0.015"
+          },
+          {
+           "groupId": "OG004",
+           "value": "0.196",
+           "spread": "0.015"
+          },
+          {
+           "groupId": "OG005",
+           "value": "0.201",
+           "spread": "0.015"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.207",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.173",
+       "ciUpperLimit": "0.241",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.092",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.059",
+       "ciUpperLimit": "0.126",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.079",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.045",
+       "ciUpperLimit": "0.113",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.201",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.167",
+       "ciUpperLimit": "0.235",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.086",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.052",
+       "ciUpperLimit": "0.120",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.101",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.067",
+       "ciUpperLimit": "0.135",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Adjusted mean difference to Tiotropium low dose (2.5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.073",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.039",
+       "ciUpperLimit": "0.107",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Peak(0-3h) FEV1 Response [L] After 6 Weeks Treatment.",
+     "description": "Peak (0-3h) Forced Expiratory Volume in 1 second (FEV1) response.\n\nThe peak was defined as the maximum value measured within the first 3 h post dosing and response was defined as the change from patient baseline.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Full Analysis Set (FAS).",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres (L)",
+     "timeFrame": "day 1 and week 6",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Placebo matching Tiotropium+Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 Oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Olodaterol (5 µg)",
+       "description": "Olodaterol solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium (2.5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium (5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG004",
+       "title": "Tiotropium+Olodaterol FDC (2.5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG005",
+       "title": "Tiotropium+Olodaterol FDC (5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "135"
+        },
+        {
+         "groupId": "OG001",
+         "value": "138"
+        },
+        {
+         "groupId": "OG002",
+         "value": "136"
+        },
+        {
+         "groupId": "OG003",
+         "value": "137"
+        },
+        {
+         "groupId": "OG004",
+         "value": "135"
+        },
+        {
+         "groupId": "OG005",
+         "value": "138"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.072",
+           "spread": "0.017"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.291",
+           "spread": "0.016"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.290",
+           "spread": "0.016"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.300",
+           "spread": "0.016"
+          },
+          {
+           "groupId": "OG004",
+           "value": "0.422",
+           "spread": "0.016"
+          },
+          {
+           "groupId": "OG005",
+           "value": "0.411",
+           "spread": "0.016"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.338",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.305",
+       "ciUpperLimit": "0.371",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.120",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.087",
+       "ciUpperLimit": "0.153",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.111",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.078",
+       "ciUpperLimit": "0.143",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.350",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.317",
+       "ciUpperLimit": "0.383",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.131",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.098",
+       "ciUpperLimit": "0.164",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.132",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.099",
+       "ciUpperLimit": "0.165",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Adjusted mean difference to Tiotropium low dose (2.5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.122",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.089",
+       "ciUpperLimit": "0.155",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.017",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "FVC AUC0-24h Response [L] After 6 Weeks Treatment.",
+     "description": "Area under the Forced Vital Capacity (FVC) after 6 weeks treatment period-time curve from 0 to 24 h post-dose using the trapezoidal rule, divided by the duration (24 h) to report in litres.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Full Analysis Set (FAS).",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres(L)",
+     "timeFrame": "day 1 and week 6",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Placebo matching Tiotropium+Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 Oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Olodaterol (5 µg)",
+       "description": "Olodaterol solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium (2.5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium (5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG004",
+       "title": "Tiotropium+Olodaterol FDC (2.5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG005",
+       "title": "Tiotropium+Olodaterol FDC (5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "132"
+        },
+        {
+         "groupId": "OG001",
+         "value": "136"
+        },
+        {
+         "groupId": "OG002",
+         "value": "136"
+        },
+        {
+         "groupId": "OG003",
+         "value": "135"
+        },
+        {
+         "groupId": "OG004",
+         "value": "135"
+        },
+        {
+         "groupId": "OG005",
+         "value": "138"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.065",
+           "spread": "0.023"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.158",
+           "spread": "0.022"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.172",
+           "spread": "0.022"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.191",
+           "spread": "0.022"
+          },
+          {
+           "groupId": "OG004",
+           "value": "0.331",
+           "spread": "0.022"
+          },
+          {
+           "groupId": "OG005",
+           "value": "0.368",
+           "spread": "0.022"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.433",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.389",
+       "ciUpperLimit": "0.477",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.022",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.210",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.166",
+       "ciUpperLimit": "0.253",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.022",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.177",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.133",
+       "ciUpperLimit": "0.221",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.022",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.396",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.352",
+       "ciUpperLimit": "0.441",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.023",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.173",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.129",
+       "ciUpperLimit": "0.217",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.022",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.159",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.115",
+       "ciUpperLimit": "0.203",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.022",
+       "estimateComment": "Adjusted mean difference to Tiotropium low dose (2.5 µg) is calculated. is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.140",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.096",
+       "ciUpperLimit": "0.184",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.022",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "FVC AUC0-12h Response [L] After 6 Weeks Treatment.",
+     "description": "Area under the Forced Vital Capacity (FVC) after 6 weeks treatment period-time curve from 0 to 12 h post-dose using the trapezoidal rule, divided by the duration (12 h) to report in litres.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Full Analysis Set (FAS)",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres (L)",
+     "timeFrame": "day 1 and week 6",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Placebo matching Tiotropium+Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 Oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Olodaterol (5 µg)",
+       "description": "Olodaterol solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium (2.5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium (5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG004",
+       "title": "Tiotropium+Olodaterol FDC (2.5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG005",
+       "title": "Tiotropium+Olodaterol FDC (5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "132"
+        },
+        {
+         "groupId": "OG001",
+         "value": "136"
+        },
+        {
+         "groupId": "OG002",
+         "value": "136"
+        },
+        {
+         "groupId": "OG003",
+         "value": "135"
+        },
+        {
+         "groupId": "OG004",
+         "value": "135"
+        },
+        {
+         "groupId": "OG005",
+         "value": "138"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.023",
+           "spread": "0.024"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.240",
+           "spread": "0.024"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.249",
+           "spread": "0.024"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.261",
+           "spread": "0.024"
+          },
+          {
+           "groupId": "OG004",
+           "value": "0.420",
+           "spread": "0.024"
+          },
+          {
+           "groupId": "OG005",
+           "value": "0.440",
+           "spread": "0.024"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.463",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.417",
+       "ciUpperLimit": "0.509",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.024",
+       "estimateComment": "Adjusted mean difference to placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.200",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.154",
+       "ciUpperLimit": "0.246",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.023",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.179",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.133",
+       "ciUpperLimit": "0.225",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.023",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.443",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.396",
+       "ciUpperLimit": "0.490",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.024",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.181",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.134",
+       "ciUpperLimit": "0.227",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.024",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.171",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.125",
+       "ciUpperLimit": "0.218",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.024",
+       "estimateComment": "Adjusted mean difference to Tiotropium low dose (2.5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.159",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.113",
+       "ciUpperLimit": "0.206",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.024",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "FVC AUC12-24h Response [L] After 6 Weeks Treatment.",
+     "description": "Area under the Forced Vital Capacity (FVC) after 6 weeks treatment period-time curve from 12 to 24 h post-dose using the trapezoidal rule, divided by the duration (12 h) to report in litres.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Full Analysis Set (FAS).",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres (L)",
+     "timeFrame": "day 1 and week 6",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Placebo matching Tiotropium+Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 Oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Olodaterol (5 µg)",
+       "description": "Olodaterol solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium (2.5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium (5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG004",
+       "title": "Tiotropium+Olodaterol FDC (2.5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG005",
+       "title": "Tiotropium+Olodaterol FDC (5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "132"
+        },
+        {
+         "groupId": "OG001",
+         "value": "136"
+        },
+        {
+         "groupId": "OG002",
+         "value": "136"
+        },
+        {
+         "groupId": "OG003",
+         "value": "135"
+        },
+        {
+         "groupId": "OG004",
+         "value": "135"
+        },
+        {
+         "groupId": "OG005",
+         "value": "138"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.108",
+           "spread": "0.023"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.077",
+           "spread": "0.023"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.095",
+           "spread": "0.023"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.122",
+           "spread": "0.023"
+          },
+          {
+           "groupId": "OG004",
+           "value": "0.243",
+           "spread": "0.023"
+          },
+          {
+           "groupId": "OG005",
+           "value": "0.296",
+           "spread": "0.023"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.404",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.355",
+       "ciUpperLimit": "0.453",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.025",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.219",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.170",
+       "ciUpperLimit": "0.267",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.025",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.174",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.126",
+       "ciUpperLimit": "0.223",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.025",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.351",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.301",
+       "ciUpperLimit": "0.400",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.025",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.166",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.117",
+       "ciUpperLimit": "0.214",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.025",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.148",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.099",
+       "ciUpperLimit": "0.197",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.025",
+       "estimateComment": "Adjusted mean difference to Tiotropium low dose (2.5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.121",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.072",
+       "ciUpperLimit": "0.170",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.025",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Trough FVC Response [L] After 6 Weeks Treatment.",
+     "description": "Trough Forced Vital Capacity (FVC) response after 6 weeks treatment period.\n\nThe trough was defined as the mean of the 23 h and 23 h50 min measurements and response was defined as the change from patient baseline.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Full Analysis Set (FAS).",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres (L)",
+     "timeFrame": "day1 and week 6",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Placebo matching Tiotropium+Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 Oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Olodaterol (5 µg)",
+       "description": "Olodaterol solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium (2.5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium (5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG004",
+       "title": "Tiotropium+Olodaterol FDC (2.5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG005",
+       "title": "Tiotropium+Olodaterol FDC (5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "132"
+        },
+        {
+         "groupId": "OG001",
+         "value": "136"
+        },
+        {
+         "groupId": "OG002",
+         "value": "136"
+        },
+        {
+         "groupId": "OG003",
+         "value": "135"
+        },
+        {
+         "groupId": "OG004",
+         "value": "135"
+        },
+        {
+         "groupId": "OG005",
+         "value": "138"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.025",
+           "spread": "0.026"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.134",
+           "spread": "0.026"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.115",
+           "spread": "0.026"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.183",
+           "spread": "0.026"
+          },
+          {
+           "groupId": "OG004",
+           "value": "0.282",
+           "spread": "0.026"
+          },
+          {
+           "groupId": "OG005",
+           "value": "0.304",
+           "spread": "0.026"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.329",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.274",
+       "ciUpperLimit": "0.385",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.028",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.170",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.115",
+       "ciUpperLimit": "0.225",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.028",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.121",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.066",
+       "ciUpperLimit": "0.176",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.028",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Median Difference (Final Values)",
+       "paramValue": "0.307",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.251",
+       "ciUpperLimit": "0.363",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.029",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.147",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.092",
+       "ciUpperLimit": "0.203",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.028",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.166",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.111",
+       "ciUpperLimit": "0.222",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.028",
+       "estimateComment": "Adjusted mean difference to Tiotropium low dose (2.5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.099",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.043",
+       "ciUpperLimit": "0.154",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.028",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Peak (0-3h) FVC Response [L] After 6 Weeks Treatment.",
+     "description": "Peak (0-3h) Forced Vital Capacity (FVC) responses after 6 weeks treatment.\n\nPeak was defined as the maximum value measured within the first 3 h post dosing and response was defined as the change from patient baseline.\n\nMean is actually the Adjusted mean.\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect; compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Full Analysis Set (FAS)",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres (L)",
+     "timeFrame": "day 1 and week 6",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Placebo matching Tiotropium+Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 Oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Olodaterol (5 µg)",
+       "description": "Olodaterol solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium (2.5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium (5 µg)",
+       "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG004",
+       "title": "Tiotropium+Olodaterol FDC (2.5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      },
+      {
+       "id": "OG005",
+       "title": "Tiotropium+Olodaterol FDC (5/5 µg)",
+       "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "132"
+        },
+        {
+         "groupId": "OG001",
+         "value": "136"
+        },
+        {
+         "groupId": "OG002",
+         "value": "136"
+        },
+        {
+         "groupId": "OG003",
+         "value": "135"
+        },
+        {
+         "groupId": "OG004",
+         "value": "135"
+        },
+        {
+         "groupId": "OG005",
+         "value": "138"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.159",
+           "spread": "0.029"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.463",
+           "spread": "0.029"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.450",
+           "spread": "0.029"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.470",
+           "spread": "0.029"
+          },
+          {
+           "groupId": "OG004",
+           "value": "0.612",
+           "spread": "0.029"
+          },
+          {
+           "groupId": "OG005",
+           "value": "0.621",
+           "spread": "0.028"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.462",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.408",
+       "ciUpperLimit": "0.516",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.028",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.159",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.105",
+       "ciUpperLimit": "0.212",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.027",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG005"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.151",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.098",
+       "ciUpperLimit": "0.205",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.027",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.452",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.398",
+       "ciUpperLimit": "0.507",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.028",
+       "estimateComment": "Adjusted mean difference to Placebo is calculated."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.149",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.095",
+       "ciUpperLimit": "0.203",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.028",
+       "estimateComment": "Adjusted mean difference to Olodaterol (5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.161",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.107",
+       "ciUpperLimit": "0.216",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.028",
+       "estimateComment": "Adjusted mean difference to Tiotropium low dose (2.5 µg) is calculated."
+      },
+      {
+       "groupIds": [
+        "OG003",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effect model repeated measures (MMRM) with fixed effects for treatment,period and random effect for patient.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.142",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.087",
+       "ciUpperLimit": "0.196",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.028",
+       "estimateComment": "Adjusted mean difference to Tiotropium high dose (5 µg) is calculated."
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "From drug administration until 21 days after the last administration, upto 92 days.",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Placebo",
+     "description": "Placebo matching Tiotropium+Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 Oral inhalations once daily in the morning for 6 weeks.",
+     "seriousNumAffected": 4,
+     "seriousNumAtRisk": 138,
+     "otherNumAffected": 40,
+     "otherNumAtRisk": 138
+    },
+    {
+     "id": "EG001",
+     "title": "Olodaterol (5 µg)",
+     "description": "Olodaterol solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks.",
+     "seriousNumAffected": 8,
+     "seriousNumAtRisk": 138,
+     "otherNumAffected": 21,
+     "otherNumAtRisk": 138
+    },
+    {
+     "id": "EG002",
+     "title": "Tiotropium (2.5 µg)",
+     "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks.",
+     "seriousNumAffected": 5,
+     "seriousNumAtRisk": 137,
+     "otherNumAffected": 30,
+     "otherNumAtRisk": 137
+    },
+    {
+     "id": "EG003",
+     "title": "Tiotropium (5 µg)",
+     "description": "Tiotropium solution for inhalation - RESPIMAT : 2 oral inhalations once daily in the morning for 6 weeks.",
+     "seriousNumAffected": 3,
+     "seriousNumAtRisk": 138,
+     "otherNumAffected": 29,
+     "otherNumAtRisk": 138
+    },
+    {
+     "id": "EG004",
+     "title": "Tiotropium+Olodaterol FDC (2.5/5 µg)",
+     "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks.",
+     "seriousNumAffected": 4,
+     "seriousNumAtRisk": 136,
+     "otherNumAffected": 23,
+     "otherNumAtRisk": 136
+    },
+    {
+     "id": "EG005",
+     "title": "Tiotropium+Olodaterol FDC (5/5 µg)",
+     "description": "Tiotropium + Olodaterol fixed dose combination (FDC) solution for inhalation - RESPIMAT: 2 oral inhalations once daily in the morning for 6 weeks.",
+     "seriousNumAffected": 1,
+     "seriousNumAtRisk": 139,
+     "otherNumAffected": 25,
+     "otherNumAtRisk": 139
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Atrial tachycardia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Coronary artery disease",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Myocardial ischaemia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Impaired healing",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Inflammation",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Anaphylactic reaction",
+     "organSystem": "Immune system disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Food allergy",
+     "organSystem": "Immune system disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Hypersensitivity",
+     "organSystem": "Immune system disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Salpingitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Arthropod bite",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Comminuted fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Intervertebral disc protrusion",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Lung neoplasm malignant",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Rectal cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Cerebrovascular accident",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Transient ischaemic attack",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Renal infarct",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Ovarian cyst",
+     "organSystem": "Reproductive system and breast disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Acute respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 1,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Dyspnoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Pleural effusion",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Dermatitis allergic",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Arterial disorder",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Arterial occlusive disease",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Peripheral artery aneurysm",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Peripheral artery thrombosis",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Peripheral vascular disorder",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 0,
+       "numAtRisk": 139
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Nasopharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 14,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 12,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 12,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 12,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 12,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 9,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 15,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 5,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 13,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 12,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 8,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 9,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Cough",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 7,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 3,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 6,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 2,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 7,
+       "numAtRisk": 139
+      }
+     ]
+    },
+    {
+     "term": "Dyspnoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MEDDRA 16.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 9,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 3,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 4,
+       "numAtRisk": 137
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 3,
+       "numAtRisk": 138
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 136
+      },
+      {
+       "groupId": "EG005",
+       "numAffected": 2,
+       "numAtRisk": 139
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "Boehringer Ingelheim (BI) acknowledges that investigators have the right to publish the study results. Investigators shall provide BI with a copy of any publication or presentation for review prior to any submission. Such review will be done with regard to proprietary information, information related to patentable inventions, medical, scientific, and statistical accuracy within 60 days. BI may request a delay of the publication in order to protect BI's intellectual property rights."
+   },
+   "pointOfContact": {
+    "title": "Boehringer Ingelheim Call Center",
+    "organization": "Boehringer Ingelheim",
+    "email": "clintriage.rdg@boehringer-ingelheim.com",
+    "phone": "1-800-243-0127"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16",
+   "removedCountries": [
+    "Mexico"
+   ]
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C000611386",
+     "term": "tiotropium-olodaterol"
+    },
+    {
+     "id": "D000069447",
+     "term": "Tiotropium Bromide"
+    },
+    {
+     "id": "C549647",
+     "term": "olodaterol"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D012602",
+     "term": "Scopolamine Derivatives"
+    },
+    {
+     "id": "D014326",
+     "term": "Tropanes"
+    },
+    {
+     "id": "D053961",
+     "term": "Azabicyclo Compounds"
+    },
+    {
+     "id": "D001372",
+     "term": "Aza Compounds"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000470",
+     "term": "Alkaloids"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D019086",
+     "term": "Bridged Bicyclo Compounds, Heterocyclic"
+    },
+    {
+     "id": "D006572",
+     "term": "Heterocyclic Compounds, Bridged-Ring"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

@@ -1,0 +1,382 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT04536675",
+   "orgStudyIdInfo": {
+    "id": "SMC 2020-04-153"
+   },
+   "organization": {
+    "fullName": "Samsung Medical Center",
+    "class": "OTHER"
+   },
+   "briefTitle": "Effect of Perioperative Bronchodilator in COPD Patients Undergoing Lung Cancer Surgery",
+   "officialTitle": "Effect of Perioperative Fixed-dose Dual Bronchodilator Therapy on Post-operative Pulmonary Function Among Mild- to -Moderate COPD Patients Undergoing Lung Cancer Surgery"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-06",
+   "overallStatus": "ACTIVE_NOT_RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2021-04-01",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2026-04-03",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2026-09",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2020-08-24",
+   "studyFirstSubmitQcDate": "2020-08-28",
+   "studyFirstPostDateStruct": {
+    "date": "2020-09-03",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-06-23",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-06-26",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "PRINCIPAL_INVESTIGATOR",
+    "investigatorFullName": "Hye Yun Park",
+    "investigatorTitle": "Associate Professor",
+    "investigatorAffiliation": "Samsung Medical Center"
+   },
+   "leadSponsor": {
+    "name": "Samsung Medical Center",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false,
+   "isUsExport": false
+  },
+  "descriptionModule": {
+   "briefSummary": "This is a double-blind randomized controlled trial evaluating the effect of perioperative dual bronchodilator therapy on post-operative pulmonary function and health-related quality of life (QoL) in mild-to-moderate less symptomatic COPD patients undergoing lung cancer surgery.\n\nInvestigators hypothesized that dual bronchodilator, as compared with placebo, would prevent reduction of pulmonary function after surgical resection and improve postoperative health related QoL."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease",
+    "Non Small Cell Lung Cancer"
+   ],
+   "keywords": [
+    "Chronic obstructive pulmonary disease",
+    "Non-small cell lung cancer",
+    "Lobectomy",
+    "Dual bronchodilator therapy",
+    "Pulmonary function"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 204,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "VI/UME",
+     "type": "EXPERIMENTAL",
+     "description": "Anoro (Vilanterol 25mcg/Umeclinidium 62.5mcg) in Ellipta device Inhaled through mouth once daily",
+     "interventionNames": [
+      "Drug: Vilanterol and Umeclidinium Bromide"
+     ]
+    },
+    {
+     "label": "Control",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo (including lactose monohydrate) in Ellipta device Inhaled through mouth once daily",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Vilanterol and Umeclidinium Bromide",
+     "description": "Perioperative inhaler therapy with VI/UME (Vilanterol 25mcg/Umeclidinium 62.5mcg) once daily using Ellipta device from at least for 2 weeks preoperatively to at least 16 weeks post operatively.",
+     "armGroupLabels": [
+      "VI/UME"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Perioperative inhaler therapy with placebo once daily using Ellipta device from at least for 2 weeks preoperatively to at least 16 weeks post operatively.",
+     "armGroupLabels": [
+      "Control"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Difference in post-bronchodilator FEV1 between baseline and 16 weeks post-surgery",
+     "description": "Difference in post-bronchodilator FEV1 (ml) between baseline and 16 weeks post-surgery (T3-T0)",
+     "timeFrame": "Baseline (T0) and Postoperative 16 to 18 weeks (T3)"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Difference in post-bronchodilator FEV1 between baseline and 16 weeks post-surgery",
+     "description": "Difference in post-bronchodilator FEV1 (%pred) between baseline and 16 weeks post-surgery (T3-T0)",
+     "timeFrame": "Baseline (T0) and Postoperative 16 to 18 weeks (T3)"
+    },
+    {
+     "measure": "Difference between predicted postoperative FEV1 and actual postoperative FEV1 at 16 weeks",
+     "description": "Difference between predicted postoperative FEV1 (% predicted; calculated from baseline post-bronchodilator FEV1 \\[T0\\] and surgical extent) and actual post-bronchodilator FEV1 (% predicted) at 16 weeks postoperatively (PPO T3 - actual T3)",
+     "timeFrame": "Postoperative 16 to 18 weeks (T3) and baseline (T0)"
+    },
+    {
+     "measure": "Difference in post-bronchodilator FEV1 between baseline and surgery",
+     "description": "Difference in post-bronchodilator FEV1 (ml) between baseline and hospitalization for surgery (T0 - T1)",
+     "timeFrame": "Baseline (T0) and before surgery (T1)"
+    },
+    {
+     "measure": "Difference in post-bronchodilator FEV1 between baseline and surgery",
+     "description": "Difference in post-bronchodilator FEV1 (%pred) between baseline and hospitalization for surgery (T0 - T1)",
+     "timeFrame": "Baseline (T0) and before surgery (T1)"
+    },
+    {
+     "measure": "Difference in post-bronchodilator FEV1 between hospitalization for surgery and 3 weeks post-surgery",
+     "description": "Difference in post-bronchodilator FEV1 (mL) between hospitalization for surgery and 3 weeks post-surgery (T1 - T2)",
+     "timeFrame": "Before surgery (T1) and postoperative 2 to 4 weeks (T2)"
+    },
+    {
+     "measure": "Difference in post-bronchodilator FEV1 between hospitalization for surgery and 3 weeks post-surgery",
+     "description": "Difference in post-bronchodilator FEV1 (% pred) between hospitalization for surgery and 3 weeks post-surgery (T1 - T2)",
+     "timeFrame": "Before surgery (T1) and postoperative 2 to 4 weeks (T2)"
+    },
+    {
+     "measure": "Post-bronchodilator FEV₁ at 16 weeks post-surgery",
+     "description": "Post-bronchodilator FEV1 (mL) at 16 weeks postoperatively (T3)",
+     "timeFrame": "Postoperative 16 to 18 weeks (T3)"
+    },
+    {
+     "measure": "Post-bronchodilator FEV₁ at 16 weeks post-surgery",
+     "description": "Post-bronchodilator FEV1 (% pred) at 16 weeks postoperatively (T3)",
+     "timeFrame": "Postoperative 16 to 18 weeks (T3)"
+    },
+    {
+     "measure": "Dyspnea and health-related quality of life at postoperative 3 and 16 weeks",
+     "description": "mMRC",
+     "timeFrame": "Postoperative 2 to 4 weeks (T2) and postoperative 16 to 18 weeks (T3)"
+    },
+    {
+     "measure": "Dyspnea and health-related quality of life at postoperative 3 and 16 weeks",
+     "description": "CAT",
+     "timeFrame": "Postoperative 2 to 4 weeks (T2) and postoperative 16 to 18 weeks (T3)"
+    },
+    {
+     "measure": "Dyspnea and health-related quality of life at postoperative 3 and 16 weeks",
+     "description": "BFI",
+     "timeFrame": "Postoperative 2 to 4 weeks (T2) and postoperative 16 to 18 weeks (T3)"
+    },
+    {
+     "measure": "Dyspnea and health-related quality of life at postoperative 3 and 16 weeks",
+     "description": "SGRQ-C",
+     "timeFrame": "Postoperative 2 to 4 weeks (T2) and postoperative 16 to 18 weeks (T3)"
+    },
+    {
+     "measure": "Dyspnea and health-related quality of life at postoperative 3 and 16 weeks",
+     "description": "EORTC-QLC C-30",
+     "timeFrame": "Postoperative 2 to 4 weeks (T2) and postoperative 16 to 18 weeks (T3)"
+    },
+    {
+     "measure": "Dyspnea and health-related quality of life at postoperative 3 and 16 weeks",
+     "description": "LC-30",
+     "timeFrame": "Postoperative 2 to 4 weeks (T2) and postoperative 16 to 18 weeks (T3)"
+    },
+    {
+     "measure": "Exercise tolerance at postoperative 3 and 16 weeks",
+     "description": "6-minute walk test distance (meter)",
+     "timeFrame": "Postoperative 2 to 4 weeks (T2) and 16 to 18 weeks (T3)"
+    },
+    {
+     "measure": "Dyspnea and health-related quality of life at postoperative 3 and 16 weeks",
+     "description": "BDI/TDI",
+     "timeFrame": "Postoperative 2 to 4 weeks (T2) and postoperative 16 to 18 weeks (T3)"
+    },
+    {
+     "measure": "Postoperative pulmonary and cardiac complication",
+     "description": "Postoperative pulmonary complications (PPC) occurring within the first 30 postoperative days is defined as any of the following conditions: 1) atelectasis requiring bronchoscopic toileting; 2) pneumonia (at least three among leukocytosis, pulmonary infiltrate or consolidation, fever \\[\\>38℃\\], culture-positive, or use of antibiotics); 3) acute lung injury or acute respiratory distress syndrome (rate of arterial oxygen partial pressure to fractional inspired oxygen \\[PaO2/FiO2\\] \\<300 and bilateral infiltrate seen on chest radiograph without evidence of congestive heart failure or volume overload), or 4) acute exacerbation of chronic obstructive pulmonary disease. Postoperative cardiac complications (PCC) was defined as acute myocardial infarction, ventricular tachycardia/fibrillation, primary cardiac arrest, complete heart block, any cardiac-related death, or atrial arrhythmia associated with the use of anti-arrhythmic drugs or anti-coagulants.",
+     "timeFrame": "Within 30 days and 90 days"
+    },
+    {
+     "measure": "Length of hospital stay",
+     "description": "Length of hospital stay from the admission for lung cancer surgery to discharge or death",
+     "timeFrame": "From the admission for lung cancer surgery to discharge or death, whichever comes first"
+    },
+    {
+     "measure": "COPD Acute exacerbation",
+     "description": "Moderate acute exacerbation is defined as a clinic visit and severe acute exacerbations is defined as a hospitalization or an emergency room visit owing to one or more of the following worsening of dyspnea, increased sputum volume and purulent sputum requiring antibiotics and/ or oral corticosteroids.",
+     "timeFrame": "Between randomization (T0) and postoperative 16 to 18 weeks (T3)"
+    },
+    {
+     "measure": "Compliance",
+     "description": "The compliance is defined by the percentage of use during the clinical trial: complete adherence (\\>80%), partial adherence (50-80%), low adherence (\\<50%).",
+     "timeFrame": "Between randomization (T0) and postoperative 16 to 18 weeks (T3)"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Subjects of men or female over 40 years of age who are scheduled for curative pulmonary lobectomy due to confirmation (or high suspicion) of non-small cell lung cancer (NSCLC)\n* Subjects waiting at least 14 days for scheduled pulmonary lobectomy\n* Subjects who are newly diagnosed with COPD\\* or who have not used any bronchodilators within the past 3 months, even if they have previously been diagnosed with COPD\n\n  * COPD : Post-bronchodilator (Post-BD) FEV1/FVC \\<0.7 and Post-BD FEV1 ≥70 %predicted (%pred)\n* Subjects with dyspnea of 0 or 1 grade measured by modified Medical Research Council (mMRC)\n\nExclusion Criteria:\n\n* Pregnancy: subjects of women who are pregnant, lactating, planning on becoming pregnant during the clinical trial, or of child bearing potential not using contraception methods\n* COPD treatment/acute exacerbation: subjects who have been treated with COPD within the past 3 months or have experienced acute exacerbation of COPD within the past 1 month (Acute exacerbation of COPD is defined as the cases requiring antibiotics, oral corticosteroids, emergency treatment, or hospitalization due to at least one symptom from increased breathlessness, sputum volume, or sputum purulence)\n* Other pulmonary diseases: subjects who are physician-diagnosed with asthma or Idiopathic Pulmonary Fibrosis (IPF)\n* Lung cancer treatment: subjects who have been received neo-adjuvant treatment for lung cancer (chemotherapy, radiotherapy, or concurrent chemo-radiotherapy)\n* Other diseases/abnormalities: subjects diagnosed with historical or current evidence of clinically significant cardiovascular, neurological, psychiatric, renal, hepatic, immunological, gastrointestinal, urogenital, nervous system, musculoskeletal, skin, sensory, endocrine (including uncontrolled diabetes or thyroid disease) or hematological abnormalities including medical condition corresponding to 'warnings and precautions' (such as coronary artery disease, acute myocardial infarction, cardiac arrhythmia, hypertension, convulsive disorders, thyrotoxicosis, hypokalemia, diabetes, narrow-angle glaucoma, urinary retention, prostatic hyperplasia, bladder-neck obstruction etc.) that are uncontrolled and/or with cancer within 5 years (Significant is defined as any disease that, in the opinion of the Investigator, would put the safety of the subject at risk through participation, or which would affect the efficacy or safety analysis if the disease/condition exacerbated during the study.)\n* Abnormal and clinically significant 12-Lead Eletrocardiogram (ECG): subjects with abnormal and clinically significant ECG findings (Significant is defined as any disease that, in the opinion of the Investigator, would put the safety of the subject at risk through participation, or which would affect the efficacy or safety analysis if the disease/condition exacerbated during the study.)\n* Contraindications: subjects with a history of allergy or hypersensitivity to any Long-Acting Muscarinic Antagonist (LAMA), Long-Acting Beta-Agonist (LABA), lactose/milk protein, stearic magnesium, with generic problems including galactose intolerance, Lapp lactose deficiency, or glucose-galactose malabsorption, or with contraindication of inhaled anticholinergic-containing drugs\n* Mobility: subjects who are not able to walk independently without mobility assistance or other people",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "locations": [
+    {
+     "facility": "Samsung Medical Center",
+     "city": "Seoul",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "19476597",
+     "type": "BACKGROUND",
+     "citation": "Kobayashi S, Suzuki S, Niikawa H, Sugawara T, Yanai M. Preoperative use of inhaled tiotropium in lung cancer patients with untreated COPD. Respirology. 2009 Jul;14(5):675-9. doi: 10.1111/j.1440-1843.2009.01543.x. Epub 2009 May 19."
+    },
+    {
+     "pmid": "20872194",
+     "type": "BACKGROUND",
+     "citation": "Suzuki H, Sekine Y, Yoshida S, Suzuki M, Shibuya K, Takiguchi Y, Tatsumi K, Yoshino I. Efficacy of perioperative administration of long-acting bronchodilator on postoperative pulmonary function and quality of life in lung cancer patients with chronic obstructive pulmonary disease. Preliminary results of a randomized control study. Surg Today. 2010 Oct;40(10):923-30. doi: 10.1007/s00595-009-4196-1. Epub 2010 Sep 25."
+    },
+    {
+     "pmid": "20970351",
+     "type": "BACKGROUND",
+     "citation": "Bolukbas S, Eberlein M, Eckhoff J, Schirren J. Short-term effects of inhalative tiotropium/formoterol/budenoside versus tiotropium/formoterol in patients with newly diagnosed chronic obstructive pulmonary disease requiring surgery for lung cancer: a prospective randomized trial. Eur J Cardiothorac Surg. 2011 Jun;39(6):995-1000. doi: 10.1016/j.ejcts.2010.09.025. Epub 2010 Oct 22."
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "UNDECIDED"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D002289",
+     "term": "Carcinoma, Non-Small-Cell Lung"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D002283",
+     "term": "Carcinoma, Bronchogenic"
+    },
+    {
+     "id": "D001984",
+     "term": "Bronchial Neoplasms"
+    },
+    {
+     "id": "D008175",
+     "term": "Lung Neoplasms"
+    },
+    {
+     "id": "D012142",
+     "term": "Respiratory Tract Neoplasms"
+    },
+    {
+     "id": "D013899",
+     "term": "Thoracic Neoplasms"
+    },
+    {
+     "id": "D009371",
+     "term": "Neoplasms by Site"
+    },
+    {
+     "id": "D009369",
+     "term": "Neoplasms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C550468",
+     "term": "vilanterol"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

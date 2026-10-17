@@ -31,12 +31,12 @@ defects:
       creates/updates leave no audit entry.
     expected_stages: [unit test]
     old: |2-
-          svc.audited_write(session, ident, action, "design", design.id,
-                            prev.design_hash if prev else None, h, write, reason)
+              svc.audited_write(session, ident, action, "design", design.id,
+                                prev.design_hash if prev else None, h, write, reason)
     new: |2-
-          session.rollback()
-          write(session)
-          session.commit()
+              session.rollback()
+              write(session)
+              session.commit()
   - id: D3
     type: role can self-approve
     requirement: URS-021

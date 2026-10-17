@@ -140,11 +140,17 @@ def get_user(username: str | None, store: Store | None = None) -> User | None:
     return User(row["username"], row["display_name"], row["role"]) if row else None
 
 
-def require_user(username: str | None, store: Store | None = None) -> User:
+def require_identity(username: str | None) -> str:
+    """The acting username; 401 `identity_required` when none was sent (no registry lookup)."""
     if not username:
         raise ComplianceError(
             401, "identity_required", "Send the acting user in the X-User header (demo identity)."
         )
+    return username
+
+
+def require_user(username: str | None, store: Store | None = None) -> User:
+    username = require_identity(username)
     user = get_user(username, store)
     if user is None:
         raise ComplianceError(

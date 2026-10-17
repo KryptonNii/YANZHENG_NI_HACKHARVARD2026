@@ -166,12 +166,13 @@ def cmd_report(ctx: Any, a: argparse.Namespace) -> int:
 def cmd_impact(ctx: Any, a: argparse.Namespace) -> int:
     from . import impact
 
-    m = impact.run_impact(ctx, a.base, a.head, submit_as=a.as_user if a.submit else None)
+    m = impact.run_impact(ctx, a.base, a.head, submit=a.submit,
+                          submit_as=a.as_user if a.submit else None)
     _p(f"Change record draft {m['record_id']}: {m['path']}")
     _p(f"  {len(m['files'])} changed files ({len(m['unmapped'])} unmapped) → "
        f"{len(m['requirements'])} requirements → {len(m['tests_to_rerun'])} tests to rerun")
     if m.get("approval_id"):
-        _p(f"  Approval request {m['approval_id']} (pending).")
+        _p(f"  Approval request {m['approval_id']} ({m['approval_status']}).")
     return 0
 
 

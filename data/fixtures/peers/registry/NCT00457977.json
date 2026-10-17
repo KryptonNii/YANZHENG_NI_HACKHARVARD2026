@@ -1,0 +1,3363 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT00457977",
+   "orgStudyIdInfo": {
+    "id": "477"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "U10HL074424",
+     "type": "NIH",
+     "link": "https://reporter.nih.gov/quickSearch/U10HL074424"
+    }
+   ],
+   "organization": {
+    "fullName": "University of Minnesota",
+    "class": "OTHER"
+   },
+   "briefTitle": "Comparing Two Pneumococcal Vaccines in Adults With Chronic Obstructive Pulmonary Disease",
+   "officialTitle": "Pneumococcal Vaccine Response in COPD",
+   "acronym": "PNEUMO"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2015-04",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2007-03"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2011-05",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2011-05",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2007-04-05",
+   "studyFirstSubmitQcDate": "2007-04-05",
+   "studyFirstPostDateStruct": {
+    "date": "2007-04-09",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2014-03-27",
+   "resultsFirstSubmitQcDate": "2015-04-22",
+   "resultsFirstPostDateStruct": {
+    "date": "2015-05-12",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2015-04-22",
+   "lastUpdatePostDateStruct": {
+    "date": "2015-05-12",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "University of Minnesota",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "National Heart, Lung, and Blood Institute (NHLBI)",
+     "class": "NIH"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "Pneumococcal disease is a serious bacterial infection that can affect different parts of the body, including the lungs. People with chronic illnesses, such as chronic obstructive pulmonary disease (COPD), have a greater risk of developing pneumonia and meningitis as a result of pneumococcal disease. This study will compare the immune response to two types of pneumococcal vaccines in adults with COPD.",
+   "detailedDescription": "Individuals who are infected with the Streptococcus pneumoniae bacteria may develop pneumococcal disease, a serious disease that kills more people in the United States than all other vaccine-preventable diseases combined. Individuals with COPD, characterized by breathing difficulties due to damaged and obstructed lung airways, may have an increased risk of developing serious complications from pneumococcal disease, including pneumonia and meningitis. Currently, there are two types of pneumococcal vaccines available. The pneumococcal capsular polysaccharide (CPS) vaccine, known as Pneumovax, is typically given to adults 65 years of age or older and to any individuals with a serious health condition, including heart disease, lung disease, and diabetes. The diphtheria protein-conjugated vaccine (PCV7), known as Prevnar, is typically given to infants; however, adults who receive this vaccine may also have a favorable response. The purpose of this study is to compare the immune response to the Pneumovax and Prevnar vaccines in adults with COPD.\n\nThis study will enroll adults with mild to moderate COPD. Participants will be randomly assigned to receive either the Pneumovax or Prevnar vaccine. This will involve one or two injections. Blood collection will occur during study visits at Months 1, 12, and 24. Study researchers will contact participants by telephone at Months 6 and 18 to document any pneumococcal infections and any additional pneumococcal vaccinations."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ],
+   "keywords": [
+    "Chronic Obstructive Pulmonary Disease",
+    "COPD",
+    "Pneumococcal",
+    "Vaccine",
+    "Opsonization",
+    "Antibodies"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "PREVENTION",
+    "maskingInfo": {
+     "masking": "NONE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 181,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Pneumovax (PPSV23)",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "pneumococcal capsular polysaccharide vaccine (PPSV23) (Pneumovax)",
+     "interventionNames": [
+      "Biological: Pneumovax (PPSV23)"
+     ]
+    },
+    {
+     "label": "Prevnar (PCV7)",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "diphtheria protein-conjugated vaccine (PCV7) (Prevnar) 1.0 mL dose",
+     "interventionNames": [
+      "Biological: Prevnar (PCV7)"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "BIOLOGICAL",
+     "name": "Pneumovax (PPSV23)",
+     "description": "Injection",
+     "armGroupLabels": [
+      "Pneumovax (PPSV23)"
+     ],
+     "otherNames": [
+      "23-valent pneumococcal capsular polysaccharide vaccine",
+      "PPSV23",
+      "Pneumovax"
+     ]
+    },
+    {
+     "type": "BIOLOGICAL",
+     "name": "Prevnar (PCV7)",
+     "description": "Injection",
+     "armGroupLabels": [
+      "Prevnar (PCV7)"
+     ],
+     "otherNames": [
+      "7-valent pneumococcal conjugate vaccine",
+      "PCV7",
+      "Prevnar"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Serotype Opsonization Titers",
+     "description": "Opsonophagocytosis activity (OPK) serotype specific geometric means",
+     "timeFrame": "Measured at Baseline, Months 1, 12, and 24"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Serotype-specific Immunoglobulin G (IgG) Antibody Levels",
+     "description": "Serotype-specific immunoglobulin G Geometric Mean IgG antibody levels (ug/ml)",
+     "timeFrame": "Measured at Baseline, Months 1, 12, and 24"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Diagnosis of Chronic Obstructive Pulmonary Disease (COPD)\n* Post-bronchodilator forced expiratory volume at one second\n\n  /forced vital capacity (FEV1/FVC) level less than 70%\n* Ten or more pack-years of smoking\n* Willing to make return visits to the study clinic and accept telephone contact\n* Last pneumococcal vaccination occured at least 5 years prior to study entry\n\nExclusion Criteria:\n\n* Asthma\n* Sensitivity to pneumococcal vaccine\n* Known bleeding disorder, or requires long-term anticoagulation therapy\n* Presence of chronic disease that may impair pneumococcal vaccine response\n* Acute illness requiring antibiotics in the month prior to study entry\n* Medical condition that makes survival for 24 months following study entry unlikely\n* Pregnant",
+   "healthyVolunteers": true,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Antonello Punturieri, MD",
+     "affiliation": "National Heart, Lung, and Blood Institute (NHLBI)",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "University of Alabama at Birmingham",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "zip": "35249",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "Veteran's Administration Medical Center",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "zip": "35294-0006",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "LA BioMed at Harbor, University of California",
+     "city": "Los Angeles",
+     "state": "California",
+     "zip": "90502",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "University of California San Francisco-Airway Clinical Research Center",
+     "city": "San Francisco",
+     "state": "California",
+     "zip": "94143",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.77493,
+      "lon": -122.41942
+     }
+    },
+    {
+     "facility": "Denver Health Medical Center",
+     "city": "Denver",
+     "state": "Colorado",
+     "zip": "80204-4507",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.73915,
+      "lon": -104.9847
+     }
+    },
+    {
+     "facility": "National Jewish Medical and Research Center",
+     "city": "Denver",
+     "state": "Colorado",
+     "zip": "80204-4507",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.73915,
+      "lon": -104.9847
+     }
+    },
+    {
+     "facility": "Veteran's Administration Medical Center",
+     "city": "Denver",
+     "state": "Colorado",
+     "zip": "80220",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.73915,
+      "lon": -104.9847
+     }
+    },
+    {
+     "facility": "University of Maryland Hospital",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21201",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "Fallon Clinic",
+     "city": "Boston",
+     "state": "Massachusetts",
+     "zip": "02115",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.35843,
+      "lon": -71.05977
+     }
+    },
+    {
+     "facility": "Brigham and Women's Hospital",
+     "city": "Boston",
+     "state": "Massachusetts",
+     "zip": "02132",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.35843,
+      "lon": -71.05977
+     }
+    },
+    {
+     "facility": "Veteran's Administration Medical Center",
+     "city": "Boston",
+     "state": "Massachusetts",
+     "zip": "02132",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.35843,
+      "lon": -71.05977
+     }
+    },
+    {
+     "facility": "Veteran's Administration Medical Center",
+     "city": "Ann Arbor",
+     "state": "Michigan",
+     "zip": "48105",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.27756,
+      "lon": -83.74088
+     }
+    },
+    {
+     "facility": "University of Michigan Medical Center",
+     "city": "Ann Arbor",
+     "state": "Michigan",
+     "zip": "48109-0360",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.27756,
+      "lon": -83.74088
+     }
+    },
+    {
+     "facility": "Veteran's Administration Medical Center",
+     "city": "Minneapolis",
+     "state": "Minnesota",
+     "zip": "55417",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.97997,
+      "lon": -93.26384
+     }
+    },
+    {
+     "facility": "HealthPartners Research Foundation",
+     "city": "Minneapolis",
+     "state": "Minnesota",
+     "zip": "55440",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.97997,
+      "lon": -93.26384
+     }
+    },
+    {
+     "facility": "Mayo Clinic",
+     "city": "Rochester",
+     "state": "Minnesota",
+     "zip": "55905",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.02163,
+      "lon": -92.4699
+     }
+    },
+    {
+     "facility": "Temple University Lung Center",
+     "city": "Philadelphia",
+     "state": "Pennsylvania",
+     "zip": "19140",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.95238,
+      "lon": -75.16362
+     }
+    },
+    {
+     "facility": "University of Pittsburgh Emphysema Research Center",
+     "city": "Pittsburgh",
+     "state": "Pennsylvania",
+     "zip": "15213",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.44062,
+      "lon": -79.99589
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "22652582",
+     "type": "DERIVED",
+     "citation": "Dransfield MT, Harnden S, Burton RL, Albert RK, Bailey WC, Casaburi R, Connett J, Cooper JA, Criner GJ, Curtis JL, Han MK, Make B, Marchetti N, Martinez FJ, McEvoy C, Nahm MH, Niewoehner DE, Porszasz J, Reilly J, Scanlon PD, Scharf SM, Sciurba FC, Washko GR, Woodruff PG, Lazarus SC; NIH COPD Clinical Research Network. Long-term comparative immunogenicity of protein conjugate and free polysaccharide pneumococcal vaccines in chronic obstructive pulmonary disease. Clin Infect Dis. 2012 Sep;55(5):e35-44. doi: 10.1093/cid/cis513. Epub 2012 May 31."
+    },
+    {
+     "pmid": "19556517",
+     "type": "DERIVED",
+     "citation": "Dransfield MT, Nahm MH, Han MK, Harnden S, Criner GJ, Martinez FJ, Scanlon PD, Woodruff PG, Washko GR, Connett JE, Anthonisen NR, Bailey WC; COPD Clinical Research Network. Superior immune response to protein-conjugate versus free pneumococcal polysaccharide vaccine in chronic obstructive pulmonary disease. Am J Respir Crit Care Med. 2009 Sep 15;180(6):499-505. doi: 10.1164/rccm.200903-0488OC. Epub 2009 Jun 25."
+    }
+   ],
+   "seeAlsoLinks": [
+    {
+     "label": "Click here for the National Institutes of Health Web site.",
+     "url": "http://www.nih.gov/"
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "recruitmentDetails": "Participant's were recruited from 10 medical centers across the US from April 9, 2007 to May 7, 2009.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Pneumovax (PPSV23)",
+     "description": "pneumococcal capsular polysaccharide vaccine (PPSV23) (Pneumovax)"
+    },
+    {
+     "id": "FG001",
+     "title": "Prevnar (PCV7)",
+     "description": "diphtheria protein-conjugated vaccine (PCV7) (Prevnar) 1.0 mL dose"
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "90"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "91"
+        }
+       ]
+      },
+      {
+       "type": "1-Month",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "88"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "87"
+        }
+       ]
+      },
+      {
+       "type": "1-Year",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "69"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "76"
+        }
+       ]
+      },
+      {
+       "type": "2-Year",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "62"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "66"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "62"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "66"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "28"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "25"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Pneumovax (PPSV23)",
+     "description": "pneumococcal capsular polysaccharide vaccine (PPSV23) (Pneumovax)"
+    },
+    {
+     "id": "BG001",
+     "title": "Prevnar (PCV7)",
+     "description": "diphtheria protein-conjugated vaccine (PCV7) (Prevnar) 1.0 mL dose"
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "90"
+      },
+      {
+       "groupId": "BG001",
+       "value": "91"
+      },
+      {
+       "groupId": "BG002",
+       "value": "181"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "64",
+           "spread": "10"
+          },
+          {
+           "groupId": "BG001",
+           "value": "63",
+           "spread": "9"
+          },
+          {
+           "groupId": "BG002",
+           "value": "64",
+           "spread": "9"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "38"
+          },
+          {
+           "groupId": "BG001",
+           "value": "32"
+          },
+          {
+           "groupId": "BG002",
+           "value": "70"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "52"
+          },
+          {
+           "groupId": "BG001",
+           "value": "59"
+          },
+          {
+           "groupId": "BG002",
+           "value": "111"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Region of Enrollment",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "classes": [
+      {
+       "title": "United States",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "90"
+          },
+          {
+           "groupId": "BG001",
+           "value": "91"
+          },
+          {
+           "groupId": "BG002",
+           "value": "181"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Forced expiratory volume at one second (FEV1)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "LIters (L)",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1.27",
+           "spread": "0.50"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1.33",
+           "spread": "0.53"
+          },
+          {
+           "groupId": "BG002",
+           "value": "1.30",
+           "spread": "0.51"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "FEV1 (% Predicted)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "percent predicted",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "44.8",
+           "spread": "15.1"
+          },
+          {
+           "groupId": "BG001",
+           "value": "44.9",
+           "spread": "14.7"
+          },
+          {
+           "groupId": "BG002",
+           "value": "44.8",
+           "spread": "14.9"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "forced expiratory volume at one second/forced vital capacity (FEV1/FVC)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "percentage of FEV1/FVC",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "45.0",
+           "spread": "12.5"
+          },
+          {
+           "groupId": "BG001",
+           "value": "45.8",
+           "spread": "12.6"
+          },
+          {
+           "groupId": "BG002",
+           "value": "45.4",
+           "spread": "12.5"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Race",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "classes": [
+      {
+       "title": "Caucasian",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "68"
+          },
+          {
+           "groupId": "BG001",
+           "value": "70"
+          },
+          {
+           "groupId": "BG002",
+           "value": "138"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "African American",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "18"
+          },
+          {
+           "groupId": "BG001",
+           "value": "18"
+          },
+          {
+           "groupId": "BG002",
+           "value": "36"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Asian",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "2"
+          },
+          {
+           "groupId": "BG002",
+           "value": "2"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Native American",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1"
+          },
+          {
+           "groupId": "BG002",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Pacific Islander",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "More than one",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "3"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "3"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Oxygen use at baseline",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "classes": [
+      {
+       "title": "Oxygen User",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "29"
+          },
+          {
+           "groupId": "BG001",
+           "value": "21"
+          },
+          {
+           "groupId": "BG002",
+           "value": "50"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Non-oxygen user",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "61"
+          },
+          {
+           "groupId": "BG001",
+           "value": "70"
+          },
+          {
+           "groupId": "BG002",
+           "value": "131"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Pack years smoking",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "pack years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "54.9",
+           "spread": "27.1"
+          },
+          {
+           "groupId": "BG001",
+           "value": "52.0",
+           "spread": "27.6"
+          },
+          {
+           "groupId": "BG002",
+           "value": "53.4",
+           "spread": "27.3"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Current Smoker",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "classes": [
+      {
+       "title": "Current Smoker",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "32"
+          },
+          {
+           "groupId": "BG001",
+           "value": "33"
+          },
+          {
+           "groupId": "BG002",
+           "value": "65"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Non-Current Smoker",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "58"
+          },
+          {
+           "groupId": "BG001",
+           "value": "58"
+          },
+          {
+           "groupId": "BG002",
+           "value": "116"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Vaccine Naive",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "classes": [
+      {
+       "title": "Vaccine Naive",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "42"
+          },
+          {
+           "groupId": "BG001",
+           "value": "45"
+          },
+          {
+           "groupId": "BG002",
+           "value": "87"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Previously Vaccinated",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "48"
+          },
+          {
+           "groupId": "BG001",
+           "value": "46"
+          },
+          {
+           "groupId": "BG002",
+           "value": "94"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Serotype Opsonization Titers",
+     "description": "Opsonophagocytosis activity (OPK) serotype specific geometric means",
+     "populationDescription": "All participants with blood samples were analyzed.",
+     "reportingStatus": "POSTED",
+     "paramType": "GEOMETRIC_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "titers",
+     "timeFrame": "Measured at Baseline, Months 1, 12, and 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Pneumovax (PPSV23)",
+       "description": "pneumococcal capsular polysaccharide vaccine (PPSV23) (Pneumovax)"
+      },
+      {
+       "id": "OG001",
+       "title": "Prevnar (PCV7)",
+       "description": "diphtheria protein-conjugated vaccine (PCV7) (Prevnar) 1.0 mL dose"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "90"
+        },
+        {
+         "groupId": "OG001",
+         "value": "91"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Serotype 4 Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "10.85",
+           "lowerLimit": "7.46",
+           "upperLimit": "15.79"
+          },
+          {
+           "groupId": "OG001",
+           "value": "12.63",
+           "lowerLimit": "8.15",
+           "upperLimit": "19.58"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 4 1-Month",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "132.51",
+           "lowerLimit": "79.78",
+           "upperLimit": "220.09"
+          },
+          {
+           "groupId": "OG001",
+           "value": "908.23",
+           "lowerLimit": "609.84",
+           "upperLimit": "1352.63"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 4 1-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "61.79",
+           "lowerLimit": "35.58",
+           "upperLimit": "107.34"
+          },
+          {
+           "groupId": "OG001",
+           "value": "268.52",
+           "lowerLimit": "157.82",
+           "upperLimit": "456.86"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 4 2-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "69.12",
+           "lowerLimit": "38.15",
+           "upperLimit": "125.23"
+          },
+          {
+           "groupId": "OG001",
+           "value": "236.89",
+           "lowerLimit": "134.53",
+           "upperLimit": "417.13"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 6B Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "33.26",
+           "lowerLimit": "20.7",
+           "upperLimit": "53.45"
+          },
+          {
+           "groupId": "OG001",
+           "value": "49.76",
+           "lowerLimit": "31.4",
+           "upperLimit": "78.76"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 6B 1-Month",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "388.08",
+           "lowerLimit": "231.39",
+           "upperLimit": "650.89"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1003.30",
+           "lowerLimit": "653.40",
+           "upperLimit": "1540.56"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 6B 1-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "293.06",
+           "lowerLimit": "129.54",
+           "upperLimit": "405.80"
+          },
+          {
+           "groupId": "OG001",
+           "value": "476.15",
+           "lowerLimit": "293.06",
+           "upperLimit": "773.64"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 6B 2-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "240.32",
+           "lowerLimit": "126.30",
+           "upperLimit": "457.28"
+          },
+          {
+           "groupId": "OG001",
+           "value": "322.98",
+           "lowerLimit": "184.43",
+           "upperLimit": "565.62"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 9V Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "37.17",
+           "lowerLimit": "22.25",
+           "upperLimit": "62.08"
+          },
+          {
+           "groupId": "OG001",
+           "value": "31.44",
+           "lowerLimit": "19.72",
+           "upperLimit": "50.14"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 9V 1-Month",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "267.34",
+           "lowerLimit": "165.45",
+           "upperLimit": "431.96"
+          },
+          {
+           "groupId": "OG001",
+           "value": "734.52",
+           "lowerLimit": "488.94",
+           "upperLimit": "1103.43"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 9V 1-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "142.22",
+           "lowerLimit": "81.86",
+           "upperLimit": "247.10"
+          },
+          {
+           "groupId": "OG001",
+           "value": "443.55",
+           "lowerLimit": "283.80",
+           "upperLimit": "693.21"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 9V 2-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "219.35",
+           "lowerLimit": "122.65",
+           "upperLimit": "392.28"
+          },
+          {
+           "groupId": "OG001",
+           "value": "432.85",
+           "lowerLimit": "258.03",
+           "upperLimit": "726.13"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 14 Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "138.61",
+           "lowerLimit": "76.62",
+           "upperLimit": "250.75"
+          },
+          {
+           "groupId": "OG001",
+           "value": "116.90",
+           "lowerLimit": "63.07",
+           "upperLimit": "216.69"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 14 1-Month",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1895.17",
+           "lowerLimit": "1207.15",
+           "upperLimit": "2975.32"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2584.06",
+           "lowerLimit": "1728.32",
+           "upperLimit": "3863.50"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 14 1-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "839.72",
+           "lowerLimit": "493.8",
+           "upperLimit": "1427.96"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1801.11",
+           "lowerLimit": "1158.45",
+           "upperLimit": "2800.29"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 14 2-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "594.09",
+           "lowerLimit": "357.99",
+           "upperLimit": "985.91"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1255.24",
+           "lowerLimit": "786.00",
+           "upperLimit": "2004.63"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 18C Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "42.32",
+           "lowerLimit": "25.25",
+           "upperLimit": "70.93"
+          },
+          {
+           "groupId": "OG001",
+           "value": "42.81",
+           "lowerLimit": "26.18",
+           "upperLimit": "70.02"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 18C 1-Month",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "544.49",
+           "lowerLimit": "334.23",
+           "upperLimit": "887.02"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1815.99",
+           "lowerLimit": "1217.04",
+           "upperLimit": "2709.74"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 18C 1-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "284.41",
+           "lowerLimit": "170.67",
+           "upperLimit": "473.97"
+          },
+          {
+           "groupId": "OG001",
+           "value": "665.09",
+           "lowerLimit": "447.27",
+           "upperLimit": "988.97"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 18C 2-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "267.94",
+           "lowerLimit": "151.74",
+           "upperLimit": "473.14"
+          },
+          {
+           "groupId": "OG001",
+           "value": "540.01",
+           "lowerLimit": "361.42",
+           "upperLimit": "806.84"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 19F Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "13.71",
+           "lowerLimit": "8.40",
+           "upperLimit": "22.38"
+          },
+          {
+           "groupId": "OG001",
+           "value": "16.86",
+           "lowerLimit": "10.31",
+           "upperLimit": "27.57"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 19F 1-Month",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "266.49",
+           "lowerLimit": "155.07",
+           "upperLimit": "457.97"
+          },
+          {
+           "groupId": "OG001",
+           "value": "193.62",
+           "lowerLimit": "110.85",
+           "upperLimit": "338.22"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 19F 1-year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "116.35",
+           "lowerLimit": "65.51",
+           "upperLimit": "206.66"
+          },
+          {
+           "groupId": "OG001",
+           "value": "85.87",
+           "lowerLimit": "47.26",
+           "upperLimit": "156.03"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 19F 2-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "134.21",
+           "lowerLimit": "77.52",
+           "upperLimit": "232.36"
+          },
+          {
+           "groupId": "OG001",
+           "value": "116.40",
+           "lowerLimit": "64.04",
+           "upperLimit": "211.57"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 23F Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "11.79",
+           "lowerLimit": "7.59",
+           "upperLimit": "18.33"
+          },
+          {
+           "groupId": "OG001",
+           "value": "18.35",
+           "lowerLimit": "11.34",
+           "upperLimit": "29.68"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 23F 1-Month",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "114.86",
+           "lowerLimit": "64.88",
+           "upperLimit": "203.35"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1170.32",
+           "lowerLimit": "700.32",
+           "upperLimit": "1955.75"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 23F 1-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "47.75",
+           "lowerLimit": "26.09",
+           "upperLimit": "87.38"
+          },
+          {
+           "groupId": "OG001",
+           "value": "407.11",
+           "lowerLimit": "238.14",
+           "upperLimit": "695.95"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 23F 2-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "39.97",
+           "lowerLimit": "22.63",
+           "upperLimit": "70.60"
+          },
+          {
+           "groupId": "OG001",
+           "value": "266.16",
+           "lowerLimit": "140.25",
+           "upperLimit": "505.09"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Serotype-specific Immunoglobulin G (IgG) Antibody Levels",
+     "description": "Serotype-specific immunoglobulin G Geometric Mean IgG antibody levels (ug/ml)",
+     "populationDescription": "All participants with blood samples were analyzed.",
+     "reportingStatus": "POSTED",
+     "paramType": "GEOMETRIC_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "ug/ml",
+     "timeFrame": "Measured at Baseline, Months 1, 12, and 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Pneumovax (PPSV23)",
+       "description": "pneumococcal capsular polysaccharide vaccine (PPSV23) (Pneumovax)"
+      },
+      {
+       "id": "OG001",
+       "title": "Prevnar (PCV7)",
+       "description": "diphtheria protein-conjugated vaccine (PCV7) (Prevnar) 1.0 mL dose"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "90"
+        },
+        {
+         "groupId": "OG001",
+         "value": "91"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Serotype 4 Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.30",
+           "lowerLimit": "0.23",
+           "upperLimit": "0.38"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.28",
+           "lowerLimit": "0.21",
+           "upperLimit": "0.37"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 4 1-Month",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.74",
+           "lowerLimit": "0.54",
+           "upperLimit": "1.01"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.95",
+           "lowerLimit": "1.39",
+           "upperLimit": "2.73"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 4 1-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.43",
+           "lowerLimit": "0.31",
+           "upperLimit": "0.60"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.70",
+           "lowerLimit": "0.50",
+           "upperLimit": "0.97"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 4 2-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.45",
+           "lowerLimit": "0.32",
+           "upperLimit": "0.65"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.53",
+           "lowerLimit": "0.38",
+           "upperLimit": "0.75"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 6B Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.89",
+           "lowerLimit": "0.73",
+           "upperLimit": "1.09"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.90",
+           "lowerLimit": "0.72",
+           "upperLimit": "1.13"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 6B 1-Month",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.26",
+           "lowerLimit": "1.65",
+           "upperLimit": "3.09"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.19",
+           "lowerLimit": "2.35",
+           "upperLimit": "4.34"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 6B 1-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.32",
+           "lowerLimit": "1.02",
+           "upperLimit": "1.72"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.77",
+           "lowerLimit": "1.29",
+           "upperLimit": "2.42"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 6B 2-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.27",
+           "lowerLimit": "0.95",
+           "upperLimit": "1.69"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.33",
+           "lowerLimit": "0.95",
+           "upperLimit": "1.85"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 9V Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.83",
+           "lowerLimit": "0.64",
+           "upperLimit": "1.07"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.78",
+           "lowerLimit": "0.60",
+           "upperLimit": "1.01"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 9V 1-Month",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.72",
+           "lowerLimit": "1.98",
+           "upperLimit": "3.72"
+          },
+          {
+           "groupId": "OG001",
+           "value": "4.87",
+           "lowerLimit": "3.64",
+           "upperLimit": "6.50"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 9V 1-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.53",
+           "lowerLimit": "1.11",
+           "upperLimit": "2.09"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.15",
+           "lowerLimit": "1.59",
+           "upperLimit": "2.91"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 9V 2-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.37",
+           "lowerLimit": "0.98",
+           "upperLimit": "1.90"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.65",
+           "lowerLimit": "1.22",
+           "upperLimit": "2.24"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 14 Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.59",
+           "lowerLimit": "1.87",
+           "upperLimit": "3.57"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.53",
+           "lowerLimit": "1.77",
+           "upperLimit": "3.61"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 14 1-Month",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "10.80",
+           "lowerLimit": "7.47",
+           "upperLimit": "15.61"
+          },
+          {
+           "groupId": "OG001",
+           "value": "15.73",
+           "lowerLimit": "11.25",
+           "upperLimit": "22.00"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 14 1-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "5.76",
+           "lowerLimit": "3.97",
+           "upperLimit": "8.35"
+          },
+          {
+           "groupId": "OG001",
+           "value": "7.47",
+           "lowerLimit": "5.15",
+           "upperLimit": "10.84"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 14 2-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "4.82",
+           "lowerLimit": "3.38",
+           "upperLimit": "6.88"
+          },
+          {
+           "groupId": "OG001",
+           "value": "5.68",
+           "lowerLimit": "3.75",
+           "upperLimit": "8.58"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 18C Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.16",
+           "lowerLimit": "0.88",
+           "upperLimit": "1.53"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.07",
+           "lowerLimit": "0.78",
+           "upperLimit": "1.46"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 18C 1-Month",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "4.25",
+           "lowerLimit": "3.11",
+           "upperLimit": "5.82"
+          },
+          {
+           "groupId": "OG001",
+           "value": "9.65",
+           "lowerLimit": "7.22",
+           "upperLimit": "12.89"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 18C 1-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.25",
+           "lowerLimit": "1.59",
+           "upperLimit": "3.19"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.74",
+           "lowerLimit": "2.78",
+           "upperLimit": "5.03"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 18C 2-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.94",
+           "lowerLimit": "1.38",
+           "upperLimit": "2.72"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.77",
+           "lowerLimit": "2.05",
+           "upperLimit": "3.74"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 19F Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.20",
+           "lowerLimit": "2.62",
+           "upperLimit": "3.91"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.01",
+           "lowerLimit": "2.45",
+           "upperLimit": "3.70"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 19F 1-Month",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "6.79",
+           "lowerLimit": "5.27",
+           "upperLimit": "8.76"
+          },
+          {
+           "groupId": "OG001",
+           "value": "7.54",
+           "lowerLimit": "5.76",
+           "upperLimit": "9.85"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 19F 1-year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "4.25",
+           "lowerLimit": "3.26",
+           "upperLimit": "5.53"
+          },
+          {
+           "groupId": "OG001",
+           "value": "4.32",
+           "lowerLimit": "3.37",
+           "upperLimit": "5.52"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 19F 2-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.85",
+           "lowerLimit": "2.90",
+           "upperLimit": "5.11"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.68",
+           "lowerLimit": "2.74",
+           "upperLimit": "4.94"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 23F Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.58",
+           "lowerLimit": "0.45",
+           "upperLimit": "0.75"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.74",
+           "lowerLimit": "0.56",
+           "upperLimit": "0.98"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 23F 1-Month",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.88",
+           "lowerLimit": "1.29",
+           "upperLimit": "2.73"
+          },
+          {
+           "groupId": "OG001",
+           "value": "7.76",
+           "lowerLimit": "5.49",
+           "upperLimit": "10.97"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 23F 1-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.12",
+           "lowerLimit": "0.80",
+           "upperLimit": "1.55"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.73",
+           "lowerLimit": "1.94",
+           "upperLimit": "3.84"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serotype 23F 2-Year",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.00",
+           "lowerLimit": "0.72",
+           "upperLimit": "1.39"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.99",
+           "lowerLimit": "1.38",
+           "upperLimit": "2.86"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "2 Years",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Pneumovax (PPSV23)",
+     "description": "pneumococcal capsular polysaccharide vaccine (PPSV23) (Pneumovax)",
+     "seriousNumAffected": 27,
+     "seriousNumAtRisk": 90,
+     "otherNumAffected": 58,
+     "otherNumAtRisk": 90
+    },
+    {
+     "id": "EG001",
+     "title": "Prevnar (PCV7)",
+     "description": "diphtheria protein-conjugated vaccine (PCV7) (Prevnar) 1.0 mL dose",
+     "seriousNumAffected": 32,
+     "seriousNumAtRisk": 91,
+     "otherNumAffected": 54,
+     "otherNumAtRisk": 91
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Intestinal Infectious Disease",
+     "organSystem": "Infections and infestations",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Tuberculosis",
+     "organSystem": "Infections and infestations",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Viral Infection",
+     "organSystem": "Infections and infestations",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Oral Neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Digestive Neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Respiratory Neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Benign or Uncertain Neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Adrenal Insufficiency",
+     "organSystem": "Endocrine disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Hypercalcemia",
+     "organSystem": "Endocrine disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Anemia",
+     "organSystem": "Blood and lymphatic system disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Cataract",
+     "organSystem": "Eye disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Hypertensive",
+     "organSystem": "Vascular disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Ischemic Heart Disease",
+     "organSystem": "Cardiac disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 2,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Pulmonary Circulation",
+     "organSystem": "Vascular disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Other Heart Disease",
+     "organSystem": "Cardiac disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Atherosclerosis",
+     "organSystem": "Vascular disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 7,
+       "numAffected": 5,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 7,
+       "numAffected": 7,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Influenza",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "COPD",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 11,
+       "numAffected": 9,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 14,
+       "numAffected": 11,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Pneumothorax",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Enteritis",
+     "organSystem": "Gastrointestinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Intestinal Obstruction",
+     "organSystem": "Gastrointestinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Liver Disease",
+     "organSystem": "Gastrointestinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Inflammatory diseases of prostate",
+     "organSystem": "Renal and urinary disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Cystitis",
+     "organSystem": "Renal and urinary disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Menorrhagia",
+     "organSystem": "Reproductive system and breast disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Skin Infection",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Arthropy",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Osteopathy",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Epistaxis",
+     "organSystem": "General disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Other Respiratory",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Death Unkown Cause",
+     "organSystem": "General disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Complication from surgery",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Fracture",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Concussion",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Multiple drug intoxication",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Brain Neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Neuroendocrine Neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Cerebrovascular Disease",
+     "organSystem": "Nervous system disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 91
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Benign or Uncertain Neoplasms",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 6,
+       "numAffected": 5,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Acute Respiratory Infection",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 18,
+       "numAffected": 15,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 19,
+       "numAffected": 15,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Skin - Inflammatory",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 5,
+       "numAffected": 5,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Arthropathy",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 5,
+       "numAffected": 5,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Pain",
+     "organSystem": "Nervous system disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 7,
+       "numAffected": 5,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 5,
+       "numAffected": 5,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "COPD",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 84,
+       "numAffected": 40,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 74,
+       "numAffected": 36,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Rheumatism",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 7,
+       "numAffected": 6,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 11,
+       "numAffected": 7,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Other - Respiratory",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 13,
+       "numAffected": 11,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 11,
+       "numAffected": 11,
+       "numAtRisk": 91
+      }
+     ]
+    },
+    {
+     "term": "Sprains",
+     "organSystem": "Investigations",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 6,
+       "numAffected": 6,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 91
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictiveAgreement": false
+   },
+   "pointOfContact": {
+    "title": "Sarah Harnden",
+    "organization": "University of Minnesota",
+    "email": "sharnden@ccbr.umn.edu",
+    "phone": "612-626-9011"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D022242",
+     "term": "Pneumococcal Vaccines"
+    },
+    {
+     "id": "C414006",
+     "term": "23-valent pneumococcal capsular polysaccharide vaccine"
+    },
+    {
+     "id": "D000069443",
+     "term": "Heptavalent Pneumococcal Conjugate Vaccine"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D022541",
+     "term": "Streptococcal Vaccines"
+    },
+    {
+     "id": "D001428",
+     "term": "Bacterial Vaccines"
+    },
+    {
+     "id": "D014612",
+     "term": "Vaccines"
+    },
+    {
+     "id": "D001688",
+     "term": "Biological Products"
+    },
+    {
+     "id": "D045424",
+     "term": "Complex Mixtures"
+    },
+    {
+     "id": "D017778",
+     "term": "Vaccines, Combined"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

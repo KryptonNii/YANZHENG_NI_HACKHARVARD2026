@@ -1,8 +1,8 @@
 /**
  * In-browser MOCK API (VITE_MOCK_API=1 only). Patches window.fetch for /api/* so the real client
  * code path is exercised. Mirrors the envelopes of A5's routes and A7's approval rules (no
- * self-approval, order enforced, PIN re-authentication with A7's demo PINs). Data is fictional and
- * labelled as such everywhere.
+ * self-approval, one step per signer, order enforced, PIN re-authentication with A7's demo PINs).
+ * Data is fictional and labelled as such everywhere.
  */
 import type { ApprovalRequest, Levers, MetricRange, Signature, SignatureMeaning, TrialDesign } from "../../contracts";
 import type { SavedScenario, ScenarioResultX } from "../types";
@@ -394,13 +394,16 @@ on("POST", /^\/api\/approvals\/([^/]+)\/sign$/, (m, { body, headers }) => {
   const { meaning, pin } = body as { meaning: SignatureMeaning; pin: string };
   const me = actor(headers);
   if (!me.user) return err(401, "identity_required", "Send the X-User header.");
-  if (!MOCK_PINS[me.user] || MOCK_PINS[me.user] !== pin) return err(401, "invalid_credential", "Unknown user or wrong PIN.");
   if (a.status !== "pending") return err(409, "request_closed", `This request is already ${a.status}.`);
+  if (!MOCK_PINS[me.user] || MOCK_PINS[me.user] !== pin) return err(401, "invalid_credential", "Unknown user or wrong PIN.");
   if (me.user === a.author && (meaning === "reviewed" || meaning === "approved")) {
     return err(403, "self_approval_forbidden", "The author of a record cannot review or approve it (segregation of duties).");
   }
   const next = a.required_meanings.find((x) => !a.signatures.some((s) => s.meaning === x));
   if (meaning !== next) return err(409, "out_of_order", `The next required signature is “${next}”.`);
+  if (a.signatures.some((s) => s.signer === me.user)) {
+    return err(403, "duplicate_signer", "One person can sign only one step of a request (segregation of duties).");
+  }
   if ((meaning === "reviewed" && !["reviewer", "qa"].includes(me.role)) || (meaning === "approved" && me.role !== "qa")) {
     return err(403, "role_not_permitted", `Role “${me.role}” cannot sign “${meaning}”.`);
   }

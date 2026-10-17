@@ -1,0 +1,3760 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01964352",
+   "orgStudyIdInfo": {
+    "id": "1237.25"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2013-002243-29",
+     "type": "EUDRACT_NUMBER",
+     "domain": "EudraCT"
+    }
+   ],
+   "organization": {
+    "fullName": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Tiotropium + Olodaterol Fixed Dose Combination (FDC) in Chronic Obstructive Pulmonary Disease (OTEMTO 1)",
+   "officialTitle": "A Randomised, Double-blind, Placebo- and Active-controlled Parallel Group Study to Assess the Efficacy of 12 Weeks of Once Daily Treatment of Two Doses of Orally Inhaled Tiotropium + Olodaterol Fixed Dose Combination (Delivered by the Respimat Inhaler) in Patients With Moderate to Severe Chronic Obstructive Pulmonary Disease (COPD)"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2015-10",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2013-11"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2014-10",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2014-11",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2013-10-14",
+   "studyFirstSubmitQcDate": "2013-10-14",
+   "studyFirstPostDateStruct": {
+    "date": "2013-10-17",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2015-10-23",
+   "resultsFirstSubmitQcDate": "2015-10-23",
+   "resultsFirstPostDateStruct": {
+    "date": "2015-11-25",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2015-10-23",
+   "lastUpdatePostDateStruct": {
+    "date": "2015-11-25",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "The objective of this study is to assess the efficacy and safety of 12 weeks once daily treatment with orally inhaled tiotropium + olodaterol FDC (delivered by the Respimat inhaler) compared with tiotropium and placebo in patients with COPD."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 813,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "tiotropium + olodaterol low dose",
+     "type": "EXPERIMENTAL",
+     "description": "Once daily 2 puffs solution for inhalation Respimat",
+     "interventionNames": [
+      "Drug: tiotropium",
+      "Drug: olodaterol"
+     ]
+    },
+    {
+     "label": "tiotropium + olodaterol high dose",
+     "type": "EXPERIMENTAL",
+     "description": "Once daily 2 puffs solution for inhalation Respimat",
+     "interventionNames": [
+      "Drug: tiotropium",
+      "Drug: olodaterol"
+     ]
+    },
+    {
+     "label": "tiotropium",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Once daily 2 puffs solution for inhalation Respimat",
+     "interventionNames": [
+      "Drug: tiotropium"
+     ]
+    },
+    {
+     "label": "placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Once daily 2 puffs solution for inhalation Respimat",
+     "interventionNames": [
+      "Drug: placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "tiotropium",
+     "description": "fixed dose combination",
+     "armGroupLabels": [
+      "tiotropium + olodaterol high dose"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "placebo",
+     "armGroupLabels": [
+      "placebo"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "olodaterol",
+     "description": "fixed dose combination",
+     "armGroupLabels": [
+      "tiotropium + olodaterol high dose"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "tiotropium",
+     "description": "fixed dose combination",
+     "armGroupLabels": [
+      "tiotropium + olodaterol low dose"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "tiotropium",
+     "armGroupLabels": [
+      "tiotropium"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "olodaterol",
+     "description": "fixed dose combination",
+     "armGroupLabels": [
+      "tiotropium + olodaterol low dose"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "FEV1 AUC0-3h Response",
+     "description": "Forced expiratory volume in one second (FEV1) Area under the curve (AUC) 0-3h was calculated as the area under the FEV1-time curve from 0 to 3h post-dose using the trapezoidal rule, divided by the duration (3h) to report in litres. FEV1 AUC0-3h response was defined as FEV1 AUC0-3h minus baseline FEV1. The adjusted mean and standard error (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect; spatial power covariance structure for within-patient errors and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "baseline and 12 weeks"
+    },
+    {
+     "measure": "Trough FEV1 Response (Change From Baseline)",
+     "description": "Trough FEV1 was defined as the FEV1 value at the end of the dosing interval (24 hours). It was calculated as the mean of the 2 FEV1 measurements performed 23 h and at 23 h 50 min after inhalation of study medication at day 85. Trough FEV1 response was defines as trough FEV1 minus baseline FEV1. The adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect; spatial power covariance structure for within-patient errors and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "baseline and 12 weeks"
+    },
+    {
+     "measure": "St. George's Respiratory Questionnaire (SGRQ) Total Score",
+     "description": "This endpoint was evaluated based on the data from this individual trial and also based on the data from the combined dataset from this trial and the replicate study NCT02006732. The results for the combined dataset are included in the disclosure for NCT02006732 as specified in the analysis plan. The SGRQ ranges from 0 (no impairment of quality of life) to 100 (highest impairment of quality of life).\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect; spatial power covariance structure for within-patient errors and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "12 weeks treatment"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Trough Forced Vital Capacity (FVC) Response (Change From Baseline)",
+     "description": "Trough FVC was defined as the FVC value at the end of the dosing interval (24 hours). It was calculated as the mean of the 2 FVC measurements performed 23 h and at 23 h 50 min after inhalation of study medication at day 85. Trough FVC response was defined as trough FVC minus baseline FVC. The adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect; spatial power covariance structure for within-patient errors and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "baseline and 12 weeks"
+    },
+    {
+     "measure": "TDI Focal Score",
+     "description": "This endpoint was evaluated based on the data from this individual trial and also based on the data from the combined dataset from this trial and the replicate study NCT02006732. The results for the combined dataset are included in the disclosure for NCT02006732 as specified in the analysis plan. Mahler Transitional Dyspnoea Index (TDI) focal score was performed to measure the effect of the treatment on patients' dyspnoea.(Rating scale of 3 components - change in functional impairment, change in magnitude of tasks, change in magnitude of efforts. Worst score = -9, best score = +9).\n\nThe adjusted mean (SE) are obtained from fitting an MMRM model including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect; spatial power covariance structure for within-patient errors and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "12 weeks"
+    },
+    {
+     "measure": "FVC AUC0-3h Response (Change From Baseline)",
+     "description": "The adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect; spatial power covariance structure for within-patient errors and Kenward-Roger approximation of denominator degrees of freedom.",
+     "timeFrame": "baseline and 12 weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion criteria:\n\n* Diagnosis chronic obstructive pulmonary disease\n* Relatively stable airway obstruction with post FEV1 \\>=30 and \\< 80% predicted normal and post FEV1/ FVC \\< 70%\n* Male or female patients, 40 years of age or more\n* Smoking history more than 10 pack years\n\nExclusion criteria:\n\n* Significant diseases other than COPD\n* History of asthma\n* COPD exacerbation in previous 3 months\n* Completion of pulmonary rehabilitation program within previous 6 weeks or current participation in pulmonary rehabilitation program.\n* Pregnant or nursing women\n* Patients unable to comply with pulmonary medication restrictions",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Boehringer Ingelheim",
+     "affiliation": "Boehringer Ingelheim",
+     "role": "STUDY_CHAIR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "1237.25.10504 Boehringer Ingelheim Investigational Site",
+     "city": "Wheat Ridge",
+     "state": "Colorado",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.7661,
+      "lon": -105.07721
+     }
+    },
+    {
+     "facility": "1237.25.10507 Boehringer Ingelheim Investigational Site",
+     "city": "Clearwater",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.96585,
+      "lon": -82.8001
+     }
+    },
+    {
+     "facility": "1237.25.10517 Boehringer Ingelheim Investigational Site",
+     "city": "Panama City",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.15946,
+      "lon": -85.65983
+     }
+    },
+    {
+     "facility": "1237.25.10505 Boehringer Ingelheim Investigational Site",
+     "city": "Coeur d'Alene",
+     "state": "Idaho",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.67768,
+      "lon": -116.78047
+     }
+    },
+    {
+     "facility": "1237.25.10516 Boehringer Ingelheim Investigational Site",
+     "city": "Ann Arbor",
+     "state": "Michigan",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.27756,
+      "lon": -83.74088
+     }
+    },
+    {
+     "facility": "1237.25.10509 Boehringer Ingelheim Investigational Site",
+     "city": "Livonia",
+     "state": "Michigan",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.36837,
+      "lon": -83.35271
+     }
+    },
+    {
+     "facility": "1237.25.10519 Boehringer Ingelheim Investigational Site",
+     "city": "Charlotte",
+     "state": "North Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.22709,
+      "lon": -80.84313
+     }
+    },
+    {
+     "facility": "1237.25.10503 Boehringer Ingelheim Investigational Site",
+     "city": "Cincinnati",
+     "state": "Ohio",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.12711,
+      "lon": -84.51439
+     }
+    },
+    {
+     "facility": "1237.25.10518 Boehringer Ingelheim Investigational Site",
+     "city": "Columbia",
+     "state": "Ohio",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.11173,
+      "lon": -84.43466
+     }
+    },
+    {
+     "facility": "1237.25.10502 Boehringer Ingelheim Investigational Site",
+     "city": "Columbus",
+     "state": "Ohio",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.96118,
+      "lon": -82.99879
+     }
+    },
+    {
+     "facility": "1237.25.10511 Boehringer Ingelheim Investigational Site",
+     "city": "Dublin",
+     "state": "Ohio",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.09923,
+      "lon": -83.11408
+     }
+    },
+    {
+     "facility": "1237.25.10514 Boehringer Ingelheim Investigational Site",
+     "city": "Philadelphia",
+     "state": "Pennsylvania",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.95238,
+      "lon": -75.16362
+     }
+    },
+    {
+     "facility": "1237.25.10513 Boehringer Ingelheim Investigational Site",
+     "city": "Charleston",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.77632,
+      "lon": -79.93275
+     }
+    },
+    {
+     "facility": "1237.25.10515 Boehringer Ingelheim Investigational Site",
+     "city": "Easley",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.82984,
+      "lon": -82.60152
+     }
+    },
+    {
+     "facility": "1237.25.10506 Boehringer Ingelheim Investigational Site",
+     "city": "Greenville",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.85262,
+      "lon": -82.39401
+     }
+    },
+    {
+     "facility": "1237.25.10501 Boehringer Ingelheim Investigational Site",
+     "city": "Rock Hill",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.92487,
+      "lon": -81.02508
+     }
+    },
+    {
+     "facility": "1237.25.10508 Boehringer Ingelheim Investigational Site",
+     "city": "Spartanburg",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.94957,
+      "lon": -81.93205
+     }
+    },
+    {
+     "facility": "1237.25.10520 Boehringer Ingelheim Investigational Site",
+     "city": "Killeen",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 31.11712,
+      "lon": -97.7278
+     }
+    },
+    {
+     "facility": "1237.25.10510 Boehringer Ingelheim Investigational Site",
+     "city": "Richmond",
+     "state": "Virginia",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.55376,
+      "lon": -77.46026
+     }
+    },
+    {
+     "facility": "1237.25.10521 Boehringer Ingelheim Investigational Site",
+     "city": "Spokane",
+     "state": "Washington",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.65966,
+      "lon": -117.42908
+     }
+    },
+    {
+     "facility": "1237.25.32001 Boehringer Ingelheim Investigational Site",
+     "city": "Brussels",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.85045,
+      "lon": 4.34878
+     }
+    },
+    {
+     "facility": "1237.25.32004 Boehringer Ingelheim Investigational Site",
+     "city": "Brussels",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.85045,
+      "lon": 4.34878
+     }
+    },
+    {
+     "facility": "1237.25.32005 Boehringer Ingelheim Investigational Site",
+     "city": "Eupen",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.6279,
+      "lon": 6.03647
+     }
+    },
+    {
+     "facility": "1237.25.32003 Boehringer Ingelheim Investigational Site",
+     "city": "Lebbeke",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.00464,
+      "lon": 4.13457
+     }
+    },
+    {
+     "facility": "1237.25.32002 Boehringer Ingelheim Investigational Site",
+     "city": "Turnhout",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.32254,
+      "lon": 4.94471
+     }
+    },
+    {
+     "facility": "1237.25.11508 Boehringer Ingelheim Investigational Site",
+     "city": "Calgary",
+     "state": "Alberta",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 51.05011,
+      "lon": -114.08529
+     }
+    },
+    {
+     "facility": "1237.25.11504 Boehringer Ingelheim Investigational Site",
+     "city": "Edmonton",
+     "state": "Alberta",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 53.55014,
+      "lon": -113.46871
+     }
+    },
+    {
+     "facility": "1237.25.11501 Boehringer Ingelheim Investigational Site",
+     "city": "Vancouver",
+     "state": "British Columbia",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 49.24966,
+      "lon": -123.11934
+     }
+    },
+    {
+     "facility": "1237.25.11505 Boehringer Ingelheim Investigational Site",
+     "city": "Burlington",
+     "state": "Ontario",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.38621,
+      "lon": -79.83713
+     }
+    },
+    {
+     "facility": "1237.25.11507 Boehringer Ingelheim Investigational Site",
+     "city": "Grimsby",
+     "state": "Ontario",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.20011,
+      "lon": -79.56631
+     }
+    },
+    {
+     "facility": "1237.25.11510 Boehringer Ingelheim Investigational Site",
+     "city": "Ottawa",
+     "state": "Ontario",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.41117,
+      "lon": -75.69812
+     }
+    },
+    {
+     "facility": "1237.25.11502 Boehringer Ingelheim Investigational Site",
+     "city": "Québec",
+     "state": "Quebec",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 46.81228,
+      "lon": -71.21454
+     }
+    },
+    {
+     "facility": "1237.25.11506 Boehringer Ingelheim Investigational Site",
+     "city": "Québec",
+     "state": "Quebec",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 46.81228,
+      "lon": -71.21454
+     }
+    },
+    {
+     "facility": "1237.25.11509 Boehringer Ingelheim Investigational Site",
+     "city": "Sherbrooke",
+     "state": "Quebec",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.40008,
+      "lon": -71.89908
+     }
+    },
+    {
+     "facility": "1237.25.42003 Boehringer Ingelheim Investigational Site",
+     "city": "Jindřichův Hradec",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.14404,
+      "lon": 15.00301
+     }
+    },
+    {
+     "facility": "1237.25.42005 Boehringer Ingelheim Investigational Site",
+     "city": "Karlovy Vary-Drahovice",
+     "country": "Czechia"
+    },
+    {
+     "facility": "1237.25.42002 Boehringer Ingelheim Investigational Site",
+     "city": "Neratovice",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.25926,
+      "lon": 14.51759
+     }
+    },
+    {
+     "facility": "1237.25.42001 Boehringer Ingelheim Investigational Site",
+     "city": "Prague",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "1237.25.42004 Boehringer Ingelheim Investigational Site",
+     "city": "Rokycany",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.7427,
+      "lon": 13.59459
+     }
+    },
+    {
+     "facility": "1237.25.45003 Boehringer Ingelheim Investigational Site",
+     "city": "Aalborg",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 57.048,
+      "lon": 9.9187
+     }
+    },
+    {
+     "facility": "1237.25.45002 Boehringer Ingelheim Investigational Site",
+     "city": "Hellerup",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.73204,
+      "lon": 12.57093
+     }
+    },
+    {
+     "facility": "1237.25.45001 Boehringer Ingelheim Investigational Site",
+     "city": "Odense",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.39594,
+      "lon": 10.38831
+     }
+    },
+    {
+     "facility": "1237.25.45004 Boehringer Ingelheim Investigational Site",
+     "city": "Silkeborg",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 56.1697,
+      "lon": 9.54508
+     }
+    },
+    {
+     "facility": "1237.25.35802 Boehringer Ingelheim Investigational Site",
+     "city": "Pori",
+     "country": "Finland",
+     "geoPoint": {
+      "lat": 61.48072,
+      "lon": 21.78518
+     }
+    },
+    {
+     "facility": "1237.25.35801 Boehringer Ingelheim Investigational Site",
+     "city": "Turku",
+     "country": "Finland",
+     "geoPoint": {
+      "lat": 60.45148,
+      "lon": 22.26869
+     }
+    },
+    {
+     "facility": "1237.25.35803 Boehringer Ingelheim Investigational Site",
+     "city": "Turku",
+     "country": "Finland",
+     "geoPoint": {
+      "lat": 60.45148,
+      "lon": 22.26869
+     }
+    },
+    {
+     "facility": "1237.25.49504 Boehringer Ingelheim Investigational Site",
+     "city": "Berlin",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "1237.25.49508 Boehringer Ingelheim Investigational Site",
+     "city": "Berlin",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "1237.25.49510 Boehringer Ingelheim Investigational Site",
+     "city": "Berlin",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "1237.25.49501 Boehringer Ingelheim Investigational Site",
+     "city": "Großhansdorf",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.66528,
+      "lon": 10.28552
+     }
+    },
+    {
+     "facility": "1237.25.49505 Boehringer Ingelheim Investigational Site",
+     "city": "Halle",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.48158,
+      "lon": 11.97947
+     }
+    },
+    {
+     "facility": "1237.25.49506 Boehringer Ingelheim Investigational Site",
+     "city": "Hamburg",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "1237.25.49515 Boehringer Ingelheim Investigational Site",
+     "city": "Hamburg",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "1237.25.49509 Boehringer Ingelheim Investigational Site",
+     "city": "Hanover",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.37052,
+      "lon": 9.73322
+     }
+    },
+    {
+     "facility": "1237.25.49514 Boehringer Ingelheim Investigational Site",
+     "city": "Koblenz",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.35357,
+      "lon": 7.57883
+     }
+    },
+    {
+     "facility": "1237.25.49507 Boehringer Ingelheim Investigational Site",
+     "city": "Mainz",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.98185,
+      "lon": 8.28008
+     }
+    },
+    {
+     "facility": "1237.25.49502 Boehringer Ingelheim Investigational Site",
+     "city": "Neu-Isenburg",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.04832,
+      "lon": 8.69406
+     }
+    },
+    {
+     "facility": "1237.25.49516 Boehringer Ingelheim Investigational Site",
+     "city": "Oschersleben",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.03039,
+      "lon": 11.22898
+     }
+    },
+    {
+     "facility": "1237.25.49511 Boehringer Ingelheim Investigational Site",
+     "city": "Rodgau",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.02627,
+      "lon": 8.88588
+     }
+    },
+    {
+     "facility": "1237.25.49503 Boehringer Ingelheim Investigational Site",
+     "city": "Rosenheim",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 47.85637,
+      "lon": 12.12247
+     }
+    },
+    {
+     "facility": "1237.25.49513 Boehringer Ingelheim Investigational Site",
+     "city": "Teuchern",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.12094,
+      "lon": 12.0241
+     }
+    },
+    {
+     "facility": "1237.25.27506 Boehringer Ingelheim Investigational Site",
+     "city": "Bloemfontein",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -29.12107,
+      "lon": 26.214
+     }
+    },
+    {
+     "facility": "1237.25.27501 Boehringer Ingelheim Investigational Site",
+     "city": "Cape Town",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -33.92584,
+      "lon": 18.42322
+     }
+    },
+    {
+     "facility": "1237.25.27505 Boehringer Ingelheim Investigational Site",
+     "city": "eMkhomazi",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -30.20672,
+      "lon": 30.79641
+     }
+    },
+    {
+     "facility": "1237.25.27504 Boehringer Ingelheim Investigational Site",
+     "city": "Morningside, Sandton",
+     "country": "South Africa"
+    },
+    {
+     "facility": "1237.25.27502 Boehringer Ingelheim Investigational Site",
+     "city": "Parow",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -33.89723,
+      "lon": 18.59992
+     }
+    },
+    {
+     "facility": "1237.25.27503 Boehringer Ingelheim Investigational Site",
+     "city": "Pretoria",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -25.74486,
+      "lon": 28.18783
+     }
+    },
+    {
+     "facility": "1237.25.34003 Boehringer Ingelheim Investigational Site",
+     "city": "Alicante",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 38.34517,
+      "lon": -0.48149
+     }
+    },
+    {
+     "facility": "1237.25.34007 Boehringer Ingelheim Investigational Site",
+     "city": "Barcelona",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.38879,
+      "lon": 2.15899
+     }
+    },
+    {
+     "facility": "1237.25.34001 Boehringer Ingelheim Investigational Site",
+     "city": "Mérida",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 38.91802,
+      "lon": -6.34292
+     }
+    },
+    {
+     "facility": "1237.25.34002 Boehringer Ingelheim Investigational Site",
+     "city": "Pozuelo de Alarcón",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 40.43293,
+      "lon": -3.81338
+     }
+    },
+    {
+     "facility": "1237.25.34004 Boehringer Ingelheim Investigational Site",
+     "city": "Vic",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.93012,
+      "lon": 2.25486
+     }
+    },
+    {
+     "facility": "1237.25.44002 Boehringer Ingelheim Investigational Site",
+     "city": "Bradford",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.79391,
+      "lon": -1.75206
+     }
+    },
+    {
+     "facility": "1237.25.44001 Boehringer Ingelheim Investigational Site",
+     "city": "Chertsey",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.38812,
+      "lon": -0.50782
+     }
+    },
+    {
+     "facility": "1237.25.44004 Boehringer Ingelheim Investigational Site",
+     "city": "Chester",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.1905,
+      "lon": -2.89189
+     }
+    },
+    {
+     "facility": "1237.25.44005 Boehringer Ingelheim Investigational Site",
+     "city": "Chippenham",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.46,
+      "lon": -2.12472
+     }
+    },
+    {
+     "facility": "1237.25.44003 Boehringer Ingelheim Investigational Site",
+     "city": "Wolverhampton",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 52.58547,
+      "lon": -2.12296
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "32671684",
+     "type": "DERIVED",
+     "citation": "Buhl R, de la Hoz A, Xue W, Singh D, Ferguson GT. Efficacy of Tiotropium/Olodaterol Compared with Tiotropium as a First-Line Maintenance Treatment in Patients with COPD Who Are Naive to LAMA, LABA and ICS: Pooled Analysis of Four Clinical Trials. Adv Ther. 2020 Oct;37(10):4175-4189. doi: 10.1007/s12325-020-01411-0. Epub 2020 Jul 15."
+    },
+    {
+     "pmid": "32462607",
+     "type": "DERIVED",
+     "citation": "Buhl R, Singh D, de la Hoz A, Xue W, Ferguson GT. Benefits of Tiotropium/Olodaterol Compared with Tiotropium in Patients with COPD Receiving only LAMA at Baseline: Pooled Analysis of the TONADO(R) and OTEMTO(R) Studies. Adv Ther. 2020 Aug;37(8):3485-3499. doi: 10.1007/s12325-020-01373-3. Epub 2020 May 27."
+    },
+    {
+     "pmid": "27316465",
+     "type": "DERIVED",
+     "citation": "Singh D, Gaga M, Schmidt O, Bjermer L, Gronke L, Voss F, Ferguson GT. Effects of tiotropium + olodaterol versus tiotropium or placebo by COPD disease severity and previous treatment history in the OTEMTO(R) studies. Respir Res. 2016 Jun 18;17(1):73. doi: 10.1186/s12931-016-0387-7."
+    },
+    {
+     "pmid": "26320402",
+     "type": "DERIVED",
+     "citation": "Singh D, Ferguson GT, Bolitschek J, Gronke L, Hallmann C, Bennett N, Abrahams R, Schmidt O, Bjermer L. Tiotropium + olodaterol shows clinically meaningful improvements in quality of life. Respir Med. 2015 Oct;109(10):1312-9. doi: 10.1016/j.rmed.2015.08.002. Epub 2015 Aug 12."
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "recruitmentDetails": "814 were entered and randomized. One patient randomized to Tiotropium 5 μg was not treated. One patient entered the study with 2 different patient numbers. This patient was counted twice in the randomized set but only once in the treated set. Thus a total of 812 unique patients were treated.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Placebo",
+     "description": "Once daily 2 puffs solution of placebo for inhalation with Respimat"
+    },
+    {
+     "id": "FG001",
+     "title": "Tiotropium 5 μg",
+     "description": "Once daily 2 puffs solution of 2.5 μg tiotropium for inhalation with Respimat"
+    },
+    {
+     "id": "FG002",
+     "title": "Tiotropium 2.5 μg+ Olodaterol 5 μg",
+     "description": "Once daily 2 puffs solution of 1.25 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+    },
+    {
+     "id": "FG003",
+     "title": "Tiotropium 5 μg + Olodaterol 5 μg",
+     "description": "Once daily 2 puffs solution of 2.5 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "204"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "203"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "202"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "203"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "178"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "192"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "196"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "195"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "26"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "11"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "6"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "8"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "13"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "4"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "3"
+        }
+       ]
+      },
+      {
+       "type": "Lack of Efficacy",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "6"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Protocol Violation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "4"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "2"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "4"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Other than stated above",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "2"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Placebo",
+     "description": "Once daily 2 puffs solution of placebo for inhalation with Respimat"
+    },
+    {
+     "id": "BG001",
+     "title": "Tiotropium 5 μg",
+     "description": "Once daily 2 puffs solution of 2.5 μg tiotropium for inhalation with Respimat"
+    },
+    {
+     "id": "BG002",
+     "title": "Tiotropium 2.5 μg+ Olodaterol 5 μg",
+     "description": "Once daily 2 puffs solution of 1.25 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+    },
+    {
+     "id": "BG003",
+     "title": "Tiotropium 5 μg + Olodaterol 5 μg",
+     "description": "Once daily 2 puffs solution of 2.5 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+    },
+    {
+     "id": "BG004",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "204"
+      },
+      {
+       "groupId": "BG001",
+       "value": "203"
+      },
+      {
+       "groupId": "BG002",
+       "value": "202"
+      },
+      {
+       "groupId": "BG003",
+       "value": "203"
+      },
+      {
+       "groupId": "BG004",
+       "value": "812"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "65.1",
+           "spread": "8.3"
+          },
+          {
+           "groupId": "BG001",
+           "value": "64.9",
+           "spread": "8.2"
+          },
+          {
+           "groupId": "BG002",
+           "value": "64.7",
+           "spread": "8.2"
+          },
+          {
+           "groupId": "BG003",
+           "value": "64.7",
+           "spread": "8.9"
+          },
+          {
+           "groupId": "BG004",
+           "value": "64.9",
+           "spread": "8.4"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "77"
+          },
+          {
+           "groupId": "BG001",
+           "value": "79"
+          },
+          {
+           "groupId": "BG002",
+           "value": "86"
+          },
+          {
+           "groupId": "BG003",
+           "value": "89"
+          },
+          {
+           "groupId": "BG004",
+           "value": "331"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "127"
+          },
+          {
+           "groupId": "BG001",
+           "value": "124"
+          },
+          {
+           "groupId": "BG002",
+           "value": "116"
+          },
+          {
+           "groupId": "BG003",
+           "value": "114"
+          },
+          {
+           "groupId": "BG004",
+           "value": "481"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "FEV1 AUC0-3h Response",
+     "description": "Forced expiratory volume in one second (FEV1) Area under the curve (AUC) 0-3h was calculated as the area under the FEV1-time curve from 0 to 3h post-dose using the trapezoidal rule, divided by the duration (3h) to report in litres. FEV1 AUC0-3h response was defined as FEV1 AUC0-3h minus baseline FEV1. The adjusted mean and standard error (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect; spatial power covariance structure for within-patient errors and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Patients from the Full Analysis Set (FAS): This patient set included all randomized and treated patients who had a baseline and at least one postbaseline measurement for any of the primary efficacy endpoints. The patient that entered the study with two different patient numbers was excluded from the FAS.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "L",
+     "timeFrame": "baseline and 12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Once daily 2 puffs solution of placebo for inhalation with Respimat"
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium 5 μg",
+       "description": "Once daily 2 puffs solution of 2.5 μg tiotropium for inhalation with Respimat"
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium 2.5 μg+ Olodaterol 5 μg",
+       "description": "Once daily 2 puffs solution of 1.25 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium 5 μg + Olodaterol 5 μg",
+       "description": "Once daily 2 puffs solution of 2.5 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "204"
+        },
+        {
+         "groupId": "OG001",
+         "value": "203"
+        },
+        {
+         "groupId": "OG002",
+         "value": "202"
+        },
+        {
+         "groupId": "OG003",
+         "value": "202"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.014",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.205",
+           "spread": "0.013"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.285",
+           "spread": "0.013"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.316",
+           "spread": "0.013"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.331",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.293",
+       "ciUpperLimit": "0.369",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.111",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.075",
+       "ciUpperLimit": "0.148",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.300",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.262",
+       "ciUpperLimit": "0.337",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.080",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.044",
+       "ciUpperLimit": "0.116",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.018"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.219",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.181",
+       "ciUpperLimit": "0.258",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.020"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0872",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.031",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.005",
+       "ciUpperLimit": "0.067",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.018"
+      }
+     ]
+    },
+    {
+     "type": "PRIMARY",
+     "title": "Trough FEV1 Response (Change From Baseline)",
+     "description": "Trough FEV1 was defined as the FEV1 value at the end of the dosing interval (24 hours). It was calculated as the mean of the 2 FEV1 measurements performed 23 h and at 23 h 50 min after inhalation of study medication at day 85. Trough FEV1 response was defines as trough FEV1 minus baseline FEV1. The adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect; spatial power covariance structure for within-patient errors and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Patients from FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "L",
+     "timeFrame": "baseline and 12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Once daily 2 puffs solution of placebo for inhalation with Respimat"
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium 5 μg",
+       "description": "Once daily 2 puffs solution of 2.5 μg tiotropium for inhalation with Respimat"
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium 2.5 μg+ Olodaterol 5 μg",
+       "description": "Once daily 2 puffs solution of 1.25 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium 5 μg + Olodaterol 5 μg",
+       "description": "Once daily 2 puffs solution of 2.5 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "198"
+        },
+        {
+         "groupId": "OG001",
+         "value": "200"
+        },
+        {
+         "groupId": "OG002",
+         "value": "201"
+        },
+        {
+         "groupId": "OG003",
+         "value": "200"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.001",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.135",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.151",
+           "spread": "0.013"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.163",
+           "spread": "0.013"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.162",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.0124",
+       "ciUpperLimit": "0.200",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.1381",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.028",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.009",
+       "ciUpperLimit": "0.066",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.150",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.113",
+       "ciUpperLimit": "0.188",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.3872",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.017",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.021",
+       "ciUpperLimit": "0.054",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.134",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.096",
+       "ciUpperLimit": "0.172",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.5333",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.012",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.025",
+       "ciUpperLimit": "0.049",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019"
+      }
+     ]
+    },
+    {
+     "type": "PRIMARY",
+     "title": "St. George's Respiratory Questionnaire (SGRQ) Total Score",
+     "description": "This endpoint was evaluated based on the data from this individual trial and also based on the data from the combined dataset from this trial and the replicate study NCT02006732. The results for the combined dataset are included in the disclosure for NCT02006732 as specified in the analysis plan. The SGRQ ranges from 0 (no impairment of quality of life) to 100 (highest impairment of quality of life).\n\nThe adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect; spatial power covariance structure for within-patient errors and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Patients from FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "units on a scale",
+     "timeFrame": "12 weeks treatment",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Once daily 2 puffs solution of placebo for inhalation with Respimat"
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium 5 μg",
+       "description": "Once daily 2 puffs solution of 2.5 μg tiotropium for inhalation with Respimat"
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium 2.5 μg+ Olodaterol 5 μg",
+       "description": "Once daily 2 puffs solution of 1.25 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium 5 μg + Olodaterol 5 μg",
+       "description": "Once daily 2 puffs solution of 2.5 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "186"
+        },
+        {
+         "groupId": "OG001",
+         "value": "192"
+        },
+        {
+         "groupId": "OG002",
+         "value": "199"
+        },
+        {
+         "groupId": "OG003",
+         "value": "196"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "42.038",
+           "spread": "0.738"
+          },
+          {
+           "groupId": "OG001",
+           "value": "39.637",
+           "spread": "0.717"
+          },
+          {
+           "groupId": "OG002",
+           "value": "37.916",
+           "spread": "0.708"
+          },
+          {
+           "groupId": "OG003",
+           "value": "37.144",
+           "spread": "0.710"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-4.894",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-6.904",
+       "ciUpperLimit": "-2.884",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "1.024"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0136",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-2.493",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-4.473",
+       "ciUpperLimit": "-0.513",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "1.009"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-4.122",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-6.129",
+       "ciUpperLimit": "-2.114",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "1.023"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0880",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-1.721",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-3.698",
+       "ciUpperLimit": "0.256",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "1.008"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0198",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-2.401",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-4.419",
+       "ciUpperLimit": "-0.382",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "1.029"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.4415",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-0.772",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-2.741",
+       "ciUpperLimit": "1.196",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "1.003"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Trough Forced Vital Capacity (FVC) Response (Change From Baseline)",
+     "description": "Trough FVC was defined as the FVC value at the end of the dosing interval (24 hours). It was calculated as the mean of the 2 FVC measurements performed 23 h and at 23 h 50 min after inhalation of study medication at day 85. Trough FVC response was defined as trough FVC minus baseline FVC. The adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect; spatial power covariance structure for within-patient errors and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Patients from FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "L",
+     "timeFrame": "baseline and 12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Once daily 2 puffs solution of placebo for inhalation with Respimat"
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium 5 μg",
+       "description": "Once daily 2 puffs solution of 2.5 μg tiotropium for inhalation with Respimat"
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium 2.5 μg+ Olodaterol 5 μg",
+       "description": "Once daily 2 puffs solution of 1.25 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium 5 μg + Olodaterol 5 μg",
+       "description": "Once daily 2 puffs solution of 2.5 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "198"
+        },
+        {
+         "groupId": "OG001",
+         "value": "200"
+        },
+        {
+         "groupId": "OG002",
+         "value": "201"
+        },
+        {
+         "groupId": "OG003",
+         "value": "200"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.025",
+           "spread": "0.023"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.223",
+           "spread": "0.023"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.233",
+           "spread": "0.022"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.244",
+           "spread": "0.022"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.220",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.157",
+       "ciUpperLimit": "0.282",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.032"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.5052",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.021",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.041",
+       "ciUpperLimit": "0.084",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.032"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.208",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.146",
+       "ciUpperLimit": "0.271",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.032"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.7566",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.010",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.052",
+       "ciUpperLimit": "0.072",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.032"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.198",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.136",
+       "ciUpperLimit": "0.261",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.032"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.7199",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.011",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.051",
+       "ciUpperLimit": "0.073",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.032"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "TDI Focal Score",
+     "description": "This endpoint was evaluated based on the data from this individual trial and also based on the data from the combined dataset from this trial and the replicate study NCT02006732. The results for the combined dataset are included in the disclosure for NCT02006732 as specified in the analysis plan. Mahler Transitional Dyspnoea Index (TDI) focal score was performed to measure the effect of the treatment on patients' dyspnoea.(Rating scale of 3 components - change in functional impairment, change in magnitude of tasks, change in magnitude of efforts. Worst score = -9, best score = +9).\n\nThe adjusted mean (SE) are obtained from fitting an MMRM model including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect; spatial power covariance structure for within-patient errors and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Patients from FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Units on a scale",
+     "timeFrame": "12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Once daily 2 puffs solution of placebo for inhalation with Respimat"
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium 5 μg",
+       "description": "Once daily 2 puffs solution of 2.5 μg tiotropium for inhalation with Respimat"
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium 2.5 μg+ Olodaterol 5 μg",
+       "description": "Once daily 2 puffs solution of 1.25 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium 5 μg + Olodaterol 5 μg",
+       "description": "Once daily 2 puffs solution of 2.5 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "187"
+        },
+        {
+         "groupId": "OG001",
+         "value": "193"
+        },
+        {
+         "groupId": "OG002",
+         "value": "199"
+        },
+        {
+         "groupId": "OG003",
+         "value": "196"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.113",
+           "spread": "0.196"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.332",
+           "spread": "0.192"
+          },
+          {
+           "groupId": "OG002",
+           "value": "1.839",
+           "spread": "0.189"
+          },
+          {
+           "groupId": "OG003",
+           "value": "1.939",
+           "spread": "0.190"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "2.052",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "1.516",
+       "ciUpperLimit": "2.588",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.273"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0246",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.607",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.078",
+       "ciUpperLimit": "1.137",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.270"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "1.952",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "1.417",
+       "ciUpperLimit": "2.487",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.272"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0599",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.507",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.021",
+       "ciUpperLimit": "1.035",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.269"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "1.445",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.907",
+       "ciUpperLimit": "1.983",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.274"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.7081",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.100",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.425",
+       "ciUpperLimit": "0.626",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.268"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "FVC AUC0-3h Response (Change From Baseline)",
+     "description": "The adjusted mean (SE) are obtained from fitting a mixed effect model repeated measures (MMRM) including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect; spatial power covariance structure for within-patient errors and Kenward-Roger approximation of denominator degrees of freedom.",
+     "populationDescription": "Patients from FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "L",
+     "timeFrame": "baseline and 12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Once daily 2 puffs solution of placebo for inhalation with Respimat"
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium 5 μg",
+       "description": "Once daily 2 puffs solution of 2.5 μg tiotropium for inhalation with Respimat"
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium 2.5 μg+ Olodaterol 5 μg",
+       "description": "Once daily 2 puffs solution of 1.25 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium 5 μg + Olodaterol 5 μg",
+       "description": "Once daily 2 puffs solution of 2.5 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "204"
+        },
+        {
+         "groupId": "OG001",
+         "value": "203"
+        },
+        {
+         "groupId": "OG002",
+         "value": "202"
+        },
+        {
+         "groupId": "OG003",
+         "value": "202"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.011",
+           "spread": "0.025"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.286",
+           "spread": "0.024"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.387",
+           "spread": "0.023"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.446",
+           "spread": "0.023"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.457",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.390",
+       "ciUpperLimit": "0.524",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.034"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.160",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.095",
+       "ciUpperLimit": "0.225",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.033"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.398",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.331",
+       "ciUpperLimit": "0.465",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.034"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0023",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.101",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.036",
+       "ciUpperLimit": "0.165",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.033"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.297",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.229",
+       "ciUpperLimit": "0.365",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.035"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0701",
+       "statisticalMethod": "Mixed Effects Model for Repeated Measure",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.059",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.005",
+       "ciUpperLimit": "0.123",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.033"
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "up to 112 days",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Placebo",
+     "description": "Once daily 2 puffs solution of placebo for inhalation with Respimat",
+     "seriousNumAffected": 11,
+     "seriousNumAtRisk": 204,
+     "otherNumAffected": 32,
+     "otherNumAtRisk": 204
+    },
+    {
+     "id": "EG001",
+     "title": "Tiotropium 5 μg",
+     "description": "Once daily 2 puffs solution of 2.5 μg tiotropium for inhalation with Respimat",
+     "seriousNumAffected": 6,
+     "seriousNumAtRisk": 203,
+     "otherNumAffected": 28,
+     "otherNumAtRisk": 203
+    },
+    {
+     "id": "EG002",
+     "title": "Tiotropium 2.5 μg+ Olodaterol 5 μg",
+     "description": "Once daily 2 puffs solution of 1.25 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat.",
+     "seriousNumAffected": 4,
+     "seriousNumAtRisk": 202,
+     "otherNumAffected": 25,
+     "otherNumAtRisk": 202
+    },
+    {
+     "id": "EG003",
+     "title": "Tiotropium 5 μg + Olodaterol 5 μg",
+     "description": "Once daily 2 puffs solution of 2.5 μg tiotropium / 2.5 μg olodaterol for inhalation with Respimat.",
+     "seriousNumAffected": 10,
+     "seriousNumAtRisk": 203,
+     "otherNumAffected": 16,
+     "otherNumAtRisk": 203
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Angina unstable",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Atrial fibrillation",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Cardiac failure",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Cardiomyopathy",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Ischaemic cardiomyopathy",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Colitis",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Chest pain",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Autoimmune hepatitis",
+     "organSystem": "Hepatobiliary disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Cellulitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Erysipelas",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Gangrene",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Gastrointestinal bacterial infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Localised infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia bacterial",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Sinusitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Viral infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Accidental overdose",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Cervical vertebral fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Clavicle fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Road traffic accident",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Osteoarthritis",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Malignant neoplasm of unknown primary site",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Cerebrovascular accident",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Convulsion",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Lumbar radiculopathy",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Acute stress disorder",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Bipolar disorder",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Depression",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Suicide attempt",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Pneumothorax",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Pulmonary hypertension",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Peripheral ischaemia",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 203
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Nasopharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 12,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 9,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 9,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 7,
+       "numAtRisk": 203
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 20,
+       "numAtRisk": 204
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 19,
+       "numAtRisk": 203
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 16,
+       "numAtRisk": 202
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 9,
+       "numAtRisk": 203
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "Other - Boehringer Ingelheim (BI) acknowledges that investigators have the right to publish the study results. Investigators shall provide BI with a copy of any publication or presentation for review prior to any submission. Such review will be done with regard to proprietary information, information related to patentable inventions, medical, scientific, and statistical accuracy within 60 days. BI may request a delay of the publication in order to protect BI's intellectual property rights."
+   },
+   "pointOfContact": {
+    "title": "Boehringer Ingelheim, Call Center",
+    "organization": "Boehringer Ingelheim",
+    "email": "clintriage.rdg@boehringer-ingelheim.com",
+    "phone": "1-800-243-0127"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16",
+   "removedCountries": [
+    "Ukraine"
+   ]
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D000069447",
+     "term": "Tiotropium Bromide"
+    },
+    {
+     "id": "C549647",
+     "term": "olodaterol"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D012602",
+     "term": "Scopolamine Derivatives"
+    },
+    {
+     "id": "D014326",
+     "term": "Tropanes"
+    },
+    {
+     "id": "D053961",
+     "term": "Azabicyclo Compounds"
+    },
+    {
+     "id": "D001372",
+     "term": "Aza Compounds"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000470",
+     "term": "Alkaloids"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D019086",
+     "term": "Bridged Bicyclo Compounds, Heterocyclic"
+    },
+    {
+     "id": "D006572",
+     "term": "Heterocyclic Compounds, Bridged-Ring"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

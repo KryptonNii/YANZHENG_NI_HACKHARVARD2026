@@ -6,15 +6,20 @@ import { act, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
-import type { Visit } from "@/app/contracts";
+import type { Procedure, Visit } from "@/app/contracts";
+import type { ApprovalView, ExtractionCandidate } from "@/app/api/types";
 import { ApiError, api } from "@/app/api/client";
 import { installMockApi, resetMockStore } from "@/app/api/mock";
 import { MOCK_DESIGN, MOCK_PARAMS } from "@/app/api/mock/data";
 import { mockCompute } from "@/app/api/mock/engine";
 import { DEFAULT_LEVERS } from "@/app/api/normalize";
 import { setIdentity } from "@/app/identity";
+import { formatValue } from "@/app/format";
 import { ToastProvider } from "@/app/toast";
+import { ApprovalPanel } from "./components/ApprovalPanel";
 import { ForecastChart } from "./components/ForecastChart";
+import { LeversPanel } from "./components/LeversPanel";
+import { ProtocolReview } from "./components/ProtocolReview";
 import { nctError, normalizeNct } from "./demoTrials";
 import { resetParamLibrary } from "./hooks/useParamLibrary";
 import { ImportPage } from "./ImportPage";
@@ -157,7 +162,7 @@ describe("scenario simulator", () => {
     // the author tries to sign
     await userEvent.type(screen.getByTestId("sign-pin"), "1111");
     await userEvent.click(screen.getByTestId("sign-button"));
-    expect(await screen.findByTestId("sign-error")).toHaveTextContent("Authors can't approve their own work.");
+    expect(await screen.findByTestId("sign-error")).toHaveTextContent(/^Authors can't approve their own work\.$/);
 
     act(() => setIdentity("riley.reviewer"));
     await userEvent.type(screen.getByTestId("sign-pin"), "2222");
@@ -169,6 +174,20 @@ describe("scenario simulator", () => {
     await userEvent.click(screen.getByTestId("sign-button"));
     await waitFor(() => expect(screen.getByTestId("approval-status")).toHaveTextContent("Approved"));
     expect(screen.getByTestId("signature-list")).toHaveTextContent(/approved by Sam/i);
+  });
+
+  it("shows the same wrong-PIN copy as the Approvals page", async () => {
+    const approval: ApprovalView = {
+      id: "ap-1", record_type: "scenario", record_id: "sc-1", record_hash: "ab".repeat(32), author: "alex.author",
+      required_meanings: ["reviewed", "approved"], status: "pending", created_at: "2026-10-16T12:00:00Z", title: "Scenario B",
+      signatures: [], next_meaning: "reviewed",
+    };
+    vi.spyOn(api, "sign").mockRejectedValueOnce(new ApiError(401, "invalid_credential", "Unknown user or wrong PIN."));
+    act(() => setIdentity("riley.reviewer"));
+    render(<ApprovalPanel approval={approval} onChange={vi.fn()} />);
+    await userEvent.type(screen.getByTestId("sign-pin"), "9999");
+    await userEvent.click(screen.getByTestId("sign-button"));
+    expect(await screen.findByTestId("sign-error")).toHaveTextContent(/^Wrong PIN — the signature was not recorded\.$/);
   });
 });
 
@@ -225,6 +244,46 @@ describe("import page", () => {
     expect(await screen.findByTestId("design-conflict")).toHaveTextContent(/design v2/);
     expect(screen.getByTestId("trial-card")).toHaveTextContent("480 patients");
     expect(screen.getByTestId("trial-card")).not.toHaveTextContent("50 patients");
+  });
+
+  it("disables Save changes for an empty enrollment, then stores the edit as a new design version", async () => {
+    renderAt("/");
+    await userEvent.type(screen.getByTestId("nct-input"), "NCT01234567");
+    await userEvent.click(screen.getByTestId("nct-submit"));
+    await screen.findByTestId("trial-card", {}, { timeout: 4000 });
+    expect(screen.getByTestId("stored-design-banner")).toBeInTheDocument();
+
+    await userEvent.click(screen.getByRole("button", { name: "Edit facts" }));
+    const enrollment = screen.getByLabelText("Enrollment target");
+    await userEvent.clear(enrollment);
+    expect(screen.getByRole("button", { name: "Save changes" })).toBeDisabled();
+    await userEvent.type(enrollment, "0");
+    expect(screen.getByRole("button", { name: "Save changes" })).toBeDisabled();
+    await userEvent.clear(enrollment);
+    await userEvent.type(enrollment, "200");
+    expect(screen.getByRole("button", { name: "Save changes" })).toBeEnabled();
+    await userEvent.click(screen.getByRole("button", { name: "Save changes" }));
+
+    await waitFor(() => expect(screen.getByTestId("trial-card")).toHaveTextContent("200 patients"));
+    expect(screen.getByTestId("import-design-version")).toHaveTextContent("design v2");
+    expect(screen.queryByTestId("stored-design-banner")).not.toBeInTheDocument();
+  });
+
+  it("shows a malformed import or extraction message without an 'Error:' prefix", async () => {
+    vi.spyOn(api, "importCtgov").mockRejectedValueOnce(new Error("The registry response has no design."));
+    renderAt("/");
+    await userEvent.type(screen.getByTestId("nct-input"), "NCT01234567");
+    await userEvent.click(screen.getByTestId("nct-submit"));
+    expect((await screen.findByTestId("import-error")).textContent).toBe("The registry response has no design.");
+    await userEvent.click(screen.getByTestId("nct-submit"));
+    await screen.findByTestId("trial-card", {}, { timeout: 4000 });
+    expect(screen.queryByTestId("import-error")).not.toBeInTheDocument();
+
+    const message = "The protocol response contains an invalid visit, week or procedure.";
+    vi.spyOn(api, "importProtocol").mockRejectedValueOnce(new Error(message));
+    await userEvent.click(screen.getByTestId("extract-registry"));
+    expect((await screen.findByText(/invalid visit, week or procedure/)).textContent).toBe(message);
+    expect(screen.getByTestId("extract-registry")).toBeEnabled();
   });
 
   it("does not save an empty week as 0, and logs rows accepted without opening them", async () => {
@@ -298,8 +357,8 @@ describe("procedure groups", () => {
         week: 0,
         can_be_remote: false,
         procedures: [
-          { code: "questionnaire", label: "Review electronic diary", site_minutes: 5, ships_sample: false, sample_temp: null },
-          { code: "questionnaire", label: "SGRQ", site_minutes: 5, ships_sample: false, sample_temp: null },
+          { ...endpointProcedure("Review electronic diary"), site_minutes: 5 },
+          { ...endpointProcedure("SGRQ"), site_minutes: 5 },
         ],
       },
       {
@@ -307,7 +366,7 @@ describe("procedure groups", () => {
         label: "B",
         week: 4,
         can_be_remote: true,
-        procedures: [{ code: "questionnaire", label: "EQ-5D-5L", site_minutes: 5, ships_sample: false, sample_temp: null }],
+        procedures: [{ ...endpointProcedure("EQ-5D-5L"), site_minutes: 5 }],
       },
     ];
     const [row] = groupProcedures(visits);
@@ -329,6 +388,151 @@ describe("procedure groups", () => {
     expect(spiro).toHaveTextContent("Spirometry");
     expect(spiro).toHaveTextContent("4 times");
     expect(spiro).toHaveTextContent("at 4 visits");
+  });
+});
+
+function endpointProcedure(label: string, patch: Partial<Procedure> = {}): Procedure {
+  return {
+    code: "questionnaire", label, site_minutes: 5, ships_sample: false, sample_temp: null,
+    endpoint_role: "unknown", endpoint_note: "", link_basis: "unmatched", ...patch,
+  };
+}
+
+describe("procedure endpoint roles", () => {
+  const candidate = (procedures: Procedure[]): ExtractionCandidate => ({
+    visit: { number: 1, week: 12, label: "Week 12", can_be_remote: false, procedures },
+    source_page: 1, quote: "Week 12 assessments", confidence: 1,
+  });
+
+  it("edits one assessment within a shared code, records human provenance, and counts the row as edited", async () => {
+    const apply = vi.fn();
+    const original = candidate([
+      endpointProcedure("SGRQ", { endpoint_role: "supports_primary", endpoint_note: "primaryOutcomes: SGRQ — Week 12", link_basis: "outcome_title" }),
+      endpointProcedure("EQ-5D-5L"),
+    ]);
+    render(<ProtocolReview candidates={[original]} warnings={[]} canApply applying={false} onApply={apply} />);
+    expect(screen.getByText("Supports primary outcome")).toBeInTheDocument();
+    expect(screen.getByText("Unknown")).toBeInTheDocument();
+    await userEvent.click(screen.getByRole("button", { name: "Edit visit 1" }));
+    await userEvent.selectOptions(screen.getByLabelText("Visit 1 SGRQ endpoint role"), "supports_secondary");
+    expect(screen.getByLabelText("Visit 1 SGRQ endpoint note")).toHaveValue("");
+    await userEvent.type(screen.getByLabelText("Visit 1 SGRQ endpoint note"), "Confirmed against protocol.");
+    await userEvent.click(screen.getByRole("button", { name: "Done" }));
+    await userEvent.click(screen.getByTestId("apply-extraction"));
+    const [visits, stats] = apply.mock.calls[0];
+    expect(visits[0].procedures).toHaveLength(2);
+    expect(visits[0].procedures[0]).toMatchObject({ endpoint_role: "supports_secondary", endpoint_note: "Confirmed against protocol.", link_basis: "human" });
+    expect(visits[0].procedures[1]).toEqual(original.visit.procedures[1]);
+    expect(stats).toEqual({ accepted: 0, edited: 1, rejected: 0, bulk_accepted: 0 });
+    expect(original.visit.procedures[0].link_basis).toBe("outcome_title");
+  });
+
+  it("saves a note-only human decision without changing an unknown role", async () => {
+    const apply = vi.fn();
+    render(<ProtocolReview candidates={[candidate([endpointProcedure("Diary")])]} warnings={[]} canApply applying={false} onApply={apply} />);
+    await userEvent.click(screen.getByRole("button", { name: "Edit visit 1" }));
+    await userEvent.type(screen.getByLabelText("Visit 1 Diary endpoint note"), "Link still needs confirmation.");
+    await userEvent.click(screen.getByRole("button", { name: "Done" }));
+    await userEvent.click(screen.getByTestId("apply-extraction"));
+    expect(apply.mock.calls[0][0][0].procedures[0]).toMatchObject({ endpoint_role: "unknown", link_basis: "human", endpoint_note: "Link still needs confirmation." });
+    expect(apply.mock.calls[0][1].edited).toBe(1);
+  });
+
+  it("accepts legacy candidates as unknown without inventing a human decision", async () => {
+    const apply = vi.fn();
+    // Deliberately simulate pre-field persisted JSON; the API supplies defaults, old mocks do not.
+    const legacy = { code: "ecg", label: "ECG", site_minutes: 20, ships_sample: false, sample_temp: null } as Procedure;
+    render(<ProtocolReview candidates={[candidate([legacy])]} warnings={[]} canApply applying={false} onApply={apply} />);
+    expect(screen.getByText("Unknown")).toBeInTheDocument();
+    expect(screen.getByText("Unmatched")).toBeInTheDocument();
+    expect(screen.queryByText(/optional|non.core/i)).not.toBeInTheDocument();
+    await userEvent.click(screen.getByRole("button", { name: "Accept all remaining" }));
+    await userEvent.click(screen.getByTestId("apply-extraction"));
+    expect(apply.mock.calls[0][0][0].procedures[0]).toEqual(legacy);
+    expect(apply.mock.calls[0][1]).toEqual({ accepted: 1, edited: 0, rejected: 0, bulk_accepted: 1 });
+  });
+
+  it("removes only the clicked assessment when two share a code", async () => {
+    const apply = vi.fn();
+    const eq5d = endpointProcedure("EQ-5D-5L");
+    render(<ProtocolReview candidates={[candidate([endpointProcedure("SGRQ"), eq5d])]} warnings={[]} canApply applying={false} onApply={apply} />);
+    await userEvent.click(screen.getByRole("button", { name: "Edit visit 1" }));
+    await userEvent.click(screen.getByRole("button", { name: "Remove SGRQ" }));
+    await userEvent.click(screen.getByRole("button", { name: "Done" }));
+    await userEvent.click(screen.getByTestId("apply-extraction"));
+    const [visits, stats] = apply.mock.calls[0];
+    expect(visits[0].procedures).toEqual([eq5d]);
+    expect(stats.edited).toBe(1);
+  });
+
+  it("keeps counting an edited row as edited after Accept", async () => {
+    const apply = vi.fn();
+    render(<ProtocolReview candidates={[candidate([endpointProcedure("SGRQ")])]} warnings={[]} canApply applying={false} onApply={apply} />);
+    await userEvent.click(screen.getByRole("button", { name: "Edit visit 1" }));
+    await userEvent.type(screen.getByLabelText("Visit 1 label"), " (V5)");
+    await userEvent.click(screen.getByRole("button", { name: "Done" }));
+    await userEvent.click(screen.getByRole("button", { name: "Accept visit 1" }));
+    expect(screen.getByText("✎ Edited")).toBeInTheDocument();
+    await userEvent.click(screen.getByTestId("apply-extraction"));
+    expect(apply.mock.calls[0][0][0].label).toBe("Week 12 (V5)");
+    expect(apply.mock.calls[0][1]).toEqual({ accepted: 0, edited: 1, rejected: 0, bulk_accepted: 0 });
+  });
+
+  it("still counts an unedited row as accepted after Reject then Accept", async () => {
+    const apply = vi.fn();
+    render(<ProtocolReview candidates={[candidate([endpointProcedure("SGRQ")])]} warnings={[]} canApply applying={false} onApply={apply} />);
+    await userEvent.click(screen.getByRole("button", { name: "Reject visit 1" }));
+    await userEvent.click(screen.getByRole("button", { name: "Accept visit 1" }));
+    expect(screen.getByText("✓ Accepted")).toBeInTheDocument();
+    await userEvent.click(screen.getByTestId("apply-extraction"));
+    expect(apply.mock.calls[0][1]).toEqual({ accepted: 1, edited: 0, rejected: 0, bulk_accepted: 0 });
+  });
+
+  it("shows distinct roles in a shared-code removal row and leaves removal under the existing lever", async () => {
+    const change = vi.fn();
+    const design = { ...MOCK_DESIGN, visits: [candidate([
+      endpointProcedure("Primary score", { endpoint_role: "supports_primary", link_basis: "outcome_title" }),
+      endpointProcedure("Secondary score", { endpoint_role: "supports_secondary", link_basis: "outcome_title" }),
+      endpointProcedure("Diary", { endpoint_role: "not_linked", link_basis: "human" }),
+      endpointProcedure("Unreviewed score"),
+    ]).visit] };
+    const { rerender } = render(<LeversPanel design={design} levers={DEFAULT_LEVERS} onChange={change} />);
+    const row = screen.getByTestId("procedure-questionnaire");
+    expect(row).toHaveTextContent("Primary score: Supports primary outcome");
+    expect(row).toHaveTextContent("Secondary score: Supports secondary outcome");
+    expect(row).toHaveTextContent("Diary: Not linked to a registry outcome");
+    expect(row).toHaveTextContent("Unreviewed score: Unknown");
+    expect(within(row).queryByRole("status")).not.toBeInTheDocument();
+    expect(within(row).getByRole("checkbox")).not.toBeChecked();
+    await userEvent.click(within(row).getByRole("checkbox"));
+    expect(change).toHaveBeenLastCalledWith({ ...DEFAULT_LEVERS, removed_procedures: ["questionnaire"] });
+    rerender(<LeversPanel design={design} levers={change.mock.calls[0][0]} onChange={change} />);
+    expect(within(row).getByRole("checkbox")).toBeChecked();
+    expect(row).toHaveTextContent("This procedure is tied to a primary outcome.");
+    expect(row).toHaveTextContent("No primary or secondary outcome in the registry record matches this procedure.");
+    expect(within(row).getAllByRole("status")).toHaveLength(2);
+    await userEvent.click(within(row).getByRole("checkbox"));
+    expect(change).toHaveBeenLastCalledWith(DEFAULT_LEVERS);
+    rerender(<LeversPanel design={design} levers={DEFAULT_LEVERS} onChange={change} />);
+    expect(within(row).queryByRole("status")).not.toBeInTheDocument();
+  });
+
+  it("keeps unknown removal neutral and recomputes cost, staff hours and carbon through the existing scenario API", async () => {
+    const compute = vi.spyOn(api, "compute");
+    renderAt(`/scenario/${DESIGN}`);
+    await waitForCards();
+    const row = screen.getByTestId("procedure-questionnaire");
+    expect(row).toHaveTextContent("Patient questionnaire: Unknown");
+    const beforeHours = screen.getByTestId("metric-site_staff_hours-value").textContent;
+    const expected = mockCompute(MOCK_DESIGN, { ...DEFAULT_LEVERS, removed_procedures: ["questionnaire"] });
+    await userEvent.click(within(row).getByRole("checkbox"));
+    await waitFor(() => expect(compute.mock.calls.some(([, levers]) => levers.removed_procedures.includes("questionnaire"))).toBe(true), { timeout: 4000 });
+    await waitFor(() => expect(screen.getByTestId("metric-site_staff_hours-value").textContent).not.toBe(beforeHours), { timeout: 4000 });
+    for (const key of ["cost_usd", "site_staff_hours", "co2e_kg"] as const) {
+      expect(screen.getByTestId(`metric-${key}-value`)).toHaveAccessibleName(expect.stringContaining(`median ${formatValue(expected[key].p50, expected[key].unit)}`));
+    }
+    expect(within(row).queryByRole("status")).not.toBeInTheDocument();
+    expect(row).not.toHaveTextContent(/optional|non.core/i);
   });
 });
 

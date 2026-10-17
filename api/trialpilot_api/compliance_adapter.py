@@ -29,7 +29,7 @@ from typing import Any
 from sqlalchemy.engine import Engine
 from sqlmodel import Session, col, select
 
-from ._contracts import ROLES, ApprovalRequest, AuditEntry, Signature
+from ._contracts import ROLES, ApprovalRequest, AuditEntry
 from .db import ApprovalStubRow, AuditStubRow, utcnow_iso
 from .hashing import canonical_json
 
@@ -244,8 +244,3 @@ class ComplianceAdapter:
         with Session(self.engine) as s:
             row = s.get(ApprovalStubRow, approval_id)
         return _approval_from_stub_row(row) if row else None
-
-    @staticmethod
-    def signatures_of(approval: ApprovalRequest | None) -> list[Signature]:
-        return list(approval.signatures) if approval else []
-

@@ -1,0 +1,5541 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT02487446",
+   "orgStudyIdInfo": {
+    "id": "CQVA149A2349"
+   },
+   "organization": {
+    "fullName": "Novartis",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Efficacy and Safety Study of QVA149 in COPD Patients",
+   "officialTitle": "A Multi-center, Randomized, Double-blind, Double-dummy, Active Controlled, 2-period Cross-over Study to Assess the Efficacy, Safety and Tolerability of Indacaterol Maleate/Glycopyrronium Bromide Compared to Umeclidinium Bromide/Vilanterol in COPD Patients With Moderate to Severe Airflow Limitation"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2017-11",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2015-07-28",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2016-09-12",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2016-09-12",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2015-06-29",
+   "studyFirstSubmitQcDate": "2015-06-29",
+   "studyFirstPostDateStruct": {
+    "date": "2015-07-01",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2017-09-12",
+   "resultsFirstSubmitQcDate": "2017-11-30",
+   "resultsFirstPostDateStruct": {
+    "date": "2017-12-26",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2017-11-30",
+   "lastUpdatePostDateStruct": {
+    "date": "2017-12-26",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Novartis Pharmaceuticals",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false,
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The purpose of this study is to demonstrate that the efficacy of the combination product QVA149 is similar to the efficacy of the combination product umeclidinium/vilanterol on a pre-specified endpoint of FEV1 AUC0-24h while maintaining an acceptable safety profile."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ],
+   "keywords": [
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "CROSSOVER",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 357,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "First QVA149, then Umeclidinium/vilanterol",
+     "type": "EXPERIMENTAL",
+     "description": "Participants received QVA149 27.5/12.5 ug via inhalation twice daily (b.i.d.) for 12 weeks. Then after 3 weeks washout, participants received Umeclidinium/vilanterol 62.5/25 ug via inhalation once daily for 12 weeks.",
+     "interventionNames": [
+      "Drug: QVA149",
+      "Drug: Umeclidinium/vilanterol",
+      "Drug: Placebo (umeclidinium/vilanterol)",
+      "Drug: Placebo (QVA149)"
+     ]
+    },
+    {
+     "label": "First Umeclidinium/vilanterol, then QVA149",
+     "type": "EXPERIMENTAL",
+     "description": "Participants received Umeclidinium/vilanterol 62.5/25 ug via inhalation once daily for 12 weeks. Then after 3 weeks washout, participants received QVA149 27.5/12.5 ug via inhalation twice daily (b.i.d.) for 12 weeks.",
+     "interventionNames": [
+      "Drug: QVA149",
+      "Drug: Umeclidinium/vilanterol",
+      "Drug: Placebo (umeclidinium/vilanterol)",
+      "Drug: Placebo (QVA149)"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "QVA149",
+     "description": "QVA149 capsules for inhalation, delivered via QVA149 single dose dry powder inhaler (SDDPI)",
+     "armGroupLabels": [
+      "First QVA149, then Umeclidinium/vilanterol",
+      "First Umeclidinium/vilanterol, then QVA149"
+     ],
+     "otherNames": [
+      "Indecaterol maleate/glycopyrronium bromide"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Umeclidinium/vilanterol",
+     "description": "Umeclidinium/vilanterol for inhalation, delivered via ELLIPTA® inhaler",
+     "armGroupLabels": [
+      "First QVA149, then Umeclidinium/vilanterol",
+      "First Umeclidinium/vilanterol, then QVA149"
+     ],
+     "otherNames": [
+      "ELLIPTA®"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo (umeclidinium/vilanterol)",
+     "description": "Matching Placebo to umeclidinium/vilanterol for inhalation, delivered via ELLIPTA® inhaler",
+     "armGroupLabels": [
+      "First QVA149, then Umeclidinium/vilanterol",
+      "First Umeclidinium/vilanterol, then QVA149"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo (QVA149)",
+     "description": "Matching Placebo to QVA149 capsules for inhalation, delivered via QVA149 SDDPI",
+     "armGroupLabels": [
+      "First QVA149, then Umeclidinium/vilanterol",
+      "First Umeclidinium/vilanterol, then QVA149"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Change From Baseline in Forced Expiratory Volume (FEV1) Area Under the Curve (AUC) 0-24h",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time over an entire day (AUC 0-24h). A positive change from baseline indicates improvement.",
+     "timeFrame": "baseline, 0 to 24 hours post-dose at week 12"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Change From Baseline in Forced Expiratory Volume (FEV1) Area Under the Curve (AUC) 0-24h",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time over an entire day (AUC 0-24h). A positive change from baseline indicates improvement.",
+     "timeFrame": "baseline, 0 to 24 hours post-dose at week 12"
+    },
+    {
+     "measure": "Change From Baseline in Trough FEV1 (Mean of 23h 15 Minutes and 23 h 45 Minutes Post Previous Morning Dose)",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. Trough FEV1 was defined as the average of measurements made 23 hours 15 minutes and 23 hours 45 minutes post-dose for each treatment",
+     "timeFrame": "baseline, 23 hours 15 minutes and 23 hours 45 minutes post previous morning dose at week 12"
+    },
+    {
+     "measure": "Change From Baseline in FEV1 AUC 12-24h",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time over 12 hours (AUC 12-24h).",
+     "timeFrame": "baseline, 12 hours to 24 hours post-dose at week 12"
+    },
+    {
+     "measure": "Change From Baseline in FEV1 AUC 0-12h",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time over 12 hours (AUC 0-12h).",
+     "timeFrame": "baseline, 0 to 12 hours post-dose at week 12"
+    },
+    {
+     "measure": "Change From Baseline in FEV1 AUC 0-4h, AUC 4-8h, AUC 8-12h, AUC 12-16h, AUC 16-20h and AUC 20-24h",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time over 4 hour intervals FEV1 AUC 0-4h, AUC 4-8h, AUC 8-12h, AUC 12-16h, AUC 16-20h and AUC 20-24h.",
+     "timeFrame": "baseline, 12 weeks"
+    },
+    {
+     "measure": "Change From Baseline in Pre-dose Trough FEV1 (Mean of 15 Minutes and 45 Minutes Pre Morning Dose)",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. Pre-dose trough FEV1 was defined as the average of measurements made 15 minutes and 45 minutes pre morning dose for each treatment.",
+     "timeFrame": "baseline, 15 minutes and 45 minutes pre morning dose at week 12"
+    },
+    {
+     "measure": "QVA149 Compared to Umeclidinium/Vilanterol in Terms of Change From Baseline in FEV1 at Any Time Point",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards.",
+     "timeFrame": "Day 1 (5min, 15min, 30min, hours 1, 2, 4, 8, 11h 55min, 23h 15min, 23h 45min); week 6 (-45min, -15min); week 12 (-45min, -15min, 5min, 15min, 30min, hours 1, 2, 4, 8, 11h 55min, 12h 5min, 12h 15min, 12h 30min, 13, 14, 16, 20, 23h 15min, 23h 45min)"
+    },
+    {
+     "measure": "QVA149 Compared to Umeclidinium/Vilanterol in Terms of Change From Baseline in Forced Vital Capacity (FVC) at Any Time Point",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards.",
+     "timeFrame": "Day 1 (5min, 15min, 30min, hours 1, 2, 4, 8, 11h 55min, 23h 15min, 23h 45min); week 6 (-45min, -15min); week 12 (-45min, -15min, 5min, 15min, 30min, hours 1, 2, 4, 8, 11h 55min, 12h 5min, 12h 15min, 12h 30min, 13, 14, 16, 20, 23h 15min, 23h 45min)"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Male or female adults aged ≥40 yrs\n* Smoking history of at least 10 pack years\n* Diagnosis of stable Chronic Obstructive Pulmonary Disease (COPD) as classified by the Global Initiative for Chronic Obstructive Lung Disease (GOLD) Guidelines, 2015)\n* Post-bronchodilator Forced Expiratory Volume in 1 Second (FEV1)\\< 80% and ≥ 30% of the predicted normal value and post-bronchodilator FEV1/FVC (forced vital capacity) \\<70%\n* Modified Medical Research Council questionnaire grade of 2 or higher\n\nExclusion Criteria:\n\n* Patients who have had a respiratory tract infection within 4 weeks prior to Visit 1\n* Patients with concomitant pulmonary disease\n* Patients with a history of asthma\n* Any patient with lung cancer or a history of lung cancer\n* Patients with a history of certain cardiovascular co-morbid conditions\n* Patients with a known history and diagnosis of alpha-1 antitrypsin deficiency\n* Patients in the active phase of a supervised pulmonary rehabilitation program\n* Patients contraindicated for inhaled anticholinergic agents and β2 agonists\n* Other protocol-defined inclusion/exclusion criteria may apply",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "locations": [
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Andalusia",
+     "state": "Alabama",
+     "zip": "36305",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 31.30808,
+      "lon": -86.48243
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Anniston",
+     "state": "Alabama",
+     "zip": "36207-5710",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.65983,
+      "lon": -85.83163
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Jasper",
+     "state": "Alabama",
+     "zip": "35501",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.83122,
+      "lon": -87.27751
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Multiple Locations",
+     "state": "Alabama",
+     "country": "United States"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Multiple Locations",
+     "state": "Arizona",
+     "country": "United States"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Tempe",
+     "state": "Arizona",
+     "zip": "85283",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.41477,
+      "lon": -111.90931
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Tucson",
+     "state": "Arizona",
+     "zip": "85723",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.22174,
+      "lon": -110.92648
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Fayetteville",
+     "state": "Arkansas",
+     "zip": "72703",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.06258,
+      "lon": -94.15743
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Huntington Beach",
+     "state": "California",
+     "zip": "92647",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.6603,
+      "lon": -117.99923
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Rancho Mirage",
+     "state": "California",
+     "zip": "92270",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.73974,
+      "lon": -116.41279
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Colorado Springs",
+     "state": "Colorado",
+     "zip": "80907",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.83388,
+      "lon": -104.82136
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Altamonte Springs",
+     "state": "Florida",
+     "zip": "32701",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.66111,
+      "lon": -81.36562
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "DeLand",
+     "state": "Florida",
+     "zip": "32720",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.02832,
+      "lon": -81.30312
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Fort Lauderdale",
+     "state": "Florida",
+     "zip": "33316-192",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.12231,
+      "lon": -80.14338
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Kissimmee",
+     "state": "Florida",
+     "zip": "34741",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.30468,
+      "lon": -81.41667
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33172",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Pensacola",
+     "state": "Florida",
+     "zip": "32503",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.42131,
+      "lon": -87.21691
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Pensacola",
+     "state": "Florida",
+     "zip": "32504",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.42131,
+      "lon": -87.21691
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Port Orange",
+     "state": "Florida",
+     "zip": "32127",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.13832,
+      "lon": -80.99561
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Conyers",
+     "state": "Georgia",
+     "zip": "30094",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.66761,
+      "lon": -84.01769
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Duluth",
+     "state": "Georgia",
+     "zip": "30096",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.00288,
+      "lon": -84.14464
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Meridian",
+     "state": "Idaho",
+     "zip": "83642",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.61211,
+      "lon": -116.39151
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "New Orleans",
+     "state": "Louisiana",
+     "zip": "70119",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.95465,
+      "lon": -90.07507
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Slidell",
+     "state": "Louisiana",
+     "zip": "70458",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.27519,
+      "lon": -89.78117
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Sunset",
+     "state": "Louisiana",
+     "zip": "70584",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.41131,
+      "lon": -92.06845
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Columbia",
+     "state": "Maryland",
+     "zip": "21044",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.24038,
+      "lon": -76.83942
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Edina",
+     "state": "Minnesota",
+     "zip": "55435",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.88969,
+      "lon": -93.34995
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Fridley",
+     "state": "Minnesota",
+     "zip": "55432",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 45.08608,
+      "lon": -93.26328
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Minneapolis",
+     "state": "Minnesota",
+     "zip": "55402",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.97997,
+      "lon": -93.26384
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Minneapolis",
+     "state": "Minnesota",
+     "zip": "55407",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.97997,
+      "lon": -93.26384
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Plymouth",
+     "state": "Minnesota",
+     "zip": "55441",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 45.01052,
+      "lon": -93.45551
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Henderson",
+     "state": "Nevada",
+     "zip": "89014",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.0397,
+      "lon": -114.98194
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "New York",
+     "state": "New York",
+     "zip": "10016",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.71427,
+      "lon": -74.00597
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Charlotte",
+     "state": "North Carolina",
+     "zip": "28207",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.22709,
+      "lon": -80.84313
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Cornelius",
+     "state": "North Carolina",
+     "zip": "28031",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.4868,
+      "lon": -80.86007
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Gastonia",
+     "state": "North Carolina",
+     "zip": "28054",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.26208,
+      "lon": -81.1873
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Hickory",
+     "state": "North Carolina",
+     "zip": "28602",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.73319,
+      "lon": -81.3412
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "High Point",
+     "state": "North Carolina",
+     "zip": "27262",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.95569,
+      "lon": -80.00532
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Huntersville",
+     "state": "North Carolina",
+     "zip": "28078",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.41069,
+      "lon": -80.84285
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Winston-Salem",
+     "state": "North Carolina",
+     "zip": "27103",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.09986,
+      "lon": -80.24422
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Cincinnati",
+     "state": "Ohio",
+     "zip": "45242",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.12711,
+      "lon": -84.51439
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Columbus",
+     "state": "Ohio",
+     "zip": "43213",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.96118,
+      "lon": -82.99879
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Columbus",
+     "state": "Ohio",
+     "zip": "43215",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.96118,
+      "lon": -82.99879
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Dublin",
+     "state": "Ohio",
+     "zip": "43016",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.09923,
+      "lon": -83.11408
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Marion",
+     "state": "Ohio",
+     "zip": "43302",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.58867,
+      "lon": -83.12852
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Medford",
+     "state": "Oregon",
+     "zip": "97504",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.32652,
+      "lon": -122.87559
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Portland",
+     "state": "Oregon",
+     "zip": "97213",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 45.52345,
+      "lon": -122.67621
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Philadelphia",
+     "state": "Pennsylvania",
+     "zip": "19142",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.95238,
+      "lon": -75.16362
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Tipton",
+     "state": "Pennsylvania",
+     "zip": "16684",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.6359,
+      "lon": -78.29585
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Carrollton",
+     "state": "Texas",
+     "zip": "75010",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.95373,
+      "lon": -96.89028
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Channelview",
+     "state": "Texas",
+     "zip": "77530",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.77606,
+      "lon": -95.11465
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Fort Worth",
+     "state": "Texas",
+     "zip": "76109",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.72541,
+      "lon": -97.32085
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Lampasas",
+     "state": "Texas",
+     "zip": "76550",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 31.06378,
+      "lon": -98.1817
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "McKinney",
+     "state": "Texas",
+     "zip": "75069",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.19762,
+      "lon": -96.61527
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "New Braunfels",
+     "state": "Texas",
+     "zip": "78130",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.703,
+      "lon": -98.12445
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Salt Lake City",
+     "state": "Utah",
+     "zip": "84102",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.76078,
+      "lon": -111.89105
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Newport News",
+     "state": "Virginia",
+     "zip": "23606",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.98038,
+      "lon": -76.42975
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Tacoma",
+     "state": "Washington",
+     "zip": "98405",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.25288,
+      "lon": -122.44429
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "28993871",
+     "type": "DERIVED",
+     "citation": "Kerwin E, Ferguson GT, Sanjar S, Goodin T, Yadao A, Fogel R, Maitra S, Sen B, Ayers T, Banerji D. Dual Bronchodilation with Indacaterol Maleate/Glycopyrronium Bromide Compared with Umeclidinium Bromide/Vilanterol in Patients with Moderate-to-Severe COPD: Results from Two Randomized, Controlled, Cross-over Studies. Lung. 2017 Dec;195(6):739-747. doi: 10.1007/s00408-017-0055-9. Epub 2017 Oct 9."
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "UNDECIDED",
+   "description": "Novartis is committed to sharing with qualified external researchers, access to patient-level data and supporting clinical documents from eligible studies. These requests are reviewed and approved by an independent review panel on the basis of scientific merit. All data provided is anonymized to respect the privacy of patients who have participated in the trial in line with applicable laws and regulations.\n\nThis trial data availability is according to the criteria and process described on www.clinicalstudydatarequest.com"
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "Participants were randomized to 1 of 2 sequences in a 1:1 ratio.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "First QVA149, Then Umeclidinium/Vilanterol",
+     "description": "Participants received QVA149 27.5/12.5 ug via inhalation twice daily (b.i.d.) for 12 weeks. Then after 3 weeks washout, participants received Umeclidinium/vilanterol 62.5/25 ug via inhalation once daily for 12 weeks."
+    },
+    {
+     "id": "FG001",
+     "title": "First Umeclidinium/Vilanterol, Then QVA149",
+     "description": "Participants received Umeclidinium/vilanterol 62.5/25 ug via inhalation once daily for 12 weeks. Then after 3 weeks washout, participants received QVA149 27.5/12.5 ug via inhalation twice daily (b.i.d.) for 12 weeks."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Period 1",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "178"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "179"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "165"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "171"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "13"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "8"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Physician Decision",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Lack of Efficacy",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Protocol deviation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "5"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Washout",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "165"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "171"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "162"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "163"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "8"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "4"
+        }
+       ]
+      },
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Period 2",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "162"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "163"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "154"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "158"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "8"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "5"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Protocol deviation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "6"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "populationDescription": "Since this is a cross-over design study, all participants were randomized to receive both treatments, either in sequence QVA/UV or sequence UV/QVA. Therefore, the baseline characteristics are reported as overall participants.",
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Overall Participants",
+     "description": "Participants received QVA149 27.5/12.5 ug via inhalation twice daily (b.i.d.) for 12 weeks and Umeclidinium/vilanterol 62.5/25 ug via inhalation once daily for 12 weeks."
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "357"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "64.1",
+           "spread": "8.21"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "171"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "186"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Change From Baseline in Forced Expiratory Volume (FEV1) Area Under the Curve (AUC) 0-24h",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time over an entire day (AUC 0-24h). A positive change from baseline indicates improvement.",
+     "populationDescription": "The full analysis, which included all randomized patients who received at least one dose of double-blind treatment, was considered for the analysis. Only participants with a value at both baseline and the post-baseline time point were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "baseline, 0 to 24 hours post-dose at week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received QVA149 27.5/12.5 ug via inhalation twice daily (b.i.d.) for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Umeclidinium/Vilanterol",
+       "description": "Participants received Umeclidinium/vilanterol 62.5/25 ug via inhalation b.i.d. for 12 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "315"
+        },
+        {
+         "groupId": "OG001",
+         "value": "319"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2321",
+           "spread": "0.01133"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2436",
+           "spread": "0.01130"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "groupDescription": "Ho: QVA149 27.5/12.5 μg b.i.d. is inferior to umeclidinium/vilanterol 62.5/25 μg q.d; Ha: QVA149 27.5/12.5 μg b.i.d. is non-inferior to umeclidinium/vilanterol 62.5/25 μg q.d.",
+       "nonInferiorityType": "NON_INFERIORITY_OR_EQUIVALENCE",
+       "nonInferiorityComment": "Non-inferiority was demonstrated if the lower limit (LL) of the 97.5% one -sided confidence interval (CI) \\> -20 mL.",
+       "pValue": "0.139",
+       "pValueComment": "p-value unadjusted",
+       "statisticalMethod": "Linear Mixed Model",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "-0.0115",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.0269",
+       "ciUpperLimit": "0.0038",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.00778"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Forced Expiratory Volume (FEV1) Area Under the Curve (AUC) 0-24h",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time over an entire day (AUC 0-24h). A positive change from baseline indicates improvement.",
+     "populationDescription": "The full analysis, which included all randomized patients who received at least one dose of double-blind treatment, was considered for the analysis. Only participants with a value at both baseline and post-baseline time point were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "baseline, 0 to 24 hours post-dose at week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received QVA149 27.5/12.5 ug via inhalation twice daily (b.i.d.) for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Umeclidinium/Vilanterol",
+       "description": "Participants received Umeclidinium/vilanterol 62.5/25 ug via inhalation b.i.d. for 12 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "315"
+        },
+        {
+         "groupId": "OG001",
+         "value": "319"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2321",
+           "spread": "0.01133"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2436",
+           "spread": "0.01130"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "groupDescription": "Ho: QVA149 27.5/12.5 μg b.i.d. is inferior to umeclidinium/vilanterol 62.5/25 μg q.d; Ha: QVA149 27.5/12.5 μg b.i.d. is non-inferior to umeclidinium/vilanterol 62.5/25 μg q.d.",
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "-0.0115",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.0269",
+       "ciUpperLimit": "0.0038",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.00778"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Trough FEV1 (Mean of 23h 15 Minutes and 23 h 45 Minutes Post Previous Morning Dose)",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. Trough FEV1 was defined as the average of measurements made 23 hours 15 minutes and 23 hours 45 minutes post-dose for each treatment",
+     "populationDescription": "The full analysis, which included all randomized patients who received at least one dose of double-blind treatment, was considered for the analysis. Only participants with a value at both baseline and the post-baseline time point were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "baseline, 23 hours 15 minutes and 23 hours 45 minutes post previous morning dose at week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received QVA149 27.5/12.5 ug via inhalation twice daily (b.i.d.) for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Umeclidinium/Vilanterol",
+       "description": "Participants received Umeclidinium/vilanterol 62.5/25 ug via inhalation b.i.d. for 12 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "309"
+        },
+        {
+         "groupId": "OG001",
+         "value": "310"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1891",
+           "spread": "0.01070"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2043",
+           "spread": "0.01069"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "-0.0153",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.0361",
+       "ciUpperLimit": "0.0056",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.01062"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in FEV1 AUC 12-24h",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time over 12 hours (AUC 12-24h).",
+     "populationDescription": "The full analysis, which included all randomized patients who received at least one dose of double-blind treatment, was considered for the analysis. Only participants with a value at both baseline and the post-baseline time point were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "baseline, 12 hours to 24 hours post-dose at week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received QVA149 27.5/12.5 ug via inhalation twice daily (b.i.d.) for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Umeclidinium/Vilanterol",
+       "description": "Participants received Umeclidinium/vilanterol 62.5/25 ug via inhalation b.i.d. for 12 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "312"
+        },
+        {
+         "groupId": "OG001",
+         "value": "316"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2076",
+           "spread": "0.01159"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2025",
+           "spread": "0.01156"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.0051",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.0108",
+       "ciUpperLimit": "0.0209",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.00806"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in FEV1 AUC 0-12h",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time over 12 hours (AUC 0-12h).",
+     "populationDescription": "The full analysis, which included all randomized patients who received at least one dose of double-blind treatment, was considered for the analysis. Only participants with a value at both baseline and the post-baseline time point were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "baseline, 0 to 12 hours post-dose at week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received QVA149 27.5/12.5 ug via inhalation twice daily (b.i.d.) for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Umeclidinium/Vilanterol",
+       "description": "Participants received Umeclidinium/vilanterol 62.5/25 ug via inhalation b.i.d. for 12 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "313"
+        },
+        {
+         "groupId": "OG001",
+         "value": "319"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2543",
+           "spread": "0.01031"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2848",
+           "spread": "0.01026"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in FEV1 AUC 0-4h, AUC 4-8h, AUC 8-12h, AUC 12-16h, AUC 16-20h and AUC 20-24h",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time over 4 hour intervals FEV1 AUC 0-4h, AUC 4-8h, AUC 8-12h, AUC 12-16h, AUC 16-20h and AUC 20-24h.",
+     "populationDescription": "The full analysis, which included all randomized patients who received at least one dose of double-blind treatment, was considered for the analysis. Only participants with a value at both baseline and the post-baseline time points were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "baseline, 12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received QVA149 27.5/12.5 ug via inhalation twice daily (b.i.d.) for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Umeclidinium/Vilanterol",
+       "description": "Participants received Umeclidinium/vilanterol 62.5/25 ug via inhalation b.i.d. for 12 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "341"
+        },
+        {
+         "groupId": "OG001",
+         "value": "340"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "0-4h",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "312"
+          },
+          {
+           "groupId": "OG001",
+           "value": "319"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3223",
+           "spread": "0.01087"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3289",
+           "spread": "0.01080"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "4-8h",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "311"
+          },
+          {
+           "groupId": "OG001",
+           "value": "317"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2399",
+           "spread": "0.01051"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2831",
+           "spread": "0.01045"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "8-12h",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "308"
+          },
+          {
+           "groupId": "OG001",
+           "value": "315"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1911",
+           "spread": "0.01069"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2411",
+           "spread": "0.01062"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "12-16h",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "309"
+          },
+          {
+           "groupId": "OG001",
+           "value": "315"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2594",
+           "spread": "0.01241"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2349",
+           "spread": "0.01236"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "16-20h",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "308"
+          },
+          {
+           "groupId": "OG001",
+           "value": "312"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1914",
+           "spread": "0.01247"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.1875",
+           "spread": "0.01244"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "20-24h (n=310,314)",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "310"
+          },
+          {
+           "groupId": "OG001",
+           "value": "314"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1722",
+           "spread": "0.01136"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.1821",
+           "spread": "0.01133"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Pre-dose Trough FEV1 (Mean of 15 Minutes and 45 Minutes Pre Morning Dose)",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. Pre-dose trough FEV1 was defined as the average of measurements made 15 minutes and 45 minutes pre morning dose for each treatment.",
+     "populationDescription": "The full analysis, which included all randomized patients who received at least one dose of double-blind treatment, was considered for the analysis. Only participants with a value at both baseline and the post-baseline time point were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "baseline, 15 minutes and 45 minutes pre morning dose at week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received QVA149 27.5/12.5 ug via inhalation twice daily (b.i.d.) for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Umeclidinium/Vilanterol",
+       "description": "Participants received Umeclidinium/vilanterol 62.5/25 ug via inhalation b.i.d. for 12 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "314"
+        },
+        {
+         "groupId": "OG001",
+         "value": "318"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2302",
+           "spread": "0.01138"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2450",
+           "spread": "0.01135"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "QVA149 Compared to Umeclidinium/Vilanterol in Terms of Change From Baseline in FEV1 at Any Time Point",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards.",
+     "populationDescription": "The full analysis, which included all randomized patients who received at least one dose of double-blind treatment, was considered for the analysis. Only participants with a value at both baseline and the post-baseline time points were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "Day 1 (5min, 15min, 30min, hours 1, 2, 4, 8, 11h 55min, 23h 15min, 23h 45min); week 6 (-45min, -15min); week 12 (-45min, -15min, 5min, 15min, 30min, hours 1, 2, 4, 8, 11h 55min, 12h 5min, 12h 15min, 12h 30min, 13, 14, 16, 20, 23h 15min, 23h 45min)",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received QVA149 27.5/12.5 ug via inhalation twice daily (b.i.d.) for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Umeclidinium/Vilanterol",
+       "description": "Participants received Umeclidinium/vilanterol 62.5/25 ug via inhalation b.i.d. for 12 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "341"
+        },
+        {
+         "groupId": "OG001",
+         "value": "340"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Day 1, 5 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "322"
+          },
+          {
+           "groupId": "OG001",
+           "value": "326"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1112",
+           "spread": "0.01011"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.1201",
+           "spread": "0.01007"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 15 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "320"
+          },
+          {
+           "groupId": "OG001",
+           "value": "319"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1509",
+           "spread": "0.01046"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.1682",
+           "spread": "0.01048"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 30 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "329"
+          },
+          {
+           "groupId": "OG001",
+           "value": "329"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1602",
+           "spread": "0.01071"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.1945",
+           "spread": "0.01073"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 1 hour",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "325"
+          },
+          {
+           "groupId": "OG001",
+           "value": "331"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1755",
+           "spread": "0.01105"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2230",
+           "spread": "0.01100"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 2 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "326"
+          },
+          {
+           "groupId": "OG001",
+           "value": "331"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1840",
+           "spread": "0.01161"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2329",
+           "spread": "0.01157"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 4 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "328"
+          },
+          {
+           "groupId": "OG001",
+           "value": "330"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1432",
+           "spread": "0.01107"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2270",
+           "spread": "0.01105"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 8 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "326"
+          },
+          {
+           "groupId": "OG001",
+           "value": "325"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.0815",
+           "spread": "0.01054"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.1861",
+           "spread": "0.01056"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 11 hours 55 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "304"
+          },
+          {
+           "groupId": "OG001",
+           "value": "318"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.0699",
+           "spread": "0.01153"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.1674",
+           "spread": "0.01138"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 23 hours 15 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "312"
+          },
+          {
+           "groupId": "OG001",
+           "value": "326"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1498",
+           "spread": "0.01078"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.1764",
+           "spread": "0.01063"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 23 hours 45 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "315"
+          },
+          {
+           "groupId": "OG001",
+           "value": "328"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1579",
+           "spread": "0.01103"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.1932",
+           "spread": "0.01090"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 6, -45 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "317"
+          },
+          {
+           "groupId": "OG001",
+           "value": "319"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2122",
+           "spread": "0.01143"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2469",
+           "spread": "0.01141"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 6, -15 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "311"
+          },
+          {
+           "groupId": "OG001",
+           "value": "314"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2378",
+           "spread": "0.01181"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2668",
+           "spread": "0.01179"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, -45 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "311"
+          },
+          {
+           "groupId": "OG001",
+           "value": "314"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2225",
+           "spread": "0.01149"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2378",
+           "spread": "0.01146"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, -15 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "311"
+          },
+          {
+           "groupId": "OG001",
+           "value": "314"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2390",
+           "spread": "0.01182"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2538",
+           "spread": "0.01179"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 5 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "308"
+          },
+          {
+           "groupId": "OG001",
+           "value": "310"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2879",
+           "spread": "0.01029"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2831",
+           "spread": "0.01027"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 15 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "294"
+          },
+          {
+           "groupId": "OG001",
+           "value": "298"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3187",
+           "spread": "0.01079"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3074",
+           "spread": "0.01074"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 30 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "301"
+          },
+          {
+           "groupId": "OG001",
+           "value": "312"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3346",
+           "spread": "0.01103"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3258",
+           "spread": "0.01091"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 1 hour",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "304"
+          },
+          {
+           "groupId": "OG001",
+           "value": "313"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3426",
+           "spread": "0.01128"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3334",
+           "spread": "0.01119"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 2 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "303"
+          },
+          {
+           "groupId": "OG001",
+           "value": "314"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3343",
+           "spread": "0.01188"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3445",
+           "spread": "0.01175"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 4 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "302"
+          },
+          {
+           "groupId": "OG001",
+           "value": "312"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2760",
+           "spread": "0.01137"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3137",
+           "spread": "0.01126"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 8 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "304"
+          },
+          {
+           "groupId": "OG001",
+           "value": "311"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2033",
+           "spread": "0.01078"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2545",
+           "spread": "0.01071"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 11 hours 55 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "276"
+          },
+          {
+           "groupId": "OG001",
+           "value": "307"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1764",
+           "spread": "0.01189"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2311",
+           "spread": "0.01151"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 12 hours 5 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "294"
+          },
+          {
+           "groupId": "OG001",
+           "value": "305"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2343",
+           "spread": "0.01257"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2218",
+           "spread": "0.01242"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 12 hours 15 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "296"
+          },
+          {
+           "groupId": "OG001",
+           "value": "304"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2465",
+           "spread": "0.01291"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2324",
+           "spread": "0.01282"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 12 hours 30 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "296"
+          },
+          {
+           "groupId": "OG001",
+           "value": "300"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2695",
+           "spread": "0.01307"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2350",
+           "spread": "0.01302"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 13 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "292"
+          },
+          {
+           "groupId": "OG001",
+           "value": "301"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2749",
+           "spread": "0.01305"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2448",
+           "spread": "0.01294"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 14 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "290"
+          },
+          {
+           "groupId": "OG001",
+           "value": "306"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2667",
+           "spread": "0.01331"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2355",
+           "spread": "0.01314"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 16 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "290"
+          },
+          {
+           "groupId": "OG001",
+           "value": "298"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2230",
+           "spread": "0.01306"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2197",
+           "spread": "0.01296"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 20 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "291"
+          },
+          {
+           "groupId": "OG001",
+           "value": "298"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1622",
+           "spread": "0.01281"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.1629",
+           "spread": "0.01273"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 23 hours 15 minutes (n=299,305)",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "299"
+          },
+          {
+           "groupId": "OG001",
+           "value": "305"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1791",
+           "spread": "0.01095"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.1981",
+           "spread": "0.01088"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 23 hours 45 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "300"
+          },
+          {
+           "groupId": "OG001",
+           "value": "303"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2048",
+           "spread": "0.01122"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2117",
+           "spread": "0.01118"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "QVA149 Compared to Umeclidinium/Vilanterol in Terms of Change From Baseline in Forced Vital Capacity (FVC) at Any Time Point",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards.",
+     "populationDescription": "The full analysis, which included all randomized patients who received at least one dose of double-blind treatment, was considered for the analysis. Only participants with a value at both baseline and the post-baseline time points were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "Day 1 (5min, 15min, 30min, hours 1, 2, 4, 8, 11h 55min, 23h 15min, 23h 45min); week 6 (-45min, -15min); week 12 (-45min, -15min, 5min, 15min, 30min, hours 1, 2, 4, 8, 11h 55min, 12h 5min, 12h 15min, 12h 30min, 13, 14, 16, 20, 23h 15min, 23h 45min)",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received QVA149 27.5/12.5 ug via inhalation twice daily (b.i.d.) for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Umeclidinium/Vilanterol",
+       "description": "Participants received Umeclidinium/vilanterol 62.5/25 ug via inhalation b.i.d. for 12 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "341"
+        },
+        {
+         "groupId": "OG001",
+         "value": "340"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Day 1, 5 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "322"
+          },
+          {
+           "groupId": "OG001",
+           "value": "326"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2177",
+           "spread": "0.01732"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2218",
+           "spread": "0.01726"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 15 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "320"
+          },
+          {
+           "groupId": "OG001",
+           "value": "319"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2566",
+           "spread": "0.01818"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2927",
+           "spread": "0.01821"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 30 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "329"
+          },
+          {
+           "groupId": "OG001",
+           "value": "329"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2811",
+           "spread": "0.01846"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3325",
+           "spread": "0.01849"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 1 hour",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "325"
+          },
+          {
+           "groupId": "OG001",
+           "value": "331"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2944",
+           "spread": "0.01912"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3534",
+           "spread": "0.01904"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 2 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "326"
+          },
+          {
+           "groupId": "OG001",
+           "value": "331"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3109",
+           "spread": "0.01966"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3687",
+           "spread": "0.01960"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 4 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "328"
+          },
+          {
+           "groupId": "OG001",
+           "value": "330"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2788",
+           "spread": "0.04347"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.4237",
+           "spread": "0.04339"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 8 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "326"
+          },
+          {
+           "groupId": "OG001",
+           "value": "325"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1681",
+           "spread": "0.01816"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3237",
+           "spread": "0.01818"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 11 hours 55 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "304"
+          },
+          {
+           "groupId": "OG001",
+           "value": "318"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1406",
+           "spread": "0.01915"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2910",
+           "spread": "0.01889"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 23 hours 15 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "312"
+          },
+          {
+           "groupId": "OG001",
+           "value": "326"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2565",
+           "spread": "0.01777"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2747",
+           "spread": "0.01753"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 23 hours 45 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "315"
+          },
+          {
+           "groupId": "OG001",
+           "value": "328"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2737",
+           "spread": "0.01903"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3001",
+           "spread": "0.01883"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 6, -45 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "317"
+          },
+          {
+           "groupId": "OG001",
+           "value": "319"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2914",
+           "spread": "0.01853"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3513",
+           "spread": "0.01851"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 6, -15 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "311"
+          },
+          {
+           "groupId": "OG001",
+           "value": "314"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3390",
+           "spread": "0.01922"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3732",
+           "spread": "0.01919"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, -45 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "311"
+          },
+          {
+           "groupId": "OG001",
+           "value": "314"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3044",
+           "spread": "0.01864"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3442",
+           "spread": "0.01859"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, -15 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "311"
+          },
+          {
+           "groupId": "OG001",
+           "value": "314"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3344",
+           "spread": "0.01923"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3566",
+           "spread": "0.01919"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 5 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "308"
+          },
+          {
+           "groupId": "OG001",
+           "value": "310"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3960",
+           "spread": "0.01760"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3861",
+           "spread": "0.01756"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 15 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "294"
+          },
+          {
+           "groupId": "OG001",
+           "value": "298"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.4378",
+           "spread": "0.01865"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.4169",
+           "spread": "0.01857"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 30 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "301"
+          },
+          {
+           "groupId": "OG001",
+           "value": "312"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.4602",
+           "spread": "0.01892"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.4480",
+           "spread": "0.01875"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 1 hour",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "304"
+          },
+          {
+           "groupId": "OG001",
+           "value": "313"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.4649",
+           "spread": "0.01948"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.4647",
+           "spread": "0.01934"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 2 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "303"
+          },
+          {
+           "groupId": "OG001",
+           "value": "314"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.4405",
+           "spread": "0.02006"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.4853",
+           "spread": "0.01987"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 4 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "302"
+          },
+          {
+           "groupId": "OG001",
+           "value": "312"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3872",
+           "spread": "0.04490"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.4343",
+           "spread": "0.04435"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 8 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "304"
+          },
+          {
+           "groupId": "OG001",
+           "value": "311"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2714",
+           "spread": "0.01856"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3555",
+           "spread": "0.01844"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 11 hours 55 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "276"
+          },
+          {
+           "groupId": "OG001",
+           "value": "307"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2306",
+           "spread": "0.01977"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3231",
+           "spread": "0.01911"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 12 hours 5 minutes (n=294,305)",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "294"
+          },
+          {
+           "groupId": "OG001",
+           "value": "305"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3455",
+           "spread": "0.02063"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3112",
+           "spread": "0.02038"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 12 hours 15 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "296"
+          },
+          {
+           "groupId": "OG001",
+           "value": "304"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3409",
+           "spread": "0.02086"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3235",
+           "spread": "0.02070"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 12 hours 30 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "296"
+          },
+          {
+           "groupId": "OG001",
+           "value": "300"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3688",
+           "spread": "0.02196"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3326",
+           "spread": "0.02187"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 13 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "292"
+          },
+          {
+           "groupId": "OG001",
+           "value": "301"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3760",
+           "spread": "0.02123"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3361",
+           "spread": "0.02104"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 14 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "290"
+          },
+          {
+           "groupId": "OG001",
+           "value": "306"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3681",
+           "spread": "0.02192"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3371",
+           "spread": "0.02162"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 16 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "290"
+          },
+          {
+           "groupId": "OG001",
+           "value": "298"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.3129",
+           "spread": "0.02205"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.3279",
+           "spread": "0.02189"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 20 hours",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "291"
+          },
+          {
+           "groupId": "OG001",
+           "value": "298"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2175",
+           "spread": "0.02180"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2353",
+           "spread": "0.02167"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 23 hours 15 minutes",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "299"
+          },
+          {
+           "groupId": "OG001",
+           "value": "305"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2237",
+           "spread": "0.01804"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2750",
+           "spread": "0.01792"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 23 hours 45 minutes (n=300,303)",
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "OG000",
+           "value": "300"
+          },
+          {
+           "groupId": "OG001",
+           "value": "303"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.2607",
+           "spread": "0.01935"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.2728",
+           "spread": "0.01928"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "1",
+   "description": "Since this is a cross-over design study, all patients were randomized to receive both treatments, either in sequence QVA/UV or sequence UV/QVA. The number of patients on each treatment does not add up to the total number of patients.",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "QVA149",
+     "description": "Participants received QVA149 27.5/12.5 ug via inhalation twice daily (b.i.d.) for 12 weeks.",
+     "seriousNumAffected": 13,
+     "seriousNumAtRisk": 341,
+     "otherNumAffected": 85,
+     "otherNumAtRisk": 341
+    },
+    {
+     "id": "EG001",
+     "title": "Umeclidinium/Vilanterol",
+     "description": "Participants received Umeclidinium/vilanterol 62.5/25 ug via inhalation b.i.d. for 12 weeks.",
+     "seriousNumAffected": 21,
+     "seriousNumAtRisk": 340,
+     "otherNumAffected": 104,
+     "otherNumAtRisk": 340
+    },
+    {
+     "id": "EG002",
+     "title": "All Patients",
+     "description": "All Patients",
+     "seriousNumAffected": 33,
+     "seriousNumAtRisk": 356,
+     "otherNumAffected": 161,
+     "otherNumAtRisk": 356
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Anaemia",
+     "organSystem": "Blood and lymphatic system disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Neutropenia",
+     "organSystem": "Blood and lymphatic system disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Thrombocytopenia",
+     "organSystem": "Blood and lymphatic system disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Acute myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Cardiac failure congestive",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Coronary artery disease",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Mitral valve incompetence",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Ventricular extrasystoles",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Large intestinal haemorrhage",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Small intestinal obstruction",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Cholecystitis",
+     "organSystem": "Hepatobiliary disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Appendicitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Bacteraemia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Bronchitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Escherichia bacteraemia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Pharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 5,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 6,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Urinary tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Muscle strain",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Type 2 diabetes mellitus",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Acute myeloid leukaemia",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Basal cell carcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Lung neoplasm malignant",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Squamous cell carcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Major depression",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Acute respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 5,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 7,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 6,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 13,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Hypoxia",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 2,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Deep vein thrombosis",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 356
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Anaemia",
+     "organSystem": "Blood and lymphatic system disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 3,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 4,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Diarrhoea",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 3,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 4,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Nausea",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 4,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Vomiting",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 3,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 4,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Fatigue",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 4,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Bronchitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 5,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 11,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 15,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Lower respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 3,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 6,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Nasopharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 19,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 12,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 28,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Sinusitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 4,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 5,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Upper respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 6,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 11,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 16,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Upper respiratory tract infection bacterial",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 3,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 4,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Urinary tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 4,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 5,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Viral upper respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 4,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 6,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 10,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Hyponatraemia",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 4,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Arthralgia",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 4,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 7,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Back pain",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 4,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 4,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Headache",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 5,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 8,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Anxiety",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 3,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 5,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 36,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 50,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 76,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Cough",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 6,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 5,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 10,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Dyspnoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 7,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 8,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 14,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Nasal congestion",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 3,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 5,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Oropharyngeal pain",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 10,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 5,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 14,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Rhinorrhoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 4,
+       "numAtRisk": 356
+      }
+     ]
+    },
+    {
+     "term": "Hypertension",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA (19.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 341
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 3,
+       "numAtRisk": 340
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 6,
+       "numAtRisk": 356
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "The terms and conditions of Novartis' agreements with its investigators may vary. However, Novartis does not prohibit any investigator from publishing. Any publications from a single-site are postponed until the publication of the pooled data (i.e., data from all sites) in the clinical trial or disclosure of trial results in their entirety."
+   },
+   "pointOfContact": {
+    "title": "Study Director",
+    "organization": "Novartis Pharmaceuticals",
+    "phone": "862-778-1873"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C554862",
+     "term": "indacaterol-glycopyrronium combination"
+    },
+    {
+     "id": "D006024",
+     "term": "Glycopyrrolate"
+    },
+    {
+     "id": "C573971",
+     "term": "GSK573719"
+    },
+    {
+     "id": "C550468",
+     "term": "vilanterol"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D000644",
+     "term": "Quaternary Ammonium Compounds"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D009861",
+     "term": "Onium Compounds"
+    },
+    {
+     "id": "D011759",
+     "term": "Pyrrolidines"
+    },
+    {
+     "id": "D006573",
+     "term": "Heterocyclic Compounds, 1-Ring"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

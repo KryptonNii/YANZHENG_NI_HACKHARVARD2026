@@ -1,0 +1,2054 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT03573817",
+   "orgStudyIdInfo": {
+    "id": "0167"
+   },
+   "organization": {
+    "fullName": "Viatris Inc.",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "A 42-day Parallel Group Safety Study of Revefenacin and Formoterol, Administered in Sequence and as a Combination, in Participants With COPD",
+   "officialTitle": "A Phase 3b, 42-day, Randomized, Double-Blind, Placebo Controlled, Parallel Group Study to Evaluate the Safety and Tolerability of Nebulized Revefenacin and Nebulized Formoterol Fumarate (PERFOROMIST®) Administered in Sequence and as a Combined Solution in Subjects With Chronic Obstructive Pulmonary Disease"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2022-02",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2018-05-31",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2018-09-25",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2018-09-25",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2018-05-24",
+   "studyFirstSubmitQcDate": "2018-06-19",
+   "studyFirstPostDateStruct": {
+    "date": "2018-06-29",
+    "type": "ACTUAL"
+   },
+   "resultsFirstSubmitDate": "2019-11-27",
+   "resultsFirstSubmitQcDate": "2019-11-27",
+   "resultsFirstPostDateStruct": {
+    "date": "2019-12-18",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2022-02-22",
+   "lastUpdatePostDateStruct": {
+    "date": "2022-02-24",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Mylan Inc.",
+    "class": "INDUSTRY"
+   },
+   "collaborators": [
+    {
+     "name": "Theravance Biopharma",
+     "class": "INDUSTRY"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": false,
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The primary objective of the study was to characterize the safety and tolerability of once-daily revefenacin inhalation solution when dosed sequentially with twice-daily formoterol inhalation solution (PERFOROMIST®) compared to PERFOROMIST®, in a population of participants with moderate-to-very severe Chronic Obstructive Pulmonary Disease (COPD) over 21 days."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ],
+   "keywords": [
+    "Chronic Obstructive Pulmonary Disease",
+    "Pulmonary Function",
+    "COPD",
+    "Performist"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "interventionModelDescription": "This is a randomized, double-blind, placebo-controlled, parallel-group study. Each participant will receive treatment daily for a total of 42 days. One group will receive placebo and formoterol and one group will receive revefenacin and formoterol.",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 122,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Period 1: Revefenacin + Formoterol (Sequential)",
+     "type": "EXPERIMENTAL",
+     "description": "Days 1 to 21: Revefenacin and formoterol will be sequentially administered in the morning. Formoterol will be administered again in the evening.",
+     "interventionNames": [
+      "Drug: Revefenacin",
+      "Drug: Formoterol"
+     ]
+    },
+    {
+     "label": "Period 2: Revefenacin + Formoterol (Combo Solution)",
+     "type": "EXPERIMENTAL",
+     "description": "Days 22 to 42: After a 21 day period, the participants from the Revefenacin + Formoterol (Sequential) Arm will be dosed for 21 days with a combination of revefenacin and formoterol administered as a combined solution. Formoterol will be administered again in the evening.",
+     "interventionNames": [
+      "Drug: Revefenacin",
+      "Drug: Formoterol"
+     ]
+    },
+    {
+     "label": "Period 1: Placebo + Formoterol (Sequential)",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Days 1 to 21: Placebo versions of revefenacin and formoterol will be sequentially administered in the morning. Formoterol will be administered again in the evening.",
+     "interventionNames": [
+      "Drug: Placebo",
+      "Drug: Formoterol"
+     ]
+    },
+    {
+     "label": "Period 2: Placebo + Formoterol (Combo Solution)",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Days 22 to 42: After a 21 day period, the participants from Placebo + Formoterol (Sequential) Arm the will be dosed for 21 days with a combination of placebo revefenacin and formoterol administered as a combined solution. Formoterol will be administered again in the evening.",
+     "interventionNames": [
+      "Drug: Placebo",
+      "Drug: Formoterol"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Revefenacin",
+     "description": "Revefenacin is administered via a nebulizer.",
+     "armGroupLabels": [
+      "Period 1: Revefenacin + Formoterol (Sequential)",
+      "Period 2: Revefenacin + Formoterol (Combo Solution)"
+     ],
+     "otherNames": [
+      "TD-4208"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Placebo version of Revefenacin is administered via a nebulizer.",
+     "armGroupLabels": [
+      "Period 1: Placebo + Formoterol (Sequential)",
+      "Period 2: Placebo + Formoterol (Combo Solution)"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Formoterol",
+     "description": "Administered sequentially in both revefenacin and placebo arms using a nebulizer.",
+     "armGroupLabels": [
+      "Period 1: Placebo + Formoterol (Sequential)",
+      "Period 1: Revefenacin + Formoterol (Sequential)",
+      "Period 2: Placebo + Formoterol (Combo Solution)",
+      "Period 2: Revefenacin + Formoterol (Combo Solution)"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Number of Participants Who Experienced at Least One Treatment-Emergent Adverse Event",
+     "description": "An adverse event (AE) was any untoward medical occurrence in a participant administered a pharmaceutical product that did not necessarily have to have a causal relationship with this treatment. A treatment-emergent AE is an AE that occurred after the participant has received the study drug.",
+     "timeFrame": "Day 1 to End of Period 2, a Maximum of 42 days + 7 days follow-up (Each period was 21 days)"
+    },
+    {
+     "measure": "Number of Participants Who Experienced at Least One Serious Treatment-Emergent Adverse Event",
+     "description": "A serious adverse event (SAE) was defined as any untoward medical occurrence occurring at any dose that resulted in any of the following outcomes:\n\n* Death\n* Life-threatening situation. \"Life-threatening\" refers to a situation in which the participant was at risk of death at the time of the event; it does not refer to an event which might have caused death if it were more severe\n* Inpatient hospitalization or prolongation of existing hospitalization\n* Congenital anomaly in the offspring of a participant who received study drug\n* Important medical events that may not result in death, be immediately life-threatening, or require hospitalization, could have been considered an SAE when, based upon appropriate medical judgment, they may have jeopardized the participant and may have required medical or surgical intervention to prevent one of the outcomes listed in this definition\n\nA treatment-emergent SAE is an SAE that occurred after the participant has received the study drug.",
+     "timeFrame": "Day 1 to End of Period 2, a Maximum of 42 days + 7 days follow-up (Each period was 21 days)"
+    },
+    {
+     "measure": "Number of Participants With Clinically Relevant Changes in Vital Sign Measurements",
+     "description": "Clinically significant changes identified based on change from baseline. Vital signs measured included heart rate, systolic blood pressure and diastolic blood pressure.",
+     "timeFrame": "Baseline to End of Period 2, a Maximum of 42 days + 7 days follow-up (Each period was 21 days)"
+    },
+    {
+     "measure": "Number of Participants With Clinically Relevant Changes in Clinical Laboratory Measurements",
+     "description": "Clinically relevant changes identified based on change from baseline. Laboratory Measures assessed included hematology and serum.",
+     "timeFrame": "Baseline to End of Period 2, a Maximum of 42 days + 7 days follow-up (Each period was 21 days)"
+    },
+    {
+     "measure": "Number of Participants With Clinically Relevant Changes in Electrocardiogram Results",
+     "description": "Clinically relevant changes identified based on change from baseline.",
+     "timeFrame": "Baseline to End of Period 2, a Maximum of 42 days + 7 days follow-up (Each period was 21 days)"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Participant is a male or female subject 40 years of age or older.\n* Participant is willing and able to provide signed and dated written informed consent.\n* Participant has a current or past cigarette smoking history (or equivalent for cigar or pipe smoking history) of at least 10 pack-years.\n* Participant must be willing and able to attend study visits according to the visit schedule and adhere to all study assessments/procedures.\n\nExclusion Criteria:\n\n* Participant has a concurrent disease or condition that, in the opinion of the investigator, would interfere with study participation or confound the evaluation of safety, tolerability, or pharmacokinetics of the study drug.\n* Participant has a history of reactions or hypersensitivity to inhaled or nebulized anticholinergics, short-acting beta-agonists and long-acting beta-agonists.\n* Participant with clinically significant and uncontrolled hypertension, hypercholesterolemia or Type II diabetes mellitus, as assessed by the investigator.\n* Participant is unwilling or unable to stop the use of prohibited medications during the washout (if required) and treatment period and follow-up period of the study.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Medical Monitor",
+     "affiliation": "Theravance Biopharma",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Theravance Biopharma Investigational Site",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33155",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Theravance Biopharma Investigational Site",
+     "city": "Orlando",
+     "state": "Florida",
+     "zip": "32825",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.53834,
+      "lon": -81.37924
+     }
+    },
+    {
+     "facility": "Theravance Biopharma Investigational Site",
+     "city": "Sarasota",
+     "state": "Florida",
+     "zip": "34239",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.33643,
+      "lon": -82.53065
+     }
+    },
+    {
+     "facility": "Theravance Biopharma Investigational Site",
+     "city": "Tampa",
+     "state": "Florida",
+     "zip": "33603",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.94752,
+      "lon": -82.45843
+     }
+    },
+    {
+     "facility": "Theravance Biopharma Investigational Site",
+     "city": "Saint Charles",
+     "state": "Missouri",
+     "zip": "63301",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.78394,
+      "lon": -90.48123
+     }
+    },
+    {
+     "facility": "Theravance Biopharma Investigational Site",
+     "city": "Monroe",
+     "state": "North Carolina",
+     "zip": "28112",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.98543,
+      "lon": -80.54951
+     }
+    },
+    {
+     "facility": "Theravance Biopharma Investigational Site",
+     "city": "Columbus",
+     "state": "Ohio",
+     "zip": "43213",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.96118,
+      "lon": -82.99879
+     }
+    },
+    {
+     "facility": "Theravance Biopharma Investigational Site",
+     "city": "Medford",
+     "state": "Oregon",
+     "zip": "97504",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.32652,
+      "lon": -122.87559
+     }
+    },
+    {
+     "facility": "Theravance Biopharma Investigational Site",
+     "city": "Erie",
+     "state": "Pennsylvania",
+     "zip": "16508",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.12922,
+      "lon": -80.08506
+     }
+    },
+    {
+     "facility": "Theravance Biopharma Investigational Site",
+     "city": "Gaffney",
+     "state": "South Carolina",
+     "zip": "29341",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.07179,
+      "lon": -81.64982
+     }
+    },
+    {
+     "facility": "Theravance Biopharma Investigational Site",
+     "city": "Greenville",
+     "state": "South Carolina",
+     "zip": "29615",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.85262,
+      "lon": -82.39401
+     }
+    },
+    {
+     "facility": "Theravance Biopharma Investigational Site",
+     "city": "Spartanburg",
+     "state": "South Carolina",
+     "zip": "29303",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.94957,
+      "lon": -81.93205
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO",
+   "description": "Theravance Biopharma, Inc. will not be sharing individual de-identified participant data or other relevant study documents."
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "Participants were randomized 1:1 to one of two treatment groups and received treatment twice-daily for the two 21-day treatment periods. The participants in Arms 1 and 2 are the same (minus attrition), and the participants in Arms 3 and 4 are the same (minus attrition).",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Revefenacin + Formoterol",
+     "description": "Includes participants from Arm 1 (Day 1-21) and Arm 2 (Day 22-42)."
+    },
+    {
+     "id": "FG001",
+     "title": "Placebo + Formoterol",
+     "description": "Includes participants from Arm 3 (Day 1-21) and Arm 4 (Day 22-42)."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "63"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "59"
+        }
+       ]
+      },
+      {
+       "type": "Randomized and Treated With Study Drug",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "63"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "59"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "62"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "55"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "4"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        }
+       ]
+      },
+      {
+       "type": "Protocol Violation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "populationDescription": "122 participants were enrolled in this study and received at least one dose of study drug. The disposition data is shown for the two different treatment types.",
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Revefenacin + Formoterol",
+     "description": "Includes participants from Arm 1 (Day 1-21) and Arm 2 (Day 22-42)."
+    },
+    {
+     "id": "BG001",
+     "title": "Placebo + Formoterol",
+     "description": "Includes participants from Arm 3 (Day 1-21) and Arm 4 (Day 22-42)."
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "63"
+      },
+      {
+       "groupId": "BG001",
+       "value": "59"
+      },
+      {
+       "groupId": "BG002",
+       "value": "122"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "63.1",
+           "spread": "8.71"
+          },
+          {
+           "groupId": "BG001",
+           "value": "64.4",
+           "spread": "8.43"
+          },
+          {
+           "groupId": "BG002",
+           "value": "63.7",
+           "spread": "8.56"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "28"
+          },
+          {
+           "groupId": "BG001",
+           "value": "25"
+          },
+          {
+           "groupId": "BG002",
+           "value": "53"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "35"
+          },
+          {
+           "groupId": "BG001",
+           "value": "34"
+          },
+          {
+           "groupId": "BG002",
+           "value": "69"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Ethnicity (NIH/OMB)",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Hispanic or Latino",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "7"
+          },
+          {
+           "groupId": "BG001",
+           "value": "3"
+          },
+          {
+           "groupId": "BG002",
+           "value": "10"
+          }
+         ]
+        },
+        {
+         "title": "Not Hispanic or Latino",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "56"
+          },
+          {
+           "groupId": "BG001",
+           "value": "56"
+          },
+          {
+           "groupId": "BG002",
+           "value": "112"
+          }
+         ]
+        },
+        {
+         "title": "Unknown or Not Reported",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Race (NIH/OMB)",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "American Indian or Alaska Native",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Asian",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Native Hawaiian or Other Pacific Islander",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Black or African American",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "2"
+          },
+          {
+           "groupId": "BG001",
+           "value": "3"
+          },
+          {
+           "groupId": "BG002",
+           "value": "5"
+          }
+         ]
+        },
+        {
+         "title": "White",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "60"
+          },
+          {
+           "groupId": "BG001",
+           "value": "56"
+          },
+          {
+           "groupId": "BG002",
+           "value": "116"
+          }
+         ]
+        },
+        {
+         "title": "More than one race",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Unknown or Not Reported",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Region of Enrollment",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "classes": [
+      {
+       "title": "United States",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "63"
+          },
+          {
+           "groupId": "BG001",
+           "value": "59"
+          },
+          {
+           "groupId": "BG002",
+           "value": "122"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Body Mass Index",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "kg/m^2",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "29.22",
+           "spread": "6.642"
+          },
+          {
+           "groupId": "BG001",
+           "value": "29.11",
+           "spread": "6.349"
+          },
+          {
+           "groupId": "BG002",
+           "value": "29.17",
+           "spread": "6.475"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Number of Participants Who Experienced at Least One Treatment-Emergent Adverse Event",
+     "description": "An adverse event (AE) was any untoward medical occurrence in a participant administered a pharmaceutical product that did not necessarily have to have a causal relationship with this treatment. A treatment-emergent AE is an AE that occurred after the participant has received the study drug.",
+     "populationDescription": "The populations for Arms 1 and 2 are made up of the same participants, however 4 participants dropped out prior to beginning Period 2. Similarly, the populations for Arms 3 and 4 are made up of the same participants, but one participant dropped out prior to beginning Period 2.",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "Day 1 to End of Period 2, a Maximum of 42 days + 7 days follow-up (Each period was 21 days)",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Period 1: Revefenacin + Formoterol (Sequential)",
+       "description": "Days 1 to 21: revefenacin and formoterol sequentially administered via nebulizer in the morning. Formoterol will be administered again in the evening.\n\n."
+      },
+      {
+       "id": "OG001",
+       "title": "Period 2: Revefenacin + Formoterol (Combo Solution)",
+       "description": "Days 22 to 42: After a 21 day period, the participants from the Revefenacin + Formoterol (Sequential) Arm will be dosed for 21 days with a combination of revefenacin and formoterol administered as a combined solution via a single nebulization. Formoterol will be administered again in the evening."
+      },
+      {
+       "id": "OG002",
+       "title": "Period 1: Placebo + Formoterol (Sequential)",
+       "description": "Days 1 to 21: Placebo versions of revefenacin and formoterol will be sequentially administered via nebulizer in the morning. Formoterol will be administered again in the evening."
+      },
+      {
+       "id": "OG003",
+       "title": "Period 2: Placebo + Formoterol (Combo Solution)",
+       "description": "Days 22 to 42: After a 21 day period, the participants from Placebo + Formoterol (Sequential) Arm the will be dosed for 21 days with a combination of placebo revefenacin and formoterol administered as a combined solution via a single nebulization. Formoterol will be administered again in the evening."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "59"
+        },
+        {
+         "groupId": "OG001",
+         "value": "55"
+        },
+        {
+         "groupId": "OG002",
+         "value": "63"
+        },
+        {
+         "groupId": "OG003",
+         "value": "62"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "7"
+          },
+          {
+           "groupId": "OG001",
+           "value": "6"
+          },
+          {
+           "groupId": "OG002",
+           "value": "3"
+          },
+          {
+           "groupId": "OG003",
+           "value": "5"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PRIMARY",
+     "title": "Number of Participants Who Experienced at Least One Serious Treatment-Emergent Adverse Event",
+     "description": "A serious adverse event (SAE) was defined as any untoward medical occurrence occurring at any dose that resulted in any of the following outcomes:\n\n* Death\n* Life-threatening situation. \"Life-threatening\" refers to a situation in which the participant was at risk of death at the time of the event; it does not refer to an event which might have caused death if it were more severe\n* Inpatient hospitalization or prolongation of existing hospitalization\n* Congenital anomaly in the offspring of a participant who received study drug\n* Important medical events that may not result in death, be immediately life-threatening, or require hospitalization, could have been considered an SAE when, based upon appropriate medical judgment, they may have jeopardized the participant and may have required medical or surgical intervention to prevent one of the outcomes listed in this definition\n\nA treatment-emergent SAE is an SAE that occurred after the participant has received the study drug.",
+     "populationDescription": "The populations for Arms 1 and 2 are made up of the same participants, however 4 participants dropped out prior to beginning Period 2. Similarly, the populations for Arms 3 and 4 are made up of the same participants, but one participant dropped out prior to beginning Period 2.",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "Day 1 to End of Period 2, a Maximum of 42 days + 7 days follow-up (Each period was 21 days)",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Period 1: Revefenacin + Formoterol (Sequential)",
+       "description": "Days 1 to 21: Revefenacin and formoterol will be sequentially administered via nebulizer in the morning. Formoterol will be administered again in the evening."
+      },
+      {
+       "id": "OG001",
+       "title": "Period 2: Revefenacin + Formoterol (Combo Solution)",
+       "description": "Days 22 to 42: After a 21 day period, the participants from the Revefenacin + Formoterol (Sequential) Arm will be dosed for 21 days with a combination of revefenacin and formoterol administered as a combined solution via a single nebulization. Formoterol will be administered again in the evening."
+      },
+      {
+       "id": "OG002",
+       "title": "Period 1: Placebo + Formoterol (Sequential)",
+       "description": "Days 1 to 21: Placebo versions of revefenacin and formoterol will be sequentially administered via nebulizer in the morning. Formoterol will be administered again in the evening."
+      },
+      {
+       "id": "OG003",
+       "title": "Period 2: Placebo + Formoterol (Combo Solution)",
+       "description": "Days 22 to 42: After a 21 day period, the participants from Placebo + Formoterol (Sequential) Arm the will be dosed for 21 days with a combination of placebo revefenacin and formoterol administered as a combined solution via a single nebulization. Formoterol will be administered again in the evening."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "59"
+        },
+        {
+         "groupId": "OG001",
+         "value": "55"
+        },
+        {
+         "groupId": "OG002",
+         "value": "63"
+        },
+        {
+         "groupId": "OG003",
+         "value": "62"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PRIMARY",
+     "title": "Number of Participants With Clinically Relevant Changes in Vital Sign Measurements",
+     "description": "Clinically significant changes identified based on change from baseline. Vital signs measured included heart rate, systolic blood pressure and diastolic blood pressure.",
+     "populationDescription": "The populations for Arms 1 and 2 are made up of the same participants, however 4 participants dropped out prior to beginning Period 2. Similarly, the populations for Arms 3 and 4 are made up of the same participants, but one participant dropped out prior to beginning Period 2.",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "Baseline to End of Period 2, a Maximum of 42 days + 7 days follow-up (Each period was 21 days)",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Period 1: Revefenacin + Formoterol (Sequential)",
+       "description": "Days 1 to 21: Revefenacin and formoterol will be sequentially administered via nebulizer in the morning. Formoterol will be administered again in the evening."
+      },
+      {
+       "id": "OG001",
+       "title": "Period 2: Revefenacin + Formoterol (Combo Solution)",
+       "description": "Days 22 to 42: After a 21 day period, the participants from the Revefenacin + Formoterol (Sequential) Arm will be dosed for 21 days with a combination of revefenacin and formoterol administered as a combined solution via a single nebulization. Formoterol will be administered again in the evening."
+      },
+      {
+       "id": "OG002",
+       "title": "Period 1: Placebo + Formoterol (Sequential)",
+       "description": "Days 1 to 21: Placebo versions of revefenacin and formoterol will be sequentially administered via nebulizer in the morning. Formoterol will be administered again in the evening."
+      },
+      {
+       "id": "OG003",
+       "title": "Period 2: Placebo + Formoterol (Combo Solution)",
+       "description": "Days 22 to 42: After a 21 day period, the participants from Placebo + Formoterol (Sequential) Arm the will be dosed for 21 days with a combination of placebo revefenacin and formoterol administered as a combined solution via a single nebulization. Formoterol will be administered again in the evening."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "59"
+        },
+        {
+         "groupId": "OG001",
+         "value": "55"
+        },
+        {
+         "groupId": "OG002",
+         "value": "63"
+        },
+        {
+         "groupId": "OG003",
+         "value": "62"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PRIMARY",
+     "title": "Number of Participants With Clinically Relevant Changes in Clinical Laboratory Measurements",
+     "description": "Clinically relevant changes identified based on change from baseline. Laboratory Measures assessed included hematology and serum.",
+     "populationDescription": "The populations for Arms 1 and 2 are made up of the same participants, however 4 participants dropped out prior to beginning Period 2. Similarly, the populations for Arms 3 and 4 are made up of the same participants, but one participant dropped out prior to beginning Period 2.",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "Baseline to End of Period 2, a Maximum of 42 days + 7 days follow-up (Each period was 21 days)",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Period 1: Revefenacin + Formoterol (Sequential)",
+       "description": "Days 1 to 21: Revefenacin and formoterol will be sequentially administered via nebulizer in the morning. Formoterol will be administered again in the evening."
+      },
+      {
+       "id": "OG001",
+       "title": "Period 2: Revefenacin + Formoterol (Combo Solution)",
+       "description": "Days 22 to 42: After a 21 day period, the participants from the Revefenacin + Formoterol (Sequential) Arm will be dosed for 21 days with a combination of revefenacin and formoterol administered as a combined solution via a single nebulization. Formoterol will be administered again in the evening."
+      },
+      {
+       "id": "OG002",
+       "title": "Period 1: Placebo + Formoterol (Sequential)",
+       "description": "Days 1 to 21: Placebo versions of revefenacin and formoterol will be sequentially administered via nebulizer in the morning. Formoterol will be administered again in the evening."
+      },
+      {
+       "id": "OG003",
+       "title": "Period 2: Placebo + Formoterol (Combo Solution)",
+       "description": "Days 22 to 42: After a 21 day period, the participants from Placebo + Formoterol (Sequential) Arm the will be dosed for 21 days with a combination of placebo revefenacin and formoterol administered as a combined solution via a single nebulization. Formoterol will be administered again in the evening."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "59"
+        },
+        {
+         "groupId": "OG001",
+         "value": "55"
+        },
+        {
+         "groupId": "OG002",
+         "value": "63"
+        },
+        {
+         "groupId": "OG003",
+         "value": "62"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PRIMARY",
+     "title": "Number of Participants With Clinically Relevant Changes in Electrocardiogram Results",
+     "description": "Clinically relevant changes identified based on change from baseline.",
+     "populationDescription": "The populations for Arms 1 and 2 are made up of the same participants, however 4 participants dropped out prior to beginning Period 2. Similarly, the populations for Arms 3 and 4 are made up of the same participants, but one participant dropped out prior to beginning Period 2.",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "Baseline to End of Period 2, a Maximum of 42 days + 7 days follow-up (Each period was 21 days)",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Period 1: Revefenacin + Formoterol (Sequential)",
+       "description": "Days 1 to 21: Revefenacin and formoterol will be sequentially administered via nebulizer in the morning. Formoterol will be administered again in the evening."
+      },
+      {
+       "id": "OG001",
+       "title": "Period 2: Revefenacin + Formoterol (Combo Solution)",
+       "description": "Days 22 to 42: After a 21 day period, the participants from the Revefenacin + Formoterol (Sequential) Arm will be dosed for 21 days with a combination of revefenacin and formoterol administered as a combined solution via a single nebulization. Formoterol will be administered again in the evening."
+      },
+      {
+       "id": "OG002",
+       "title": "Period 1: Placebo + Formoterol (Sequential)",
+       "description": "Days 1 to 21: Placebo versions of revefenacin and formoterol will be sequentially administered via nebulizer in the morning. Formoterol will be administered again in the evening."
+      },
+      {
+       "id": "OG003",
+       "title": "Period 2: Placebo + Formoterol (Combo Solution)",
+       "description": "Days 22 to 42: After a 21 day period, the participants from Placebo + Formoterol (Sequential) Arm the will be dosed for 21 days with a combination of placebo revefenacin and formoterol administered as a combined solution via a single nebulization. Formoterol will be administered again in the evening."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "59"
+        },
+        {
+         "groupId": "OG001",
+         "value": "55"
+        },
+        {
+         "groupId": "OG002",
+         "value": "63"
+        },
+        {
+         "groupId": "OG003",
+         "value": "62"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "1",
+   "timeFrame": "Period 1: Day 1 to Day 21; Period 2: Day 22 to 42 (+7 days follow-up)",
+   "description": "An adverse event was any untoward medical occurrence in a participant administered a pharmaceutical product that did not necessarily have to have a causal relationship with this treatment.",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Period 1: Revefenacin + Formoterol (Sequential)",
+     "description": "Days 1 to 21: Revefenacin and formoterol will be sequentially administered via nebulizer in the morning. Formoterol will be administered again in the evening.",
+     "deathsNumAffected": 0,
+     "deathsNumAtRisk": 59,
+     "seriousNumAffected": 0,
+     "seriousNumAtRisk": 59,
+     "otherNumAffected": 3,
+     "otherNumAtRisk": 63
+    },
+    {
+     "id": "EG001",
+     "title": "Period 2: Revefenacin + Formoterol (Combo Solution)",
+     "description": "Days 22 to 42: After a 21 day period, the participants from the Revefenacin + Formoterol (Sequential) Arm will be dosed for 21 days with a combination of revefenacin and formoterol administered as a combined solution via a single nebulization. Formoterol will be administered again in the evening.",
+     "deathsNumAffected": 0,
+     "deathsNumAtRisk": 55,
+     "seriousNumAffected": 0,
+     "seriousNumAtRisk": 55,
+     "otherNumAffected": 5,
+     "otherNumAtRisk": 62
+    },
+    {
+     "id": "EG002",
+     "title": "Period 1: Placebo + Formoterol (Sequential)",
+     "description": "Days 1 to 21: Placebo versions of revefenacin and formoterol will be sequentially administered via nebulizer in the morning. Formoterol will be administered again in the evening.",
+     "deathsNumAffected": 0,
+     "deathsNumAtRisk": 63,
+     "seriousNumAffected": 0,
+     "seriousNumAtRisk": 63,
+     "otherNumAffected": 7,
+     "otherNumAtRisk": 59
+    },
+    {
+     "id": "EG003",
+     "title": "Period 2: Placebo + Formoterol (Combo Solution)",
+     "description": "Days 22 to 42: After a 21 day period, the participants from Placebo + Formoterol (Sequential) Arm the will be dosed for 21 days with a combination of placebo revefenacin and formoterol administered as a combined solution via a single nebulization. Formoterol will be administered again in the evening.",
+     "deathsNumAffected": 0,
+     "deathsNumAtRisk": 62,
+     "seriousNumAffected": 0,
+     "seriousNumAtRisk": 62,
+     "otherNumAffected": 6,
+     "otherNumAtRisk": 55
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 2,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Cough",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 2,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Oropharyngeal pain",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Sputum purulent",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Tooth infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Viral infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Viral upper respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Abdominal discomfort",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Oral discomfort",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Arthralgia",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Pain in extremity",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Dizziness",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 2,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Headache",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Lacrimation increased",
+     "organSystem": "Eye disorders",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Peripheral swelling",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Muscle contusion",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Lipoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Insomnia",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Skin lesion",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Hypertension",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Acute sinusitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 55
+      }
+     ]
+    },
+    {
+     "term": "Cystitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA Version 18.1",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 63
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 62
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 59
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 55
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "The PI may communicate the trial results generated by the PI, but only after the first publication or presentation of the combined study results generated by all participating sites. The Sponsor can then review trial results communications prior to public release and can embargo communications regarding trial results for a period that is more than 60 days but less than or equal to 180 days. The Sponsor cannot require changes to the communication and cannot extend the embargo."
+   },
+   "pointOfContact": {
+    "title": "Head of Clinical Development & Medical Affairs",
+    "organization": "Theravance Biopharma",
+    "email": "medinfo@theravance.com",
+    "phone": "1-855-633-8479"
+   }
+  }
+ },
+ "documentSection": {
+  "largeDocumentModule": {
+   "largeDocs": [
+    {
+     "typeAbbrev": "Prot",
+     "hasProtocol": true,
+     "hasSap": false,
+     "hasIcf": false,
+     "label": "Study Protocol",
+     "date": "2018-04-16",
+     "uploadDate": "2019-11-27T12:56",
+     "filename": "Prot_000.pdf",
+     "size": 798610
+    },
+    {
+     "typeAbbrev": "SAP",
+     "hasProtocol": false,
+     "hasSap": true,
+     "hasIcf": false,
+     "label": "Statistical Analysis Plan",
+     "date": "2018-10-01",
+     "uploadDate": "2019-11-27T13:17",
+     "filename": "SAP_001.pdf",
+     "size": 4010016
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C583570",
+     "term": "revefenacin"
+    },
+    {
+     "id": "D000068759",
+     "term": "Formoterol Fumarate"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D004983",
+     "term": "Ethanolamines"
+    },
+    {
+     "id": "D000605",
+     "term": "Amino Alcohols"
+    },
+    {
+     "id": "D000438",
+     "term": "Alcohols"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

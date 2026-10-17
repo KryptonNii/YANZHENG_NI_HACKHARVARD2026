@@ -1,0 +1,3621 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01315249",
+   "orgStudyIdInfo": {
+    "id": "CQVA149A2313"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2010-023621-37",
+     "type": "EUDRACT_NUMBER"
+    }
+   ],
+   "organization": {
+    "fullName": "Novartis",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "QVA149 Versus Fluticasone/Salmeterol in Patients With Chronic Obstructive Pulmonary Disease (COPD)",
+   "officialTitle": "A 26-week Treatment, Multi-center, Randomized, Doubleblind, Double Dummy, Parallel-group Study to Assess the Efficacy, Safety and Tolerability of QVA149 Compared to Fluticasone/Salmeterol in Patients With Moderate to Severe Chronic Obstructive Pulmonary Disease",
+   "acronym": "ILLUMINATE"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2013-07",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2011-03"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2012-03",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2012-03",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2011-03-11",
+   "studyFirstSubmitQcDate": "2011-03-14",
+   "studyFirstPostDateStruct": {
+    "date": "2011-03-15",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2013-02-28",
+   "resultsFirstSubmitQcDate": "2013-07-09",
+   "resultsFirstPostDateStruct": {
+    "date": "2013-08-09",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2013-07-09",
+   "lastUpdatePostDateStruct": {
+    "date": "2013-08-09",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Novartis Pharmaceuticals",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The purpose of this study is to compare the efficacy and safety/tolerability of indacaterol and glycopyrronium (QVA149) (fixed-dose combination) with fluticasone/salmeterol over a 26-week period in patients with moderate to severe COPD."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ],
+   "keywords": [
+    "QVA149",
+    "indacaterol",
+    "NVA237",
+    "COPD",
+    "fluticasone/salmeterol"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 523,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "QVA149",
+     "type": "EXPERIMENTAL",
+     "description": "Participants received indacaterol and glycopyrronium (QVA149) and placebo to fluticasone/salmeterol.",
+     "interventionNames": [
+      "Drug: indacaterol and glycopyrronium (QVA149)",
+      "Drug: Placebo to fluticasone/salmeterol"
+     ]
+    },
+    {
+     "label": "fluticasone/salmeterol",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Participants received fluticasone/salmeterol and placebo to indacaterol and glycopyrronium (QVA149).",
+     "interventionNames": [
+      "Drug: fluticasone/salmeterol",
+      "Drug: Placebo to indacaterol and glycopyrronium (QVA149)"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "indacaterol and glycopyrronium (QVA149)",
+     "description": "QVA149 capsules delivered via dry powder inhaler (SDDPI), once daily.",
+     "armGroupLabels": [
+      "QVA149"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo to fluticasone/salmeterol",
+     "description": "Placebo to fluticasone/salmeterol delivered via Accuhaler® device, twice daily.",
+     "armGroupLabels": [
+      "QVA149"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "fluticasone/salmeterol",
+     "description": "Fluticasone/salmeterol dry inhalation powder delivered via Accuhaler® device, twice daily.",
+     "armGroupLabels": [
+      "fluticasone/salmeterol"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo to indacaterol and glycopyrronium (QVA149)",
+     "description": "Placebo to QVA149 delivered via dry powder inhaler (SDDPI), once daily",
+     "armGroupLabels": [
+      "fluticasone/salmeterol"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Forced Expiratory Volume in 1 Second Area Under the Curve (FEV1 AUC) 0-12",
+     "description": "Forced Expiratory Volume in one second (FEV1) was calculated as the volume of air forcibly exhaled in one second as measured by a spirometer. FEV1 was normalized by 12 hours (divided by time). This outcome measures absolute values at week 26. Results are obtained from linear mixed model.",
+     "timeFrame": "Week 26"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Standardized Forced Expiratory Volume in 1 Second Area Under the Curve (FEV1 AUC) 0-12 Hours",
+     "description": "Standardized Forced Expiratory Volume in 1 Second (FEV1) was measured with spirometry conducted according to internationally accepted standards. Measurements were made between 0 and 12 hours after treatment. FEV1 was normalized by 12 hours (divided by time). This outcome measures absolute values at week 12. Results are obtained from linear mixed model.",
+     "timeFrame": "Week 12"
+    },
+    {
+     "measure": "Forced Vital Capacity at All-time Points (Week 12)",
+     "description": "Forced Vital Capacity (FVC) is the amount of air which can be forcibly exhaled from the lungs after taking the deepest breath possible. FVC was assessed via spirometry. A positive change from baseline in FVC indicates improvement in lung function.\n\nThis outcome measures absolute values at -45 min, -15 min predose; 5 min, 30 min, 1 hr, 2hr, 4 hr, 8 hr, 12 hr post-dose week 12. Results are obtained from linear mixed model.",
+     "timeFrame": "-45 min, -15 min predose; 5 min, 30 min, 1 hr, 2hr, 4 hr, 8 hr, 12 hr post-dose on week 12"
+    },
+    {
+     "measure": "Forced Vital Capacity at All-time Points (Week 26)",
+     "description": "Forced Vital Capacity (FVC) is the amount of air which can be forcibly exhaled from the lungs after taking the deepest breath possible. FVC was assessed via spirometry. A positive change from baseline in FVC indicates improvement in lung function.\n\nThis outcome measures absolute values at -45 min, -15 min predose; 5 min, 30 min, 1 hr, 2hr, 4 hr, 8 hr, 12 hr post-dose on week 26. Results are obtained from linear mixed model.",
+     "timeFrame": "-45 min, -15 min predose; 5 min, 30 min, 1 hr, 2hr, 4 hr, 8 hr, 12 hr post-dose on week 26"
+    },
+    {
+     "measure": "Focal Score of the Transitional Dyspnea Index (TDI)",
+     "description": "Transition Dyspnea Index (TDI) captures changes from baseline. The TDI score is based on three domains with each domain scored from -3 (major deterioration) to +3 (major improvement), to give an overall score of -9 to +9, a negative score indicating a deterioration from baseline. A TDI focal score of 1 is considered to be a clinically significant improvement.",
+     "timeFrame": "12 weeks and 26 weeks"
+    },
+    {
+     "measure": "Total Score of the St. George's Respiratory Questionnaire (SGRQ-C)",
+     "description": "The total score of the St. George's Respiratory Questionnaire (SGRQ-C) is a health related quality of life questionnaire consisting of 51 items in three components: symptoms, activity, and impacts. The lowest possible value is zero and the highest 100. Higher values correspond to greater impairment in quality of life.",
+     "timeFrame": "12 weeks and 26 weeks"
+    },
+    {
+     "measure": "Mean Change From Baseline in Daily Number of Puffs of Rescue Medication",
+     "description": "Participants maintained a diary to record the daily number of puffs of rescue medication used to treat COPD symptoms.",
+     "timeFrame": "Baseline, 12 weeks and 26 weeks"
+    },
+    {
+     "measure": "Change From Baseline in Symptom Scores Reported Using the Ediary",
+     "description": "Participants maintained an ediary to record daily symptom scores (AM and PM) over 12 weeks and 26 weeks of treatment. This analysis compares the mean symptom scores over 12 weeks and 26 weeks compared to baseline. The diary records morning and evening daily clinical symptoms including cough, wheezing, shortness of breath, sputum volume, sputum purulence, night time awakenings and rescue medication use.\n\nScale ranges: ranges are 0 to 3 with varying scale descriptions that pertain to the question being asked.\n\n0 is the minimum score = \"none\" or \"No symptoms\" or \"never\" or \"No\"\n\n1. = mild, a little\n2. = moderate\n3. = severe For the scale range provided, high values represent a worse outcome.",
+     "timeFrame": "12 weeks and 26 weeks"
+    },
+    {
+     "measure": "Inspiratory Capacity (IC) at All-time Points (12 Weeks)",
+     "description": "After 12 weeks of treatment, Inspiratory Capacity (IC) was measured via spirometry, conducted according to internationally accepted standards. The mean of 3 acceptable measurements was calculated and reported in liters.",
+     "timeFrame": "12 weeks"
+    },
+    {
+     "measure": "Inspiratory Capacity (IC) at All-time Points (26 Weeks)",
+     "description": "After 26 weeks of treatment, Inspiratory Capacity (IC) was measured via spirometry, conducted according to internationally accepted standards. The mean of 3 acceptable measurements was calculated and reported in liters.",
+     "timeFrame": "26 weeks"
+    },
+    {
+     "measure": "Number of Participants With Adverse Events",
+     "description": "The assessment of safety was based on Adverse Events. A summary of adverse events is presented with this outcome, additional details are provided in Adverse Events Section.",
+     "timeFrame": "26 weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Smoking history of at least 10 pack years\n* Diagnosis of Chronic Obstructive Pulmonary Disease (COPD) (moderate-to-severe as classified by the Global Initiative for Chronic Obstructive Lung Disease \\[GOLD\\] Guidelines, 2009)\n* Post-bronchodilator Forced Expiratory Volume in 1 second (FEV1) \\>40% and \\< 80% of the predicted normal value and post-bronchodilator FEV1/Forced Vital Capacity (FVC) \\<70%\n\nExclusion Criteria:\n\n* Patients who have had a COPD exacerbation that required treatment with antibiotics, systemic steroids (oral or intravenous) or hospitalization in the last year.\n* Patients requiring long term oxygen therapy on a daily basis for chronic hypoxemia.\n* Patients who have had a respiratory tract infection within 4 weeks prior to Visit 1.\n* Patients with concomitant pulmonary disease\n* Patients with a history of asthma\n* Any patient with lung cancer or a history of lung cancer (within last 5 years)\n* Patients with a history of certain cardiovascular co-morbid conditions",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Novartis Pharmaceuticals",
+     "affiliation": "Novartis Pharmaceuticals",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Malmedy",
+     "state": "Belgium",
+     "zip": "4960",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.42686,
+      "lon": 6.02794
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Luxembourg",
+     "state": "Luxembourg",
+     "zip": "1210",
+     "country": "Belgium"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Aalst",
+     "zip": "9300",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.93604,
+      "lon": 4.0355
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Brussels",
+     "zip": "1000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.85045,
+      "lon": 4.34878
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Hasselt",
+     "zip": "3500",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.93106,
+      "lon": 5.33781
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Jambes",
+     "zip": "5100",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.45636,
+      "lon": 4.87166
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Jette",
+     "zip": "1090",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.87309,
+      "lon": 4.33419
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Cvikov",
+     "state": "Czech Republic",
+     "zip": "471 54",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.77668,
+      "lon": 14.63298
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Jindřichův Hradec",
+     "state": "Czech Republic",
+     "zip": "377 01",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.14404,
+      "lon": 15.00301
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Mělník",
+     "state": "Czech Republic",
+     "zip": "276 01",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.3505,
+      "lon": 14.47411
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Pardubice",
+     "state": "Czech Republic",
+     "zip": "530 09",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.04075,
+      "lon": 15.77659
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Prague",
+     "state": "Czech Republic",
+     "zip": "108 00",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Prague",
+     "state": "Czech Republic",
+     "zip": "130 00",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Teplice",
+     "state": "Czech Republic",
+     "zip": "415 01",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.6404,
+      "lon": 13.82451
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Kyjov",
+     "state": "CZE",
+     "zip": "697 70",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.01018,
+      "lon": 17.12253
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Tartu",
+     "state": "Estonia",
+     "zip": "51014",
+     "country": "Estonia",
+     "geoPoint": {
+      "lat": 58.38062,
+      "lon": 26.72509
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Tallinn",
+     "zip": "13419",
+     "country": "Estonia",
+     "geoPoint": {
+      "lat": 59.43696,
+      "lon": 24.75353
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Berlin",
+     "state": "Germany",
+     "zip": "10117",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Berlin",
+     "state": "Germany",
+     "zip": "14050",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Leipzig",
+     "state": "Germany",
+     "zip": "04207",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.33962,
+      "lon": 12.37129
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Saarbrücken",
+     "state": "Germany",
+     "zip": "66111",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.23262,
+      "lon": 7.00982
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Aschaffenburg",
+     "zip": "63739",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.97704,
+      "lon": 9.15214
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bad Wörishofen",
+     "zip": "86825",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 48.00674,
+      "lon": 10.59666
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bamberg",
+     "zip": "96049",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.89873,
+      "lon": 10.90067
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Berlin",
+     "zip": "13057",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Berlin",
+     "zip": "13086",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Berlin",
+     "zip": "13507",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Berlin",
+     "zip": "13581",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Berlin",
+     "zip": "14050",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Berlin",
+     "zip": "D-12165",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bielefeld",
+     "zip": "33617",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.03333,
+      "lon": 8.53333
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bochum",
+     "zip": "44787",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.48165,
+      "lon": 7.21648
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bonn",
+     "zip": "53123",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.73438,
+      "lon": 7.09549
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Borstel",
+     "zip": "23845",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.67034,
+      "lon": 8.96896
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Düren",
+     "zip": "52349",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.80434,
+      "lon": 6.49299
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Eschwege",
+     "zip": "37269",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.18386,
+      "lon": 10.05329
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Frankfurt",
+     "zip": "60596",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.68333,
+      "lon": 10.53333
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Freudenberg",
+     "zip": "57258",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.89741,
+      "lon": 7.87415
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Fulda",
+     "zip": "36039",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.55162,
+      "lon": 9.67518
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Fürstenwalde",
+     "zip": "15517",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.36067,
+      "lon": 14.06185
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Gelsenkirchen",
+     "zip": "45879",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.50508,
+      "lon": 7.09654
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Göttingen",
+     "zip": "37075",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.53443,
+      "lon": 9.93228
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Gummersbach",
+     "zip": "51643",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.02608,
+      "lon": 7.56473
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Güstrow",
+     "zip": "18273",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.7972,
+      "lon": 12.17337
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Hagen",
+     "zip": "59065",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.36081,
+      "lon": 7.47168
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Hamburg",
+     "zip": "20253",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Hamburg",
+     "zip": "20354",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Hamburg",
+     "zip": "20357",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Hanover",
+     "zip": "30167",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.37052,
+      "lon": 9.73322
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Hildesheim",
+     "zip": "31134",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.15077,
+      "lon": 9.95112
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Lübeck",
+     "zip": "23558",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.86893,
+      "lon": 10.68729
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "München",
+     "zip": "80539",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.60698,
+      "lon": 13.31243
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Oschersleben",
+     "zip": "39387",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.03039,
+      "lon": 11.22898
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Ratingen",
+     "zip": "40878",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.29724,
+      "lon": 6.84929
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Rheine",
+     "zip": "48431",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.28509,
+      "lon": 7.44055
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Schwerte",
+     "zip": "58239",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.44387,
+      "lon": 7.5675
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Solingen",
+     "zip": "42651",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.17343,
+      "lon": 7.0845
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Ulm",
+     "zip": "89081",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 48.39841,
+      "lon": 9.99155
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Wissen",
+     "zip": "57537",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.77915,
+      "lon": 7.73466
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Cegléd",
+     "state": "Hungary",
+     "zip": "2700",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.17266,
+      "lon": 19.79952
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Debrecen",
+     "state": "Hungary",
+     "zip": "4032",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.53167,
+      "lon": 21.62444
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Szarvas",
+     "state": "Hungary",
+     "zip": "5540",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 46.86667,
+      "lon": 20.55
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Budapest",
+     "zip": "1191",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.49835,
+      "lon": 19.04045
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Eger",
+     "zip": "3300",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.90265,
+      "lon": 20.37329
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Gödöllő",
+     "zip": "2100",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.59657,
+      "lon": 19.35515
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Mosonmagyaróvár",
+     "zip": "9200",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.86789,
+      "lon": 17.26994
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Szeged",
+     "zip": "6770",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 46.253,
+      "lon": 20.14824
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Törökbálint",
+     "zip": "2045",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.42931,
+      "lon": 18.91356
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Alytus",
+     "zip": "LT-62114",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 54.39574,
+      "lon": 24.03885
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Kaunas",
+     "zip": "44320",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 54.90156,
+      "lon": 23.90909
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Klaipėda",
+     "zip": "92288",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 55.7068,
+      "lon": 21.13912
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Klaipėda",
+     "zip": "LT-92231",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 55.7068,
+      "lon": 21.13912
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Utena",
+     "zip": "LT-28151",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 55.4978,
+      "lon": 25.60462
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Vilnius",
+     "zip": "06001",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 54.68916,
+      "lon": 25.2798
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Ålesund",
+     "zip": "6017",
+     "country": "Norway",
+     "geoPoint": {
+      "lat": 62.47225,
+      "lon": 6.15492
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Kongsvinger",
+     "zip": "2212",
+     "country": "Norway",
+     "geoPoint": {
+      "lat": 60.19049,
+      "lon": 11.99772
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Skedsmokorset",
+     "zip": "2020",
+     "country": "Norway",
+     "geoPoint": {
+      "lat": 60.00459,
+      "lon": 11.03278
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Stavanger",
+     "zip": "4005",
+     "country": "Norway",
+     "geoPoint": {
+      "lat": 58.97005,
+      "lon": 5.73332
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Trondheim",
+     "zip": "7006",
+     "country": "Norway",
+     "geoPoint": {
+      "lat": 63.43049,
+      "lon": 10.39506
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Wŏnju",
+     "state": "Gangwon-do",
+     "zip": "220-701",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.35139,
+      "lon": 127.94528
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Seoul",
+     "state": "Seoul",
+     "zip": "130-709",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Daegu",
+     "zip": "705-717",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 35.87028,
+      "lon": 128.59111
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Seoul",
+     "zip": "100-032",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Seoul",
+     "zip": "130-702",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Seoul",
+     "zip": "143-729",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Seoul",
+     "zip": "152-703",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Alicante",
+     "state": "Alicante",
+     "zip": "03114",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 38.34517,
+      "lon": -0.48149
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Barcelona",
+     "state": "Catalonia",
+     "zip": "08025",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.38879,
+      "lon": 2.15899
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Sabadell",
+     "state": "Catalonia",
+     "zip": "08208",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.54329,
+      "lon": 2.10942
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Sant Boi de Llobregat",
+     "state": "Catalonia",
+     "zip": "08830",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.34357,
+      "lon": 2.03659
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Pamplona",
+     "state": "Navarre",
+     "zip": "31008",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 42.81687,
+      "lon": -1.64323
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Oviedo",
+     "state": "Principality of Asturias",
+     "zip": "33006",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 43.36029,
+      "lon": -5.84476
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Valladolid",
+     "state": "Valladolid",
+     "zip": "47011",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.65541,
+      "lon": -4.72353
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "24321804",
+     "type": "DERIVED",
+     "citation": "Vogelmeier CF, Bateman ED, Pallante J, Alagappan VK, D'Andrea P, Chen H, Banerji D. Efficacy and safety of once-daily QVA149 compared with twice-daily salmeterol-fluticasone in patients with chronic obstructive pulmonary disease (ILLUMINATE): a randomised, double-blind, parallel group study. Lancet Respir Med. 2013 Mar;1(1):51-60. doi: 10.1016/S2213-2600(12)70052-8. Epub 2012 Dec 6."
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "A total of 523 patients were randomized. A total of 522 patients (99.8%) were included in the Full analysis Set (FAS) and Safety set. One patient was excluded who was randomized in error and did not receive study medication.",
+   "recruitmentDetails": "All eligible patients were randomized to one of the 2 arms in a 1:1 ratio for 26 weeks of treatment.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "QVA149",
+     "description": "Participants received indacaterol and glycopyrronium (QVA149) and placebo to fluticasone/salmeterol."
+    },
+    {
+     "id": "FG001",
+     "title": "Fluticasone/Salmeterol",
+     "description": "Participants received fluticasone/salmeterol and placebo to indacaterol and glycopyrronium (QVA149)."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "259"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "264"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "215"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "217"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "44"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "47"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "22"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "26"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "11"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "10"
+        }
+       ]
+      },
+      {
+       "type": "Protocol Violation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "8"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "5"
+        }
+       ]
+      },
+      {
+       "type": "Abnormal test results",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        }
+       ]
+      },
+      {
+       "type": "Administrative problems",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "inability to use device",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Lack of Efficacy",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        }
+       ]
+      },
+      {
+       "type": "Death",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "QVA149",
+     "description": "Participants received indacaterol and glycopyrronium (QVA149) and placebo to fluticasone/salmeterol."
+    },
+    {
+     "id": "BG001",
+     "title": "Fluticasone/Salmeterol",
+     "description": "Participants received fluticasone/salmeterol and placebo to indacaterol and glycopyrronium (QVA149)."
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "258"
+      },
+      {
+       "groupId": "BG001",
+       "value": "264"
+      },
+      {
+       "groupId": "BG002",
+       "value": "522"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "63.2",
+           "spread": "8.16"
+          },
+          {
+           "groupId": "BG001",
+           "value": "63.4",
+           "spread": "7.71"
+          },
+          {
+           "groupId": "BG002",
+           "value": "63.3",
+           "spread": "7.93"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "77"
+          },
+          {
+           "groupId": "BG001",
+           "value": "75"
+          },
+          {
+           "groupId": "BG002",
+           "value": "152"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "181"
+          },
+          {
+           "groupId": "BG001",
+           "value": "189"
+          },
+          {
+           "groupId": "BG002",
+           "value": "370"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Forced Expiratory Volume in 1 Second Area Under the Curve (FEV1 AUC) 0-12",
+     "description": "Forced Expiratory Volume in one second (FEV1) was calculated as the volume of air forcibly exhaled in one second as measured by a spirometer. FEV1 was normalized by 12 hours (divided by time). This outcome measures absolute values at week 26. Results are obtained from linear mixed model.",
+     "populationDescription": "The Full Analysis Set (FAS) included all randomized patients who received at least one dose of study drug. FAS were used to analyze all efficacy endpoints, unless otherwise stated. Following the intention-to-treat principle, patients in the FAS were analyzed according to the treatment they were randomized to.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Week 26",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received indacaterol and glycopyrronium (QVA149) and placebo to fluticasone/salmeterol."
+      },
+      {
+       "id": "OG001",
+       "title": "Fluticasone/Salmeterol",
+       "description": "Participants received fluticasone/salmeterol and placebo to indacaterol and glycopyrronium (QVA149)."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "212"
+        },
+        {
+         "groupId": "OG001",
+         "value": "216"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.69",
+           "spread": "0.027"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.56",
+           "spread": "0.026"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Standardized Forced Expiratory Volume in 1 Second Area Under the Curve (FEV1 AUC) 0-12 Hours",
+     "description": "Standardized Forced Expiratory Volume in 1 Second (FEV1) was measured with spirometry conducted according to internationally accepted standards. Measurements were made between 0 and 12 hours after treatment. FEV1 was normalized by 12 hours (divided by time). This outcome measures absolute values at week 12. Results are obtained from linear mixed model.",
+     "populationDescription": "The Full Analysis Set (FAS) includes all randomized patients who received at least one dose of study drug. FAS were used to analyze all efficacy endpoints, unless otherwise stated. Following the intention-to-treat principle, patients in the FAS were analyzed according to the treatment they were randomized to.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received indacaterol and glycopyrronium (QVA149) and placebo to fluticasone/salmeterol."
+      },
+      {
+       "id": "OG001",
+       "title": "Fluticasone/Salmeterol",
+       "description": "Participants received fluticasone/salmeterol and placebo to indacaterol and glycopyrronium (QVA149)."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "255"
+        },
+        {
+         "groupId": "OG001",
+         "value": "261"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.71",
+           "spread": "0.023"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.59",
+           "spread": "0.022"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Forced Vital Capacity at All-time Points (Week 12)",
+     "description": "Forced Vital Capacity (FVC) is the amount of air which can be forcibly exhaled from the lungs after taking the deepest breath possible. FVC was assessed via spirometry. A positive change from baseline in FVC indicates improvement in lung function.\n\nThis outcome measures absolute values at -45 min, -15 min predose; 5 min, 30 min, 1 hr, 2hr, 4 hr, 8 hr, 12 hr post-dose week 12. Results are obtained from linear mixed model.",
+     "populationDescription": "The Full Analysis Set (FAS) includes all randomized patients who received at least one dose of study drug. FAS were used to analyze all efficacy endpoints, unless otherwise stated. Following the intention-to-treat principle, patients in the FAS were analyzed according to the treatment they were randomized to.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "-45 min, -15 min predose; 5 min, 30 min, 1 hr, 2hr, 4 hr, 8 hr, 12 hr post-dose on week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received indacaterol and glycopyrronium (QVA149) and placebo to fluticasone/salmeterol."
+      },
+      {
+       "id": "OG001",
+       "title": "Fluticasone/Salmeterol",
+       "description": "Participants received fluticasone/salmeterol and placebo to indacaterol and glycopyrronium (QVA149)."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "230"
+        },
+        {
+         "groupId": "OG001",
+         "value": "237"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "-45 minutes (n=230 QVA149; 237 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.37",
+           "spread": "0.046"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.16",
+           "spread": "0.044"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "-15 minutes (n=228 QVA149; 235 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.37",
+           "spread": "0.047"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.17",
+           "spread": "0.045"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "5 minutes (n=229 QVA149; 236 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.44",
+           "spread": "0.048"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.20",
+           "spread": "0.046"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "30 minutes (n=229 QVA149; 235 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.48",
+           "spread": "0.048"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.23",
+           "spread": "0.046"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "1 hour (n=228 QVA149; 236 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.49",
+           "spread": "0.049"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.26",
+           "spread": "0.047"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "2 hours (n=229 QVA149; 237 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.54",
+           "spread": "0.048"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.31",
+           "spread": "0.046"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "4 hours (n=228 QVA149; 237 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.49",
+           "spread": "0.050"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.33",
+           "spread": "0.048"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "8 hours (n=228 QVA149; 237 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.46",
+           "spread": "0.048"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.27",
+           "spread": "0.046"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "12 hours (n=228 QVA149; 236 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.45",
+           "spread": "0.050"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.26",
+           "spread": "0.049"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Forced Vital Capacity at All-time Points (Week 26)",
+     "description": "Forced Vital Capacity (FVC) is the amount of air which can be forcibly exhaled from the lungs after taking the deepest breath possible. FVC was assessed via spirometry. A positive change from baseline in FVC indicates improvement in lung function.\n\nThis outcome measures absolute values at -45 min, -15 min predose; 5 min, 30 min, 1 hr, 2hr, 4 hr, 8 hr, 12 hr post-dose on week 26. Results are obtained from linear mixed model.",
+     "populationDescription": "The Full Analysis Set (FAS) includes all randomized patients who received at least one dose of study drug. FAS were used to analyze all efficacy endpoints, unless otherwise stated. Following the intention-to-treat principle, patients in the FAS were analyzed according to the treatment they were randomized to.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "-45 min, -15 min predose; 5 min, 30 min, 1 hr, 2hr, 4 hr, 8 hr, 12 hr post-dose on week 26",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received indacaterol and glycopyrronium (QVA149) and placebo to fluticasone/salmeterol."
+      },
+      {
+       "id": "OG001",
+       "title": "Fluticasone/Salmeterol",
+       "description": "Participants received fluticasone/salmeterol and placebo to indacaterol and glycopyrronium (QVA149)."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "213"
+        },
+        {
+         "groupId": "OG001",
+         "value": "216"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "-45 minutes (n=213 QVA149; 216 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.32",
+           "spread": "0.047"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.13",
+           "spread": "0.045"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "-15 minutes (n=213 QVA149; 215 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.33",
+           "spread": "0.044"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.12",
+           "spread": "0.043"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "5 minutes (n=212 QVA149; 215 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.42",
+           "spread": "0.051"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.17",
+           "spread": "0.049"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "30 minutes (n=212 QVA149; 214 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.47",
+           "spread": "0.053"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.23",
+           "spread": "0.051"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "1 hour (n=212 QVA149; 216 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.50",
+           "spread": "0.051"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.23",
+           "spread": "0.049"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "2 hours (n=212 QVA149; 216 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.51",
+           "spread": "0.051"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.29",
+           "spread": "0.049"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "4 hours (n=212 QVA149; 215 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.45",
+           "spread": "0.053"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.28",
+           "spread": "0.050"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "8 hours (n=212 QVA149; 216 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.40",
+           "spread": "0.053"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.21",
+           "spread": "0.050"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "12 hours (n=211 QVA149; 213 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.40",
+           "spread": "0.053"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.18",
+           "spread": "0.051"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Focal Score of the Transitional Dyspnea Index (TDI)",
+     "description": "Transition Dyspnea Index (TDI) captures changes from baseline. The TDI score is based on three domains with each domain scored from -3 (major deterioration) to +3 (major improvement), to give an overall score of -9 to +9, a negative score indicating a deterioration from baseline. A TDI focal score of 1 is considered to be a clinically significant improvement.",
+     "populationDescription": "The Full Analysis Set (FAS) includes all randomized patients who received at least one dose of study drug. FAS were used to analyze all efficacy endpoints, unless otherwise stated. Following the intention-to-treat principle, patients in the FAS were analyzed according to the treatment they were randomized to.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "units on a scale",
+     "timeFrame": "12 weeks and 26 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received indacaterol and glycopyrronium (QVA149) and placebo to fluticasone/salmeterol."
+      },
+      {
+       "id": "OG001",
+       "title": "Fluticasone/Salmeterol",
+       "description": "Participants received fluticasone/salmeterol and placebo to indacaterol and glycopyrronium (QVA149)."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "224"
+        },
+        {
+         "groupId": "OG001",
+         "value": "236"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "12 weeks (n=224 QVA149; 236 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.03",
+           "spread": "0.388"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.45",
+           "spread": "0.374"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "26 weeks (n=212 QVA149; 213 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.36",
+           "spread": "0.388"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.60",
+           "spread": "0.376"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Total Score of the St. George's Respiratory Questionnaire (SGRQ-C)",
+     "description": "The total score of the St. George's Respiratory Questionnaire (SGRQ-C) is a health related quality of life questionnaire consisting of 51 items in three components: symptoms, activity, and impacts. The lowest possible value is zero and the highest 100. Higher values correspond to greater impairment in quality of life.",
+     "populationDescription": "The Full Analysis Set (FAS) includes all randomized patients who received at least one dose of study drug. FAS were used to analyze all efficacy endpoints, unless otherwise stated. Following the intention-to-treat principle, patients in the FAS were analyzed according to the treatment they were randomized to.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "units on a scale",
+     "timeFrame": "12 weeks and 26 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received indacaterol and glycopyrronium (QVA149) and placebo to fluticasone/salmeterol."
+      },
+      {
+       "id": "OG001",
+       "title": "Fluticasone/Salmeterol",
+       "description": "Participants received fluticasone/salmeterol and placebo to indacaterol and glycopyrronium (QVA149)."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "230"
+        },
+        {
+         "groupId": "OG001",
+         "value": "238"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "12 weeks (n=230 QVA149; 238 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "36.74",
+           "spread": "1.175"
+          },
+          {
+           "groupId": "OG001",
+           "value": "36.03",
+           "spread": "1.132"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "26 weeks (n=211 QVA149; 216 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "35.45",
+           "spread": "1.448"
+          },
+          {
+           "groupId": "OG001",
+           "value": "36.68",
+           "spread": "1.386"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Mean Change From Baseline in Daily Number of Puffs of Rescue Medication",
+     "description": "Participants maintained a diary to record the daily number of puffs of rescue medication used to treat COPD symptoms.",
+     "populationDescription": "The Full Analysis Set (FAS) includes all randomized patients who received at least one dose of study drug. FAS were used to analyze all efficacy endpoints, unless otherwise stated. Following the intention-to-treat principle, patients in the FAS were analyzed according to the treatment they were randomized to.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "puffs",
+     "timeFrame": "Baseline, 12 weeks and 26 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received indacaterol and glycopyrronium (QVA149) and placebo to fluticasone/salmeterol."
+      },
+      {
+       "id": "OG001",
+       "title": "Fluticasone/Salmeterol",
+       "description": "Participants received fluticasone/salmeterol and placebo to indacaterol and glycopyrronium (QVA149)."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "253"
+        },
+        {
+         "groupId": "OG001",
+         "value": "259"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Weeks 1 to12",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-2.18",
+           "spread": "0.187"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-1.90",
+           "spread": "0.184"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Weeks 1 to 26",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-2.32",
+           "spread": "0.194"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-1.93",
+           "spread": "0.191"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Symptom Scores Reported Using the Ediary",
+     "description": "Participants maintained an ediary to record daily symptom scores (AM and PM) over 12 weeks and 26 weeks of treatment. This analysis compares the mean symptom scores over 12 weeks and 26 weeks compared to baseline. The diary records morning and evening daily clinical symptoms including cough, wheezing, shortness of breath, sputum volume, sputum purulence, night time awakenings and rescue medication use.\n\nScale ranges: ranges are 0 to 3 with varying scale descriptions that pertain to the question being asked.\n\n0 is the minimum score = \"none\" or \"No symptoms\" or \"never\" or \"No\"\n\n1. = mild, a little\n2. = moderate\n3. = severe For the scale range provided, high values represent a worse outcome.",
+     "populationDescription": "The Full Analysis Set (FAS) includes all randomized patients who received at least one dose of study drug. FAS were used to analyze all efficacy endpoints, unless otherwise stated. Following the intention-to-treat principle, patients in the FAS were analyzed according to the treatment they were randomized to.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "units on a scale",
+     "timeFrame": "12 weeks and 26 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received indacaterol and glycopyrronium (QVA149) and placebo to fluticasone/salmeterol."
+      },
+      {
+       "id": "OG001",
+       "title": "Fluticasone/Salmeterol",
+       "description": "Participants received fluticasone/salmeterol and placebo to indacaterol and glycopyrronium (QVA149)."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "253"
+        },
+        {
+         "groupId": "OG001",
+         "value": "259"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Weeks 1-12",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-1.08",
+           "spread": "0.135"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-1.17",
+           "spread": "0.133"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Weeks 1-26",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-1.28",
+           "spread": "0.140"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-1.24",
+           "spread": "0.138"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Inspiratory Capacity (IC) at All-time Points (12 Weeks)",
+     "description": "After 12 weeks of treatment, Inspiratory Capacity (IC) was measured via spirometry, conducted according to internationally accepted standards. The mean of 3 acceptable measurements was calculated and reported in liters.",
+     "populationDescription": "Inspiratory capacity was measured for a subset of patients QVA149 group: (78 patients (30.2%)) at baseline and 49-73 patients contributing observations at post-baseline visits.\n\nflut/salm group: (86 patients (32.6%)) at baseline and 60-79 patients contributing observations at post-baseline visits.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received indacaterol and glycopyrronium (QVA149) and placebo to fluticasone/salmeterol."
+      },
+      {
+       "id": "OG001",
+       "title": "Fluticasone/Salmeterol",
+       "description": "Participants received fluticasone/salmeterol and placebo to indacaterol and glycopyrronium (QVA149)."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "58"
+        },
+        {
+         "groupId": "OG001",
+         "value": "72"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "-20 minutes (n=51 QVA149; 65 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.39",
+           "spread": "0.081"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.31",
+           "spread": "0.073"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "25 minutes (n=56 QVA149; 71 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.55",
+           "spread": "0.075"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.42",
+           "spread": "0.068"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "1 hour (n=59 QVA149; 68 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.54",
+           "spread": "0.079"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.43",
+           "spread": "0.072"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "3 hours (n=54 QVA149; 67 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.52",
+           "spread": "0.086"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.45",
+           "spread": "0.079"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "7 hours (n=58 QVA149; 67 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.42",
+           "spread": "0.080"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.41",
+           "spread": "0.073"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "11 hours (n=49 QVA149; 72 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.40",
+           "spread": "0.079"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.34",
+           "spread": "0.070"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Inspiratory Capacity (IC) at All-time Points (26 Weeks)",
+     "description": "After 26 weeks of treatment, Inspiratory Capacity (IC) was measured via spirometry, conducted according to internationally accepted standards. The mean of 3 acceptable measurements was calculated and reported in liters.",
+     "populationDescription": "Inspiratory capacity was measured for a subset of patients QVA149 group: (78 patients (30.2%)) at baseline and 49-73 patients contributing observations at post-baseline visits.\n\nflut/salm group: (86 patients (32.6%)) at baseline and 60-79 patients contributing observations at post-baseline visits.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "26 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received indacaterol and glycopyrronium (QVA149) and placebo to fluticasone/salmeterol."
+      },
+      {
+       "id": "OG001",
+       "title": "Fluticasone/Salmeterol",
+       "description": "Participants received fluticasone/salmeterol and placebo to indacaterol and glycopyrronium (QVA149)."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "58"
+        },
+        {
+         "groupId": "OG001",
+         "value": "66"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "-20 minutes (n=53 QVA149; 63 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.25",
+           "spread": "0.079"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.22",
+           "spread": "0.071"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "25 minutes (n=58 QVA149; 63 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.41",
+           "spread": "0.088"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.34",
+           "spread": "0.080"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "1 hour (n=53 QVA149; 63 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.38",
+           "spread": "0.087"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.35",
+           "spread": "0.079"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "3 hours (n=52 QVA149; 60 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.33",
+           "spread": "0.090"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.32",
+           "spread": "0.080"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "7 hours (n=56 QVA149; 61 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.40",
+           "spread": "0.82"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.30",
+           "spread": "0.075"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "11 hours (n=57 QVA149; 66 flut/salm)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.37",
+           "spread": "0.084"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.27",
+           "spread": "0.075"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Participants With Adverse Events",
+     "description": "The assessment of safety was based on Adverse Events. A summary of adverse events is presented with this outcome, additional details are provided in Adverse Events Section.",
+     "populationDescription": "Safety set includes all participants who received at least one dose of study drug.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "26 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "Participants received indacaterol and glycopyrronium (QVA149) and placebo to fluticasone/salmeterol."
+      },
+      {
+       "id": "OG001",
+       "title": "Fluticasone/Salmeterol",
+       "description": "Participants received fluticasone/salmeterol and placebo to indacaterol and glycopyrronium (QVA149)."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "258"
+        },
+        {
+         "groupId": "OG001",
+         "value": "264"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Any Adverse Event",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "143"
+          },
+          {
+           "groupId": "OG001",
+           "value": "159"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Death",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serious Adverse Events",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "13"
+          },
+          {
+           "groupId": "OG001",
+           "value": "14"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Discontinued due to Adverse Events",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "22"
+          },
+          {
+           "groupId": "OG001",
+           "value": "27"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Discontinued due to Serious Adverse Events",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "5"
+          },
+          {
+           "groupId": "OG001",
+           "value": "9"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Discontinued due to non-Serious Adverse Events",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "17"
+          },
+          {
+           "groupId": "OG001",
+           "value": "18"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "QVA149",
+     "description": "Participants received indacaterol and glycopyrronium (QVA149) and placebo to fluticasone/salmeterol.",
+     "seriousNumAffected": 13,
+     "seriousNumAtRisk": 258,
+     "otherNumAffected": 73,
+     "otherNumAtRisk": 258
+    },
+    {
+     "id": "EG001",
+     "title": "Fluticasone/Salmeterol",
+     "description": "Participants received fluticasone/salmeterol and placebo to indacaterol and glycopyrronium (QVA149).",
+     "seriousNumAffected": 14,
+     "seriousNumAtRisk": 264,
+     "otherNumAffected": 82,
+     "otherNumAtRisk": 264
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Acute coronary syndrome",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Acute myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Angina pectoris",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Atrial fibrillation",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Coronary artery stenosis",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Dyspepsia",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Dysphagia",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Abscess limb",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Bronchitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Nasopharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Contusion",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Diabetes mellitus",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Myopathy",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Colon cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Lung adenocarcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Oesophageal carcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Rectal cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Small cell lung cancer stage unspecified",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Carotid artery occlusion",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Carotid artery stenosis",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Ischaemic stroke",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Benign prostatic hyperplasia",
+     "organSystem": "Reproductive system and breast disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Epididymitis",
+     "organSystem": "Reproductive system and breast disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Acute respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 3,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Dyspnoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Pleural effusion",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Skin ulcer",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Peripheral artery aneurysm",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Venous insufficiency",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Venous thrombosis limb",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Nasopharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 37,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 29,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 44,
+       "numAtRisk": 258
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 60,
+       "numAtRisk": 264
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "The terms and conditions of Novartis' agreements with its investigators may vary. However, Novartis does not prohibit any investigator from publishing. Any publications from a single-site are postponed until the publication of the pooled data (i.e., data from all sites) in the clinical trial."
+   },
+   "pointOfContact": {
+    "title": "Study Director",
+    "organization": "Novartis",
+    "phone": "41 61 324 1111"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C510790",
+     "term": "indacaterol"
+    },
+    {
+     "id": "D006024",
+     "term": "Glycopyrrolate"
+    },
+    {
+     "id": "C554862",
+     "term": "indacaterol-glycopyrronium combination"
+    },
+    {
+     "id": "D000068299",
+     "term": "Salmeterol Xinafoate"
+    },
+    {
+     "id": "D000068297",
+     "term": "Fluticasone-Salmeterol Drug Combination"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D000644",
+     "term": "Quaternary Ammonium Compounds"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D009861",
+     "term": "Onium Compounds"
+    },
+    {
+     "id": "D011759",
+     "term": "Pyrrolidines"
+    },
+    {
+     "id": "D006573",
+     "term": "Heterocyclic Compounds, 1-Ring"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D000420",
+     "term": "Albuterol"
+    },
+    {
+     "id": "D004983",
+     "term": "Ethanolamines"
+    },
+    {
+     "id": "D000605",
+     "term": "Amino Alcohols"
+    },
+    {
+     "id": "D000438",
+     "term": "Alcohols"
+    },
+    {
+     "id": "D010627",
+     "term": "Phenethylamines"
+    },
+    {
+     "id": "D005021",
+     "term": "Ethylamines"
+    },
+    {
+     "id": "D000068298",
+     "term": "Fluticasone"
+    },
+    {
+     "id": "D000730",
+     "term": "Androstadienes"
+    },
+    {
+     "id": "D000736",
+     "term": "Androstenes"
+    },
+    {
+     "id": "D000731",
+     "term": "Androstanes"
+    },
+    {
+     "id": "D013256",
+     "term": "Steroids"
+    },
+    {
+     "id": "D000072473",
+     "term": "Fused-Ring Compounds"
+    },
+    {
+     "id": "D011083",
+     "term": "Polycyclic Compounds"
+    },
+    {
+     "id": "D004338",
+     "term": "Drug Combinations"
+    },
+    {
+     "id": "D004364",
+     "term": "Pharmaceutical Preparations"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

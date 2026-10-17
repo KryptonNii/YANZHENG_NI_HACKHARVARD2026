@@ -29,7 +29,7 @@ from ._contracts import (
     ScenarioResult,
     TrialDesign,
 )
-from .db import ScenarioRow, get_session, utcnow_iso
+from .db import DesignRow, ScenarioRow, get_session, utcnow_iso
 from .deps import Identity, require_editor, services
 from .engine_adapter import METRICS
 from .errors import ApiError
@@ -390,7 +390,7 @@ def resolve_scenario_hash(engine: Any, record_id: str) -> str | None:
 
 
 def _new_row(
-    *, svc: Any, ident: Identity, name: str, description: str | None, design_id: str,
+    *, ident: Identity, name: str, description: str | None, design_id: str,
     design_version: int, design_hash: str, levers: Levers, seed: int, draws: int,
     result: ScenarioResult, lineage_id: str | None, version: int, parent_id: str | None,
 ) -> ScenarioRow:
@@ -405,6 +405,20 @@ def _new_row(
     )
     row.record_hash = scenario_hash(row)
     return row
+
+
+def _recompute_from(
+    svc: Any, session: Session, base: ScenarioRow, body: ScenarioPatch
+) -> tuple[DesignRow, Levers, int, int, ScenarioResult, Any]:
+    """Recompute `base` with what `body` sends; every field it omits keeps the base row's value
+    (the design version too: it never jumps to the latest design)."""
+    drow, design = load_design(session, base.design_id, body.design_version or base.design_version)
+    levers = (Levers.model_validate(body.levers.model_dump()) if body.levers is not None
+              else Levers.model_validate_json(base.levers))
+    seed, draws = _seed_draws(svc, body.seed if body.seed is not None else base.seed,
+                              body.draws if body.draws is not None else base.draws)
+    result, outcome = _compute(svc, design, levers, seed, draws, drow.version)
+    return drow, levers, seed, draws, result, outcome
 
 
 def _set_compute_headers(response: Response, outcome: Any, result: ScenarioResult) -> None:
@@ -553,7 +567,7 @@ def save_scenario(
     seed, draws = _seed_draws(svc, body.seed, body.draws)
     result, outcome = _compute(svc, design, body.levers, seed, draws, drow.version)
     row = _new_row(
-        svc=svc, ident=ident, name=body.name, description=body.description,
+        ident=ident, name=body.name, description=body.description,
         design_id=drow.design_id, design_version=drow.version, design_hash=drow.design_hash,
         levers=Levers.model_validate(body.levers.model_dump()), seed=seed, draws=draws,
         result=result, lineage_id=None, version=1, parent_id=None,
@@ -639,12 +653,7 @@ def edit_draft(
         raise ApiError(403, "not_author", "Only the author can edit a draft scenario.",
                        {"author": row.author})
     before = row.record_hash
-    drow, design = load_design(session, row.design_id, body.design_version or row.design_version)
-    levers = (Levers.model_validate(body.levers.model_dump()) if body.levers is not None
-              else Levers.model_validate_json(row.levers))
-    seed, draws = _seed_draws(svc, body.seed if body.seed is not None else row.seed,
-                              body.draws if body.draws is not None else row.draws)
-    result, outcome = _compute(svc, design, levers, seed, draws, drow.version)
+    drow, levers, seed, draws, result, outcome = _recompute_from(svc, session, row, body)
     row.name = body.name if body.name is not None else row.name
     row.description = body.description if body.description is not None else row.description
     row.design_version, row.design_hash = drow.version, drow.design_hash
@@ -684,18 +693,13 @@ def new_version(
     """New draft version of any scenario (the base row is never modified). Recomputed with the
     current parameter library."""
     base = _get_row(session, scenario_id)
-    drow, design = load_design(session, base.design_id, body.design_version or base.design_version)
-    levers = (Levers.model_validate(body.levers.model_dump()) if body.levers is not None
-              else Levers.model_validate_json(base.levers))
-    seed, draws = _seed_draws(svc, body.seed if body.seed is not None else base.seed,
-                              body.draws if body.draws is not None else base.draws)
-    result, outcome = _compute(svc, design, levers, seed, draws, drow.version)
+    drow, levers, seed, draws, result, outcome = _recompute_from(svc, session, base, body)
     top = session.exec(
         select(ScenarioRow.version).where(ScenarioRow.lineage_id == base.lineage_id)
         .order_by(col(ScenarioRow.version).desc())
     ).first()
     row = _new_row(
-        svc=svc, ident=ident, name=body.name or base.name,
+        ident=ident, name=body.name or base.name,
         description=body.description if body.description is not None else base.description,
         design_id=drow.design_id, design_version=drow.version, design_hash=drow.design_hash,
         levers=levers, seed=seed, draws=draws, result=result, lineage_id=base.lineage_id,

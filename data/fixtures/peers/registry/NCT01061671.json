@@ -1,0 +1,3816 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01061671",
+   "orgStudyIdInfo": {
+    "id": "689"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "U10HL074424",
+     "type": "NIH",
+     "link": "https://reporter.nih.gov/quickSearch/U10HL074424"
+    }
+   ],
+   "organization": {
+    "fullName": "University of Minnesota",
+    "class": "OTHER"
+   },
+   "briefTitle": "Simvastatin Therapy for Moderate and Severe COPD",
+   "officialTitle": "Prospective Randomized Placebo-Controlled Trial of SimvaSTATin in the Prevention of COPD Exacerbations (STATCOPE)",
+   "acronym": "STATCOPE"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2017-12",
+   "overallStatus": "TERMINATED",
+   "whyStopped": "Futility",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2010-03"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2014-01",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2014-01",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2010-02-02",
+   "studyFirstSubmitQcDate": "2010-02-02",
+   "studyFirstPostDateStruct": {
+    "date": "2010-02-03",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2015-01-29",
+   "resultsFirstSubmitQcDate": "2015-03-12",
+   "resultsFirstPostDateStruct": {
+    "date": "2015-03-26",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2017-12-08",
+   "lastUpdatePostDateStruct": {
+    "date": "2018-01-02",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "University of Minnesota",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "National Heart, Lung, and Blood Institute (NHLBI)",
+     "class": "NIH"
+    },
+    {
+     "name": "Canadian Institutes of Health Research (CIHR)",
+     "class": "OTHER_GOV"
+    },
+    {
+     "name": "Ottawa Hospital Research Institute",
+     "class": "OTHER"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "To determine the effect of daily administration of 40 mgms simvastatin taken for at least 12 months (range 12-36 months) on the frequency of exacerbations of chronic obstructive lung disease (COPD) in patients with moderate to severe COPD who are prone to exacerbations and do not have other indications for statin treatment.",
+   "detailedDescription": "COPD exacerbation is a common complication that significantly contributes to the high morbidity, mortality and costs associated with COPD. COPD exacerbations are associated with heightened lung inflammation that may have systemic implications (e.g., peripheral muscle weakness, cognitive impairment, depression, stroke, acute coronary syndrome, and atherosclerosis). Statins are potent agents that significantly reduce vascular events in patients with increased risks due to prior cardiac or cerebral vascular events and elevated lipid profiles. Statins have pleiotropic effects that extend well beyond their lipid lowering effects and may be potent anti-inflammatory agents. Retrospective data conducted in COPD patients indicate that statin use is associated with markedly decreased rates of COPD hospitalization and stabilization of lung function. Decreases in mortality in COPD due to complications of flu-like illnesses and deaths due to cardiovascular events have also been reported. Inflammatory biomarkers (C-reactive protein and interleukin- 6) are reported to be elevated in moderate to severe COPD patients who are prone to exacerbations. Inflammatory biomarkers (C-reactive protein and interleukin- 6) are reported to be reduced by statin therapy in patients with hyperlipidemia and cardiovascular diseases. Treatments that can effectively lessen the prevalence and severity of COPD exacerbations are desperately needed"
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ],
+   "keywords": [
+    "Chronic Obstructive Pulmonary Disease",
+    "COPD",
+    "Exacerbation",
+    "Lung function",
+    "Cardiovascular",
+    "Smoking",
+    "Statins",
+    "Simvastatin"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 885,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "simvastatin",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "40 mgms of simvastatin daily",
+     "interventionNames": [
+      "Drug: simvastatin"
+     ]
+    },
+    {
+     "label": "placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Matched placebo pill daily",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "simvastatin",
+     "description": "40 mgms of simvastatin daily",
+     "armGroupLabels": [
+      "simvastatin"
+     ],
+     "otherNames": [
+      "Zocor"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Matched placebo pill daily",
+     "armGroupLabels": [
+      "placebo"
+     ],
+     "otherNames": [
+      "sugar pill"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Rates of COPD Exacerbations",
+     "timeFrame": "up to 37 months"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Time to First COPD Exacerbation",
+     "timeFrame": "up to 37 months"
+    },
+    {
+     "measure": "Change in FEV1 (% Pred) From Baseline to Last Measure",
+     "timeFrame": "Baseline, last measure at up to 37 months"
+    },
+    {
+     "measure": "Acute Exacerbation COPD Hospitalization Rates (Events/Patient Year)",
+     "timeFrame": "up to 37 months"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1. Male and female subjects, 40-80 years of age.\n2. Clinical diagnosis of at least moderate COPD as defined by the GOLD criteria:\n\n   1. Postbronchodilator FEV1(forced expiratory volume at one second)/FVC(forced vital capacity) \\< 70%,\n   2. Postbronchodilator FEV1 (forced expiratory volume at one second) \\< 80% predicted, with or without chronic symptoms (i.e., cough, sputum production).\n3. Cigarette consumption of 10 pack-years or more. Patients may or may not be active smokers.\n4. Must meet one or more of the following 4 conditions\n\n   1. Be using supplemental oxygenate\n   2. Receiving a course of systemic corticosteroids and/or antibiotics for respiratory problems in the past year,\n   3. Visiting an Emergency Department for a COPD exacerbation within the past year, or\n   4. Being hospitalized for a COPD (Chronic Obstructive Pulmonary Disease) exacerbation within the past year\n5. Willingness to make return visits and availability by telephone for duration of study.\n6. Free of active coronary disease\n7. Subject with expected life expectancy \\> 36 months\n\nExclusion Criteria:\n\n1. Patients who:\n\n   1. are on statin drugs.\n   2. should be on statins based on established risk stratification using the ATP-III (Adult Treatment Panel) to determine 10 year risk.\n2. Documented history of active coronary heart disease, such as unstable angina, prior myocardial infarction, stroke, symptomatic peripheral vascular or carotid artery disease, or congestive heart failure within the past 3 months.\n3. A diagnosis of asthma.\n4. The presence of a diagnosis other than COPD that results in the patient being either medically unstable, or having a predicted life expectancy \\< 3 years.\n5. Special patient groups: prisoners, pregnant women, institutionalized patients\n6. Women who are at risk of becoming pregnant during the study (pre-menopausal) and who refuse to use acceptable birth control (hormone-based oral or barrier contraceptive) for the duration of the study.\n7. Woman using estradiol compounds for contraception. Postmenopausal women on estradiol compounds for hormone replacement therapy will be allowed into the trial.\n8. Participants otherwise meeting the inclusion criteria will not be enrolled until they are a minimum of four weeks from their most recent acute exacerbation.\n9. A clinical diagnosis of bronchiectasis defined as production of \\> one-half cup of purulent sputum/day.\n10. Participants using niacin, azole antifungals (itraconazole, ketoconazole, posaconazole), fibric acid derivatives, erythromycin, clarithromycin, telithromycin, diltiazem, amlodipine , ranolazine,HIV protease inhibitors (such as indinavir), amiodarone, gemfibrozil, cyclosporine, verapamil, danazol, nefazodone, and red yeast rice extracts are excluded\n11. Active liver disease. Active liver disease is defined as ALT (alanine aminotransferase), AST (aspartate aminotransferase) as greater than 1.5 times the upper limit of normal.\n12. Patients with renal failure defined by serum creatinine greater than 3mg/dl.\n13. Alcoholism. Alcoholism is defined as \\> 35 drinks per week. A drink is defined as one bottle of beer, one 8-ounce glass of wine, or one ounce of hard liquor.\n14. Hypersensitivity to HMG CoA (3-hydroxy-3-methylglutaryl-coenzyme A) reductase inhibitors. Hypersensitivity is defined as an allergic reaction to statin, prior history of myopathy, rhabdomyolysis or previous intolerance to statin use.\n15. Participants drinking greater than 4 cups (1qt) of grapefruit juice per day.\n16. Participants drinking greater than 3 cups of green tea per day.\n17. Diabetics will be excluded. Diabetics are defined by:\n\n1\\. A CURRENT physician diagnosis of diabetes OR 2. CURRENT use of diabetic meds OR 3. Elevated HbA1c \\> 6.5% 18. The discretion of the Principal Investigator that the potential participant will not be a reliable study subject to complete the study requirements.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "John E Connett, PhD",
+     "affiliation": "University of Minnesota (Data Coordinating Center)",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Steven M Scharf, MD, PhD",
+     "affiliation": "University of Maryland, Baltimore",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Mark Dransfield, MD",
+     "affiliation": "University of Alabama at Birmingham",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "George Washko, MD",
+     "affiliation": "Brigham and Women's Hospital Boston",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Richard K Albert, MD",
+     "affiliation": "Denver Health Medical Center",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Richard Casaburi, MD, PhD",
+     "affiliation": "Harbor-UCLA Research & Education Institute",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Dennis E Niewoehner, MD",
+     "affiliation": "Minnesota Veterans Affairs Medical Center",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Gerard J Criner, MD",
+     "affiliation": "Temple University Philadelphia",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Frank Sciurba, MD",
+     "affiliation": "University of Pittsburgh",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Stephen C Lazarus, MD",
+     "affiliation": "University of California at San Francisco",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Fernando J Martinez, MD",
+     "affiliation": "University of Michigan",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Don Sin, M.D.",
+     "affiliation": "St. Paul's Hospital",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Shawn Aaron, M.D.",
+     "affiliation": "The Ottawa Hospital",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "University of Alabama at Birmingham",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "zip": "35294",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "Veteran's Administration Medical Center",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "zip": "35294",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "LA BioMed at Harbor-UCLA Medical Center",
+     "city": "Los Angeles",
+     "state": "California",
+     "zip": "90502",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "University of California at San Francisco",
+     "city": "San Francisco",
+     "state": "California",
+     "zip": "94143",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.77493,
+      "lon": -122.41942
+     }
+    },
+    {
+     "facility": "University of Colorado",
+     "city": "Aurora",
+     "state": "Colorado",
+     "zip": "80045",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.72943,
+      "lon": -104.83192
+     }
+    },
+    {
+     "facility": "National Jewish Health",
+     "city": "Denver",
+     "state": "Colorado",
+     "zip": "80206",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.73915,
+      "lon": -104.9847
+     }
+    },
+    {
+     "facility": "Malcom Randall VA Medical Center",
+     "city": "Gainesville",
+     "state": "Florida",
+     "zip": "32608",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.65163,
+      "lon": -82.32483
+     }
+    },
+    {
+     "facility": "Northwestern University",
+     "city": "Chicago",
+     "state": "Illinois",
+     "zip": "60611",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.85003,
+      "lon": -87.65005
+     }
+    },
+    {
+     "facility": "University of Illinois Health System",
+     "city": "Chicago",
+     "state": "Illinois",
+     "zip": "60637",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.85003,
+      "lon": -87.65005
+     }
+    },
+    {
+     "facility": "LSU Health",
+     "city": "New Orleans",
+     "state": "Louisiana",
+     "zip": "70112",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.95465,
+      "lon": -90.07507
+     }
+    },
+    {
+     "facility": "University of Maryland Baltimore",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21201",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "Brigham and Women's Hospital",
+     "city": "Boston",
+     "state": "Massachusetts",
+     "zip": "02115",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.35843,
+      "lon": -71.05977
+     }
+    },
+    {
+     "facility": "Veteran's Administration Medical Center",
+     "city": "Boston",
+     "state": "Massachusetts",
+     "zip": "02132",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.35843,
+      "lon": -71.05977
+     }
+    },
+    {
+     "facility": "Reliant Medical Group",
+     "city": "Worcester",
+     "state": "Massachusetts",
+     "zip": "01608",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.26259,
+      "lon": -71.80229
+     }
+    },
+    {
+     "facility": "Veteran's Administration Medical Center",
+     "city": "Ann Arbor",
+     "state": "Michigan",
+     "zip": "48105",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.27756,
+      "lon": -83.74088
+     }
+    },
+    {
+     "facility": "University of Michigan",
+     "city": "Ann Arbor",
+     "state": "Michigan",
+     "zip": "48109",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.27756,
+      "lon": -83.74088
+     }
+    },
+    {
+     "facility": "Veteran's Administration Medical Center",
+     "city": "Minneapolis",
+     "state": "Minnesota",
+     "zip": "55417",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.97997,
+      "lon": -93.26384
+     }
+    },
+    {
+     "facility": "HealthPartners Research Foundation",
+     "city": "Minneapolis",
+     "state": "Minnesota",
+     "zip": "55440",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.97997,
+      "lon": -93.26384
+     }
+    },
+    {
+     "facility": "Mayo Clinic",
+     "city": "Rochester",
+     "state": "Minnesota",
+     "zip": "55905",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.02163,
+      "lon": -92.4699
+     }
+    },
+    {
+     "facility": "Lovelace Respiratory Research Institute",
+     "city": "Albuquerque",
+     "state": "New Mexico",
+     "zip": "87108",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.08449,
+      "lon": -106.65114
+     }
+    },
+    {
+     "facility": "Western New York Veterans Administration Healthcare System",
+     "city": "Buffalo",
+     "state": "New York",
+     "zip": "14125",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.88645,
+      "lon": -78.87837
+     }
+    },
+    {
+     "facility": "Duke University",
+     "city": "Durham",
+     "state": "North Carolina",
+     "zip": "27710",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.99403,
+      "lon": -78.89862
+     }
+    },
+    {
+     "facility": "Cincinnati VAMC",
+     "city": "Cincinnati",
+     "state": "Ohio",
+     "zip": "45220",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.12711,
+      "lon": -84.51439
+     }
+    },
+    {
+     "facility": "Cleveland Clinic",
+     "city": "Cleveland",
+     "state": "Ohio",
+     "zip": "44195",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.4995,
+      "lon": -81.69541
+     }
+    },
+    {
+     "facility": "Ohio State University",
+     "city": "Columbus",
+     "state": "Ohio",
+     "zip": "43221",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.96118,
+      "lon": -82.99879
+     }
+    },
+    {
+     "facility": "Oregon Health & Science University",
+     "city": "Portland",
+     "state": "Oregon",
+     "zip": "97239",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 45.52345,
+      "lon": -122.67621
+     }
+    },
+    {
+     "facility": "St. Luke's Hospital and Health Network",
+     "city": "Bethlehem",
+     "state": "Pennsylvania",
+     "zip": "18015",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.62593,
+      "lon": -75.37046
+     }
+    },
+    {
+     "facility": "Geisinger Medical Center",
+     "city": "Danville",
+     "state": "Pennsylvania",
+     "zip": "17822",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.96342,
+      "lon": -76.61273
+     }
+    },
+    {
+     "facility": "Institute for Respiratory and Sleep",
+     "city": "Langhorne",
+     "state": "Pennsylvania",
+     "zip": "19047",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.17455,
+      "lon": -74.92267
+     }
+    },
+    {
+     "facility": "Temple University Lung Center",
+     "city": "Philadelphia",
+     "state": "Pennsylvania",
+     "zip": "19140",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.95238,
+      "lon": -75.16362
+     }
+    },
+    {
+     "facility": "University of Pittsburgh",
+     "city": "Pittsburgh",
+     "state": "Pennsylvania",
+     "zip": "15213",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.44062,
+      "lon": -79.99589
+     }
+    },
+    {
+     "facility": "Pittsburgh VA Medical Center",
+     "city": "Pittsburgh",
+     "state": "Pennsylvania",
+     "zip": "15240",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.44062,
+      "lon": -79.99589
+     }
+    },
+    {
+     "facility": "Respiratory Specialists",
+     "city": "Wyomissing",
+     "state": "Pennsylvania",
+     "zip": "19601",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.32954,
+      "lon": -75.96521
+     }
+    },
+    {
+     "facility": "Baylor College of Medicine",
+     "city": "Houston",
+     "state": "Texas",
+     "zip": "77030",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.76328,
+      "lon": -95.36327
+     }
+    },
+    {
+     "facility": "University of Utah Health Sciences Center",
+     "city": "Salt Lake City",
+     "state": "Utah",
+     "zip": "84132",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.76078,
+      "lon": -111.89105
+     }
+    },
+    {
+     "facility": "University of Calgary",
+     "city": "Calgary",
+     "state": "Alberta",
+     "zip": "T2N4Z6",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 51.05011,
+      "lon": -114.08529
+     }
+    },
+    {
+     "facility": "University of Alberta",
+     "city": "Edmonton",
+     "state": "Alberta",
+     "zip": "T6G 2C8",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 53.55014,
+      "lon": -113.46871
+     }
+    },
+    {
+     "facility": "Royal Columbian Hospital",
+     "city": "New Westminster",
+     "state": "British Columbia",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 49.20678,
+      "lon": -122.91092
+     }
+    },
+    {
+     "facility": "Surrey Memorial Hospital",
+     "city": "Surrey",
+     "state": "British Columbia",
+     "zip": "V3V1N1",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 49.10635,
+      "lon": -122.82509
+     }
+    },
+    {
+     "facility": "Vancouver General Hospital",
+     "city": "Vancouver",
+     "state": "British Columbia",
+     "zip": "V5Z1M9",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 49.24966,
+      "lon": -123.11934
+     }
+    },
+    {
+     "facility": "St. Paul's Hospital",
+     "city": "Vancouver",
+     "state": "British Columbia",
+     "zip": "V6Z 1Y6",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 49.24966,
+      "lon": -123.11934
+     }
+    },
+    {
+     "facility": "Lion's Gate Hospital",
+     "city": "Vancouver",
+     "state": "British Columbia",
+     "zip": "V7M2H9",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 49.24966,
+      "lon": -123.11934
+     }
+    },
+    {
+     "facility": "St. Boniface Hospital",
+     "city": "Winnipeg",
+     "state": "Manitoba",
+     "zip": "R2H2A6",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 49.8844,
+      "lon": -97.14704
+     }
+    },
+    {
+     "facility": "Queen Elizabeth II Health Sciences Center",
+     "city": "Halifax",
+     "state": "Nova Scotia",
+     "zip": "B3H 3A7",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 44.64269,
+      "lon": -63.57688
+     }
+    },
+    {
+     "facility": "St. Joseph's Healthcare Hamilton",
+     "city": "Hamilton",
+     "state": "Ontario",
+     "zip": "L8N 4A6",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.25011,
+      "lon": -79.84963
+     }
+    },
+    {
+     "facility": "The Ottawa Hospital",
+     "city": "Ottawa",
+     "state": "Ontario",
+     "zip": "K1H 8L6",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.41117,
+      "lon": -75.69812
+     }
+    },
+    {
+     "facility": "Ottawa Civic Hospital",
+     "city": "Ottawa",
+     "state": "Ontario",
+     "zip": "K1Y4E9",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.41117,
+      "lon": -75.69812
+     }
+    },
+    {
+     "facility": "Inspiration Research Limited",
+     "city": "Toronto",
+     "state": "Ontario",
+     "zip": "M5T 3A9",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.70643,
+      "lon": -79.39864
+     }
+    },
+    {
+     "facility": "Jewish General Hospital",
+     "city": "Montreal",
+     "state": "Quebec",
+     "zip": "H3T 1E2",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.50884,
+      "lon": -73.58781
+     }
+    },
+    {
+     "facility": "Royal University Hospital",
+     "city": "Saskatoon",
+     "state": "Saskatchewan",
+     "zip": "S7N 0W8",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 52.13238,
+      "lon": -106.66892
+     }
+    },
+    {
+     "facility": "Institut Universitaire de Cardiologie et de Pneumologie de Québec (Laval Hospital)",
+     "city": "Québec",
+     "zip": "G1V 4G5",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 46.81228,
+      "lon": -71.21454
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "34229290",
+     "type": "DERIVED",
+     "citation": "Camac ER, Voelker H, Criner GJ; COPD Clinical Research Network and the Canadian Institutes of Health Research. Impact of COPD exacerbations leading to hospitalization on general and disease-specific quality of life. Respir Med. 2021 Sep;186:106526. doi: 10.1016/j.rmed.2021.106526. Epub 2021 Jun 29."
+    },
+    {
+     "pmid": "33638931",
+     "type": "DERIVED",
+     "citation": "Rao AK, Del Carpio-Cano F, Janapati S, Zhao H, Voelker H, Lu X, Criner G; NIH COPD Clinical Research Network, the Canadian Institute of Health Research Investigators. Effects of simvastatin on tissue factor pathway of blood coagulation in STATCOPE (Simvastatin in the prevention of COPD exacerbations) trial. J Thromb Haemost. 2021 Jul;19(7):1709-1717. doi: 10.1111/jth.15282. Epub 2021 Apr 12."
+    },
+    {
+     "pmid": "29444682",
+     "type": "DERIVED",
+     "citation": "Leitao Filho FS, Ra SW, Mattman A, Schellenberg RS, Criner GJ, Woodruff PG, Lazarus SC, Albert R, Connett JE, Han MK, Martinez FJ, Leung JM, Paul Man SF, Aaron SD, Reed RM, Sin DD; Canadian Respiratory Research Network (CRRN). Serum IgG subclass levels and risk of exacerbations and hospitalizations in patients with COPD. Respir Res. 2018 Feb 14;19(1):30. doi: 10.1186/s12931-018-0733-z."
+    },
+    {
+     "pmid": "29065885",
+     "type": "DERIVED",
+     "citation": "Brown KE, Sin DD, Voelker H, Connett JE, Niewoehner DE, Kunisaki KM; COPD Clinical Research Network. Serum bilirubin and the risk of chronic obstructive pulmonary disease exacerbations. Respir Res. 2017 Oct 24;18(1):179. doi: 10.1186/s12931-017-0664-0."
+    },
+    {
+     "pmid": "24836125",
+     "type": "DERIVED",
+     "citation": "Criner GJ, Connett JE, Aaron SD, Albert RK, Bailey WC, Casaburi R, Cooper JA Jr, Curtis JL, Dransfield MT, Han MK, Make B, Marchetti N, Martinez FJ, Niewoehner DE, Scanlon PD, Sciurba FC, Scharf SM, Sin DD, Voelker H, Washko GR, Woodruff PG, Lazarus SC; COPD Clinical Research Network; Canadian Institutes of Health Research. Simvastatin for the prevention of exacerbations in moderate-to-severe COPD. N Engl J Med. 2014 Jun 5;370(23):2201-10. doi: 10.1056/NEJMoa1403086. Epub 2014 May 18."
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Simvastatin",
+     "description": "40 mgms of simvastatin daily\n\nSimvastatin: 40 mgms of simvastatin daily"
+    },
+    {
+     "id": "FG001",
+     "title": "Placebo",
+     "description": "Matched placebo pill daily\n\nPlacebo: Matched placebo pill daily"
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "433"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "452"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "386"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "397"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "47"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "55"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "16"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "20"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "5"
+        }
+       ]
+      },
+      {
+       "type": "Death",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "28"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "30"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Simvastatin",
+     "description": "40 mgms of simvastatin daily\n\nSimvastatin: 40 mgms of simvastatin daily"
+    },
+    {
+     "id": "BG001",
+     "title": "Placebo",
+     "description": "Matched placebo pill daily\n\nPlacebo: Matched placebo pill daily"
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "433"
+      },
+      {
+       "groupId": "BG001",
+       "value": "452"
+      },
+      {
+       "groupId": "BG002",
+       "value": "885"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "62.2",
+           "spread": "8.5"
+          },
+          {
+           "groupId": "BG001",
+           "value": "62.3",
+           "spread": "8.4"
+          },
+          {
+           "groupId": "BG002",
+           "value": "62.2",
+           "spread": "8.4"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "184"
+          },
+          {
+           "groupId": "BG001",
+           "value": "203"
+          },
+          {
+           "groupId": "BG002",
+           "value": "387"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "249"
+          },
+          {
+           "groupId": "BG001",
+           "value": "249"
+          },
+          {
+           "groupId": "BG002",
+           "value": "498"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Ethnicity (NIH/OMB)",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Hispanic or Latino",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "4"
+          },
+          {
+           "groupId": "BG001",
+           "value": "7"
+          },
+          {
+           "groupId": "BG002",
+           "value": "11"
+          }
+         ]
+        },
+        {
+         "title": "Not Hispanic or Latino",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "429"
+          },
+          {
+           "groupId": "BG001",
+           "value": "445"
+          },
+          {
+           "groupId": "BG002",
+           "value": "874"
+          }
+         ]
+        },
+        {
+         "title": "Unknown or Not Reported",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Race (NIH/OMB)",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "American Indian or Alaska Native",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "2"
+          },
+          {
+           "groupId": "BG001",
+           "value": "3"
+          },
+          {
+           "groupId": "BG002",
+           "value": "5"
+          }
+         ]
+        },
+        {
+         "title": "Asian",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "2"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "2"
+          }
+         ]
+        },
+        {
+         "title": "Native Hawaiian or Other Pacific Islander",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1"
+          },
+          {
+           "groupId": "BG002",
+           "value": "1"
+          }
+         ]
+        },
+        {
+         "title": "Black or African American",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "99"
+          },
+          {
+           "groupId": "BG001",
+           "value": "91"
+          },
+          {
+           "groupId": "BG002",
+           "value": "190"
+          }
+         ]
+        },
+        {
+         "title": "White",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "328"
+          },
+          {
+           "groupId": "BG001",
+           "value": "346"
+          },
+          {
+           "groupId": "BG002",
+           "value": "674"
+          }
+         ]
+        },
+        {
+         "title": "More than one race",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "2"
+          },
+          {
+           "groupId": "BG001",
+           "value": "11"
+          },
+          {
+           "groupId": "BG002",
+           "value": "13"
+          }
+         ]
+        },
+        {
+         "title": "Unknown or Not Reported",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Region of Enrollment",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "classes": [
+      {
+       "title": "United States",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "362"
+          },
+          {
+           "groupId": "BG001",
+           "value": "376"
+          },
+          {
+           "groupId": "BG002",
+           "value": "738"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Canada",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "71"
+          },
+          {
+           "groupId": "BG001",
+           "value": "76"
+          },
+          {
+           "groupId": "BG002",
+           "value": "147"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Smoking History (Pack Years)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Pack Years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "50.0",
+           "spread": "26.1"
+          },
+          {
+           "groupId": "BG001",
+           "value": "51.2",
+           "spread": "28.7"
+          },
+          {
+           "groupId": "BG002",
+           "value": "50.6",
+           "spread": "27.4"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Post-bronchodilator FEV1 (forced expiratory volume at one second)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "liters (L)",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1.19",
+           "spread": "0.58"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1.19",
+           "spread": "0.56"
+          },
+          {
+           "groupId": "BG002",
+           "value": "1.19",
+           "spread": "0.57"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "FEV1/FVC (forced expiratory volume at one second/forced vital capacity)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Ratio",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0.44",
+           "spread": "0.13"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0.44",
+           "spread": "0.13"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0.44",
+           "spread": "0.13"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "FEV1 (% Predicted)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "percent predicted",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "41.5",
+           "spread": "17.8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "41.6",
+           "spread": "17.6"
+          },
+          {
+           "groupId": "BG002",
+           "value": "41.6",
+           "spread": "17.7"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Acute COPD Exacerbation requiring Hospitalization or ED visit within previous 12 mo",
+     "description": "Acute COPD (Chronic Obstructive Pulmonary Disease) Exacerbation requiring Hospitalization or Emergency Department visit within previous 12 months",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "classes": [
+      {
+       "title": "Yes",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "216"
+          },
+          {
+           "groupId": "BG001",
+           "value": "238"
+          },
+          {
+           "groupId": "BG002",
+           "value": "454"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "No",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "217"
+          },
+          {
+           "groupId": "BG001",
+           "value": "214"
+          },
+          {
+           "groupId": "BG002",
+           "value": "431"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Systemic glucocorticoid or antibiotic use within previous 12 mo",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "classes": [
+      {
+       "title": "Yes",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "367"
+          },
+          {
+           "groupId": "BG001",
+           "value": "382"
+          },
+          {
+           "groupId": "BG002",
+           "value": "749"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "No",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "66"
+          },
+          {
+           "groupId": "BG001",
+           "value": "70"
+          },
+          {
+           "groupId": "BG002",
+           "value": "136"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Use of supplemental oxygen within previous 12 mo",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "classes": [
+      {
+       "title": "Yes",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "198"
+          },
+          {
+           "groupId": "BG001",
+           "value": "222"
+          },
+          {
+           "groupId": "BG002",
+           "value": "420"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "No",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "235"
+          },
+          {
+           "groupId": "BG001",
+           "value": "230"
+          },
+          {
+           "groupId": "BG002",
+           "value": "465"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Rates of COPD Exacerbations",
+     "populationDescription": "Analysis excludes participants without any follow-up data.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "exacerbations/person-year",
+     "timeFrame": "up to 37 months",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Simvastatin",
+       "description": "40 mgms of simvastatin daily\n\nSimvastatin: 40 mgms of simvastatin daily"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo pill daily\n\nPlacebo: Matched placebo pill daily"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "430"
+        },
+        {
+         "groupId": "OG001",
+         "value": "447"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.36",
+           "spread": "1.61"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.39",
+           "spread": "1.73"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.54",
+       "statisticalMethod": "negative binomial regression",
+       "statisticalComment": "Adjustments of confidence intervals for between-participant variation (overdispersion).",
+       "ciNumSides": "TWO_SIDED"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Time to First COPD Exacerbation",
+     "populationDescription": "Analysis excludes participants without any follow-up data.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "Days to the first exacerbation",
+     "timeFrame": "up to 37 months",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Simvastatin",
+       "description": "40 mgms of simvastatin daily\n\nSimvastatin: 40 mgms of simvastatin daily"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo pill daily\n\nPlacebo: Matched placebo pill daily"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "430"
+        },
+        {
+         "groupId": "OG001",
+         "value": "447"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "223",
+           "lowerLimit": "195",
+           "upperLimit": "275"
+          },
+          {
+           "groupId": "OG001",
+           "value": "231",
+           "lowerLimit": "193",
+           "upperLimit": "303"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000"
+       ],
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.34",
+       "statisticalMethod": "Log Rank",
+       "ciNumSides": "TWO_SIDED"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change in FEV1 (% Pred) From Baseline to Last Measure",
+     "populationDescription": "Analysis excludes participants without any follow-up data.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "90% Confidence Interval",
+     "unitOfMeasure": "percent predicted",
+     "timeFrame": "Baseline, last measure at up to 37 months",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Simvastatin",
+       "description": "40 mgms of simvastatin daily\n\nSimvastatin: 40 mgms of simvastatin daily"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo pill daily\n\nPlacebo: Matched placebo pill daily"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "356"
+        },
+        {
+         "groupId": "OG001",
+         "value": "356"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.86",
+           "lowerLimit": "-11.04",
+           "upperLimit": "8.67"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-1.81",
+           "lowerLimit": "-10.62",
+           "upperLimit": "7.10"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": ".1461",
+       "statisticalMethod": "t-test, 2 sided",
+       "ciNumSides": "TWO_SIDED"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Acute Exacerbation COPD Hospitalization Rates (Events/Patient Year)",
+     "populationDescription": "Analysis excludes participants without any follow-up data.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "events per patient year",
+     "timeFrame": "up to 37 months",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Simvastatin",
+       "description": "40 mgms of simvastatin daily\n\nSimvastatin: 40 mgms of simvastatin daily"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo pill daily\n\nPlacebo: Matched placebo pill daily"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "430"
+        },
+        {
+         "groupId": "OG001",
+         "value": "447"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.31",
+           "lowerLimit": "0.24",
+           "upperLimit": "0.38"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.31",
+           "lowerLimit": "0.23",
+           "upperLimit": "0.38"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "Up to 37 months",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Simvastatin",
+     "description": "40 mgms of simvastatin daily\n\nSimvastatin: 40 mgms of simvastatin daily",
+     "seriousNumAffected": 178,
+     "seriousNumAtRisk": 433,
+     "otherNumAffected": 316,
+     "otherNumAtRisk": 433
+    },
+    {
+     "id": "EG001",
+     "title": "Placebo",
+     "description": "Matched placebo pill daily\n\nPlacebo: Matched placebo pill daily",
+     "seriousNumAffected": 190,
+     "seriousNumAtRisk": 452,
+     "otherNumAffected": 329,
+     "otherNumAtRisk": 452
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Bacterial Infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Viral Infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Other Infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "notes": "Pulmonary Aspergillosis",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Colon Cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Liver Cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Respiratory Cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 12,
+       "numAffected": 9,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 14,
+       "numAffected": 10,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Bone Neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Genitourinary Neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 5,
+       "numAffected": 4,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 7,
+       "numAffected": 5,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Squamous Cell Carcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Lymphatic Neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Neuroendocrine Neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Metabolic disorders",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 6,
+       "numAffected": 5,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 5,
+       "numAffected": 5,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Cavernous Hemangioma",
+     "organSystem": "Blood and lymphatic system disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Mental Disorder",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 4,
+       "numAffected": 3,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 6,
+       "numAffected": 5,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Central Nervous System disorders",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Pain",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Seizure",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Orbital cellulitis",
+     "organSystem": "Eye disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Rheumatic Heart Disease",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Ischemic Heart Disease",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 6,
+       "numAffected": 6,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Pulmonary Circulation disorders",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 5,
+       "numAffected": 4,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 6,
+       "numAffected": 6,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Pericarditis",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Cardiomyopathy",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Cardiac Dysrhythmias",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 7,
+       "numAffected": 7,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 5,
+       "numAffected": 4,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Heart Failure",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 6,
+       "numAffected": 4,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 7,
+       "numAffected": 5,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Cerebrovascular",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 6,
+       "numAffected": 6,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Artery disorder",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 2,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Vein disorder",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 4,
+       "numAffected": 3,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Acute Respiratory Infection",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 3,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 40,
+       "numAffected": 34,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 32,
+       "numAffected": 27,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Influenza",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 5,
+       "numAffected": 5,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 9,
+       "numAffected": 6,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Bronchitis",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Emphysema",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Pneumoconioses",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "COPD Exacerbation",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 155,
+       "numAffected": 96,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 187,
+       "numAffected": 97,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "COPD other",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 9,
+       "numAffected": 9,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 15,
+       "numAffected": 10,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Other Respiratory",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 14,
+       "numAffected": 12,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 20,
+       "numAffected": 13,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Esophagus and stomach disorders",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 5,
+       "numAffected": 5,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Appendicitis",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Abdominal Hernia",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Enteritis",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Other Intestinal disorders",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 9,
+       "numAffected": 7,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 5,
+       "numAffected": 5,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Other Digestive Disorders",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 14,
+       "numAffected": 11,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 8,
+       "numAffected": 7,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Nephrotic disorders",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Other Urinary Disorder",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 5,
+       "numAffected": 5,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 5,
+       "numAffected": 5,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Disorders of the Male Genitourinary System",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 2,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Disorders of the Female Genitourinary System",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Skin Infection",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 4,
+       "numAffected": 3,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Arthropathy",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 6,
+       "numAffected": 5,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Dorsopathy",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Rheumatism",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Osteopathy",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Nissen Fundoplication",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Spondylolisthesis",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Syncope",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 5,
+       "numAffected": 5,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Dizziness",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Severe Headaches",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Tachycardia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Ill defined abdominal pain",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 4,
+       "numAffected": 3,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Sudden death of unknown cause",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Fractures",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 7,
+       "numAffected": 7,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Sprain",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Intracranial injury",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Internal Injury",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Contusion",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Trauma from motorcycle accident",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Poisoning",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Complications of surgical and medical care",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Respiratory Arrest",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Abnormal Gait",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Cellulitis",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Degenerative Disc Disease",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Epistaxis",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Sepsis",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Ill Defined Respiratory events",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 11,
+       "numAffected": 10,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 15,
+       "numAffected": 13,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Ill defined digestive symptoms",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Hypoxemia",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Fatigue",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Altered Mental Status",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Concussion",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Acute Respiratory Infection",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 159,
+       "numAffected": 109,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 166,
+       "numAffected": 107,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 25,
+       "numAffected": 22,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 19,
+       "numAffected": 17,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "COPD Exacerbation",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 642,
+       "numAffected": 232,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 649,
+       "numAffected": 244,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Other COPD Related Symptoms",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 79,
+       "numAffected": 41,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 80,
+       "numAffected": 43,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Arthropathies",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 38,
+       "numAffected": 25,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 43,
+       "numAffected": 32,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Dorsopathies",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 35,
+       "numAffected": 27,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 32,
+       "numAffected": 27,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Rheumatism",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 89,
+       "numAffected": 67,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 73,
+       "numAffected": 54,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Urinary Infection",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 56,
+       "numAffected": 26,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 30,
+       "numAffected": 23,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Headache",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 20,
+       "numAffected": 16,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 27,
+       "numAffected": 23,
+       "numAtRisk": 452
+      }
+     ]
+    },
+    {
+     "term": "Dyspnea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-9",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 94,
+       "numAffected": 65,
+       "numAtRisk": 433
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 90,
+       "numAffected": 59,
+       "numAtRisk": 452
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "limitationsAndCaveats": {
+    "description": "Early termination by the Data and Safety Monitoring Board due to futility in respect to a treatment effect. The original study population goal was 1200 and the study was terminated at 885 participants."
+   },
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictiveAgreement": false
+   },
+   "pointOfContact": {
+    "title": "Sarah Lindberg",
+    "organization": "University of Minnesota",
+    "email": "sharnden@ccbr.umn.edu",
+    "phone": "612-626-9011"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D012907",
+     "term": "Smoking"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D001519",
+     "term": "Behavior"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D019821",
+     "term": "Simvastatin"
+    },
+    {
+     "id": "D000073893",
+     "term": "Sugars"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008148",
+     "term": "Lovastatin"
+    },
+    {
+     "id": "D009281",
+     "term": "Naphthalenes"
+    },
+    {
+     "id": "D011084",
+     "term": "Polycyclic Aromatic Hydrocarbons"
+    },
+    {
+     "id": "D006841",
+     "term": "Hydrocarbons, Aromatic"
+    },
+    {
+     "id": "D006844",
+     "term": "Hydrocarbons, Cyclic"
+    },
+    {
+     "id": "D006838",
+     "term": "Hydrocarbons"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D011083",
+     "term": "Polycyclic Compounds"
+    },
+    {
+     "id": "D002241",
+     "term": "Carbohydrates"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

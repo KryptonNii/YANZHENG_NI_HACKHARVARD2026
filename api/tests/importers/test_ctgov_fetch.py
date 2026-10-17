@@ -118,6 +118,31 @@ def test_refresh_with_network_down_falls_back_to_stale_cache() -> None:
     assert r.cached and r.stale_fallback
 
 
+@pytest.mark.parametrize("answer", [
+    httpx.Response(200, text="<html>Down for maintenance</html>", headers={"Content-Type": "text/html"}),
+    httpx.Response(200, json=[{"protocolSection": {}}]),
+    httpx.Response(200, content=b"\xff\xfe\xfa not utf-8"),
+], ids=["html", "json-list", "undecodable"])
+def test_a_200_that_is_not_a_study_record_is_registry_unavailable(answer: httpx.Response,
+                                                                  isolated_dirs: dict[str, Path]) -> None:
+    with pytest.raises(RegistryUnavailable) as e:
+        fetch_study_result(NEW_NCT, client=_client(lambda _: answer))
+    assert e.value.status == 503 and e.value.code == "registry_unavailable"
+    assert e.value.details == {"nct_id": NEW_NCT, "status": 200}
+    assert NEW_NCT in e.value.message
+    assert not (isolated_dirs["runtime"] / "ctgov" / f"{NEW_NCT}.json").exists()
+    assert NEW_NCT not in cached_study_ids()
+
+
+def test_refresh_with_a_non_json_answer_falls_back_to_stale_cache() -> None:
+    def html(_: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, text="<html>Down for maintenance</html>")
+
+    r = fetch_study_result(DEMO_NCT, client=_client(html), refresh=True)
+    assert r.cached and r.stale_fallback
+    assert r.raw["protocolSection"]["identificationModule"]["nctId"] == DEMO_NCT
+
+
 @pytest.mark.req("URS-029")
 def test_docker_data_dir_keeps_reading_committed_fixtures(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """A5 sets TP_DATA_DIR to a writable volume: fixtures still come from data/fixtures, writes go to the volume."""

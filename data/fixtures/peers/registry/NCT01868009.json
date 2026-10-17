@@ -1,0 +1,1640 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01868009",
+   "orgStudyIdInfo": {
+    "id": "116669"
+   },
+   "organization": {
+    "fullName": "GlaxoSmithKline",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "DISKUS vs. ELLIPTA Device Preference Study in Chronic Obstructive Pulmonary Disease (COPD)",
+   "officialTitle": "RLV116669, A Preference Study of Device Attributes Between Two Placebo Dry Powder Inhalers; ELLIPTA and DISKUS, in Adult Subjects With Chronic Obstructive Pulmonary Disease"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2013-12",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2013-05"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2013-07",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2013-07",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2013-05-30",
+   "studyFirstSubmitQcDate": "2013-05-30",
+   "studyFirstPostDateStruct": {
+    "date": "2013-06-04",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2014-01-16",
+   "resultsFirstSubmitQcDate": "2014-01-16",
+   "resultsFirstPostDateStruct": {
+    "date": "2014-03-04",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2014-01-16",
+   "lastUpdatePostDateStruct": {
+    "date": "2014-03-04",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "GlaxoSmithKline",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false
+  },
+  "descriptionModule": {
+   "briefSummary": "Subjects who have not used the ELLIPTA™ inhaler nor the DISKUS™ inhaler in the past 6 months will be screened to participate in the study. Subjects will have an equal chance of being in any of the following two groups (1:1 allocation). One group will be dispensed the ELLIPTA inhaler at Visit 1 to use during the first period (once daily for 5 to9 days), and the DISKUS inhaler at Visit 2 to use during the second period (twice daily for 5 to 9 days). The other group will be dispensed the DISKUS inhaler at Visit 1 to use during the first period (twice daily for 5 to 9 days), and the ELLIPTA inhaler at Visit 2 to use during the second period (once daily for 5 to9 days). At the end of the second period, subjects will complete the study by answering 7 questions to assess their preference of device attributes and dosing regimens between the two inhalers.\n\nThe null hypothesis for device preference for a specific attribute is that 50% subjects express a preference in that attribute for ELLIPTA and 50% do NOT express a preference in that attribute for ELLIPTA, i.e., the odds for preferring ELLIPTA to not preferring ELLIPTA is unity.\n\nThe null hypothesis for dosing regimen preference is that 50% subjects express a preference of once daily dosing and 50% do not express a preference of once daily dosing (prefer twice daily dosing or have no preference)."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ],
+   "keywords": [
+    "fluticasone furoate",
+    "COPD",
+    "ELLIPTA",
+    "fluticasone propionate",
+    "DISKUS",
+    "Novel Dry Powder Inhaler (NDPI)",
+    "device preference",
+    "salmeterol",
+    "vilanterol"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "CROSSOVER",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "NONE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 287,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "ELLIPTA Period 1 and DISKUS Period 2 Arm",
+     "type": "EXPERIMENTAL",
+     "description": "Subjects will use the ELLIPTA inhaler once daily for 5 to 9 days during the first period followed by the DISKUS inhaler twice daily for 5 to 9 days during the second period.",
+     "interventionNames": [
+      "Device: ELLIPTA",
+      "Device: DISKUS"
+     ]
+    },
+    {
+     "label": "DISKUS Period 1 and ELLIPTA Period 2 Arm",
+     "type": "EXPERIMENTAL",
+     "description": "Subjects will use the DISKUS inhaler twice daily for 5 to 9 days during the first period followed by the ELLIPTA inhaler once daily for 5 to 9 days during the second period.",
+     "interventionNames": [
+      "Device: ELLIPTA",
+      "Device: DISKUS"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DEVICE",
+     "name": "ELLIPTA",
+     "description": "Novel dry powder inhaler (placebo) with 30 doses (2 strips with 30 blisters per strip)",
+     "armGroupLabels": [
+      "DISKUS Period 1 and ELLIPTA Period 2 Arm",
+      "ELLIPTA Period 1 and DISKUS Period 2 Arm"
+     ]
+    },
+    {
+     "type": "DEVICE",
+     "name": "DISKUS",
+     "description": "Multidose dry powder inhaler (placebo) containing a foil strip worth 60 blisters (1 strip with 60 blisters per strip)",
+     "armGroupLabels": [
+      "DISKUS Period 1 and ELLIPTA Period 2 Arm",
+      "ELLIPTA Period 1 and DISKUS Period 2 Arm"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Number of Participants With the Indicated Device Preference Based on the Size of the Numbers on the Dose Counter",
+     "description": "The number of participants who expressed the indicated device preference (i.e., preference for ELLIPTA inhaler, preference for DISKUS inhaler, and no preference) based on the size of the numbers on the dose counter was summarized by study inhaler use sequence.",
+     "timeFrame": "up to Study Day 26"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Number of Participants With the Indicated Device Preference Based on the Number of Steps Needed to Take the COPD Medication",
+     "description": "The number of participants who expressed the indicated device preference (i.e., preference for ELLIPTA inhaler, preference for DISKUS inhaler, and no preference) based on the number of steps needed to take the COPD medication was summarized by study inhaler use sequence.",
+     "timeFrame": "up to Study Day 26"
+    },
+    {
+     "measure": "Number of Participants With the Indicated Device Preference Based on the Size of the Device",
+     "description": "The number of participants who expressed the indicated device preference (i.e., preference for ELLIPTA inhaler, preference for DISKUS inhaler, and no preference) based on the size of the device was summarized by study inhaler use sequence.",
+     "timeFrame": "up to Study Day 26"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* 1\\. Informed consent\n* Subject must give their signed and dated written informed consent to participate.\n* Subject understands and is willing, able, and likely to comply with study procedures and restrictions.\n* Subject must be able to read, comprehend, and record information in English.\n* 2\\. Age: \\>=40 years of age at Visit 1\n* 3\\. Gender: Male or female subjects\n* 4\\. COPD diagnosis subjects with a clinical history of COPD in accordance with the definition by the American Thoracic Society/European Respiratory Society\n* 5\\. Severity of disease:\n* Subject with a measured post-albuterol Forced expiratory volume in 1 second (FEV1)/ Forced vital capacity (FVC) ratio of \\<=0.70 at Visit 1\n* Subjects with a measured post-albuterol FEV1 \\<=70% of predicted normal values calculated using Third National Health and Nutrition Examination Survey reference equations at Visit 1.\n* Post-bronchodilator spirometry will be performed approximately 10-15 minutes after the subject has self-administered 4 inhalations (i.e., total 400 micrograms) of albuterol via a metered dose inhaler (MDI) with a valved-holding chamber. The FEV1/FVC ratio and FEV1 percent predicted values will be calculated by the investigator site.\n* Documented spirometry measurements that meet this criterion in the last 12 months preceding Visit 1 is acceptable.\n* 6\\. Tobacco use: current or former smokers\n* Smokers are defined as those who smoke 10 pack-years of cigarette.\n* Note: Pipe and/or cigar use cannot be used to calculate pack-year history.\n* Number of pack years = (number of cigarettes per day/20) x number of years smoked\n\nExclusion Criteria:\n\n* 1\\. Previous experience with the DISKUS inhaler\n* Subjects who used any DISKUS inhaler (e.g., ADVAIR DISKUS, FLOVENT DISKUS®; participated in a clinical study of fluticasone propionate/salmeterol, or any component of them, or placebo) within 6 months (i.e., 180 days) prior to Visit 1.\n* 2\\. Previous experience with the ELLIPTA inhaler\n* Subjects who used any ELLIPTA inhaler (e.g., participated in a clinical study of FF/VI or GSK573719/GW642444 \\[umeclidinium/vilanterol\\], or any component of them, or placebo) within 6 months (i.e., 180 days) prior to Visit 1.\n* 3\\. Asthma: Subjects with a current diagnosis of asthma.\n* Subjects with a prior history of asthma are eligible if they have a current diagnosis of COPD.\n* 4\\. Poorly controlled COPD: Subjects with symptoms of poorly controlled COPD such as:\n* Acute worsening of COPD that is managed by the subject with corticosteroids or antibiotics or that requires treatment prescribed by a physician, in the 4 weeks prior to Visit 1.\n* Hospitalization due to acute worsening of COPD within 4 weeks of Visit 1.\n* Use of a total of 8 puffs/day or more of short-acting symptom relief medications such as albuterol and ipratropium for 2 consecutive days or any 3 days within 7 days immediately preceding Visit 1.\n* Changes in COPD symptoms and signs, suggesting worsening COPD health status at Visit 1.\n* 5\\. Other diseases/abnormalities: Subjects with current evidence of uncontrolled or clinically significant disease.\n* Significant is defined as any disease that, in the opinion of the investigator, would put the safety of the subject at risk through participation, or which would affect the efficacy or safety analysis if the disease/condition exacerbated during the study.\n* Subjects with suspected or evidence of oropharyngeal candidiasis will be excluded from the study.\n* Note: subjects who develop oropharyngeal candidiasis during the study will be treated at the discretion of the investigator.\n* 6\\. Drug/food allergy: Subjects with a history of hypersensitivity to any of the components of the inhalation powder (e.g., lactose, magnesium stearate). In addition, subjects with a history of severe milk protein allergy that, in the opinion of the investigator, contraindicates the subject's participation will also be excluded.\n* 7\\. Drug/alcohol abuse: Subjects with a known or suspected alcohol or drug abuse at Visit 1 which in the opinion of the investigator could interfere with the subject's proper completion of the protocol requirement\n* 8\\. Medication prior to spirometry: Subjects who are medically unable or unwilling to withhold their COPD medications prior to spirometry testing at Visit 1. Subjects, who have documented spirometry measurements that meet the specified Inclusion Criterion in the last 12 months preceding Visit 1, do not have to undergo repeat spirometry at Visit 1.\n* 9\\. Investigational drug or device: Subjects who participated in an interventional study or used any investigational drug or device within 30 days or 5 half lives, whichever is longer, prior to Visit 1\n* 10\\. Affiliation with investigator site: Study investigators, sub-investigators, study coordinators, employees of a participating investigator or immediate family members of the aforementioned are excluded from participating in this study.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "GSK Clinical Trials",
+     "affiliation": "GlaxoSmithKline",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Jasper",
+     "state": "Alabama",
+     "zip": "35501",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.83122,
+      "lon": -87.27751
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Riverside",
+     "state": "California",
+     "zip": "92506",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.95335,
+      "lon": -117.39616
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Clearwater",
+     "state": "Florida",
+     "zip": "33765-2616",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.96585,
+      "lon": -82.8001
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Leesburg",
+     "state": "Florida",
+     "zip": "34748",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.81082,
+      "lon": -81.87786
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Orlando",
+     "state": "Florida",
+     "zip": "32825",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.53834,
+      "lon": -81.37924
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Lafayette",
+     "state": "Louisiana",
+     "zip": "70503",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.22409,
+      "lon": -92.01984
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Charlotte",
+     "state": "North Carolina",
+     "zip": "28207",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.22709,
+      "lon": -80.84313
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Huntersville",
+     "state": "North Carolina",
+     "zip": "28078",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.41069,
+      "lon": -80.84285
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Medford",
+     "state": "Oregon",
+     "zip": "97504",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.32652,
+      "lon": -122.87559
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Charleston",
+     "state": "South Carolina",
+     "zip": "29406-7108",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.77632,
+      "lon": -79.93275
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Easley",
+     "state": "South Carolina",
+     "zip": "29640",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.82984,
+      "lon": -82.60152
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Greenville",
+     "state": "South Carolina",
+     "zip": "29615",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.85262,
+      "lon": -82.39401
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Seneca",
+     "state": "South Carolina",
+     "zip": "29678",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.68566,
+      "lon": -82.9532
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Spartanburg",
+     "state": "South Carolina",
+     "zip": "29303",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.94957,
+      "lon": -81.93205
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "San Antonio",
+     "state": "Texas",
+     "zip": "78229",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.42412,
+      "lon": -98.49363
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Richmond",
+     "state": "Virginia",
+     "zip": "23225",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.55376,
+      "lon": -77.46026
+     }
+    },
+    {
+     "facility": "GSK Investigational Site",
+     "city": "Spokane",
+     "state": "Washington",
+     "zip": "99204",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.65966,
+      "lon": -117.42908
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "26516724",
+     "type": "DERIVED",
+     "citation": "Yun Kirby S, Zhu CQ, Kerwin EM, Stanford RH, Georges G. A Preference Study of Two Placebo Dry Powder Inhalers in Adults with COPD: ELLIPTA(R) Dry Powder Inhaler (DPI) versus DISKUS(R) DPI. COPD. 2016;13(2):167-75. doi: 10.3109/15412555.2015.1057274. Epub 2015 Oct 30."
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "Eligible participants were randomized (1:1) to one of the two sequences of using the two placebo dry powder inhalers (ELLIPTA once a day then DISKUS twice a day or vise versa), each one taken separately for approximately 1 week. The first inhaler in the sequence was dispensed at Visit 1 and the second at Visit 2.",
+   "recruitmentDetails": "A total of 314 participants were screened; 287 participants were randomized, and 283 participants completed the study.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "DISKUS BID in Period 1; ELLIPTA QD in Period 2",
+     "description": "Participants who were on their current chronic obstructive pulmonary disease (COPD) medication(s) were randomized to receive DISKUS twice a day (BID) for 5-9 days in Period 1 and ELLIPTA once a day (QD) for 5-9 days in Period 2. There was no washout period between the two periods. Neither dry powder inhaler (DPI) contained any active treatment; placebo was administered in both DPIs."
+    },
+    {
+     "id": "FG001",
+     "title": "ELLIPTA QD in Period 1; DISKUS BID in Period 2",
+     "description": "Participants who were on their current COPD medication(s) were randomized to receive ELLIPTA QD for 5-9 days in Period 1 and DISKUS BID for 5-9 days in Period 2. There was no washout period between the two periods. Neither DPI contained any active treatment; placebo was administered in both DPIs."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Period 1 (5-9 Days)",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "143"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "144"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "143"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "142"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Period 2 (5-9 Days)",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "143"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "142"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "141"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "142"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Protocol-defined Stopping Criteria",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "DISKUS BID in Period 1 or 2; ELLIPTA QD in Period 1 or 2",
+     "description": "Participants who were on their current COPD medication(s) were randomized to receive one of the following two sequences of DPIs containing placebo: (1) DISKUS BID for 5-9 days in Period 1 and ELLIPTA QD for 5-9 days in Period 2; (2) ELLIPTA QD for 5-9 days in Period 1 and DISKUS BID for 5-9 days in Period 2. There was no washout period between the two periods. Neither DPI contained any active treatment; placebo was administered in both DPIs."
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "287"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "64.7",
+           "spread": "9.74"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "134"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "153"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Race/Ethnicity, Customized",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "classes": [
+      {
+       "title": "African American/African Heritage",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "17"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "White - White/Caucasian/European Heritage",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "270"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Number of Participants With the Indicated Device Preference Based on the Size of the Numbers on the Dose Counter",
+     "description": "The number of participants who expressed the indicated device preference (i.e., preference for ELLIPTA inhaler, preference for DISKUS inhaler, and no preference) based on the size of the numbers on the dose counter was summarized by study inhaler use sequence.",
+     "populationDescription": "Per Protocol (PP) Population: all participants in the Intent-to-Treat (ITT) Population (comprised of all participants who had been randomized and received one dose of at least one study inhaler) who completed at least one question from the seven preference questions",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "up to Study Day 26",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "DISKUS BID in Period 1; ELLIPTA QD in Period 2",
+       "description": "Participants who were on their current COPD medication(s) were randomized to receive DISKUS BID for 5-9 days in Period 1 and ELLIPTA QD for 5-9 days in Period 2. There was no washout period between the two periods. Neither DPI contained any active treatment; placebo was administered in both DPIs."
+      },
+      {
+       "id": "OG001",
+       "title": "ELLIPTA QD in Period 1; DISKUS BID in Period 2",
+       "description": "Participants who were on their current COPD medication(s) were randomized to receive ELLIPTA QD for 5-9 days in Period 1 and DISKUS BID for 5-9 days in Period 2. There was no washout period between the two periods. Neither DPI contained any active treatment; placebo was administered in both DPIs."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "143"
+        },
+        {
+         "groupId": "OG001",
+         "value": "142"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "ELLIPTA inhaler",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "107"
+          },
+          {
+           "groupId": "OG001",
+           "value": "86"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "DISKUS inhaler",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "23"
+          },
+          {
+           "groupId": "OG001",
+           "value": "34"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "No preference",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "13"
+          },
+          {
+           "groupId": "OG001",
+           "value": "22"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.001",
+       "pValueComment": "The response was analyzed and adjusted for study inhaler use sequence and preference question version. The method accounted for participants who indicated no preference.",
+       "statisticalMethod": "Cochran-Mantel-Haenszel",
+       "ciPctValue": "95"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Participants With the Indicated Device Preference Based on the Number of Steps Needed to Take the COPD Medication",
+     "description": "The number of participants who expressed the indicated device preference (i.e., preference for ELLIPTA inhaler, preference for DISKUS inhaler, and no preference) based on the number of steps needed to take the COPD medication was summarized by study inhaler use sequence.",
+     "populationDescription": "PP Population",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "up to Study Day 26",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "DISKUS BID in Period 1; ELLIPTA QD in Period 2",
+       "description": "Participants who were on their current COPD medication(s) were randomized to receive DISKUS BID for 5-9 days in Period 1 and ELLIPTA QD for 5-9 days in Period 2. There was no washout period between the two periods. Neither DPI contained any active treatment; placebo was administered in both DPIs."
+      },
+      {
+       "id": "OG001",
+       "title": "ELLIPTA QD in Period 1; DISKUS BID in Period 2",
+       "description": "Participants who were on their current COPD medication(s) were randomized to receive ELLIPTA QD for 5-9 days in Period 1 and DISKUS BID for 5-9 days in Period 2. There was no washout period between the two periods. Neither DPI contained any active treatment; placebo was administered in both DPIs."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "143"
+        },
+        {
+         "groupId": "OG001",
+         "value": "142"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "ELLIPTA inhaler",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "100"
+          },
+          {
+           "groupId": "OG001",
+           "value": "90"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "DISKUS inhaler",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "29"
+          },
+          {
+           "groupId": "OG001",
+           "value": "36"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "No preference",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "14"
+          },
+          {
+           "groupId": "OG001",
+           "value": "16"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Participants With the Indicated Device Preference Based on the Size of the Device",
+     "description": "The number of participants who expressed the indicated device preference (i.e., preference for ELLIPTA inhaler, preference for DISKUS inhaler, and no preference) based on the size of the device was summarized by study inhaler use sequence.",
+     "populationDescription": "PP Population. Only those participants responding to the question regarding the specified attribute were analyzed.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "up to Study Day 26",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "DISKUS BID in Period 1; ELLIPTA QD in Period 2",
+       "description": "Participants who were on their current COPD medication(s) were randomized to receive DISKUS BID for 5-9 days in Period 1 and ELLIPTA QD for 5-9 days in Period 2. There was no washout period between the two periods. Neither DPI contained any active treatment; placebo was administered in both DPIs."
+      },
+      {
+       "id": "OG001",
+       "title": "ELLIPTA QD in Period 1; DISKUS BID in Period 2",
+       "description": "Participants who were on their current COPD medication(s) were randomized to receive ELLIPTA QD for 5-9 days in Period 1 and DISKUS BID for 5-9 days in Period 2. There was no washout period between the two periods. Neither DPI contained any active treatment; placebo was administered in both DPIs."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "143"
+        },
+        {
+         "groupId": "OG001",
+         "value": "141"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "ELLIPTA inhaler",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "75"
+          },
+          {
+           "groupId": "OG001",
+           "value": "70"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "DISKUS inhaler",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "40"
+          },
+          {
+           "groupId": "OG001",
+           "value": "36"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "No preference",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "28"
+          },
+          {
+           "groupId": "OG001",
+           "value": "35"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "0",
+   "timeFrame": "On-treatment serious adverse events (SAEs) and non-serious AEs collected from the start of placebo until Visit 3 (end of study; up to Study Day 26) are reported.",
+   "description": "SAEs and non-serious AEs are reported for members of the ITT Population, comprised of all participants who were randomized and received one dose of at least one study inhaler.",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "ELLIPTA QD in Period 1 or 2",
+     "description": "Participants who were on their current COPD medication(s) were randomized to receive ELLIPTA QD for 5-9 days in either Period 1 or Period 2. There was no washout period between the two periods. The DPI did not contain any active treatment; placebo was administered in the DPI.",
+     "seriousNumAffected": 3,
+     "seriousNumAtRisk": 287,
+     "otherNumAffected": 21,
+     "otherNumAtRisk": 287
+    },
+    {
+     "id": "EG001",
+     "title": "DISKUS BID in Period 1 or 2",
+     "description": "Subjects will use the DISKUS inhaler twice daily for 5 to 9 days during the first period followed by the ELLIPTA inhaler once daily for 5 to 9 days during the second period.",
+     "seriousNumAffected": 0,
+     "seriousNumAtRisk": 285,
+     "otherNumAffected": 14,
+     "otherNumAtRisk": 285
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Bronchitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Oesophageal candidiasis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Metastases to liver",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Vertebrobasilar insufficiency",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Deep vein thrombosis",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Headache",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 5,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Cerebral ischaemia",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Dizziness",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "VIIth nerve paralysis",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Diarrhoea",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Dry mouth",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Abdominal pain upper",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Nausea",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Toothache",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Acute sinusitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Cellulitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Influenza",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Oral candidiasis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Sinusitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Viral infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Back pain",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Neck pain",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Conjunctivitis",
+     "organSystem": "Eye disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Eye pain",
+     "organSystem": "Eye disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Epistaxis",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Rhinitis allergic",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Pyrexia",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Sphincter of oddi dysfunction",
+     "organSystem": "Hepatobiliary disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Anaphylactic reaction",
+     "organSystem": "Immune system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Wrist fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Heart rate increased",
+     "organSystem": "Investigations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Gout",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Skin cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Hyperhidrosis",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    },
+    {
+     "term": "Angiopathy",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 287
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 285
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "GSK agreements may vary with individual investigators, but will not prohibit any investigator from publishing. GSK supports the publication of results from all centers of a multi-center trial but requests that reports based on single-site data not precede the primary publication of the entire clinical trial."
+   },
+   "pointOfContact": {
+    "title": "GSK Response Center",
+    "organization": "GlaxoSmithKline",
+    "phone": "866-435-7343"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

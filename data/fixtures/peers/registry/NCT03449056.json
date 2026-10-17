@@ -1,0 +1,251 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT03449056",
+   "orgStudyIdInfo": {
+    "id": "OPTINEB"
+   },
+   "organization": {
+    "fullName": "Poitiers University Hospital",
+    "class": "OTHER"
+   },
+   "briefTitle": "High-flow Nasal Cannula Nebulization of Beta 2 Adrenergic Agonist During Acute Exacerbation of Chronic Obstructive Pulmonary Disease",
+   "officialTitle": "High-flow Nasal Cannula Nebulization of Beta 2 Adrenergic Agonist During Acute Exacerbation of Chronic Obstructive Pulmonary Disease",
+   "acronym": "OPTINEB"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2019-02",
+   "overallStatus": "UNKNOWN",
+   "lastKnownStatus": "RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2019-01-11",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2020-01",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2020-04",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2018-01-12",
+   "studyFirstSubmitQcDate": "2018-02-27",
+   "studyFirstPostDateStruct": {
+    "date": "2018-02-28",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2019-02-11",
+   "lastUpdatePostDateStruct": {
+    "date": "2019-02-12",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Poitiers University Hospital",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "High-flow nasal cannula is an oxygenation technique increasingly used for patients admitted for acute respiratory failure. Literature essentially concerns \"de novo\" acute hypoxemic failure and the interest of high-flow during take care of chronic obstructive pulmonary disease patients is few studied. Physiological studies reported potential benefits of high-flow nasal cannula oxygenation in chronic obstructive pulmonary disease patients including dead space clearance and decrease of respiratory, which lead to decrease work of breathing. As inhaled bronchodilators are part of treatment of chronic obstructive pulmonary disease exacerbation, nebulization could be also provided through high-flow nasal cannula oxygen therapy. The aim of our study is to determine whether a beta-2 agonist nebulization administered through High-flow nasal cannula is efficient to improve spirometry of patients for admitted hronic obstructive pulmonary disease exacerbation."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease",
+    "High-flow Nasal Cannula"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "NA",
+    "interventionModel": "SINGLE_GROUP",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "NONE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 25,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "TREATMENT",
+     "type": "EXPERIMENTAL",
+     "description": "salbutamol nebulization",
+     "interventionNames": [
+      "Drug: salbutamol"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "salbutamol",
+     "description": "T2 - T1+1h30: High-nasal flow and salbutamol nebulization",
+     "armGroupLabels": [
+      "TREATMENT"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "compare lung functions",
+     "description": "Evolution of Forced Expiratory Volume 1s",
+     "timeFrame": "baseline-1h30"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Arterial pH over 7.25,\n* Respiratory rate under 35 breaths/mn\n* Glasgow Coma Scale equal to 15,\n* indication of beta-2 agonist nebulization less than 8 per day (time between two nebulization more than 3 hours),\n* NIV sessions spaced more than 6 hours.\n\nExclusion Criteria:\n\n* Urgent endotracheal intubation;\n* Contraindication to beta 2 adrenergic agonist;\n* Another organ failure (hemodynamic and neurological instability);\n* Cardioselective beta-blocker during treatment of copd exacerbation;",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "maximumAge": "100 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Jean-Pierre FRAT",
+     "role": "CONTACT",
+     "phone": "+33549442830",
+     "email": "jean-pierre.frat@chu-poitiers.fr"
+    },
+    {
+     "name": "nicolas MARJANOVIC",
+     "role": "CONTACT",
+     "email": "nicolas.marjanovic@chu-poitiers.fr"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "C.H.U. de Poitiers",
+     "status": "RECRUITING",
+     "city": "Poitiers",
+     "zip": "86000",
+     "country": "France",
+     "contacts": [
+      {
+       "name": "Jean-Pierre Frat, MD",
+       "role": "CONTACT",
+       "email": "jean-pierre.frat@chu-poitiers.fr"
+      }
+     ],
+     "geoPoint": {
+      "lat": 46.58261,
+      "lon": 0.34348
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D000420",
+     "term": "Albuterol"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D004983",
+     "term": "Ethanolamines"
+    },
+    {
+     "id": "D000605",
+     "term": "Amino Alcohols"
+    },
+    {
+     "id": "D000438",
+     "term": "Alcohols"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D010627",
+     "term": "Phenethylamines"
+    },
+    {
+     "id": "D005021",
+     "term": "Ethylamines"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

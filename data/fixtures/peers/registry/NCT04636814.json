@@ -1,0 +1,4778 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT04636814",
+   "orgStudyIdInfo": {
+    "id": "CLI-06001AA1-05"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2020-003648-97",
+     "type": "EUDRACT_NUMBER"
+    },
+    {
+     "id": "2023-510174-13-00",
+     "type": "CTIS"
+    },
+    {
+     "id": "2023",
+     "type": "NIH",
+     "link": "https://reporter.nih.gov/quickSearch/2023"
+    }
+   ],
+   "organization": {
+    "fullName": "Chiesi Farmaceutici S.p.A.",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "A 52-week, Placebo- and Active- Controlled (Roflumilast, Daliresp® 500µg) Study to Evaluate the Efficacy and Safety of Two Doses of CHF6001 DPI (Tanimilast) as add-on to Maintenance Triple Therapy in Subjects With COPD and Chronic Bronchitis. (PILLAR)",
+   "officialTitle": "A 52-week, Randomized, Double-blind, Double-dummy, Placebo- and Active- Controlled (Roflumilast, Daliresp® 500µg), Parallel Group, Study to Evaluate the Efficacy and Safety of Two Doses of CHF6001 DPI add-on to Maintenance Triple Therapy in Subjects With Chronic Obstructive Pulmonary Disease (COPD) and Chronic Bronchitis.",
+   "acronym": "PILLAR"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-01",
+   "overallStatus": "TERMINATED",
+   "whyStopped": "Strategic decision by Sponsor; not due to safety reasons",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2021-07-12",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2025-12-23",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2025-12-23",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2020-11-16",
+   "studyFirstSubmitQcDate": "2020-11-16",
+   "studyFirstPostDateStruct": {
+    "date": "2020-11-19",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-01-30",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-02-02",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Chiesi Farmaceutici S.p.A.",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The purpose of this study is to evaluate the efficacy and the safety of two doses of CHF6001 (Tanimilast) as add-on to maintenance triple therapy in the target patient population."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ],
+   "keywords": [
+    "COPD",
+    "chronic bronchitis",
+    "PDE4 inhibitor",
+    "anti-inflammatory respiratory drug",
+    "Tanimilast"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 3973,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "CHF6001 1600µg",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Drug: CHF6001 1600µg"
+     ]
+    },
+    {
+     "label": "CHF6001 3200µg",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Drug: CHF6001 3200µg"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    },
+    {
+     "label": "Roflumilast",
+     "type": "ACTIVE_COMPARATOR",
+     "interventionNames": [
+      "Drug: Roflumilast"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "CHF6001 1600µg",
+     "description": "CHF6001 400µg, 2 inhalations bid (total daily dose of 1600µg) and Roflumilast matching placebo, 1 tablet once daily",
+     "armGroupLabels": [
+      "CHF6001 1600µg"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "CHF6001 3200µg",
+     "description": "CHF6001 800µg, 2 inhalations bid (total daily dose of 3200µg) and Roflumilast matching placebo, 1 tablet once daily",
+     "armGroupLabels": [
+      "CHF6001 3200µg"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "CHF6001 matching placebo, 2 inhalations bid and Roflumilast matching placebo, 1 tablet once daily",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Roflumilast",
+     "description": "\\- 1 tablet of Roflumilast (Daliresp®), 250µg, once daily during the first 4 weeks of treatment then 1 tablet of Roflumilast (Daliresp®), 500µg, once daily for the remaining treatment period and CHF6001 matching placebo, 2 inhalations bid",
+     "armGroupLabels": [
+      "Roflumilast"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "The number of moderate and severe exacerbations occurring during the planned 52-week treatment period.",
+     "description": "Moderate or severe exacerbation is defined by symptomatic worsening of COPD:\n\n* Moderate : requiring use of systemic corticosteroids (oral/IV/IM corticosteroids), and/or use of antibiotics\n* Severe : requiring hospitalisation or resulting in death",
+     "timeFrame": "Up to 52 weeks"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "The time to first moderate or severe exacerbation.",
+     "description": "The time to first moderate or severe exacerbation.",
+     "timeFrame": "Up to 52 weeks"
+    },
+    {
+     "measure": "The annual rate of severe exacerbations.",
+     "description": "The annual rate of severe exacerbations.",
+     "timeFrame": "Up to 52 weeks"
+    },
+    {
+     "measure": "The time to first severe exacerbation.",
+     "description": "The time to first severe exacerbation.",
+     "timeFrame": "Up to 52 weeks"
+    },
+    {
+     "measure": "The number of all on-treatment severe exacerbations.",
+     "description": "The number of all on-treatment severe exacerbations.",
+     "timeFrame": "Up to 52 weeks"
+    },
+    {
+     "measure": "The number of all on-treatment exacerbations requiring systemic corticosteroids.",
+     "description": "The number of all on-treatment exacerbations requiring systemic corticosteroids.",
+     "timeFrame": "Up to 52 weeks"
+    },
+    {
+     "measure": "Change from baseline (pre-dose Visit 2) in pre-dose FEV1, at week 52.",
+     "description": "Change from baseline (pre-dose Visit 2) in pre-dose FEV1, at week 52.",
+     "timeFrame": "At week 52"
+    },
+    {
+     "measure": "Change from baseline in Saint Georges Respiratory Questionnaire (SGRQ) total and domain scores at week 52.",
+     "description": "Change from baseline in Saint Georges Respiratory Questionnaire (SGRQ) total and domain scores at week 52.",
+     "timeFrame": "At week 52"
+    },
+    {
+     "measure": "Saint Georges Respiratory Questionnaire response (SGRQ) (change from baseline SGRQ total score ≤ -4) at week 52.",
+     "description": "Saint Georges Respiratory Questionnaire response (SGRQ) (change from baseline SGRQ total score ≤ -4) at week 52.",
+     "timeFrame": "At week 52"
+    },
+    {
+     "measure": "Change from baseline to last inter-visit period (week 40-52) in EXACT-Respiratory Symptoms (E-RS) Total and subscale scores.",
+     "description": "Change from baseline to last inter-visit period (week 40-52) in EXACT-Respiratory Symptoms (E-RS) Total and subscale scores.",
+     "timeFrame": "Up to 52 weeks"
+    },
+    {
+     "measure": "E-RS response (change from baseline E-RS Total score ≤ -2) at week 52.",
+     "description": "E-RS response (change from baseline E-RS Total score ≤ -2) at week 52.",
+     "timeFrame": "At week 52"
+    },
+    {
+     "measure": "Change from baseline to last inter-visit period (week 40-52) in the percentage of days without intake of rescue medication and in the average rescue medication use (number of puffs).",
+     "description": "Change from baseline to last inter-visit period (week 40-52) in the percentage of days",
+     "timeFrame": "Up to 52 weeks"
+    },
+    {
+     "measure": "Time to study medication discontinuation for any reason.",
+     "description": "Time to study medication discontinuation for any reason.",
+     "timeFrame": "Up to 52 weeks"
+    },
+    {
+     "measure": "Time to moderate or severe exacerbation or study medication discontinuation due to any adverse event, lack of efficacy or death (composite endpoint) and time to study medication discontinuation component.",
+     "description": "Time to moderate or severe exacerbation or study medication discontinuation due to any adverse event, lack of efficacy or death (composite endpoint) and time to study medication discontinuation component.",
+     "timeFrame": "Up to 52 weeks"
+    },
+    {
+     "measure": "Time to first moderate/severe exacerbation or study medication discontinuation due to any class-related AE, lack of efficacy, or death (composite endpoint) and time to study medication discontinuation component.",
+     "description": "Time to first moderate/severe exacerbation or study medication discontinuation due to any class-related AE, lack of efficacy, or death (composite endpoint) and time to study medication discontinuation component.",
+     "timeFrame": "Up to 52 weeks"
+    },
+    {
+     "measure": "Key Secondary Variable: Change from baseline in SGRQ Total score at week 52",
+     "description": "Key Secondary Variable: Change from baseline in SGRQ Total score at week 52",
+     "timeFrame": "At week 52"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults aged ≥ 40 years, with COPD and with chronic bronchitis.\n* Current smokers or ex-smokers (history of ≥10 pack years).\n* Post-bronchodilator FEV1 \\<50% of the patient predicted normal value and FEV1/FVC ratio \\< 0.7.\n* At least, one moderate or severe COPD exacerbation in the previous year.\n* CAT score ≥10.\n* Subjects on regular maintenance triple therapy for at least 12 months prior to screening and receiving regular maintenance triple therapy for at least 3 months prior to screening visit.\n\nExclusion Criteria:\n\n* Subjects with current asthma.\n* Subjects with moderate or severe COPD exacerbation 4 weeks before study entry and randomisation\n* Subjects with known α-1 antitrypsin deficiency as the underlying cause of COPD.\n* Subjects with primary diagnosis of emphysema not related to COPD.\n* Subjects with known respiratory disorders other than COPD.\n* Subjects with lung volume reduction surgery.\n* Subjects with active cancer or a history of lung cancer.\n* Subjects under Roflumilast treatment within 6 months before study entry.\n* Subjects with a diagnosis of depression, generalised anxiety disorder, suicidal ideation.\n* Subjects with clinically significant cardiovascular condition.\n* Subjects with neurological disease.\n* Subjects with clinically significant laboratory abnormalities.\n* Subjects with moderate or severe hepatic impairment.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Fernando J. MARTINEZ, Prof.",
+     "affiliation": "Weill Cornell Medical College, New York Presbyterian Hospital, 1305 York avenue box 96 NY 10021 USA",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Chiesi Clinical Trial - Site 840635",
+     "city": "Andalusia",
+     "state": "Alabama",
+     "zip": "36420-5310",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 31.30808,
+      "lon": -86.48243
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840614",
+     "city": "Foley",
+     "state": "Alabama",
+     "zip": "36535-2248",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.40659,
+      "lon": -87.6836
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840670",
+     "city": "Guntersville",
+     "state": "Alabama",
+     "zip": "35976-2206",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.35823,
+      "lon": -86.29446
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840720",
+     "city": "Mobile",
+     "state": "Alabama",
+     "zip": "36608",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.69436,
+      "lon": -88.04305
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840643",
+     "city": "Saraland",
+     "state": "Alabama",
+     "zip": "36571-3014",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.82074,
+      "lon": -88.07056
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840638",
+     "city": "Phoenix",
+     "state": "Arizona",
+     "zip": "85018-5434",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.44838,
+      "lon": -112.07404
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840684",
+     "city": "Conway",
+     "state": "Arkansas",
+     "zip": "72032",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.0887,
+      "lon": -92.4421
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840675",
+     "city": "Laguna Hills",
+     "state": "California",
+     "zip": "92653-5509",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.61252,
+      "lon": -117.71283
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840666",
+     "city": "Los Angeles",
+     "state": "California",
+     "zip": "90017-5649",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840511",
+     "city": "Newport Beach",
+     "state": "California",
+     "zip": "92663-3661",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.61891,
+      "lon": -117.92895
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840680",
+     "city": "Northridge",
+     "state": "California",
+     "zip": "91324-6200",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.22834,
+      "lon": -118.53675
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840605",
+     "city": "Northridge",
+     "state": "California",
+     "zip": "91324",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.22834,
+      "lon": -118.53675
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840700",
+     "city": "Pomona",
+     "state": "California",
+     "zip": "91768",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05529,
+      "lon": -117.75228
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840531",
+     "city": "Westminster",
+     "state": "California",
+     "zip": "92708",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.75918,
+      "lon": -118.00673
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840636",
+     "city": "Centennial",
+     "state": "Colorado",
+     "zip": "80112-1406",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.57916,
+      "lon": -104.87692
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840688",
+     "city": "Lakewood",
+     "state": "Colorado",
+     "zip": "80228",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.70471,
+      "lon": -105.08137
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840735",
+     "city": "Brooksville",
+     "state": "Florida",
+     "zip": "34613",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.55554,
+      "lon": -82.38991
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840513",
+     "city": "Chiefland",
+     "state": "Florida",
+     "zip": "32626",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.47496,
+      "lon": -82.85984
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840652",
+     "city": "Clearwater",
+     "state": "Florida",
+     "zip": "33756",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.96585,
+      "lon": -82.8001
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840569",
+     "city": "Clearwater",
+     "state": "Florida",
+     "zip": "33765-2103",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.96585,
+      "lon": -82.8001
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840545",
+     "city": "Coral Gables",
+     "state": "Florida",
+     "zip": "33135",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.72149,
+      "lon": -80.26838
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840603",
+     "city": "Cutler Bay",
+     "state": "Florida",
+     "zip": "33144-2566",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.5783,
+      "lon": -80.3377
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840587",
+     "city": "Cutler Bay",
+     "state": "Florida",
+     "zip": "33189-1230",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.5783,
+      "lon": -80.3377
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840568",
+     "city": "Cutler Bay",
+     "state": "Florida",
+     "zip": "33189",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.5783,
+      "lon": -80.3377
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site840539",
+     "city": "Daytona Beach",
+     "state": "Florida",
+     "zip": "33470-9216",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.21081,
+      "lon": -81.02283
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840554",
+     "city": "DeBary",
+     "state": "Florida",
+     "zip": "32713-2260",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.88305,
+      "lon": -81.30868
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840625",
+     "city": "Doral",
+     "state": "Florida",
+     "zip": "33014-2426",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.81954,
+      "lon": -80.35533
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840572",
+     "city": "Doral",
+     "state": "Florida",
+     "zip": "33122-1902",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.81954,
+      "lon": -80.35533
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840685",
+     "city": "Hialeah",
+     "state": "Florida",
+     "zip": "33010-4103",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.8576,
+      "lon": -80.27811
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840504",
+     "city": "Hialeah",
+     "state": "Florida",
+     "zip": "33012-3618",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.8576,
+      "lon": -80.27811
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840639",
+     "city": "Hialeah",
+     "state": "Florida",
+     "zip": "33015-2952",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.8576,
+      "lon": -80.27811
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840582",
+     "city": "Hialeah",
+     "state": "Florida",
+     "zip": "33015-6003",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.8576,
+      "lon": -80.27811
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840617",
+     "city": "Hialeah",
+     "state": "Florida",
+     "zip": "33016-2753",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.8576,
+      "lon": -80.27811
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840514",
+     "city": "Hialeah",
+     "state": "Florida",
+     "zip": "33186-5331",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.8576,
+      "lon": -80.27811
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840637",
+     "city": "Hialeah Gardens",
+     "state": "Florida",
+     "zip": "33016",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.8651,
+      "lon": -80.3245
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840509",
+     "city": "Hollywood",
+     "state": "Florida",
+     "zip": "33021",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.0112,
+      "lon": -80.14949
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840730",
+     "city": "Hollywood",
+     "state": "Florida",
+     "zip": "33024",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.0112,
+      "lon": -80.14949
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840565",
+     "city": "Homestead",
+     "state": "Florida",
+     "zip": "33256",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.46872,
+      "lon": -80.47756
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840674",
+     "city": "Loxahatchee Groves",
+     "state": "Florida",
+     "zip": "33470",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.68368,
+      "lon": -80.27977
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840732",
+     "city": "Melbourne",
+     "state": "Florida",
+     "zip": "32934",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.08363,
+      "lon": -80.60811
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840624",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33125-5114",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840596",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33126-1921",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840556",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33126-1926",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840602",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33135-2967",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840507",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33144-2100",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840519",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33144-4273",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840505",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33144-5037",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840644",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33144",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840557",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33155-1694",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840588",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33155-4630",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840618",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33155-6538",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840525",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33155-6541",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840656",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33155-6542",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840622",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33155",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840537",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33165-2075",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840691",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33165-2470",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840503",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33175-3598",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840694",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33184-1176",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840630",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33185",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840506",
+     "city": "Miami Gardens",
+     "state": "Florida",
+     "zip": "33014-6426",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.94204,
+      "lon": -80.2456
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840608",
+     "city": "Miami Lakes",
+     "state": "Florida",
+     "zip": "33014-2425",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.90871,
+      "lon": -80.30866
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840524",
+     "city": "Orlando",
+     "state": "Florida",
+     "zip": "32807-3555",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.53834,
+      "lon": -81.37924
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840563",
+     "city": "Orlando",
+     "state": "Florida",
+     "zip": "32825",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.53834,
+      "lon": -81.37924
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840702",
+     "city": "Pembroke Pines",
+     "state": "Florida",
+     "zip": "14000",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.00315,
+      "lon": -80.22394
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840502",
+     "city": "Pembroke Pines",
+     "state": "Florida",
+     "zip": "33024-3618",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.00315,
+      "lon": -80.22394
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840550",
+     "city": "Pembroke Pines",
+     "state": "Florida",
+     "zip": "33024-6442",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.00315,
+      "lon": -80.22394
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840527",
+     "city": "Pompano Beach",
+     "state": "Florida",
+     "zip": "33064-3547",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.23786,
+      "lon": -80.12477
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840654",
+     "city": "South Miami",
+     "state": "Florida",
+     "zip": "33143-4960",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.7076,
+      "lon": -80.29338
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840699",
+     "city": "St. Petersburg",
+     "state": "Florida",
+     "zip": "33707-6129",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.77086,
+      "lon": -82.67927
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840697",
+     "city": "St. Petersburg",
+     "state": "Florida",
+     "zip": "33713-8900",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.77086,
+      "lon": -82.67927
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840567",
+     "city": "Tampa",
+     "state": "Florida",
+     "zip": "33613-3740",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.94752,
+      "lon": -82.45843
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840632",
+     "city": "Winter Park",
+     "state": "Florida",
+     "zip": "32789",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.6,
+      "lon": -81.33924
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840542",
+     "city": "Adairsville",
+     "state": "Georgia",
+     "zip": "30103-2438",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.3687,
+      "lon": -84.93411
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840728",
+     "city": "College Park",
+     "state": "Georgia",
+     "zip": "30349",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.65344,
+      "lon": -84.44937
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840717",
+     "city": "Columbus",
+     "state": "Georgia",
+     "zip": "31904",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.46098,
+      "lon": -84.98771
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840710",
+     "city": "Cordele",
+     "state": "Georgia",
+     "zip": "31015",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 31.96351,
+      "lon": -83.78239
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840689",
+     "city": "East Point",
+     "state": "Georgia",
+     "zip": "30344",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.67955,
+      "lon": -84.43937
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840726",
+     "city": "Stonecrest",
+     "state": "Georgia",
+     "zip": "30038",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.70849,
+      "lon": -84.13485
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840564",
+     "city": "Valdosta",
+     "state": "Georgia",
+     "zip": "31605-1096",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.83334,
+      "lon": -83.28032
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840724",
+     "city": "Muncie",
+     "state": "Indiana",
+     "zip": "46303",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.19338,
+      "lon": -85.38636
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840672",
+     "city": "Zachary",
+     "state": "Louisiana",
+     "zip": "70791-4010",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.64852,
+      "lon": -91.1565
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840645",
+     "city": "Annapolis",
+     "state": "Maryland",
+     "zip": "21401",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.97859,
+      "lon": -76.49184
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840661",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21224-6821",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840707",
+     "city": "North Dartmouth",
+     "state": "Massachusetts",
+     "zip": "02747-1271",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.63899,
+      "lon": -70.97032
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840657",
+     "city": "Troy",
+     "state": "Michigan",
+     "zip": "48085",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.60559,
+      "lon": -83.14993
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840658",
+     "city": "Port Gibson",
+     "state": "Mississippi",
+     "zip": "39150",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 31.96099,
+      "lon": -90.98399
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840641",
+     "city": "Saint Charles",
+     "state": "Missouri",
+     "zip": "63301-2835",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.78394,
+      "lon": -90.48123
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840714",
+     "city": "St Louis",
+     "state": "Missouri",
+     "zip": "63110",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.62727,
+      "lon": -90.19789
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840541",
+     "city": "St Louis",
+     "state": "Missouri",
+     "zip": "63141",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.62727,
+      "lon": -90.19789
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840669",
+     "city": "St Louis",
+     "state": "Missouri",
+     "zip": "63141",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.62727,
+      "lon": -90.19789
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840686",
+     "city": "Omaha",
+     "state": "Nebraska",
+     "zip": "68178",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.25626,
+      "lon": -95.94043
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840703",
+     "city": "Henderson",
+     "state": "Nevada",
+     "zip": "89052",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.0397,
+      "lon": -114.98194
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840529",
+     "city": "Las Vegas",
+     "state": "Nevada",
+     "zip": "89106-4159",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.17497,
+      "lon": -115.13722
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840701",
+     "city": "North Las Vegas",
+     "state": "Nevada",
+     "zip": "89030-7193",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.19886,
+      "lon": -115.1175
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840722",
+     "city": "Bayonne",
+     "state": "New Jersey",
+     "zip": "07002",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.66871,
+      "lon": -74.11431
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840667",
+     "city": "Buffalo",
+     "state": "New York",
+     "zip": "14203-1070",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.88645,
+      "lon": -78.87837
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840678",
+     "city": "New Windsor",
+     "state": "New York",
+     "zip": "12553-7754",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.47676,
+      "lon": -74.02375
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840520",
+     "city": "New York",
+     "state": "New York",
+     "zip": "10021-0005",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.71427,
+      "lon": -74.00597
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840705",
+     "city": "New York",
+     "state": "New York",
+     "zip": "10029-6500",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.71427,
+      "lon": -74.00597
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840626",
+     "city": "The Bronx",
+     "state": "New York",
+     "zip": "10455",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.84985,
+      "lon": -73.86641
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840604",
+     "city": "The Bronx",
+     "state": "New York",
+     "zip": "10468-6401",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.84985,
+      "lon": -73.86641
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840664",
+     "city": "Charlotte",
+     "state": "North Carolina",
+     "zip": "28210-0106",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.22709,
+      "lon": -80.84313
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840721",
+     "city": "Charlotte",
+     "state": "North Carolina",
+     "zip": "28273",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.22709,
+      "lon": -80.84313
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840610",
+     "city": "Denver",
+     "state": "North Carolina",
+     "zip": "28037-7930",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.53125,
+      "lon": -81.0298
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840659",
+     "city": "Gastonia",
+     "state": "North Carolina",
+     "zip": "28054-7481",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.26208,
+      "lon": -81.1873
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840540",
+     "city": "Huntersville",
+     "state": "North Carolina",
+     "zip": "28078-5082",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.41069,
+      "lon": -80.84285
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840523",
+     "city": "New Bern",
+     "state": "North Carolina",
+     "zip": "28562-5238",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.10849,
+      "lon": -77.04411
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840708",
+     "city": "Shelby",
+     "state": "North Carolina",
+     "zip": "28150",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.29235,
+      "lon": -81.53565
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840621",
+     "city": "Winston-Salem",
+     "state": "North Carolina",
+     "zip": "27103",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.09986,
+      "lon": -80.24422
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840627",
+     "city": "Cincinnati",
+     "state": "Ohio",
+     "zip": "45236",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.12711,
+      "lon": -84.51439
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840713",
+     "city": "Columbus",
+     "state": "Ohio",
+     "zip": "43228",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.96118,
+      "lon": -82.99879
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840647",
+     "city": "Dayton",
+     "state": "Ohio",
+     "zip": "45419-4336",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.75895,
+      "lon": -84.19161
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840646",
+     "city": "Toledo",
+     "state": "Ohio",
+     "zip": "43617-1178",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.66394,
+      "lon": -83.55521
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840668",
+     "city": "Oklahoma City",
+     "state": "Oklahoma",
+     "zip": "73104",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.46756,
+      "lon": -97.51643
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840692",
+     "city": "Tulsa",
+     "state": "Oklahoma",
+     "zip": "74133-5829",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.15398,
+      "lon": -95.99277
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840671",
+     "city": "Philadelphia",
+     "state": "Pennsylvania",
+     "zip": "19107-5109",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.95238,
+      "lon": -75.16362
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840683",
+     "city": "Philadelphia",
+     "state": "Pennsylvania",
+     "zip": "19140",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.95238,
+      "lon": -75.16362
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840578",
+     "city": "Anderson",
+     "state": "South Carolina",
+     "zip": "29621-4822",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.50344,
+      "lon": -82.65013
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840592",
+     "city": "Charleston",
+     "state": "South Carolina",
+     "zip": "29412-2625",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.77632,
+      "lon": -79.93275
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840528",
+     "city": "Fort Mill",
+     "state": "South Carolina",
+     "zip": "29701",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.00737,
+      "lon": -80.94508
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840598",
+     "city": "North Charleston",
+     "state": "South Carolina",
+     "zip": "29420",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.85462,
+      "lon": -79.97481
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840696",
+     "city": "Rock Hill",
+     "state": "South Carolina",
+     "zip": "29732-1160",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.92487,
+      "lon": -81.02508
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840660",
+     "city": "Franklin",
+     "state": "Tennessee",
+     "zip": "37067",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.92506,
+      "lon": -86.86889
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840546",
+     "city": "Franklin",
+     "state": "Tennessee",
+     "zip": "38305",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.92506,
+      "lon": -86.86889
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840553",
+     "city": "Knoxville",
+     "state": "Tennessee",
+     "zip": "37909-1161",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.96064,
+      "lon": -83.92074
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840535",
+     "city": "Baytown",
+     "state": "Texas",
+     "zip": "77521-2416",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.7355,
+      "lon": -94.97743
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840634",
+     "city": "Boerne",
+     "state": "Texas",
+     "zip": "78006-1993",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.79466,
+      "lon": -98.73197
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840704",
+     "city": "Carrollton",
+     "state": "Texas",
+     "zip": "14000",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.95373,
+      "lon": -96.89028
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840566",
+     "city": "Cypress",
+     "state": "Texas",
+     "zip": "77429-4696",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.96911,
+      "lon": -95.69717
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840706",
+     "city": "Dallas",
+     "state": "Texas",
+     "zip": "75246",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.78306,
+      "lon": -96.80667
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840716",
+     "city": "Houston",
+     "state": "Texas",
+     "zip": "77008",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.76328,
+      "lon": -95.36327
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840698",
+     "city": "Houston",
+     "state": "Texas",
+     "zip": "77030",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.76328,
+      "lon": -95.36327
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840574",
+     "city": "Kerrville",
+     "state": "Texas",
+     "zip": "78028-9640",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.04743,
+      "lon": -99.14032
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840551",
+     "city": "McKinney",
+     "state": "Texas",
+     "zip": "75069",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.19762,
+      "lon": -96.61527
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840575",
+     "city": "Mesquite",
+     "state": "Texas",
+     "zip": "75149-2438",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.7668,
+      "lon": -96.59916
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840741",
+     "city": "North Richland Hills",
+     "state": "Texas",
+     "zip": "76180-7319",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.8343,
+      "lon": -97.2289
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840663",
+     "city": "Pearland",
+     "state": "Texas",
+     "zip": "77584-7401",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.56357,
+      "lon": -95.28605
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840609",
+     "city": "Plano",
+     "state": "Texas",
+     "zip": "75025",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.01984,
+      "lon": -96.69889
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840673",
+     "city": "San Antonio",
+     "state": "Texas",
+     "zip": "78215-1528",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.42412,
+      "lon": -98.49363
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840681",
+     "city": "San Antonio",
+     "state": "Texas",
+     "zip": "78229",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.42412,
+      "lon": -98.49363
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840711",
+     "city": "San Antonio",
+     "state": "Texas",
+     "zip": "78229",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.42412,
+      "lon": -98.49363
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840729",
+     "city": "San Antonio",
+     "state": "Texas",
+     "zip": "78229",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.42412,
+      "lon": -98.49363
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840597",
+     "city": "San Antonio",
+     "state": "Texas",
+     "zip": "78258",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.42412,
+      "lon": -98.49363
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840600",
+     "city": "Sherman",
+     "state": "Texas",
+     "zip": "75092-7351",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.63566,
+      "lon": -96.60888
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840552",
+     "city": "Sugar Land",
+     "state": "Texas",
+     "zip": "77479-3481",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.61968,
+      "lon": -95.63495
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840526",
+     "city": "Tomball",
+     "state": "Texas",
+     "zip": "77373",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.09716,
+      "lon": -95.61605
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840693",
+     "city": "Portsmouth",
+     "state": "Virginia",
+     "zip": "23703",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.83543,
+      "lon": -76.29827
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840709",
+     "city": "Everett",
+     "state": "Washington",
+     "zip": "98208",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.97898,
+      "lon": -122.20208
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840562",
+     "city": "Morgantown",
+     "state": "West Virginia",
+     "zip": "26505-0423",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.62953,
+      "lon": -79.9559
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 840532",
+     "city": "Greenfield",
+     "state": "Wisconsin",
+     "zip": "53228-3467",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.9614,
+      "lon": -88.01259
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32502",
+     "city": "Buenos Aires",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -34.61315,
+      "lon": -58.37723
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32510",
+     "city": "Buenos Aires",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -34.61315,
+      "lon": -58.37723
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32515",
+     "city": "Buenos Aires",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -34.61315,
+      "lon": -58.37723
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32565",
+     "city": "Buenos Aires",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -34.61315,
+      "lon": -58.37723
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32514",
+     "city": "Ciudad Autonoma Buenos Aires",
+     "country": "Argentina"
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32567",
+     "city": "Ciudad Autonoma Buenos Aires",
+     "country": "Argentina"
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32507",
+     "city": "Ciudad Autónoma de Buenos Aire",
+     "country": "Argentina"
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32563",
+     "city": "Concepción del Uruguay",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -32.48463,
+      "lon": -58.23217
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32503",
+     "city": "Córdoba",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -31.40648,
+      "lon": -64.18853
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32509",
+     "city": "Córdoba",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -31.40648,
+      "lon": -64.18853
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32501",
+     "city": "Florida",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -34.53258,
+      "lon": -58.49078
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32562",
+     "city": "Mar del Plata",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -38.00042,
+      "lon": -57.5562
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32505",
+     "city": "Mendoza",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -32.88946,
+      "lon": -68.84582
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32511",
+     "city": "Mendoza",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -32.88946,
+      "lon": -68.84582
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32513",
+     "city": "Mendoza",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -32.88946,
+      "lon": -68.84582
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32506",
+     "city": "Quilmes",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -34.72065,
+      "lon": -58.25454
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32553",
+     "city": "Rosario",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -32.94682,
+      "lon": -60.63932
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32508",
+     "city": "San Juan Bautista",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -34.80896,
+      "lon": -58.27623
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32512",
+     "city": "San Miguel de Tucumán",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -26.81601,
+      "lon": -65.21051
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32551",
+     "city": "San Miguel de Tucumán",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -26.81601,
+      "lon": -65.21051
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32561",
+     "city": "San Miguel de Tucumán",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -26.81601,
+      "lon": -65.21051
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32564",
+     "city": "San Miguel de Tucumán",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -26.81601,
+      "lon": -65.21051
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32566",
+     "city": "San Rafael",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -34.61531,
+      "lon": -68.33238
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 32556",
+     "city": "Santa Fe",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -31.64881,
+      "lon": -60.70868
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 40502",
+     "city": "Feldbach",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 46.95306,
+      "lon": 15.88833
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 40504",
+     "city": "Grieskirchen",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 48.23333,
+      "lon": 13.83333
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 40501",
+     "city": "Linz",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 48.30639,
+      "lon": 14.28611
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 40503",
+     "city": "Linz",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 48.30639,
+      "lon": 14.28611
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 40505",
+     "city": "Wels",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 48.16667,
+      "lon": 14.03333
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 70553",
+     "city": "Banja Luka",
+     "country": "Bosnia and Herzegovina",
+     "geoPoint": {
+      "lat": 44.77879,
+      "lon": 17.20629
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 70555",
+     "city": "Bihać",
+     "country": "Bosnia and Herzegovina",
+     "geoPoint": {
+      "lat": 44.81694,
+      "lon": 15.87083
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 70554",
+     "city": "Bijeljina",
+     "country": "Bosnia and Herzegovina",
+     "geoPoint": {
+      "lat": 44.75874,
+      "lon": 19.21437
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 70557",
+     "city": "Foca",
+     "country": "Bosnia and Herzegovina",
+     "geoPoint": {
+      "lat": 43.50646,
+      "lon": 18.77854
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 70556",
+     "city": "Gradiska",
+     "country": "Bosnia and Herzegovina",
+     "geoPoint": {
+      "lat": 45.14484,
+      "lon": 17.25453
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 70560",
+     "city": "Mostar",
+     "country": "Bosnia and Herzegovina",
+     "geoPoint": {
+      "lat": 43.34333,
+      "lon": 17.80806
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 70562",
+     "city": "Mostar",
+     "country": "Bosnia and Herzegovina",
+     "geoPoint": {
+      "lat": 43.34333,
+      "lon": 17.80806
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 70559",
+     "city": "Sarajevo",
+     "country": "Bosnia and Herzegovina",
+     "geoPoint": {
+      "lat": 43.84864,
+      "lon": 18.35644
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 70561",
+     "city": "Sarajevo",
+     "country": "Bosnia and Herzegovina",
+     "geoPoint": {
+      "lat": 43.84864,
+      "lon": 18.35644
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 70551",
+     "city": "Travnik",
+     "country": "Bosnia and Herzegovina",
+     "geoPoint": {
+      "lat": 44.22637,
+      "lon": 17.66583
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 70558",
+     "city": "Trebinje",
+     "country": "Bosnia and Herzegovina",
+     "geoPoint": {
+      "lat": 42.71197,
+      "lon": 18.34362
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 70563",
+     "city": "Tuzla",
+     "country": "Bosnia and Herzegovina",
+     "geoPoint": {
+      "lat": 44.53842,
+      "lon": 18.66709
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 70552",
+     "city": "Zenica",
+     "country": "Bosnia and Herzegovina",
+     "geoPoint": {
+      "lat": 44.20169,
+      "lon": 17.90397
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100535",
+     "city": "Blagoevgrad",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.01457,
+      "lon": 23.09804
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100534",
+     "city": "Dimitrovgrad",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.05,
+      "lon": 25.6
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100525",
+     "city": "Gabrovo",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.87419,
+      "lon": 25.31823
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100523",
+     "city": "Haskovo",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 41.93415,
+      "lon": 25.55557
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100533",
+     "city": "Kozloduy",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.77691,
+      "lon": 23.73001
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100527",
+     "city": "Lovech",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.13227,
+      "lon": 24.71763
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100515",
+     "city": "Montana",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.41285,
+      "lon": 23.22174
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100532",
+     "city": "Pernik",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.59671,
+      "lon": 23.03318
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100522",
+     "city": "Pleven",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.41791,
+      "lon": 24.61666
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100529",
+     "city": "Plovdiv",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.15387,
+      "lon": 24.75001
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100537",
+     "city": "Razgrad",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.53331,
+      "lon": 26.51849
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100512",
+     "city": "Rousse",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.84872,
+      "lon": 25.9534
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100516",
+     "city": "Rousse",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.84872,
+      "lon": 25.9534
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100536",
+     "city": "Sevlievo",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.02295,
+      "lon": 25.10364
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100501",
+     "city": "Sofia",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100509",
+     "city": "Sofia",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100514",
+     "city": "Sofia",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100517",
+     "city": "Sofia",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100518",
+     "city": "Sofia",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100530",
+     "city": "Sofia",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100531",
+     "city": "Sofia",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100538",
+     "city": "Sofia",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100524",
+     "city": "Stara Zagora",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.43205,
+      "lon": 25.64262
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100519",
+     "city": "Vidin",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.99159,
+      "lon": 22.88236
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 100557",
+     "city": "Vidin",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.99159,
+      "lon": 22.88236
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 152506",
+     "city": "Concepción",
+     "country": "Chile",
+     "geoPoint": {
+      "lat": -36.82699,
+      "lon": -73.04977
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 152507",
+     "city": "Quillota",
+     "country": "Chile",
+     "geoPoint": {
+      "lat": -32.88341,
+      "lon": -71.24882
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 152503",
+     "city": "Santiago",
+     "country": "Chile",
+     "geoPoint": {
+      "lat": -33.45694,
+      "lon": -70.64827
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 152504",
+     "city": "Santiago",
+     "country": "Chile",
+     "geoPoint": {
+      "lat": -33.45694,
+      "lon": -70.64827
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 152508",
+     "city": "Santiago",
+     "country": "Chile",
+     "geoPoint": {
+      "lat": -33.45694,
+      "lon": -70.64827
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 152509",
+     "city": "Talca",
+     "country": "Chile",
+     "geoPoint": {
+      "lat": -35.4232,
+      "lon": -71.64974
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 152501",
+     "city": "Valparaíso",
+     "country": "Chile",
+     "geoPoint": {
+      "lat": -33.036,
+      "lon": -71.62963
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 191562",
+     "city": "Dubrovnik",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 42.64125,
+      "lon": 18.10909
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 191552",
+     "city": "Karlovac",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 45.49167,
+      "lon": 15.55
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 191557",
+     "city": "Osijek",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 45.55066,
+      "lon": 18.6942
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 191561",
+     "city": "Rijeka",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 45.32673,
+      "lon": 14.44241
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 191563",
+     "city": "Rijeka",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 45.32673,
+      "lon": 14.44241
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 191553",
+     "city": "Sisak",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 45.46608,
+      "lon": 16.37748
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 191558",
+     "city": "Split",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 43.50891,
+      "lon": 16.43915
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 191555",
+     "city": "Zadar",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 44.11578,
+      "lon": 15.22514
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 191551",
+     "city": "Zagreb",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 45.81444,
+      "lon": 15.97798
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 191554",
+     "city": "Zagreb",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 45.81444,
+      "lon": 15.97798
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 191556",
+     "city": "Zagreb",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 45.81444,
+      "lon": 15.97798
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 191559",
+     "city": "Zagreb",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 45.81444,
+      "lon": 15.97798
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 191560",
+     "city": "Zagreb",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 45.81444,
+      "lon": 15.97798
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 203551",
+     "city": "Brandýs nad Labem",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.18356,
+      "lon": 14.67244
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 203518",
+     "city": "Havlíčkův Brod",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.6069,
+      "lon": 15.57937
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 203501",
+     "city": "Jindřichův Hradec",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.14404,
+      "lon": 15.00301
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 203517",
+     "city": "Měšice",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.19799,
+      "lon": 14.51992
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 203504",
+     "city": "Miroslav",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 48.94767,
+      "lon": 16.31252
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 203516",
+     "city": "Mladá Boleslav",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.41135,
+      "lon": 14.90318
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 203505",
+     "city": "Prague",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 203507",
+     "city": "Prague",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 203513",
+     "city": "Prague",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 203515",
+     "city": "Prague",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 372553",
+     "city": "Narva",
+     "country": "Estonia",
+     "geoPoint": {
+      "lat": 59.37722,
+      "lon": 28.19028
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 372551",
+     "city": "Tallinn",
+     "country": "Estonia",
+     "geoPoint": {
+      "lat": 59.43696,
+      "lon": 24.75353
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 372552",
+     "city": "Tartu",
+     "country": "Estonia",
+     "geoPoint": {
+      "lat": 58.38062,
+      "lon": 26.72509
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276505",
+     "city": "Berlin",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276506",
+     "city": "Berlin",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276510",
+     "city": "Berlin",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276511",
+     "city": "Berlin",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276515",
+     "city": "Berlin",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276556",
+     "city": "Cottbus",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.75769,
+      "lon": 14.32888
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276509",
+     "city": "Darmstadt",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.87167,
+      "lon": 8.65027
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276503",
+     "city": "Delitzsch",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.52546,
+      "lon": 12.34284
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276504",
+     "city": "Frankfurt am Main",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.11552,
+      "lon": 8.68417
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276557",
+     "city": "Geesthacht",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.4366,
+      "lon": 10.37339
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276501",
+     "city": "Hamburg",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276513",
+     "city": "Hamburg",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276514",
+     "city": "Hamburg",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276558",
+     "city": "Hanover",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.37052,
+      "lon": 9.73322
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276517",
+     "city": "Koblenz",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.35357,
+      "lon": 7.57883
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276502",
+     "city": "Leipzig",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.33962,
+      "lon": 12.37129
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276516",
+     "city": "Leipzig",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.33962,
+      "lon": 12.37129
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276551",
+     "city": "Leipzig",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.33962,
+      "lon": 12.37129
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276507",
+     "city": "Mainz",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.98185,
+      "lon": 8.28008
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276508",
+     "city": "Munich",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 48.13743,
+      "lon": 11.57549
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 276518",
+     "city": "Peine",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.31928,
+      "lon": 10.2352
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 300506",
+     "city": "Athens",
+     "country": "Greece",
+     "geoPoint": {
+      "lat": 37.98376,
+      "lon": 23.72784
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 300504",
+     "city": "Chortiatis",
+     "country": "Greece",
+     "geoPoint": {
+      "lat": 40.60954,
+      "lon": 23.10014
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 300501",
+     "city": "Heraklion",
+     "country": "Greece",
+     "geoPoint": {
+      "lat": 35.32787,
+      "lon": 25.14341
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 300503",
+     "city": "Ioannina",
+     "country": "Greece",
+     "geoPoint": {
+      "lat": 39.66341,
+      "lon": 20.85187
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 300505",
+     "city": "Thessaloniki",
+     "country": "Greece",
+     "geoPoint": {
+      "lat": 40.64072,
+      "lon": 22.93493
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 300507",
+     "city": "Volos",
+     "country": "Greece",
+     "geoPoint": {
+      "lat": 39.36923,
+      "lon": 22.94769
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 348506",
+     "city": "Balassagyarmat",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 48.07296,
+      "lon": 19.29614
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 348501",
+     "city": "Budapest",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.49835,
+      "lon": 19.04045
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 348505",
+     "city": "Csorna",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.61155,
+      "lon": 17.25012
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 348512",
+     "city": "Edelény",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 48.3,
+      "lon": 20.73333
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 348508",
+     "city": "Gödöllő",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.59657,
+      "lon": 19.35515
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 348509",
+     "city": "Monor",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.35133,
+      "lon": 19.44733
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 348507",
+     "city": "Nyíregyháza",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.95539,
+      "lon": 21.71671
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 348513",
+     "city": "Pécs",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 46.07617,
+      "lon": 18.22814
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 348552",
+     "city": "Sellye",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 45.87247,
+      "lon": 17.84711
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 348510",
+     "city": "Szeged",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 46.253,
+      "lon": 20.14824
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 348503",
+     "city": "Szombathely",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.23088,
+      "lon": 16.62155
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 348515",
+     "city": "Törökbálint",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.42931,
+      "lon": 18.91356
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 376502",
+     "city": "Ashkelon",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 31.66926,
+      "lon": 34.57149
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 376501",
+     "city": "Beersheba",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 31.25181,
+      "lon": 34.7913
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 376511",
+     "city": "Hadera",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 32.44192,
+      "lon": 34.9039
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 376508",
+     "city": "Haifa",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 32.81303,
+      "lon": 34.99928
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 376510",
+     "city": "Haifa",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 32.81303,
+      "lon": 34.99928
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 376503",
+     "city": "Jerusalem",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 31.76904,
+      "lon": 35.21633
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 376506",
+     "city": "Jerusalem",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 31.76904,
+      "lon": 35.21633
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 376507",
+     "city": "Kfar Saba",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 32.175,
+      "lon": 34.90694
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 376504",
+     "city": "Ramat Gan",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 32.08227,
+      "lon": 34.81065
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 376509",
+     "city": "Tel Aviv",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 32.08088,
+      "lon": 34.78057
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 371557",
+     "city": "Balvi",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 57.1313,
+      "lon": 27.26583
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 371553",
+     "city": "Daugavpils",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 55.88333,
+      "lon": 26.53333
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 371554",
+     "city": "Daugavpils",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 55.88333,
+      "lon": 26.53333
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 371555",
+     "city": "Jūrmala",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 56.968,
+      "lon": 23.77038
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 371558",
+     "city": "Rēzekne",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 56.51028,
+      "lon": 27.34
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 371551",
+     "city": "Riga",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 56.946,
+      "lon": 24.10589
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 371552",
+     "city": "Riga",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 56.946,
+      "lon": 24.10589
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 371556",
+     "city": "Riga",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 56.946,
+      "lon": 24.10589
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 484502",
+     "city": "Chihuahua City",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 28.63528,
+      "lon": -106.08889
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 484510",
+     "city": "Chihuahua City",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 28.63528,
+      "lon": -106.08889
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 484505",
+     "city": "Córdoba",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 18.8842,
+      "lon": -96.92559
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 484506",
+     "city": "Cuauhtémoc",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 19.44506,
+      "lon": -99.14612
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 484501",
+     "city": "Guadalajara",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 20.67738,
+      "lon": -103.34749
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 484507",
+     "city": "Guadalajara",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 20.67738,
+      "lon": -103.34749
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 484509",
+     "city": "Guadalajara",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 20.67738,
+      "lon": -103.34749
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 484503",
+     "city": "Monterrey",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 25.68435,
+      "lon": -100.31721
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 484511",
+     "city": "Monterrey",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 25.68435,
+      "lon": -100.31721
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 484504",
+     "city": "Veracruz",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 19.18095,
+      "lon": -96.1429
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 528501",
+     "city": "Beek",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 50.94083,
+      "lon": 5.79722
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 528504",
+     "city": "Breda",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 51.58656,
+      "lon": 4.77596
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 528502",
+     "city": "Heerlen",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 50.88365,
+      "lon": 5.98154
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 528505",
+     "city": "Leeuwarden",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 53.20271,
+      "lon": 5.80973
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 554504",
+     "city": "Christchurch",
+     "country": "New Zealand",
+     "geoPoint": {
+      "lat": -43.53333,
+      "lon": 172.63333
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 554502",
+     "city": "Hamilton",
+     "country": "New Zealand",
+     "geoPoint": {
+      "lat": -37.78333,
+      "lon": 175.28333
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 554503",
+     "city": "Tauranga",
+     "country": "New Zealand",
+     "geoPoint": {
+      "lat": -37.68611,
+      "lon": 176.16667
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 807555",
+     "city": "Bitola",
+     "country": "North Macedonia",
+     "geoPoint": {
+      "lat": 41.03226,
+      "lon": 21.33553
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 807559",
+     "city": "Gevgelija",
+     "country": "North Macedonia",
+     "geoPoint": {
+      "lat": 41.14289,
+      "lon": 22.50108
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 807557",
+     "city": "Ohrid",
+     "country": "North Macedonia",
+     "geoPoint": {
+      "lat": 41.11701,
+      "lon": 20.80175
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 807553",
+     "city": "Shtip",
+     "country": "North Macedonia",
+     "geoPoint": {
+      "lat": 41.74583,
+      "lon": 22.19583
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 807552",
+     "city": "Skopje",
+     "country": "North Macedonia",
+     "geoPoint": {
+      "lat": 41.99646,
+      "lon": 21.43141
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 807554",
+     "city": "Skopje",
+     "country": "North Macedonia",
+     "geoPoint": {
+      "lat": 41.99646,
+      "lon": 21.43141
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 807556",
+     "city": "Skopje",
+     "country": "North Macedonia",
+     "geoPoint": {
+      "lat": 41.99646,
+      "lon": 21.43141
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 616518",
+     "city": "Bialystok",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 53.13333,
+      "lon": 23.16433
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 616504",
+     "city": "Giżycko",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 54.03811,
+      "lon": 21.76441
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 616515",
+     "city": "Katowice",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.2597,
+      "lon": 19.02173
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 616522",
+     "city": "Katowice",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.2597,
+      "lon": 19.02173
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 616509",
+     "city": "Krakow",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.06143,
+      "lon": 19.93658
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 616511",
+     "city": "Krakow",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.06143,
+      "lon": 19.93658
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 616514",
+     "city": "Krakow",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.06143,
+      "lon": 19.93658
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 616503",
+     "city": "Lodz",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 51.77058,
+      "lon": 19.47395
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 616523",
+     "city": "Lodz",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 51.77058,
+      "lon": 19.47395
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 616519",
+     "city": "Ostrowiec Świętokrzyski",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.92936,
+      "lon": 21.38525
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 616506",
+     "city": "Poznan",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.40692,
+      "lon": 16.92993
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 616508",
+     "city": "Poznan",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.40692,
+      "lon": 16.92993
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 616501",
+     "city": "Sosnowiec",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.28682,
+      "lon": 19.10385
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 616502",
+     "city": "Torun",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 53.01375,
+      "lon": 18.59814
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 616554",
+     "city": "Wroclaw",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 51.10286,
+      "lon": 17.03006
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642510",
+     "city": "Bacau",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 46.56718,
+      "lon": 26.91384
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642551",
+     "city": "Brasov",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 45.64861,
+      "lon": 25.60613
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642502",
+     "city": "Cluj-Napoca",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 46.76667,
+      "lon": 23.6
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642504",
+     "city": "Cluj-Napoca",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 46.76667,
+      "lon": 23.6
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642512",
+     "city": "Cluj-Napoca",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 46.76667,
+      "lon": 23.6
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642554",
+     "city": "Cluj-Napoca",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 46.76667,
+      "lon": 23.6
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642506",
+     "city": "Cluj-Napoca Cluj",
+     "country": "Romania"
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642508",
+     "city": "Cluj-Napoca Cluj",
+     "country": "Romania"
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642501",
+     "city": "Constanța",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.18073,
+      "lon": 28.63432
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642509",
+     "city": "Craiova",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.31667,
+      "lon": 23.8
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642511",
+     "city": "Craiova",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.31667,
+      "lon": 23.8
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642514",
+     "city": "Iași",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 47.16667,
+      "lon": 27.6
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642503",
+     "city": "Oradea",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 47.0458,
+      "lon": 21.91833
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642513",
+     "city": "Reșca",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.17265,
+      "lon": 24.39243
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642505",
+     "city": "Timișoara",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 45.75372,
+      "lon": 21.22571
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642507",
+     "city": "Timișoara",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 45.75372,
+      "lon": 21.22571
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 642515",
+     "city": "Timișoara",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 45.75372,
+      "lon": 21.22571
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643517",
+     "city": "Kazan'",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 55.78874,
+      "lon": 49.12214
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643513",
+     "city": "Moscow",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 55.75204,
+      "lon": 37.61781
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643528",
+     "city": "Moscow",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 55.75204,
+      "lon": 37.61781
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643516",
+     "city": "Nizhny Novgorod",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 56.32867,
+      "lon": 44.00205
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643503",
+     "city": "Odintsovskiy",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 44.41667,
+      "lon": 41.68306
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643504",
+     "city": "Saint Petersburg",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 59.93863,
+      "lon": 30.31413
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643505",
+     "city": "Saint Petersburg",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 59.93863,
+      "lon": 30.31413
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643506",
+     "city": "Saint Petersburg",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 59.93863,
+      "lon": 30.31413
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643508",
+     "city": "Saint Petersburg",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 59.93863,
+      "lon": 30.31413
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643510",
+     "city": "Saint Petersburg",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 59.93863,
+      "lon": 30.31413
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643511",
+     "city": "Saint Petersburg",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 59.93863,
+      "lon": 30.31413
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643512",
+     "city": "Saint Petersburg",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 59.93863,
+      "lon": 30.31413
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643514",
+     "city": "Saint Petersburg",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 59.93863,
+      "lon": 30.31413
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643519",
+     "city": "Saint Petersburg",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 59.93863,
+      "lon": 30.31413
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643520",
+     "city": "Saint Petersburg",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 59.93863,
+      "lon": 30.31413
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643531",
+     "city": "Saint Petersburg",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 59.93863,
+      "lon": 30.31413
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643515",
+     "city": "Saratov",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 51.54048,
+      "lon": 45.9901
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643525",
+     "city": "Saratov",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 51.54048,
+      "lon": 45.9901
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643521",
+     "city": "Ulyanovsk",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 54.32824,
+      "lon": 48.38657
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643502",
+     "city": "Voronezh",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 51.66833,
+      "lon": 39.19204
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643524",
+     "city": "Vsevolozhsk",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 60.01512,
+      "lon": 30.67314
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643507",
+     "city": "Yaroslavl",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 57.62987,
+      "lon": 39.87368
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 643518",
+     "city": "Yaroslavl",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 57.62987,
+      "lon": 39.87368
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688552",
+     "city": "Belgrade",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 44.80401,
+      "lon": 20.46513
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688553",
+     "city": "Belgrade",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 44.80401,
+      "lon": 20.46513
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688555",
+     "city": "Belgrade",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 44.80401,
+      "lon": 20.46513
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688557",
+     "city": "Belgrade",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 44.80401,
+      "lon": 20.46513
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688558",
+     "city": "Belgrade",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 44.80401,
+      "lon": 20.46513
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688559",
+     "city": "Belgrade",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 44.80401,
+      "lon": 20.46513
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688561",
+     "city": "Belgrade",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 44.80401,
+      "lon": 20.46513
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688569",
+     "city": "Belgrade",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 44.80401,
+      "lon": 20.46513
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688570",
+     "city": "Jagodina",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 43.97713,
+      "lon": 21.26121
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688564",
+     "city": "Kamenitz",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 45.22334,
+      "lon": 19.84263
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688566",
+     "city": "Kamenitz",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 45.22334,
+      "lon": 19.84263
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688556",
+     "city": "Kragujevac",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 44.01667,
+      "lon": 20.91667
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688562",
+     "city": "Leskovac",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 42.99806,
+      "lon": 21.94611
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688554",
+     "city": "Niš",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 43.32472,
+      "lon": 21.90333
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688568",
+     "city": "Niš",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 43.32472,
+      "lon": 21.90333
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688567",
+     "city": "Pančevo",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 44.87177,
+      "lon": 20.64167
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688560",
+     "city": "Paraćin",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 43.86083,
+      "lon": 21.40778
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688551",
+     "city": "Sombor",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 45.77417,
+      "lon": 19.11222
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688571",
+     "city": "Sremska Mitrovica",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 44.97639,
+      "lon": 19.61222
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688563",
+     "city": "Užice",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 43.85861,
+      "lon": 19.84878
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 688565",
+     "city": "Valjevo",
+     "country": "Serbia",
+     "geoPoint": {
+      "lat": 44.27513,
+      "lon": 19.89821
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 703501",
+     "city": "Bardejov",
+     "country": "Slovakia",
+     "geoPoint": {
+      "lat": 49.29175,
+      "lon": 21.27271
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 703503",
+     "city": "Košice",
+     "country": "Slovakia",
+     "geoPoint": {
+      "lat": 48.71441,
+      "lon": 21.25802
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 703502",
+     "city": "Spišská Nová Ves",
+     "country": "Slovakia",
+     "geoPoint": {
+      "lat": 48.94464,
+      "lon": 20.56153
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 408556",
+     "city": "Anyang-si",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.3925,
+      "lon": 126.92694
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 408551",
+     "city": "Daegu",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 35.87028,
+      "lon": 128.59111
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 408560",
+     "city": "Dongjak",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 35.15713,
+      "lon": 126.8166
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 408554",
+     "city": "Gwangju",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 35.15472,
+      "lon": 126.91556
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 408559",
+     "city": "Haeundae",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 35.16,
+      "lon": 129.15472
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 408557",
+     "city": "Incheon",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.45646,
+      "lon": 126.70515
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 408558",
+     "city": "Incheon",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.45646,
+      "lon": 126.70515
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 408555",
+     "city": "Jeonju",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 35.82194,
+      "lon": 127.14889
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 408552",
+     "city": "Seoul",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 408553",
+     "city": "Seoul",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 408561",
+     "city": "Suwon,Gyeonggi-do",
+     "country": "South Korea"
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 724503",
+     "city": "Barcelona",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.38879,
+      "lon": 2.15899
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 724501",
+     "city": "Córdoba",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 37.89155,
+      "lon": -4.77275
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 724505",
+     "city": "Madrid",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 40.4165,
+      "lon": -3.70256
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 724551",
+     "city": "Madrid",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 40.4165,
+      "lon": -3.70256
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 724504",
+     "city": "Majadahonda",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 40.47353,
+      "lon": -3.87182
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 724502",
+     "city": "Zaragoza",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.65606,
+      "lon": -0.87734
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 792512",
+     "city": "Adana",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 36.98615,
+      "lon": 35.32531
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 792510",
+     "city": "Bornova",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 38.47921,
+      "lon": 27.2399
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 792551",
+     "city": "Çanakkale",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 40.15552,
+      "lon": 26.41271
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 792507",
+     "city": "Istanbul",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 41.01384,
+      "lon": 28.94966
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 792514",
+     "city": "Kocaeli",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 39.62497,
+      "lon": 27.51145
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 792513",
+     "city": "Mersin",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 36.81196,
+      "lon": 34.63886
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 792506",
+     "city": "Pamukkale",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 37.91644,
+      "lon": 29.11729
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 792508",
+     "city": "Pendik",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 40.8775,
+      "lon": 29.2725
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 792511",
+     "city": "Yenişehir",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 40.26444,
+      "lon": 29.65306
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804522",
+     "city": "Dnipro",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 48.46664,
+      "lon": 35.04066
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804502",
+     "city": "Ivano-Frankivsk",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 48.92312,
+      "lon": 24.71248
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804504",
+     "city": "Kharkiv",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 49.98177,
+      "lon": 36.25475
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804505",
+     "city": "Kharkiv",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 49.98177,
+      "lon": 36.25475
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804506",
+     "city": "Kharkiv",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 49.98177,
+      "lon": 36.25475
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804509",
+     "city": "Kharkiv",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 49.98177,
+      "lon": 36.25475
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804503",
+     "city": "Kherson",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 46.63695,
+      "lon": 32.61458
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804511",
+     "city": "Kiev",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 50.45466,
+      "lon": 30.5238
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804520",
+     "city": "Kremenchuk",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 49.06253,
+      "lon": 33.40484
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804501",
+     "city": "Kyiv",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 50.45466,
+      "lon": 30.5238
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804508",
+     "city": "Kyiv",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 50.45466,
+      "lon": 30.5238
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804512",
+     "city": "Kyiv",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 50.45466,
+      "lon": 30.5238
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804516",
+     "city": "Kyiv",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 50.45466,
+      "lon": 30.5238
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804518",
+     "city": "Kyiv",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 50.45466,
+      "lon": 30.5238
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804521",
+     "city": "Kyiv",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 50.45466,
+      "lon": 30.5238
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804527",
+     "city": "Odesa",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 46.48572,
+      "lon": 30.74383
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804507",
+     "city": "Poltava",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 49.58925,
+      "lon": 34.55367
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804515",
+     "city": "Vinnytsia",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 49.2322,
+      "lon": 28.46871
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804517",
+     "city": "Vinnytsia",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 49.2322,
+      "lon": 28.46871
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 804528",
+     "city": "Zaporizhia",
+     "country": "Ukraine"
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 826510",
+     "city": "Belfast",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 54.59682,
+      "lon": -5.92541
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 826509",
+     "city": "Bradford",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.79391,
+      "lon": -1.75206
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 826511",
+     "city": "London",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.50853,
+      "lon": -0.12574
+     }
+    },
+    {
+     "facility": "Chiesi Clinical Trial - Site 826512",
+     "city": "Rochdale",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.61766,
+      "lon": -2.1552
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D029481",
+     "term": "Bronchitis, Chronic"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D001991",
+     "term": "Bronchitis"
+    },
+    {
+     "id": "D012141",
+     "term": "Respiratory Tract Infections"
+    },
+    {
+     "id": "D007239",
+     "term": "Infections"
+    },
+    {
+     "id": "D001982",
+     "term": "Bronchial Diseases"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C000596339",
+     "term": "tanimilast"
+    },
+    {
+     "id": "C424423",
+     "term": "Roflumilast"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

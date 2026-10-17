@@ -57,14 +57,6 @@ def resolve_identity(
     return Identity(user=x_user, role=claimed or "author")
 
 
-def current_identity(
-    request: Request,
-    x_user: str | None = Header(default=None),
-    x_role: str | None = Header(default=None),
-) -> Identity | None:
-    return resolve_identity(request, x_user, x_role)
-
-
 def require_editor(
     request: Request,
     x_user: str | None = Header(default=None),

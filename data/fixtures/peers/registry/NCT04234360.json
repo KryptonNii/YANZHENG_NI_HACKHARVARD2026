@@ -1,0 +1,832 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT04234360",
+   "orgStudyIdInfo": {
+    "id": "RECHMPL19_0069 UF 7771"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2019-002724-33",
+     "type": "EUDRACT_NUMBER"
+    },
+    {
+     "id": "LIC-18-18-0374",
+     "type": "OTHER_GRANT",
+     "domain": "French DGOS PHRC National 2018"
+    },
+    {
+     "id": "2019",
+     "type": "NIH",
+     "link": "https://reporter.nih.gov/quickSearch/2019"
+    }
+   ],
+   "organization": {
+    "fullName": "University Hospital, Montpellier",
+    "class": "OTHER"
+   },
+   "briefTitle": "Eosinophil-driven Corticotherapy for Patients Hospitalized for COPD Exacerbation",
+   "officialTitle": "Eosinophil-driven Corticotherapy for Patients Hospitalized for COPD Exacerbation: a Double-blind, Randomized, Controlled Trial",
+   "acronym": "eo-Drive"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-06",
+   "overallStatus": "TERMINATED",
+   "whyStopped": "low enrollment at participating centers",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2021-10-12",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2025-01-30",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2025-01-30",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2020-01-13",
+   "studyFirstSubmitQcDate": "2020-01-15",
+   "studyFirstPostDateStruct": {
+    "date": "2020-01-21",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-06-10",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-06-12",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "University Hospital, Montpellier",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The primary objective of this study is to compare treatment failure rates between a group of eosinophilic (eosinophilia \\> 2% on day 1 of hospitalization) patients hospitalised for a COPD exacerbation treated via corticotherapy versus a similar group treated via placebo.\n\nSecondarily, treatment failure rates will also be compared between a group of non-eosinophilic patients hospitalised for a COPD exacerbation treated via corticotherapy versus a similar group treated via placebo. Study arms will also be compared for additional aspects of efficacy and safety:\n\n* speed of recovery during the initial hospitalization;\n* corticosteroid side effects / induced comorbidities;\n* changes in symptoms and episodes of exacerbation;\n* pulmonary function, oxygen use and ventilation;\n* patient trajectories and resource use (e.g. survival, consults, episodes of hospitalization, medications);\n* drug consumption (especially as relates to COPD management, exacerbations and induced comorbidities);\n* health status, quality of life, activity/disability;\n* patient safety / adverse events in general.\n\nEosinophilia thresholds optimizing the prediction of corticosteroid response and COPD outcomes will be re-evaluated. The relationships between corticosteroid response and key biomarkers (e.g. infectious groups) will be thoroughly explored, including within eosinophil strata. Potential gender subgroups differences will also be evaluated.\n\nFinally, in prevision of further exploratory studies, a biological collection and an imaging library will be created in association with this protocol. The biological collection will be used to explore the genetic basis and physiology linked with treatment response, gender and patient trajectories. The image library will be used as a platform for the exploration of new imaging markers developed, for example, via machine learning and affiliated techniques."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "COPD Exacerbation"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "interventionModelDescription": "This is a randomised (1:1), 2-parallel arm, double-blind trial comparing outcomes for a group of eosinophilic COPD patients (n=150) treated via corticotherapy versus a 2nd, similar group (n=150) treated via placebo. Secondarily, the same comparison (2x n=150) will be made for non-eosinophilic patients (totally excluding non-eosinophilic patients would potentially affect biomarker knowledge and subsequent care decisions, leading to bias).",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "maskingDescription": "Patients, investigators / outcome assessors / care givers and study staff are blinded to eosinophil / basophil / monocyte results and treatment allocation.",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 182,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Eosinophil count > 2%; corticotherapy",
+     "type": "EXPERIMENTAL",
+     "description": "Eosinophilic patients randomized to this arm will receive 5 days of corticotherapy.",
+     "interventionNames": [
+      "Drug: 5 days of systemic corticotherapy (prednisone)"
+     ]
+    },
+    {
+     "label": "Eosinophil count <= 2%; corticotherapy",
+     "type": "EXPERIMENTAL",
+     "description": "Non-eosinophilic patients randomized to this arm will receive 5 days of corticotherapy.",
+     "interventionNames": [
+      "Drug: 5 days of systemic corticotherapy (prednisone)"
+     ]
+    },
+    {
+     "label": "Eosinophil count > 2%; placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Eosinophilic patients randomized to this arm will receive 5 days of placebo.",
+     "interventionNames": [
+      "Drug: 5 days of placebo"
+     ]
+    },
+    {
+     "label": "Eosinophil count <= 2%; placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Non-eosinophilic patients randomized to this arm will receive 5 days of placebo.",
+     "interventionNames": [
+      "Drug: 5 days of placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "5 days of systemic corticotherapy (prednisone)",
+     "description": "Patients randomized to this arm will receive 40 mg prednisone per os per day for 5 days. Other aspects of standard, recommended care (e.g. antibiotherapy) are respected.",
+     "armGroupLabels": [
+      "Eosinophil count <= 2%; corticotherapy",
+      "Eosinophil count > 2%; corticotherapy"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "5 days of placebo",
+     "description": "Patients randomized to this arm will receive an appropriate placebo per os for 5 days. Other aspects of standard, recommended care (e.g. antibiotherapy) are respected.",
+     "armGroupLabels": [
+      "Eosinophil count <= 2%; placebo",
+      "Eosinophil count > 2%; placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Treatment failure",
+     "description": "Treatment failure for the primary outcome is defined according to Niewoehner et al. (1999) as death from any cause or need for intubation and mechanical ventilation, readmission due to COPD, or intensification of pharmacologic therapy (defined as the prescription of open-label systemic glucocorticoids, high-dose inhaled glucocorticoids (more than eight puffs per day of triamcinolone acetonide or its equivalent), theophylline, or any combination of these three therapies) at three months. In addition, an investigator meeting determined additional components of treatment failure that should be added to Niewoehner's definition in order to bring it up-to-date :\n\n* Initiation of non-invasive ventilation for \\>24h after first treatment administration\n* Transfer to intensive care or indication for a transfer to intensive care. Incident limitations-of-care that can affect treatment failure should also be carefully noted.",
+     "timeFrame": "3 months"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "The speed of initial recovery: Time elapsed before showing signs of improvement",
+     "timeFrame": "During initial hospitalization (expected maximum of 28 days)"
+    },
+    {
+     "measure": "The speed of initial recovery: Time elapsed in acidosis/hypercapnia",
+     "timeFrame": "During initial hospitalization (expected maximum of 28 days)"
+    },
+    {
+     "measure": "The speed of initial recovery: Time elapsed before meeting pre-defined discharge criteria",
+     "description": "Time elapsed before meeting pre-defined discharge criteria (acidosis has normalized, symptoms have returned to manageable levels, the patient is capable of performing minimal daily activities).",
+     "timeFrame": "During initial hospitalization (expected maximum of 28 days)"
+    },
+    {
+     "measure": "Presence /absence of comorbidities or steroid side effects: glycemia",
+     "timeFrame": "During initial hospitalization (expected maximum of 28 days)"
+    },
+    {
+     "measure": "Presence /absence of comorbidities or steroid side effects: glycemia",
+     "timeFrame": "1 month"
+    },
+    {
+     "measure": "Presence /absence of comorbidities or steroid side effects: glycemia",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "The occurrence of new or worsened diabetes/hyperglycemia",
+     "timeFrame": "Throughout the study (3 months)"
+    },
+    {
+     "measure": "Body mass index",
+     "timeFrame": "Baseline (day 0)"
+    },
+    {
+     "measure": "Body mass index",
+     "timeFrame": "At hospital discharge (expected maximum of 28 days)"
+    },
+    {
+     "measure": "Body mass index",
+     "timeFrame": "1 month"
+    },
+    {
+     "measure": "Body mass index",
+     "timeFrame": "3 month"
+    },
+    {
+     "measure": "Hospital anxiety and depression scale (HAD)",
+     "description": "The HAD results in a score ranging from 0 (low anxiety or depression) to 21 (strong anxiety or depression).",
+     "timeFrame": "baseline (day 0)"
+    },
+    {
+     "measure": "Hospital anxiety and depression scale (HAD)",
+     "description": "The HAD results in a score ranging from 0 (low anxiety or depression) to 21 (strong anxiety or depression).",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "The occurrence of any other potentially corticosteroid-induced comorbidities throughout the study",
+     "timeFrame": "Throughout the study; 3 months"
+    },
+    {
+     "measure": "Episodes of pneumonia",
+     "description": "Beginning and end dates of episodes.",
+     "timeFrame": "Throughout the study; 3 months"
+    },
+    {
+     "measure": "Episodes of infection",
+     "description": "Beginning and end dates of episodes.",
+     "timeFrame": "Throughout the study; 3 months"
+    },
+    {
+     "measure": "Episodes of mild exacerbation.",
+     "description": "Episodes of exacerbation will be recorded (date of start/finish for each episode) throughout the study.\n\nExacerbation severity is determined (GOLD 2018) as follows:\n\n* mild: treated with short acting bronchodilators (SABDs) only,\n* moderate: treated with SABDs plus antibiotics and/or oral corticosteroids,\n* severe: patient required hospitalization or visits the emergency room.",
+     "timeFrame": "Throughout the study; 3 months"
+    },
+    {
+     "measure": "Episodes of moderate exacerbation.",
+     "description": "Episodes of exacerbation will be recorded (date of start/finish for each episode) throughout the study.\n\nExacerbation severity is determined (GOLD 2018) as follows:\n\n* mild: treated with short acting bronchodilators (SABDs) only,\n* moderate: treated with SABDs plus antibiotics and/or oral corticosteroids,\n* severe: patient required hospitalization or visits the emergency room.",
+     "timeFrame": "Throughout the study; 3 months"
+    },
+    {
+     "measure": "Episodes of severe exacerbation.",
+     "description": "Episodes of exacerbation will be recorded (date of start/finish for each episode) throughout the study.\n\nExacerbation severity is determined (GOLD 2018) as follows:\n\n* mild: treated with short acting bronchodilators (SABDs) only,\n* moderate: treated with SABDs plus antibiotics and/or oral corticosteroids,\n* severe: patient required hospitalization or visits the emergency room.",
+     "timeFrame": "Throughout the study; 3 months"
+    },
+    {
+     "measure": "Forced expiratory volume in 1 second (litres)",
+     "timeFrame": "At hospital discharge (expected maximum of 28 days)"
+    },
+    {
+     "measure": "Forced expiratory volume in 1 second (litres)",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "Forced expiratory volume in 1 second (% predicted)",
+     "timeFrame": "At hospital discharge (expected maximum of 28 days)"
+    },
+    {
+     "measure": "Forced expiratory volume in 1 second (% predicted)",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "Forced vital capacity (litres)",
+     "timeFrame": "At hospital discharge (expected maximum of 28 days)"
+    },
+    {
+     "measure": "Forced vital capacity (litres)",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "Forced vital capacity (% predicted)",
+     "timeFrame": "At hospital discharge (expected maximum of 28 days)"
+    },
+    {
+     "measure": "Forced vital capacity (% predicted)",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "Residual volume (litres)",
+     "timeFrame": "At hospital discharge (expected maximum of 28 days)"
+    },
+    {
+     "measure": "Residual volume (litres)",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "Residual volume (% predicted)",
+     "timeFrame": "At hospital discharge (expected maximum of 28 days)"
+    },
+    {
+     "measure": "Residual volume (% predicted)",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "Total lung capacity (litres)",
+     "timeFrame": "At hospital discharge (expected maximum of 28 days)"
+    },
+    {
+     "measure": "Total lung capacity (litres)",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "Total lung capacity (% predicted)",
+     "timeFrame": "At hospital discharge (expected maximum of 28 days)"
+    },
+    {
+     "measure": "Total lung capacity (% predicted)",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "Oxygen needs (litres/min) during initial hospitalisation",
+     "timeFrame": "At hospital discharge (expected maximum of 28 days)"
+    },
+    {
+     "measure": "Mode of pre-hospitalization living arrangements",
+     "description": "At home, rehabilitation centre, assisted living centre, or other",
+     "timeFrame": "Baseline (day 0)"
+    },
+    {
+     "measure": "Hospital discharge modality",
+     "description": "At home, rehabilitation centre, assisted living centre, or other",
+     "timeFrame": "At hospital discharge (expected maximum of 28 days)"
+    },
+    {
+     "measure": "Episodes of hospitalization",
+     "description": "Episodes of hospitalization, distinguishing emergency department, intensive care, intermediate care and ward stays, will be recorded throughout the study .",
+     "timeFrame": "Throughout the study; 3 months"
+    },
+    {
+     "measure": "Episodes of emergency department use",
+     "timeFrame": "Throughout the study; 3 months"
+    },
+    {
+     "measure": "Episodes of intensive care",
+     "timeFrame": "Throughout the study; 3 months"
+    },
+    {
+     "measure": "Consults",
+     "description": "The number of consults and rehabilitation/therapy sessions in relation to COPD/respiratory symptoms (or not) will be tracked.",
+     "timeFrame": "Throughout the study; 3 months"
+    },
+    {
+     "measure": "The cumulative days alive and event-free",
+     "description": "The cumulative days alive and event-free (free from hospitalization, exacerbation, ventilation, oxygen use, pneumonia or infection)",
+     "timeFrame": "Throughout the study; 3 months"
+    },
+    {
+     "measure": "Mortality/survival",
+     "timeFrame": "Throughout the study; 3 months"
+    },
+    {
+     "measure": "Medications",
+     "description": "Drug consumption episodes (including vaccines) will be recorded throughout the study and linked to COPD exacerbations, COPD maintenance therapy or corticosteroid-induced side effects as appropriate.",
+     "timeFrame": "Throughout the study; 3 months"
+    },
+    {
+     "measure": "VAS scale for coughing",
+     "description": "Patient reported, separate visual analogue scales (VAS) for coughing, dyspnoea (at rest), sputum production, sleep perturbation and anxiety.\n\nVAS scales range from 0 (absence of symptoms) to 10 (strongest possible symptoms imaginable).",
+     "timeFrame": "Every morning during hospitalization (expected maximum of 28 days)"
+    },
+    {
+     "measure": "VAS scale for coughing",
+     "description": "Patient reported, separate visual analogue scales (VAS) for coughing, dyspnoea (at rest), sputum production, sleep perturbation and anxiety.\n\nVAS scales range from 0 (absence of symptoms) to 10 (strongest possible symptoms imaginable).",
+     "timeFrame": "1 month"
+    },
+    {
+     "measure": "VAS scale for coughing",
+     "description": "Patient reported, separate visual analogue scales (VAS) for coughing, dyspnoea (at rest), sputum production, sleep perturbation and anxiety.\n\nVAS scales range from 0 (absence of symptoms) to 10 (strongest possible symptoms imaginable).",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "VAS scale for dyspnoea",
+     "description": "Patient reported, separate visual analogue scales (VAS) for coughing, dyspnoea (at rest), sputum production, sleep perturbation and anxiety.\n\nVAS scales range from 0 (absence of symptoms) to 10 (strongest possible symptoms imaginable).",
+     "timeFrame": "Every morning during hospitalization (expected maximum of 28 days)"
+    },
+    {
+     "measure": "VAS scale for dyspnoea",
+     "description": "Patient reported, separate visual analogue scales (VAS) for coughing, dyspnoea (at rest), sputum production, sleep perturbation and anxiety.\n\nVAS scales range from 0 (absence of symptoms) to 10 (strongest possible symptoms imaginable).",
+     "timeFrame": "1 month"
+    },
+    {
+     "measure": "VAS scale for dyspnoea",
+     "description": "Patient reported, separate visual analogue scales (VAS) for coughing, dyspnoea (at rest), sputum production, sleep perturbation and anxiety.\n\nVAS scales range from 0 (absence of symptoms) to 10 (strongest possible symptoms imaginable).",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "VAS scale for sputum production",
+     "description": "Patient reported, separate visual analogue scales (VAS) for coughing, dyspnoea (at rest), sputum production, sleep perturbation and anxiety.\n\nVAS scales range from 0 (absence of symptoms) to 10 (strongest possible symptoms imaginable).",
+     "timeFrame": "Every morning during hospitalization (expected maximum of 28 days)"
+    },
+    {
+     "measure": "VAS scale for sputum production",
+     "description": "Patient reported, separate visual analogue scales (VAS) for coughing, dyspnoea (at rest), sputum production, sleep perturbation and anxiety.\n\nVAS scales range from 0 (absence of symptoms) to 10 (strongest possible symptoms imaginable).",
+     "timeFrame": "1 month"
+    },
+    {
+     "measure": "VAS scale for sputum production",
+     "description": "Patient reported, separate visual analogue scales (VAS) for coughing, dyspnoea (at rest), sputum production, sleep perturbation and anxiety.\n\nVAS scales range from 0 (absence of symptoms) to 10 (strongest possible symptoms imaginable).",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "VAS scale for sleep perturbation",
+     "description": "Patient reported, separate visual analogue scales (VAS) for coughing, dyspnoea (at rest), sputum production, sleep perturbation and anxiety.\n\nVAS scales range from 0 (absence of symptoms) to 10 (strongest possible symptoms imaginable).",
+     "timeFrame": "Every morning during hospitalization (expected maximum of 28 days)"
+    },
+    {
+     "measure": "VAS scale for sleep perturbation",
+     "description": "Patient reported, separate visual analogue scales (VAS) for coughing, dyspnoea (at rest), sputum production, sleep perturbation and anxiety.\n\nVAS scales range from 0 (absence of symptoms) to 10 (strongest possible symptoms imaginable).",
+     "timeFrame": "1 month"
+    },
+    {
+     "measure": "VAS scale for sleep perturbation",
+     "description": "Patient reported, separate visual analogue scales (VAS) for coughing, dyspnoea (at rest), sputum production, sleep perturbation and anxiety.\n\nVAS scales range from 0 (absence of symptoms) to 10 (strongest possible symptoms imaginable).",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "VAS scale for anxiety",
+     "description": "Patient reported, separate visual analogue scales (VAS) for coughing, dyspnoea (at rest), sputum production, sleep perturbation and anxiety.\n\nVAS scales range from 0 (absence of symptoms) to 10 (strongest possible symptoms imaginable).",
+     "timeFrame": "Every morning during hospitalization (expected maximum of 28 days)"
+    },
+    {
+     "measure": "VAS scale for anxiety",
+     "description": "Patient reported, separate visual analogue scales (VAS) for coughing, dyspnoea (at rest), sputum production, sleep perturbation and anxiety.\n\nVAS scales range from 0 (absence of symptoms) to 10 (strongest possible symptoms imaginable).",
+     "timeFrame": "1 month"
+    },
+    {
+     "measure": "VAS scale for anxiety",
+     "description": "Patient reported, separate visual analogue scales (VAS) for coughing, dyspnoea (at rest), sputum production, sleep perturbation and anxiety.\n\nVAS scales range from 0 (absence of symptoms) to 10 (strongest possible symptoms imaginable).",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "The Breathlessness, Cough and Sputum Scale",
+     "description": "Symptoms are evaluated on a 5-point Likert-type scale ranging from 0 to 4, with higher scores indicating more severe symptoms.",
+     "timeFrame": "Baseline (day 0)"
+    },
+    {
+     "measure": "The Breathlessness, Cough and Sputum Scale",
+     "description": "Symptoms are evaluated on a 5-point Likert-type scale ranging from 0 to 4, with higher scores indicating more severe symptoms.",
+     "timeFrame": "On hospital discharge (expected maximum of 28 days)"
+    },
+    {
+     "measure": "The Breathlessness, Cough and Sputum Scale",
+     "description": "Symptoms are evaluated on a 5-point Likert-type scale ranging from 0 to 4, with higher scores indicating more severe symptoms.",
+     "timeFrame": "1 month"
+    },
+    {
+     "measure": "The Breathlessness, Cough and Sputum Scale",
+     "description": "Symptoms are evaluated on a 5-point Likert-type scale ranging from 0 to 4, with higher scores indicating more severe symptoms.",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "The modified medical research council (mMRC) dyspnoea scale",
+     "description": "Scores range from 0 (none) to 4 (very severe).",
+     "timeFrame": "Baseline (day 0)"
+    },
+    {
+     "measure": "The modified medical research council (mMRC) dyspnoea scale",
+     "description": "Scores range from 0 (none) to 4 (very severe).",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "The COPD assessment test",
+     "description": "Scores range from 0-40 with higher scores indicative of greater COPD impact on health status.",
+     "timeFrame": "Baseline (day 0)"
+    },
+    {
+     "measure": "The COPD assessment test",
+     "description": "Scores range from 0-40 with higher scores indicative of greater COPD impact on health status.",
+     "timeFrame": "1 month"
+    },
+    {
+     "measure": "The COPD assessment test",
+     "description": "Scores range from 0-40 with higher scores indicative of greater COPD impact on health status.",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "The Euroqol (EQ-5D-5L) questionnaire",
+     "description": "The descriptive system has five dimensions (mobility, self-care, usual activities, pain/discomfort, anxiety/depression), each described by five levels of intensity (\"no problems\", \"slight problems\", \"moderate problems\", \"severe problems\" and \"extreme problems or complete inability\"). This decision results in a 1-digit number that expresses the level selected for that dimension. The digits for the five dimensions can be combined into a 5-digit number that describes the patient's health state.",
+     "timeFrame": "Baseline (day 0)"
+    },
+    {
+     "measure": "The Euroqol (EQ-5D-5L) questionnaire",
+     "description": "The descriptive system has five dimensions (mobility, self-care, usual activities, pain/discomfort, anxiety/depression), each described by five levels of intensity (\"no problems\", \"slight problems\", \"moderate problems\", \"severe problems\" and \"extreme problems or complete inability\"). This decision results in a 1-digit number that expresses the level selected for that dimension. The digits for the five dimensions can be combined into a 5-digit number that describes the patient's health state.",
+     "timeFrame": "1 month"
+    },
+    {
+     "measure": "The Euroqol (EQ-5D-5L) questionnaire",
+     "description": "The descriptive system has five dimensions (mobility, self-care, usual activities, pain/discomfort, anxiety/depression), each described by five levels of intensity (\"no problems\", \"slight problems\", \"moderate problems\", \"severe problems\" and \"extreme problems or complete inability\"). This decision results in a 1-digit number that expresses the level selected for that dimension. The digits for the five dimensions can be combined into a 5-digit number that describes the patient's health state.",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "The St George Respiratory Questionnaire",
+     "description": "Scores range from 0 to 100, with higher scores indicating more limitations.",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "Six minute walking tests",
+     "timeFrame": "1 month (optional)"
+    },
+    {
+     "measure": "Six minute walking tests",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "The DIRECT questionnaire",
+     "description": "DIRECT: Disability related to Chronic Obstructive Pulmonary Disease (COPD) tool The DIRECT questionnaire provides a score ranging between 0 and 34, with higher values indicating higher levels of disability.",
+     "timeFrame": "3 months"
+    }
+   ],
+   "otherOutcomes": [
+    {
+     "measure": "Blood differential",
+     "timeFrame": "Baseline (day 0)"
+    },
+    {
+     "measure": "Blood differential",
+     "timeFrame": "day 2"
+    },
+    {
+     "measure": "Blood differential",
+     "timeFrame": "On hospital discharge (expected maximum of 28 days)"
+    },
+    {
+     "measure": "Blood differential",
+     "timeFrame": "1 month"
+    },
+    {
+     "measure": "Blood differential",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "C reactive protein",
+     "timeFrame": "Baseline (day 0)"
+    },
+    {
+     "measure": "C reactive protein",
+     "timeFrame": "On hospital discharge (expected maximum of 28 days)"
+    },
+    {
+     "measure": "Sputum bacteriological analysis (or nasal swab if no sputum)",
+     "timeFrame": "Baseline (day 0)"
+    },
+    {
+     "measure": "Nasal swab virology",
+     "timeFrame": "Baseline (day 0)"
+    },
+    {
+     "measure": "Computed tomography scan of lungs: presence/absence of consolidation",
+     "timeFrame": "Baseline (day 0); optional"
+    },
+    {
+     "measure": "Computed tomography scan of lungs: presence/absence of consolidation",
+     "timeFrame": "3 months; optional"
+    },
+    {
+     "measure": "Computed tomography scan of lungs: % emphysema",
+     "timeFrame": "Baseline (day 0); optional"
+    },
+    {
+     "measure": "Computed tomography scan of lungs: % emphysema",
+     "timeFrame": "3 months; optional"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Adult patients admitted to a participating hospital (ward, ICU or emergency services) for an acute COPD exacerbation\n* For patients with known COPD: COPD defined according to GOLD 2018 criteria: (1) Post-bronchodilator FEV1/FVC \\< 70% of predicted values; (2) \\> 10 pack years smoking history\n* For incident COPD cases with no spirometric history: symptoms and exposure according to GOLD 2018 report will be considered for the diagnosis, but if the spirometric diagnosis is not confirmed during follow-up, then the patient will be excluded\n* Signed consent has been obtained, or the appropriate emergency procedure (under French law) allows enrolment\n* Subjects must be covered by public health insurance\n* Patient available for 3 months of follow-up. Subjects must be able to attend all scheduled visits and to comply with all trial procedures.\n\nExclusion Criteria:\n\n* Subject unable to read or write; language barrier\n* Subject who is in a dependency or employment with the sponsor or investigator\n* Pregnancy or lactation\n* Patients who are prisoners or under other forms of judicial protection\n* Patients under any kind of guardianship\n* The patient has already participated in the present protocol\n* The patient is participating in another interventional study or has done so in the past 3 months\n* The patient is in an exclusion period determined by a previous study\n* The patient has been taking long-term systemic corticosteroids for longer than 1 month prior to inclusion\n* The patient has already received \\> 1 mg/kg of systemic corticotherapy in the past 48h\n* Intubated-ventilated patient\n* Administration of oral experimental drug is impossible\n* Cancer within the last 12 months\n* Current diagnosis of Asthma\n* T2-inflammation targeting biologics (Benralizumab, reslizumab, mepolizumab, dupilumab) treatment\n* Admitted for any other reason including, but not limited to, pulmonary embolism, pneumothorax, heart failure\n* Known allergy to corticosteroids\n* Consideration of a potential negative drug interaction with corticosteroids (at the investigator's discretion)\n* White blood cell formula already performed and distributed to implicated teams\n* Directives for limitation-of-care (\"LATA\" in French) already established\n* SARS-Cov2 positive test carry out during the COPD exacerbation",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "85 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Arnaud BOURDIN",
+     "affiliation": "a-bourdin@chu-montpellier.fr",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "CHU Amiens",
+     "city": "Amiens",
+     "country": "France",
+     "geoPoint": {
+      "lat": 49.9,
+      "lon": 2.3
+     }
+    },
+    {
+     "facility": "CHU Brest - Hôpital Caval Blanche",
+     "city": "Brest",
+     "country": "France",
+     "geoPoint": {
+      "lat": 48.39029,
+      "lon": -4.48628
+     }
+    },
+    {
+     "facility": "Clinique du Parc",
+     "city": "Castelnau-le-Lez",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.63605,
+      "lon": 3.90137
+     }
+    },
+    {
+     "facility": "CH Libourne",
+     "city": "Libourne",
+     "country": "France",
+     "geoPoint": {
+      "lat": 44.91449,
+      "lon": -0.24186
+     }
+    },
+    {
+     "facility": "Hospice Civils de Lyon",
+     "city": "Lyon",
+     "country": "France",
+     "geoPoint": {
+      "lat": 45.74906,
+      "lon": 4.84789
+     }
+    },
+    {
+     "facility": "APHM - Hôpital Nord",
+     "city": "Marseille",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.29695,
+      "lon": 5.38107
+     }
+    },
+    {
+     "facility": "CHU Montpellier",
+     "city": "Montpellier",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.61093,
+      "lon": 3.87635
+     }
+    },
+    {
+     "facility": "CHU Nancy",
+     "city": "Nancy",
+     "country": "France",
+     "geoPoint": {
+      "lat": 48.68439,
+      "lon": 6.18496
+     }
+    },
+    {
+     "facility": "CHU Nîmes",
+     "city": "Nîmes",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.83665,
+      "lon": 4.35788
+     }
+    },
+    {
+     "facility": "APHP - Hopital Européen Georges Pompidou",
+     "city": "Paris",
+     "country": "France",
+     "geoPoint": {
+      "lat": 48.85341,
+      "lon": 2.3488
+     }
+    },
+    {
+     "facility": "APHP - Hôpital BICHAT",
+     "city": "Paris",
+     "country": "France",
+     "geoPoint": {
+      "lat": 48.85341,
+      "lon": 2.3488
+     }
+    },
+    {
+     "facility": "APHP - Hôpital Cochin",
+     "city": "Paris",
+     "country": "France",
+     "geoPoint": {
+      "lat": 48.85341,
+      "lon": 2.3488
+     }
+    },
+    {
+     "facility": "APHP - Hôpital Universitaire Pitié-Salpétrière",
+     "city": "Paris",
+     "country": "France",
+     "geoPoint": {
+      "lat": 48.85341,
+      "lon": 2.3488
+     }
+    },
+    {
+     "facility": "CHU Bordeaux - Hôpital Haut Lévêque",
+     "city": "Pessac",
+     "country": "France",
+     "geoPoint": {
+      "lat": 44.80565,
+      "lon": -0.6324
+     }
+    },
+    {
+     "facility": "CHU Reims",
+     "city": "Reims",
+     "country": "France",
+     "geoPoint": {
+      "lat": 49.26526,
+      "lon": 4.02853
+     }
+    },
+    {
+     "facility": "CHRU Strasbourg",
+     "city": "Strasbourg",
+     "country": "France",
+     "geoPoint": {
+      "lat": 48.58392,
+      "lon": 7.74553
+     }
+    },
+    {
+     "facility": "Hôpital Larrey CHU Toulouse",
+     "city": "Toulouse",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.60426,
+      "lon": 1.44367
+     }
+    },
+    {
+     "facility": "Hôpital Nord Franche-Comté",
+     "city": "Trévenans",
+     "country": "France",
+     "geoPoint": {
+      "lat": 47.56667,
+      "lon": 6.86667
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "32611741",
+     "type": "RESULT",
+     "citation": "Suehs CM, Zysman M, Chenivesse C, Burgel PR, Couturaud F, Deslee G, Berger P, Raherison C, Devouassoux G, Brousse C, Roche N, Molimard M, Chinet T, Devillier P, Chanez P, Kessler R, Didier A, Martinat Y, Le Rouzic O, Bourdin A. Prioritising outcomes for evaluating eosinophil-guided corticosteroid therapy among patients with acute COPD exacerbations requiring hospitalisation: a Delphi consensus study. BMJ Open. 2020 Jul 1;10(7):e035811. doi: 10.1136/bmjopen-2019-035811."
+    }
+   ],
+   "seeAlsoLinks": [
+    {
+     "label": "eo-Drive on the Open Science Framework",
+     "url": "https://osf.io/9j7uk/"
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "YES",
+   "description": "The general goal is to make the study data available to interested researchers as well as to provide proof of transparency for the study. Data (and an accompanying data dictionary) will be de-identified and potentially further cleaned or aggregated as the investigators deem necessary to protect participant anonymity.\n\nData will be made available to persons who address a reasonable dataset request to the sponsor coordinating team (c/o Dr Carey Suehs, Department of Medical Information, Hôpital La Colombière, 39 avenue Charles Flahault, 34295 Montpellier Cedex 5, France).\n\nIn accordance with French law, dataset usage requests must by approved by the French CNIL (Commission Nationale de l'Informatique et des Libertés : https://www.cnil.fr/professionnel) prior to access.",
+   "infoTypes": [
+    "STUDY_PROTOCOL",
+    "SAP",
+    "ICF",
+    "CSR",
+    "ANALYTIC_CODE"
+   ],
+   "timeFrame": "Datasets (and accompanying analytic code) can be requested after the publication process has been completed.\n\nThe protocol, SAP and information materials will be made available in real-time (in as much as possible) on the study website at the Open Science Framework.",
+   "accessCriteria": "The conditions under which members of the public will be granted access to datasets are:\n\n* The data will be used/examined in a not-for-profit manner;\n* The data will not be used in an attempt to identify a participant or group of participants;\n* The user does not work for a private insurance company;\n* The data will not be used in support of any kind of private insurance policy or health penalties;\n* The data will be used/examined for the advancement of science/teaching while respecting participant/patient privacy and rights;\n* The user will state why they wish to access the data.\n* The appropriate CNIL approval has been obtained by the user.",
+   "url": "https://osf.io/9j7uk/"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D011241",
+     "term": "Prednisone"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D011244",
+     "term": "Pregnadienediols"
+    },
+    {
+     "id": "D011245",
+     "term": "Pregnadienes"
+    },
+    {
+     "id": "D011278",
+     "term": "Pregnanes"
+    },
+    {
+     "id": "D013256",
+     "term": "Steroids"
+    },
+    {
+     "id": "D000072473",
+     "term": "Fused-Ring Compounds"
+    },
+    {
+     "id": "D011083",
+     "term": "Polycyclic Compounds"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

@@ -2,14 +2,16 @@
  * Approvals, audit chain and validation package.
  * // @req URS-017 URS-021 URS-032
  */
-import { render, screen, within } from "@testing-library/react";
+import { act, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
+import { ApiError } from "@/app/api/client";
 import { setIdentity } from "@/app/identity";
 import { ApprovalsPage } from "./ApprovalsPage";
 import { AuditPage } from "./AuditPage";
 import { ValidationPage } from "./ValidationPage";
 import { packageFileUrl } from "./api";
+import { signErrorMessage } from "./errors";
 
 function json(body: unknown, status = 200) {
   return new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
@@ -137,6 +139,24 @@ describe("approvals", () => {
     expect(screen.getByRole("button", { name: "Sign this record" })).toBeDisabled();
     expect(screen.getByText(/Record sha256/)).toHaveTextContent(approval.record_hash);
   });
+
+  it("maps every sign error code to one plain sentence (shared with the scenario approval panel)", () => {
+    const err = (code: string, message = "Server sentence.") => new ApiError(403, code, message);
+    expect(signErrorMessage(err("self_approval_forbidden", "Authors can't review or approve their own work."))).toBe("Authors can't approve their own work.");
+    expect(signErrorMessage(err("invalid_credential", "Unknown user or wrong PIN."))).toBe("Wrong PIN — the signature was not recorded.");
+    for (const [code, fallback] of [
+      ["out_of_order", "Signatures must follow the required order."],
+      ["account_locked", "Signing is locked after too many wrong PINs."],
+      ["role_not_permitted", "This role cannot sign that meaning."],
+      ["record_changed", "The record changed after it was submitted."],
+    ]) {
+      expect(signErrorMessage(err(code))).toBe("Server sentence.");
+      expect(signErrorMessage(err(code, ""))).toBe(fallback);
+    }
+    expect(signErrorMessage(err("unknown_code"))).toBe("Server sentence.");
+    expect(signErrorMessage(new Error("Network down"))).toBe("Network down");
+    expect(signErrorMessage("plain")).toBe("plain");
+  });
 });
 
 describe("audit trail", () => {
@@ -164,6 +184,51 @@ describe("audit trail", () => {
     intact = false;
     await userEvent.click(screen.getByRole("button", { name: "Verify chain" }));
     expect(await screen.findByTestId("chain-result")).toHaveTextContent("Broken at seq 4");
+  });
+
+  it("loads the page again from Try again after a failed load", async () => {
+    let calls = 0;
+    const fetchMock = vi.fn(async () =>
+      ++calls === 1
+        ? json({ error: "internal_error", message: "Database unavailable", details: {} }, 500)
+        : json({ items: [entry(2), entry(1)], total: 2, limit: 25, offset: 0 }),
+    );
+    vi.stubGlobal("fetch", fetchMock);
+    render(<AuditPage />);
+    expect(await screen.findByText("Couldn't load the audit trail")).toBeInTheDocument();
+    await userEvent.click(screen.getByRole("button", { name: "Try again" }));
+    expect(await screen.findAllByText("ops.simulate")).toHaveLength(2);
+    expect(screen.queryByText("Couldn't load the audit trail")).not.toBeInTheDocument();
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
+  it("ignores a retry that answers after newer filters were applied", async () => {
+    const replies: Array<(r: Response) => void> = [];
+    const urls: string[] = [];
+    vi.stubGlobal(
+      "fetch",
+      vi.fn((input: RequestInfo | URL) => {
+        urls.push(String(input));
+        return new Promise<Response>((resolve) => replies.push(resolve));
+      }),
+    );
+    render(<AuditPage />);
+    await waitFor(() => expect(replies).toHaveLength(1));
+    replies[0](json({ error: "internal_error", message: "Database unavailable", details: {} }, 500));
+    await userEvent.click(await screen.findByRole("button", { name: "Try again" }));
+    await waitFor(() => expect(replies).toHaveLength(2));
+    await userEvent.type(screen.getByLabelText("Action"), "approval.sign");
+    await userEvent.click(screen.getByRole("button", { name: "Apply filters" }));
+    await waitFor(() => expect(replies).toHaveLength(3));
+    expect(urls[2]).toContain("action=approval.sign");
+    replies[2](json({ items: [{ ...entry(2), action: "approval.sign" }], total: 1, limit: 25, offset: 0 }));
+    expect(await screen.findByText("approval.sign")).toBeInTheDocument();
+    await act(async () => {
+      replies[1](json({ items: [entry(1)], total: 1, limit: 25, offset: 0 }));
+      await new Promise((r) => setTimeout(r, 20));
+    });
+    expect(screen.queryByText("ops.simulate")).not.toBeInTheDocument();
+    expect(screen.getByText("approval.sign")).toBeInTheDocument();
   });
 });
 

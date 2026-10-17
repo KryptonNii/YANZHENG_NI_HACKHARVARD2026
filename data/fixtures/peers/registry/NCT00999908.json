@@ -1,0 +1,984 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT00999908",
+   "orgStudyIdInfo": {
+    "id": "CQAB149BIT01"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2009-013763-19",
+     "type": "EUDRACT_NUMBER"
+    },
+    {
+     "id": "2009",
+     "type": "NIH",
+     "link": "https://reporter.nih.gov/quickSearch/2009"
+    }
+   ],
+   "organization": {
+    "fullName": "Novartis",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Comparison of the Effects of Indacaterol and Tiotropium on Inspiratory Capacity",
+   "officialTitle": "Multicenter, Randomized, Blinded, Placebo-controlled, Crossover, Single-dose Study to Assess the Effect of Indacaterol (150 μg) Versus Tiotropium (18 μg) on Inspiratory Capacity in Moderate Chronic Obstructive Pulmonary Disease (COPD) Patients"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2016-02",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2009-10"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2010-03",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2010-03",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2009-10-21",
+   "studyFirstSubmitQcDate": "2009-10-21",
+   "studyFirstPostDateStruct": {
+    "date": "2009-10-22",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2011-07-22",
+   "resultsFirstSubmitQcDate": "2011-07-22",
+   "resultsFirstPostDateStruct": {
+    "date": "2011-08-19",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2016-02-16",
+   "lastUpdatePostDateStruct": {
+    "date": "2016-02-17",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Novartis Pharmaceuticals",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "This study compared the effects of a single dose of indacaterol with that of a single dose of tiotropium on inspiratory capacity."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ],
+   "keywords": [
+    "COPD",
+    "indacaterol",
+    "tiotropium"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "CROSSOVER",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 54,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Indacaterol 150 μg-tiotropium 18 μg-placebo",
+     "type": "EXPERIMENTAL",
+     "description": "Patients received indacaterol 150 μg once. After a 5-9 days washout period, patients received tiotropium 18 μg once. After a second 5-9 days washout period, patients received placebo (matching indacaterol) once. All treatments were delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study.",
+     "interventionNames": [
+      "Drug: Indacaterol 150 μg",
+      "Drug: Tiotropium 18 μg",
+      "Drug: Placebo"
+     ]
+    },
+    {
+     "label": "Tiotropium 18 μg-placebo-indacaterol 150 μg",
+     "type": "EXPERIMENTAL",
+     "description": "Patients received tiotropium 18 μg once. After a 5-9 days washout period, patients received placebo (matching indacaterol) once. After a second 5-9 days washout period, patients received indacaterol 150 μg once. All treatments were delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study.",
+     "interventionNames": [
+      "Drug: Indacaterol 150 μg",
+      "Drug: Tiotropium 18 μg",
+      "Drug: Placebo"
+     ]
+    },
+    {
+     "label": "Placebo-indacaterol 150 μg-tiotropium 18 μg",
+     "type": "EXPERIMENTAL",
+     "description": "Patients received placebo (matching indacaterol) once. After a 5-9 days washout period, patients received indacaterol 150 μg once. After a second 5-9 days washout period, patients received tiotropium 18 μg once. All treatments were delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study.",
+     "interventionNames": [
+      "Drug: Indacaterol 150 μg",
+      "Drug: Tiotropium 18 μg",
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Indacaterol 150 μg",
+     "description": "Indacaterol was supplied in powder filled capsules together with a single dose dry powder inhaler (SDDPI) device.",
+     "armGroupLabels": [
+      "Indacaterol 150 μg-tiotropium 18 μg-placebo",
+      "Placebo-indacaterol 150 μg-tiotropium 18 μg",
+      "Tiotropium 18 μg-placebo-indacaterol 150 μg"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Tiotropium 18 μg",
+     "description": "Tiotropium was supplied in powder filled capsules together with a single dose dry powder inhaler (SDDPI) device.",
+     "armGroupLabels": [
+      "Indacaterol 150 μg-tiotropium 18 μg-placebo",
+      "Placebo-indacaterol 150 μg-tiotropium 18 μg",
+      "Tiotropium 18 μg-placebo-indacaterol 150 μg"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Placebo (matching indacaterol) was supplied in powder filled capsules together with a single dose dry powder inhaler (SDDPI) device.",
+     "armGroupLabels": [
+      "Indacaterol 150 μg-tiotropium 18 μg-placebo",
+      "Placebo-indacaterol 150 μg-tiotropium 18 μg",
+      "Tiotropium 18 μg-placebo-indacaterol 150 μg"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Peak Inspiratory Capacity Assessed With Spirometry in the 4 Hours After Treatment",
+     "description": "During the 4 hours following inhalation of the study treatment, inspiratory capacity (IC) was measured with spirometry conducted according to internationally accepted standards. IC was measured 3 times each at 30, 60, 120, 180, and 240 minutes post-dose and the highest value was reported in liters.",
+     "timeFrame": "4 hour period following inhalation of study treatment"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Forced Expiratory Volume in 1 Second (FEV1) Standardized (With Respect to Length of Time) Area Under the Curve (AUC) in the 4 Hours After Treatment",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. Measurements were made 30, 60, 120, 180, and 240 minutes post-dose. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time.",
+     "timeFrame": "4 hour period following inhalation of study treatment"
+    },
+    {
+     "measure": "Force Vital Capacity (FVC) Standardized (With Respect to Length of Time) Area Under the Curve (AUC) in the 4 Hours After Treatment",
+     "description": "FVC was measured with spirometry conducted according to internationally accepted standards. Measurements were made 30, 60, 120, 180, and 240 minutes post-dose. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time.",
+     "timeFrame": "4 hour period following inhalation of study treatment"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Diagnosis of moderate (as classified by the Global Initiative for Chronic Obstructive Lung Disease \\[GOLD\\] Guidelines, 2007) chronic obstructive pulmonary disease (COPD) and:\n\n  1. Smoking history of at least 10 pack-years.\n  2. Forced expiratory volume in 1 second (FEV1) \\< 80% and ≥ 50% of the predicted normal value.\n  3. Post-bronchodilator FEV1/Force vital capacity (FVC) \\< 0.7.\n\nExclusion Criteria:\n\n* Patients who have had a COPD exacerbation requiring systemic glucocorticosteroid treatment or antibiotics and/or hospitalization in the 6 weeks prior to screening.\n* Patients who have had a respiratory tract infection within 6 weeks prior to screening.\n* Patients with concomitant pulmonary disease.\n* Patients with alpha-1-antitrypsin deficiency.\n* Patients with contraindications for tiotropium treatment.\n* Patients with a history of hypersensitivity to any of the study drugs or to drugs from similar drug classes.\n\nOther protocol-defined inclusion/exclusion criteria applied to the study.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Novartis Pharmaceuticals",
+     "affiliation": "Novartis Pharmaceuticals",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bergamo",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.69601,
+      "lon": 9.66721
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Brescia",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.53558,
+      "lon": 10.21472
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Cava de' Tirreni",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 40.69954,
+      "lon": 14.70773
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Genova",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.21604,
+      "lon": 11.87211
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Milan",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 42.78235,
+      "lon": 12.59836
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Orbassano",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.00547,
+      "lon": 7.53813
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Pavia",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.19205,
+      "lon": 9.15917
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Reggio Emilia",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 44.69825,
+      "lon": 10.63125
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Sesto San Giovanni",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.53329,
+      "lon": 9.22585
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Treviso",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.66673,
+      "lon": 12.2416
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Verona",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.43854,
+      "lon": 10.9938
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "22035851",
+     "type": "DERIVED",
+     "citation": "Rossi A, Centanni S, Cerveri I, Gulotta C, Foresi A, Cazzola M, Brusasco V. Acute effects of indacaterol on lung hyperinflation in moderate COPD: a comparison with tiotropium. Respir Med. 2012 Jan;106(1):84-90. doi: 10.1016/j.rmed.2011.09.006. Epub 2011 Oct 27."
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Indacaterol 150 μg-tiotropium 18 μg-placebo",
+     "description": "Patients received indacaterol 150 μg once. After a 5-9 days washout period, patients received tiotropium 18 μg once. After a second 5-9 days washout period, patients received placebo (matching indacaterol) once. All treatments were delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study."
+    },
+    {
+     "id": "FG001",
+     "title": "Tiotropium 18 μg-placebo-indacaterol 150 μg",
+     "description": "Patients received tiotropium 18 μg once. After a 5-9 days washout period, patients received placebo (matching indacaterol) once. After a second 5-9 days washout period, patients received indacaterol 150 μg once. All treatments were delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study."
+    },
+    {
+     "id": "FG002",
+     "title": "Placebo-indacaterol 150 μg-tiotropium 18 μg",
+     "description": "Patients received placebo (matching indacaterol) once. After a 5-9 days washout period, patients received indacaterol 150 μg once. After a second 5-9 days washout period, patients received tiotropium 18 μg once. All treatments were delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Treatment Period 1",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "19"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "16"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "19"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "17"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "16"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "19"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Subject withdrew consent",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Treatment Period 2",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "17"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "16"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "19"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "16"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "16"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "19"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Protocol Violation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Treatment Period 3",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "16"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "16"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "19"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "16"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "16"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "19"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Entire Study Population",
+     "description": "The entire study population includes the 3 groups of patients who received indacaterol 150 μg, tiotropium 18 μg, and placebo (matching indacaterol) once each in 1 of 3 different orders in this crossover study. All treatments were delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study."
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "54"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "69.3",
+           "spread": "9.2"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "5"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "49"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Peak Inspiratory Capacity Assessed With Spirometry in the 4 Hours After Treatment",
+     "description": "During the 4 hours following inhalation of the study treatment, inspiratory capacity (IC) was measured with spirometry conducted according to internationally accepted standards. IC was measured 3 times each at 30, 60, 120, 180, and 240 minutes post-dose and the highest value was reported in liters.",
+     "populationDescription": "Per protocol population: All randomized patients who received all the study drugs and had at least 1 post-dose inspiratory capacity measurement within 4 hours after inhalation in each treatment period and who were compliant with the protocol and without any major deviation likely to affect the analysis of pulmonary function measurements.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "4 hour period following inhalation of study treatment",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol 150 μg",
+       "description": "Patients received indacaterol 150 μg once, delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium 18 μg",
+       "description": "Patients received tiotropium 18 μg once, delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study."
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo",
+       "description": "Patients received placebo (matching indacaterol) once, delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "44"
+        },
+        {
+         "groupId": "OG001",
+         "value": "44"
+        },
+        {
+         "groupId": "OG002",
+         "value": "44"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.705",
+           "spread": "0.676"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.630",
+           "spread": "0.601"
+          },
+          {
+           "groupId": "OG002",
+           "value": "2.557",
+           "spread": "0.561"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Forced Expiratory Volume in 1 Second (FEV1) Standardized (With Respect to Length of Time) Area Under the Curve (AUC) in the 4 Hours After Treatment",
+     "description": "FEV1 was measured with spirometry conducted according to internationally accepted standards. Measurements were made 30, 60, 120, 180, and 240 minutes post-dose. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time.",
+     "populationDescription": "Intent-to-treat population: All randomized patients who received all the study drugs and had at least 1 post-dose inspiratory capacity measurement within 4 hours after inhalation in each treatment period.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "4 hour period following inhalation of study treatment",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol 150 μg",
+       "description": "Patients received indacaterol 150 μg once, delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium 18 μg",
+       "description": "Patients received tiotropium 18 μg once, delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study."
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo",
+       "description": "Patients received placebo (matching indacaterol) once, delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "49"
+        },
+        {
+         "groupId": "OG001",
+         "value": "49"
+        },
+        {
+         "groupId": "OG002",
+         "value": "49"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.744",
+           "spread": "0.419"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.767",
+           "spread": "0.449"
+          },
+          {
+           "groupId": "OG002",
+           "value": "1.642",
+           "spread": "0.409"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Force Vital Capacity (FVC) Standardized (With Respect to Length of Time) Area Under the Curve (AUC) in the 4 Hours After Treatment",
+     "description": "FVC was measured with spirometry conducted according to internationally accepted standards. Measurements were made 30, 60, 120, 180, and 240 minutes post-dose. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time.",
+     "populationDescription": "Intent-to-treat population: All randomized patients who received all the study drugs and had at least 1 post-dose inspiratory capacity measurement within 4 hours after inhalation in each treatment period.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "4 hour period following inhalation of study treatment",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol 150 μg",
+       "description": "Patients received indacaterol 150 μg once, delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium 18 μg",
+       "description": "Patients received tiotropium 18 μg once, delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study."
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo",
+       "description": "Patients received placebo (matching indacaterol) once, delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "49"
+        },
+        {
+         "groupId": "OG001",
+         "value": "49"
+        },
+        {
+         "groupId": "OG002",
+         "value": "49"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.140",
+           "spread": "0.700"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.176",
+           "spread": "0.788"
+          },
+          {
+           "groupId": "OG002",
+           "value": "3.048",
+           "spread": "0.753"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Indacaterol 150 μg",
+     "description": "Patients received indacaterol 150 μg once, delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study.",
+     "seriousNumAffected": 0,
+     "seriousNumAtRisk": 54,
+     "otherNumAffected": 0,
+     "otherNumAtRisk": 54
+    },
+    {
+     "id": "EG001",
+     "title": "Tiotropium 18 μg",
+     "description": "Patients received tiotropium 18 μg once, delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study.",
+     "seriousNumAffected": 0,
+     "seriousNumAtRisk": 52,
+     "otherNumAffected": 0,
+     "otherNumAtRisk": 52
+    },
+    {
+     "id": "EG002",
+     "title": "Placebo",
+     "description": "Patients received placebo (matching indacaterol) once, delivered via a single dose dry powder inhaler (SDDPI). The short-acting β2-agonist salbutamol was available for rescue use throughout the study.",
+     "seriousNumAffected": 0,
+     "seriousNumAtRisk": 51,
+     "otherNumAffected": 0,
+     "otherNumAtRisk": 51
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "The terms and conditions of Novartis' agreements with its investigators may vary. However, Novartis does not prohibit any investigator from publishing. Any publications from a single-site are postponed until the publication of the pooled data (ie, data from all sites) in the clinical trial."
+   },
+   "pointOfContact": {
+    "title": "Study Director",
+    "organization": "Novartis Pharmaceuticals",
+    "phone": "862 778-8300"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C510790",
+     "term": "indacaterol"
+    },
+    {
+     "id": "D000069447",
+     "term": "Tiotropium Bromide"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D012602",
+     "term": "Scopolamine Derivatives"
+    },
+    {
+     "id": "D014326",
+     "term": "Tropanes"
+    },
+    {
+     "id": "D053961",
+     "term": "Azabicyclo Compounds"
+    },
+    {
+     "id": "D001372",
+     "term": "Aza Compounds"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000470",
+     "term": "Alkaloids"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D019086",
+     "term": "Bridged Bicyclo Compounds, Heterocyclic"
+    },
+    {
+     "id": "D006572",
+     "term": "Heterocyclic Compounds, Bridged-Ring"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

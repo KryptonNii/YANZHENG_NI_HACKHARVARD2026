@@ -1,0 +1,6966 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01854645",
+   "orgStudyIdInfo": {
+    "id": "PT003006-00"
+   },
+   "organization": {
+    "fullName": "Pearl Therapeutics, Inc.",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Efficacy and Safety of PT003, PT005, and PT001 in Subjects With Moderate to Very Severe Chronic Obstructive Pulmonary Disease (COPD); (PINNACLE 1)",
+   "officialTitle": "A Randomized, Double Blind, Chronic Dosing, Placebo-Controlled, Parallel Group, Multi Center Study to Assess the Efficacy and Safety of PT003, PT005, and PT001 in Subjects With Moderate to Very Severe COPD, Compared With Placebo and Spiriva® Handihaler® (Tiotropium Bromide 18 µg Open-Label) as an Active Control"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2017-02",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2013-05"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2015-02",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2015-02",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2013-05-13",
+   "studyFirstSubmitQcDate": "2013-05-13",
+   "studyFirstPostDateStruct": {
+    "date": "2013-05-15",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2016-05-20",
+   "resultsFirstSubmitQcDate": "2017-02-07",
+   "resultsFirstPostDateStruct": {
+    "date": "2017-03-28",
+    "type": "ACTUAL"
+   },
+   "dispFirstSubmitDate": "2015-07-07",
+   "dispFirstSubmitQcDate": "2015-07-07",
+   "dispFirstPostDateStruct": {
+    "date": "2015-07-30",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2017-02-07",
+   "lastUpdatePostDateStruct": {
+    "date": "2017-03-28",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Pearl Therapeutics, Inc.",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "The overall objective of this study is to assess the efficacy and safety of treatment with PT003 (GFF MDI), PT005 (FF MDI), PT001 (GP MDI), and open-label tiotropium bromide inhalation powder compared with each other and Placebo MDI over 24 weeks in subjects with moderate to very severe COPD."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 2103,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "GFF MDI",
+     "type": "EXPERIMENTAL",
+     "description": "Glycopyrronium Formoterol Fumarate (GFF) Metered Dose Inhaler (MDI) (PT003)",
+     "interventionNames": [
+      "Drug: GFF MDI"
+     ]
+    },
+    {
+     "label": "GP MDI",
+     "type": "EXPERIMENTAL",
+     "description": "Glycopyrronium (GP) MDI (PT001)",
+     "interventionNames": [
+      "Drug: GP MDI"
+     ]
+    },
+    {
+     "label": "FF MDI",
+     "type": "EXPERIMENTAL",
+     "description": "Formoterol Fumarate (FF) MDI (PT005)",
+     "interventionNames": [
+      "Drug: FF MDI"
+     ]
+    },
+    {
+     "label": "Open-label tiotropium bromide inhalation powder",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Open-label tiotropium bromide inhalation powder (Spiriva® Handihaler®)",
+     "interventionNames": [
+      "Drug: Open-label tiotropium bromide inhalation powder (Spiriva® Handihaler®)"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo MDI",
+     "interventionNames": [
+      "Drug: Placebo MDI"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "GFF MDI",
+     "description": "GFF MDI administered as two puffs Bis in Di.e. Twice Daily (BID)",
+     "armGroupLabels": [
+      "GFF MDI"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "GP MDI",
+     "description": "GP MDI administered as two puffs BID",
+     "armGroupLabels": [
+      "GP MDI"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "FF MDI",
+     "description": "FF MDI administered as two puffs BID",
+     "armGroupLabels": [
+      "FF MDI"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Open-label tiotropium bromide inhalation powder (Spiriva® Handihaler®)",
+     "description": "Taken as 1 capsule daily containing 18 µg of open-label tiotropium via the Handihaler dry powder inhaler (DPI)",
+     "armGroupLabels": [
+      "Open-label tiotropium bromide inhalation powder"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo MDI",
+     "description": "Inhaled placebo administered as two puffs BID",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Change From Baseline in Morning Pre-dose Trough FEV1 at Week 24",
+     "description": "Change from baseline in morning pre-dose trough forced expiratory volume in 1 second (FEV1) at Week 24",
+     "timeFrame": "Baseline and at Week 24"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Change From Baseline in Morning Pre-dose Trough FEV1 Over 24 Weeks",
+     "description": "Change from baseline in morning pre-dose trough forced expiratory volume in 1 second (FEV1) over 24 weeks. FEV1 was assessed at multiple time points post-baseline,and a modelbased average of all visits starting from Week 2 through week 24 inclusive was calculated. The change values reported in the table represent the change between the baseline and the average FEV1 post-baseline.",
+     "timeFrame": "Baseline and Weeks 2 to 24"
+    },
+    {
+     "measure": "St. George's Respiratory Questionnaire (SGRQ) Score",
+     "description": "Change from baseline in the SGRQ total score. The SGRQ is a disease-specific questionnaire, self-completed by participants, used to evaluate the effect of GFF MDI, FF MDI and GP MDI on health-related quality of life as compared to placebo in subjects with COPD. The scores range from 0 (minimum, best possible health status) to 100 (maximum, worst possible health status). The SGRQ contains 76 items grouped into three domains (symptoms, activity and impacts). Change from Baseline at a particular visit was calculated as the SGRQ total score at that visit minus Baseline. Change from Baseline in total score of -4 units or lower is considered as clinically meaningful improvement in quality of life.",
+     "timeFrame": "Baseline and at Week 24"
+    },
+    {
+     "measure": "Rescue Ventolin Hydrofluoroalkane (HFA) Use",
+     "description": "Change from baseline in average daily rescue Ventolin HFA use",
+     "timeFrame": "Baseline and at Week 24"
+    },
+    {
+     "measure": "Onset of Action as Assessed by FEV1",
+     "description": "Defined as the first time-point using the 5- and 15-minute post dose measurements where the difference in FEV1 from Placebo was statistically significant",
+     "timeFrame": "Assessed for 5- and 15-minute post dose on Day 1"
+    },
+    {
+     "measure": "Peak Change From Baseline in FEV1 Within 2 Hours Post-dose",
+     "description": "Peak change from baseline in forced expiratory volume in 1 second (FEV1) within 2 hours post-dose",
+     "timeFrame": "Baseline and at Week 24"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Key Inclusion Criteria:\n\n* Male or female subjects at least 40 years of age and no older than 80 at Visit 1.\n* Subjects with an established clinical history of COPD as defined by the American Thoracic Society (ATS)/European Respiratory Society (ERS)\n* Current or former smokers with a history of at least 10 pack-years of cigarette smoking.\n* Average f the -60 and the -30 min pre-dose FEV1 assessments must be \\< 80% predicted normal value calculated using National Health and Nutrition Examination Survey (NHANES) III reference equations.\n* Subjects willing and, in the opinion of the investigator, able to adjust current COPD therapy as required by the protocol\n\nKey Exclusion Criteria:\n\n* Significant diseases other than COPD, i.e. disease or condition which, in the opinion of the investigator, may put the patient at risk because of participation in the study or may influence either the results of the study or the subject's ability to participate in the study\n* Current diagnosis of asthma or alpha-1 antitrypsin deficiency\n* Other active pulmonary disease such as active tuberculosis, lung cancer, bronchiectasis, sarcoidosis, idiopathic interstitial pulmonary fibrosis, primary pulmonary hypertension, or uncontrolled sleep apnea\n* Hospitalized due to poorly controlled COPD within 3 months prior to screening or during the Screening Period\n* Poorly controlled COPD, defined as acute worsening of COPD that requires treatment with oral corticosteroids or antibiotics within 6 weeks prior to screening or during the Screening Period\n* Lower respiratory tract infections that required antibiotics within 6 weeks prior to screening or during the Screening Period\n* Unstable ischemic heart disease, left ventricular failure, or documented myocardial infarction within 12 months of enrollment.\n* Recent history of acute coronary syndrome, percutaneous coronary intervention, coronary artery bypass graft within the past three months\n* Congestive heart failure (CHF) New York Heart Association (NYHA) Class III/IV)\n* Clinically significant abnormal 12-lead ECG\n* Abnormal liver function tests defined as aspartate transaminase (AST), alanine transaminase (ALT), or total bilirubin ≥ 1.5 times upper limit of normal at Visit 1 and on repeat testing\n* Cancer not in complete remission for at least five years\n* History of hypersensitivity to β2-agonists, glycopyrronium or other muscarinic anticholinergics, lactose/milk protein or any component of the MDI\n\nOther protocol-defined inclusion/exclusion criteria may apply",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Colin Reisner, MD",
+     "affiliation": "Pearl Therapeutics, Inc.",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Andalusia",
+     "state": "Alabama",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 31.30808,
+      "lon": -86.48243
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Anniston",
+     "state": "Alabama",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.65983,
+      "lon": -85.83163
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Athens",
+     "state": "Alabama",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.80243,
+      "lon": -86.97219
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Mesa",
+     "state": "Arizona",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.42227,
+      "lon": -111.82264
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Phoenix",
+     "state": "Arizona",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.44838,
+      "lon": -112.07404
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Scottsdale",
+     "state": "Arizona",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.50921,
+      "lon": -111.89903
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Tucson",
+     "state": "Arizona",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.22174,
+      "lon": -110.92648
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Anaheim",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.83529,
+      "lon": -117.9145
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Carlsbad",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.15809,
+      "lon": -117.35059
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Lakewood",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.85363,
+      "lon": -118.13396
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Los Angeles",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Pasadena",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.14778,
+      "lon": -118.14452
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Poway",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.96282,
+      "lon": -117.03586
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Sacramento",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.58157,
+      "lon": -121.4944
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "San Diego",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.71571,
+      "lon": -117.16472
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Tustin",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.74585,
+      "lon": -117.82617
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Vista",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.20004,
+      "lon": -117.24254
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Colorado Springs",
+     "state": "Colorado",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.83388,
+      "lon": -104.82136
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Denver",
+     "state": "Colorado",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.73915,
+      "lon": -104.9847
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Fort Collins",
+     "state": "Colorado",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.58526,
+      "lon": -105.08442
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Wheat Ridge",
+     "state": "Colorado",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.7661,
+      "lon": -105.07721
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Danbury",
+     "state": "Connecticut",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.39482,
+      "lon": -73.45401
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Waterbury",
+     "state": "Connecticut",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.55815,
+      "lon": -73.0515
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Brandon",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.9378,
+      "lon": -82.28592
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Clearwater",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.96585,
+      "lon": -82.8001
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Lehigh Acres",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.62535,
+      "lon": -81.6248
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Miami",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Ormond Beach",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.28581,
+      "lon": -81.05589
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Panama City",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.15946,
+      "lon": -85.65983
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Pensacola",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.42131,
+      "lon": -87.21691
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "St. Petersburg",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.77086,
+      "lon": -82.67927
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Tampa",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.94752,
+      "lon": -82.45843
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Winter Park",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.6,
+      "lon": -81.33924
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Atlanta",
+     "state": "Georgia",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.749,
+      "lon": -84.38798
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Austell",
+     "state": "Georgia",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.81261,
+      "lon": -84.63438
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Columbus",
+     "state": "Georgia",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.46098,
+      "lon": -84.98771
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Duluth",
+     "state": "Georgia",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.00288,
+      "lon": -84.14464
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Gainesville",
+     "state": "Georgia",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.29788,
+      "lon": -83.82407
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Coeur d'Alene",
+     "state": "Idaho",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.67768,
+      "lon": -116.78047
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Champaign",
+     "state": "Illinois",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.11642,
+      "lon": -88.24338
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Evanston",
+     "state": "Illinois",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.04114,
+      "lon": -87.69006
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Peoria",
+     "state": "Illinois",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.69365,
+      "lon": -89.58899
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "River Forest",
+     "state": "Illinois",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.89781,
+      "lon": -87.81395
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Anderson",
+     "state": "Indiana",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.10532,
+      "lon": -85.68025
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Avon",
+     "state": "Indiana",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.76282,
+      "lon": -86.39972
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Elwood",
+     "state": "Indiana",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.27698,
+      "lon": -85.84192
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Evansville",
+     "state": "Indiana",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.97476,
+      "lon": -87.55585
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Iowa City",
+     "state": "Iowa",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.66113,
+      "lon": -91.53017
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Topeka",
+     "state": "Kansas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.04833,
+      "lon": -95.67804
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Louisville",
+     "state": "Kentucky",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.25424,
+      "lon": -85.75941
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Lafayette",
+     "state": "Louisiana",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.22409,
+      "lon": -92.01984
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Sunset",
+     "state": "Louisiana",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.41131,
+      "lon": -92.06845
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Hollywood",
+     "state": "Maryland",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.07511,
+      "lon": -76.5858
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Livonia",
+     "state": "Michigan",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.36837,
+      "lon": -83.35271
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Southfield",
+     "state": "Michigan",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.47337,
+      "lon": -83.22187
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Edina",
+     "state": "Minnesota",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.88969,
+      "lon": -93.34995
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Fridley",
+     "state": "Minnesota",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 45.08608,
+      "lon": -93.26328
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Minneapolis",
+     "state": "Minnesota",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.97997,
+      "lon": -93.26384
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Woodbury",
+     "state": "Minnesota",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.92386,
+      "lon": -92.95938
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Saint Charles",
+     "state": "Missouri",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.78394,
+      "lon": -90.48123
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Springfield",
+     "state": "Missouri",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.21533,
+      "lon": -93.29824
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "St Louis",
+     "state": "Missouri",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.62727,
+      "lon": -90.19789
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Missoula",
+     "state": "Montana",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 46.87215,
+      "lon": -113.994
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Bellevue",
+     "state": "Nebraska",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.13667,
+      "lon": -95.89084
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Omaha",
+     "state": "Nebraska",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.25626,
+      "lon": -95.94043
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Las Vegas",
+     "state": "Nevada",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.17497,
+      "lon": -115.13722
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Ocean City",
+     "state": "New Jersey",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.27762,
+      "lon": -74.5746
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Albuquerque",
+     "state": "New Mexico",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.08449,
+      "lon": -106.65114
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Corning",
+     "state": "New York",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.14285,
+      "lon": -77.05469
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Burlington",
+     "state": "North Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.09569,
+      "lon": -79.4378
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Charlotte",
+     "state": "North Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.22709,
+      "lon": -80.84313
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Greensboro",
+     "state": "North Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.07264,
+      "lon": -79.79198
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Huntersville",
+     "state": "North Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.41069,
+      "lon": -80.84285
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Raleigh",
+     "state": "North Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.7721,
+      "lon": -78.63861
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Wilmington",
+     "state": "North Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.23556,
+      "lon": -77.94604
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Winston-Salem",
+     "state": "North Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.09986,
+      "lon": -80.24422
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Cincinnati",
+     "state": "Ohio",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.12711,
+      "lon": -84.51439
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Columbus",
+     "state": "Ohio",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.96118,
+      "lon": -82.99879
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Dayton",
+     "state": "Ohio",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.75895,
+      "lon": -84.19161
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Dublin",
+     "state": "Ohio",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.09923,
+      "lon": -83.11408
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Oregon",
+     "state": "Ohio",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.64366,
+      "lon": -83.48688
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Bend",
+     "state": "Oregon",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.05817,
+      "lon": -121.31531
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Medford",
+     "state": "Oregon",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.32652,
+      "lon": -122.87559
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Portland",
+     "state": "Oregon",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 45.52345,
+      "lon": -122.67621
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Monroeville",
+     "state": "Pennsylvania",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.42118,
+      "lon": -79.7881
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Philadelphia",
+     "state": "Pennsylvania",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.95238,
+      "lon": -75.16362
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Charleston",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.77632,
+      "lon": -79.93275
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Easley",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.82984,
+      "lon": -82.60152
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Gaffney",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.07179,
+      "lon": -81.64982
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Greenville",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.85262,
+      "lon": -82.39401
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Mt. Pleasant",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.79407,
+      "lon": -79.86259
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Murrells Inlet",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.551,
+      "lon": -79.04143
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Myrtle Beach",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.68906,
+      "lon": -78.88669
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Rock Hill",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.92487,
+      "lon": -81.02508
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Spartanburg",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.94957,
+      "lon": -81.93205
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Union",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.71541,
+      "lon": -81.62371
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Rapid City",
+     "state": "South Dakota",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.08054,
+      "lon": -103.23101
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Bristol",
+     "state": "Tennessee",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.59511,
+      "lon": -82.18874
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Johnson City",
+     "state": "Tennessee",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.31344,
+      "lon": -82.35347
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Kingsport",
+     "state": "Tennessee",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.54843,
+      "lon": -82.56182
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Tullahoma",
+     "state": "Tennessee",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.36202,
+      "lon": -86.20943
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Austin",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.26715,
+      "lon": -97.74306
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "El Paso",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 31.75872,
+      "lon": -106.48693
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Fort Worth",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.72541,
+      "lon": -97.32085
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Houston",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.76328,
+      "lon": -95.36327
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Huntsville",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.72353,
+      "lon": -95.55078
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Longview",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.5007,
+      "lon": -94.74049
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Lufkin",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 31.33824,
+      "lon": -94.7291
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "New Braunfels",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.703,
+      "lon": -98.12445
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "San Antonio",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.42412,
+      "lon": -98.49363
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Midvale",
+     "state": "Utah",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.61106,
+      "lon": -111.89994
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Salt Lake City",
+     "state": "Utah",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.76078,
+      "lon": -111.89105
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "South Burlington",
+     "state": "Vermont",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.46699,
+      "lon": -73.17096
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Abingdon",
+     "state": "Virginia",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.70983,
+      "lon": -81.97735
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Richmond",
+     "state": "Virginia",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.55376,
+      "lon": -77.46026
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Spokane",
+     "state": "Washington",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.65966,
+      "lon": -117.42908
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Tacoma",
+     "state": "Washington",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.25288,
+      "lon": -122.44429
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Morgantown",
+     "state": "West Virginia",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.62953,
+      "lon": -79.9559
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "West Allis",
+     "state": "Wisconsin",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.01668,
+      "lon": -88.00703
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "New Lambton",
+     "state": "New South Wales",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -32.92838,
+      "lon": 151.7085
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Westmead",
+     "state": "New South Wales",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -33.80383,
+      "lon": 150.98768
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Brisbane",
+     "state": "Queensland",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -27.46794,
+      "lon": 153.02809
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Cairns",
+     "state": "Queensland",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -16.92366,
+      "lon": 145.76613
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Wooloongabba",
+     "state": "Queensland",
+     "country": "Australia"
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Adelaide",
+     "state": "South Australia",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -34.92866,
+      "lon": 138.59863
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Daw Park",
+     "state": "South Australia",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -34.98975,
+      "lon": 138.58407
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Toorak Gardens",
+     "state": "South Australia",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -34.93478,
+      "lon": 138.63639
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Box Hill",
+     "state": "Victoria",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -37.81887,
+      "lon": 145.12545
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Heidelberg",
+     "state": "Victoria",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -37.75,
+      "lon": 145.06667
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Nedlands",
+     "state": "Western Australia",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -31.98184,
+      "lon": 115.8073
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Perth",
+     "state": "Western Australia",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -31.95224,
+      "lon": 115.8614
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Otahuhu",
+     "state": "Aukland",
+     "country": "New Zealand",
+     "geoPoint": {
+      "lat": -36.9382,
+      "lon": 174.84019
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Caversham",
+     "state": "Dunedin",
+     "country": "New Zealand",
+     "geoPoint": {
+      "lat": -45.88838,
+      "lon": 170.4701
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Greenlane",
+     "state": "East Aukland",
+     "country": "New Zealand",
+     "geoPoint": {
+      "lat": -36.89055,
+      "lon": 174.79426
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Hamilton",
+     "state": "Waikato Region",
+     "country": "New Zealand",
+     "geoPoint": {
+      "lat": -37.78333,
+      "lon": 175.28333
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Newtown",
+     "state": "Wellington Region",
+     "country": "New Zealand",
+     "geoPoint": {
+      "lat": -41.31115,
+      "lon": 174.77935
+     }
+    },
+    {
+     "facility": "Pearl Investigative Site",
+     "city": "Tauranga",
+     "country": "New Zealand",
+     "geoPoint": {
+      "lat": -37.68611,
+      "lon": 176.16667
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "42551404",
+     "type": "DERIVED",
+     "citation": "Spata E, Jauhiainen A, Da Silva CA. Impact of season and geography on COPDCompEx: a composite endpoint for COPD trials. Respir Med Res. 2026 Jul 12;90:101305. doi: 10.1016/j.resmer.2026.101305. Online ahead of print."
+    },
+    {
+     "pmid": "35815359",
+     "type": "DERIVED",
+     "citation": "Singh D, Hurst JR, Martinez FJ, Rabe KF, Bafadhel M, Jenkins M, Salazar D, Dorinsky P, Darken P. Predictive modeling of COPD exacerbation rates using baseline risk factors. Ther Adv Respir Dis. 2022 Jan-Dec;16:17534666221107314. doi: 10.1177/17534666221107314."
+    },
+    {
+     "pmid": "32450869",
+     "type": "DERIVED",
+     "citation": "Martinez FJ, Lipworth BJ, Rabe KF, Collier DJ, Ferguson GT, Sethi S, Feldman GJ, O'Brien G, Jenkins M, Reisner C. Benefits of glycopyrrolate/formoterol fumarate metered dose inhaler (GFF MDI) in improving lung function and reducing exacerbations in patients with moderate-to-very severe COPD: a pooled analysis of the PINNACLE studies. Respir Res. 2020 May 25;21(1):128. doi: 10.1186/s12931-020-01388-y."
+    },
+    {
+     "pmid": "32021148",
+     "type": "DERIVED",
+     "citation": "Martinez FJ, Rabe KF, Lipworth BJ, Arora S, Jenkins M, Martin UJ, Reisner C. Glycopyrrolate/Formoterol Fumarate Metered Dose Inhaler Improves Lung Function versus Monotherapies in GOLD Category A Patients with COPD: Pooled Data from the Phase III PINNACLE Studies. Int J Chron Obstruct Pulmon Dis. 2020 Jan 9;15:99-106. doi: 10.2147/COPD.S229794. eCollection 2020."
+    },
+    {
+     "pmid": "28720336",
+     "type": "DERIVED",
+     "citation": "Martinez FJ, Fabbri LM, Ferguson GT, Orevillo C, Darken P, Martin UJ, Reisner C. Baseline Symptom Score Impact on Benefits of Glycopyrrolate/Formoterol Metered Dose Inhaler in COPD. Chest. 2017 Dec;152(6):1169-1178. doi: 10.1016/j.chest.2017.07.007. Epub 2017 Jul 16."
+    }
+   ],
+   "seeAlsoLinks": [
+    {
+     "label": "PT003006-02 Protocol and Amendment-FINAL-Redacted",
+     "url": "http://filehosting.pharmacm.com/DownloadService.ashx?client=CTR_MED_7111&studyid=4154&filename=PT003006-02%20Protocol%20Amendment-FINAL-11Sept14_29Jun16_Redacted.pdf"
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "Study was a multicenter, randomized, double-blind, parallel group, chronic dosing, active- and placebo-controlled study; each patient was randomized to receive 1 of 5 possible treatments over the course of a 24-week treatment period",
+   "recruitmentDetails": "Conducted at 160 sites throughout the US, Australia, and New Zealand from June 2013 - February 2015. Study participation was a maximum of 32 weeks.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "GFF MDI (PT003)",
+     "description": "Glycopyrronium Formoterol Fumarate (GFF) Metered Dose Inhaler (MDI) 14.4/9.6 mcg"
+    },
+    {
+     "id": "FG001",
+     "title": "GP MDI (PT001)",
+     "description": "Glycopyrronium (GP) MDI 14.4 mcg"
+    },
+    {
+     "id": "FG002",
+     "title": "FF MDI (PT005)",
+     "description": "Formoterol Fumarate (FF) MDI 9.6 mcg"
+    },
+    {
+     "id": "FG003",
+     "title": "Spiriva® Handihaler® (Open-label)",
+     "description": "Open-label tiotropium bromide inhalation powder 18 mcg"
+    },
+    {
+     "id": "FG004",
+     "title": "Placebo",
+     "description": "Placebo MDI"
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "527"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "451"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "452"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "453"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "220"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "429"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "345"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "370"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "391"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "160"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "98"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "106"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "82"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "62"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "60"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Protocol-Specified Criteria",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "13"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "10"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "8"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "7"
+        }
+       ]
+      },
+      {
+       "type": "Administrative Reasons / Missing",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Protocol Violation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "4"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "10"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "7"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "8"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Physician Decision",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "7"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "31"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "41"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "30"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "21"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "24"
+        }
+       ]
+      },
+      {
+       "type": "Lack of Efficacy",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "7"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "12"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "9"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "9"
+        }
+       ]
+      },
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "33"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "31"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "19"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "20"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "11"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "populationDescription": "7 subjects were excluded from analysis.",
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "GFF MDI (PT003)",
+     "description": "Glycopyrronium Formoterol Fumarate (GFF) Metered Dose Inhaler (MDI) 14.4/9.6 mcg"
+    },
+    {
+     "id": "BG001",
+     "title": "GP MDI (PT001)",
+     "description": "Glycopyrronium (GP) MDI 14.4 mcg"
+    },
+    {
+     "id": "BG002",
+     "title": "FF MDI (PT005)",
+     "description": "Formoterol Fumarate (FF) MDI 9.6 mcg"
+    },
+    {
+     "id": "BG003",
+     "title": "Spiriva® Handihaler® (Open-label)",
+     "description": "Open-label tiotropium bromide inhalation powder 18 mcg"
+    },
+    {
+     "id": "BG004",
+     "title": "Placebo",
+     "description": "Placebo MDI"
+    },
+    {
+     "id": "BG005",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "526"
+      },
+      {
+       "groupId": "BG001",
+       "value": "451"
+      },
+      {
+       "groupId": "BG002",
+       "value": "449"
+      },
+      {
+       "groupId": "BG003",
+       "value": "451"
+      },
+      {
+       "groupId": "BG004",
+       "value": "219"
+      },
+      {
+       "groupId": "BG005",
+       "value": "2096"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "62.6",
+           "spread": "8.4"
+          },
+          {
+           "groupId": "BG001",
+           "value": "62.9",
+           "spread": "8.4"
+          },
+          {
+           "groupId": "BG002",
+           "value": "63.0",
+           "spread": "8.3"
+          },
+          {
+           "groupId": "BG003",
+           "value": "63.0",
+           "spread": "8.6"
+          },
+          {
+           "groupId": "BG004",
+           "value": "62.5",
+           "spread": "8.3"
+          },
+          {
+           "groupId": "BG005",
+           "value": "62.8",
+           "spread": "8.4"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "236"
+          },
+          {
+           "groupId": "BG001",
+           "value": "196"
+          },
+          {
+           "groupId": "BG002",
+           "value": "203"
+          },
+          {
+           "groupId": "BG003",
+           "value": "182"
+          },
+          {
+           "groupId": "BG004",
+           "value": "97"
+          },
+          {
+           "groupId": "BG005",
+           "value": "914"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "290"
+          },
+          {
+           "groupId": "BG001",
+           "value": "255"
+          },
+          {
+           "groupId": "BG002",
+           "value": "246"
+          },
+          {
+           "groupId": "BG003",
+           "value": "269"
+          },
+          {
+           "groupId": "BG004",
+           "value": "122"
+          },
+          {
+           "groupId": "BG005",
+           "value": "1182"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Change From Baseline in Morning Pre-dose Trough FEV1 at Week 24",
+     "description": "Change from baseline in morning pre-dose trough forced expiratory volume in 1 second (FEV1) at Week 24",
+     "populationDescription": "Intent-to-Treat population with evaluable data (no imputation) for this outcome measure",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Baseline and at Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "GFF MDI (PT003)",
+       "description": "Glycopyrronium Formoterol Fumarate (GFF) Metered Dose Inhaler (MDI) 14.4/9.6 mcg"
+      },
+      {
+       "id": "OG001",
+       "title": "GP MDI (PT001)",
+       "description": "Glycopyrronium (GP) MDI 14.4 mcg"
+      },
+      {
+       "id": "OG002",
+       "title": "FF MDI (PT005)",
+       "description": "Formoterol Fumarate (FF) MDI 9.6 mcg"
+      },
+      {
+       "id": "OG003",
+       "title": "Spiriva® Handihaler® (Open-label)",
+       "description": "Open-label tiotropium bromide inhalation powder 18 mcg"
+      },
+      {
+       "id": "OG004",
+       "title": "Placebo",
+       "description": "Placebo MDI"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "429"
+        },
+        {
+         "groupId": "OG001",
+         "value": "344"
+        },
+        {
+         "groupId": "OG002",
+         "value": "367"
+        },
+        {
+         "groupId": "OG003",
+         "value": "390"
+        },
+        {
+         "groupId": "OG004",
+         "value": "161"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.126",
+           "lowerLimit": "0.107",
+           "upperLimit": "0.145"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.066",
+           "lowerLimit": "0.045",
+           "upperLimit": "0.087"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.062",
+           "lowerLimit": "0.041",
+           "upperLimit": "0.082"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.105",
+           "lowerLimit": "0.084",
+           "upperLimit": "0.125"
+          },
+          {
+           "groupId": "OG004",
+           "value": "-0.024",
+           "lowerLimit": "-0.055",
+           "upperLimit": "0.007"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Morning Pre-dose Trough FEV1 Over 24 Weeks",
+     "description": "Change from baseline in morning pre-dose trough forced expiratory volume in 1 second (FEV1) over 24 weeks. FEV1 was assessed at multiple time points post-baseline,and a modelbased average of all visits starting from Week 2 through week 24 inclusive was calculated. The change values reported in the table represent the change between the baseline and the average FEV1 post-baseline.",
+     "populationDescription": "Intent-to-Treat population with evaluable data (no imputation) for this outcome measure",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Baseline and Weeks 2 to 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "GFF MDI (PT003)",
+       "description": "Glycopyrronium Formoterol Fumarate (GFF) Metered Dose Inhaler (MDI) 14.4/9.6 mcg"
+      },
+      {
+       "id": "OG001",
+       "title": "GP MDI (PT001)",
+       "description": "Glycopyrronium (GP) MDI 14.4 mcg"
+      },
+      {
+       "id": "OG002",
+       "title": "FF MDI (PT005)",
+       "description": "Formoterol Fumarate (FF) MDI 9.6 mcg"
+      },
+      {
+       "id": "OG003",
+       "title": "Spiriva® Handihaler® (Open-label)",
+       "description": "Open-label tiotropium bromide inhalation powder 18 mcg"
+      },
+      {
+       "id": "OG004",
+       "title": "Placebo",
+       "description": "Placebo MDI"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "519"
+        },
+        {
+         "groupId": "OG001",
+         "value": "440"
+        },
+        {
+         "groupId": "OG002",
+         "value": "439"
+        },
+        {
+         "groupId": "OG003",
+         "value": "446"
+        },
+        {
+         "groupId": "OG004",
+         "value": "208"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.150",
+           "lowerLimit": "0.136",
+           "upperLimit": "0.164"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.091",
+           "lowerLimit": "0.076",
+           "upperLimit": "0.106"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.086",
+           "lowerLimit": "0.071",
+           "upperLimit": "0.101"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.122",
+           "lowerLimit": "0.107",
+           "upperLimit": "0.137"
+          },
+          {
+           "groupId": "OG004",
+           "value": "-0.007",
+           "lowerLimit": "-0.029",
+           "upperLimit": "0.015"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "St. George's Respiratory Questionnaire (SGRQ) Score",
+     "description": "Change from baseline in the SGRQ total score. The SGRQ is a disease-specific questionnaire, self-completed by participants, used to evaluate the effect of GFF MDI, FF MDI and GP MDI on health-related quality of life as compared to placebo in subjects with COPD. The scores range from 0 (minimum, best possible health status) to 100 (maximum, worst possible health status). The SGRQ contains 76 items grouped into three domains (symptoms, activity and impacts). Change from Baseline at a particular visit was calculated as the SGRQ total score at that visit minus Baseline. Change from Baseline in total score of -4 units or lower is considered as clinically meaningful improvement in quality of life.",
+     "populationDescription": "Intent-to-Treat population with evaluable data (no imputation) for this outcome measure",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "Scores on a scale",
+     "timeFrame": "Baseline and at Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "GFF MDI (PT003)",
+       "description": "Glycopyrronium Formoterol Fumarate (GFF) Metered Dose Inhaler (MDI) 14.4/9.6 mcg"
+      },
+      {
+       "id": "OG001",
+       "title": "GP MDI (PT001)",
+       "description": "Glycopyrronium (GP) MDI 14.4 mcg"
+      },
+      {
+       "id": "OG002",
+       "title": "FF MDI (PT005)",
+       "description": "Formoterol Fumarate (FF) MDI 9.6 mcg"
+      },
+      {
+       "id": "OG003",
+       "title": "Spiriva® Handihaler® (Open-label)",
+       "description": "Open-label tiotropium bromide inhalation powder 18 mcg"
+      },
+      {
+       "id": "OG004",
+       "title": "Placebo",
+       "description": "Placebo MDI"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "503"
+        },
+        {
+         "groupId": "OG001",
+         "value": "425"
+        },
+        {
+         "groupId": "OG002",
+         "value": "434"
+        },
+        {
+         "groupId": "OG003",
+         "value": "435"
+        },
+        {
+         "groupId": "OG004",
+         "value": "213"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-3.1",
+           "lowerLimit": "-4.0",
+           "upperLimit": "-2.2"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-1.2",
+           "lowerLimit": "-2.2",
+           "upperLimit": "-0.2"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-2.4",
+           "lowerLimit": "-3.4",
+           "upperLimit": "-1.4"
+          },
+          {
+           "groupId": "OG003",
+           "value": "-2.7",
+           "lowerLimit": "-3.6",
+           "upperLimit": "-1.7"
+          },
+          {
+           "groupId": "OG004",
+           "value": "-0.8",
+           "lowerLimit": "-2.2",
+           "upperLimit": "0.7"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Rescue Ventolin Hydrofluoroalkane (HFA) Use",
+     "description": "Change from baseline in average daily rescue Ventolin HFA use",
+     "populationDescription": "Intent-to-Treat population with evaluable data (no imputation) for this outcome measure",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "Puffs / Day",
+     "timeFrame": "Baseline and at Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "GFF MDI (PT003)",
+       "description": "Glycopyrronium Formoterol Fumarate (GFF) Metered Dose Inhaler (MDI) 14.4/9.6 mcg"
+      },
+      {
+       "id": "OG001",
+       "title": "GP MDI (PT001)",
+       "description": "Glycopyrronium (GP) MDI 14.4 mcg"
+      },
+      {
+       "id": "OG002",
+       "title": "FF MDI (PT005)",
+       "description": "Formoterol Fumarate (FF) MDI 9.6 mcg"
+      },
+      {
+       "id": "OG003",
+       "title": "Spiriva® Handihaler® (Open-label)",
+       "description": "Open-label tiotropium bromide inhalation powder 18 mcg"
+      },
+      {
+       "id": "OG004",
+       "title": "Placebo",
+       "description": "Placebo MDI"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "525"
+        },
+        {
+         "groupId": "OG001",
+         "value": "449"
+        },
+        {
+         "groupId": "OG002",
+         "value": "446"
+        },
+        {
+         "groupId": "OG003",
+         "value": "449"
+        },
+        {
+         "groupId": "OG004",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.8",
+           "lowerLimit": "-1.0",
+           "upperLimit": "-0.6"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.5",
+           "lowerLimit": "-0.7",
+           "upperLimit": "-0.3"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-0.8",
+           "lowerLimit": "-1.0",
+           "upperLimit": "-0.6"
+          },
+          {
+           "groupId": "OG003",
+           "value": "-0.4",
+           "lowerLimit": "-0.6",
+           "upperLimit": "-0.2"
+          },
+          {
+           "groupId": "OG004",
+           "value": "0.3",
+           "lowerLimit": "0.0",
+           "upperLimit": "0.6"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Onset of Action as Assessed by FEV1",
+     "description": "Defined as the first time-point using the 5- and 15-minute post dose measurements where the difference in FEV1 from Placebo was statistically significant",
+     "populationDescription": "Intent-to-Treat population with evaluable data (no imputation) for this outcome measure",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Assessed for 5- and 15-minute post dose on Day 1",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "GFF MDI (PT003)",
+       "description": "Glycopyrronium Formoterol Fumarate (GFF) Metered Dose Inhaler (MDI) 14.4/9.6 mcg"
+      },
+      {
+       "id": "OG001",
+       "title": "GP MDI (PT001)",
+       "description": "Glycopyrronium (GP) MDI 14.4 mcg"
+      },
+      {
+       "id": "OG002",
+       "title": "FF MDI (PT005)",
+       "description": "Formoterol Fumarate (FF) MDI 9.6 mcg"
+      },
+      {
+       "id": "OG003",
+       "title": "Spiriva® Handihaler® (Open-label)",
+       "description": "Open-label tiotropium bromide inhalation powder 18 mcg"
+      },
+      {
+       "id": "OG004",
+       "title": "Placebo",
+       "description": "Placebo MDI"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "418"
+        },
+        {
+         "groupId": "OG001",
+         "value": "363"
+        },
+        {
+         "groupId": "OG002",
+         "value": "366"
+        },
+        {
+         "groupId": "OG003",
+         "value": "364"
+        },
+        {
+         "groupId": "OG004",
+         "value": "172"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "5 min post dose",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.185",
+           "lowerLimit": "0.175",
+           "upperLimit": "0.195"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.042",
+           "lowerLimit": "0.031",
+           "upperLimit": "0.053"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.182",
+           "lowerLimit": "0.171",
+           "upperLimit": "0.193"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.048",
+           "lowerLimit": "0.037",
+           "upperLimit": "0.059"
+          },
+          {
+           "groupId": "OG004",
+           "value": "-0.002",
+           "lowerLimit": "-0.017",
+           "upperLimit": "0.014"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "15 min post dose",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.226",
+           "lowerLimit": "0.216",
+           "upperLimit": "0.237"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.101",
+           "lowerLimit": "0.090",
+           "upperLimit": "0.113"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.212",
+           "lowerLimit": "0.201",
+           "upperLimit": "0.224"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.117",
+           "lowerLimit": "0.105",
+           "upperLimit": "0.129"
+          },
+          {
+           "groupId": "OG004",
+           "value": "0.022",
+           "lowerLimit": "0.005",
+           "upperLimit": "0.038"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "groupDescription": "At 5 min post dose",
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "ANCOVA"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "groupDescription": "At 15 min post dose",
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "ANCOVA"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "groupDescription": "At 5 min post dose",
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "ANCOVA"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "groupDescription": "At 15 min post dose",
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "ANCOVA"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "groupDescription": "At 5 min post dose",
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "ANCOVA"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "groupDescription": "At 15 min post dose",
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "ANCOVA"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Peak Change From Baseline in FEV1 Within 2 Hours Post-dose",
+     "description": "Peak change from baseline in forced expiratory volume in 1 second (FEV1) within 2 hours post-dose",
+     "populationDescription": "Intent-to-Treat population with evaluable data (no imputation) for this outcome measure",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Baseline and at Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "GFF MDI (PT003)",
+       "description": "Glycopyrronium Formoterol Fumarate (GFF) Metered Dose Inhaler (MDI) 14.4/9.6 mcg"
+      },
+      {
+       "id": "OG001",
+       "title": "GP MDI (PT001)",
+       "description": "Glycopyrronium (GP) MDI 14.4 mcg"
+      },
+      {
+       "id": "OG002",
+       "title": "FF MDI (PT005)",
+       "description": "Formoterol Fumarate (FF) MDI 9.6 mcg"
+      },
+      {
+       "id": "OG003",
+       "title": "Spiriva® Handihaler® (Open-label)",
+       "description": "Open-label tiotropium bromide inhalation powder 18 mcg"
+      },
+      {
+       "id": "OG004",
+       "title": "Placebo",
+       "description": "Placebo MDI"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "428"
+        },
+        {
+         "groupId": "OG001",
+         "value": "343"
+        },
+        {
+         "groupId": "OG002",
+         "value": "367"
+        },
+        {
+         "groupId": "OG003",
+         "value": "388"
+        },
+        {
+         "groupId": "OG004",
+         "value": "160"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.356",
+           "lowerLimit": "0.335",
+           "upperLimit": "0.377"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.223",
+           "lowerLimit": "0.200",
+           "upperLimit": "0.246"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.263",
+           "lowerLimit": "0.240",
+           "upperLimit": "0.285"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.259",
+           "lowerLimit": "0.237",
+           "upperLimit": "0.281"
+          },
+          {
+           "groupId": "OG004",
+           "value": "0.065",
+           "lowerLimit": "0.031",
+           "upperLimit": "0.098"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "SAEs and AEs were collected throughout study participation and for two weeks after study completion.",
+   "description": "Safety population included all participants who received at least one dose of investigational drug participants were included in safety population according to the investigational drug received",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "GFF MDI (PT003)",
+     "description": "Glycopyrronium Formoterol Fumarate (GFF) Metered Dose Inhaler (MDI) 14.4/9.6 mcg",
+     "seriousNumAffected": 44,
+     "seriousNumAtRisk": 526,
+     "otherNumAffected": 73,
+     "otherNumAtRisk": 526
+    },
+    {
+     "id": "EG001",
+     "title": "GP MDI (PT001)",
+     "description": "Glycopyrronium (GP) MDI 14.4 mcg",
+     "seriousNumAffected": 36,
+     "seriousNumAtRisk": 451,
+     "otherNumAffected": 59,
+     "otherNumAtRisk": 451
+    },
+    {
+     "id": "EG002",
+     "title": "FF MDI (PT005)",
+     "description": "Formoterol Fumarate (FF) MDI 9.6 mcg",
+     "seriousNumAffected": 29,
+     "seriousNumAtRisk": 452,
+     "otherNumAffected": 57,
+     "otherNumAtRisk": 452
+    },
+    {
+     "id": "EG003",
+     "title": "Spiriva® Handihaler® (Open-label)",
+     "description": "Open-label tiotropium bromide inhalation powder 18 mcg",
+     "seriousNumAffected": 36,
+     "seriousNumAtRisk": 451,
+     "otherNumAffected": 58,
+     "otherNumAtRisk": 451
+    },
+    {
+     "id": "EG004",
+     "title": "Placebo",
+     "description": "Placebo MDI",
+     "seriousNumAffected": 16,
+     "seriousNumAtRisk": 220,
+     "otherNumAffected": 47,
+     "otherNumAtRisk": 220
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 15,
+       "numAffected": 15,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 20,
+       "numAffected": 17,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 8,
+       "numAffected": 8,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 8,
+       "numAffected": 8,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 7,
+       "numAffected": 7,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Acute respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Pulmonary embolism",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Acute respiratory distress syndrome",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Bronchospasm",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Epistatxis",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Pleurisy",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Pulmonary oedema",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 8,
+       "numAffected": 8,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 7,
+       "numAffected": 7,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Cellulitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Lobar pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Sepsis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Bronchitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Atypical pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Diverticulitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Influenza",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Opthalmic herpes zoster",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Postoperative wound infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Pyelonephritis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Rhinovirus infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Coronary artery disease",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Acute myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Atrial fibrillation",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Cardiac failure congestive",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 3,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Atrial flutter",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Atrial tachycardia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Atrioventricular block complete",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Bradycardia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Cardiac arrest",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Coronary artery occlusion",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Ischaemic cardiomyopathy",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Myocardial ischaemia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Squamous cell carcinoma of lung",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Lung adenocarcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Breast cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Chronic lymphocytic leukaemia",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Laryngeal cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Laryngeal cancer stage 0",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Lung neoplasm malignant",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Malignant melanoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Metastatic neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Oesophageal adenocarcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Small cell lung cancer metastatic",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Squamous cell carcinoma of skin",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Squamous cell carcinoma of the oral cavity",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Translational cell carcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Alcohol poisoning",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Fall",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Fibula fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Afferent loop syndrome",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Femoral neck fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Gun shot wound",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Humerus fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Overdose",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Pneumothorax traumatic",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Radius fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Splenic rupture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Thermal burn",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Aortic aneurysm",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Deep vein thrombosis",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Peripheral vascular disorder",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Aortic dissection",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Hypertensive crisis",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Hypotension",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Peripheral artery stenosis",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Thrombophlebitis superficial",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Abdominal pain",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Abdominal pain lower",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Constipation",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Enteritis",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Intestinal obstruction",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Pancreatitis chronic",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Small intestinal obstruction",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Upper gastrointestinal haemorrhage",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Chest pain",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Inflamation",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Pyrexia",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Sudden cardiac death",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Transient ischaemic attack",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Cerebrovascular accident",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Generalised tonic-clonic seizure",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Syncope",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Anxiety",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Completed suicide",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Depression",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Homicidal ideation",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Intentional self-injury",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 1
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Suicide attempt",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Diabetes mellitus",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Diabetic ketoacidosis",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Hyperglycaemia",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Intervertebral disc degeneration",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Spinal pain",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Anaemia",
+     "organSystem": "Blood and lymphatic system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Hyperparathyroidism",
+     "organSystem": "Endocrine disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Cholecystitis acute",
+     "organSystem": "Hepatobiliary disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Bladder cyst",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Epididymal cyst",
+     "organSystem": "Reproductive system and breast disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Angioedema",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 220
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Nasopharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 45,
+       "numAffected": 43,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 24,
+       "numAffected": 23,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 32,
+       "numAffected": 28,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 26,
+       "numAffected": 26,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 21,
+       "numAffected": 18,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Upper respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 18,
+       "numAffected": 17,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 21,
+       "numAffected": 20,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 14,
+       "numAffected": 14,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 18,
+       "numAffected": 17,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 16,
+       "numAffected": 16,
+       "numAtRisk": 220
+      }
+     ]
+    },
+    {
+     "term": "Dyspnoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 13,
+       "numAffected": 13,
+       "numAtRisk": 526
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 19,
+       "numAffected": 16,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 16,
+       "numAffected": 15,
+       "numAtRisk": 452
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 15,
+       "numAffected": 15,
+       "numAtRisk": 451
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 14,
+       "numAffected": 13,
+       "numAtRisk": 220
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "Drafts of any and all publications or presentations of this study must be submitted at least 30 days prior to submission for publication or presentation to Pearl Therapeutics for review, approval, and to ensure consistency. Pearl Therapeutics has the right to request appropriate modification to correct facts and to represent its opinions, or the opinions of the publication committee, if these differ with the proposed publication."
+   },
+   "pointOfContact": {
+    "title": "Colin Reisner, MD, FCCP, FAAAAI",
+    "organization": "Pearl Therapeutics, Inc",
+    "email": "creisner@pearltherapeutics.com",
+    "phone": "973-975-0320"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

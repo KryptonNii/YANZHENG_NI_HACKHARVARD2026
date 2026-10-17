@@ -69,6 +69,8 @@ const range = (v: unknown): MetricRange | null => {
 };
 
 export const DEFAULT_LEVERS: Levers = {
+  enrollment_rate_multiplier: 1,
+  added_country_count: 0,
   remote_monitoring_share: 0,
   home_visit_numbers: [],
   remote_visit_numbers: [],
@@ -82,6 +84,8 @@ export function normalizeLevers(v: unknown): Levers {
   if (!isObj(v)) return { ...DEFAULT_LEVERS };
   const nums = (x: unknown) => (Array.isArray(x) ? x.filter((n): n is number => typeof n === "number") : []);
   return {
+    enrollment_rate_multiplier: num(v.enrollment_rate_multiplier) ?? 1,
+    added_country_count: num(v.added_country_count) ?? 0,
     remote_monitoring_share: num(v.remote_monitoring_share) ?? 0,
     home_visit_numbers: nums(v.home_visit_numbers),
     remote_visit_numbers: nums(v.remote_visit_numbers),

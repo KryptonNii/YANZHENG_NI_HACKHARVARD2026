@@ -1,0 +1,33 @@
+{
+  "simulated": true,
+  "data_label": "Simulated feed",
+  "trial_id": "demo-40",
+  "title": "Bring database lock back into range",
+  "forecast_source": "Scripted scenario forecast",
+  "forecast_note": "In this rehearsal, enrollment and vendor prerequisites are complete. Query clearance at S11 and S27 is the final lock bottleneck. These lock dates are scenario assumptions, separate from the operations forecast below.",
+  "plan": { "p10": "2028-10-26", "p50": "2028-11-09", "p90": "2028-11-23" },
+  "slipped": { "p10": "2028-12-07", "p50": "2028-12-14", "p90": "2028-12-21" },
+  "recovered": { "p10": "2028-11-09", "p50": "2028-11-16", "p90": "2028-11-23" },
+  "recovery_intervention_id": "I1",
+  "risk": "Unresolved eCRF queries at S11 and S27 extend the final cleaning window. Database lock is now forecast beyond the planned range.",
+  "actions": [
+    {
+      "id": "I1",
+      "title": "Retrain staff on eCRF completion",
+      "button_label": "Run eCRF training",
+      "owner": "Data management lead",
+      "task": "Run eCRF training at S11 and S27 and check query creation and clearance in follow-up.",
+      "hypothesis": "Fewer new queries and faster clearance could shorten the final cleaning window.",
+      "result": "Query rate falls much more than at matched controls. Under this scenario's cleaning assumption, clearing the bottleneck brings lock back into range."
+    },
+    {
+      "id": "I4",
+      "title": "Send visit-reminder SMS",
+      "button_label": "Run SMS programme",
+      "owner": "Site operations lead",
+      "task": "Run the patient SMS programme across the 11 target sites and track missed visits against matched controls.",
+      "hypothesis": "Fewer missed visits could reduce follow-up work before lock.",
+      "result": "Missed visits fall at treated and control sites as the northern winter ends. This shared seasonal improvement does not pull lock back into range."
+    }
+  ]
+}

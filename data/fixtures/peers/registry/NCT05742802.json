@@ -1,0 +1,3602 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT05742802",
+   "orgStudyIdInfo": {
+    "id": "D9180C00008"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2022-501063-41-00",
+     "type": "REGISTRY",
+     "domain": "EU CT number"
+    }
+   ],
+   "organization": {
+    "fullName": "AstraZeneca",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Long-term Efficacy and Safety of Tozorakimab in Participants With Chronic Obstructive Pulmonary Disease With a History of Exacerbations (PROSPERO).",
+   "officialTitle": "A Phase III, Multicentre, Randomised, Double-blind, Chronic-dosing, Parallel-group, Placebo-controlled Extension Study to Evaluate the Long-term Efficacy and Safety of Tozorakimab in Participants With Chronic Obstructive Pulmonary Disease (COPD) With a History of Exacerbations (PROSPERO).",
+   "acronym": "PROSPERO"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-06",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2023-03-06",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2026-02-26",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2026-05-27",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2023-01-17",
+   "studyFirstSubmitQcDate": "2023-02-15",
+   "studyFirstPostDateStruct": {
+    "date": "2023-02-24",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-06-24",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-06-25",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "AstraZeneca",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "Subjects who completed either OBERON or TITANIA will be offered the opportunity to consent for this Multicentre, Double-blind, Randomised, Placebo controlled, Parallel Group, Phase 3, extension study to evaluate the safety and efficacy of Tozorakimab in adult participants with symptomatic COPD.",
+   "detailedDescription": "Participants who have completed the study treatment period and have not been prematurely discontinued from IP in one of the predecessor studies, OBERON or TITANIA, will be offered the opportunity to consent for this Multicentre, Double-blind, Randomised, Placebo-controlled, Parallel Group, Phase 3 extension study to evaluate the efficacy and safety of Tozorakimab versus placebo in adult (40 years and older) participants with symptomatic COPD and with a history of exacerbations"
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ],
+   "keywords": [
+    "Chronic Obstructive Pulmonary Disease",
+    "COPD",
+    "Tozorakimab",
+    "MEDI3506",
+    "exacerbations",
+    "ICS",
+    "LABA/LAMA"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 1713,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Tozorakimab Dose 1",
+     "type": "EXPERIMENTAL",
+     "description": "Injection subcutaneously Tozorakimab via pre-filled syringe.",
+     "interventionNames": [
+      "Combination Product: Tozorakimab 1"
+     ]
+    },
+    {
+     "label": "Tozorakimab Dose 2",
+     "type": "EXPERIMENTAL",
+     "description": "Injection subcutaneously Tozorakimab via pre-filled syringe.",
+     "interventionNames": [
+      "Combination Product: Tozorakimab 2"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Injection subcutaneously with equivalent volume to Tozorakimab via pre-filled syringe.",
+     "interventionNames": [
+      "Combination Product: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "COMBINATION_PRODUCT",
+     "name": "Tozorakimab 1",
+     "description": "Participants randomised to either dose regimen in the predecessor studies will be assigned to a single Tozorakimab dose regimen in the PROSPERO study.",
+     "armGroupLabels": [
+      "Tozorakimab Dose 1"
+     ]
+    },
+    {
+     "type": "COMBINATION_PRODUCT",
+     "name": "Tozorakimab 2",
+     "description": "Participants randomised to either dose regimen in the predecessor studies will be assigned to a single Tozorakimab dose regimen in the PROSPERO study.",
+     "armGroupLabels": [
+      "Tozorakimab Dose 2"
+     ]
+    },
+    {
+     "type": "COMBINATION_PRODUCT",
+     "name": "Placebo",
+     "description": "Participants previously randomised to placebo in one of the predecessor studies will be re-randomised in a 1:1 ratio to the active dose of Tozorakimab or placebo.",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Annualised rate of severe COPD exacerbations in former smokers.",
+     "description": "The primary efficacy endpoint is the rate of severe COPD exacerbations.",
+     "timeFrame": "Up to 104 weeks."
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "The annualised rate of severe COPD exacerbations",
+     "description": "To be analyzed as a key secondary endpoint in the Overall Population in former or current smokers.",
+     "timeFrame": "Up to 104 weeks."
+    },
+    {
+     "measure": "Time to First Severe COPD Exacerbations",
+     "description": "Time to first severe COPD exacerbation over the treatment period. Analyses will be conducted in the former smoker population, followed by the Overall Population in former or current smokers.",
+     "timeFrame": "Up to 104 weeks."
+    },
+    {
+     "measure": "Annualised rate of COPD exacerbations requiring hospitalisation and/or ER/ED visits.",
+     "description": "To evaluate the long-term effect of Tozorakimab as an add on to SoC compared to with SoC plus placebo on COPD related health care utilisation. Analyses will be conducted in the former smoker population, followed by the Overall Population in former or current smokers.",
+     "timeFrame": "Up to 104 weeks."
+    },
+    {
+     "measure": "Time to first moderate-to-severe COPD exacerbation.",
+     "description": "To explore the extent to which treatment with each dose of Tozorakimab delays the time to first exacerbation compared with placebo.",
+     "timeFrame": "Up to 104 weeks."
+    },
+    {
+     "measure": "Annualised rate of moderate to severe COPD exacerbations.",
+     "description": "To evaluate the effect of Tozorakimab as an add on to SoC compared with SoC plus placebo on the rate of moderate to severe COPD exacerbations.",
+     "timeFrame": "Up to 104 weeks."
+    },
+    {
+     "measure": "Time to all-cause death.",
+     "description": "To evaluate the effect of Tozorakimab as an add on to SoC compared with SoC plus placebo on time to all-cause death.",
+     "timeFrame": "Up to 104 weeks."
+    },
+    {
+     "measure": "Trough serum concentrations of Tozorakimab over the treatment period.",
+     "description": "Pharmacokinetics: concentrations of Tozorakimab in trough serum.",
+     "timeFrame": "Up to 104 weeks."
+    },
+    {
+     "measure": "Incidence of anti-drug antibodies.",
+     "description": "Immunogenicity: presence of Tozorakimab anti-drug antibodies in blood serum.",
+     "timeFrame": "Up to 104 weeks."
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1. Participants who have completed the treatment period and have not been prematurely discontinued from IP in the predecessor studies.\n2. Participants who received their last dose of IP in the predecessor studies within the previous 12 weeks and were not withdrawn from the predecessor study.\n3. FOCBP (female(s) of childbearing potential) must have a negative urine pregnancy test at Visit 1.\n4. Participants who are willing to continue using contraceptive methods as agreed to for the predecessor OBERON or TITANIA studies.\n5. Capable of giving signed informed consent.\n\nExclusion Criteria:\n\n1. Any clinically significant disorder or abnormal findings (clinical, laboratory, instrumental, etc) or major physical and/or cognitive impairment - which, in the opinion of the Investigator, may put the participant at risk because of his/her participation in the study or impact the interpretation of the study results, or otherwise make the participation of the participant inappropriate.\n2. Participant meeting criteria for IP discontinuation as judged by the Investigator or the Sponsor.\n3. Concurrent enrolment in other interventional clinical studies or treatment with another IP, with the exception of the OBERON and TITANIA predecessor studies.\n4. Known history of:\n\n   1. Severe allergic reaction to any monoclonal and polyclonal antibody.\n   2. Allergy or reaction to any component of the IP formulation.\n5. Chronic use (or expected need for chronic use during the study) of immunosuppressive medications (including, but not limited to, systemic corticosteroids), marketed or investigational biologic, or another prohibited medication.\n6. Involvement in the planning and/or conduct of the study (applies to both staff employed by the Sponsor and/or staff at the study site).\n7. Participants who are not able to comply with the study requirements, procedures, and restrictions.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "130 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "locations": [
+    {
+     "facility": "Research Site",
+     "city": "Sheffield",
+     "state": "Alabama",
+     "zip": "35660",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.76509,
+      "lon": -87.69864
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Tempe",
+     "state": "Arizona",
+     "zip": "85283",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.41477,
+      "lon": -111.90931
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Lincoln",
+     "state": "California",
+     "zip": "95648",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.89156,
+      "lon": -121.29301
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Newport Beach",
+     "state": "California",
+     "zip": "92663",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.61891,
+      "lon": -117.92895
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Northridge",
+     "state": "California",
+     "zip": "91324",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.22834,
+      "lon": -118.53675
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Boynton Beach",
+     "state": "Florida",
+     "zip": "33435",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.52535,
+      "lon": -80.06643
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Cape Coral",
+     "state": "Florida",
+     "zip": "33990",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.56285,
+      "lon": -81.94953
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Ormond Beach",
+     "state": "Florida",
+     "zip": "32174",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.28581,
+      "lon": -81.05589
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Pensacola",
+     "state": "Florida",
+     "zip": "32503",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.42131,
+      "lon": -87.21691
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Plantation",
+     "state": "Florida",
+     "zip": "33324",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.13421,
+      "lon": -80.23184
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Tampa",
+     "state": "Florida",
+     "zip": "33607",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.94752,
+      "lon": -82.45843
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Winter Park",
+     "state": "Florida",
+     "zip": "32789",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.6,
+      "lon": -81.33924
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Evergreen Park",
+     "state": "Illinois",
+     "zip": "60805",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.72059,
+      "lon": -87.70172
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Normal",
+     "state": "Illinois",
+     "zip": "61761",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.5142,
+      "lon": -88.99063
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Greenwood",
+     "state": "Indiana",
+     "zip": "46143",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.61366,
+      "lon": -86.10665
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Kansas City",
+     "state": "Kansas",
+     "zip": "66160",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.11417,
+      "lon": -94.62746
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Bowling Green",
+     "state": "Kentucky",
+     "zip": "42101",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.99032,
+      "lon": -86.4436
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Baton Rouge",
+     "state": "Louisiana",
+     "zip": "70836",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.44332,
+      "lon": -91.18747
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Zachary",
+     "state": "Louisiana",
+     "zip": "70791",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.64852,
+      "lon": -91.1565
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21224",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "White Marsh",
+     "state": "Maryland",
+     "zip": "21162",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.38372,
+      "lon": -76.43218
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "North Dartmouth",
+     "state": "Massachusetts",
+     "zip": "02747",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.63899,
+      "lon": -70.97032
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Farmington Hills",
+     "state": "Michigan",
+     "zip": "48336",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.48531,
+      "lon": -83.37716
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Grand Rapids",
+     "state": "Michigan",
+     "zip": "49546",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.96336,
+      "lon": -85.66809
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Rochester",
+     "state": "Minnesota",
+     "zip": "55905",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.02163,
+      "lon": -92.4699
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "St Louis",
+     "state": "Missouri",
+     "zip": "63110",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.62727,
+      "lon": -90.19789
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Buffalo",
+     "state": "New York",
+     "zip": "14203",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.88645,
+      "lon": -78.87837
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Durham",
+     "state": "North Carolina",
+     "zip": "27705",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.99403,
+      "lon": -78.89862
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Gastonia",
+     "state": "North Carolina",
+     "zip": "28054",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.26208,
+      "lon": -81.1873
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Fargo",
+     "state": "North Dakota",
+     "zip": "58104",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 46.87719,
+      "lon": -96.7898
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Toledo",
+     "state": "Ohio",
+     "zip": "43617",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.66394,
+      "lon": -83.55521
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Tulsa",
+     "state": "Oklahoma",
+     "zip": "74133",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.15398,
+      "lon": -95.99277
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "DuBois",
+     "state": "Pennsylvania",
+     "zip": "15801",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.11923,
+      "lon": -78.76003
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Philadelphia",
+     "state": "Pennsylvania",
+     "zip": "19140",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.95238,
+      "lon": -75.16362
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Pittsburgh",
+     "state": "Pennsylvania",
+     "zip": "15213",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.44062,
+      "lon": -79.99589
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Sayre",
+     "state": "Pennsylvania",
+     "zip": "18840",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.97896,
+      "lon": -76.5155
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Rock Hill",
+     "state": "South Carolina",
+     "zip": "29732",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.92487,
+      "lon": -81.02508
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Franklin",
+     "state": "Tennessee",
+     "zip": "37067",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.92506,
+      "lon": -86.86889
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Amarillo",
+     "state": "Texas",
+     "zip": "79106",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.222,
+      "lon": -101.8313
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Boerne",
+     "state": "Texas",
+     "zip": "78006",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.79466,
+      "lon": -98.73197
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Kingwood",
+     "state": "Texas",
+     "zip": "77339",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.05691,
+      "lon": -95.18349
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "McKinney",
+     "state": "Texas",
+     "zip": "75069",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.19762,
+      "lon": -96.61527
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Tomball",
+     "state": "Texas",
+     "zip": "77375",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.09716,
+      "lon": -95.61605
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Colchester",
+     "state": "Vermont",
+     "zip": "05446",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.54394,
+      "lon": -73.14791
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Williamsburg",
+     "state": "Virginia",
+     "zip": "23188",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.2707,
+      "lon": -76.70746
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Cudahy",
+     "state": "Wisconsin",
+     "zip": "53110",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.95974,
+      "lon": -87.86147
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Buenos Aires",
+     "zip": "C1121 ABE",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -34.61315,
+      "lon": -58.37723
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "CABA",
+     "zip": "C1425BEN",
+     "country": "Argentina"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Ciudad de Buenos Aires",
+     "zip": "C1414AIF",
+     "country": "Argentina"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Córdoba",
+     "zip": "X5003DCE",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -31.40648,
+      "lon": -64.18853
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Mar del Plata",
+     "zip": "7600",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -38.00042,
+      "lon": -57.5562
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Mar del Plata",
+     "zip": "B7600GWV",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -38.00042,
+      "lon": -57.5562
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Mendoza",
+     "zip": "M5500CCG",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -32.88946,
+      "lon": -68.84582
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Quilmes",
+     "zip": "B1878FNR",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -34.72065,
+      "lon": -58.25454
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "San Fernando",
+     "zip": "B1646EBJ",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -34.44104,
+      "lon": -58.56279
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "San Juan Bautista",
+     "zip": "1888",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -34.80896,
+      "lon": -58.27623
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "San Miguel de Tucumán",
+     "zip": "T4000IAR",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -26.81601,
+      "lon": -65.21051
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Campbelltown",
+     "zip": "2560",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -34.06667,
+      "lon": 150.81667
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Frankstown",
+     "zip": "3199",
+     "country": "Australia"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Macquarie University",
+     "zip": "2109",
+     "country": "Australia"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Melbourne",
+     "zip": "3000",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -37.814,
+      "lon": 144.96332
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Nedlands",
+     "zip": "6009",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -31.98184,
+      "lon": 115.8073
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Southport",
+     "zip": "4215",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -27.96724,
+      "lon": 153.39796
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Spearwood",
+     "zip": "6163",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -32.10534,
+      "lon": 115.77797
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Wollongong",
+     "zip": "2500",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -34.424,
+      "lon": 150.89345
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Woodville South",
+     "zip": "5011",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -34.88186,
+      "lon": 138.53477
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Brussels",
+     "zip": "1000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.85045,
+      "lon": 4.34878
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Ghent",
+     "zip": "9000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.05,
+      "lon": 3.71667
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Leuven",
+     "zip": "3000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.87959,
+      "lon": 4.70093
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Liège",
+     "zip": "4000",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.63373,
+      "lon": 5.56749
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Namur",
+     "zip": "5101",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.4669,
+      "lon": 4.86746
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Blumenau",
+     "zip": "89030-101",
+     "country": "Brazil",
+     "geoPoint": {
+      "lat": -26.91944,
+      "lon": -49.06611
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Botucatu",
+     "zip": "18618-686",
+     "country": "Brazil",
+     "geoPoint": {
+      "lat": -22.88583,
+      "lon": -48.445
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Brasília",
+     "zip": "71681-603",
+     "country": "Brazil",
+     "geoPoint": {
+      "lat": -15.77972,
+      "lon": -47.92972
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Curitiba",
+     "zip": "80440-220",
+     "country": "Brazil",
+     "geoPoint": {
+      "lat": -25.42778,
+      "lon": -49.27306
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Porto Alegre",
+     "zip": "90035074",
+     "country": "Brazil",
+     "geoPoint": {
+      "lat": -30.03283,
+      "lon": -51.23019
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Porto Alegre",
+     "zip": "9061-000",
+     "country": "Brazil",
+     "geoPoint": {
+      "lat": -30.03283,
+      "lon": -51.23019
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Porto Alegre",
+     "zip": "91010-006",
+     "country": "Brazil",
+     "geoPoint": {
+      "lat": -30.03283,
+      "lon": -51.23019
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Rio de Janeiro",
+     "zip": "22061-080",
+     "country": "Brazil",
+     "geoPoint": {
+      "lat": -22.90642,
+      "lon": -43.18223
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "São Bernardo do Campo",
+     "zip": "09750-420",
+     "country": "Brazil",
+     "geoPoint": {
+      "lat": -23.69389,
+      "lon": -46.565
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "São Paulo",
+     "zip": "01409-001",
+     "country": "Brazil",
+     "geoPoint": {
+      "lat": -23.5475,
+      "lon": -46.63611
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "São Paulo",
+     "zip": "05403-000",
+     "country": "Brazil",
+     "geoPoint": {
+      "lat": -23.5475,
+      "lon": -46.63611
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Dupnitsa",
+     "zip": "2600",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.26478,
+      "lon": 23.11723
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Kozloduy",
+     "zip": "3320",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.77691,
+      "lon": 23.73001
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Lovech",
+     "zip": "5500",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.13227,
+      "lon": 24.71763
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Petrich",
+     "zip": "2850",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 41.39365,
+      "lon": 23.20012
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Pleven",
+     "zip": "5800",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.41791,
+      "lon": 24.61666
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Rousse",
+     "zip": "7002",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.84872,
+      "lon": 25.9534
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Sliven",
+     "zip": "8800",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.68607,
+      "lon": 26.32558
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Sofia",
+     "zip": "1000",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Sofia",
+     "zip": "1606",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Vratsa",
+     "zip": "3000",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.21052,
+      "lon": 23.56312
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Edmonton",
+     "state": "Alberta",
+     "zip": "T5A 4L8",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 53.55014,
+      "lon": -113.46871
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Sherwood Park",
+     "state": "Alberta",
+     "zip": "T8L 0N2",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 53.51684,
+      "lon": -113.3187
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Ajax",
+     "state": "Ontario",
+     "zip": "L1S 2J5",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.85012,
+      "lon": -79.03288
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Guelph",
+     "state": "Ontario",
+     "zip": "N1H 6J2",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.54594,
+      "lon": -80.25599
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Winchester",
+     "state": "Ontario",
+     "zip": "K0C 2K0",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.0834,
+      "lon": -75.34933
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Montreal",
+     "state": "Quebec",
+     "zip": "H3T 1E2",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.50884,
+      "lon": -73.58781
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Québec",
+     "state": "Quebec",
+     "zip": "G1G 5X1",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 46.81228,
+      "lon": -71.21454
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Québec",
+     "state": "Quebec",
+     "zip": "G1V 4G5",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 46.81228,
+      "lon": -71.21454
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Chile",
+     "zip": "7770484",
+     "country": "Chile"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Curicó",
+     "zip": "3341643",
+     "country": "Chile",
+     "geoPoint": {
+      "lat": -34.98279,
+      "lon": -71.23943
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Santiago",
+     "zip": "7500010",
+     "country": "Chile",
+     "geoPoint": {
+      "lat": -33.45694,
+      "lon": -70.64827
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Santiago",
+     "zip": "7500698",
+     "country": "Chile",
+     "geoPoint": {
+      "lat": -33.45694,
+      "lon": -70.64827
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Santiago",
+     "zip": "8150000",
+     "country": "Chile",
+     "geoPoint": {
+      "lat": -33.45694,
+      "lon": -70.64827
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Talca",
+     "zip": "3465584",
+     "country": "Chile",
+     "geoPoint": {
+      "lat": -35.4232,
+      "lon": -71.64974
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Baotou",
+     "zip": "14010",
+     "country": "China",
+     "geoPoint": {
+      "lat": 40.6516,
+      "lon": 109.84389
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Beijing",
+     "zip": "100057",
+     "country": "China",
+     "geoPoint": {
+      "lat": 39.9075,
+      "lon": 116.39723
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Beijing",
+     "zip": "100144",
+     "country": "China",
+     "geoPoint": {
+      "lat": 39.9075,
+      "lon": 116.39723
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Changchun",
+     "zip": "130021",
+     "country": "China",
+     "geoPoint": {
+      "lat": 43.88,
+      "lon": 125.32278
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Changsha",
+     "zip": "410015",
+     "country": "China",
+     "geoPoint": {
+      "lat": 28.19874,
+      "lon": 112.97087
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Chengdu",
+     "zip": "610000",
+     "country": "China",
+     "geoPoint": {
+      "lat": 30.66667,
+      "lon": 104.06667
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Chengdu",
+     "zip": "610014",
+     "country": "China",
+     "geoPoint": {
+      "lat": 30.66667,
+      "lon": 104.06667
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Chongqing",
+     "zip": "400013",
+     "country": "China",
+     "geoPoint": {
+      "lat": 29.56026,
+      "lon": 106.55771
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Chongqing",
+     "zip": "400037",
+     "country": "China",
+     "geoPoint": {
+      "lat": 29.56026,
+      "lon": 106.55771
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Guangzhou",
+     "zip": "510120",
+     "country": "China",
+     "geoPoint": {
+      "lat": 23.11667,
+      "lon": 113.25
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Guangzhou",
+     "zip": "510180",
+     "country": "China",
+     "geoPoint": {
+      "lat": 23.11667,
+      "lon": 113.25
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Haikou",
+     "zip": "570311",
+     "country": "China",
+     "geoPoint": {
+      "lat": 20.03421,
+      "lon": 110.34651
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Hangzhou",
+     "zip": "310006",
+     "country": "China",
+     "geoPoint": {
+      "lat": 30.29365,
+      "lon": 120.16142
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Hohhot",
+     "zip": "010010",
+     "country": "China",
+     "geoPoint": {
+      "lat": 40.81056,
+      "lon": 111.65222
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Kunming",
+     "zip": "650032",
+     "country": "China",
+     "geoPoint": {
+      "lat": 25.03889,
+      "lon": 102.71833
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Linhai",
+     "zip": "317000",
+     "country": "China",
+     "geoPoint": {
+      "lat": 28.85535,
+      "lon": 121.1447
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Nanchang",
+     "zip": "330006",
+     "country": "China",
+     "geoPoint": {
+      "lat": 28.68396,
+      "lon": 115.85306
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Nanjing",
+     "zip": "210006",
+     "country": "China",
+     "geoPoint": {
+      "lat": 32.06167,
+      "lon": 118.77778
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Ningbo",
+     "zip": "315010",
+     "country": "China",
+     "geoPoint": {
+      "lat": 29.87819,
+      "lon": 121.54945
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Shanghai",
+     "zip": "200002",
+     "country": "China",
+     "geoPoint": {
+      "lat": 31.22222,
+      "lon": 121.45806
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Shanghai",
+     "zip": "201199",
+     "country": "China",
+     "geoPoint": {
+      "lat": 31.22222,
+      "lon": 121.45806
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Shenyang",
+     "zip": "110000",
+     "country": "China",
+     "geoPoint": {
+      "lat": 41.79222,
+      "lon": 123.43278
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Shenyang",
+     "zip": "110004",
+     "country": "China",
+     "geoPoint": {
+      "lat": 41.79222,
+      "lon": 123.43278
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Shenzhen",
+     "zip": "518020",
+     "country": "China",
+     "geoPoint": {
+      "lat": 22.54554,
+      "lon": 114.0683
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Shenzhen",
+     "zip": "518053",
+     "country": "China",
+     "geoPoint": {
+      "lat": 22.54554,
+      "lon": 114.0683
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Shijiazhuang",
+     "zip": "50051",
+     "country": "China",
+     "geoPoint": {
+      "lat": 38.04139,
+      "lon": 114.47861
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Suzhou",
+     "zip": "215002",
+     "country": "China",
+     "geoPoint": {
+      "lat": 31.30408,
+      "lon": 120.59538
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Taiyuan",
+     "zip": "030001",
+     "country": "China",
+     "geoPoint": {
+      "lat": 37.86944,
+      "lon": 112.56028
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Wuhan",
+     "zip": "430022",
+     "country": "China",
+     "geoPoint": {
+      "lat": 30.58333,
+      "lon": 114.26667
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Wuxi",
+     "zip": "214023",
+     "country": "China",
+     "geoPoint": {
+      "lat": 31.56887,
+      "lon": 120.28857
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Xiamen",
+     "zip": "361004",
+     "country": "China",
+     "geoPoint": {
+      "lat": 24.47979,
+      "lon": 118.08187
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Xuzhou",
+     "zip": "221000",
+     "country": "China",
+     "geoPoint": {
+      "lat": 34.20442,
+      "lon": 117.28386
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Xuzhou",
+     "zip": "221009",
+     "country": "China",
+     "geoPoint": {
+      "lat": 34.20442,
+      "lon": 117.28386
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Yangzhou",
+     "zip": "225001",
+     "country": "China",
+     "geoPoint": {
+      "lat": 32.39722,
+      "lon": 119.43583
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Yinchuan",
+     "zip": "750004",
+     "country": "China",
+     "geoPoint": {
+      "lat": 38.46806,
+      "lon": 106.27306
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Zhanjiang",
+     "zip": "524004",
+     "country": "China",
+     "geoPoint": {
+      "lat": 21.23391,
+      "lon": 110.38749
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Zunyi",
+     "zip": "563100",
+     "country": "China",
+     "geoPoint": {
+      "lat": 27.68667,
+      "lon": 106.90722
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Barranquilla",
+     "zip": "80007",
+     "country": "Colombia",
+     "geoPoint": {
+      "lat": 10.96854,
+      "lon": -74.78132
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Ibague",
+     "zip": "730006",
+     "country": "Colombia",
+     "geoPoint": {
+      "lat": 4.43573,
+      "lon": -75.20289
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Rionegro",
+     "zip": "054047",
+     "country": "Colombia",
+     "geoPoint": {
+      "lat": 6.15515,
+      "lon": -75.37371
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Zipaquirá",
+     "zip": "200251",
+     "country": "Colombia",
+     "geoPoint": {
+      "lat": 5.02208,
+      "lon": -74.00481
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Brno",
+     "zip": "625 00",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.19522,
+      "lon": 16.60796
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Jindřichův Hradec",
+     "zip": "377 01",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.14404,
+      "lon": 15.00301
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Liberec",
+     "zip": "460 63",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.76711,
+      "lon": 15.05619
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Olomouc",
+     "zip": "779 00",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.59552,
+      "lon": 17.25175
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Rokycany",
+     "zip": "337 01",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.7427,
+      "lon": 13.59459
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Aalborg",
+     "zip": "9000",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 57.048,
+      "lon": 9.9187
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Copenhagen",
+     "zip": "2400",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.67594,
+      "lon": 12.56553
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Hvidovre",
+     "zip": "2650",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.64297,
+      "lon": 12.47708
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Næstved",
+     "zip": "4700",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.22992,
+      "lon": 11.76092
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Roskilde",
+     "zip": "4000",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.64152,
+      "lon": 12.08035
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Vejle",
+     "zip": "7100",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.70927,
+      "lon": 9.5357
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Hämeenlinna",
+     "zip": "13530",
+     "country": "Finland",
+     "geoPoint": {
+      "lat": 60.99596,
+      "lon": 24.46434
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Helsinki",
+     "zip": "00290",
+     "country": "Finland",
+     "geoPoint": {
+      "lat": 60.16952,
+      "lon": 24.93545
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Kuopio",
+     "zip": "70210",
+     "country": "Finland",
+     "geoPoint": {
+      "lat": 62.89238,
+      "lon": 27.67703
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Turku",
+     "zip": "20520",
+     "country": "Finland",
+     "geoPoint": {
+      "lat": 60.45148,
+      "lon": 22.26869
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Bordeaux",
+     "zip": "33076",
+     "country": "France",
+     "geoPoint": {
+      "lat": 44.84124,
+      "lon": -0.58046
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Brest",
+     "zip": "29609",
+     "country": "France",
+     "geoPoint": {
+      "lat": 48.39029,
+      "lon": -4.48628
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "La Tronche",
+     "zip": "38700",
+     "country": "France",
+     "geoPoint": {
+      "lat": 45.20507,
+      "lon": 5.74629
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Lyon",
+     "zip": "69317",
+     "country": "France",
+     "geoPoint": {
+      "lat": 45.74906,
+      "lon": 4.84789
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Marseille",
+     "zip": "13326",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.29695,
+      "lon": 5.38107
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Montpellier",
+     "zip": "34295",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.61093,
+      "lon": 3.87635
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Nantes",
+     "zip": "44093",
+     "country": "France",
+     "geoPoint": {
+      "lat": 47.21725,
+      "lon": -1.55336
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Toulouse",
+     "zip": "31300",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.60426,
+      "lon": 1.44367
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Ahrensburg",
+     "zip": "22926",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.67661,
+      "lon": 10.23705
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Bamberg",
+     "zip": "96049",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.89873,
+      "lon": 10.90067
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Berlin",
+     "zip": "10717",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Berlin",
+     "zip": "12157",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Cologne",
+     "zip": "51069",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.93333,
+      "lon": 6.95
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Darmstadt",
+     "zip": "64283",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.87167,
+      "lon": 8.65027
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Halle",
+     "zip": "06108",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.48158,
+      "lon": 11.97947
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Marburg",
+     "zip": "35037",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.80904,
+      "lon": 8.77069
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Peine",
+     "zip": "31224",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.31928,
+      "lon": 10.2352
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Alexandroupoli",
+     "zip": "68100",
+     "country": "Greece",
+     "geoPoint": {
+      "lat": 40.84995,
+      "lon": 25.87644
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Athens",
+     "zip": "11527",
+     "country": "Greece",
+     "geoPoint": {
+      "lat": 37.98376,
+      "lon": 23.72784
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Exohi Thessaloniki",
+     "zip": "57010",
+     "country": "Greece"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Ioannina",
+     "zip": "45500",
+     "country": "Greece",
+     "geoPoint": {
+      "lat": 39.66341,
+      "lon": 20.85187
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Pátrai",
+     "zip": "26500",
+     "country": "Greece",
+     "geoPoint": {
+      "lat": 38.2462,
+      "lon": 21.73508
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Thessaloniki",
+     "zip": "57010",
+     "country": "Greece",
+     "geoPoint": {
+      "lat": 40.64072,
+      "lon": 22.93493
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Budapest",
+     "zip": "1036",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.49835,
+      "lon": 19.04045
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Debrecen",
+     "zip": "4032",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.53167,
+      "lon": 21.62444
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Edelény",
+     "zip": "3780",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 48.3,
+      "lon": 20.73333
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Encs",
+     "zip": "3860",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 48.33067,
+      "lon": 21.11169
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Mosonmagyaróvár",
+     "zip": "9200",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.86789,
+      "lon": 17.26994
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Nyíregyháza-Sóstóhegy",
+     "zip": "4481",
+     "country": "Hungary"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Százhalombatta",
+     "zip": "2440",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.32949,
+      "lon": 18.93878
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Belagavi",
+     "zip": "590010",
+     "country": "India",
+     "geoPoint": {
+      "lat": 15.85212,
+      "lon": 74.50447
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Coimbatore",
+     "zip": "641028",
+     "country": "India",
+     "geoPoint": {
+      "lat": 11.00555,
+      "lon": 76.96612
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Dehradun",
+     "zip": "248001",
+     "country": "India",
+     "geoPoint": {
+      "lat": 30.32443,
+      "lon": 78.03392
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Jaipur",
+     "zip": "302039",
+     "country": "India",
+     "geoPoint": {
+      "lat": 26.91962,
+      "lon": 75.78781
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Nagpur",
+     "zip": "440012",
+     "country": "India",
+     "geoPoint": {
+      "lat": 21.14631,
+      "lon": 79.08491
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Nashik",
+     "zip": "422007",
+     "country": "India",
+     "geoPoint": {
+      "lat": 19.99727,
+      "lon": 73.79096
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "New Delhi",
+     "zip": "110029",
+     "country": "India",
+     "geoPoint": {
+      "lat": 28.62137,
+      "lon": 77.2148
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Thane",
+     "zip": "401107",
+     "country": "India",
+     "geoPoint": {
+      "lat": 19.19704,
+      "lon": 72.96355
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Ashkelon",
+     "zip": "78278",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 31.66926,
+      "lon": 34.57149
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Beersheba",
+     "zip": "8410101",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 31.25181,
+      "lon": 34.7913
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Jerusalem",
+     "zip": "9103102",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 31.76904,
+      "lon": 35.21633
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Kfar Saba",
+     "zip": "4428164",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 32.175,
+      "lon": 34.90694
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Rehovot",
+     "zip": "76100",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 31.89421,
+      "lon": 34.81199
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Tel Aviv",
+     "zip": "6423906",
+     "country": "Israel",
+     "geoPoint": {
+      "lat": 32.08088,
+      "lon": 34.78057
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Bari",
+     "zip": "70124",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 41.12066,
+      "lon": 16.86982
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Carrara",
+     "zip": "54033",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 44.07926,
+      "lon": 10.09789
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Milan",
+     "zip": "20142",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 42.78235,
+      "lon": 12.59836
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Milan",
+     "zip": "20154",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 42.78235,
+      "lon": 12.59836
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Naples",
+     "zip": "80131",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 40.85216,
+      "lon": 14.26811
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Roma",
+     "zip": "00168",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 44.99364,
+      "lon": 11.10642
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Salerno",
+     "zip": "84131",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 40.67545,
+      "lon": 14.79328
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Sassari",
+     "zip": "07100",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 40.72586,
+      "lon": 8.55552
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Statte",
+     "zip": "74010",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 40.52856,
+      "lon": 17.20122
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Telese Terme",
+     "zip": "82037",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 41.21752,
+      "lon": 14.52681
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Tradate",
+     "zip": "21049",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.70843,
+      "lon": 8.90763
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Vercelli",
+     "zip": "13100",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.32163,
+      "lon": 8.41989
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Verona",
+     "zip": "37134",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.43854,
+      "lon": 10.9938
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Asahikawa-shi",
+     "zip": "078-8510",
+     "country": "Japan"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Fujieda-shi",
+     "zip": "426-8677",
+     "country": "Japan"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Fukuoka",
+     "zip": "819-8555",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 33.6,
+      "lon": 130.41667
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Hamamatsu",
+     "zip": "430-8525",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.7,
+      "lon": 137.73333
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Hiroshima",
+     "zip": "734-8530",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.4,
+      "lon": 132.45
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Iizuka-shi",
+     "zip": "820-8505",
+     "country": "Japan"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Itabashi-ku",
+     "zip": "173-8610",
+     "country": "Japan"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Iwata-shi",
+     "zip": "438-8550",
+     "country": "Japan"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Kanazawa",
+     "zip": "920-8650",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 36.6,
+      "lon": 136.61667
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Kawachinagano-shi",
+     "zip": "586-8521",
+     "country": "Japan"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Kobe",
+     "zip": "651-0072",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.6913,
+      "lon": 135.183
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Matsusaka-shi",
+     "zip": "515-8544",
+     "country": "Japan"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Mizunami-shi",
+     "zip": "509-6134",
+     "country": "Japan"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Nagoya",
+     "zip": "460-0001",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 35.18147,
+      "lon": 136.90641
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Obihiro",
+     "zip": "080-0017",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 42.91722,
+      "lon": 143.20444
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Okayama",
+     "zip": "700-8558",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.65,
+      "lon": 133.93333
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Osaka",
+     "zip": "531-0073",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.69379,
+      "lon": 135.50107
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Osaka",
+     "zip": "543-8555",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.69379,
+      "lon": 135.50107
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Osaka",
+     "zip": "545-8586",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.69379,
+      "lon": 135.50107
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Shinjuku-ku",
+     "zip": "162-8655",
+     "country": "Japan"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Shizuoka",
+     "zip": "420-8630",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.98333,
+      "lon": 138.38333
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Toshima-ku",
+     "zip": "170-0003",
+     "country": "Japan"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Toyonaka-shi",
+     "zip": "560-8552",
+     "country": "Japan"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Yokohama",
+     "zip": "221-0855",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 35.43333,
+      "lon": 139.65
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Yokohama",
+     "zip": "223-0059",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 35.43333,
+      "lon": 139.65
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Yokohama",
+     "zip": "232-0024",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 35.43333,
+      "lon": 139.65
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Benito Juárez",
+     "zip": "03650",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 19.3727,
+      "lon": -99.1564
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Chihuahua City",
+     "zip": "31000",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 28.63528,
+      "lon": -106.08889
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Guadalajara",
+     "zip": "44100",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 20.67738,
+      "lon": -103.34749
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Guadalajara",
+     "zip": "44200",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 20.67738,
+      "lon": -103.34749
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "México",
+     "zip": "01710",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 25.80426,
+      "lon": -109.02397
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Monterrey",
+     "zip": "64460",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 25.68435,
+      "lon": -100.31721
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Morelia",
+     "zip": "58000",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 19.70078,
+      "lon": -101.18443
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Oaxaca City",
+     "zip": "68020",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 17.06025,
+      "lon": -96.72544
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Veracruz",
+     "zip": "91910",
+     "country": "Mexico",
+     "geoPoint": {
+      "lat": 19.18095,
+      "lon": -96.1429
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Eindhoven",
+     "zip": "5623EJ",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 51.44083,
+      "lon": 5.47778
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Groningen",
+     "zip": "9713 GZ",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 53.21917,
+      "lon": 6.56667
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Harderwijk",
+     "zip": "3844 DG",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.34167,
+      "lon": 5.62083
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Heerlen",
+     "zip": "6419 PC",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 50.88365,
+      "lon": 5.98154
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Zutphen",
+     "zip": "7207 AE",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.13833,
+      "lon": 6.20139
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Lørenskog",
+     "zip": "1478",
+     "country": "Norway"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Oslo",
+     "zip": "450",
+     "country": "Norway",
+     "geoPoint": {
+      "lat": 59.91273,
+      "lon": 10.74609
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Tønsberg",
+     "zip": "3103",
+     "country": "Norway",
+     "geoPoint": {
+      "lat": 59.26754,
+      "lon": 10.40762
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Lima",
+     "zip": "15036",
+     "country": "Peru",
+     "geoPoint": {
+      "lat": -12.04318,
+      "lon": -77.02824
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Lima",
+     "zip": "15046",
+     "country": "Peru",
+     "geoPoint": {
+      "lat": -12.04318,
+      "lon": -77.02824
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Lima",
+     "zip": "15088",
+     "country": "Peru",
+     "geoPoint": {
+      "lat": -12.04318,
+      "lon": -77.02824
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Lima",
+     "zip": "LIMA 21",
+     "country": "Peru",
+     "geoPoint": {
+      "lat": -12.04318,
+      "lon": -77.02824
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Baguio City",
+     "zip": "2600",
+     "country": "Philippines",
+     "geoPoint": {
+      "lat": 16.41639,
+      "lon": 120.59306
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Cebu City",
+     "zip": "6000",
+     "country": "Philippines",
+     "geoPoint": {
+      "lat": 10.31672,
+      "lon": 123.89071
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Iloilo City",
+     "zip": "5000",
+     "country": "Philippines",
+     "geoPoint": {
+      "lat": 10.69694,
+      "lon": 122.56444
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Bialystok",
+     "zip": "15-044",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 53.13333,
+      "lon": 23.16433
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Bydgoszcz",
+     "zip": "85-796",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 53.1235,
+      "lon": 18.00762
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Katowice",
+     "zip": "40-648",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.2597,
+      "lon": 19.02173
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Krakow",
+     "zip": "30-033",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.06143,
+      "lon": 19.93658
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Lublin",
+     "zip": "20-412",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 51.25058,
+      "lon": 22.57009
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Ostrowiec Świętokrzyski",
+     "zip": "27-400",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.92936,
+      "lon": 21.38525
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Ostróda",
+     "zip": "14-100",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 53.69671,
+      "lon": 19.96486
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Poznan",
+     "zip": "60-693",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.40692,
+      "lon": 16.92993
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Rzeszów",
+     "zip": "35-205",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.04132,
+      "lon": 21.99901
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Sosnowiec",
+     "zip": "41-208",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.28682,
+      "lon": 19.10385
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Wroclaw",
+     "zip": "53-301",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 51.10286,
+      "lon": 17.03006
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Guimarães",
+     "zip": "4835-235",
+     "country": "Portugal",
+     "geoPoint": {
+      "lat": 41.44443,
+      "lon": -8.29619
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Lisbon",
+     "zip": "1649-035",
+     "country": "Portugal",
+     "geoPoint": {
+      "lat": 38.72509,
+      "lon": -9.1498
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Lisbon",
+     "zip": "1998-018",
+     "country": "Portugal",
+     "geoPoint": {
+      "lat": 38.72509,
+      "lon": -9.1498
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Matosinhos Municipality",
+     "zip": "4454-509",
+     "country": "Portugal",
+     "geoPoint": {
+      "lat": 41.18207,
+      "lon": -8.68908
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Vila Franca de Xira",
+     "zip": "2600-009",
+     "country": "Portugal",
+     "geoPoint": {
+      "lat": 38.95525,
+      "lon": -8.98966
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Brasov",
+     "zip": "500283",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 45.64861,
+      "lon": 25.60613
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Bucharest",
+     "zip": "050159",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.43225,
+      "lon": 26.10626
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Cluj-Napoca",
+     "zip": "400371",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 46.76667,
+      "lon": 23.6
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Timișoara",
+     "zip": "300002",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 45.75372,
+      "lon": 21.22571
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Daegu",
+     "zip": "42415",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 35.87028,
+      "lon": 128.59111
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Incheon",
+     "zip": "21431",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.45646,
+      "lon": 126.70515
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Jeonju",
+     "zip": "54907",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 35.82194,
+      "lon": 127.14889
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Seoul",
+     "zip": "05030",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Seoul",
+     "zip": "06591",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Seoul",
+     "zip": "07061",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Galdakao",
+     "zip": "48960",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 43.23073,
+      "lon": -2.8429
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Madrid",
+     "zip": "28040",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 40.4165,
+      "lon": -3.70256
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Málaga",
+     "zip": "29010",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 36.72016,
+      "lon": -4.42034
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Mérida",
+     "zip": "06800",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 38.91802,
+      "lon": -6.34292
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Pozuelo de Alarcón",
+     "zip": "28223",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 40.43293,
+      "lon": -3.81338
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Santander",
+     "zip": "39008",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 43.46589,
+      "lon": -3.80493
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Valencia",
+     "zip": "46010",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 39.47391,
+      "lon": -0.37966
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Zaragoza",
+     "zip": "50009",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.65606,
+      "lon": -0.87734
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Gothenburg",
+     "zip": "413 46",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 57.70716,
+      "lon": 11.96679
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Gothenburg",
+     "zip": "41345",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 57.70716,
+      "lon": 11.96679
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Lund",
+     "zip": "222 22",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 55.70584,
+      "lon": 13.19321
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Stockholm",
+     "zip": "11239",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 59.32938,
+      "lon": 18.06871
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Hsinchu",
+     "zip": "300",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 24.80361,
+      "lon": 120.96861
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Kaohsiung City",
+     "zip": "80756",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 22.61626,
+      "lon": 120.31333
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Taichung",
+     "zip": "40447",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 24.1469,
+      "lon": 120.6839
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Taichung",
+     "zip": "40705",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 24.1469,
+      "lon": 120.6839
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Taipei",
+     "zip": "10002",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 25.05306,
+      "lon": 121.52639
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Taipei",
+     "zip": "110",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 25.05306,
+      "lon": 121.52639
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Taoyuan",
+     "zip": "333",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 24.99368,
+      "lon": 121.29696
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Yunlin",
+     "zip": "640",
+     "country": "Taiwan"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Bang Kra So",
+     "zip": "11000",
+     "country": "Thailand"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Hat Yai",
+     "zip": "90110",
+     "country": "Thailand",
+     "geoPoint": {
+      "lat": 7.00836,
+      "lon": 100.47668
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Khon Kaen",
+     "zip": "40002",
+     "country": "Thailand",
+     "geoPoint": {
+      "lat": 16.44671,
+      "lon": 102.833
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Muang,",
+     "zip": "55000",
+     "country": "Thailand"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Muang",
+     "zip": "22000",
+     "country": "Thailand"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Mueang",
+     "zip": "20000",
+     "country": "Thailand"
+    },
+    {
+     "facility": "Research Site",
+     "city": "Nakhon Ratchasima",
+     "zip": "30000",
+     "country": "Thailand",
+     "geoPoint": {
+      "lat": 14.97066,
+      "lon": 102.10196
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Ankara",
+     "zip": "06620",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 39.91987,
+      "lon": 32.85427
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Istanbul",
+     "zip": "34854",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 41.01384,
+      "lon": 28.94966
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Mersin",
+     "zip": "33343",
+     "country": "Turkey (Türkiye)",
+     "geoPoint": {
+      "lat": 36.81196,
+      "lon": 34.63886
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Bradford",
+     "zip": "BD9 6RJ",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.79391,
+      "lon": -1.75206
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Corby",
+     "zip": "NN17 2UR",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 52.49637,
+      "lon": -0.68939
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Corby",
+     "zip": "NN18 9EZ",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 52.49637,
+      "lon": -0.68939
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "High Wycombe",
+     "zip": "HP11 2QW",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.62907,
+      "lon": -0.74934
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Northwood",
+     "zip": "HA6 2RN",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.61162,
+      "lon": -0.42454
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Preston",
+     "zip": "PR2 9QB",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.76282,
+      "lon": -2.70452
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Shipley",
+     "zip": "BD18 3SA",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.83333,
+      "lon": -1.76667
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Hanoi",
+     "zip": "100000",
+     "country": "Vietnam",
+     "geoPoint": {
+      "lat": 21.0245,
+      "lon": 105.84117
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Hanoi",
+     "zip": "10000",
+     "country": "Vietnam",
+     "geoPoint": {
+      "lat": 21.0245,
+      "lon": 105.84117
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Ho Chi Minh City",
+     "zip": "700000",
+     "country": "Vietnam",
+     "geoPoint": {
+      "lat": 10.82302,
+      "lon": 106.62965
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "42476723",
+     "type": "DERIVED",
+     "citation": "Watz H, Sciurba FC, Bonini M, Yanez A, Bourdin A, Zheng J, De Soyza A, Janssens W, van den Berge M, Xu JF, Saraiva GL, Jenkins M, Jimenez E, Lofdahl M, Li J, Mikosz M, Kishishita N, Jackson S, Johnson S, Patel R, Fageras M, Psallidas I. Phase III LUNA clinical programme: design of four randomised, double-blind, placebo-controlled studies assessing the efficacy and safety of tozorakimab in patients with symptomatic COPD and a high risk of exacerbations. BMJ Open Respir Res. 2026 Jul 20;13(1):e004145. doi: 10.1136/bmjresp-2026-004145."
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "YES",
+   "description": "Qualified researchers can request access to anonymized individual patient-level data from AstraZeneca group of companies sponsored clinical trials via the request portal. All request will be evaluated as per the AZ disclosure commitment:\n\nhttps://astrazenecagrouptrials.pharmacm.com/ST/Submission/Disclosure. Yes, indicates that AZ are accepting requests for IPD, but this does not mean all requests will be shared.",
+   "infoTypes": [
+    "STUDY_PROTOCOL",
+    "SAP"
+   ],
+   "timeFrame": "AstraZeneca will meet or exceed data availability as per the commitments made to the EFPIA Pharma Data Sharing Principles. For details of our timelines, please rerefer to our disclosure commitment at:\n\nhttps://astrazenecagrouptrials.pharmacm.com/ST/Submission/Disclosure.",
+   "accessCriteria": "When a request has been approved AstraZeneca will provide access to the deidentified individual patient-level data in an approved sponsored tool . Signed Data Sharing Agreement (non-negotiable contract for data accessors) must be in place before accessing requested information. Additionally, all users will need to accept the terms and conditions of the SAS MSE to gain access. For additional details, please review the Disclosure Statements at https://astrazenecagrouptrials.pharmacm.com/ST/Submission/Disclosure.",
+   "url": "https://astrazenecagroup-dt.pharmacm.com/DT/Home"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

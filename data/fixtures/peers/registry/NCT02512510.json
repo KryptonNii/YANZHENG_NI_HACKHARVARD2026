@@ -1,0 +1,1987 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT02512510",
+   "orgStudyIdInfo": {
+    "id": "0127"
+   },
+   "organization": {
+    "fullName": "Viatris Inc.",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Efficacy Study of Nebulized TD-4208 for Chronic Obstructive Pulmonary Disease (COPD)",
+   "officialTitle": "A Phase 3, 12-week, Randomized, Double-blind Placebo-controlled Parallel Group Study of Nebulized TD-4208 in Subjects With Chronic Obstructive Pulmonary Disease",
+   "acronym": "COPD"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2022-02",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2015-09"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2016-08",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2016-09",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2015-07-28",
+   "studyFirstSubmitQcDate": "2015-07-30",
+   "studyFirstPostDateStruct": {
+    "date": "2015-07-31",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2018-12-06",
+   "resultsFirstSubmitQcDate": "2018-12-06",
+   "resultsFirstPostDateStruct": {
+    "date": "2018-12-31",
+    "type": "ACTUAL"
+   },
+   "dispFirstSubmitDate": "2018-02-22",
+   "dispFirstSubmitQcDate": "2018-02-22",
+   "dispFirstPostDateStruct": {
+    "date": "2018-02-26",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2022-02-22",
+   "lastUpdatePostDateStruct": {
+    "date": "2022-02-24",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Mylan Inc.",
+    "class": "INDUSTRY"
+   },
+   "collaborators": [
+    {
+     "name": "Theravance Biopharma",
+     "class": "INDUSTRY"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The purpose of this study is to measure the effectiveness and safety of TD 4208, an investigational drug being developed to treat people with moderate to very severe COPD, compared to placebo, a treatment without activity."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ],
+   "keywords": [
+    "Chronic Obstructive Pulmonary Disease, COPD"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 611,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "TD-4208-1",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "88 mcg",
+     "interventionNames": [
+      "Drug: TD-4208"
+     ]
+    },
+    {
+     "label": "TD-4208-2",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "175 mcg",
+     "interventionNames": [
+      "Drug: TD-4208"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "TD-4208",
+     "armGroupLabels": [
+      "TD-4208-1",
+      "TD-4208-2"
+     ],
+     "otherNames": [
+      "revefenacin"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Change From Baseline in Trough FEV1 on Day 85",
+     "timeFrame": "Baseline and Day 85"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Summary of Trough FEV1 Overall Treatment Effect From Day 15 to Day 85",
+     "timeFrame": "Days 15 to 85"
+    },
+    {
+     "measure": "Summary of Change From Baseline to Peak FEV1 After First Dose",
+     "timeFrame": "0-2 hours after First Dose Day 1"
+    },
+    {
+     "measure": "Summary of Rescue Medication Use: Puffs Per Day",
+     "timeFrame": "1-3 Months"
+    },
+    {
+     "measure": "St. George's Respiratory Questionnaire (SGRQ) Proportion of Responders on Day 85",
+     "description": "A Responder is defined as someone who experienced a decrease in SGRQ score of 4 or more units",
+     "timeFrame": "Day 85"
+    },
+    {
+     "measure": "Percentage of Albuterol Rescue-free 24-hour Periods",
+     "timeFrame": "1-3 Months"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Subject is a male or female subject 40 years of age or older\n\nExclusion Criteria:\n\n* Females who are pregnant, lactating, breast-feeding or planning to become pregnant during the study",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Medical Monitor",
+     "affiliation": "Theravance Biopharma",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Palmetto Medical Research Associates L.L.C.",
+     "city": "Easley",
+     "state": "South Carolina",
+     "zip": "29640",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.82984,
+      "lon": -82.60152
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "39429809",
+     "type": "DERIVED",
+     "citation": "LeMaster WB, Witenko CJ, Lacy MK, Olmsted AW, Moran EJ, Mahler DA. Revefenacin Area Under the Curve Spirometry in Patients with Moderate to Very Severe COPD. Int J Chron Obstruct Pulmon Dis. 2024 Oct 16;19:2299-2308. doi: 10.2147/COPD.S483176. eCollection 2024."
+    },
+    {
+     "pmid": "36681255",
+     "type": "DERIVED",
+     "citation": "Donohue JF, Ferguson GT, Ohar JA, Lombardi DA, Schneider RF, Johnson K. Improvements in health status with revefenacin, a once-daily, nebulized, long-acting muscarinic antagonist for chronic obstructive pulmonary disease. Respir Med. 2023 Mar;208:107123. doi: 10.1016/j.rmed.2023.107123. Epub 2023 Jan 18."
+    },
+    {
+     "pmid": "33124005",
+     "type": "DERIVED",
+     "citation": "Lo A, Borin MT, Bourdet DL. Population Pharmacokinetics of Revefenacin in Patients with Chronic Obstructive Pulmonary Disease. Clin Pharmacokinet. 2021 Mar;60(3):391-401. doi: 10.1007/s40262-020-00938-3."
+    },
+    {
+     "pmid": "32393215",
+     "type": "DERIVED",
+     "citation": "Donohue JF, Kerwin E, Barnes CN, Moran EJ, Haumann B, Crater GD. Efficacy of revefenacin, a long-acting muscarinic antagonist for nebulized therapy, in patients with markers of more severe COPD: a post hoc subgroup analysis. BMC Pulm Med. 2020 May 11;20(1):134. doi: 10.1186/s12890-020-1156-4."
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "TD-4208-1",
+     "description": "88 mcg\n\nTD-4208"
+    },
+    {
+     "id": "FG001",
+     "title": "TD-4208-2",
+     "description": "175 mcg\n\nTD-4208"
+    },
+    {
+     "id": "FG002",
+     "title": "Placebo",
+     "description": "Placebo\n\nPlacebo"
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "205"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "197"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "209"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "163"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "162"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "157"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "42"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "35"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "52"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "populationDescription": "611 subjects randomized. 1 subject was not dosed and was thus not included in any analyses.",
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "TD-4208-1",
+     "description": "88 mcg\n\nTD-4208"
+    },
+    {
+     "id": "BG001",
+     "title": "TD-4208-2",
+     "description": "175 mcg\n\nTD-4208"
+    },
+    {
+     "id": "BG002",
+     "title": "Placebo",
+     "description": "Placebo\n\nPlacebo"
+    },
+    {
+     "id": "BG003",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "205"
+      },
+      {
+       "groupId": "BG001",
+       "value": "197"
+      },
+      {
+       "groupId": "BG002",
+       "value": "208"
+      },
+      {
+       "groupId": "BG003",
+       "value": "610"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Categorical",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "<=18 years",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          },
+          {
+           "groupId": "BG003",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Between 18 and 65 years",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "121"
+          },
+          {
+           "groupId": "BG001",
+           "value": "106"
+          },
+          {
+           "groupId": "BG002",
+           "value": "115"
+          },
+          {
+           "groupId": "BG003",
+           "value": "342"
+          }
+         ]
+        },
+        {
+         "title": ">=65 years",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "84"
+          },
+          {
+           "groupId": "BG001",
+           "value": "91"
+          },
+          {
+           "groupId": "BG002",
+           "value": "93"
+          },
+          {
+           "groupId": "BG003",
+           "value": "268"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "63.1",
+           "spread": "8.81"
+          },
+          {
+           "groupId": "BG001",
+           "value": "63.6",
+           "spread": "9.19"
+          },
+          {
+           "groupId": "BG002",
+           "value": "63.5",
+           "spread": "8.91"
+          },
+          {
+           "groupId": "BG003",
+           "value": "63.4",
+           "spread": "8.95"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "102"
+          },
+          {
+           "groupId": "BG001",
+           "value": "95"
+          },
+          {
+           "groupId": "BG002",
+           "value": "111"
+          },
+          {
+           "groupId": "BG003",
+           "value": "308"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "103"
+          },
+          {
+           "groupId": "BG001",
+           "value": "102"
+          },
+          {
+           "groupId": "BG002",
+           "value": "97"
+          },
+          {
+           "groupId": "BG003",
+           "value": "302"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Ethnicity (NIH/OMB)",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Hispanic or Latino",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "17"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "12"
+          },
+          {
+           "groupId": "BG003",
+           "value": "39"
+          }
+         ]
+        },
+        {
+         "title": "Not Hispanic or Latino",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "188"
+          },
+          {
+           "groupId": "BG001",
+           "value": "186"
+          },
+          {
+           "groupId": "BG002",
+           "value": "194"
+          },
+          {
+           "groupId": "BG003",
+           "value": "568"
+          }
+         ]
+        },
+        {
+         "title": "Unknown or Not Reported",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1"
+          },
+          {
+           "groupId": "BG002",
+           "value": "2"
+          },
+          {
+           "groupId": "BG003",
+           "value": "3"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Race (NIH/OMB)",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "American Indian or Alaska Native",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          },
+          {
+           "groupId": "BG003",
+           "value": "1"
+          }
+         ]
+        },
+        {
+         "title": "Asian",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1"
+          },
+          {
+           "groupId": "BG001",
+           "value": "2"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          },
+          {
+           "groupId": "BG003",
+           "value": "3"
+          }
+         ]
+        },
+        {
+         "title": "Native Hawaiian or Other Pacific Islander",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          },
+          {
+           "groupId": "BG003",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Black or African American",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "17"
+          },
+          {
+           "groupId": "BG001",
+           "value": "21"
+          },
+          {
+           "groupId": "BG002",
+           "value": "20"
+          },
+          {
+           "groupId": "BG003",
+           "value": "58"
+          }
+         ]
+        },
+        {
+         "title": "White",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "186"
+          },
+          {
+           "groupId": "BG001",
+           "value": "171"
+          },
+          {
+           "groupId": "BG002",
+           "value": "188"
+          },
+          {
+           "groupId": "BG003",
+           "value": "545"
+          }
+         ]
+        },
+        {
+         "title": "More than one race",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1"
+          },
+          {
+           "groupId": "BG001",
+           "value": "2"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          },
+          {
+           "groupId": "BG003",
+           "value": "3"
+          }
+         ]
+        },
+        {
+         "title": "Unknown or Not Reported",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          },
+          {
+           "groupId": "BG003",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Region of Enrollment",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "classes": [
+      {
+       "title": "United States",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "205"
+          },
+          {
+           "groupId": "BG001",
+           "value": "197"
+          },
+          {
+           "groupId": "BG002",
+           "value": "208"
+          },
+          {
+           "groupId": "BG003",
+           "value": "610"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Smoking Status",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "title": "Current Smoker",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "97"
+          },
+          {
+           "groupId": "BG001",
+           "value": "94"
+          },
+          {
+           "groupId": "BG002",
+           "value": "95"
+          },
+          {
+           "groupId": "BG003",
+           "value": "286"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Former Smoker",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "108"
+          },
+          {
+           "groupId": "BG001",
+           "value": "103"
+          },
+          {
+           "groupId": "BG002",
+           "value": "113"
+          },
+          {
+           "groupId": "BG003",
+           "value": "324"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Change From Baseline in Trough FEV1 on Day 85",
+     "populationDescription": "Intent-to-treat (ITT) analysis set",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "mL",
+     "timeFrame": "Baseline and Day 85",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "TD-4208-1",
+       "description": "88 mcg\n\nTD-4208"
+      },
+      {
+       "id": "OG001",
+       "title": "TD-4208-2",
+       "description": "175 mcg\n\nTD-4208"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo",
+       "description": "Placebo\n\nPlacebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "152"
+        },
+        {
+         "groupId": "OG001",
+         "value": "154"
+        },
+        {
+         "groupId": "OG002",
+         "value": "150"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "115.58",
+           "spread": "18.637"
+          },
+          {
+           "groupId": "OG001",
+           "value": "102.90",
+           "spread": "18.542"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-44.92",
+           "spread": "18.841"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Summary of Trough FEV1 Overall Treatment Effect From Day 15 to Day 85",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "mL",
+     "timeFrame": "Days 15 to 85",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "TD-4208-1",
+       "description": "88 mcg\n\nTD-4208"
+      },
+      {
+       "id": "OG001",
+       "title": "TD-4208-2",
+       "description": "175 mcg\n\nTD-4208"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo",
+       "description": "Placebo\n\nPlacebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "189"
+        },
+        {
+         "groupId": "OG001",
+         "value": "181"
+        },
+        {
+         "groupId": "OG002",
+         "value": "187"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "83.9",
+           "spread": "3.14"
+          },
+          {
+           "groupId": "OG001",
+           "value": "87.1",
+           "spread": "3.21"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-39.9",
+           "spread": "3.15"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Summary of Change From Baseline to Peak FEV1 After First Dose",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "mL",
+     "timeFrame": "0-2 hours after First Dose Day 1",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "TD-4208-1",
+       "description": "88 mcg\n\nTD-4208"
+      },
+      {
+       "id": "OG001",
+       "title": "TD-4208-2",
+       "description": "175 mcg\n\nTD-4208"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo",
+       "description": "Placebo\n\nPlacebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "204"
+        },
+        {
+         "groupId": "OG001",
+         "value": "196"
+        },
+        {
+         "groupId": "OG002",
+         "value": "208"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "218.65",
+           "spread": "10.291"
+          },
+          {
+           "groupId": "OG001",
+           "value": "216.84",
+           "spread": "10.248"
+          },
+          {
+           "groupId": "OG002",
+           "value": "88.22",
+           "spread": "10.092"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Summary of Rescue Medication Use: Puffs Per Day",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Puffs per Day",
+     "timeFrame": "1-3 Months",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "TD-4208-1",
+       "description": "88 mcg\n\nTD-4208"
+      },
+      {
+       "id": "OG001",
+       "title": "TD-4208-2",
+       "description": "175 mcg\n\nTD-4208"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo",
+       "description": "Placebo\n\nPlacebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "202"
+        },
+        {
+         "groupId": "OG001",
+         "value": "196"
+        },
+        {
+         "groupId": "OG002",
+         "value": "203"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.00",
+           "spread": "0.207"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.38",
+           "spread": "0.204"
+          },
+          {
+           "groupId": "OG002",
+           "value": "2.54",
+           "spread": "0.206"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "St. George's Respiratory Questionnaire (SGRQ) Proportion of Responders on Day 85",
+     "description": "A Responder is defined as someone who experienced a decrease in SGRQ score of 4 or more units",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "Day 85",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "TD-4208-1",
+       "description": "88 mcg\n\nTD-4208"
+      },
+      {
+       "id": "OG001",
+       "title": "TD-4208-2",
+       "description": "175 mcg\n\nTD-4208"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo",
+       "description": "Placebo\n\nPlacebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "145"
+        },
+        {
+         "groupId": "OG001",
+         "value": "149"
+        },
+        {
+         "groupId": "OG002",
+         "value": "140"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "67"
+          },
+          {
+           "groupId": "OG001",
+           "value": "67"
+          },
+          {
+           "groupId": "OG002",
+           "value": "54"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Percentage of Albuterol Rescue-free 24-hour Periods",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Percentage of 24hr periods",
+     "timeFrame": "1-3 Months",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "TD-4208-1",
+       "description": "88 mcg\n\nTD-4208"
+      },
+      {
+       "id": "OG001",
+       "title": "TD-4208-2",
+       "description": "175 mcg\n\nTD-4208"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo",
+       "description": "Placebo\n\nPlacebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "205"
+        },
+        {
+         "groupId": "OG001",
+         "value": "197"
+        },
+        {
+         "groupId": "OG002",
+         "value": "207"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "44.79",
+           "spread": "2.800"
+          },
+          {
+           "groupId": "OG001",
+           "value": "43.26",
+           "spread": "2.769"
+          },
+          {
+           "groupId": "OG002",
+           "value": "37.23",
+           "spread": "2.766"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "2",
+   "timeFrame": "From signing of ICF through the final follow-up assessment, Day 85.",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "TD-4208-1",
+     "description": "88 mcg\n\nTD-4208",
+     "deathsNumAffected": 0,
+     "deathsNumAtRisk": 205,
+     "seriousNumAffected": 11,
+     "seriousNumAtRisk": 205,
+     "otherNumAffected": 59,
+     "otherNumAtRisk": 205
+    },
+    {
+     "id": "EG001",
+     "title": "TD-4208-2",
+     "description": "175 mcg\n\nTD-4208",
+     "deathsNumAffected": 1,
+     "deathsNumAtRisk": 197,
+     "seriousNumAffected": 5,
+     "seriousNumAtRisk": 197,
+     "otherNumAffected": 62,
+     "otherNumAtRisk": 197
+    },
+    {
+     "id": "EG002",
+     "title": "Placebo",
+     "description": "Placebo\n\nPlacebo",
+     "deathsNumAffected": 0,
+     "deathsNumAtRisk": 209,
+     "seriousNumAffected": 7,
+     "seriousNumAtRisk": 209,
+     "otherNumAffected": 52,
+     "otherNumAtRisk": 209
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (18.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 8,
+       "numAffected": 8,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Acute respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Respiratory Failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (18.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Cellulitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Bronchitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Bronchitis bacterial",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Bursitis",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA (18.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Musculoskeletal Chest Pain",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Cerebrolvascular Accident",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Spondylitic myelopathy",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Small intestinal obstruction",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Chest pain",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Lactic acidosis",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Bipolar disorder",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Victim of homicide",
+     "organSystem": "Social circumstances",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 209
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 25,
+       "numAffected": 25,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 21,
+       "numAffected": 21,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 25,
+       "numAffected": 25,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Cough",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 9,
+       "numAffected": 9,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 10,
+       "numAffected": 10,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 9,
+       "numAffected": 9,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Headache",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 14,
+       "numAffected": 14,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 8,
+       "numAffected": 8,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 6,
+       "numAffected": 6,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Dyspnoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 6,
+       "numAffected": 6,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 8,
+       "numAffected": 8,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 12,
+       "numAffected": 12,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Upper respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 6,
+       "numAffected": 6,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 10,
+       "numAffected": 10,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 5,
+       "numAffected": 5,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Nasopharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 7,
+       "numAffected": 7,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 9,
+       "numAffected": 9,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 209
+      }
+     ]
+    },
+    {
+     "term": "Back Pain",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA (18.1)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 205
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 7,
+       "numAffected": 7,
+       "numAtRisk": 197
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 209
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "The PI may communicate the trial results generated by the PI, but only after the first publication or presentation of the combined study results generated by all participating sites. The Sponsor can then review trial results communications prior to public release and can embargo communications regarding trial results for a period that is more than 60 days but less than or equal to 180 days. The Sponsor cannot require changes to the communication and cannot extend the embargo."
+   },
+   "pointOfContact": {
+    "title": "Head of Clinical Development & Medical Affairs",
+    "organization": "Theravance Biopharma",
+    "email": "medinfo@theravance.com",
+    "phone": "1-855-633-8479"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C583570",
+     "term": "revefenacin"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

@@ -1,5 +1,6 @@
 import { useSyncExternalStore } from "react";
 import type { Role } from "./contracts";
+import { translate } from "./i18n";
 
 /**
  * Demo identities (A7 demo users: alex.author, riley.reviewer, sam.qa).
@@ -70,5 +71,5 @@ export function useIdentity(): DemoIdentity {
 /** "alex.author" → "Alex (Author)"; unknown users are shown as-is. */
 export function displayName(user: string): string {
   const found = DEMO_IDENTITIES.find((i) => i.user === user);
-  return found ? `${found.name} (${found.roleLabel})` : user;
+  return found ? `${found.name} (${translate(found.roleLabel, { author: "作者", reviewer: "审核员", qa: "质量保证", admin: "管理员", viewer: "查看者" }[found.role])})` : user;
 }

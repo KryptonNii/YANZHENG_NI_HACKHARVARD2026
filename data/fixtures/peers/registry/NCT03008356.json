@@ -1,0 +1,289 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT03008356",
+   "orgStudyIdInfo": {
+    "id": "16-005732"
+   },
+   "organization": {
+    "fullName": "Mayo Clinic",
+    "class": "OTHER"
+   },
+   "briefTitle": "L-carnitine for Fatigue in COPD",
+   "officialTitle": "L-Carnitine Supplementation With and Without Health Coaching for Fatigue in Patients With Chronic Obstructive Pulmonary Disease (COPD)",
+   "acronym": "LC4COPD"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2019-01",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2017-01"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2018-02",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2018-02",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2016-12-28",
+   "studyFirstSubmitQcDate": "2016-12-28",
+   "studyFirstPostDateStruct": {
+    "date": "2017-01-02",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2019-01-21",
+   "lastUpdatePostDateStruct": {
+    "date": "2019-01-23",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "PRINCIPAL_INVESTIGATOR",
+    "investigatorFullName": "Roberto P. Benzo",
+    "investigatorTitle": "PI",
+    "investigatorAffiliation": "Mayo Clinic"
+   },
+   "leadSponsor": {
+    "name": "Mayo Clinic",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false
+  },
+  "descriptionModule": {
+   "briefSummary": "supplementation with L-carnitine that is available both as an FDA-approved therapy for primary carnitine deficiency, as well as widely available as an over-the-counter ergogenic aid will improve wellbeing and function measured by questionnaires in patient with chronic obstructive pulmonary disease (COPD).\n\nbased on our review of literature that addition of health coaching (HC) to L-carnitine will yield greater gains."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Copd",
+    "Fatigue"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 33,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "L-carnitine",
+     "type": "EXPERIMENTAL",
+     "description": "Oral L-carnitine 1000mg twice daily",
+     "interventionNames": [
+      "Dietary Supplement: L-carnitine 1000 mg twice daily"
+     ]
+    },
+    {
+     "label": "L-carnitine + health coaching",
+     "type": "EXPERIMENTAL",
+     "description": "Oral L-carnitine 1000mg twice daily and weekly 10-15 minute health coaching calls",
+     "interventionNames": [
+      "Dietary Supplement: L-carnitine 1000 mg twice daily",
+      "Behavioral: Weekly health coaching calls"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo capsules twice daily",
+     "interventionNames": [
+      "Dietary Supplement: Placebo capsules"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DIETARY_SUPPLEMENT",
+     "name": "L-carnitine 1000 mg twice daily",
+     "description": "Oral L-carnitine to be taken twice daily for 8 weeks",
+     "armGroupLabels": [
+      "L-carnitine",
+      "L-carnitine + health coaching"
+     ]
+    },
+    {
+     "type": "BEHAVIORAL",
+     "name": "Weekly health coaching calls",
+     "description": "Weekly health coaching calls lasting 10-15 minutes",
+     "armGroupLabels": [
+      "L-carnitine + health coaching"
+     ]
+    },
+    {
+     "type": "DIETARY_SUPPLEMENT",
+     "name": "Placebo capsules",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Change in Exercise Capacity as Measured by the Six Minute Walk Test (6MWT)",
+     "description": "The 6MWT is a widely studied, standardized and widely utilized test that evaluates the global and integrated responses of all the systems involved during exercise, including the pulmonary and cardiovascular systems, systemic circulation, peripheral circulation, blood, neuromuscular units, and muscle metabolism. The self-paced 6MWT assesses the submaximal level of functional capacity. Most patients do not achieve maximal exercise capacity during the 6MWT; instead, they choose their own intensity of exercise and are allowed to stop and rest during the test.",
+     "timeFrame": "baseline, end of 8 week intervention"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Change in Health-Related Quality of Life as Measured by the Chronic Respiratory Questionnaire (CRQ)",
+     "description": "The CRQ is a widely utilized and validated interviewer-administered questionnaire measuring both physical and emotional aspects of chronic respiratory disease. There are 20 questions, with each item graded on 7-point Likert scale. Scores can range from 20 to 100. Higher scores indicate better quality of life.",
+     "timeFrame": "baseline, end of 8 week intervention"
+    },
+    {
+     "measure": "Change in Physical Fatigue as Measured by the Chalder Fatigue Questionnaire (CFQ-11)",
+     "description": "The CFQ-11 is a well-known, widely utilized and validated self-administered questionnaire for measuring the extent and severity of fatigue. The scoring incorporates two self-assessment scales measuring components indicative of physical fatigue \\[8 items\\] and mental fatigue \\[5 items\\]. The 11 individual items are scored from 0 (better than usual) to 3 (much worse than usual); total score range: 0-33.",
+     "timeFrame": "baseline, end of 8 week intervention"
+    },
+    {
+     "measure": "Physical Activity as Measured by the SenseWear Armband",
+     "description": "The SenseWear Armband system (Temple Healthcare) is a versatile arm-band monitor allowing convenient and accurate collection of raw data regarding energy expenditure, sleep duration and quality, physical activity and movement in subjects in a free-living environment, allowing them to go about their normal daily activities. Patients will be shown how to wear the activity monitor and be asked to use it for at least 5 days for 23 hours a day. They will be provided instructions and pre-paid shipping materials for wear and return of the monitor.",
+     "timeFrame": "end of 8 week intervention"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion criteria:\n\n\\- COPD patients with a positive screen for fatigue\n\nExclusion criteria:\n\n* Vulnerable population - pregnant women, prisoners, unable to provide consent\n* Pre-menopausal/breastfeeding women (pregnancy category B)\n* Thyroid disease\n* Anticoagulation therapy\n* Decompensated cardiac disease\n* Chronic Kidney Disease (CKD4 or above)\n* Known seizure disorder\n* Active malignancy\n* Exacerbation of underlying pulmonary disease or acute illness in the 6 weeks before screening\n* Enrollment in the past 6 weeks or currently in a cardiac or pulmonary rehab program or other physical fitness class(es).\n* Difficulty with swallowing pills",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Roberto P Benzo",
+     "affiliation": "Mayo Clinic",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Mayo Clinic in Rochester",
+     "city": "Rochester",
+     "state": "Minnesota",
+     "zip": "55905",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.02163,
+      "lon": -92.4699
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D005221",
+     "term": "Fatigue"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D012816",
+     "term": "Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D002331",
+     "term": "Carnitine"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D050337",
+     "term": "Trimethyl Ammonium Compounds"
+    },
+    {
+     "id": "D000644",
+     "term": "Quaternary Ammonium Compounds"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

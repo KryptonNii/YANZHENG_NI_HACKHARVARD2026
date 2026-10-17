@@ -2,13 +2,16 @@ import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { act, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { MemoryRouter, Route, Routes } from "react-router-dom";
+import { afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import { SciencePage } from "@/features/scenario/SciencePage";
 import { ApiError, api, onApiError, request } from "./api/client";
 import { normalizeApproval, normalizeDrivers, normalizeSavedScenario, normalizeScenarioResult, normalizeScience } from "./api/normalize";
+import { ExternalPages } from "./externalPages";
 import { formatRange, formatSignedValue, formatValue, splitValue } from "./format";
 import { getIdentity, identityHeaders, setIdentity } from "./identity";
 import { IdentitySwitcher } from "./IdentitySwitcher";
+import { ToastProvider } from "./toast";
 
 function jsonResponse(body: unknown, status = 200) {
   return new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
@@ -283,6 +286,45 @@ describe("compute response extensions", () => {
     expect(r.supply?.kits_produced?.p50).toBe(22);
     expect(r.supply?.shipments?.unit).toBe("count");
     expect(r.supply?.stockout_probability).toBe(0.06);
+  });
+});
+
+describe("lazily loaded command and compliance routes", () => {
+  // Transform the feature modules up front so each case times the routing, not a cold import.
+  // The lazy() factories still run; they just get the cached module.
+  beforeAll(async () => {
+    await import("@/features/command");
+    await import("@/features/compliance");
+  }, 30_000);
+
+  it.each([
+    ["/approvals", "approvals", "approvals-page"],
+    ["/audit", "audit", "audit-page"],
+    ["/validation", "validation", "validation-page"],
+    ["/command/demo-40", "command/:trialId", "command-page"],
+  ] as const)("renders %s from its feature module", async (path, route, testId) => {
+    vi.spyOn(window, "fetch").mockImplementation(async (input) => {
+      const url = String(input);
+      if (url.startsWith("/api/ops/")) return jsonResponse({ error: "not_simulated", message: "No simulated feed yet.", details: {} }, 409);
+      if (url.startsWith("/api/audit/verify")) return jsonResponse({ ok: true, first_bad_seq: null, checked: 0 });
+      return jsonResponse({ items: [], total: 0 });
+    });
+    const Page = {
+      approvals: ExternalPages.Approvals,
+      audit: ExternalPages.Audit,
+      validation: ExternalPages.Validation,
+      "command/:trialId": ExternalPages.Command,
+    }[route];
+    render(
+      <ToastProvider>
+        <MemoryRouter initialEntries={[path]}>
+          <Routes>
+            <Route path={route} element={<Page />} />
+          </Routes>
+        </MemoryRouter>
+      </ToastProvider>,
+    );
+    expect(await screen.findByTestId(testId, {}, { timeout: 4000 })).toBeInTheDocument();
   });
 });
 

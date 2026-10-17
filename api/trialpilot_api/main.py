@@ -101,6 +101,8 @@ def create_app(settings: Settings | None = None, *, engine_fns: EngineFns | None
         return JSONResponse(status_code=409, content=body)
 
     _install_compliance_error_handler(app)
+    app.include_router(__import__("trialpilot_api.benchmark", fromlist=["router"]).router)
+    app.include_router(__import__("trialpilot_api.advice", fromlist=["router"]).router)
 
     for module in (routes_health, routes_designs, routes_scenarios, routes_params,
                    routes_science, routes_export):

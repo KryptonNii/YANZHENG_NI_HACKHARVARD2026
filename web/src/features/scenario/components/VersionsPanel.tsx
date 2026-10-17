@@ -1,3 +1,4 @@
+import { useTranslation, translate as t } from "@/app/i18n";
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api, isAbort } from "@/app/api/client";
@@ -10,15 +11,16 @@ import { isKnownRange } from "../metrics";
 import { ApprovalPanel } from "./ApprovalPanel";
 
 export function ScenarioStatusChip({ status }: { status: SavedScenario["status"] }) {
+  useTranslation();
   switch (status) {
     case "approved":
-      return <Badge tone="better">✓ Approved</Badge>;
+      return <Badge tone="better">{t("✓ Approved", "✓ 已批准")}</Badge>;
     case "submitted":
-      return <Badge tone="caution">◷ Submitted</Badge>;
+      return <Badge tone="caution">{t("◷ Submitted", "◷ 已提交")}</Badge>;
     case "rejected":
-      return <Badge tone="worse">✕ Rejected</Badge>;
+      return <Badge tone="worse">{t("✕ Rejected", "✕ 已拒绝")}</Badge>;
     default:
-      return <Badge tone="neutral">Draft</Badge>;
+      return <Badge tone="neutral">{t("Draft", "草稿")}</Badge>;
   }
 }
 
@@ -38,6 +40,7 @@ export function VersionsPanel({
   onLoadLevers: (s: SavedScenario) => void;
   onRefresh: () => void;
 }) {
+  useTranslation();
   const toast = useToast();
   const [compareIds, setCompareIds] = useState<string[]>([]);
   const [full, setFull] = useState<SavedScenario | null>(null);
@@ -86,7 +89,7 @@ export function VersionsPanel({
       const s = await api.submitScenario(selected.id);
       setFull(s);
       setApproval(s.approval);
-      toast.push("success", "Submitted for approval", `${s.name} v${s.version} is now locked; changes create a new version.`);
+      toast.push("success", t("Submitted for approval", "已提交审批"), t(`${s.name} v${s.version} is now locked; changes create a new version.`, `${s.name} v${s.version} 已锁定；更改将创建新版本。`));
       onRefresh();
     } catch {
       // toast already shown by the client
@@ -110,34 +113,34 @@ export function VersionsPanel({
     <section className="card p-4" aria-labelledby="versions-title" data-testid="versions-panel">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <h2 id="versions-title" className="card-title">
-          Saved scenarios &amp; approval
+          {t("Saved scenarios & approval", "已保存方案与审批")}
         </h2>
         {compareIds.length === 2 ? (
           <Link className="btn-secondary py-1.5" to={`/compare?a=${encodeURIComponent(compareIds[0])}&b=${encodeURIComponent(compareIds[1])}`} data-testid="compare-selected">
-            Compare selected (2)
+            {t("Compare selected (2)", "比较所选方案（2）")}
           </Link>
         ) : (
-          <span className="text-xs text-ink-500">Tick two scenarios to compare them</span>
+          <span className="text-xs text-ink-500">{t("Tick two scenarios to compare them", "勾选两个方案进行比较")}</span>
         )}
       </div>
 
       {loading && scenarios.length === 0 ? (
-        <Spinner label="Loading saved scenarios" />
+        <Spinner label={t("Loading saved scenarios", "正在加载已保存方案")} />
       ) : scenarios.length === 0 ? (
-        <EmptyState title="No saved scenarios yet">Use “Save scenario” to keep this lever set as a version you can compare and submit.</EmptyState>
+        <EmptyState title={t("No saved scenarios yet", "暂无已保存方案")}>{t("Use “Save scenario” to keep this lever set as a version you can compare and submit.", "使用“保存方案”将当前调整项保存为可比较和提交的版本。")}</EmptyState>
       ) : (
         <div className="max-h-72 overflow-auto">
           <table className="w-full text-sm" data-testid="versions-table">
             <thead>
               <tr className="text-left text-xs uppercase tracking-wide text-ink-500">
                 <th scope="col" className="w-8 pb-1">
-                  <span className="sr-only">Compare</span>
+                  <span className="sr-only">{t("Compare", "比较")}</span>
                 </th>
-                <th scope="col" className="pb-1 font-semibold">Scenario</th>
-                <th scope="col" className="whitespace-nowrap pb-1 text-right font-semibold">Cost P50</th>
-                <th scope="col" className="pb-1 font-semibold">Status</th>
+                <th scope="col" className="pb-1 font-semibold">{t("Scenario", "方案")}</th>
+                <th scope="col" className="whitespace-nowrap pb-1 text-right font-semibold">{t("Cost P50", "费用 P50")}</th>
+                <th scope="col" className="pb-1 font-semibold">{t("Status", "状态")}</th>
                 <th scope="col" className="pb-1">
-                  <span className="sr-only">Actions</span>
+                  <span className="sr-only">{t("Actions", "操作")}</span>
                 </th>
               </tr>
             </thead>
@@ -150,7 +153,7 @@ export function VersionsPanel({
                       <input
                         type="checkbox"
                         className="h-4 w-4 accent-accent-700"
-                        aria-label={`Select ${s.name} v${s.version} for comparison`}
+                        aria-label={t(`Select ${s.name} v${s.version} for comparison`, `选择 ${s.name} v${s.version} 进行比较`)}
                         checked={compareIds.includes(s.id)}
                         onChange={() => toggleCompare(s.id)}
                       />
@@ -161,16 +164,16 @@ export function VersionsPanel({
                       </button>
                       <span className="block text-xs text-ink-500">
                         {displayName(s.author)} · {formatUtc(s.created_at)}
-                        {s.design_version != null ? ` · design v${s.design_version}` : ""}
+                        {s.design_version != null ? t(` · design v${s.design_version}`, ` · 设计 v${s.design_version}`) : ""}
                       </span>
                     </td>
-                    <td className="whitespace-nowrap py-1.5 pl-2 text-right tabular text-ink-800">{cost && isKnownRange(cost) ? formatValue(cost.p50, "usd") : cost ? "unknown" : "—"}</td>
+                    <td className="whitespace-nowrap py-1.5 pl-2 text-right tabular text-ink-800">{cost && isKnownRange(cost) ? formatValue(cost.p50, "usd") : cost ? t("unknown", "未知") : "—"}</td>
                     <td className="whitespace-nowrap py-1.5 pl-2">
                       <ScenarioStatusChip status={s.status} />
                     </td>
                     <td className="py-1.5 text-right">
                       <button type="button" className="btn-ghost whitespace-nowrap px-2 py-1 text-xs" onClick={() => void loadLevers(s)}>
-                        Load levers
+                        {t("Load levers", "加载调整项")}
                       </button>
                     </td>
                   </tr>
@@ -188,34 +191,34 @@ export function VersionsPanel({
               {selected.name} <span className="font-normal text-ink-500">v{selected.version}</span> <ScenarioStatusChip status={selected.status} />
             </p>
             <p className="mt-0.5 text-xs text-ink-500">
-              Parameter set <code className="font-mono">{selected.parameter_set_version ?? "—"}</code>
+              {t("Parameter set", "参数集")} <code className="font-mono">{selected.parameter_set_version ?? "—"}</code>
               {selected.record_hash && (
                 <>
                   {" "}
-                  · record sha256 <code className="font-mono">{selected.record_hash.slice(0, 12)}…</code>
+                  {t("· record sha256", "· 记录 SHA256")} <code className="font-mono">{selected.record_hash.slice(0, 12)}…</code>
                 </>
               )}
             </p>
             <div className="mt-3 flex flex-wrap gap-2">
               {selected.status === "draft" && (
                 <button type="button" className="btn-primary" onClick={() => void submit()} disabled={submitting} data-testid="submit-approval">
-                  {submitting ? "Submitting…" : "Submit for approval"}
+                  {submitting ? t("Submitting…", "提交中…") : t("Submit for approval", "提交审批")}
                 </button>
               )}
               <a className="btn-secondary" href={api.exportUrl(selected.id, "csv")} download>
-                Export CSV
+                {t("Export CSV", "导出 CSV")}
               </a>
               <a className="btn-secondary" href={api.exportUrl(selected.id, "pdf")} target="_blank" rel="noreferrer">
-                Export PDF
+                {t("Export PDF", "导出 PDF")}
               </a>
             </div>
             {selected.status !== "draft" && (
-              <p className="mt-2 text-xs text-ink-500">Submitted scenarios are immutable. Saving changed levers creates a new version.</p>
+              <p className="mt-2 text-xs text-ink-500">{t("Submitted scenarios are immutable. Saving changed levers creates a new version.", "已提交的方案不可修改。保存更改后的调整项将创建新版本。")}</p>
             )}
           </div>
           <div>
             {loadingFull && !approval ? (
-              <Spinner label="Loading approval" />
+              <Spinner label={t("Loading approval", "正在加载审批信息")} />
             ) : approval ? (
               <ApprovalPanel
                 approval={approval}
@@ -225,9 +228,9 @@ export function VersionsPanel({
                 }}
               />
             ) : selected.status === "draft" ? (
-              <p className="rounded-lg bg-ink-50 px-3 py-2 text-sm text-ink-600">Not submitted yet. Submitting locks this version and starts review → approval.</p>
+              <p className="rounded-lg bg-ink-50 px-3 py-2 text-sm text-ink-600">{t("Not submitted yet. Submitting locks this version and starts review → approval.", "尚未提交。提交后将锁定此版本，并启动审核 → 批准流程。")}</p>
             ) : (
-              <p className="rounded-lg bg-ink-50 px-3 py-2 text-sm text-ink-600">No approval request found for this scenario.</p>
+              <p className="rounded-lg bg-ink-50 px-3 py-2 text-sm text-ink-600">{t("No approval request found for this scenario.", "未找到此方案的审批请求。")}</p>
             )}
           </div>
         </div>

@@ -39,6 +39,26 @@ describe("compute response ordering", () => {
     expect(result.current.computing).toBe(false);
   });
 
+  it("keeps the in-flight lever compute when the baseline arrives later", async () => {
+    vi.useFakeTimers();
+    const pending: Array<{ resolve: (value: ScenarioResultX) => void; signal?: AbortSignal }> = [];
+    const compute = vi.spyOn(api, "compute").mockImplementation((_id, _levers, opts) => new Promise((resolve) => {
+      pending.push({ resolve, signal: opts?.signal });
+    }));
+    const levers = { ...DEFAULT_LEVERS, remote_monitoring_share: 0.5 };
+    const { result } = renderHook(() => useScenarioCompute(MOCK_DESIGN.id, levers, true, 1));
+    await act(async () => { vi.advanceTimersByTime(150); });
+    expect(compute).toHaveBeenCalledTimes(2);
+    await act(async () => { pending[0].resolve(mockCompute(MOCK_DESIGN, DEFAULT_LEVERS)); });
+    await act(async () => { vi.advanceTimersByTime(150); });
+    expect(compute).toHaveBeenCalledTimes(2);
+    expect(pending[1].signal?.aborted).toBe(false);
+    const current = mockCompute(MOCK_DESIGN, levers);
+    await act(async () => { pending[1].resolve(current); });
+    expect(result.current.current).toBe(current);
+    expect(result.current.computing).toBe(false);
+  });
+
   it("retries a failed calculation with unchanged levers", async () => {
     vi.useFakeTimers();
     const compute = vi.spyOn(api, "compute").mockRejectedValue(new Error("temporarily unavailable"));

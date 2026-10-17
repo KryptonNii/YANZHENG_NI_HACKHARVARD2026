@@ -1,6 +1,7 @@
 import type { MetricRange, ModuleBreakdown, ProvenanceItem } from "@/app/contracts";
 import { EXTENSION_MODULES, EXCLUDED_BY_DEFAULT_MODULES } from "@/app/contracts";
 import { humanize } from "@/app/format";
+import { translate } from "@/app/i18n";
 
 export type MetricKey = "cost_usd" | "site_staff_hours" | "patient_travel_hours" | "duration_months" | "co2e_kg";
 
@@ -22,6 +23,22 @@ export const METRICS: MetricDef[] = [
 ];
 
 export const METRIC_BY_KEY = Object.fromEntries(METRICS.map((m) => [m.key, m])) as Record<MetricKey, MetricDef>;
+
+const METRIC_ZH: Record<MetricKey, { label: string; description: string }> = {
+  cost_usd: { label: "成本", description: "试验专属成本（美元）" },
+  site_staff_hours: { label: "研究中心人力", description: "研究中心工作人员投入的小时数" },
+  patient_travel_hours: { label: "患者出行时间", description: "患者往返访视所需的小时数" },
+  duration_months: { label: "持续时间", description: "从开始到数据库锁定的月数（预测）" },
+  co2e_kg: { label: "碳排放", description: "温室气体排放量，千克 CO₂e（以吨显示）" },
+};
+
+export function metricLabel(key: MetricKey): string {
+  return translate(METRIC_BY_KEY[key].label, METRIC_ZH[key].label);
+}
+
+export function metricDescription(key: MetricKey): string {
+  return translate(METRIC_BY_KEY[key].description, METRIC_ZH[key].description);
+}
 
 /**
  * §2 rule 2: unknown ≠ zero. The engine reports a metric it cannot compute (missing input) as
@@ -85,7 +102,13 @@ const MODULE_LABELS: Record<string, string> = {
 };
 
 export function moduleLabel(m: string): string {
-  return MODULE_LABELS[m] ?? humanize(m);
+  const chinese: Record<string, string> = {
+    setup: "启动", trial_management: "试验管理", meetings_travel: "会议与监查差旅",
+    intervention: "干预", data_collection: "数据采集", supplies_equipment: "耗材与设备",
+    patient_assessments: "患者评估与出行", samples: "样本（运输与存储）", laboratory: "实验室",
+    closeout: "收尾", drug_supply: "药物供应（扩展）", forecast: "预测",
+  };
+  return translate(MODULE_LABELS[m] ?? humanize(m), chinese[m] ?? humanize(m));
 }
 
 export function findModule(result: { modules: ModuleBreakdown[] }, module: string): ModuleBreakdown | undefined {

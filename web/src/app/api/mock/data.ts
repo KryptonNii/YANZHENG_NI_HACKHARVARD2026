@@ -11,6 +11,9 @@ const P = (code: string, label: string, site_minutes: number, ships_sample = fal
   site_minutes,
   ships_sample,
   sample_temp: ships_sample ? "frozen_-80" : null,
+  endpoint_role: "unknown",
+  endpoint_note: "",
+  link_basis: "unmatched",
 });
 
 const STD = [P("vitals", "Vital signs", 10), P("blood_draw", "Blood draw", 15, true), P("questionnaire", "Patient questionnaire", 15)];

@@ -138,6 +138,8 @@ describe("command center", () => {
 
     expect(await screen.findByText(/Site 14 drug overstock/)).toBeInTheDocument();
     expect(screen.getByText("Simulated feed")).toBeInTheDocument();
+    expect(screen.getByTestId("lock-recovery-story")).toHaveAttribute("data-simulated", "true");
+    expect(screen.getByRole("button", { name: "Review two interventions" })).toBeEnabled();
     expect(screen.getByRole("img", { name: "Actual 8, plan band 6 to 14, P50 10" })).toBeInTheDocument();
     const delay = screen.getByText("Delay").closest("div");
     expect(delay).toHaveTextContent("1.2 mo – 4.1 mo");
@@ -149,5 +151,16 @@ describe("command center", () => {
     await userEvent.click(screen.getByRole("button", { name: "Save intervention" }));
 
     await waitFor(() => expect(screen.getByTestId("intervention-list")).toHaveTextContent(/on-demand/i));
+  });
+
+  it("keeps the authored 40-site replay off other trials", async () => {
+    render(
+      <MemoryRouter initialEntries={["/command/another-trial"]}>
+        <Routes><Route path="/command/:trialId" element={<CommandPage />} /></Routes>
+      </MemoryRouter>,
+    );
+    expect(await screen.findByText(/Site 14 drug overstock/)).toBeInTheDocument();
+    expect(screen.queryByTestId("lock-recovery-story")).not.toBeInTheDocument();
+    expect(screen.getByText("Simulated feed")).toBeInTheDocument();
   });
 });

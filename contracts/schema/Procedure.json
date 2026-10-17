@@ -9,6 +9,32 @@
       "title": "Label",
       "type": "string"
     },
+    "endpoint_role": {
+      "default": "unknown",
+      "enum": [
+        "supports_primary",
+        "supports_secondary",
+        "not_linked",
+        "unknown"
+      ],
+      "title": "Endpoint Role",
+      "type": "string"
+    },
+    "endpoint_note": {
+      "default": "",
+      "title": "Endpoint Note",
+      "type": "string"
+    },
+    "link_basis": {
+      "default": "unmatched",
+      "enum": [
+        "outcome_title",
+        "human",
+        "unmatched"
+      ],
+      "title": "Link Basis",
+      "type": "string"
+    },
     "site_minutes": {
       "anyOf": [
         {

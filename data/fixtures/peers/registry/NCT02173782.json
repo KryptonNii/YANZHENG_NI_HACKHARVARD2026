@@ -1,0 +1,263 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT02173782",
+   "orgStudyIdInfo": {
+    "id": "215.1349"
+   },
+   "organization": {
+    "fullName": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Comparison of Safety and Efficacy of Berodual® Administered Via the Respimat® Device With That Administered Via the Metered Dose Inhaler (MDI) in Patients With Chronic Obstructive Pulmonary Disease (COPD)",
+   "officialTitle": "A Randomized, Placebo-controlled, Within-device, Double-blind Tri-national Study to Compare the Safety and Efficacy of Berodual® Administered Via the Respimat® Device (50 µg Fenoterol Hydrobromide/20 µg Ipratropium Bromide and 25 µg Fenoterol Hydrobromide/10 µg Ipratropium Bromide, 1 Puff q.i.d) With That Administered Via the MDI (50 µg Fenoterol Hydrobromide/21 µg Ipratropium Bromide, 2 Puffs q.i.d) in COPD Patients Over a 12-week Period"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2014-06",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "1998-02"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "1999-04",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2014-06-24",
+   "studyFirstSubmitQcDate": "2014-06-24",
+   "studyFirstPostDateStruct": {
+    "date": "2014-06-25",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2014-07-11",
+   "lastUpdatePostDateStruct": {
+    "date": "2014-07-14",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "To demonstrate that at least one of the two doses of Berodual® (50 µg fenoterol hydrobromide/20 µg ipratropium bromide and 25 µg fenoterol hydrobromide/10 µg ipratropium bromide, 1 puff q.i.d) administered via the Respimat® gives a bronchodilator response which is not inferior to that obtained from one dose of Berodual® (50 µg fenoterol hydrobromide/21 µg ipratropium bromide, 2 puffs q.i.d) administered via the MDI and that the safety profile is at least as good when COPD patients are treated for 12 weeks."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 892,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Berodual® Respimat ® high dose",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Drug: Berodual® Respimat ® high dose"
+     ]
+    },
+    {
+     "label": "Berodual® MDI",
+     "type": "ACTIVE_COMPARATOR",
+     "interventionNames": [
+      "Drug: Berodual® MDI"
+     ]
+    },
+    {
+     "label": "Berodual® Respimat® low dose",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Drug: Berodual® Respimat ® low dose"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Berodual® Respimat ® high dose",
+     "armGroupLabels": [
+      "Berodual® Respimat ® high dose"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Berodual® Respimat ® low dose",
+     "armGroupLabels": [
+      "Berodual® Respimat® low dose"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Berodual® MDI",
+     "armGroupLabels": [
+      "Berodual® MDI"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Average forced expiratory volume in one second (FEV1) between 0 and 1 hour (Area under the curve (AUC0-1h)) in litres",
+     "timeFrame": "after 12 weeks of treatment"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Average (FEV1) between 0 and 1 hour (AUC0-1h) in litres on previous test days",
+     "timeFrame": "on day 1, 29, 57"
+    },
+    {
+     "measure": "Forced vital capacity (FVC) in litres measured at the same time as FEV1",
+     "timeFrame": "on day 1, 29, 57 and 85"
+    },
+    {
+     "measure": "Peak FEV1 between 0 and 1 hour post inhalation of study drug",
+     "timeFrame": "on day 1 and 85"
+    },
+    {
+     "measure": "Onset of bronchodilatory response",
+     "description": "Linear interpolation of the time of the first therapeutic response and the observation just prior to to the first therapeutic response. Therapeutic response was defined as FEV1 measurement exceeding 1.15 times of the pre-dose value that was recorded at any time point during the one hour observation period.",
+     "timeFrame": "on day 1 and 85"
+    },
+    {
+     "measure": "Peak expiratory flow (PEF) measured pre-medication, morning and evening, averaged weekly",
+     "timeFrame": "up to 12 weeks"
+    },
+    {
+     "measure": "Symptom scores recorded on the patient diary card",
+     "timeFrame": "up to 12 weeks"
+    },
+    {
+     "measure": "Use of rescue bronchodilator medication",
+     "timeFrame": "up to 12 weeks"
+    },
+    {
+     "measure": "Number of patients with adverse events",
+     "timeFrame": "up to 12 weeks"
+    },
+    {
+     "measure": "Total average FEV1 (TAUC0-1h)",
+     "timeFrame": "day 85"
+    },
+    {
+     "measure": "Number of patients with clinically significant changes in vital signs",
+     "timeFrame": "up to 12 weeks"
+    },
+    {
+     "measure": "Number of patients with clinically significant changes in laboratory parameters",
+     "timeFrame": "Baseline and day 85"
+    },
+    {
+     "measure": "Number of patients with abnormal findings in physical examination",
+     "timeFrame": "Baseline and day 85"
+    },
+    {
+     "measure": "Number of patients with clinically significant changes in electrocardiogram",
+     "timeFrame": "Baseline and day 85"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Age \\>= 40 years\n* Diagnosis of COPD according the following criteria:\n\n  * screening FEV1\\<= 65% predicted\n  * Screening FEV1/FVC \\<= 70%\n* Smoking history \\> 10 pack-years (a pack-year is 20 cigarettes per day for one year or equivalent\n* Able to be trained in the proper use of MDI and Respimat®\n* Able to be trained in the performance of technically satisfactory pulmonary function tests\n* All patients must be willing and able to sign informed consent in accordance with Good clinical Practice (GCP) and local legislation\n\nExclusion Criteria:\n\n* History of cardiovascular, renal, neurologic, liver or endocrine dysfunction (e.g. hyperthyreosis) if they are clinically significant. A clinically significant disease is defined as one which in the opinion of the investigator may either put the patient at risk because of participation in the study or a disease which may influence the results or the study or the patient's ability to participate in the study\n* Patients with a recent (\\<= one year) history of myocardial infarction\n* Tuberculosis with indication for treatment\n* History of cancer within the last five years (excluding basal carcinoma)\n* Patients who have undergone thoracotomy\n* Current psychiatric disorders\n* History of life-threatening pulmonary obstruction, cystic fibrosis or bronchiectasis\n* An upper and lower respiratory tract infection in the four weeks prior to the screening visit\n* Patients with known symptomatic prostatic hypertrophy or bladder neck obstruction\n* Patients with known narrow-angle glaucoma or raised intra-ocular pressure\n* Patients with clinically significant abnormal baseline haematology, blood chemistry or urinalysis, if the abnormality defines a disease listed as an exclusion criterion\n* Patients with:\n\n  * Serum glutamic oxalo-acetic transaminase (SGOT) or serum glutamic pyruvic transaminase (SGPT) \\>200% of the upper limit of the normal range\n  * Bilirubin \\>150% of the upper limit of the normal range\n  * Creatinine \\>125% of the upper limit of the normal range\n* Patients who are on chronic oxygen therapy\n* Intolerance to aerosolised ipratropium- or fenoterol-containing products, or hypersensitivity to any of the MDI ingredients\n* Oral corticosteroid mediation at dose greater than 10 mg prednisolone per day or equivalent\n* Beta-blocker medication\n* Changes in the pulmonary therapeutic plan within the last four weeks prior to the screening visit (not including withholding of medication before the screening visit)\n* Concomitant or recent (within the last month) use of investigational drugs\n* History of drug abuse and/or alcoholism\n* Pregnant or nursing women and women of child-bearing potential not using a medically approved means of contraception\n* Previous participation in this study (i.e. having been allocated a randomized treatment number)\n* Patients with a history of asthma, allergic rhinitis or atopy or who have blood eosinophil count above 600/mm3 (a repeat eosinophil count will not be conducted in these patients) and those patients on antihistamines, anti-leukotrienes, sodium cromoglycate or nedocromil sodium\n* Patients who are unable to comply with the medication restrictions specified in section 4.2 or who cannot use an MDI without a spacer",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "referencesModule": {
+   "seeAlsoLinks": [
+    {
+     "label": "Related Info",
+     "url": "http://trials.boehringer-ingelheim.com/content/dam/internet/opu/clinicaltrial/com_EN/results/215/215.1349_U00-1190.pdf"
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

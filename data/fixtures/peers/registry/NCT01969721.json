@@ -1,0 +1,2676 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01969721",
+   "orgStudyIdInfo": {
+    "id": "1237.11"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2013-000808-41",
+     "type": "EUDRACT_NUMBER",
+     "domain": "EudraCT"
+    }
+   ],
+   "organization": {
+    "fullName": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Characterization of Lung Function Profile of Inhaled Tiotropium + Olodaterol Fixed Dose Combination Compared to Fluticasone Propionate + Salmeterol Fixed Dose Combination in COPD Patients",
+   "officialTitle": "Randomized, Double-blind, Double-dummy, Active-controlled, 4 Period Complete Cross-over Study to Compare the Effect on Lung Function of 6 Weeks Once Daily Treatment With Orally Inhaled Tiotropium+Olodaterol Fixed Dose Combination Delivered by the Respimat® Inhaler vs. 6 Weeks Twice Daily Treatment With Fluticasone Propionate+Salmeterol Fixed Dose Combination Delivered by the Accuhaler® in Patients With Chronic Obstructive Pulmonary Disease (COPD)"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2016-01",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2013-10"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2015-01",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2015-02",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2013-10-22",
+   "studyFirstSubmitQcDate": "2013-10-22",
+   "studyFirstPostDateStruct": {
+    "date": "2013-10-25",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2016-01-14",
+   "resultsFirstSubmitQcDate": "2016-01-14",
+   "resultsFirstPostDateStruct": {
+    "date": "2016-02-12",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2016-01-14",
+   "lastUpdatePostDateStruct": {
+    "date": "2016-02-12",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "The objective of the trial is to compare the lung function profile of once daily treatment with tiotropium+olodaterol FDC \\[2.5/ 5µg and 5/ 5µg\\] delivered by the RESPIMAT with the lung function profile of twice daily treatment with fluticasone propionate+salmeterol FDC \\[250/50µg and 500/50µg\\] delivered by the Accuhaler® after 6 weeks of treatment."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "CROSSOVER",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 229,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "T+O FDC dosage 1",
+     "type": "EXPERIMENTAL",
+     "description": "Low dose",
+     "interventionNames": [
+      "Drug: olodaterol",
+      "Drug: placebo",
+      "Drug: tiotropium"
+     ]
+    },
+    {
+     "label": "T+O FDC dosage 2",
+     "type": "EXPERIMENTAL",
+     "description": "High dose",
+     "interventionNames": [
+      "Drug: placebo",
+      "Drug: tiotropium",
+      "Drug: olodaterol"
+     ]
+    },
+    {
+     "label": "ICS/LABA FDC Dosage 1",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Low dose",
+     "interventionNames": [
+      "Drug: fluticasone propionate",
+      "Drug: salmeterol",
+      "Drug: placebo"
+     ]
+    },
+    {
+     "label": "ICS/LABA FDC Dosage 2",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "High dose",
+     "interventionNames": [
+      "Drug: placebo",
+      "Drug: fluticasone propionate",
+      "Drug: salmeterol"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "fluticasone propionate",
+     "description": "low dose",
+     "armGroupLabels": [
+      "ICS/LABA FDC Dosage 1"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "salmeterol",
+     "armGroupLabels": [
+      "ICS/LABA FDC Dosage 1"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "placebo",
+     "description": "placebo/dummy for blinding purposes",
+     "armGroupLabels": [
+      "T+O FDC dosage 2"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "placebo",
+     "description": "placebo/dummy for blinding purposes",
+     "armGroupLabels": [
+      "ICS/LABA FDC Dosage 2"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "tiotropium",
+     "description": "tiotropium high dose",
+     "armGroupLabels": [
+      "T+O FDC dosage 2"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "olodaterol",
+     "armGroupLabels": [
+      "T+O FDC dosage 1"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "olodaterol",
+     "armGroupLabels": [
+      "T+O FDC dosage 2"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "placebo",
+     "description": "placebo/dummy for blinding purposes",
+     "armGroupLabels": [
+      "T+O FDC dosage 1"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "placebo",
+     "description": "placebo/dummy for blinding purposes",
+     "armGroupLabels": [
+      "ICS/LABA FDC Dosage 1"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "tiotropium",
+     "description": "tiotropium low dose",
+     "armGroupLabels": [
+      "T+O FDC dosage 1"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "fluticasone propionate",
+     "description": "low dose",
+     "armGroupLabels": [
+      "ICS/LABA FDC Dosage 2"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "salmeterol",
+     "armGroupLabels": [
+      "ICS/LABA FDC Dosage 2"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "FEV1 AUC (0-12h) Change From Patient Baseline After 6 Weeks of Treatment",
+     "description": "Change from patient baseline in Forced Expiratory Volume in one second (FEV1) Area Under the FEV1-time Curve from 0 to 12hours post-dose (AUC 0-12h) \\[L\\] after 6 weeks of treatment. Measured values presented are actually adjusted means.\n\nThe period baseline is defined as the pre-dose measurement taken at on the day 1 of each period. The patient baseline is defined as the mean of non-missing period baselines for each patient.",
+     "timeFrame": "Baseline and 6 weeks."
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "FEV1 AUC (0-24h) Change From Patient Baseline After 6 Weeks of Treatment",
+     "description": "Change from patient baseline in Forced Expiratory Volume in one second (FEV1) Area Under the FEV1-time Curve from 0 to 24 hours post-dose (AUC 0-24h) \\[L\\] after 6 weeks of treatment.\n\nMeasured values presented are actually adjusted means. The period baseline is defined as the pre-dose measurement taken at on the day 1 of each period. The patient baseline is defined as the mean of non-missing period baselines for each patient.",
+     "timeFrame": "Baseline and 6 weeks."
+    },
+    {
+     "measure": "Trough FEV1 Change From Patient Baseline After 6 Weeks of Treatment",
+     "description": "Change from patient baseline in Trough Forced Expiratory Volume in one second (FEV1) after 6 weeks of treatment. Trough FEV1 was defined as the mean of the 23h and 23h 50min (minutes) post-dose FEV1 measurements. Measured values presented are actually adjusted means.\n\nThe period baseline is defined as the pre-dose measurement taken at on the day 1 of each period. The patient baseline is defined as the mean of non-missing period baselines for each patient.",
+     "timeFrame": "Baseline and 6 weeks."
+    },
+    {
+     "measure": "FEV1 AUC (12-24h) Change From Patient Baseline After 6 Weeks of Treatment",
+     "description": "Change from patient baseline in Forced Expiratory Volume in one second (FEV1) Area Under the FEV1-time Curve from 12 to 24 hours post-dose (AUC 12-24h) \\[L\\] after 6 weeks of treatment. Measured values presented are actually adjusted means.\n\nThe period baseline is defined as the pre-dose measurement taken at on the day 1 of each period. The patient baseline is defined as the mean of non-missing period baselines for each patient.",
+     "timeFrame": "Baseline and 6 weeks."
+    },
+    {
+     "measure": "FEV1 Peak (0-3h) Change From Patient Baseline After 6 Weeks of Treatment",
+     "description": "Change from patient baseline in Forced Expiratory Volume in one second (FEV1) peak (0-3 hours) after 6 weeks of treatment. FEV1 peak (0-3 hours) was defined as the maximum FEV1 value measured within the first three hours post dosing. Measured values presented are actually adjusted means.",
+     "timeFrame": "Baseline and 6 weeks."
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion criteria:\n\n1. Diagnosis of chronic obstructive pulmonary disease\n2. Relatively stable airway obstruction with a post-bronchodilator 30% \\</= Forced Expiratory Volume in 1 second (FEV1)\\<80% of predicted normal and a post-bronchodilator FEV1/(Forced Vital Capacity)FVC \\<70%\n3. Male or female patients, 40 years of age or older\n4. Smoking history of more than 10 pack years\n5. Ability to perform technically acceptable pulmonary function tests and maintain records\n6. Ability to inhale medication in a competent manner from the RESPIMAT Inhaler, Accuhaler and from a metered dose inhaler (MDI)\n\nExclusion criteria:\n\n1. Significant disease other than COPD\n2. COPD exacerbation that required treatment with antibiotics, systemic steroids (oral or iv) or hospitalization in the last 3 months.\n3. Clinically relevant abnormal lab values\n4. History of asthma\n5. Diagnosis of thyrotoxicosis\n6. Diagnosis of paroxysmal tachycardia\n7. History of myocardial infarction\n8. Unstable or life-threatening cardiac arrhythmia\n9. Hospitalization for heart failure within the past year\n10. Known active tuberculosis\n11. malignancy for which patient has undergone resection, radiation therapy or chemotherapy within last five years\n12. History of life-threatening pulmonary obstruction\n13. History of cystic fibrosis\n14. Clinically evident bronchiectasis\n15. History of significant alcohol or drug abuse\n16. History of thoracotomy with pulmonary resection\n17. oral or patch ß-adrenergics\n18. Oral corticosteroid medication within 6 weeks prior to Visit 1\n19. Regular use daytime oxygen therapy for more than one hour per day\n20. Pulmonary rehabilitation program in the six weeks prior to the screening visit\n21. Investigational drug within one month or six half lives (whichever is greater) prior to screening visit\n22. Known hypersensitivity to ß-adrenergic drugs, BAC, EDTA\n23. Pregnant or nursing women",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Boehringer Ingelheim",
+     "affiliation": "Boehringer Ingelheim",
+     "role": "STUDY_CHAIR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "1237.11.32002 Boehringer Ingelheim Investigational Site",
+     "city": "Genk",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.965,
+      "lon": 5.50082
+     }
+    },
+    {
+     "facility": "1237.11.32001 Boehringer Ingelheim Investigational Site",
+     "city": "Ghent",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.05,
+      "lon": 3.71667
+     }
+    },
+    {
+     "facility": "1237.11.42003 Boehringer Ingelheim Investigational Site",
+     "city": "Kyjov",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.01018,
+      "lon": 17.12253
+     }
+    },
+    {
+     "facility": "1237.11.42004 Boehringer Ingelheim Investigational Site",
+     "city": "Rokycany",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.7427,
+      "lon": 13.59459
+     }
+    },
+    {
+     "facility": "1237.11.42002 Boehringer Ingelheim Investigational Site",
+     "city": "Tábor",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.41441,
+      "lon": 14.6578
+     }
+    },
+    {
+     "facility": "1237.11.42001 Boehringer Ingelheim Investigational Site",
+     "city": "Třebíč",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.21492,
+      "lon": 15.88166
+     }
+    },
+    {
+     "facility": "1237.11.45002 Boehringer Ingelheim Investigational Site",
+     "city": "Hvidovre",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.64297,
+      "lon": 12.47708
+     }
+    },
+    {
+     "facility": "1237.11.45004 Boehringer Ingelheim Investigational Site",
+     "city": "Kolding",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.4904,
+      "lon": 9.47216
+     }
+    },
+    {
+     "facility": "1237.11.45001 Boehringer Ingelheim Investigational Site",
+     "city": "Odense C",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.40841,
+      "lon": 10.39538
+     }
+    },
+    {
+     "facility": "1237.11.45003 Boehringer Ingelheim Investigational Site",
+     "city": "Silkeborg",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 56.1697,
+      "lon": 9.54508
+     }
+    },
+    {
+     "facility": "1237.11.49003 Boehringer Ingelheim Investigational Site",
+     "city": "Großhansdorf",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.66528,
+      "lon": 10.28552
+     }
+    },
+    {
+     "facility": "1237.11.49005 Boehringer Ingelheim Investigational Site",
+     "city": "Hamburg",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "1237.11.49001 Boehringer Ingelheim Investigational Site",
+     "city": "Mannheim",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.4891,
+      "lon": 8.46694
+     }
+    },
+    {
+     "facility": "1237.11.49004 Boehringer Ingelheim Investigational Site",
+     "city": "Mönchengladbach",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.18539,
+      "lon": 6.44172
+     }
+    },
+    {
+     "facility": "1237.11.49002 Boehringer Ingelheim Investigational Site",
+     "city": "Wiesbaden",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.08601,
+      "lon": 8.24435
+     }
+    },
+    {
+     "facility": "1237.11.36001 Boehringer Ingelheim Investigational Site",
+     "city": "Debrecen",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.53167,
+      "lon": 21.62444
+     }
+    },
+    {
+     "facility": "1237.11.36004 Boehringer Ingelheim Investigational Site",
+     "city": "Pécs",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 46.07617,
+      "lon": 18.22814
+     }
+    },
+    {
+     "facility": "1237.11.36003 Boehringer Ingelheim Investigational Site",
+     "city": "Szeged",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 46.253,
+      "lon": 20.14824
+     }
+    },
+    {
+     "facility": "1237.11.36002 Boehringer Ingelheim Investigational Site",
+     "city": "Szombathely",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.23088,
+      "lon": 16.62155
+     }
+    },
+    {
+     "facility": "1237.11.31005 Boehringer Ingelheim Investigational Site",
+     "city": "Almelo",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.35667,
+      "lon": 6.6625
+     }
+    },
+    {
+     "facility": "1237.11.31002 Boehringer Ingelheim Investigational Site",
+     "city": "Breda",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 51.58656,
+      "lon": 4.77596
+     }
+    },
+    {
+     "facility": "1237.11.31006 Boehringer Ingelheim Investigational Site",
+     "city": "Eindhoven",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 51.44083,
+      "lon": 5.47778
+     }
+    },
+    {
+     "facility": "1237.11.31001 Boehringer Ingelheim Investigational Site",
+     "city": "Heerlen",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 50.88365,
+      "lon": 5.98154
+     }
+    },
+    {
+     "facility": "1237.11.31007 Boehringer Ingelheim Investigational Site",
+     "city": "Hoorn",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.6425,
+      "lon": 5.05972
+     }
+    },
+    {
+     "facility": "1237.11.31003 Boehringer Ingelheim Investigational Site",
+     "city": "Zutphen",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.13833,
+      "lon": 6.20139
+     }
+    },
+    {
+     "facility": "1237.11.34003 Boehringer Ingelheim Investigational Site",
+     "city": "Alicante",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 38.34517,
+      "lon": -0.48149
+     }
+    },
+    {
+     "facility": "1237.11.34001 Boehringer Ingelheim Investigational Site",
+     "city": "Barcelona",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.38879,
+      "lon": 2.15899
+     }
+    },
+    {
+     "facility": "1237.11.34002 Boehringer Ingelheim Investigational Site",
+     "city": "Pozuelo de Alarcón",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 40.43293,
+      "lon": -3.81338
+     }
+    },
+    {
+     "facility": "1237.11.46001 Boehringer Ingelheim Investigational Site",
+     "city": "Lund",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 55.70584,
+      "lon": 13.19321
+     }
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "After signing informed consent, patients entered a 4-week screening period to ensure clinical stability (i.e. no exacerbations).",
+   "recruitmentDetails": "This was a randomized, double-blind, double-dummy, active-controlled, 4-treatment, 4-period, complete cross-over design.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "T+O 2.5/5 / T+O 5/5 / F+S 250/50 / F+S 500/50",
+     "description": "Patients received a total of four treatments. Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days. The treatments were orally inhaled .\n\n* Fixed Dose Combination (FDC) of Tiotropium 2.5 μg and Olodaterol 5 μg plus Fluticasone propionate+Salmeterol placebo (T+O 2.5/5).\n* Fixed dose combination (FDC) of Tiotropium 5 μg and Olodaterol 5 μg plus Fluticasone propionate+Salmeterol placebo (T+O 5/5).\n* Fixed dose combination (FDC) of Fluticasone propionate 250 μg and Salmeterol 50 μg plus Tiotropium+Olodaterol placebo (F+S 250/50).\n* Fixed dose combination (FDC) of Fluticasone propionate 500 μg and Salmeterol 50 μg plus Tiotropium+Olodaterol placebo (F+S 500/50).\n\nTiotropium+Olodaterol FDC inhalation solutions were administered via the Respimat® inhaler once daily, Fluticasone propionate+Salmeterol FDC inhalation powders were administered orally twice daily via Accuhaler®."
+    },
+    {
+     "id": "FG001",
+     "title": "T+O 5/5 / F+S 500/50 / T+O 2.5/5 / F+S 250/50",
+     "description": "Patients received a total of four treatments. Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days. The treatments were orally inhaled.\n\n* Fixed dose combination (FDC) of Tiotropium 5 μg and Olodaterol 5 μg plus Fluticasone propionate+Salmeterol placebo.\n* Fixed dose combination (FDC) of Fluticasone propionate 500 μg and Salmeterol 50 μg plus Tiotropium+Olodaterol placebo.\n* Fixed Dose Combination (FDC) of Tiotropium 2.5 μg and Olodaterol 5 μg plus Fluticasone propionate+Salmeterol placebo.\n* Fixed dose combination (FDC) of Fluticasone propionate 250 μg and Salmeterol 50 μg plus Tiotropium+Olodaterol placebo.\n\nTiotropium+Olodaterol FDC inhalation solutions were administered via the Respimat® inhaler once daily, Fluticasone propionate+Salmeterol FDC inhalation powders were administered orally twice daily via Accuhaler®."
+    },
+    {
+     "id": "FG002",
+     "title": "F+S 250/50 / T+O 2.5/5 / F+S 500/50 / T+O 5/5",
+     "description": "Patients received a total of four treatments. Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days. The treatments were orally inhaled.\n\n* Fixed dose combination (FDC) of Fluticasone propionate 250 μg and Salmeterol 50 μg plus Tiotropium+Olodaterol placebo.\n* Fixed Dose Combination (FDC) of Tiotropium 2.5 μg and Olodaterol 5 μg plus Fluticasone propionate+Salmeterol placebo.\n* Fixed dose combination (FDC) of Fluticasone propionate 500 μg and Salmeterol 50 μg plus Tiotropium+Olodaterol placebo.\n* Fixed dose combination (FDC) of Tiotropium 5 μg and Olodaterol 5 μg plus Fluticasone propionate+Salmeterol placebo.\n\nTiotropium+Olodaterol FDC inhalation solutions were administered via the Respimat® inhaler once daily, Fluticasone propionate+Salmeterol FDC inhalation powders were administered orally twice daily via Accuhaler®."
+    },
+    {
+     "id": "FG003",
+     "title": "F+S 500/50 / F+S 250/50 / T+O 5/5 / T+O 2.5/5",
+     "description": "Patients received a total of four treatments. Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days. The treatments were orally inhaled.\n\n* Fixed dose combination (FDC) of Fluticasone propionate 500 μg and Salmeterol 50 μg plus Tiotropium+Olodaterol placebo.\n* Fixed dose combination (FDC) of Fluticasone propionate 250 μg and Salmeterol 50 μg plus Tiotropium+Olodaterol placebo.\n* Fixed dose combination (FDC) of Tiotropium 5 μg and Olodaterol 5 μg plus Fluticasone propionate+Salmeterol placebo.\n* Fixed Dose Combination (FDC) of Tiotropium 2.5 μg and Olodaterol 5 μg plus Fluticasone propionate+Salmeterol placebo.\n\nTiotropium+Olodaterol FDC inhalation solutions were administered via the Respimat® inhaler once daily, Fluticasone propionate+Salmeterol FDC inhalation powders were administered orally twice daily via Accuhaler®."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "58"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "69"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "50"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "52"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "54"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "57"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "45"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "46"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "4"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "12"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "6"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "8"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "2"
+        }
+       ]
+      },
+      {
+       "type": "Lack of Efficacy",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Non compliant with protocol",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "2"
+        }
+       ]
+      },
+      {
+       "type": "Other not defined above",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Discontinued during washout periods.",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "2"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "populationDescription": "Treated Set: All randomised patients who received any dose of the trial medication.",
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Overall Study",
+     "description": "Patients received a total of four treatments. Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days. The treatments were orally inhaled.\n\n* Fixed Dose Combination (FDC) of Tiotropium 2.5 μg and Olodaterol 5 μg plus Fluticasone propionate+Salmeterol placebo.\n* Fixed dose combination (FDC) of Tiotropium 5 μg and Olodaterol 5 μg plus Fluticasone propionate+Salmeterol placebo.\n* Fixed dose combination (FDC) of Fluticasone propionate 250 μg and Salmeterol 50 μg plus Tiotropium+Olodaterol placebo.\n* Fixed dose combination (FDC) of Fluticasone propionate 500 μg and Salmeterol 50 μg plus Tiotropium+Olodaterol placebo.\n\nTiotropium+Olodaterol FDC inhalation solutions were administered via the Respimat® inhaler once daily, Fluticasone propionate+Salmeterol FDC inhalation powders were administered orally twice daily via Accuhaler®."
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "229"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "63.6",
+           "spread": "7.6"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "81"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "148"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "FEV1 AUC (0-12h) Change From Patient Baseline After 6 Weeks of Treatment",
+     "description": "Change from patient baseline in Forced Expiratory Volume in one second (FEV1) Area Under the FEV1-time Curve from 0 to 12hours post-dose (AUC 0-12h) \\[L\\] after 6 weeks of treatment. Measured values presented are actually adjusted means.\n\nThe period baseline is defined as the pre-dose measurement taken at on the day 1 of each period. The patient baseline is defined as the mean of non-missing period baselines for each patient.",
+     "populationDescription": "FAS (Full Analysis Set): Included all randomised patients who were documented to have had received any dose of trial medication and who had both baseline and any evaluable post-baseline measurement for the primary efficacy endpoint.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres",
+     "timeFrame": "Baseline and 6 weeks.",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "T+O 2.5/5 / F+S Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed Dose Combination (FDC) of Tiotropium 2.5 μg and Olodaterol 5 μg (T+O 2.5/5) administered orally via the Respimat® inhaler once daily plus Fluticasone propionate+Salmeterol (F+S) placebo treatment administered orally twice daily via Accuhaler®."
+      },
+      {
+       "id": "OG001",
+       "title": "T+O 5/5 / F+S Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Tiotropium 5 μg and Olodaterol 5 μg (T+O 5/5) administered orally via the Respimat® inhaler once daily plus Fluticasone propionate+Salmeterol (F+S) placebo treatment administered orally twice daily via Accuhaler®."
+      },
+      {
+       "id": "OG002",
+       "title": "F+S 250/50 / T+O Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Fluticasone propionate 250 μg and Salmeterol 50 μg (F+S 250/50) administered orally twice daily via Accuhaler® plus Tiotropium+Olodaterol (T+O) placebo treatment administered orally once daily via the Respimat® inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "F+S 500/50 / T+O Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Fluticasone propionate 500 μg and Salmeterol 50 μg (F+S 500/50) administered orally twice daily via Accuhaler® plus Tiotropium+Olodaterol (T+O) placebo treatment administered orally once daily via the Respimat® inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "214"
+        },
+        {
+         "groupId": "OG001",
+         "value": "216"
+        },
+        {
+         "groupId": "OG002",
+         "value": "211"
+        },
+        {
+         "groupId": "OG003",
+         "value": "217"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.295",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.317",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.192",
+           "spread": "0.015"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.188",
+           "spread": "0.014"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 AUC 0-12h change from patient baseline (Tiotropium + Olodaterol 5/5 µg) = Mean FEV1 AUC 0-12h change from patient baseline (Fluticasone propionate + Salmeterol 250/50 µg).\n\nHypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.125",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.103",
+       "ciUpperLimit": "0.147",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.011",
+       "estimateComment": "Difference calculated as T+O 5/5 - F+S 250/50 adjusted mean FEV1 AUC 0-12h change from patient baseline (L)"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 AUC 0-12h change from patient baseline (Tiotropium + Olodaterol 5/5 µg) = Mean FEV1 AUC 0-12h change from patient baseline (Fluticasone propionate + Salmeterol 500/50 µg).\n\nHypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.129",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.107",
+       "ciUpperLimit": "0.150",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.011",
+       "estimateComment": "Difference calculated as T+O 5/5 - F+S 500/50 adjusted mean FEV1 AUC 0-12h change from patient baseline (L)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 AUC 0-12h change from patient baseline (Tiotropium + Olodaterol 2.5/5 µg) = Mean FEV1 AUC 0-12h change from patient baseline (Fluticasone propionate + Salmeterol 250/50 µg).\n\nHypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.103",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.081",
+       "ciUpperLimit": "0.124",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.011",
+       "estimateComment": "Difference calculated as T+O 2.5/5 - F+S 250/50 adjusted mean FEV1 AUC 0-12h change from patient baseline (L)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 AUC 0-12h change from patient baseline (Tiotropium + Olodaterol 2.5/5 µg) = Mean FEV1 AUC 0-12h change from patient baseline (Fluticasone propionate + Salmeterol 500/50 µg).\n\nHypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.106",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.085",
+       "ciUpperLimit": "0.128",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.011",
+       "estimateComment": "Difference calculated as T+O 2.5/5 - F+S 500/50 adjusted mean FEV1 AUC 0-12h change from patient baseline (L)"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "FEV1 AUC (0-24h) Change From Patient Baseline After 6 Weeks of Treatment",
+     "description": "Change from patient baseline in Forced Expiratory Volume in one second (FEV1) Area Under the FEV1-time Curve from 0 to 24 hours post-dose (AUC 0-24h) \\[L\\] after 6 weeks of treatment.\n\nMeasured values presented are actually adjusted means. The period baseline is defined as the pre-dose measurement taken at on the day 1 of each period. The patient baseline is defined as the mean of non-missing period baselines for each patient.",
+     "populationDescription": "FAS (Full Analysis Set): Included all randomised patients who were documented to have had received any dose of trial medication and who had both baseline and any evaluable post-baseline measurement for the primary efficacy endpoint.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres",
+     "timeFrame": "Baseline and 6 weeks.",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "T+O 2.5/5 / F+S Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed Dose Combination (FDC) of Tiotropium 2.5 μg and Olodaterol 5 μg (T+O 2.5/5) administered orally via the Respimat® inhaler once daily plus Fluticasone propionate+Salmeterol (F+S) placebo treatment administered orally twice daily via Accuhaler®."
+      },
+      {
+       "id": "OG001",
+       "title": "T+O 5/5 / F+S Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Tiotropium 5 μg and Olodaterol 5 μg (T+O 5/5) administered orally via the Respimat® inhaler once daily plus Fluticasone propionate+Salmeterol (F+S) placebo treatment administered orally twice daily via Accuhaler®."
+      },
+      {
+       "id": "OG002",
+       "title": "F+S 250/50 / T+O Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Fluticasone propionate 250 μg and Salmeterol 50 μg (F+S 250/50) administered orally twice daily via Accuhaler® plus Tiotropium+Olodaterol (T+O) placebo treatment administered orally once daily via the Respimat® inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "F+S 500/50 / T+O Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Fluticasone propionate 500 μg and Salmeterol 50 μg (F+S 500/50) administered orally twice daily via Accuhaler® plus Tiotropium+Olodaterol (T+O) placebo treatment administered orally once daily via the Respimat® inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "214"
+        },
+        {
+         "groupId": "OG001",
+         "value": "216"
+        },
+        {
+         "groupId": "OG002",
+         "value": "211"
+        },
+        {
+         "groupId": "OG003",
+         "value": "217"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.228",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.244",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.162",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.159",
+           "spread": "0.014"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 AUC 0-24h change from patient baseline (Tiotropium + Olodaterol 5/5 μg) = Mean FEV1 AUC 0-24h change from patient baseline (Fluticasone propionate + Salmeterol 250/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Median Difference (Net)",
+       "paramValue": "0.082",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.061",
+       "ciUpperLimit": "0.103",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.011",
+       "estimateComment": "Difference calculated as T+O 5/5 - F+S 250/50 adjusted mean FEV1 AUC 0-24h change from patient baseline (L)"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 AUC 0-24h change from patient baseline (Tiotropium + Olodaterol 5/5 μg) = Mean FEV1 AUC 0-24h change from patient baseline (Fluticasone propionate + Salmeterol 500/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.086",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.065",
+       "ciUpperLimit": "0.107",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.011",
+       "estimateComment": "Difference calculated as T+O 5/5 - F+S 500/50 adjusted mean FEV1 AUC 0-24h change from patient baseline (L)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 AUC 0-24h change from patient baseline (Tiotropium + Olodaterol 2.5/5 μg) = Mean FEV1 AUC 0-24h change from patient baseline (Fluticasone propionate + Salmeterol 250/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.065",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.045",
+       "ciUpperLimit": "0.086",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.011",
+       "estimateComment": "Difference calculated as T+O 2.5/5 - F+S 250/50 adjusted mean FEV1 AUC 0-24h change from patient baseline (L)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 AUC 0-24h change from patient baseline (Tiotropium + Olodaterol 2.5/5 μg) = Mean FEV1 AUC 0-24h change from patient baseline (Fluticasone propionate + Salmeterol 500/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.069",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.048",
+       "ciUpperLimit": "0.090",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.011",
+       "estimateComment": "Difference calculated as T+O 2.5/5 - F+S 500/50 adjusted mean FEV1 AUC 0-24h change from patient baseline (L)"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Trough FEV1 Change From Patient Baseline After 6 Weeks of Treatment",
+     "description": "Change from patient baseline in Trough Forced Expiratory Volume in one second (FEV1) after 6 weeks of treatment. Trough FEV1 was defined as the mean of the 23h and 23h 50min (minutes) post-dose FEV1 measurements. Measured values presented are actually adjusted means.\n\nThe period baseline is defined as the pre-dose measurement taken at on the day 1 of each period. The patient baseline is defined as the mean of non-missing period baselines for each patient.",
+     "populationDescription": "FAS (Full Analysis Set): Included all randomised patients who were documented to have had received any dose of trial medication and who had both baseline and any evaluable post-baseline measurement for the primary efficacy endpoint.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres",
+     "timeFrame": "Baseline and 6 weeks.",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "T+O 2.5/5 / F+S Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed Dose Combination (FDC) of Tiotropium 2.5 μg and Olodaterol 5 μg (T+O 2.5/5) administered orally via the Respimat® inhaler once daily plus Fluticasone propionate+Salmeterol (F+S) placebo treatment administered orally twice daily via Accuhaler®."
+      },
+      {
+       "id": "OG001",
+       "title": "T+O 5/5 / F+S Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Tiotropium 5 μg and Olodaterol 5 μg (T+O 5/5) administered orally via the Respimat® inhaler once daily plus Fluticasone propionate+Salmeterol (F+S) placebo treatment administered orally twice daily via Accuhaler®."
+      },
+      {
+       "id": "OG002",
+       "title": "F+S 250/50 / T+O Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Fluticasone propionate 250 μg and Salmeterol 50 μg (F+S 250/50) administered orally twice daily via Accuhaler® plus Tiotropium+Olodaterol (T+O) placebo treatment administered orally once daily via the Respimat® inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "F+S 500/50 / T+O Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Fluticasone propionate 500 μg and Salmeterol 50 μg (F+S 500/50) administered orally twice daily via Accuhaler® plus Tiotropium+Olodaterol (T+O) placebo treatment administered orally once daily via the Respimat® inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "214"
+        },
+        {
+         "groupId": "OG001",
+         "value": "216"
+        },
+        {
+         "groupId": "OG002",
+         "value": "211"
+        },
+        {
+         "groupId": "OG003",
+         "value": "217"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.192",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.197",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.150",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.139",
+           "spread": "0.014"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "groupDescription": "Null hypothesis: Mean trough FEV1 change from patient baseline (Tiotropium + Olodaterol 5/5 μg) = Mean trough FEV1 change from patient baseline (Fluticasone propionate + Salmeterol 250/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0002",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.047",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.022",
+       "ciUpperLimit": "0.071",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.012",
+       "estimateComment": "Difference calculated as T+O 5/5 - F+S 250/50 adjusted mean trough FEV1 change from patient baseline (L)"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "groupDescription": "Null hypothesis: Mean trough FEV1 change from patient baseline (Tiotropium + Olodaterol 5/5 μg) = Mean trough FEV1 change from patient baseline (Fluticasone propionate + Salmeterol 500/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.058",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.034",
+       "ciUpperLimit": "0.082",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.012",
+       "estimateComment": "Difference calculated as T+O 5/5 - F+S 500/50 adjusted mean trough FEV1 change from patient baseline (L)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "groupDescription": "Null hypothesis: Mean trough FEV1 change from patient baseline (Tiotropium + Olodaterol 2.5/5 μg) = Mean trough FEV1 change from patient baseline (Fluticasone propionate + Salmeterol 250/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0007",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.042",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.018",
+       "ciUpperLimit": "0.067",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.012",
+       "estimateComment": "Difference calculated as T+O 2.5/5 - F+S 250/50 adjusted mean trough FEV1 change from patient baseline (L)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "groupDescription": "Null hypothesis: Mean trough FEV1 change from patient baseline (Tiotropium + Olodaterol 2.5/5 μg) = Mean trough FEV1 change from patient baseline (Fluticasone propionate + Salmeterol 500/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.054",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.029",
+       "ciUpperLimit": "0.078",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.012",
+       "estimateComment": "Difference calculated as T+O 2.5/5 - F+S 500/50 adjusted mean trough FEV1 change from patient baseline (L)"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "FEV1 AUC (12-24h) Change From Patient Baseline After 6 Weeks of Treatment",
+     "description": "Change from patient baseline in Forced Expiratory Volume in one second (FEV1) Area Under the FEV1-time Curve from 12 to 24 hours post-dose (AUC 12-24h) \\[L\\] after 6 weeks of treatment. Measured values presented are actually adjusted means.\n\nThe period baseline is defined as the pre-dose measurement taken at on the day 1 of each period. The patient baseline is defined as the mean of non-missing period baselines for each patient.",
+     "populationDescription": "FAS (Full Analysis Set): Included all randomised patients who were documented to have had received any dose of trial medication and who had both baseline and any evaluable post-baseline measurement for the primary efficacy endpoint.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres",
+     "timeFrame": "Baseline and 6 weeks.",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "T+O 2.5/5 / F+S Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed Dose Combination (FDC) of Tiotropium 2.5 μg and Olodaterol 5 μg (T+O 2.5/5) administered orally via the Respimat® inhaler once daily plus Fluticasone propionate+Salmeterol (F+S) placebo treatment administered orally twice daily via Accuhaler®."
+      },
+      {
+       "id": "OG001",
+       "title": "T+O 5/5 / F+S Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Tiotropium 5 μg and Olodaterol 5 μg (T+O 5/5) administered orally via the Respimat® inhaler once daily plus Fluticasone propionate+Salmeterol (F+S) placebo treatment administered orally twice daily via Accuhaler®."
+      },
+      {
+       "id": "OG002",
+       "title": "F+S 250/50 / T+O Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Fluticasone propionate 250 μg and Salmeterol 50 μg (F+S 250/50) administered orally twice daily via Accuhaler® plus Tiotropium+Olodaterol (T+O) placebo treatment administered orally once daily via the Respimat® inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "F+S 500/50 / T+O Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Fluticasone propionate 500 μg and Salmeterol 50 μg (F+S 500/50) administered orally twice daily via Accuhaler® plus Tiotropium+Olodaterol (T+O) placebo treatment administered orally once daily via the Respimat® inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "214"
+        },
+        {
+         "groupId": "OG001",
+         "value": "216"
+        },
+        {
+         "groupId": "OG002",
+         "value": "211"
+        },
+        {
+         "groupId": "OG003",
+         "value": "217"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.160",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.172",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.132",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.129",
+           "spread": "0.014"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 AUC 12-24h change from patient baseline (Tiotropium + Olodaterol 5/5 μg) = Mean FEV1 AUC 12-24h change from patient baseline (Fluticasone propionate + Salmeterol 250/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0007",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.039",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.017",
+       "ciUpperLimit": "0.062",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.012",
+       "estimateComment": "Difference calculated T+O 5/5 - F+S 250/50 adjusted mean FEV1 AUC 12-24h change from patient baseline (L)"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 AUC 12-24h change from patient baseline (Tiotropium + Olodaterol 5/5 μg) = Mean FEV1 AUC 12-24h change from patient baseline (Fluticasone propionate + Salmeterol 500/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0002",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.043",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.021",
+       "ciUpperLimit": "0.065",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.011",
+       "estimateComment": "Difference calculated as T+O 5/5 - F+S 500/50 adjusted mean FEV1 AUC 12-24h change from patient baseline (L)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 AUC 12-24h change from patient baseline (Tiotropium + Olodaterol 2.5/5 μg) = Mean FEV1 AUC 12-24h change from patient baseline (Fluticasone propionate + Salmeterol 250/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0146",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.028",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.006",
+       "ciUpperLimit": "0.051",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.011",
+       "estimateComment": "Difference calculated as T+O 2.5/5 - F+S 250/50 adjusted mean FEV1 AUC 12-24h change from patient baseline (L)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 AUC 12-24h change from patient baseline (Tiotropium + Olodaterol 2.5/5 μg) = Mean FEV1 AUC 12-24h change from patient baseline (Fluticasone propionate + Salmeterol 500/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0055",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.032",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.009",
+       "ciUpperLimit": "0.054",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.011",
+       "estimateComment": "Difference calculated as T+O 2.5/5 - F+S 500/50 adjusted mean FEV1 AUC 12-24h change from patient baseline (L)"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "FEV1 Peak (0-3h) Change From Patient Baseline After 6 Weeks of Treatment",
+     "description": "Change from patient baseline in Forced Expiratory Volume in one second (FEV1) peak (0-3 hours) after 6 weeks of treatment. FEV1 peak (0-3 hours) was defined as the maximum FEV1 value measured within the first three hours post dosing. Measured values presented are actually adjusted means.",
+     "populationDescription": "FAS (Full Analysis Set): Included all randomised patients who were documented to have had received any dose of trial medication and who had both baseline and any evaluable post-baseline measurement for the primary efficacy endpoint.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres",
+     "timeFrame": "Baseline and 6 weeks.",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "T+O 2.5/5 / F+S Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed Dose Combination (FDC) of Tiotropium 2.5 μg and Olodaterol 5 μg (T+O 2.5/5) administered orally via the Respimat® inhaler once daily plus Fluticasone propionate+Salmeterol (F+S) placebo treatment administered orally twice daily via Accuhaler®."
+      },
+      {
+       "id": "OG001",
+       "title": "T+O 5/5 / F+S Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Tiotropium 5 μg and Olodaterol 5 μg (T+O 5/5) administered orally via the Respimat® inhaler once daily plus Fluticasone propionate+Salmeterol (F+S) placebo treatment administered orally twice daily via Accuhaler®."
+      },
+      {
+       "id": "OG002",
+       "title": "F+S 250/50 / T+O Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Fluticasone propionate 250 μg and Salmeterol 50 μg (F+S 250/50) administered orally twice daily via Accuhaler® plus Tiotropium+Olodaterol (T+O) placebo treatment administered orally once daily via the Respimat® inhaler."
+      },
+      {
+       "id": "OG003",
+       "title": "F+S 500/50 / T+O Placebo",
+       "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Fluticasone propionate 500 μg and Salmeterol 50 μg (F+S 500/50) administered orally twice daily via Accuhaler® plus Tiotropium+Olodaterol (T+O) placebo treatment administered orally once daily via the Respimat® inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "214"
+        },
+        {
+         "groupId": "OG001",
+         "value": "216"
+        },
+        {
+         "groupId": "OG002",
+         "value": "211"
+        },
+        {
+         "groupId": "OG003",
+         "value": "217"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.401",
+           "spread": "0.016"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.432",
+           "spread": "0.016"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.291",
+           "spread": "0.016"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.285",
+           "spread": "0.015"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 peak (0-3h) change from patient baseline (Tiotropium + Olodaterol 5/5 μg) = Mean FEV1 peak (0-3h) change from patient baseline (Fluticasone propionate + Salmeterol 250/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.142",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.118",
+       "ciUpperLimit": "0.166",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.012",
+       "estimateComment": "Difference calculated as T+O 5/5 - F+S 250/50 adjusted mean FEV1 peak (0-3h) change from patient baseline (L)"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 peak (0-3h) change from patient baseline (Tiotropium + Olodaterol 5/5 μg) = Mean FEV1 peak (0-3h) change from patient baseline (Fluticasone propionate + Salmeterol 500/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.147",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.123",
+       "ciUpperLimit": "0.171",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.012",
+       "estimateComment": "Difference calculated as T+O 5/5 - F+S 500/50 adjusted mean FEV1 peak (0-3h) change from patient baseline (L)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 peak (0-3h) change from patient baseline (Tiotropium + Olodaterol 2.5/5 μg) = Mean FEV1 peak (0-3h) change from patient baseline (Fluticasone propionate + Salmeterol 250/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.111",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.087",
+       "ciUpperLimit": "0.135",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.012",
+       "estimateComment": "Difference calculated as T+O 2.5/5 - F+S 250/50 adjusted mean FEV1 peak (0-3h) change from patient baseline (L)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "groupDescription": "Null hypothesis: Mean FEV1 peak (0-3h) change from patient baseline (Tiotropium + Olodaterol 2.5/5 μg) = Mean FEV1 peak (0-3h) change from patient baseline (Fluticasone propionate + Salmeterol 500/50 μg). Hypothesis was analysed using a restricted maximum likelihood-based mixed effect repeated measures model including fixed effects of treatment and period; period baseline and patient baseline as covariates; patient as a random effect.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "p-value is not adjusted for multiple comparisons. A priori threshold for statistical significance is two-sided alpha=0.05.",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom.",
+       "paramType": "Mean Difference (Net)",
+       "paramValue": "0.116",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.092",
+       "ciUpperLimit": "0.140",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.012",
+       "estimateComment": "Difference calculated as T+O 2.5/5 - F+S 500/50 adjusted mean FEV1 peak (0-3h) change from patient baseline (L)"
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "From first drug intake until 21 days after last drug intake, up to 88 days.",
+   "description": "AEs are displayed by treatment, however in total patients were in the study for up to 223 days",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "T+O 2.5/5 / F+S Placebo",
+     "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed Dose Combination (FDC) of Tiotropium 2.5 μg and Olodaterol 5 μg (T+O 2.5/5) administered orally via the Respimat® inhaler once daily plus Fluticasone propionate+Salmeterol (F+S) placebo treatment administered orally twice daily via Accuhaler®.",
+     "seriousNumAffected": 6,
+     "seriousNumAtRisk": 215,
+     "otherNumAffected": 21,
+     "otherNumAtRisk": 215
+    },
+    {
+     "id": "EG001",
+     "title": "T+O 5/5 / F+S Placebo",
+     "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Tiotropium 5 μg and Olodaterol 5 μg (T+O 5/5) administered orally via the Respimat® inhaler once daily plus Fluticasone propionate+Salmeterol (F+S) placebo treatment administered orally twice daily via Accuhaler®.",
+     "seriousNumAffected": 7,
+     "seriousNumAtRisk": 221,
+     "otherNumAffected": 28,
+     "otherNumAtRisk": 221
+    },
+    {
+     "id": "EG002",
+     "title": "F+S 250/50 / T+O Placebo",
+     "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Fluticasone propionate 250 μg and Salmeterol 50 μg (F+S 250/50) administered orally twice daily via Accuhaler® plus Tiotropium+Olodaterol (T+O) placebo treatment administered orally once daily via the Respimat® inhaler.",
+     "seriousNumAffected": 4,
+     "seriousNumAtRisk": 212,
+     "otherNumAffected": 19,
+     "otherNumAtRisk": 212
+    },
+    {
+     "id": "EG003",
+     "title": "F+S 500/50 / T+O Placebo",
+     "description": "Treatments were taken for 6 weeks and each treatment period was separated by a washout period of at least 21 days.\n\n• Fixed dose combination (FDC) of Fluticasone propionate 500 μg and Salmeterol 50 μg (F+S 500/50) administered orally twice daily via Accuhaler® plus Tiotropium+Olodaterol (T+O) placebo treatment administered orally once daily via the Respimat® inhaler.",
+     "seriousNumAffected": 9,
+     "seriousNumAtRisk": 219,
+     "otherNumAffected": 24,
+     "otherNumAtRisk": 219
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Angina pectoris",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Atrial flutter",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Cardiac failure",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Myocardial ischaemia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Diarrhoea",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Death",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Cholecystitis",
+     "organSystem": "Hepatobiliary disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Drug hypersensitivity",
+     "organSystem": "Immune system disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Gastroenteritis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Lobar pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Osteomyelitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Sialoadenitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Fibula fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Tibia fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Toxicity to various agents",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Vascular graft occlusion",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Dehydration",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Osteonecrosis",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Cerebral haemorrhage",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Transient ischaemic attack",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Nephrolithiasis",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Renal failure",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 2,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 4,
+       "numAtRisk": 219
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Nasopharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 12,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 12,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 13,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 11,
+       "numAtRisk": 219
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 17.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 10,
+       "numAtRisk": 215
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 18,
+       "numAtRisk": 221
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 7,
+       "numAtRisk": 212
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 15,
+       "numAtRisk": 219
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "Boehringer Ingelheim (BI) acknowledges that investigators have the right to publish the study results. Investigators shall provide BI with a copy of any publication or presentation for review prior to any submission. Such review will be done with regard to proprietary information, information related to patentable inventions, medical, scientific, and statistical accuracy within 60 days. BI may request a delay of the publication in order to protect BI's intellectual property rights."
+   },
+   "pointOfContact": {
+    "title": "Boehringer Ingelheim Call Center",
+    "organization": "Boehringer Ingelheim",
+    "email": "clintriage.rdg@boehringer-ingelheim.com",
+    "phone": "1800-243-0127"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D000068298",
+     "term": "Fluticasone"
+    },
+    {
+     "id": "D000068299",
+     "term": "Salmeterol Xinafoate"
+    },
+    {
+     "id": "D000069447",
+     "term": "Tiotropium Bromide"
+    },
+    {
+     "id": "C549647",
+     "term": "olodaterol"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D000730",
+     "term": "Androstadienes"
+    },
+    {
+     "id": "D000736",
+     "term": "Androstenes"
+    },
+    {
+     "id": "D000731",
+     "term": "Androstanes"
+    },
+    {
+     "id": "D013256",
+     "term": "Steroids"
+    },
+    {
+     "id": "D000072473",
+     "term": "Fused-Ring Compounds"
+    },
+    {
+     "id": "D011083",
+     "term": "Polycyclic Compounds"
+    },
+    {
+     "id": "D000420",
+     "term": "Albuterol"
+    },
+    {
+     "id": "D004983",
+     "term": "Ethanolamines"
+    },
+    {
+     "id": "D000605",
+     "term": "Amino Alcohols"
+    },
+    {
+     "id": "D000438",
+     "term": "Alcohols"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D010627",
+     "term": "Phenethylamines"
+    },
+    {
+     "id": "D005021",
+     "term": "Ethylamines"
+    },
+    {
+     "id": "D012602",
+     "term": "Scopolamine Derivatives"
+    },
+    {
+     "id": "D014326",
+     "term": "Tropanes"
+    },
+    {
+     "id": "D053961",
+     "term": "Azabicyclo Compounds"
+    },
+    {
+     "id": "D001372",
+     "term": "Aza Compounds"
+    },
+    {
+     "id": "D000470",
+     "term": "Alkaloids"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D019086",
+     "term": "Bridged Bicyclo Compounds, Heterocyclic"
+    },
+    {
+     "id": "D006572",
+     "term": "Heterocyclic Compounds, Bridged-Ring"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

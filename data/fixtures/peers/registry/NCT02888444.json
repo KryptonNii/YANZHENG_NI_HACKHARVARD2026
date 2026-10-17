@@ -1,0 +1,395 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT02888444",
+   "orgStudyIdInfo": {
+    "id": "113"
+   },
+   "organization": {
+    "fullName": "University of Auckland, New Zealand",
+    "class": "OTHER"
+   },
+   "briefTitle": "Smoking Relapse Prevention Among COPD Ex-smokers",
+   "officialTitle": "Smoking Relapse Prevention Among COPD Ex-smokers",
+   "acronym": "SPACE"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2019-05",
+   "overallStatus": "TERMINATED",
+   "whyStopped": "Poor recruitment",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2017-07-31",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2018-04-13",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2018-04-13",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2016-08-30",
+   "studyFirstSubmitQcDate": "2016-08-30",
+   "studyFirstPostDateStruct": {
+    "date": "2016-09-05",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2019-05-13",
+   "lastUpdatePostDateStruct": {
+    "date": "2019-05-15",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "PRINCIPAL_INVESTIGATOR",
+    "investigatorFullName": "Natalie Walker",
+    "investigatorTitle": "Associate Professor",
+    "investigatorAffiliation": "University of Auckland, New Zealand"
+   },
+   "leadSponsor": {
+    "name": "University of Auckland, New Zealand",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "A placebo-controlled trial to determine whether recent ex-smokers with COPD who successfully stop smoking after taking varenicline are less likely to relapse back to smoking if they continue using varenicline for a further 12 weeks",
+   "detailedDescription": "Smoking remains the leading cause of Chronic Obstructive Pulmonary Disease (COPD), a leading cause of death and disability in New Zealand. COPD particularly affects indigenous Māori and Pacific people, given their higher rates of smoking. COPD patients tend to have a higher level of nicotine dependence and, as a result, often find quitting harder and are more likely to relapse back to smoking. A clinical trial (N=262) is planned in Auckland, New Zealand to determine whether extended varenicline treatment combined with behavioural support can prevent relapse back to smoking in recent ex-smokers with COPD. Smoking cessation and relapse prevention are the most cost-effective interventions available for COPD patients that smoke, irrespective of their disease stage. The trial has the potential to significantly improve the outcomes of this common and chronic health condition in New Zealand."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease",
+    "Smoking Cessation"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "PREVENTION",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 8,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Varenicline plus behavioural support",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "12 weeks extended treatment with varenicline, plus relapse prevention-orientated behavioural support",
+     "interventionNames": [
+      "Drug: Varenicline",
+      "Behavioral: Behavioural support"
+     ]
+    },
+    {
+     "label": "Placebo plus behavioural support",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "12 weeks extended treatment with placebo, plus relapse prevention-orientated behavioural support",
+     "interventionNames": [
+      "Behavioral: Behavioural support",
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Varenicline",
+     "description": "Two 0.5mg tablets taken twice daily",
+     "armGroupLabels": [
+      "Varenicline plus behavioural support"
+     ],
+     "otherNames": [
+      "Champix"
+     ]
+    },
+    {
+     "type": "BEHAVIORAL",
+     "name": "Behavioural support",
+     "description": "Consisting of the study-specific doctor delivering relapse prevention orientated behavioural support at the time of consultation, plus six 10-15 minute calls over the 12 weeks delivered by a research assistant.",
+     "armGroupLabels": [
+      "Placebo plus behavioural support",
+      "Varenicline plus behavioural support"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Two 0.5mg tablets taken twice daily",
+     "armGroupLabels": [
+      "Placebo plus behavioural support"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Continuous abstinence",
+     "description": "Continuous (lapse-free) abstinence biochemically validated using a carbon monoxide reading of \\<10 ppm.",
+     "timeFrame": "12 weeks post-randomisation"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Continuous abstinence",
+     "description": "Biochemically validated continuous (lapse-free) abstinence",
+     "timeFrame": "24 weeks post-randomisation"
+    },
+    {
+     "measure": "7-day point prevalence abstinence",
+     "description": "Biochemically validated 7-day point prevalence abstinence, defined as no smoking in the last seven days, not even a puff.",
+     "timeFrame": "12 weeks post-randomisation"
+    },
+    {
+     "measure": "7-day point prevalence abstinence",
+     "description": "Biochemically validated 7-day point prevalence abstinence, defined as no smoking in the last seven days, not even a puff.",
+     "timeFrame": "24 weeks post-randomisation"
+    },
+    {
+     "measure": "Time to lapse",
+     "description": "Time to first lapse, defined as time to first cigarette smoked (even a puff)",
+     "timeFrame": "12 weeks post-randomisation"
+    },
+    {
+     "measure": "Time to lapse",
+     "description": "Time to first lapse, defined as time to first cigarette smoked (even a puff)",
+     "timeFrame": "24 weeks post-randomisation"
+    },
+    {
+     "measure": "Time to relapse",
+     "description": "Time to first relapse, defined as smoking ≥five cigarettes a day for three consecutive days.",
+     "timeFrame": "12 weeks post-randomisation"
+    },
+    {
+     "measure": "Time to relapse",
+     "description": "Time to first relapse, defined as smoking ≥five cigarettes a day for three consecutive days.",
+     "timeFrame": "24 weeks post-randomisation"
+    },
+    {
+     "measure": "Cigarettes per day",
+     "description": "Cigarettes smoked per day, if returned to smoking",
+     "timeFrame": "12 weeks post-randomisation"
+    },
+    {
+     "measure": "Cigarettes per day",
+     "description": "Cigarettes smoked per day, if returned to smoking",
+     "timeFrame": "24 weeks post-randomisation"
+    },
+    {
+     "measure": "COPD exacerbations requiring hospitalisation",
+     "description": "The number of COPD exacerbations in the past 12 weeks, defined as a worsening of COPD respiratory symptoms that resulted in a course of antibiotics and/or oral steroids; or an unscheduled visit to GP, urgent care, Emergency Department or as an inpatient. Data will be validated against medical records using data linkage.",
+     "timeFrame": "12 weeks post-randomisation"
+    },
+    {
+     "measure": "COPD exacerbations requiring hospitalisation",
+     "description": "The number of COPD exacerbations in the past 12 weeks, defined as a worsening of COPD respiratory symptoms that resulted in a course of antibiotics and/or oral steroids; or an unscheduled visit to GP, urgent care, Emergency Department or as an inpatient. Data will be validated against medical records using data linkage.",
+     "timeFrame": "24 weeks post-randomisation"
+    },
+    {
+     "measure": "Urge to smoke/cravings",
+     "description": "The physical signs and symptoms associated with withdrawal will be measured using the Mood and Physical Symptoms Scale (MPSS).",
+     "timeFrame": "12 weeks post-randomisation"
+    },
+    {
+     "measure": "Urge to smoke/cravings",
+     "description": "The physical signs and symptoms associated with withdrawal will be measured using the Mood and Physical Symptoms Scale (MPSS).",
+     "timeFrame": "24 weeks post-randomisation"
+    },
+    {
+     "measure": "Cigarette dependence",
+     "description": "Cigarette dependence, as measured by the Fagerström Test of Cigarette Dependence",
+     "timeFrame": "12 weeks post-randomisation"
+    },
+    {
+     "measure": "Cigarette dependence",
+     "description": "Cigarette dependence, as measured by the Fagerström Test of Cigarette Dependence",
+     "timeFrame": "24 weeks post-randomisation"
+    },
+    {
+     "measure": "Health-related quality of life",
+     "description": "Measured using the EQ-5D",
+     "timeFrame": "12 weeks post-randomisation"
+    },
+    {
+     "measure": "Health-related quality of life",
+     "description": "Measured using the EQ-5D",
+     "timeFrame": "24 weeks post-randomisation"
+    },
+    {
+     "measure": "Serious adverse events",
+     "timeFrame": "12 weeks post-randomisation"
+    },
+    {
+     "measure": "Serious adverse events",
+     "timeFrame": "24 weeks post-randomisation"
+    }
+   ],
+   "otherOutcomes": [
+    {
+     "measure": "Medication adherence (Script redeemed)",
+     "description": "Question asked about whether they redeemed their allocated script",
+     "timeFrame": "12 weeks post-randomisation"
+    },
+    {
+     "measure": "Question about medication compliance (pill count).",
+     "description": "Ask about how many of their allocated pills they took",
+     "timeFrame": "12 weeks post-randomisation"
+    },
+    {
+     "measure": "Question about use of other cessation products",
+     "description": "Questions will be asked about whether other cessation products were used and if so, what type. E-cigarettes will be considered a possible cessation product.",
+     "timeFrame": "12 weeks post-randomisation"
+    },
+    {
+     "measure": "Questions asked about the use of other cessation products",
+     "description": "Questions will be asked about whether other cessation products were used and if so, what type. E-cigarettes will be considered a possible cessation product.",
+     "timeFrame": "24 weeks post-randomisation"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Daily smokers\n* Diagnosed with COPD (as per the Global Initiative for Chronic Obstructive Lung Disease \\[GOLD\\] criteria, namely: a characteristic clinical picture of dyspnea, cough or sputum, with a history of exposure to risk factors, plus a post-bronchodilator forced expiratory volume in one second / forced vital capacity FEV1/FVC ratio of \\<0.70)\n* Have stable COPD (i.e. no exacerbation, hospital admission, or use of antibiotics or prednisone in the past six weeks)\n* Can provide consent\n* Reside in the Auckland region of New Zealand\n* Eligible under New Zealand special authority to receive subsidised varenicline\n* Prepared to make a quit attempt with varenicline\n* Have access to a phone\n\nExclusion Criteria:\n\n* A history of definite asthma and/or atopy\n* Contraindications to varenicline\n* Used varenicline in the past 12 months\n* A history of serious psychiatric illness or significant cognitive impairment\n* Major or uncontrolled co-morbidities (such as uncontrolled heart failure, infection or rapidly progressive condition)\n* A life expectancy of \\< 12 months\n* Are currently using another cessation medication (including e-cigarettes)",
+   "healthyVolunteers": true,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Natalie Walker, PhD",
+     "affiliation": "University of Auckland, New Zealand",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "National Institute for Health Innovation, University of Auckland",
+     "city": "Auckland",
+     "country": "New Zealand",
+     "geoPoint": {
+      "lat": -36.84853,
+      "lon": 174.76349
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D016540",
+     "term": "Smoking Cessation"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D015438",
+     "term": "Health Behavior"
+    },
+    {
+     "id": "D001519",
+     "term": "Behavior"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D000068580",
+     "term": "Varenicline"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D001552",
+     "term": "Benzazepines"
+    },
+    {
+     "id": "D006574",
+     "term": "Heterocyclic Compounds, 2-Ring"
+    },
+    {
+     "id": "D000072471",
+     "term": "Heterocyclic Compounds, Fused-Ring"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D011810",
+     "term": "Quinoxalines"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

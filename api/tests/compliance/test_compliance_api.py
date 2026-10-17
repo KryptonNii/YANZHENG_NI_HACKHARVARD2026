@@ -140,6 +140,64 @@ def test_validation_package_missing_then_served(client: TestClient, tmp_path: Pa
     assert client.get("/api/validation/package/files/nope.md").status_code == 404
 
 
+@pytest.mark.req("URS-020")
+def test_validation_package_status_follows_the_live_approval(client: TestClient,
+                                                             tmp_path: Path) -> None:
+    """A build-time 'approved' / 'awaiting approval' label never outlives the approval behind it."""
+    from trialpilot_api.compliance import records, workflow
+
+    doc = tmp_path / "report.md"
+    doc.write_text("summary v1", encoding="utf-8")
+    records.register_file("validation_report", "VSR-1", doc)
+    vsr = workflow.create_request("validation_report", "VSR-1", "alex.author").id
+    workflow.sign_request(vsr, "sam.qa", PINS["sam.qa"], "approved")
+    cr = workflow.create_request("change_record", "CR-1", "alex.author", record_hash=H).id
+    workflow.reject_request(cr, "sam.qa", PINS["sam.qa"], "out of scope")
+    workflow.create_request("scenario", "B", "alex.author", record_hash=H)  # stays pending
+
+    def d(did: str, status: str, record_type: str, record_id: str) -> dict[str, str]:
+        return {"id": did, "status": status, "approval_record_type": record_type,
+                "approval_record_id": record_id}
+
+    pkg = tmp_path / "vout" / "package"
+    pkg.mkdir(parents=True)
+    (pkg / "package_index.json").write_text(json.dumps({"deliverables": [
+        d("A1", "awaiting approval", "validation_report", "VSR-1"),
+        d("A2", "approved", "validation_report", "VSR-1"),
+        d("A3", "generated", "validation_report", "VSR-1"),
+        d("R1", "awaiting approval", "change_record", "CR-1"),
+        d("R2", "approved", "change_record", "CR-1"),
+        d("R3", "draft", "change_record", "CR-1"),
+        d("P1", "awaiting approval", "scenario", "B"),
+        d("P2", "approved", "scenario", "B"),
+        d("P3", "draft", "scenario", "B"),
+        d("N1", "awaiting approval", "validation_report", "VSR-9"),
+        d("N2", "approved", "validation_report", "VSR-9"),
+        {"id": "plan", "status": "generated"},
+    ]}), encoding="utf-8")
+
+    def statuses() -> dict[str, str]:
+        r = client.get("/api/validation/package")
+        assert r.status_code == 200, r.text
+        return {x["id"]: x["status"] for x in r.json()["deliverables"]}
+
+    assert statuses() == {
+        "A1": "approved", "A2": "approved", "A3": "approved",
+        "R1": "rejected", "R2": "rejected", "R3": "draft",
+        "P1": "awaiting approval", "P2": "awaiting approval", "P3": "draft",
+        "N1": "awaiting approval", "N2": "approval unconfirmed",
+        "plan": "generated",
+    }
+
+    doc.write_text("summary v2 (edited after QA approval)", encoding="utf-8")
+    by_id = {x["id"]: x for x in client.get("/api/validation/package").json()["deliverables"]}
+    assert {i: by_id[i]["status"] for i in ("A1", "A2", "A3")} == {
+        "A1": "approval invalid", "A2": "approval invalid", "A3": "generated"}
+    assert by_id["A2"]["approval"]["approved"] is False
+    assert by_id["A2"]["approval"]["status"] == "approved"
+    assert "changed after approval" in by_id["A2"]["approval"]["reason"]
+
+
 @pytest.mark.req("URS-026", "URS-028")
 def test_deep_evidence_paths_can_be_hashed_and_downloaded(client: TestClient, tmp_path: Path) -> None:
     from trialpilot_api.compliance import records

@@ -1,0 +1,359 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT05299385",
+   "orgStudyIdInfo": {
+    "id": "LFSPMR-01"
+   },
+   "organization": {
+    "fullName": "Lifesemantics Corp.",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "The Study for Evaluating the Clinical Effectiveness and Safety of Respiratory Rehabilitation Software 'Redpill Breath'(COPD, Asthma, Lung Cancer, Etc.)",
+   "officialTitle": "Multicenter, Prospective, Comparative, Randomized, Single Blind, Superior, Pivotal Study to Evaluate the Clinical Effectiveness and Safety of Respiratory Rehabilitation Software 'Redpill Breath' Compared to the Manual Rehabilitation Management(COPD, Asthma, Lung Cancer, Etc.)"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2022-03",
+   "overallStatus": "UNKNOWN",
+   "lastKnownStatus": "RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2022-01-13",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2022-03-28",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2022-06-30",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2022-01-11",
+   "studyFirstSubmitQcDate": "2022-03-18",
+   "studyFirstPostDateStruct": {
+    "date": "2022-03-29",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2022-03-18",
+   "lastUpdatePostDateStruct": {
+    "date": "2022-03-29",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Lifesemantics Corp.",
+    "class": "INDUSTRY"
+   },
+   "collaborators": [
+    {
+     "name": "Asan Medical Center",
+     "class": "OTHER"
+    },
+    {
+     "name": "KangWon National University Hospital",
+     "class": "OTHER"
+    },
+    {
+     "name": "SMG-SNU Boramae Medical Center",
+     "class": "OTHER"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false,
+   "isUsExport": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The purpose of the study is to prove the clinical superiority of respiratory rehabilitation software \"Redpill Breath\" and evaluate the clinical improvement effect by 6-minute walk test of the software, compared to the manual rehabilitation management for those who need respiratory rehabilitation(COPD, Asthma, Lung Cancer, etc.)"
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Respiratory System Disease",
+    "Chronic Obstructive Pulmonary Disease",
+    "Asthma Copd",
+    "Lung Cancer",
+    "Lung Diseases",
+    "Pulmonary Rehabilitation",
+    "Respiratory Rehabilitation",
+    "Home Based Rehabilitation",
+    "Mobile Application",
+    "Rehabilitation"
+   ],
+   "keywords": [
+    "DTx",
+    "Digital therapeutics",
+    "PR",
+    "COPD"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "SINGLE",
+     "whoMasked": [
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 100,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Comparator",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "The investigator provide conventional-treatment to subjects when distributing respiratory rehabilitation education leaflets, Investigators explain the leaflets and self-practice until the subjects fully understand them. Compactor conducts respiratory rehabilitation treatment for 12 weeks according to the following procedures at home\n\n☞ The investigator shall contact the subject every two weeks during the respiratory rehabilitation period and encourage them to perform respiratory rehabilitation treatment according to the assigned group. Subjects perform respiratory rehabilitation exercises at home.\n\nThey have to visit hospital at 8 weeks (visit 3) and 12 weeks (visit 4) and then examine the factor of the outcome measure following the clinical protocol",
+     "interventionNames": [
+      "Behavioral: Conventional rehabilition treatment(e.g leaflet) educated by hospital"
+     ]
+    },
+    {
+     "label": "Experimental treatment",
+     "type": "EXPERIMENTAL",
+     "description": "Subjects install software as a medical device for clinical trials on smart-phones, so that the subject can perform respiratory rehabilitation treatment at home.\n\nRespiratory rehabilitation treatment for 12 weeks\n\n☞ Respiratory rehabilitation treatment using a mobile-based software, consists of aerobic exercise and anaerobic exercise, and the subject performs themselves\n\nThey have to visit hospital at 8 weeks (visit 3) and 12 weeks (visit 4) and then examine the factor of the outcome measure following the clinical protocol",
+     "interventionNames": [
+      "Device: Digital treatment based on Respiratory Rehabilitation Software"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "BEHAVIORAL",
+     "name": "Conventional rehabilition treatment(e.g leaflet) educated by hospital",
+     "description": "Active Comparator: subjects who are trained in accordance with the conventional manual treatment of Respiratory rehabilitation in the clinical institution and taking care home-based management.\n\nThe manual contents\n\n* method of the conventional rehabilitation treatment\n* intensity for aerobic exercise and anaerobic exercise",
+     "armGroupLabels": [
+      "Comparator"
+     ],
+     "otherNames": [
+      "the conventional rehabilitation treatment"
+     ]
+    },
+    {
+     "type": "DEVICE",
+     "name": "Digital treatment based on Respiratory Rehabilitation Software",
+     "description": "Experimental: subjects who use the software as a home-based Digital Respiratory Rehabilitation software\n\nIt is intended for subjects who are prescribed a respiratory rehabilitation exercise to improve their physical condition. The software also helps them to do self-rehabilitation exercise.",
+     "armGroupLabels": [
+      "Experimental treatment"
+     ],
+     "otherNames": [
+      "Respiratory Rehabilitation Software"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "The 6-minute walking distance (6 minute walking distance, 6MWD) change amount(in meters) at 12 weeks after respiratory rehabilitation compared to the baseline.",
+     "description": "the primary efficacy variable is the change of respiratory function parameters as a 6-minute walking distance(6MWT) in meters(m) at V4 compared with the baseline(V2). The value of 6MWD at V2 adjust as the value of covariate for statistical significance between the groups.",
+     "timeFrame": "12 weeks"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "The 6-minute walking distance (6 minute walking distance, 6MWD) change amount(in meters) at 8 weeks after respiratory rehabilitation compared to the baseline.",
+     "description": "the efficacy variable is the change of respiratory function parameters (6MWT) at V3 compared with the baseline(V2). Statistical significance is tested through the Independent two-sample-test or the Wilcoxon rank sum test. it will be evaluated separately from the primary outcome(6MWD at 12 weeks)",
+     "timeFrame": "8 weeks"
+    },
+    {
+     "measure": "The amount of change in the modified medical ressearch council Dyspnea scale (mMRC) scores at 8 and 12 weeks after respiratory rehabilitation compared to the baseline.",
+     "description": "the efficacy variable is the change of respiratory function parameter by modified medical research council Dyspnea scale(mMRC) scores at V3 and V4 compared with the baseline(V2). the total score ranges from 0 to 4, The higher score means more severe symptoms. Statistical significance of changes within each group is tested by the Paired -test or Wilcoxon signed rank test.",
+     "timeFrame": "8 and 12 weeks"
+    },
+    {
+     "measure": "The amount of change in the Structures Respiratory Questionnaire (SGRQ) score at 8 and 12 weeks after respiratory rehabilitation compared to the baseline.",
+     "description": "the efficacy variable is the change of respiratory function scores(Structures Respiratory Questionnaire, SGRQ) at V3 and V4 compared with the baseline(V2). Scores range from 0 to 100, with higher scores indicating more limitations. Statistical significance of changes within each group is tested by the Paired -test or Wilcoxon signed rank test.",
+     "timeFrame": "8 and 12 weeks"
+    },
+    {
+     "measure": "The amount of change in the Hospital Anxiety and Depression Scale (HADS) at 8 and 12 weeks after respiratory rehabilitation compared to the baseline.",
+     "description": "the efficacy variable is the change of respiratory function scores(Hospital Anxiety and Depression Scale, HADS) at V3 and V4 compared with the baseline(V2). Scores range from 0 to 21, with the higher score indicating the more depressed and anxious. Statistical significance of changes within each group is tested by the Paired -test or Wilcoxon signed rank test.",
+     "timeFrame": "8 and 12 weeks"
+    },
+    {
+     "measure": "The amount of change in the average number of daily steps per week during the respiratory rehabilitation management period (number of times)",
+     "description": "the efficacy variable is the daily step count detection using medical device for 12 weeks. Statistical significance of changes within each group is tested by the Paired -test or Wilcoxon signed rank test.",
+     "timeFrame": "per week for 12weeks"
+    },
+    {
+     "measure": "The number of times in the use of medical support (days of hospitalization)",
+     "description": "the efficacy variable is number of days of hospitalization for 12 weeks compared with the baseline(V2). Statistical significance of changes within each group is tested by the Paired -test or Wilcoxon signed rank test.",
+     "timeFrame": "12 weeks"
+    },
+    {
+     "measure": "The number of times in the use of medical support (days of emergency room visits)",
+     "description": "the efficacy variable is number of days of hospitalization, number of days of emergency room visits for 12 weeks compared with the baseline(V2). Statistical significance of changes within each group is tested by the Paired -test or Wilcoxon signed rank test.",
+     "timeFrame": "12 weeks"
+    },
+    {
+     "measure": "Abnormal case (safety evaluation variable)",
+     "description": "The analysis of abnormal case analyzes all abnormal cases(TEAE) that occurre after the application of medical devices for clinical trials.\n\nDescriptive statistics(the number of subjects, incidence, and occurrence of coded adverse events) are presented by group. Treatment Emergency Adverse Event (TEAE), Adverse Device Effect (ADE), and Serious Adverse Event (SAE), and the difference in ratio between groups analyzes through Chi-square test or Fisher's exact test. The factors are coded according to SOC and PT using MedDRA. In addition, a detailed list is presented for individual subjects who have experienced significant abnormalities.",
+     "timeFrame": "8 and 12 weeks"
+    },
+    {
+     "measure": "Patient Global Assessment (PGA) evaluation for 12 weeks after respiratory rehabilitation management",
+     "description": "the scores of experimental group's Patient Global Assessment (PGA) evaluation using medical device for 12 weeks. PGA is assessed by a single question ranged from 0 to 10. the higher score means the greater patient's satisfaction.",
+     "timeFrame": "12 weeks"
+    },
+    {
+     "measure": "Evaluation of the number of treatments during the respiratory rehabilitation management period (number of times)",
+     "description": "the experimental group's the number of treatments, using medical device for 12 weeks represents descriptive statistics (number of subjects, average, standard deviation, median, minimum, and maximum value)",
+     "timeFrame": "12 weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1. 19 to 80 years-old\n2. Subject who has difficulty in respiratory symptoms and routine with the criteria as below 1) mMRC(modified Medical Research Council Dyspnea Scale) 1 point at least 2) In accordance with Pulmonary function test(PFT/LET/EEG) examined, if there is in one of the following cases as below \\[a lung cancer patient\\] (FVC or FEV1 \\< 80%), \\[No lung cancer patient\\] (Post-bronchodilator FEV1/FVC \\< 0.7) and (Post-bronchodilator FEV1 \\< 80%)\n3. Subject with an Android smartphone (OS 8.0 or higher, internal memory (HDD) of 32GB or higher) or iPhone (iOS 13.0 or higher, internal memory (HDD of 32GB or higher)\n4. Subject who can use effectively smartphone and mobile software\n5. Subject who brings their smartphone for a walking test during 12 weeks of the clinical trial.\n6. Subject who makes the decision voluntarily for participating in the clinical trial and to write their signature to the consent of subject's explanation.\n7. Subject who complies with the clinical protocol\n\nExclusion Criteria:\n\n1. Subject who has respiratory distress syndrome, caused by a kind of Neuromuscular disease, Spinal cord injury, Thoracic deformation, etc.\n2. Subject who participate in respiratory rehabilitation treatment within 6 months of the screening date\n3. Subject who undergoes respiratory-related symptoms deteriorate within 2 weeks of the screening date to the point where they need additional antibiotics or steroids\n4. Subject who has an unstable cardiovascular disease (unstable angina pectoris, Acute myocardial infarction, severe coarctation of aorta, etc.)\n5. a pulmonary arterial hypertension subject\n6. Subject prescribed physical(e.g. lower-leg joint surgery, neurological limitation) or cognitive factors(e.g. psychical disorder)\n7. Pregnant or lactating women\n8. Subject who is unable to read text and tough to communicate\n9. Subject who has participated in other clinical trials within 90 days of the screening date or participating in other clinical trials.\n10. Subject who is determined to inappropriate to perform this study according to clinical research associate's opinion(e.g if someone has a bearing on the result of the clinical trial ethically or clinically)",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "19 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Sumin Han",
+     "role": "CONTACT",
+     "phone": "+82-1661-2858",
+     "email": "sm.han@lifesemantics.kr"
+    },
+    {
+     "name": "Seiwon Lee",
+     "role": "CONTACT",
+     "email": "iseiwon@gmail.com"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Kangwon National University Hospital",
+     "status": "RECRUITING",
+     "city": "Chuncheon",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.87472,
+      "lon": 127.73417
+     }
+    },
+    {
+     "facility": "Asan Medical Center",
+     "status": "RECRUITING",
+     "city": "Seoul",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Kangwon National University Hospital",
+     "status": "RECRUITING",
+     "city": "Seoul",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "40854157",
+     "type": "DERIVED",
+     "citation": "Chung C, Kim DK, Lee JK, Heo EY, Kwon H, Kim D, Kim WJ, Lee SW. Smartphone App-Guided Pulmonary Rehabilitation in Chronic Respiratory Diseases: Randomized Controlled Trial. JMIR Mhealth Uhealth. 2025 Aug 25;13:e64884. doi: 10.2196/64884."
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D008175",
+     "term": "Lung Neoplasms"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D012142",
+     "term": "Respiratory Tract Neoplasms"
+    },
+    {
+     "id": "D013899",
+     "term": "Thoracic Neoplasms"
+    },
+    {
+     "id": "D009371",
+     "term": "Neoplasms by Site"
+    },
+    {
+     "id": "D009369",
+     "term": "Neoplasms"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

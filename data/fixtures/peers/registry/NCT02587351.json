@@ -1,0 +1,4028 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT02587351",
+   "orgStudyIdInfo": {
+    "id": "1512M81981"
+   },
+   "organization": {
+    "fullName": "University of Minnesota",
+    "class": "OTHER"
+   },
+   "briefTitle": "Beta-Blockers for the Prevention of Acute Exacerbations of Chronic Obstructive Pulmonary Disease",
+   "officialTitle": "Beta-Blockers for the Prevention of Acute Exacerbations of COPD"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2021-01",
+   "overallStatus": "TERMINATED",
+   "whyStopped": "Futility",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2016-05-01",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2019-09-01",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2019-12-01",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2015-10-19",
+   "studyFirstSubmitQcDate": "2015-10-23",
+   "studyFirstPostDateStruct": {
+    "date": "2015-10-27",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2020-09-01",
+   "resultsFirstSubmitQcDate": "2021-01-04",
+   "resultsFirstPostDateStruct": {
+    "date": "2021-01-25",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2021-01-04",
+   "lastUpdatePostDateStruct": {
+    "date": "2021-01-25",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "University of Minnesota",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "United States Department of Defense",
+     "class": "FED"
+    },
+    {
+     "name": "University of Alabama at Birmingham",
+     "class": "OTHER"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "This is a multicenter, prospective, randomized, double-blind, placebo-controlled trial that will enroll 1028 patients with at least moderately severe COPD over a three year period and follow them at regular intervals for one year. The primary endpoint is time to first acute exacerbation. Secondary endpoints include rates and severity of COPD exacerbations, cardiovascular events, all-cause mortality, lung function, dyspnea, quality of life and metoprolol-related side effects.",
+   "detailedDescription": "Hypothesis The primary hypothesis is that metoprolol succinate will reduce the risk of COPD exacerbations as compared to placebo. The secondary hypothesis is that metoprolol succinate will not adversely impact lung function, exercise tolerance, dyspnea or quality of life as compared to placebo.\n\nStudy Flow Patients will be screened and then randomized over a 2 week period and will then undergo a dose titration period for the following six weeks. Thereafter patients will be followed for 42 additional weeks on their target dose of metoprolol or placebo followed by a 4 week washout period.\n\nSpecific Aims:\n\nPrimary: To determine the effect of once daily metoprolol succinate compared with placebo on the time to first exacerbation in moderate to severe COPD patients who are prone to exacerbations and who do not have absolute indications for beta-blocker therapy.\n\nSecondary: To estimate the effect of metoprolol succinate compared with placebo on:\n\n1. The rate and severity of COPD exacerbations over 12 months\n2. Incidence and severity of metoprolol-related side effects including those that require cessation of drug\n3. Lung function as assessed by spirometry, dyspnea as assessed by the Modified Medical Research Council Scale (MMRC) and San Diego Shortness of Breath Questionnaire, exercise tolerance as measured by six minute walk test (6MWD), and quality of life as assessed by the Short Form 36, St. Georges Respiratory Questionnaire (SGRQ) and COPD Assessment Test (CAT) and Personal HEART Score.\n4. Hospitalizations\n5. The rate of major adverse cardiovascular events (MACE) (defined by cardiovascular death, hospitalization for myocardial infarction, heart failure, or stroke), percutaneous coronary intervention or coronary artery bypass grafting\n6. All-cause mortality\n\nSecondary subgroup analyses for 1) cardiovascular risk based on Personal HEART Score and 2) age greater versus less than 65."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ],
+   "keywords": [
+    "Chronic Obstructive Pulmonary Disease",
+    "COPD",
+    "Exacerbation",
+    "Lung function",
+    "Cardiac",
+    "Cardiovascular",
+    "Beta blockers",
+    "Metoprolol succinate",
+    "Smoking"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 532,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Metoprolol succinate",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).",
+     "interventionNames": [
+      "Drug: Metoprolol succinate"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Matched placebo",
+     "interventionNames": [
+      "Other: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Metoprolol succinate",
+     "description": "Extended release Metoprolol succinate",
+     "armGroupLabels": [
+      "Metoprolol succinate"
+     ],
+     "otherNames": [
+      "Metoprolol Succinate ER",
+      "Toprol XL"
+     ]
+    },
+    {
+     "type": "OTHER",
+     "name": "Placebo",
+     "description": "Matching placebo",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Time to First Occurrence of an Acute COPS Exacerbation",
+     "description": "Acute exacerbations are defined as a \"complex of respiratory symptoms (increase or new onset) of more than one of the following: cough, sputum, wheezing, dyspnea, or chest tightness requiring treatment with antibiotics and/or systemic steroids for at least three days\".",
+     "timeFrame": "1 year"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Number of Acute Exacerbations of COPD",
+     "description": "Number of acute exacerbations of COPD - rate per person-year",
+     "timeFrame": "1 year"
+    },
+    {
+     "measure": "Number of Emergency Department Visits Resulting From Acute Exacerbations of COPD",
+     "description": "Number of Emergency Department visits resulting from acute exacerbations of COPD - rate",
+     "timeFrame": "1 year"
+    },
+    {
+     "measure": "Number of Hospital Admissions Resulting From Acute Exacerbations of COPD",
+     "description": "Number of hospital admissions resulting from acute exacerbations of COPD - rate",
+     "timeFrame": "1 year"
+    },
+    {
+     "measure": "Hospital Days Resulting From Acute Exacerbations of COPD",
+     "description": "Number of hospital days resulting from acute exacerbations of COPD reported as negative binomial estimates of mean hospital days per patient year.",
+     "timeFrame": "14 months"
+    },
+    {
+     "measure": "Major Adverse Cardiovascular Events",
+     "description": "Major adverse cardiovascular events (MACE), percutaneous coronary intervention or coronary artery bypass grafting. MACE defined by cardiovascular death, hospitalization for myocardial infarction, heart failure, or stroke",
+     "timeFrame": "12 months"
+    },
+    {
+     "measure": "All-cause Mortality",
+     "description": "All-cause mortality count",
+     "timeFrame": "1 year"
+    },
+    {
+     "measure": "Incidence of Presumed Metoprolol-related Side-effects",
+     "description": "New or worsened (Neural: depression, headache, syncope, seizures, somnolence, memory loss, loss of sexual desire or erectile dysfunction, and fatigue; Hypersensitivity: rash, pruritus, tongue or facial swelling; Gastrointestinal: diarrhea, vomiting, nausea or constipation; Cardiovascular: bradycardia and hypotension as discussed below; Respiratory: bronchospasm and changes in lung function as discussed below).",
+     "timeFrame": "1 year"
+    },
+    {
+     "measure": "Modified Medical Research Council Dyspnea Scale (MMRC)",
+     "description": "Modified Medical Research Council Dyspnea Scale (MMRC) change from baseline to visit day 336. The MMRC scale is a five-point scale originally published in 1959 that considers certain activities, such as walking or climbing stairs, which provoke breathlessness. Scale from 0 to 4 with lower scores indicating less breathlessness.",
+     "timeFrame": "1 year"
+    },
+    {
+     "measure": "Forced Expiratory Volume in 1 Second (FEV1)",
+     "description": "Change in FEV1 % Predicted from baseline to visit day 336 as assessed by spirometry",
+     "timeFrame": "1 year"
+    },
+    {
+     "measure": "Exercise Capacity as Assessed by the 6 Minute Walk Distance (6MWD)",
+     "description": "6MWD change from baseline to visit day 336. The 6MWD has been used as a simple tool to assess overall exercise tolerance in patients with chronic cardiopulmonary disease including COPD.",
+     "timeFrame": "Baseline, 1 year"
+    },
+    {
+     "measure": "Markers of Systemic Inflammation",
+     "description": "Fibrinogen: assessed at screening/randomization and at conclusion of the study to determine if beta-blockade impacts levels of systemic inflammation that portend overall cardiac risk.",
+     "timeFrame": "Baseline, 1 year"
+    },
+    {
+     "measure": "St. George's Respiratory Questionnaire (SGRQ)",
+     "description": "SGRQ change from baseline to visit day 336. The SGRQ total score change from baseline. SGRQ is a respiratory specific health status questionnaire with scores ranging from 0 to 100. The lower score indicates a better health status.",
+     "timeFrame": "Baseline, 1 year"
+    },
+    {
+     "measure": "COPD Assessment Test (CAT)",
+     "description": "COPD Assessment Test (CAT) change from baseline. The CAT is a simple, eight item, health status instrument for patients with COPD that provides a score of 0-40. Lower scores denote better health status.",
+     "timeFrame": "Baseline, 1 year"
+    },
+    {
+     "measure": "San Diego Shortness of Breath Questionnaire (SOBQ)",
+     "description": "San Diego Shortness of Breath Questionnaire (SOBQ) change from baseline. A 24-item measure that assesses self-reported shortness of breath while performing a variety of activities of daily living. Each item has a 6-point scale (0 = \"not at all\" to 5 = \"maximal or unable to do because of breathlessness\").",
+     "timeFrame": "1 year"
+    },
+    {
+     "measure": "Acute Exacerbations of COPD and MACE",
+     "description": "MACE defined by cardiovascular death, hospitalization for myocardial infarction, heart failure, or stroke",
+     "timeFrame": "12 months"
+    },
+    {
+     "measure": "Short Form Health Survey (SF-36) Physical Function Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. 8 multi-item scales with higher score indicating better health state. The Physical Functioning scale is 10 items assessing the extent to which health limits physical activities such as self-care, walking, climbing stairs, bending lifting, and moderate and vigorous activities transformed to a score with a range of 0-100.",
+     "timeFrame": "1 year"
+    },
+    {
+     "measure": "Short Form Health Survey (SF-36) Role Functioning - Physical Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. Includes 8 multi-item scales with higher score indicating better health state. The Role Functioning - Physical Scale contains 4 items assessing the extent to which physical health interferes with work or other daily activities, including accomplished less than wanted, limitations in the kind of activities. Items are transformed to a score with a range of 0-100.",
+     "timeFrame": "1 year"
+    },
+    {
+     "measure": "Short Form Health Survey (SF-36) Role Functioning - Emotional Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. Includes 8 multi-item scales with higher score indicating better health state. The Role Functioning - Emotional Scale includes 3 items assessing extent to which emotional problems interfere with work or other daily activities. Items are transformed to a score with a range of 0-100.",
+     "timeFrame": "1 year"
+    },
+    {
+     "measure": "Short Form Health Survey (SF-36) Energy/Fatigue Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. Includes 8 multi-item scales with higher score indicating better health state. The Energy/Fatigue Scale includes 4 items. Items are transformed to a score with a range of 0-100.",
+     "timeFrame": "1 year"
+    },
+    {
+     "measure": "Short Form Health Survey (SF-36) Emotional Well-being Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. Includes 8 multi-item scales with higher score indicating better health state. The Emotional Well-being Scale includes 5 items assessing emotional wellbeing. Items are transformed to a score with a range of 0-100.",
+     "timeFrame": "1 year"
+    },
+    {
+     "measure": "Short Form Health Survey (SF-36) Social Functioning Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. Includes 8 multi-item scales with higher score indicating better health state. The Social Functioning Scale includes 2 items assessing extent to which physical health or emotional problems interfere with normal social activities. Items are transformed to a score with a range of 0-100.",
+     "timeFrame": "1 year"
+    },
+    {
+     "measure": "Short Form Health Survey (SF-36) Bodily Pain Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. Includes 8 multi-item scales with higher score indicating better health state. The Bodily Pain Scale includes 2 items assessing the intensity of pain and effect of pain on normal work, both inside and outside the house. Items are transformed to a score with a range of 0-100.",
+     "timeFrame": "1 year"
+    },
+    {
+     "measure": "Short Form Health Survey (SF-36) General Health Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. Includes 8 multi-item scales with higher score indicating better health state. The General Health Scale includes 4 items assessing personal evaluations of health. Items are transformed to a score with a range of 0-100.",
+     "timeFrame": "1 year"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1. Male and female subjects, ≥ 40 and less than 85 years of age\n2. Clinical diagnosis of at least moderate COPD as defined by the Global Initiative for Obstructive Lung Disease (GOLD) criteria (53):\n\n   * Post bronchodilator FEV1/FVC \\< 70% (Forced expiratory volume in 1 second/ forced vital capacity),\n   * Post bronchodilator FEV1 \\< 80% predicted, with or without chronic symptoms (i.e., cough, sputum production).\n3. Cigarette consumption of 10 pack-years or more. Patients may or may not be active smokers.\n4. To enrich the population for patients who are more likely to have acute exacerbations (54), each subject must meet one or more of the following 4 conditions:\n\n   * Have a history of receiving a course of systemic corticosteroids and/or antibiotics for respiratory problems in the past year,\n   * Visiting an Emergency Department for a COPD exacerbation within the past year, or\n   * Being hospitalized for a COPD exacerbation within the past year\n   * Be using or be prescribed supplemental oxygen for 12 or more hours per day\n   * Willingness to make return visits and availability by telephone for duration of study.\n\nExclusion Criteria:\n\n1. A diagnosis of asthma established by each study investigator on the basis of the recent American Thoracic Society/European Respiratory Society and National Institute for Health and Care Excellence guidelines.\n2. The presence of a diagnosis other than COPD that results in the patient being either medically unstable, or having a predicted life expectancy \\< 2 years.\n3. Women who are at risk of becoming pregnant during the study (pre-menopausal) and who refuse to use acceptable birth control (hormone-based oral or barrier contraceptive) for the duration of the study.\n4. Current tachy or brady arrhythmias requiring treatment\n5. Presence of a pacemaker and/or internal cardioverter/defibrillator\n6. Patients with a history of second or third degree (complete) heart block, or sick sinus syndrome\n7. Baseline EKG revealing left bundle branch block, bifascicular block, ventricular tachyarrhythmia, atrial fibrillation, atrial flutter, supraventricular tachycardia (other than sinus tachycardia and multifocal atrial tachycardia), or heart block (2nd degree or complete)\n8. Resting heart rate less than 65 beats per minute, or sustained resting tachycardia defined as heart rate greater than 120 beats per minute.\n9. Resting systolic blood pressure of less than 100mm Hg.\n10. Subjects with absolute (Class 1) indications for beta-blocker treatment as defined by the combined American College of Cardiology Foundation/American Heart Association Task Force on Practice Guidelines, and the American College of Physicians, American Association for Thoracic Surgery, Preventive Cardiovascular Nurses Association, Society for Cardiovascular Angiography and Interventions, and Society of Thoracic Surgeons Guidelines which include myocardial infarction, acute coronary syndrome, percutaneous coronary intervention or coronary artery bypass surgery within the prior 3 years and patients with known congestive heart failure defined as left ventricular ejection fraction \\<40%.(29, 30)\n11. Critical ischemia related to peripheral arterial disease.\n12. Other diseases that are known to be triggered by beta-blockers or beta-blocker withdrawal including myasthenia gravis, periodic hypokalemic paralysis, pheochromocytoma, and thyrotoxicosis\n13. Patients on other cardiac medications known to cause atrioventricular (AV) node conduction delays such as amiodarone, digoxin, and calcium channel blockers including verapamil and diltiazem as well as patients taking clonidine.\n14. Hospitalization for uncontrolled diabetes mellitus or hypoglycemia within the last 12 months.\n15. Patients with cirrhosis\n16. A clinical diagnosis of bronchiectasis defined as production of \\> one-half cup of purulent sputum/day.\n17. Patients otherwise meeting the inclusion criteria will not be enrolled until they are a minimum of four weeks from their most recent acute exacerbation (i.e., they will not have received a course of systemic corticosteroids, an increased dose of chronically administered systemic corticosteroids, and/or antibiotics for an acute exacerbation for a minimum of four weeks).",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "84 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Mark Dransfield, MD",
+     "affiliation": "University of Alabama at Birmingham",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "John Connett, PhD",
+     "affiliation": "University of Minnesota",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Stephen Lazarus, MD",
+     "affiliation": "University of California, San Francisco",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Birmingham, Alabama VA Medical",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "zip": "35233",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "University of Alabama at Birmingham",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "zip": "35294",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "University of California, San Francisco-Fresno",
+     "city": "Fresno",
+     "state": "California",
+     "zip": "93701",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.74773,
+      "lon": -119.77237
+     }
+    },
+    {
+     "facility": "LA BioMed at Harbor-UCLA Medical Center",
+     "city": "Los Angeles",
+     "state": "California",
+     "zip": "90502",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "University of California at San Francisco",
+     "city": "San Francisco",
+     "state": "California",
+     "zip": "94143",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.77493,
+      "lon": -122.41942
+     }
+    },
+    {
+     "facility": "National Jewish Medical & Research Center",
+     "city": "Denver",
+     "state": "Colorado",
+     "zip": "80206",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.73915,
+      "lon": -104.9847
+     }
+    },
+    {
+     "facility": "North Florida/South Georgia Veterans Health System",
+     "city": "Gainesville",
+     "state": "Florida",
+     "zip": "32608",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.65163,
+      "lon": -82.32483
+     }
+    },
+    {
+     "facility": "Northwestern University",
+     "city": "Chicago",
+     "state": "Illinois",
+     "zip": "60611",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.85003,
+      "lon": -87.65005
+     }
+    },
+    {
+     "facility": "Louisiana State University",
+     "city": "New Orleans",
+     "state": "Louisiana",
+     "zip": "70112",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.95465,
+      "lon": -90.07507
+     }
+    },
+    {
+     "facility": "University of Maryland Baltimore",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21201",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "Brigham and Women's Hospital",
+     "city": "Boston",
+     "state": "Massachusetts",
+     "zip": "02115",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.35843,
+      "lon": -71.05977
+     }
+    },
+    {
+     "facility": "VA Ann Arbor Healthcare System",
+     "city": "Ann Arbor",
+     "state": "Michigan",
+     "zip": "48105",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.27756,
+      "lon": -83.74088
+     }
+    },
+    {
+     "facility": "University of Michigan",
+     "city": "Ann Arbor",
+     "state": "Michigan",
+     "zip": "48109",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.27756,
+      "lon": -83.74088
+     }
+    },
+    {
+     "facility": "Veteran's Administration Medical Center",
+     "city": "Minneapolis",
+     "state": "Minnesota",
+     "zip": "55417",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.97997,
+      "lon": -93.26384
+     }
+    },
+    {
+     "facility": "HealthPartners Research Foundation",
+     "city": "Minneapolis",
+     "state": "Minnesota",
+     "zip": "55440",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.97997,
+      "lon": -93.26384
+     }
+    },
+    {
+     "facility": "Mayo Clinic",
+     "city": "Rochester",
+     "state": "Minnesota",
+     "zip": "55905",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.02163,
+      "lon": -92.4699
+     }
+    },
+    {
+     "facility": "NewYork-Presbyterian Brooklyn Methodist Hospital",
+     "city": "Brooklyn",
+     "state": "New York",
+     "zip": "11215",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.6501,
+      "lon": -73.94958
+     }
+    },
+    {
+     "facility": "New York Presbyterian/Queens",
+     "city": "Flushing",
+     "state": "New York",
+     "zip": "11355",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.76538,
+      "lon": -73.81736
+     }
+    },
+    {
+     "facility": "Cornell University",
+     "city": "Ithaca",
+     "state": "New York",
+     "zip": "14853",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.44063,
+      "lon": -76.49661
+     }
+    },
+    {
+     "facility": "Columbia University",
+     "city": "New York",
+     "state": "New York",
+     "zip": "10027",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.71427,
+      "lon": -74.00597
+     }
+    },
+    {
+     "facility": "Cincinnati VA Medical Center",
+     "city": "Cincinnati",
+     "state": "Ohio",
+     "zip": "45220",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.12711,
+      "lon": -84.51439
+     }
+    },
+    {
+     "facility": "Cleveland Clinic",
+     "city": "Cleveland",
+     "state": "Ohio",
+     "zip": "44195",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.4995,
+      "lon": -81.69541
+     }
+    },
+    {
+     "facility": "Temple University Lung Center",
+     "city": "Philadelphia",
+     "state": "Pennsylvania",
+     "zip": "19140",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.95238,
+      "lon": -75.16362
+     }
+    },
+    {
+     "facility": "University of Pittsburgh",
+     "city": "Pittsburgh",
+     "state": "Pennsylvania",
+     "zip": "15213",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.44062,
+      "lon": -79.99589
+     }
+    },
+    {
+     "facility": "University of Utah Health Sciences Center",
+     "city": "Salt Lake City",
+     "state": "Utah",
+     "zip": "84132-4701",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.76078,
+      "lon": -111.89105
+     }
+    },
+    {
+     "facility": "The University of Vermont",
+     "city": "Burlington",
+     "state": "Vermont",
+     "zip": "05405",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.47588,
+      "lon": -73.21207
+     }
+    },
+    {
+     "facility": "University of Washington School of Medicine",
+     "city": "Spokane",
+     "state": "Washington",
+     "zip": "99258",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.65966,
+      "lon": -117.42908
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "35363600",
+     "type": "DERIVED",
+     "citation": "Parekh TM, Helgeson ES, Connett J, Voelker H, Ling SX, Lazarus SC, Bhatt SP, MacDonald DM, Mkorombindo T, Kunisaki KM, Fortis S, Kaminsky D, Dransfield MT. Lung Function and the Risk of Exacerbation in the beta-Blockers for the Prevention of Acute Exacerbations of Chronic Obstructive Pulmonary Disease Trial. Ann Am Thorac Soc. 2022 Oct;19(10):1642-1649. doi: 10.1513/AnnalsATS.202109-1042OC."
+    },
+    {
+     "pmid": "31633896",
+     "type": "DERIVED",
+     "citation": "Dransfield MT, Voelker H, Bhatt SP, Brenner K, Casaburi R, Come CE, Cooper JAD, Criner GJ, Curtis JL, Han MK, Hatipoglu U, Helgeson ES, Jain VV, Kalhan R, Kaminsky D, Kaner R, Kunisaki KM, Lambert AA, Lammi MR, Lindberg S, Make BJ, Martinez FJ, McEvoy C, Panos RJ, Reed RM, Scanlon PD, Sciurba FC, Smith A, Sriram PS, Stringer WW, Weingarten JA, Wells JM, Westfall E, Lazarus SC, Connett JE; BLOCK COPD Trial Group. Metoprolol for the Prevention of Acute Exacerbations of COPD. N Engl J Med. 2019 Dec 12;381(24):2304-2314. doi: 10.1056/NEJMoa1908142. Epub 2019 Oct 20."
+    },
+    {
+     "pmid": "27267111",
+     "type": "DERIVED",
+     "citation": "Bhatt SP, Connett JE, Voelker H, Lindberg SM, Westfall E, Wells JM, Lazarus SC, Criner GJ, Dransfield MT. beta-Blockers for the prevention of acute exacerbations of chronic obstructive pulmonary disease (betaLOCK COPD): a randomised controlled study protocol. BMJ Open. 2016 Jun 7;6(6):e012292. doi: 10.1136/bmjopen-2016-012292."
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Metoprolol Succinate",
+     "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+    },
+    {
+     "id": "FG001",
+     "title": "Placebo",
+     "description": "Matched placebo\n\nPlacebo: Matching placebo"
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "268"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "264"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "268"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "264"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Metoprolol Succinate",
+     "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+    },
+    {
+     "id": "BG001",
+     "title": "Placebo",
+     "description": "Matched placebo\n\nPlacebo: Matching placebo"
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "268"
+      },
+      {
+       "groupId": "BG001",
+       "value": "264"
+      },
+      {
+       "groupId": "BG002",
+       "value": "532"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Categorical",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "<=18 years",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Between 18 and 65 years",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "122"
+          },
+          {
+           "groupId": "BG001",
+           "value": "125"
+          },
+          {
+           "groupId": "BG002",
+           "value": "247"
+          }
+         ]
+        },
+        {
+         "title": ">=65 years",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "146"
+          },
+          {
+           "groupId": "BG001",
+           "value": "139"
+          },
+          {
+           "groupId": "BG002",
+           "value": "285"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "65.2",
+           "spread": "7.6"
+          },
+          {
+           "groupId": "BG001",
+           "value": "64.8",
+           "spread": "7.9"
+          },
+          {
+           "groupId": "BG002",
+           "value": "65.0",
+           "spread": "7.8"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "124"
+          },
+          {
+           "groupId": "BG001",
+           "value": "123"
+          },
+          {
+           "groupId": "BG002",
+           "value": "247"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "144"
+          },
+          {
+           "groupId": "BG001",
+           "value": "141"
+          },
+          {
+           "groupId": "BG002",
+           "value": "285"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Race/Ethnicity, Customized",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "title": "White",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "178"
+          },
+          {
+           "groupId": "BG001",
+           "value": "194"
+          },
+          {
+           "groupId": "BG002",
+           "value": "372"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Black",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "83"
+          },
+          {
+           "groupId": "BG001",
+           "value": "60"
+          },
+          {
+           "groupId": "BG002",
+           "value": "143"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Other",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "7"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "17"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Region of Enrollment",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "title": "United States",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "268"
+          },
+          {
+           "groupId": "BG001",
+           "value": "264"
+          },
+          {
+           "groupId": "BG002",
+           "value": "532"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "FEV1 after bronchodilation - % of predicted value",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "% of predicted value",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "41.3",
+           "spread": "16.3"
+          },
+          {
+           "groupId": "BG001",
+           "value": "40.8",
+           "spread": "16.2"
+          },
+          {
+           "groupId": "BG002",
+           "value": "41.1",
+           "spread": "16.3"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "FEV1:FVC ratio - %",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "ratio %",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "44.2",
+           "spread": "11.7"
+          },
+          {
+           "groupId": "BG001",
+           "value": "45.2",
+           "spread": "21.6"
+          },
+          {
+           "groupId": "BG002",
+           "value": "44.7",
+           "spread": "17.3"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Smoking history No. of pack-yr",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "pack-years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "50.7",
+           "spread": "28.7"
+          },
+          {
+           "groupId": "BG001",
+           "value": "49.5",
+           "spread": "29.6"
+          },
+          {
+           "groupId": "BG002",
+           "value": "50.1",
+           "spread": "29.1"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Systolic Blood pressure - mm Hg",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "mm Hg",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "128.4",
+           "spread": "16.5"
+          },
+          {
+           "groupId": "BG001",
+           "value": "130.6",
+           "spread": "15.9"
+          },
+          {
+           "groupId": "BG002",
+           "value": "129.5",
+           "spread": "16.2"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Diastolic Blood pressure - mm Hg",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "mm Hg",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "77.2",
+           "spread": "9.2"
+          },
+          {
+           "groupId": "BG001",
+           "value": "76.8",
+           "spread": "9.1"
+          },
+          {
+           "groupId": "BG002",
+           "value": "77.0",
+           "spread": "9.1"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Time to First Occurrence of an Acute COPS Exacerbation",
+     "description": "Acute exacerbations are defined as a \"complex of respiratory symptoms (increase or new onset) of more than one of the following: cough, sputum, wheezing, dyspnea, or chest tightness requiring treatment with antibiotics and/or systemic steroids for at least three days\".",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "days",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "268"
+        },
+        {
+         "groupId": "OG001",
+         "value": "264"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "202",
+           "lowerLimit": "162",
+           "upperLimit": "282"
+          },
+          {
+           "groupId": "OG001",
+           "value": "222",
+           "lowerLimit": "189",
+           "upperLimit": "295"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Acute Exacerbations of COPD",
+     "description": "Number of acute exacerbations of COPD - rate per person-year",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "no. of events/person-yr",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "268"
+        },
+        {
+         "groupId": "OG001",
+         "value": "264"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.40",
+           "lowerLimit": "1.21",
+           "upperLimit": "1.61"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.33",
+           "lowerLimit": "1.15",
+           "upperLimit": "1.54"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Emergency Department Visits Resulting From Acute Exacerbations of COPD",
+     "description": "Number of Emergency Department visits resulting from acute exacerbations of COPD - rate",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "events per person-year",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "268"
+        },
+        {
+         "groupId": "OG001",
+         "value": "264"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.17",
+           "lowerLimit": "0.11",
+           "upperLimit": "0.25"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.18",
+           "lowerLimit": "0.12",
+           "upperLimit": "0.26"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Hospital Admissions Resulting From Acute Exacerbations of COPD",
+     "description": "Number of hospital admissions resulting from acute exacerbations of COPD - rate",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "events per person-year",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "268"
+        },
+        {
+         "groupId": "OG001",
+         "value": "264"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.66",
+           "lowerLimit": "0.47",
+           "upperLimit": "0.86"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.42",
+           "lowerLimit": "0.30",
+           "upperLimit": "0.55"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Hospital Days Resulting From Acute Exacerbations of COPD",
+     "description": "Number of hospital days resulting from acute exacerbations of COPD reported as negative binomial estimates of mean hospital days per patient year.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "hospital days",
+     "timeFrame": "14 months",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "268"
+        },
+        {
+         "groupId": "OG001",
+         "value": "264"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.09",
+           "lowerLimit": "2.05",
+           "upperLimit": "4.64"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.96",
+           "lowerLimit": "0.62",
+           "upperLimit": "1.48"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Major Adverse Cardiovascular Events",
+     "description": "Major adverse cardiovascular events (MACE), percutaneous coronary intervention or coronary artery bypass grafting. MACE defined by cardiovascular death, hospitalization for myocardial infarction, heart failure, or stroke",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "12 months",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "268"
+        },
+        {
+         "groupId": "OG001",
+         "value": "264"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Myocardial Infarction",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Heart Failure",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Stroke",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Sudden Cardiac Death",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "All-cause Mortality",
+     "description": "All-cause mortality count",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "268"
+        },
+        {
+         "groupId": "OG001",
+         "value": "264"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "11"
+          },
+          {
+           "groupId": "OG001",
+           "value": "5"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Incidence of Presumed Metoprolol-related Side-effects",
+     "description": "New or worsened (Neural: depression, headache, syncope, seizures, somnolence, memory loss, loss of sexual desire or erectile dysfunction, and fatigue; Hypersensitivity: rash, pruritus, tongue or facial swelling; Gastrointestinal: diarrhea, vomiting, nausea or constipation; Cardiovascular: bradycardia and hypotension as discussed below; Respiratory: bronchospasm and changes in lung function as discussed below).",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "268"
+        },
+        {
+         "groupId": "OG001",
+         "value": "264"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Depression",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "28"
+          },
+          {
+           "groupId": "OG001",
+           "value": "39"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Headache",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "71"
+          },
+          {
+           "groupId": "OG001",
+           "value": "78"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Fainting",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "4"
+          },
+          {
+           "groupId": "OG001",
+           "value": "8"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Daytime Sleepiness",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "58"
+          },
+          {
+           "groupId": "OG001",
+           "value": "70"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Memory Loss",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "20"
+          },
+          {
+           "groupId": "OG001",
+           "value": "21"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Loss of sexual desire or erectile dysfunction",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "10"
+          },
+          {
+           "groupId": "OG001",
+           "value": "6"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Lack of energy",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "91"
+          },
+          {
+           "groupId": "OG001",
+           "value": "77"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Rash",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "17"
+          },
+          {
+           "groupId": "OG001",
+           "value": "21"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Itching",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "11"
+          },
+          {
+           "groupId": "OG001",
+           "value": "18"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Tongue or facial swelling",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "7"
+          },
+          {
+           "groupId": "OG001",
+           "value": "5"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Vomiting",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "11"
+          },
+          {
+           "groupId": "OG001",
+           "value": "18"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Nausea",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "45"
+          },
+          {
+           "groupId": "OG001",
+           "value": "42"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Constipation",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "30"
+          },
+          {
+           "groupId": "OG001",
+           "value": "32"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Wheezing",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "88"
+          },
+          {
+           "groupId": "OG001",
+           "value": "79"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Shortness of breath",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "115"
+          },
+          {
+           "groupId": "OG001",
+           "value": "112"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Chest tightness",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "81"
+          },
+          {
+           "groupId": "OG001",
+           "value": "80"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Heart skipping or irregular beats",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "16"
+          },
+          {
+           "groupId": "OG001",
+           "value": "15"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Dizziness/light headedness",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "74"
+          },
+          {
+           "groupId": "OG001",
+           "value": "64"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Modified Medical Research Council Dyspnea Scale (MMRC)",
+     "description": "Modified Medical Research Council Dyspnea Scale (MMRC) change from baseline to visit day 336. The MMRC scale is a five-point scale originally published in 1959 that considers certain activities, such as walking or climbing stairs, which provoke breathlessness. Scale from 0 to 4 with lower scores indicating less breathlessness.",
+     "populationDescription": "Participants with data at baseline and visit day 336",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Inter-Quartile Range",
+     "unitOfMeasure": "score on a scale",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "207"
+        },
+        {
+         "groupId": "OG001",
+         "value": "201"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.0",
+           "lowerLimit": "1.0",
+           "upperLimit": "3.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.0",
+           "lowerLimit": "1.0",
+           "upperLimit": "3.0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Forced Expiratory Volume in 1 Second (FEV1)",
+     "description": "Change in FEV1 % Predicted from baseline to visit day 336 as assessed by spirometry",
+     "populationDescription": "Participants with data at baseline and visit day 336",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "percentage of predicted",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "193"
+        },
+        {
+         "groupId": "OG001",
+         "value": "197"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-2.24",
+           "lowerLimit": "-3.28",
+           "upperLimit": "-1.20"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-1.46",
+           "lowerLimit": "-2.50",
+           "upperLimit": "-0.42"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Exercise Capacity as Assessed by the 6 Minute Walk Distance (6MWD)",
+     "description": "6MWD change from baseline to visit day 336. The 6MWD has been used as a simple tool to assess overall exercise tolerance in patients with chronic cardiopulmonary disease including COPD.",
+     "populationDescription": "Participants with data at baseline and visit day 336",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "meters",
+     "timeFrame": "Baseline, 1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "174"
+        },
+        {
+         "groupId": "OG001",
+         "value": "166"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-17.64",
+           "lowerLimit": "-28.75",
+           "upperLimit": "-6.53"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-11.87",
+           "lowerLimit": "-23.21",
+           "upperLimit": "-0.54"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Markers of Systemic Inflammation",
+     "description": "Fibrinogen: assessed at screening/randomization and at conclusion of the study to determine if beta-blockade impacts levels of systemic inflammation that portend overall cardiac risk.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "mg/dL",
+     "timeFrame": "Baseline, 1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "268"
+        },
+        {
+         "groupId": "OG001",
+         "value": "264"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Fibrinogen baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "384.8",
+           "spread": "94.6"
+          },
+          {
+           "groupId": "OG001",
+           "value": "378.2",
+           "spread": "91.9"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Fibrinogen Visit 336",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "392.5",
+           "spread": "90.5"
+          },
+          {
+           "groupId": "OG001",
+           "value": "386.0",
+           "spread": "110.0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "St. George's Respiratory Questionnaire (SGRQ)",
+     "description": "SGRQ change from baseline to visit day 336. The SGRQ total score change from baseline. SGRQ is a respiratory specific health status questionnaire with scores ranging from 0 to 100. The lower score indicates a better health status.",
+     "populationDescription": "Participants with data at baseline and visit day 336",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "score on a scale",
+     "timeFrame": "Baseline, 1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "203"
+        },
+        {
+         "groupId": "OG001",
+         "value": "200"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.52",
+           "lowerLimit": "-1.01",
+           "upperLimit": "2.04"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.25",
+           "lowerLimit": "-1.79",
+           "upperLimit": "1.28"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "COPD Assessment Test (CAT)",
+     "description": "COPD Assessment Test (CAT) change from baseline. The CAT is a simple, eight item, health status instrument for patients with COPD that provides a score of 0-40. Lower scores denote better health status.",
+     "populationDescription": "Participants with data at baseline and visit day 336",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "score on a scale",
+     "timeFrame": "Baseline, 1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "206"
+        },
+        {
+         "groupId": "OG001",
+         "value": "200"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.88",
+           "lowerLimit": "0.07",
+           "upperLimit": "1.69"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.59",
+           "lowerLimit": "-1.41",
+           "upperLimit": "0.23"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "San Diego Shortness of Breath Questionnaire (SOBQ)",
+     "description": "San Diego Shortness of Breath Questionnaire (SOBQ) change from baseline. A 24-item measure that assesses self-reported shortness of breath while performing a variety of activities of daily living. Each item has a 6-point scale (0 = \"not at all\" to 5 = \"maximal or unable to do because of breathlessness\").",
+     "populationDescription": "Participants with data at baseline and visit day 336",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "score on a scale",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "204"
+        },
+        {
+         "groupId": "OG001",
+         "value": "199"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.52",
+           "lowerLimit": "-1.01",
+           "upperLimit": "2.04"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.25",
+           "lowerLimit": "-1.79",
+           "upperLimit": "1.28"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Acute Exacerbations of COPD and MACE",
+     "description": "MACE defined by cardiovascular death, hospitalization for myocardial infarction, heart failure, or stroke",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "12 months",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "268"
+        },
+        {
+         "groupId": "OG001",
+         "value": "264"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Myocardial Infarction",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Heart Failure",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Stroke",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Sudden cardiac death",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "COPD Exacerbation (Serious)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "55"
+          },
+          {
+           "groupId": "OG001",
+           "value": "32"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Short Form Health Survey (SF-36) Physical Function Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. 8 multi-item scales with higher score indicating better health state. The Physical Functioning scale is 10 items assessing the extent to which health limits physical activities such as self-care, walking, climbing stairs, bending lifting, and moderate and vigorous activities transformed to a score with a range of 0-100.",
+     "populationDescription": "Participants with SF-36 data available",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Inter-Quartile Range",
+     "unitOfMeasure": "Units on a scale",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "265"
+        },
+        {
+         "groupId": "OG001",
+         "value": "262"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "30.0",
+           "lowerLimit": "15.0",
+           "upperLimit": "50.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "30.0",
+           "lowerLimit": "15.0",
+           "upperLimit": "45.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 112 visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "30.0",
+           "lowerLimit": "15.0",
+           "upperLimit": "55.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "30.0",
+           "lowerLimit": "15.0",
+           "upperLimit": "50.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 336 Visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "30.0",
+           "lowerLimit": "15.0",
+           "upperLimit": "50.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "35.0",
+           "lowerLimit": "15.0",
+           "upperLimit": "50.0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Short Form Health Survey (SF-36) Role Functioning - Physical Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. Includes 8 multi-item scales with higher score indicating better health state. The Role Functioning - Physical Scale contains 4 items assessing the extent to which physical health interferes with work or other daily activities, including accomplished less than wanted, limitations in the kind of activities. Items are transformed to a score with a range of 0-100.",
+     "populationDescription": "Participants with SF-36 data available",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Inter-Quartile Range",
+     "unitOfMeasure": "Units on a scale",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "265"
+        },
+        {
+         "groupId": "OG001",
+         "value": "262"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "25.0",
+           "lowerLimit": "0.0",
+           "upperLimit": "50.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "25.0",
+           "lowerLimit": "0.0",
+           "upperLimit": "56.2"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 112 visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "25.0",
+           "lowerLimit": "0.0",
+           "upperLimit": "75.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "25.0",
+           "lowerLimit": "0.0",
+           "upperLimit": "75.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 336 Visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "12.5",
+           "lowerLimit": "0.0",
+           "upperLimit": "75.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "12.5",
+           "lowerLimit": "0.0",
+           "upperLimit": "50.0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Short Form Health Survey (SF-36) Role Functioning - Emotional Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. Includes 8 multi-item scales with higher score indicating better health state. The Role Functioning - Emotional Scale includes 3 items assessing extent to which emotional problems interfere with work or other daily activities. Items are transformed to a score with a range of 0-100.",
+     "populationDescription": "Participants with SF-36 data available",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Inter-Quartile Range",
+     "unitOfMeasure": "Units on a scale",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "265"
+        },
+        {
+         "groupId": "OG001",
+         "value": "262"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "100.0",
+           "lowerLimit": "0.0",
+           "upperLimit": "100.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "66.7",
+           "lowerLimit": "0.0",
+           "upperLimit": "100.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 112 visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "66.7",
+           "lowerLimit": "0.0",
+           "upperLimit": "100.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "66.7",
+           "lowerLimit": "0.0",
+           "upperLimit": "100.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 336 Visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "66.7",
+           "lowerLimit": "0.0",
+           "upperLimit": "100.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "66.7",
+           "lowerLimit": "0.0",
+           "upperLimit": "100.0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Short Form Health Survey (SF-36) Energy/Fatigue Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. Includes 8 multi-item scales with higher score indicating better health state. The Energy/Fatigue Scale includes 4 items. Items are transformed to a score with a range of 0-100.",
+     "populationDescription": "Participants with SF-36 data available",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Inter-Quartile Range",
+     "unitOfMeasure": "Units on a scale",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "265"
+        },
+        {
+         "groupId": "OG001",
+         "value": "262"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "50.0",
+           "lowerLimit": "35.0",
+           "upperLimit": "60.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "50.0",
+           "lowerLimit": "35.0",
+           "upperLimit": "60.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 112 visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "50.0",
+           "lowerLimit": "35.0",
+           "upperLimit": "60.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "45.0",
+           "lowerLimit": "30.0",
+           "upperLimit": "60.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 336 Visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "50.0",
+           "lowerLimit": "35.0",
+           "upperLimit": "60.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "45.0",
+           "lowerLimit": "30.0",
+           "upperLimit": "55.0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Short Form Health Survey (SF-36) Emotional Well-being Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. Includes 8 multi-item scales with higher score indicating better health state. The Emotional Well-being Scale includes 5 items assessing emotional wellbeing. Items are transformed to a score with a range of 0-100.",
+     "populationDescription": "Participants with SF-36 data available",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Inter-Quartile Range",
+     "unitOfMeasure": "Units on a scale",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "265"
+        },
+        {
+         "groupId": "OG001",
+         "value": "262"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "76.0",
+           "lowerLimit": "60.0",
+           "upperLimit": "84.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "72.0",
+           "lowerLimit": "56.0",
+           "upperLimit": "84.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 112 visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "76.0",
+           "lowerLimit": "60.0",
+           "upperLimit": "88.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "72.0",
+           "lowerLimit": "56.0",
+           "upperLimit": "84.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 336 Visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "76.0",
+           "lowerLimit": "60.0",
+           "upperLimit": "88.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "72.0",
+           "lowerLimit": "56.0",
+           "upperLimit": "84.0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Short Form Health Survey (SF-36) Social Functioning Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. Includes 8 multi-item scales with higher score indicating better health state. The Social Functioning Scale includes 2 items assessing extent to which physical health or emotional problems interfere with normal social activities. Items are transformed to a score with a range of 0-100.",
+     "populationDescription": "Participants with SF-36 data available",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Inter-Quartile Range",
+     "unitOfMeasure": "Units on a scale",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "265"
+        },
+        {
+         "groupId": "OG001",
+         "value": "262"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "62.5",
+           "lowerLimit": "50.0",
+           "upperLimit": "87.5"
+          },
+          {
+           "groupId": "OG001",
+           "value": "62.5",
+           "lowerLimit": "50.0",
+           "upperLimit": "87.5"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 112 visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "62.5",
+           "lowerLimit": "50.0",
+           "upperLimit": "87.5"
+          },
+          {
+           "groupId": "OG001",
+           "value": "62.5",
+           "lowerLimit": "50.0",
+           "upperLimit": "87.5"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 336 Visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "75.0",
+           "lowerLimit": "50.0",
+           "upperLimit": "87.5"
+          },
+          {
+           "groupId": "OG001",
+           "value": "62.5",
+           "lowerLimit": "37.5",
+           "upperLimit": "87.5"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Short Form Health Survey (SF-36) Bodily Pain Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. Includes 8 multi-item scales with higher score indicating better health state. The Bodily Pain Scale includes 2 items assessing the intensity of pain and effect of pain on normal work, both inside and outside the house. Items are transformed to a score with a range of 0-100.",
+     "populationDescription": "Participants with SF-36 data available",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Inter-Quartile Range",
+     "unitOfMeasure": "Units on a scale",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "265"
+        },
+        {
+         "groupId": "OG001",
+         "value": "262"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "67.5",
+           "lowerLimit": "45.0",
+           "upperLimit": "90.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "67.5",
+           "lowerLimit": "45.0",
+           "upperLimit": "90.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 112 visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "67.5",
+           "lowerLimit": "45.0",
+           "upperLimit": "90.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "67.5",
+           "lowerLimit": "45.0",
+           "upperLimit": "90.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 336 Visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "57.5",
+           "lowerLimit": "35.0",
+           "upperLimit": "90.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "57.5",
+           "lowerLimit": "42.5",
+           "upperLimit": "87.5"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Short Form Health Survey (SF-36) General Health Scale",
+     "description": "Short Form Health Survey (SF-36) is a generic tool to assess overall health status and allows comparison between different diseases. Includes 8 multi-item scales with higher score indicating better health state. The General Health Scale includes 4 items assessing personal evaluations of health. Items are transformed to a score with a range of 0-100.",
+     "populationDescription": "Participants with SF-36 data available",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Inter-Quartile Range",
+     "unitOfMeasure": "Units on a scale",
+     "timeFrame": "1 year",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Metoprolol Succinate",
+       "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Matched placebo\n\nPlacebo: Matching placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "265"
+        },
+        {
+         "groupId": "OG001",
+         "value": "262"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "40.0",
+           "lowerLimit": "25.0",
+           "upperLimit": "55.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "40.0",
+           "lowerLimit": "25.0",
+           "upperLimit": "55.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 112 visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "40.0",
+           "lowerLimit": "25.0",
+           "upperLimit": "55.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "35.0",
+           "lowerLimit": "25.0",
+           "upperLimit": "55.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 336 Visit",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "40.0",
+           "lowerLimit": "25.0",
+           "upperLimit": "55.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "35.0",
+           "lowerLimit": "25.0",
+           "upperLimit": "50.0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "1 year",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Metoprolol Succinate",
+     "description": "Metoprolol succinate extended release tablets (50 mg) starting dose followed by a dose titration procedure which will result in a final dose of 25mg (1/2 of one tablet daily), 50 mg, or 100 mg (two tablets daily).\n\nMetoprolol succinate: Extended release Metoprolol succinate",
+     "deathsNumAffected": 11,
+     "deathsNumAtRisk": 268,
+     "seriousNumAffected": 86,
+     "seriousNumAtRisk": 268,
+     "otherNumAffected": 162,
+     "otherNumAtRisk": 268
+    },
+    {
+     "id": "EG001",
+     "title": "Placebo",
+     "description": "Matched placebo\n\nPlacebo: Matching placebo",
+     "deathsNumAffected": 5,
+     "deathsNumAtRisk": 264,
+     "seriousNumAffected": 59,
+     "seriousNumAtRisk": 264,
+     "otherNumAffected": 157,
+     "otherNumAtRisk": 264
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Heart failure",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Stroke",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Arrhythmias",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Hypotension",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Other Cardiovascular",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "COPD Exacerbation",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 72,
+       "numAffected": 55,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 47,
+       "numAffected": 32,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 18,
+       "numAffected": 14,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 12,
+       "numAffected": 11,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Other Respiratory",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Gastrointestinal",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 3,
+       "numAffected": 2,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 5,
+       "numAffected": 5,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Musculoskeletal",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Lung Cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Other Cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Infections, non-pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 2,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Head, eyes, ears, nose and throat",
+     "organSystem": "Ear and labyrinth disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Trauma/Falls",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Neurologic, non-stroke",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Psychiatric",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Chest Pain, not otherwise specified",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Endocrine",
+     "organSystem": "Endocrine disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Other",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 264
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "COPD Exacerbation",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 205,
+       "numAffected": 115,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 209,
+       "numAffected": 122,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Shortness of Breath",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 25,
+       "numAffected": 20,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 24,
+       "numAffected": 19,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Acute Sinusitis",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 21,
+       "numAffected": 17,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 12,
+       "numAffected": 10,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Headache",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 21,
+       "numAffected": 18,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 16,
+       "numAffected": 15,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Gastrointestinal symptoms",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 29,
+       "numAffected": 24,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 36,
+       "numAffected": 30,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Dizziness",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 27,
+       "numAffected": 23,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 17,
+       "numAffected": 16,
+       "numAtRisk": 264
+      }
+     ]
+    },
+    {
+     "term": "Respiratory Infections",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "ICD-10",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 34,
+       "numAffected": 30,
+       "numAtRisk": 268
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 30,
+       "numAffected": 23,
+       "numAtRisk": 264
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictiveAgreement": false
+   },
+   "pointOfContact": {
+    "title": "John Connett",
+    "organization": "University of Minnesota",
+    "email": "john-c@umn.edu",
+    "phone": "612-626-9010"
+   }
+  }
+ },
+ "documentSection": {
+  "largeDocumentModule": {
+   "largeDocs": [
+    {
+     "typeAbbrev": "Prot_SAP",
+     "hasProtocol": true,
+     "hasSap": true,
+     "hasIcf": false,
+     "label": "Study Protocol and Statistical Analysis Plan",
+     "date": "2017-12-12",
+     "uploadDate": "2020-08-31T10:21",
+     "filename": "Prot_SAP_000.pdf",
+     "size": 539672
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D012907",
+     "term": "Smoking"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D001519",
+     "term": "Behavior"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D008790",
+     "term": "Metoprolol"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D050198",
+     "term": "Phenoxypropanolamines"
+    },
+    {
+     "id": "D011412",
+     "term": "Propanolamines"
+    },
+    {
+     "id": "D000605",
+     "term": "Amino Alcohols"
+    },
+    {
+     "id": "D000438",
+     "term": "Alcohols"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D020005",
+     "term": "Propanols"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

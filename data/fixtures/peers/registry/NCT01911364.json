@@ -1,0 +1,384 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01911364",
+   "orgStudyIdInfo": {
+    "id": "CCD-1208-PR-0090"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2013-000063-91",
+     "type": "EUDRACT_NUMBER"
+    }
+   ],
+   "organization": {
+    "fullName": "Chiesi Farmaceutici S.p.A.",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Efficacy of Fixed Combination of Beclometasone + Formoterol + Glycopyrrolate in Chronic Obstructive Pulmonary Disease",
+   "officialTitle": "A 52-wk Randomized Double Blind Parallel Trial: Combination of Beclometasone+Formoterol+Glycopyrrolate vs Tiotropium and vs Combination of Beclometasone+Formoterol and Tiotropium in Patients With Chronic Obstructive Pulmonary Disease"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2021-10",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2014-01"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2016-03",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2016-03",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2013-07-26",
+   "studyFirstSubmitQcDate": "2013-07-26",
+   "studyFirstPostDateStruct": {
+    "date": "2013-07-30",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2021-10-28",
+   "lastUpdatePostDateStruct": {
+    "date": "2021-10-29",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Chiesi Farmaceutici S.p.A.",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "The purpose of this study is to determine the triple combination of beclometasone dipropionate+Formoterol fumarate+Glycopyrrolate bromide is effective for the treatment of severe COPD patients (chronic obstructive pulmonary disease)",
+   "detailedDescription": "A 52-WEEK, DOUBLE BLIND, DOUBLE DUMMY, RANDOMIZED, 3-ARM PARALLEL GROUP, ACTIVE CONTROLLED CLINICAL TRIAL OF FIXED COMBINATION OF BECLOMETASONE DIPROPIONATE PLUS FORMOTEROL FUMARATE PLUS GLYCOPYRROLATE BROMIDE ADMINISTERED VIA PMDI (CHF 5993) VERSUS TIOTROPIUM BROMIDE AND VERSUS FIXED COMBINATION OF BECLOMETASONE DIPROPIONATE PLUS FORMOTEROL FUMARATE ADMINISTERED VIA PMDI AND TIOTROPIUM BROMIDE IN PATIENTS WITH CHRONIC OBSTRUCTIVE PULMONARY DISEASE\n\nA total of 8 clinic visits (V0 to V7) will be performed during the study, as follows:\n\n* A pre-screening visit (V0) to obtain the written informed consent from the patient\n* A screening visit (V1) to establish the eligibility of patients, followed by a 2-week open-label run-in under Tiotropium\n* After the randomisation (V2), patients will be assessed after 4, 12, 26, 40 and 52 weeks of treatment (V3 to V7) The assessments performed at visits include routine haematology and blood chemistry, medical history, physical examination, a 12-lead ECG, spirometric parameters, vital signs).\n\nDuring the run-in and the randomised treatment periods, patients use an e-diary to record symptoms, rescue medication use and compliance to the study medications daily.\n\nAEs/SAEs and COPD exacerbations will be monitored."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ],
+   "keywords": [
+    "Frequent exacerbators"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 3686,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "BDP/FF/GB",
+     "type": "EXPERIMENTAL",
+     "description": "CHF 5993 pMDI 100/6/12.5 mcg 2 inhalations b.i.d",
+     "interventionNames": [
+      "Drug: BDP/FF/GB"
+     ]
+    },
+    {
+     "label": "Tiotropium",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Tiotropium bromide 18 mcg",
+     "interventionNames": [
+      "Drug: Tiotropium"
+     ]
+    },
+    {
+     "label": "BDP/FF + Tiotropium",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "BDP/FF pMDI 100/6/12.5 mcg 2 inhalations b.i.d and Tiotropium 18 mcg daily\n\nBDP/FF/GB versus BDP/FF + Tiotropium",
+     "interventionNames": [
+      "Drug: BDP/FF + Tiotropium"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "BDP/FF/GB",
+     "description": "Superiority over Tiotropium",
+     "armGroupLabels": [
+      "BDP/FF/GB"
+     ],
+     "otherNames": [
+      "CHF 5993 pMDI 100/6/12.5 mcg"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Tiotropium",
+     "description": "Superiority of CHF5993 over Tiotropium",
+     "armGroupLabels": [
+      "Tiotropium"
+     ],
+     "otherNames": [
+      "Spiriva 18 mcg 1 capsule o.d"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "BDP/FF + Tiotropium",
+     "description": "non inferiority vs CHF5993",
+     "armGroupLabels": [
+      "BDP/FF + Tiotropium"
+     ],
+     "otherNames": [
+      "Foster 100/6 mcg 2 inhalations bid + Spiriva 18 mcg o.d."
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "COPD exacerbation rate",
+     "description": "Moderate and severe COPD exacerbation rate over 52 weeks of treatment.",
+     "timeFrame": "52 weeks"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "pre-dose morning FEV1",
+     "description": "Change from baseline in pre-dose morning FEV1 at Week 52.",
+     "timeFrame": "52 weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Male and female COPD patients aged ≥ 40 years\n* Current smokers or ex-smokers\n* FEV1\\<50% predicted (FEV1/FVC \\<0,7)\n* at least 1 documented exacerbations in the last 12 Mo\n\nExclusion Criteria:\n\n* Pregnant or lactating women and all women physiologically capable of becoming pregnant\n* Diagnosis of asthma, history of allergic rhinitis or atopy\n* Patients treated for exacerbations 1 Mo prior to screening\n* Patients treated with non-cardioselective β-blockers\n* Patients treated with long-acting antihistamines\n* Known respiratory disorders other than COPD\n* Patients who have clinically significant cardiovascular condition",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Jorgen Vestbo, MD",
+     "affiliation": "Respiratory Research Group, Wythenshawe Hospital, MANCHESTER",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Institut für klinische Forschung",
+     "city": "Hessen",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.01702,
+      "lon": 10.779
+     }
+    },
+    {
+     "facility": "Csongrád Megyei Mellkasi Betegségek Szakkórháza",
+     "city": "Szeged",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 46.253,
+      "lon": 20.14824
+     }
+    },
+    {
+     "facility": "Azienda Ospedaliera Perugia",
+     "city": "Perugia",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 43.1122,
+      "lon": 12.38878
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "30587953",
+     "type": "BACKGROUND",
+     "citation": "Vanfleteren L, Fabbri LM, Papi A, Petruzzelli S, Celli B. Triple therapy (ICS/LABA/LAMA) in COPD: time for a reappraisal. Int J Chron Obstruct Pulmon Dis. 2018 Dec 12;13:3971-3981. doi: 10.2147/COPD.S185975. eCollection 2018."
+    },
+    {
+     "pmid": "30880943",
+     "type": "BACKGROUND",
+     "citation": "Singh D, Fabbri LM, Vezzoli S, Petruzzelli S, Papi A. Extrafine triple therapy delays COPD clinically important deterioration vs ICS/LABA, LAMA, or LABA/LAMA. Int J Chron Obstruct Pulmon Dis. 2019 Feb 28;14:531-546. doi: 10.2147/COPD.S196383. eCollection 2019."
+    },
+    {
+     "pmid": "30792343",
+     "type": "BACKGROUND",
+     "citation": "Singh D, Fabbri LM, Corradi M, Georges G, Guasconi A, Vezzoli S, Petruzzelli S, Papi A. Extrafine triple therapy in patients with symptomatic COPD and history of one moderate exacerbation. Eur Respir J. 2019 May 18;53(5):1900235. doi: 10.1183/13993003.00235-2019. Print 2019 May."
+    },
+    {
+     "pmid": "28385353",
+     "type": "RESULT",
+     "citation": "Vestbo J, Papi A, Corradi M, Blazhko V, Montagna I, Francisco C, Cohuet G, Vezzoli S, Scuri M, Singh D. Single inhaler extrafine triple therapy versus long-acting muscarinic antagonist therapy for chronic obstructive pulmonary disease (TRINITY): a double-blind, parallel group, randomised controlled trial. Lancet. 2017 May 13;389(10082):1919-1929. doi: 10.1016/S0140-6736(17)30188-5. Epub 2017 Apr 3."
+    }
+   ],
+   "seeAlsoLinks": [
+    {
+     "label": "Study Record on EU Clinical Trials Register including results",
+     "url": "https://www.clinicaltrialsregister.eu/ctr-search/trial/2013-000063-91/results"
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "YES",
+   "description": "Chiesi commits to sharing with qualified scientific and medical Researchers, conducting legitimate research, Patient-level Data, Study-level Data, the Clinical Protocol and the full CSR, providing access to clinical trial information consistently with the principle of safeguarding commercially confidential information and patient privacy. Any shared Patient-level Data is anonymized to protect personally identifiable information.\n\nChiesi access criteria and complete process for clinical data sharing is available on the Chiesi Group website.",
+   "accessCriteria": "Chiesi access criteria and complete process for clinical data sharing is available on the Chiesi Group website.",
+   "url": "https://www.chiesi.com/en/chiesi-clinical-trial-data-request-portal/"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16",
+   "submissionTracking": {
+    "estimatedResultsFirstSubmitDate": "2026-09-25",
+    "submissionInfos": [
+     {
+      "releaseDate": "2026-09-25"
+     }
+    ]
+   }
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D000069447",
+     "term": "Tiotropium Bromide"
+    },
+    {
+     "id": "D005581",
+     "term": "Foster Home Care"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D012602",
+     "term": "Scopolamine Derivatives"
+    },
+    {
+     "id": "D014326",
+     "term": "Tropanes"
+    },
+    {
+     "id": "D053961",
+     "term": "Azabicyclo Compounds"
+    },
+    {
+     "id": "D001372",
+     "term": "Aza Compounds"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000470",
+     "term": "Alkaloids"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D019086",
+     "term": "Bridged Bicyclo Compounds, Heterocyclic"
+    },
+    {
+     "id": "D006572",
+     "term": "Heterocyclic Compounds, Bridged-Ring"
+    },
+    {
+     "id": "D005791",
+     "term": "Patient Care"
+    },
+    {
+     "id": "D013812",
+     "term": "Therapeutics"
+    },
+    {
+     "id": "D003153",
+     "term": "Community Health Services"
+    },
+    {
+     "id": "D006296",
+     "term": "Health Services"
+    },
+    {
+     "id": "D005159",
+     "term": "Health Care Facilities Workforce and Services"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

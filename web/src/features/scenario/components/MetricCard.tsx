@@ -1,14 +1,16 @@
+import { useTranslation, translate as t } from "@/app/i18n";
 import type { MetricRange } from "@/app/contracts";
 import { formatRange, formatSignedPct, formatSignedValue, formatValue, splitValue } from "@/app/format";
 import { Skeleton } from "@/app/ui";
-import { delta, isKnownRange, type KnownRange, type MetricDef } from "../metrics";
+import { delta, isKnownRange, metricLabel, metricDescription, type KnownRange, type MetricDef } from "../metrics";
 
 /** Delta vs baseline with sign, arrow and words — never colour alone. */
 export function DeltaText({ current, baseline, testId }: { current: MetricRange; baseline: MetricRange; testId?: string }) {
+  useTranslation();
   if (!isKnownRange(current) || !isKnownRange(baseline)) {
     return (
       <span data-testid={testId} className="text-sm font-medium text-ink-500">
-        Change unknown (a value is missing)
+        {t("Change unknown (a value is missing)", "变化未知（缺少数值）")}
       </span>
     );
   }
@@ -16,7 +18,7 @@ export function DeltaText({ current, baseline, testId }: { current: MetricRange;
   if (d.direction === "same") {
     return (
       <span data-testid={testId} className="inline-flex items-center gap-1 text-sm font-semibold text-ink-500">
-        <span aria-hidden>●</span> No change vs baseline
+        <span aria-hidden>●</span> {t("No change vs baseline", "与基线相比无变化")}
       </span>
     );
   }
@@ -29,7 +31,7 @@ export function DeltaText({ current, baseline, testId }: { current: MetricRange;
       <span aria-hidden>{better ? "▼" : "▲"}</span>
       <span>{formatSignedPct(d.pct)}</span>
       <span className="font-medium">
-        ({formatSignedValue(d.abs, current.unit)}) {better ? "lower" : "higher"} than baseline
+        ({formatSignedValue(d.abs, current.unit)}) {better ? t("lower", "降低") : t("higher", "升高")} {t("than baseline", "（相对于基线）")}
       </span>
     </span>
   );
@@ -37,6 +39,7 @@ export function DeltaText({ current, baseline, testId }: { current: MetricRange;
 
 /** A small P10–P90 bar with the P50 tick; baseline band drawn faintly behind it. */
 function RangeBar({ current, baseline }: { current: KnownRange; baseline: KnownRange | null }) {
+  useTranslation();
   const lo = Math.min(current.p10, baseline?.p10 ?? current.p10);
   const hi = Math.max(current.p90, baseline?.p90 ?? current.p90);
   const span = hi - lo || 1;
@@ -66,16 +69,17 @@ export function MetricCard({
   computing: boolean;
   onOpen: () => void;
 }) {
+  useTranslation();
   const known = isKnownRange(current);
   const big = current && known ? splitValue(current.p50, current.unit) : null;
   return (
     <section className="card relative flex flex-col p-4" aria-labelledby={`metric-${def.key}-label`} data-testid={`metric-${def.key}`}>
       <div className="flex items-start justify-between gap-2">
-        <h3 id={`metric-${def.key}-label`} className="card-title" title={def.description}>
-          {def.label}
+        <h3 id={`metric-${def.key}-label`} className="card-title" title={metricDescription(def.key)}>
+          {metricLabel(def.key)}
         </h3>
         {computing && current && (
-          <span className="h-3 w-3 animate-spin rounded-full border-2 border-ink-200 border-t-accent-700" role="status" aria-label="Recomputing" />
+          <span className="h-3 w-3 animate-spin rounded-full border-2 border-ink-200 border-t-accent-700" role="status" aria-label={t("Recomputing", "重新计算中")} />
         )}
       </div>
       {current && big ? (
@@ -84,14 +88,14 @@ export function MetricCard({
             type="button"
             onClick={onOpen}
             className="num-button -mx-1 mt-1 px-1"
-            aria-label={`${def.label}: median ${formatValue(current.p50, current.unit)}, P10 to P90 ${formatRange(current)}. Show how this is calculated.`}
+            aria-label={t(`${def.label}: median ${formatValue(current.p50, current.unit)}, P10 to P90 ${formatRange(current)}. Show how this is calculated.`, `${metricLabel(def.key)}：中位数 ${formatValue(current.p50, current.unit)}，P10 至 P90 ${formatRange(current)}。查看计算方式。`)}
             data-testid={`metric-${def.key}-value`}
           >
             <span className={`flex items-baseline gap-1.5 whitespace-nowrap text-metric tabular text-ink-900 transition-opacity ${computing ? "opacity-60" : ""}`}>
               {big.num}
               {big.unit && <span className="text-base font-semibold text-ink-500">{big.unit}</span>}
             </span>
-            <span className="mt-1 block text-[11px] font-semibold uppercase tracking-wide text-ink-500">P10–P90 range</span>
+            <span className="mt-1 block text-[11px] font-semibold uppercase tracking-wide text-ink-500">{t("P10–P90 range", "P10–P90 区间")}</span>
             <span className="block whitespace-nowrap text-sm text-ink-700 tabular">{formatRange(current)}</span>
           </button>
           {isKnownRange(current) && <RangeBar current={current} baseline={isKnownRange(baseline) ? baseline : null} />}
@@ -99,13 +103,13 @@ export function MetricCard({
             {baseline ? <DeltaText current={current} baseline={baseline} testId={`metric-${def.key}-delta`} /> : <Skeleton className="h-4 w-40" />}
           </div>
           <button type="button" onClick={onOpen} className="link mt-auto self-start pt-1 text-xs">
-            How is this calculated?
+            {t("How is this calculated?", "如何计算？")}
           </button>
         </>
       ) : current && !known ? (
         <button type="button" onClick={onOpen} className="num-button -mx-1 mt-1 px-1 text-left" data-testid={`metric-${def.key}-value`}>
-          <span className="block text-metric text-ink-500">Unknown</span>
-          <span className="mt-1 block text-sm text-ink-600">An input this metric needs is missing, so it is reported as unknown — not zero. See the warnings.</span>
+          <span className="block text-metric text-ink-500">{t("Unknown", "未知")}</span>
+          <span className="mt-1 block text-sm text-ink-600">{t("An input this metric needs is missing, so it is reported as unknown — not zero. See the warnings.", "缺少此指标所需的输入，因此结果标记为未知，而非零。请查看警告。")}</span>
         </button>
       ) : (
         <div className="mt-2 space-y-2" aria-busy="true">

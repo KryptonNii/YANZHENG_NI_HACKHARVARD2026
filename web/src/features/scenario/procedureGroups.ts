@@ -1,5 +1,6 @@
 import type { Visit } from "@/app/contracts";
 import { humanize } from "@/app/format";
+import { translate } from "@/app/i18n";
 
 /**
  * Group meaning for Procedure.code, copied from data/fixtures/procedure_codes.yaml (version 1).
@@ -53,6 +54,49 @@ export interface ProcedureGroup {
   occurrences: number;
   /** Distinct visit numbers that include this code. */
   visits: number;
+}
+
+/** Localize controlled display labels while preserving imported procedure text and codes. */
+export function procedureMeaning(procedure: Pick<ProcedureGroup, "code" | "meaning">): string {
+  const labels: Record<string, string> = {
+    informed_consent: "知情同意",
+    eligibility_check: "入选／排除标准审核",
+    demographics: "人口学信息",
+    medical_history: "内外科病史",
+    concomitant_meds: "既往及合并用药审核",
+    adverse_events: "不良事件审核",
+    randomization: "随机分组",
+    irt_contact: "IRT／IVRS／IWRS 操作",
+    drug_dispensing: "试验药物发放",
+    imp_administration: "研究中心内试验药物给药",
+    physical_exam: "体格检查",
+    vital_signs: "生命体征",
+    ecg: "十二导联心电图",
+    echocardiogram: "超声心动图",
+    x_ray: "X 光检查",
+    ct_scan: "CT 扫描",
+    mri: "磁共振成像",
+    mammogram: "乳腺 X 线检查",
+    biopsy: "活检",
+    pk_sample: "药代动力学血样",
+    ada_sample: "抗药抗体（免疫原性）样本",
+    urine_sample: "尿样／尿妊娠试验",
+    blood_draw: "安全性实验室采血",
+    biomarker_sample: "探索性生物标志物／遗传样本",
+    sputum_sample: "痰样本",
+    home_spirometry: "居家肺功能检查",
+    spirometry: "肺功能检查",
+    feno: "呼出气一氧化氮（FeNO）",
+    six_minute_walk: "六分钟步行试验",
+    ophthalmic_exam: "眼科检查",
+    visual_acuity: "最佳矫正视力",
+    retinal_imaging: "视网膜成像（OCT／眼底照相／血管造影）",
+    questionnaire: "问卷／患者报告结局／日记审核",
+    telephone_contact: "电话／远程联系",
+  };
+  return procedure.meaning === VOCABULARY_LABELS[procedure.code]
+    ? translate(procedure.meaning, labels[procedure.code] ?? procedure.meaning)
+    : procedure.meaning;
 }
 
 function sentMeaning(procedure: Visit["procedures"][number]): string | null {

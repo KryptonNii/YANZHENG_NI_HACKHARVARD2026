@@ -1,0 +1,620 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT03917914",
+   "orgStudyIdInfo": {
+    "id": "PACE in COPD"
+   },
+   "organization": {
+    "fullName": "The George Institute",
+    "class": "OTHER"
+   },
+   "briefTitle": "Preventing Adverse Cardiac Events in COPD",
+   "officialTitle": "Preventing Adverse Cardiac Events in Chronic Obstructive Pulmonary Disease",
+   "acronym": "PACE in COPD"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2025-05",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2020-06-30",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2025-03-31",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2025-03-31",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2019-04-10",
+   "studyFirstSubmitQcDate": "2019-04-15",
+   "studyFirstPostDateStruct": {
+    "date": "2019-04-17",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2025-05-13",
+   "lastUpdatePostDateStruct": {
+    "date": "2025-05-16",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "The George Institute",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "National Health and Medical Research Council, Australia",
+     "class": "OTHER"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false,
+   "isUsExport": false
+  },
+  "descriptionModule": {
+   "briefSummary": "A double-blind, randomised controlled trial in participants with COPD to assess the efficacy of proactive treatment of cardiac risk in people with COPD. We hypothesise that treating known and undiagnosed CVD in COPD participants will improve both cardiac and respiratory outcomes.",
+   "detailedDescription": "Chronic Obstructive Pulmonary Disease (COPD) is the third leading cause of global health-related morbidity and mortality. Heart disease in COPD is a known but neglected comorbidity and cardiovascular disease (CVD) accounts for 30-50% of deaths in COPD participants. Studies repeatedly show that CVD in COPD participants is under-recognised and under-treated yet participants with COPD are frequently excluded from clinical trials of drugs which reduce cardiac morbidity and mortality. This has led to under-treatment of CVD in COPD participants. A particular concern is low use of β-blockers. These have previously been considered to be contra-indicated in COPD and no RCTs have been conducted in this population. There is now observational evidence that cardioselective β-blockers are safe and may improve mortality, but this data is limited to retrospective analyses of cohorts of COPD participants. Contrary to previous concerns, retrospective analyses also suggest that cardioselective β-blockers may reduce the risk of COPD exacerbations. The proposed study will focus on treating CVD in COPD participants to reduce mortality and morbidity.\n\nThe study will be conducted in 23 sites in Australia, New Zealand, India and Sri Lanka. Participants with COPD will be randomised to one of two treatment arms in addition to receiving usual care for their COPD over the study duration of 24 months."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease",
+    "Cardiovascular Diseases"
+   ],
+   "keywords": [
+    "COPD",
+    "MACE"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "PREVENTION",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 280,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Bisoprolol",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "1.25, 2.5 or 5mg of bisoprolol daily",
+     "interventionNames": [
+      "Drug: Bisoprolol"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "1.25, 2.5 or 5mg of matched placebo daily",
+     "interventionNames": [
+      "Drug: Placebo Oral Tablet"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Bisoprolol",
+     "description": "As in arm description",
+     "armGroupLabels": [
+      "Bisoprolol"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo Oral Tablet",
+     "description": "As in arm description",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "All-cause mortality",
+     "description": "Composite outcome of the following that will be analysed using a win-ratio apprach according to clinical importance",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Hospitalisation for COPD exacerbation",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Hospitalisation for primary cardiac cause (ischaemia, arrhythmia, heart failure or ischaemic stroke)",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Moderate COPD exacerbation - not hospitalised by treated with oral corticosteroids/antibiotics or both",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Cardiac Hospitalisation for cardiac cause other than ischemia, arrythmia or heart failure",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Respiratory hospitalisation for a respiratory cause other than COPD exacerbation",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Decrease in FEV1 or greatest FEV1% drop - largest decrease in FEV1 from post-bronchodiliator spirometry at baseline",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Mild COPD exacerbation - treated with increased inhalers/inhaler technique/addition of theophylline",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Higher SGRQ score (clinically important change >= 4)",
+     "timeFrame": "Baseline to 12 and 24 months"
+    },
+    {
+     "measure": "Higher CAT score (clinically important change >= 2)",
+     "timeFrame": "Baseline to 12 and 24 months"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Time to first moderate-severe COPD Exacerbation",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Severe (hospital admission) COPD exacerbation rate (annualised)",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Number of events of composite (annualised) cardio-respiratory hospital admissions and MACE",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Quality of life assessed by St George's Respiratory Questionnaire (SGRQ)",
+     "description": "The SGRQ is a 50-item questionnaire developed to measure health status (quality of life) in patients with diseases of airways obstruction.\n\nScores are calculated for three domains:\n\nSymptoms, Activity and Impacts (Psycho-social) as well as a total score.\n\nPsychometric testing has demonstrated its repeatability, reliability and validity. Sensitivity has been demonstrated in clinical trials.\n\nA minimum change in score of 4 units was established as clinically relevant after patient and clinician testing. The SGRQ has been used in a range of disease groups including asthma, chronic obstructive pulmonary disease (COPD) and bronchiectasis, and in a range of settings such as randomised controlled therapy trials and population surveys.",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "EuroQoL Group 5-5 Dimension self-report questionnaire (EQ-5D-5L) to assess health state utilities",
+     "description": "EQ-5D-5L consists of 2pg: the EQ-5D descriptive system and the EQ visual analogue scale (EQ VAS).\n\nFive dimensions: mobility, self-care, usual activities, pain/discomfort, anxiety/depression.\n\nEach dimension 5 levels: no problems, slight problems, moderate problems, severe problems, extreme problems.\n\nPatient indicates their health state by ticking most appropriate statement in each of the five dimensions.\n\nThis decision results in a 1-digit number that expresses the level selected for that dimension. The digits for the five dimensions can be combined into a 5-digit number that describes the patient's health state.\n\nEQ VAS records patient's self-rated health on a vertical visual analogue scale. Endpoints are labelled 'The best health you can imagine' and 'The worst health you can imagine'. The VAS can be used as a quantitative measure of health outcome that reflect the patient's own judgement.",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Healthcare utilisation costs and Quality Adjusted Life Years (QALYs) evaluation of the treatment intervention",
+     "description": "Mean differences in healthcare utilisation costs and Quality Adjusted Life Years between both treatment groups will be estimated.\n\nCosts will be ascertained from participants and study records. Health care utilisation will be on the basis of self-reported GP and hospital attendances and changes in concomitant medication. Health state utilities will be estimated via the EQ-5D-5L and will be used to weight survival up to 24 months to determine Quality Adjusted Life Years.",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Health status assessed by COPD Assessment Test (CAT)",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Clinic spirometry: post-bronchodilator FEV1 (Forced Expiratory Volume) (L)",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Clinic spirometry: % predicted post-bronchodilator",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Hospital admissions for all respiratory causes",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Hospital admissions for all cardiac causes",
+     "description": "All cardiac causes includes ischaemia, arrhythmia, heart failure, acute arrhythmia, non-ST-elevation myocardial infarction, urgent revascularisation (stent/angioplasty/coronary artery bypass grafting), and MACE events (includes myocardial infarction, sudden death, cardiac death or a fatal event in system organ classes for cardiac and vascular disorders, and serious and non-serious stroke).",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Total Number of cardiac events: MACE plus acute arrhythmia, Non-ST-elevation myocardial infarction (NSTEMI), urgent revascularisation (stent/angioplasty/Coronary artery bypass grafting [CABGs]) and clinically diagnosed heart failure episodes.",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "Time to a composite outcome (includes any) of: all-case mortality; hospitalisation for COPD exacerbation, hospitalisation for primary cardiac cause (arrytmmia, ischaemia or heart failure) or MACE",
+     "timeFrame": "Baseline to 24 months"
+    },
+    {
+     "measure": "COPD exacerbation rate (annualised)",
+     "timeFrame": "Baseline to 24 months"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\nParticipants will be eligible for this study if they qualify on all of the following:\n\n1. Have provided written informed consent\n2. Have COPD defined by the 2019 Global Initiative for Chronic Obstructive Lung Disease (GOLD) diagnostic criteria\n3. Aged 40-85 years\n4. FEV1 ≥30% and ≤70% predicted post-bronchodilator\n5. FEV1/FVC \\<0.7 post-bronchodilator\n6. Have had a COPD exacerbation in the previous 24 months requiring oral corticosteroid, antibiotics, or both\n7. If taking maintenance OCS, dosage is stable and ≤10mg daily for 4 weeks prior to randomisation\n8. Resting SBP ≥100mmHg\n9. SBP and spirometry criteria must be met after the test dose of bisoprolol of 1.25mg\n10. (New Zealand only) A history of cardiovascular disease, including heart failure, ischaemic heart disease, tachyarrhythmias, and hypertension\n\nExclusion Criteria:\n\nParticipants will be ineligible for the study if they have any of the following:\n\n1. Concurrent therapy with any other β-blocker\n2. Resting HR \\<60bpm\n3. Unstable left HF (i.e. symptomatic and/or necessary change in management in the last 12 weeks, or in clinicians' opinion)\n4. Clinically significant pulmonary hypertension, which in the investigator's opinion would be a contraindication for β-blocker therapy\n5. Severe end-stage peripheral vascular disease\n6. 2nd or 3rd degree heart block\n7. Currently using or have been prescribed LTOT or resting saturated oxygen level \\<90% when stable\n8. Expected survival is less than 12 months, or in the investigator's opinion, the person has such unstable disease (of any type) that maintaining 12 months' participation would be unlikely\n9. Clinical instability since a MACE in the previous 12 weeks\n10. Lower respiratory tract infection or AECOPD within the last 8 weeks\n11. COPD not clinically stable as determined by the investigator\n12. In the clinician's view, have asthma-COPD overlap or co-existent asthma are present; or an improvement in FEV1 ≥400mL post-bronchodilator is observed on two occasions\n13. Females of child-bearing age and capability who are pregnant or breastfeeding or those in this group not using adequate birth control\n14. Coexistent illness which precludes participation in the study (poorly controlled diabetes, active malignancy)\n15. Severe end-stage liver disease defined by INR\\>1.3 and albumin\\<30g/L or portal hypertension/ascites\n16. High chance in the view of the treating physician that the potential participant will not adhere to study requirements",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "85 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Prof Christine Jenkins",
+     "affiliation": "The George Institute",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Campbelltown Hospital",
+     "city": "Campbelltown",
+     "state": "New South Wales",
+     "zip": "2560",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -34.06667,
+      "lon": 150.81667
+     }
+    },
+    {
+     "facility": "Liverpool Hospital",
+     "city": "Liverpool",
+     "state": "New South Wales",
+     "zip": "2170",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -33.91938,
+      "lon": 150.92588
+     }
+    },
+    {
+     "facility": "John Hunter Hospital & Hunter Medical Research Institute",
+     "city": "Newcastle",
+     "state": "New South Wales",
+     "zip": "2305",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -32.92953,
+      "lon": 151.7801
+     }
+    },
+    {
+     "facility": "Concord Repatriation General Hospital",
+     "city": "Sydney",
+     "state": "New South Wales",
+     "zip": "2139",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -33.86785,
+      "lon": 151.20732
+     }
+    },
+    {
+     "facility": "Westmead Hospital",
+     "city": "Sydney",
+     "state": "New South Wales",
+     "zip": "2145",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -33.86785,
+      "lon": 151.20732
+     }
+    },
+    {
+     "facility": "Prince Charles Hospital",
+     "city": "Brisbane",
+     "state": "Queensland",
+     "zip": "4032",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -27.46794,
+      "lon": 153.02809
+     }
+    },
+    {
+     "facility": "Princess Alexandra Hospital",
+     "city": "Brisbane",
+     "state": "Queensland",
+     "zip": "4102",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -27.46794,
+      "lon": 153.02809
+     }
+    },
+    {
+     "facility": "Gold Coast University Hospital",
+     "city": "Southport",
+     "state": "Queensland",
+     "zip": "4215",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -27.96724,
+      "lon": 153.39796
+     }
+    },
+    {
+     "facility": "Fiona Stanley Hospital",
+     "city": "Murdoch",
+     "state": "Washington",
+     "zip": "6150",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -32.06987,
+      "lon": 115.83757
+     }
+    },
+    {
+     "facility": "TrialsWest Pty Ltd",
+     "city": "Perth",
+     "state": "Washington",
+     "zip": "6000",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -31.95224,
+      "lon": 115.8614
+     }
+    },
+    {
+     "facility": "Institute for Respiratory Health",
+     "city": "Perth",
+     "state": "Washington",
+     "zip": "6009",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -31.95224,
+      "lon": 115.8614
+     }
+    },
+    {
+     "facility": "Pandit Bhagwat Dayal Sharma Post Graduate Institute of Medical Sciences",
+     "city": "Rohtak",
+     "state": "Haryana",
+     "country": "India",
+     "geoPoint": {
+      "lat": 28.89447,
+      "lon": 76.58917
+     }
+    },
+    {
+     "facility": "St John's Medical College Hospital",
+     "city": "Bangalore",
+     "country": "India",
+     "geoPoint": {
+      "lat": 12.97194,
+      "lon": 77.59369
+     }
+    },
+    {
+     "facility": "Postgraduate Institute of Medical Education and Research",
+     "city": "Chandigarh",
+     "country": "India",
+     "geoPoint": {
+      "lat": 30.73629,
+      "lon": 76.7884
+     }
+    },
+    {
+     "facility": "All India Institute of Medical Sciences",
+     "city": "New Delhi",
+     "country": "India",
+     "geoPoint": {
+      "lat": 28.62137,
+      "lon": 77.2148
+     }
+    },
+    {
+     "facility": "Middlemore Hospital",
+     "city": "Auckland",
+     "zip": "2025",
+     "country": "New Zealand",
+     "geoPoint": {
+      "lat": -36.84853,
+      "lon": 174.76349
+     }
+    },
+    {
+     "facility": "University of Otago",
+     "city": "Christchurch",
+     "zip": "8011",
+     "country": "New Zealand",
+     "geoPoint": {
+      "lat": -43.53333,
+      "lon": 172.63333
+     }
+    },
+    {
+     "facility": "Dunedin Hospital",
+     "city": "Dunedin",
+     "zip": "9054",
+     "country": "New Zealand",
+     "geoPoint": {
+      "lat": -45.87416,
+      "lon": 170.50361
+     }
+    },
+    {
+     "facility": "Waikato Hospital",
+     "city": "Hamilton",
+     "zip": "3240",
+     "country": "New Zealand",
+     "geoPoint": {
+      "lat": -37.78333,
+      "lon": 175.28333
+     }
+    },
+    {
+     "facility": "Medical Research Institute of New Zealand",
+     "city": "Wellington",
+     "zip": "6021",
+     "country": "New Zealand",
+     "geoPoint": {
+      "lat": -41.28664,
+      "lon": 174.77557
+     }
+    },
+    {
+     "facility": "Central Chest Clinic - Borella",
+     "city": "Colombo",
+     "country": "Sri Lanka",
+     "geoPoint": {
+      "lat": 6.93548,
+      "lon": 79.84868
+     }
+    },
+    {
+     "facility": "Central Chest Clinic",
+     "city": "Colombo",
+     "country": "Sri Lanka",
+     "geoPoint": {
+      "lat": 6.93548,
+      "lon": 79.84868
+     }
+    },
+    {
+     "facility": "Kandy National Hospital",
+     "city": "Kandy",
+     "country": "Sri Lanka",
+     "geoPoint": {
+      "lat": 7.2906,
+      "lon": 80.6336
+     }
+    },
+    {
+     "facility": "National Institute of Respiratory Diseases",
+     "city": "Welisara",
+     "country": "Sri Lanka",
+     "geoPoint": {
+      "lat": 7.0281,
+      "lon": 79.9014
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "41579873",
+     "type": "DERIVED",
+     "citation": "Jenkins CR, Martin A, Chang CL, Beasley R, Wrobel JP, McDonald VM, Dobler CC, Yang IA, Farah CS, Cochrane B, Hillis GS, Polak Scowcroft C, Ranasinha CD, De Silva HA, Aggarwal AN, Billot L, Devaux A, Gianacas C, Galgey S, Hancox RJ; PACE investigators. Bisoprolol to prevent adverse cardiac events (PACE) in COPD: a multicentre, double-blind, randomised, controlled, phase 3 trial. Lancet Respir Med. 2026 Mar;14(3):203-214. doi: 10.1016/S2213-2600(25)00390-X. Epub 2026 Jan 21."
+    },
+    {
+     "pmid": "34452971",
+     "type": "DERIVED",
+     "citation": "Martin A, Hancox RJ, Chang CL, Beasley R, Wrobel J, McDonald V, Dobler CC, Yang IA, Farah CS, Cochrane B, Hillis GS, Scowcroft CP, Aggarwal A, Di Tanna GL, Balicki G, Galgey S, Jenkins C. Preventing adverse cardiac events (PACE) in chronic obstructive pulmonary disease (COPD): study protocol for a double-blind, placebo controlled, randomised controlled trial of bisoprolol in COPD. BMJ Open. 2021 Aug 27;11(8):e053446. doi: 10.1136/bmjopen-2021-053446."
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D002318",
+     "term": "Cardiovascular Diseases"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D017298",
+     "term": "Bisoprolol"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D050198",
+     "term": "Phenoxypropanolamines"
+    },
+    {
+     "id": "D011412",
+     "term": "Propanolamines"
+    },
+    {
+     "id": "D000605",
+     "term": "Amino Alcohols"
+    },
+    {
+     "id": "D000438",
+     "term": "Alcohols"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D020005",
+     "term": "Propanols"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

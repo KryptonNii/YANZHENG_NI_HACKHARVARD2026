@@ -1,0 +1,291 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT07793409",
+   "orgStudyIdInfo": {
+    "id": "LTS18211"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2026-525981-22",
+     "type": "REGISTRY",
+     "domain": "CTIS"
+    },
+    {
+     "id": "U1111-1333-2485",
+     "type": "REGISTRY",
+     "domain": "ICTRP"
+    }
+   ],
+   "organization": {
+    "fullName": "Sanofi",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "A Study to Evaluate the Long-term Safety and Efficacy of Lunsekimig in Adult Participants With Chronic Obstructive Pulmonary Disease (COPD)",
+   "officialTitle": "An Extension Study to Evaluate the Long-term Safety and Efficacy of Lunsekimig, Including Inhaled Corticosteroid Withdrawal, in Adults With Chronic Obstructive Pulmonary Disease (COPD) Who Completed Studies EFC18243 or EFC18244",
+   "acronym": "COLOSSUS"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-09",
+   "overallStatus": "RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2026-09-16",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2031-07-23",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2031-07-23",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2026-08-25",
+   "studyFirstSubmitQcDate": "2026-08-25",
+   "studyFirstPostDateStruct": {
+    "date": "2026-08-28",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-09-18",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-09-21",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Sanofi",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "This is an open-label, Phase 3, long-term safety extension study including participants of previous lunsekimig clinical trials with inadequately controlled chronic obstructive pulmonary disease (COPD ) characterized by an eosinophilic phenotype.\n\nThe purpose of the LTS 18211 study is to characterize the long-term safety and efficacy of lunsekimig in adults with COPD who completed studies EFC18243 or EFC18244 in the main study, and to assess the impact of inhaled corticosteroids (ICS ) withdrawal in the ICS withdrawal sub-study.\n\nThe study duration will be up to 100 weeks, including the following components:\n\n* Baseline Visit (Visit 1 / Week 0) will coincide with the End-of-Intervention visit from the parent study (EFC18243 or EFC18244) if possible\n* Treatment duration of up to 96 weeks\n* Safety follow-up period of approximately 4 weeks\n* The number of visits will be 26"
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "NONE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 1508,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Lunsekimig core study",
+     "type": "EXPERIMENTAL",
+     "description": "Subcutaneous (SC) administration of lunsekimig for up to 96 weeks, with the same inhaled controller medication as in the parent study (LABA + LAMA + ICS or LABA + LAMA)",
+     "interventionNames": [
+      "Drug: Lunsekimig"
+     ]
+    },
+    {
+     "label": "Lunsekimig sub-study with ICS maintenance",
+     "type": "EXPERIMENTAL",
+     "description": "ICS withdrawal sub-study: SC administration of lunsekimig for up to 96 weeks, with the inhaled controller medication LABA + LAMA + ICS in the run-in period followed by randomization to maintain the same inhaled regimen",
+     "interventionNames": [
+      "Drug: Lunsekimig"
+     ]
+    },
+    {
+     "label": "Lunsekimig sub-study with ICS withdrawal",
+     "type": "EXPERIMENTAL",
+     "description": "ICS withdrawal sub-study: SC administration of lunsekimig for up to 96 weeks, with the inhaled controller medication LABA + LAMA + ICS in the run-in period followed by randomization to withdraw ICS",
+     "interventionNames": [
+      "Drug: Lunsekimig"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Lunsekimig",
+     "description": "* Pharmaceutical form: Solution for injection in prefilled syringe\n* Route of administration: Subcutaneous injection",
+     "armGroupLabels": [
+      "Lunsekimig core study",
+      "Lunsekimig sub-study with ICS maintenance",
+      "Lunsekimig sub-study with ICS withdrawal"
+     ],
+     "otherNames": [
+      "SAR443765"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Exposure-adjusted incidence rate of treatment-emergent adverse events (TEAE), including adverse events of special interest (AESI ) and serious adverse events (SAE)",
+     "description": "Exposure-adjusted incidence rate is defined as the number of patients with at least one specific treatment emergent adverse event in question per 100 patients taking the treatment for 1 year.",
+     "timeFrame": "Study baseline to Week 100"
+    },
+    {
+     "measure": "ICS withdrawal sub-study: Change from Week 12 (end of run-in period) to Week 36 in pre-Bronchodilator Forced Expiratory Volume in 1 second (pre-BD FEV1)",
+     "timeFrame": "From Week 12 to Week 36"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Annualized rate of moderate-to-severe COPD exacerbations",
+     "timeFrame": "Study baseline to Week 96"
+    },
+    {
+     "measure": "Change from parent study baseline in post-Bronchodilator Forced Expiratory Volume in 1 second (post-BD FEV1)",
+     "timeFrame": "Parent study baseline to Weeks 48 and 96"
+    },
+    {
+     "measure": "Change from parent study baseline in pre-BD FEV1",
+     "timeFrame": "Parent study baseline to Weeks 48 and 96"
+    },
+    {
+     "measure": "Change from parent study baseline in SGRQ-C total score",
+     "description": "The St. George's Respiratory Questionnaire (SGRQ) is a patient reported outcome measure designed to measure and quantify health status in adult patients with chronic airflow limitation. The SGRQ-C is a shorter (40 items) version derived from the original version using COPD data only. A global score ranges from 0 to 100 with lower scores indicating better quality-of-life.",
+     "timeFrame": "Parent study baseline to Weeks 48 and 96"
+    },
+    {
+     "measure": "ICS withdrawal sub-study: Time to first moderate or severe AECOPD",
+     "description": "AECOPD: acute exacerbation of chronic obstructive pulmonary disease",
+     "timeFrame": "From Week 12 to Week 96"
+    },
+    {
+     "measure": "ICS withdrawal sub-study: Change from Week 12 to Week 36 in SGRQ-C total score",
+     "description": "The St. George's Respiratory Questionnaire (SGRQ) is a patient reported outcome measure designed to measure and quantify health status in adult patients with chronic airflow limitation. The SGRQ-C is a shorter (40 items) version derived from the original version using COPD data only. A global score ranges from 0 to 100 with lower scores indicating better quality-of-life.",
+     "timeFrame": "From Week 12 to Week 36"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Participants who completed the treatment period of EFC18243 or EFC18244 studies, including EOI visit\n* Contraception for male and female participants during the study intervention period and during 8 weeks following the last administration of study intervention. And:\n\n  * Female participants: not pregnant or breastfeeding, and one of the following conditions applies:\n\n    * Is not a women of childbearing potential (WOCBP), OR\n    * Is a WOCBP and agrees to follow the contraceptive guidance. The WOCBP should also agree not to donate or cryopreserve eggs (ova, oocytes) for the purpose of reproduction.\n  * Male participants: No sperm donation or cryopreserving sperm\n\nICS-withdrawal sub-study only:\n\n* Participants receiving triple controller therapy (LABA+LAMA+ICS)\n* Participants who were compliant with lunsekimig\n* ≤ 1 moderate exacerbation and no severe exacerbation of COPD during the parent study\n* No exacerbation during the run-in period\n\nExclusion Criteria:\n\nThe exclusion criteria are identical for LTS18211 and ICS withdrawal sub-study:\n\n* Participant who developed a new medical condition or a change in status of an established medical condition or requires a new treatment or medication prior to enrollment that, per Investigator's medical judgement, would adversely affect participation of the participant in this study or would require permanent lunsekimig discontinuation, or participant potentially at risk of noncompliance to study procedures\n* Prescription drug or substance abuse, including alcohol, considered significant by the Investigator\n* History of hypersensitivity or allergy to lunsekimig or to any of the excipients used in the presentation or in preparation for administration of lunsekimig, or other allergy that, in the opinion of the Investigator, contraindicates participation in the study\n* Participants who are receiving prohibited concomitant medications at LTS18211 baseline\n* Participants who, during their participation in the parent study, developed an AE or an SAE deemed related to lunsekimig, and for whom continuation of treatment with lunsekimig may present an unreasonable risk\n\nThe above information is not intended to contain all considerations relevant to a participant's potential participation in a clinical trial.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Trial Transparency email recommended (Toll free for US & Canada)",
+     "role": "CONTACT",
+     "phone": "800-633-1610",
+     "phoneExt": "option 6",
+     "email": "Contact-US@sanofi.com"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Newport Native MD- Site Number : 8403003",
+     "status": "RECRUITING",
+     "city": "Newport Beach",
+     "state": "California",
+     "zip": "92663",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.61891,
+      "lon": -117.92895
+     }
+    },
+    {
+     "facility": "Helix Biomedics- Site Number : 8403065",
+     "status": "RECRUITING",
+     "city": "Boynton Beach",
+     "state": "Florida",
+     "zip": "33435",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.52535,
+      "lon": -80.06643
+     }
+    },
+    {
+     "facility": "Investigational Site Number : 8264017",
+     "status": "RECRUITING",
+     "city": "Rotherham",
+     "zip": "S61 1AH",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.43012,
+      "lon": -1.35678
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "YES",
+   "description": "Qualified researchers may request access to patient level data and related study documents including the clinical study report, study protocol with any amendments, blank case report form, statistical analysis plan, and dataset specifications. Patient level data will be anonymized and study documents will be redacted to protect the privacy of trial participants. Further details on Sanofi's data sharing criteria, eligible studies, and process for requesting access can be found at: https://vivli.org"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

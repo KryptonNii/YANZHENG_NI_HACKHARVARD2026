@@ -1,3 +1,5 @@
+import { displayText } from "./displayText";
+import { useTranslation } from "@/app/i18n";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import type { Alert, Intervention, OpsEvent, ProvenanceItem } from "@/app/contracts";
@@ -22,6 +24,7 @@ import { AlertsPanel } from "./AlertsPanel";
 import { EventTicker } from "./EventTicker";
 import { Drilldown, HealthBoard, ProvenanceDrawer } from "./HealthBoard";
 import { InterventionsPanel } from "./InterventionsPanel";
+import { LockRecoveryStory } from "./LockRecoveryStory";
 
 interface Snapshot {
   health: HealthSnapshot;
@@ -36,6 +39,7 @@ function isOpsEvent(data: unknown): data is OpsEvent {
 }
 
 export default function CommandPage() {
+  const t = useTranslation();
   const { trialId = DEMO_TRIAL_ID } = useParams();
   const me = useIdentity();
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
@@ -157,7 +161,7 @@ export default function CommandPage() {
       <header className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <div className="flex flex-wrap items-center gap-2">
-            <h1 className="text-2xl font-semibold tracking-tight text-ink-900">{title}</h1>
+            <h1 className="text-2xl font-semibold tracking-tight text-ink-900">{displayText(title)}</h1>
             <span data-testid="simulated-badge">
               <SimulatedBadge />
             </span>
@@ -165,50 +169,52 @@ export default function CommandPage() {
           <p className="mt-1 text-sm text-ink-500" data-testid="sim-clock">
             {clock ? (
               <>
-                Simulated clock {formatUtc(clock.now)} · day {Math.round(clock.clock_day)}
+                {t("Simulated clock", "模拟时钟")} {formatUtc(clock.now)} {t("· day", "· 天")} {Math.round(clock.clock_day)}
                 {clock.scenario ? ` · ${clock.scenario}` : ""}
               </>
             ) : (
-              "Simulated clock not started"
+              t("Simulated clock not started", "模拟时钟尚未启动")
             )}
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <button type="button" className="btn-secondary" data-testid="start-simulation" disabled={busy !== null} onClick={() => void start()}>
-            {busy === "start" ? "Starting…" : running ? "Restart simulation" : "Start simulation"}
+            {busy === "start" ? t("Starting…", "正在启动…") : running ? t("Restart simulation", "重新启动模拟") : t("Start simulation", "启动模拟")}
           </button>
           <button type="button" className="btn-secondary" data-testid="advance-1-week" disabled={!running || busy !== null} onClick={() => void advance(7)}>
-            Advance 1 week
+            {t("Advance 1 week", "推进 1 周")}
           </button>
           <button type="button" className="btn-primary" data-testid="advance-6-weeks" disabled={!running || busy !== null} onClick={() => void advance(42)}>
-            Advance 6 weeks
+            {t("Advance 6 weeks", "推进 6 周")}
           </button>
         </div>
       </header>
 
+      {trialId === DEMO_TRIAL_ID && <LockRecoveryStory key={trialId} />}
+
       {message && (
-        <ErrorPanel title="The command center couldn't complete that" message={message} onRetry={() => void refresh()} />
+        <ErrorPanel title={t("The command center couldn't complete that", "指挥中心未能完成此操作")} message={message} onRetry={() => void refresh()} />
       )}
 
-      {phase === "loading" && <Spinner label="Loading the simulated feed" />}
+      {phase === "loading" && <Spinner label={t("Loading the simulated feed", "正在加载模拟数据流")} />}
 
       {phase === "idle" && (
         <EmptyState
-          title="The simulated feed is not running"
+          title={t("The simulated feed is not running", "模拟数据流尚未运行")}
           action={
             trialId !== DEMO_TRIAL_ID ? (
               <Link className="btn-secondary" to={`/command/${DEMO_TRIAL_ID}`}>
-                Open the 40-site demo
+                {t("Open the 40-site demo", "打开 40 个中心的演示")}
               </Link>
             ) : undefined
           }
         >
-          Start the simulation to stream a labelled feed from EDC, CTMS, IRT, travel, courier, finance and vendor systems.
-          {trialId !== DEMO_TRIAL_ID && " This trial id has no stored design yet — the 40-site demo does."}
+          {t("Start the simulation to stream a labelled feed from EDC, CTMS, IRT, travel, courier, finance and vendor systems.", "启动模拟，接收来自 EDC、CTMS、IRT、差旅、快递、财务及供应商系统的标记数据流。")}
+          {trialId !== DEMO_TRIAL_ID && t(" This trial id has no stored design yet — the 40-site demo does.", " 此试验 ID 尚无已保存的设计，40 个中心的演示已提供设计。")}
         </EmptyState>
       )}
 
-      {phase === "error" && !snapshot && !message && <ErrorPanel title="Couldn't load the command center" onRetry={() => void refresh()} />}
+      {phase === "error" && !snapshot && !message && <ErrorPanel title={t("Couldn't load the command center", "无法加载指挥中心")} onRetry={() => void refresh()} />}
 
       {snapshot && (
         <>
@@ -220,10 +226,10 @@ export default function CommandPage() {
           <InterventionsPanel trialId={trialId} interventions={snapshot.interventions} effects={snapshot.effects} onChanged={load} />
           {(snapshot.health.plan_notes ?? []).length > 0 && (
             <details className="text-sm text-ink-600">
-              <summary className="cursor-pointer font-semibold">Plan notes</summary>
+              <summary className="cursor-pointer font-semibold">{t("Plan notes", "方案说明")}</summary>
               <ul className="mt-2 list-disc space-y-1 pl-5">
                 {snapshot.health.plan_notes?.map((note) => (
-                  <li key={note}>{note}</li>
+                  <li key={note}>{displayText(note)}</li>
                 ))}
               </ul>
             </details>

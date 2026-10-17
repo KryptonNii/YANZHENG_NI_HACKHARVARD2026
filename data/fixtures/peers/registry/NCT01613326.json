@@ -1,0 +1,4093 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01613326",
+   "orgStudyIdInfo": {
+    "id": "CNVA237A2314"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2011-000960-93",
+     "type": "EUDRACT_NUMBER"
+    }
+   ],
+   "organization": {
+    "fullName": "Novartis",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Efficacy, Safety, and Tolerability of NVA237 Compared to Tiotropium in Patients With Chronic Obstructive Pulmonary Disease (COPD)",
+   "officialTitle": "A 12-week Treatment, Randomized, Blinded, Double-dummy, Parallel-group Study to Assess the Efficacy, Safety, and Tolerability of NVA237 (50 µg o.d.) Compared to Tiotropium (18 µg o.d.) in Patients With Chronic Obstructive Pulmonary Disease (COPD)",
+   "acronym": "GLOW5"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2014-04",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2012-06"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2013-01",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2013-01",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2012-02-17",
+   "studyFirstSubmitQcDate": "2012-06-06",
+   "studyFirstPostDateStruct": {
+    "date": "2012-06-07",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2014-01-10",
+   "resultsFirstSubmitQcDate": "2014-04-22",
+   "resultsFirstPostDateStruct": {
+    "date": "2014-04-23",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2014-04-22",
+   "lastUpdatePostDateStruct": {
+    "date": "2014-04-23",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Novartis Pharmaceuticals",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false
+  },
+  "descriptionModule": {
+   "briefSummary": "This study compared the efficacy and safety of NVA237 with tiotropium in patients with moderate to severe COPD. Tiotropium belongs to the same drug class as NVA237.",
+   "detailedDescription": "This was a randomized, blinded, double-dummy, parallel-group 12-week study to assess the efficacy, safety, and tolerability of NVA237 (50 μg o.d.) compared to tiotropium (18 μg o.d.) in patients with chronic obstructive pulmonary disease (COPD)."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ],
+   "keywords": [
+    "COPD"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 657,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "NVA237",
+     "type": "EXPERIMENTAL",
+     "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication.",
+     "interventionNames": [
+      "Drug: NVA237",
+      "Drug: Placebo to tiotropium",
+      "Drug: salbutamol/albuterol"
+     ]
+    },
+    {
+     "label": "Tiotropium",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication.",
+     "interventionNames": [
+      "Drug: Tiotropium",
+      "Drug: Placebo to NVA237"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "NVA237",
+     "description": "NVA237 50 μg inhalation capsules once a day, delivered via SDDPI",
+     "armGroupLabels": [
+      "NVA237"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Tiotropium",
+     "description": "Tiotropium 18 μg once a day delivered via HandiHaler® device",
+     "armGroupLabels": [
+      "Tiotropium"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo to tiotropium",
+     "description": "Placebo to tiotropium 18 μg o.d. once a day delivered via HandiHaler® device.",
+     "armGroupLabels": [
+      "NVA237"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo to NVA237",
+     "description": "Placebo to NVA237 50 μg once a day delivered via SDDPI",
+     "armGroupLabels": [
+      "Tiotropium"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "salbutamol/albuterol",
+     "description": "salbutamol/albuterol given as a rescue medication via inhaler when needed",
+     "armGroupLabels": [
+      "NVA237"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Trough Forced Expiratory Volume in 1 Second (FEV1) After 12 Weeks of Treatment (Non-inferiority Analysis)",
+     "description": "Forced Expiratory Volume in 1 second (FEV1) is the amount of air which can be forcibly exhaled from the lungs in the first second of a forced exhalation, measured through spirometry testing. The trough in FEV1 was defined as the mean of two measurements at 23hours 15min and 23 hours 45min post dosing. ANCOVA model: Trough FEV1 = treatment + baseline FEV1 + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center (region). This analysis excluded values within 6 hours of rescue medication use or 7 days of systemic corticosteroid use.",
+     "timeFrame": "Week 12"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Trough Forced Expiratory Volume in 1 Second (FEV1) After 12 Weeks of Treatment (Analysis of Superiority)",
+     "description": "FEV1 is the amount of air which can be forcibly exhaled from the lungs in the first second of a forced exhalation, measured through spirometry testing. The trough in FEV1 was defined as the mean of two measurements at 23h 15min and 23h 45min post dosing. ANCOVA model: Trough FEV1 = treatment + baseline FEV1 + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center(region). This analysis excluded values within 6 hours of rescue medication use or 7 days of systemic corticosteroid.",
+     "timeFrame": "Week 12"
+    },
+    {
+     "measure": "Transition Dyspnea Index (TDI) Focal Score After 4 Weeks and 12 Weeks of Treatment",
+     "description": "Transition Dyspnea Index (TDI) captures changes from baseline. The TDI score is based on three domains with each domain scored from -3 (major deterioration) to +3 (major improvement), to give an overall score of -9 to +9, a negative score indicating a deterioration from baseline. A TDI focal score of 1 is considered to be a clinically significant improvement from baseline.\n\nANCOVA model: TDI focal score = treatment + Baseline dyspnea index (BDI) + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center(region). Center is included as a random effect nested within region.",
+     "timeFrame": "Weeks 4 and 12"
+    },
+    {
+     "measure": "St. George's Respiratory Questionnaire Total Score After 12 Weeks of Treatment",
+     "description": "St. George's Respiratory Questionnaire (SGRQ) is a health related quality of life questionnaire consisting of 51 items in three areas: symptoms (respiratory symptoms and severity), activity (activities that cause or are limited by breathlessness) and impacts (social functioning and psychological disturbances due to airway disease). The total score is 0 to 100 with a higher score indicating poorer health status. ANCOVA model: SGRQ total score = treatment + baseline SGRQ score + baseline ICS use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center (region).",
+     "timeFrame": "Week 12"
+    },
+    {
+     "measure": "Change From Baseline in Mean Daily Number of Puffs of Rescue Medication Used Over the 12 Week Treatment",
+     "description": "A day with no rescue medication use is defined from the diary data as any day where the patient recorded no rescue medicine use during the previous 12 hours.\n\nBaseline mean daily, daytime and nighttime (combined) number of puffs is defined as the average of the respective number of puffs. Only patients with a value at both baseline and post-baseline visits were included.",
+     "timeFrame": "Baseline and Day 1 to Week 12"
+    },
+    {
+     "measure": "Trough Forced Expiratory Volume in 1 Second (FEV1) at Day 1 and Week 4",
+     "description": "FEV1 is the amount of air which can be forcibly exhaled from the lungs in the first second of a forced exhalation, measured through spirometry testing.\n\nTrough FEV1 is defined as the average of the post-dose 23 h 15 min and the 23 h 45 min FEV1 values. Trough assessments taken outside 22 h 45 min - 24 h 15 min are excluded from this analysis.\n\nANCOVA model: Trough FEV1 = treatment + baseline FEV1 + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center(region). Center is included as a random effect nested within region.",
+     "timeFrame": "Day 1 and Week 4"
+    },
+    {
+     "measure": "Peak Forced Expiratory Volume in 1 Second (FEV1) During 5 Min to 4 Hours Post-dose, at Day 1 and Week 12",
+     "description": "Spirometry was conducted according to internationally accepted standards. Peak FEV1 is the maximum FEV1 recorded during first 4 hours post dose. ANCOVA model: Peak FEV1 = treatment + baseline FEV1 + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center (region). Center is included as a random effect nested within region. This analysis excludes values within 6 hours of rescue medication use or 7 days of systemic corticosteroid use.",
+     "timeFrame": "5 min to 4 hours post-dose at Day 1 and Week 12"
+    },
+    {
+     "measure": "Inspiratory Capacity (IC) at Each Time-point, by Visit",
+     "description": "IC was measured with spirometry conducted according to internationally accepted standards. ANCOVA model: IC = treatment + baseline IC + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center(region). Center is included as a random effect nested within region.",
+     "timeFrame": "(25 min, 1 h 55 min, 3 h 55 min, 23 h 40 min Day 1), (-20 min, 25 min, 23 h 40 min Week 4),(-20 min, 25 min, 1 h 55 min, 3 h 55 min, 23 h 40 min Week 12)"
+    },
+    {
+     "measure": "Forced Expiratory Volume in 1 Second (FEV1) at Each Time-point by Visit",
+     "description": "Forced Expiratory Volume in 1 second (FEV1) is the amount of air which can be forcibly exhaled from the lungs in the first second of a forced exhalation. FEV1 was analyzed using Analysis of Covariance (ANCOVA) model: FEV1 = treatment + baseline FEV1 + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center(region). Center is included as a random effect nested within region.",
+     "timeFrame": "(5,15,30 min, 1, 2,3,4 h, 23h 15 min and 23h 45 min postdose of Day 1), (-45, -15 min predose, 5,15,30 min, 1h, 23h 15 min and 23h 45 min postdose of Week 4), (-45, -15 min predose, 5,15,30 min, 1, 2, 3,4 h, 23h 15 min and 23h 45 min postdose of Week 12)"
+    },
+    {
+     "measure": "Forced Vital Capacity (FVC) at Each Time-point by Visit",
+     "description": "Forced Vital Capacity (FVC) is the amount of air which can be forcibly exhaled from the lungs after taking the deepest breath possible. FVC was assessed via spirometry. ANCOVA model: FVC = treatment + baseline FVC + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center(region). Center is included as a random effect nested within region.",
+     "timeFrame": "(5,15,30 min, 1, 2,3,4 h, 23h 15 min and 23h 45 min postdose of Day 1), (-45, -15 min predose, 5,15,30 min, 1h, 23h 15 min and 23h 45 min postdose of Week 4), (-45, -15 min predose, 5,15,30 min, 1, 2, 3,4 h, 23h 15 min and 23h 45 min postdose of Week 12)"
+    },
+    {
+     "measure": "Standardized Forced Expiratory Volume in One Second (FEV1) Area Under the Curve (AUC) (5 Min-4 h) Post-dose",
+     "description": "Forced Expiratory Volume in one second (FEV1) was measured with spirometry conducted according to internationally accepted standards.\n\nArea Under the Curve (AUC) is calculated using the trapezoidal rule using the existing FEV1 measurements (i.e., the missing FEV1 measurements are not interpolated).\n\nANCOVA model: FEV1 AUC = treatment + baseline FEV1 + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center(region). Center is included as a random effect nested within region.",
+     "timeFrame": "Day 1 and week 12"
+    },
+    {
+     "measure": "Event Free Rate at Weeks 4, 8 and 12 After Treatment",
+     "description": "Event free rate was calculated as a percentage of participants who did not experience any moderate or severe COPD exacerbation leading to hospitalization/treatment with systemic corticosteroids/treatment with antibiotics. The event free rate reflects the percent of patients who did NOT have an exacerbation by 4, 8 and 12 weeks. Event-free rates are calculated at the end of the specified weeks (i.e. Day 29, Day 57 and Day 85) by the Kaplan Meier method.",
+     "timeFrame": "Weeks 4, 8 and 12"
+    },
+    {
+     "measure": "Mean Daily, Daytime and Nighttime (Combined) Symptom Scores Over the 12 Week Treatment Period",
+     "description": "Participants completed eDiaries providing scores 0 to 3 for symptoms: Cough and wheeze (none, mild, moderate, severe); sputum volume (none, less than 5 mL, 5-25 mL, \\>25 mL); sputum color (none, white-grey, yellow, green); lowest level of activity causing breathlessness (never or only when running, when walking uphill or upstairs, when walking on flat ground, at rest). Symptoms in the morning, for the previous night (no waking due to symptoms, woke up once due to symptoms, woke up more than once due to symptoms, woke up frequently or could not sleep due to symptoms). Symptoms experienced during the day that had prevented them for performing normal activities (not at all, a little, quite a lot, completely). The mean change from baseline in the total scores and in the individual scores was summarized by treatment. Only participants with a value at both baseline and post-baseline were included. Possible total scores 0-18 (night); 0-36 (day). A higher score means worsening of symptoms.",
+     "timeFrame": "12 weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Patients with moderate to severe stable COPD (Stage II or Stage III) according to the current GOLD Guidelines (GOLD 2010).\n* Patients with a post-bronchodilator Forced Expiratory Volume in 1 second (FEV1) ≥ 30% and \\< 80% of the predicted normal, and a post-bronchodilator FEV1/ Forced Vital Capacity (FVC) \\< 0.70 at screening\n* Current or ex-smokers who have a smoking history of at least 10 pack years (e.g. 10 pack years = 1 pack/day x 10 yrs, or ½ pack/day x 20 yrs).\n* Symptomatic patients, according to daily electronic diary data between Visit 2 (Day -14) and Visit 3 (Day 1), with a total score of 1 or more on at least 4 of the last 7 days prior to Visit 3.\n\nExclusion Criteria:\n\n* Pregnant or nursing (lactating) women\n* Patients who, in the judgment of the investigator, or the responsible Novartis personnel, have a clinically relevant laboratory abnormality or a clinically significant condition before Visit 1.\n* Patients with narrow-angle glaucoma, symptomatic benign prostatic hyperplasia or bladder-neck obstruction or moderate to severe renal impairment or urinary retention. (BPH patients who are stable on treatment can be considered).\n* Patients receiving medications in the classes listed in the protocol as prohibited.\n\nOther protocol-defined inclusion/exclusion criteria apply and can be found in the study protocol",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Novartis Pharmaceuticals",
+     "affiliation": "Novartis Pharmaceuticals",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Toronto",
+     "state": "Ontario",
+     "zip": "M5G1N8",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.70643,
+      "lon": -79.39864
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Toronto",
+     "state": "Ontario",
+     "zip": "M5T 3A9",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.70643,
+      "lon": -79.39864
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Toronto",
+     "state": "Ontario",
+     "zip": "M6H 3M2",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.70643,
+      "lon": -79.39864
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Gatineau",
+     "state": "Quebec",
+     "zip": "J8Y 6S8",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.47723,
+      "lon": -75.70164
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Mirabel",
+     "state": "Quebec",
+     "zip": "J7J 2K8",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.65008,
+      "lon": -74.08251
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Saint-Charles-Borromée",
+     "state": "Quebec",
+     "zip": "J6E 6J2",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 46.05007,
+      "lon": -73.46586
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Sisak",
+     "state": "Croatia",
+     "zip": "44000",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 45.46608,
+      "lon": 16.37748
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Zagreb",
+     "state": "Croatia",
+     "zip": "10 000",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 45.81444,
+      "lon": 15.97798
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Zagreb",
+     "zip": "10000",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 45.81444,
+      "lon": 15.97798
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Cvikov",
+     "state": "Czech Republic",
+     "zip": "471 54",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.77668,
+      "lon": 14.63298
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Liberec",
+     "state": "Czech Republic",
+     "zip": "460 01",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.76711,
+      "lon": 15.05619
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Prague",
+     "state": "Czech Republic",
+     "zip": "108 00",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Prague",
+     "state": "Czech Republic",
+     "zip": "140 46",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Prague",
+     "state": "Czech Republic",
+     "zip": "169 00",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Rudná",
+     "state": "Czech Republic",
+     "zip": "25219",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.03502,
+      "lon": 14.23435
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Teplice",
+     "state": "Czech Republic",
+     "zip": "415 01",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.6404,
+      "lon": 13.82451
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Žatec",
+     "state": "Czech Republic",
+     "zip": "438 01",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.32717,
+      "lon": 13.54577
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Tartu",
+     "state": "Estonia",
+     "zip": "51014",
+     "country": "Estonia",
+     "geoPoint": {
+      "lat": 58.38062,
+      "lon": 26.72509
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Paide",
+     "zip": "72714",
+     "country": "Estonia",
+     "geoPoint": {
+      "lat": 58.88768,
+      "lon": 25.54042
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Tallinn",
+     "zip": "13419",
+     "country": "Estonia",
+     "geoPoint": {
+      "lat": 59.43696,
+      "lon": 24.75353
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Tallinn",
+     "zip": "13619",
+     "country": "Estonia",
+     "geoPoint": {
+      "lat": 59.43696,
+      "lon": 24.75353
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Beuvry",
+     "state": "France",
+     "zip": "62660",
+     "country": "France",
+     "geoPoint": {
+      "lat": 50.51674,
+      "lon": 2.68541
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Lyon",
+     "zip": "69317",
+     "country": "France",
+     "geoPoint": {
+      "lat": 45.74906,
+      "lon": 4.84789
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Nantes",
+     "zip": "44000",
+     "country": "France",
+     "geoPoint": {
+      "lat": 47.21725,
+      "lon": -1.55336
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Reims",
+     "zip": "51092",
+     "country": "France",
+     "geoPoint": {
+      "lat": 49.26526,
+      "lon": 4.02853
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Berlin",
+     "state": "Germany",
+     "zip": "10117",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Berlin",
+     "state": "Germany",
+     "zip": "14050",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Leipzig",
+     "state": "Germany",
+     "zip": "04207",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.33962,
+      "lon": 12.37129
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Wiesbaden",
+     "state": "Germany",
+     "zip": "65187",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.08601,
+      "lon": 8.24435
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Berlin",
+     "zip": "14050",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Frankfurt",
+     "zip": "60596",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.68333,
+      "lon": 10.53333
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Hamburg",
+     "zip": "20253",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Kassel",
+     "zip": "34121",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.31667,
+      "lon": 9.5
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Potsdam",
+     "zip": "14478",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.39886,
+      "lon": 13.06566
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Rüdersdorf",
+     "zip": "15562",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.89744,
+      "lon": 11.95811
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Guatemala City",
+     "state": "Departamento de Guatemala",
+     "zip": "01010",
+     "country": "Guatemala",
+     "geoPoint": {
+      "lat": 14.64072,
+      "lon": -90.51327
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Guatemala City",
+     "state": "Departamento de Guatemala",
+     "zip": "01011",
+     "country": "Guatemala",
+     "geoPoint": {
+      "lat": 14.64072,
+      "lon": -90.51327
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Guntur",
+     "state": "Andhra Pradesh",
+     "zip": "522 001",
+     "country": "India",
+     "geoPoint": {
+      "lat": 16.29974,
+      "lon": 80.45729
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Ahmedabad",
+     "state": "Gujarat",
+     "zip": "380 009",
+     "country": "India",
+     "geoPoint": {
+      "lat": 23.02579,
+      "lon": 72.58727
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Chennai - Tamil Nadu",
+     "state": "India",
+     "zip": "600 087",
+     "country": "India"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bangalore",
+     "state": "Karnataka",
+     "zip": "560 010",
+     "country": "India",
+     "geoPoint": {
+      "lat": 12.97194,
+      "lon": 77.59369
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Nagpur",
+     "state": "Maharashtra",
+     "country": "India",
+     "geoPoint": {
+      "lat": 21.14631,
+      "lon": 79.08491
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Coimbatore",
+     "state": "Tamil Nadu",
+     "zip": "641 045",
+     "country": "India",
+     "geoPoint": {
+      "lat": 11.00555,
+      "lon": 76.96612
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Coimbatore",
+     "state": "Tamil Nadu",
+     "zip": "641014",
+     "country": "India",
+     "geoPoint": {
+      "lat": 11.00555,
+      "lon": 76.96612
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Daugavpils",
+     "zip": "LV-5401",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 55.88333,
+      "lon": 26.53333
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Riga",
+     "zip": "1002",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 56.946,
+      "lon": 24.10589
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Alytus",
+     "zip": "LT-62114",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 54.39574,
+      "lon": 24.03885
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Kaunas",
+     "zip": "LT-47144",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 54.90156,
+      "lon": 23.90909
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Klaipėda",
+     "zip": "92288",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 55.7068,
+      "lon": 21.13912
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Klaipėda",
+     "zip": "LT-92231",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 55.7068,
+      "lon": 21.13912
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Utena",
+     "zip": "LT-28151",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 55.4978,
+      "lon": 25.60462
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Vilnius",
+     "zip": "06001",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 54.68916,
+      "lon": 25.2798
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Vilnius",
+     "zip": "LT-08661",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 54.68916,
+      "lon": 25.2798
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Lipa City",
+     "state": "Batangas",
+     "zip": "4217",
+     "country": "Philippines",
+     "geoPoint": {
+      "lat": 13.9411,
+      "lon": 121.1631
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bulacan",
+     "state": "Philippines",
+     "zip": "3020",
+     "country": "Philippines",
+     "geoPoint": {
+      "lat": 14.79278,
+      "lon": 120.87889
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Manila",
+     "state": "Philippines",
+     "zip": "1000",
+     "country": "Philippines",
+     "geoPoint": {
+      "lat": 14.6042,
+      "lon": 120.9822
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Quezon City",
+     "zip": "1100",
+     "country": "Philippines",
+     "geoPoint": {
+      "lat": 14.6488,
+      "lon": 121.0509
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Gdansk",
+     "zip": "80-169",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 54.35227,
+      "lon": 18.64912
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Gdansk",
+     "zip": "80-847",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 54.35227,
+      "lon": 18.64912
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Katowice",
+     "zip": "40-752",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.2597,
+      "lon": 19.02173
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Poznan",
+     "zip": "60-693",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.40692,
+      "lon": 16.92993
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Wroclaw",
+     "zip": "51-162",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 51.10286,
+      "lon": 17.03006
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Cape Town",
+     "zip": "7500",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -33.92584,
+      "lon": 18.42322
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Cape Town",
+     "zip": "7925",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -33.92584,
+      "lon": 18.42322
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Gatesville",
+     "zip": "7764",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -33.97558,
+      "lon": 18.52306
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Busan",
+     "state": "Busan",
+     "zip": "602-739",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 35.10168,
+      "lon": 129.03004
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bucheon-si",
+     "state": "Gyeonggi-do",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.49889,
+      "lon": 126.78306
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Seoul",
+     "state": "Seoul",
+     "zip": "130-709",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Seoul",
+     "state": "Seoul",
+     "zip": "156-755",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Daegu",
+     "zip": "705-717",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 35.87028,
+      "lon": 128.59111
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Seoul",
+     "zip": "130-702",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Seoul",
+     "zip": "152-703",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Chiayi City",
+     "state": "Taiwan",
+     "zip": "600",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 23.47917,
+      "lon": 120.44889
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Niaosong Township",
+     "state": "Taiwan",
+     "zip": "83301",
+     "country": "Taiwan"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Taichung",
+     "state": "Taiwan",
+     "zip": "40447",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 24.1469,
+      "lon": 120.6839
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Taipei County",
+     "state": "Taiwan",
+     "country": "Taiwan"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Chiayi City",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 23.47917,
+      "lon": 120.44889
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "24438744",
+     "type": "DERIVED",
+     "citation": "Chapman KR, Beeh KM, Beier J, Bateman ED, D'Urzo A, Nutbrown R, Henley M, Chen H, Overend T, D'Andrea P. A blinded evaluation of the efficacy and safety of glycopyrronium, a once-daily long-acting muscarinic antagonist, versus tiotropium, in patients with COPD: the GLOW5 study. BMC Pulm Med. 2014 Jan 17;14:4. doi: 10.1186/1471-2466-14-4."
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "Patients meeting the eligibility criteria were randomized to receive NVA237 50 μg o.d. or tiotropium 18 μg o.d. in a 1:1 ratio. Patients were stratified according to their smoking status (current / ex-smoker).",
+   "recruitmentDetails": "A total of 980 patients were screened, and 657 were randomized (327 to NVA237 and 330 to tiotropium).",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "NVA237",
+     "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+    },
+    {
+     "id": "FG001",
+     "title": "Tiotropium",
+     "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "327"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "330"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "314"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "316"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "13"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "14"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "7"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "5"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "4"
+        }
+       ]
+      },
+      {
+       "type": "Abnormal test procedure result(s)",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "inability to use device",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Lack of Efficacy",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Administrative",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        }
+       ]
+      },
+      {
+       "type": "Protocol Violation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "NVA237",
+     "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+    },
+    {
+     "id": "BG001",
+     "title": "Tiotropium",
+     "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "327"
+      },
+      {
+       "groupId": "BG001",
+       "value": "330"
+      },
+      {
+       "groupId": "BG002",
+       "value": "657"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "63.2",
+           "spread": "7.98"
+          },
+          {
+           "groupId": "BG001",
+           "value": "63.7",
+           "spread": "8.02"
+          },
+          {
+           "groupId": "BG002",
+           "value": "63.5",
+           "spread": "8.00"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "90"
+          },
+          {
+           "groupId": "BG001",
+           "value": "82"
+          },
+          {
+           "groupId": "BG002",
+           "value": "172"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "237"
+          },
+          {
+           "groupId": "BG001",
+           "value": "248"
+          },
+          {
+           "groupId": "BG002",
+           "value": "485"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Trough Forced Expiratory Volume in 1 Second (FEV1) After 12 Weeks of Treatment (Non-inferiority Analysis)",
+     "description": "Forced Expiratory Volume in 1 second (FEV1) is the amount of air which can be forcibly exhaled from the lungs in the first second of a forced exhalation, measured through spirometry testing. The trough in FEV1 was defined as the mean of two measurements at 23hours 15min and 23 hours 45min post dosing. ANCOVA model: Trough FEV1 = treatment + baseline FEV1 + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center (region). This analysis excluded values within 6 hours of rescue medication use or 7 days of systemic corticosteroid use.",
+     "populationDescription": "The per-protocol set included all randomized patients who received at least one dose of study drug, with available data and without any major protocol deviations or who did not take study drug as per protocol in the 14 day period prior to trough.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "NVA237",
+       "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium",
+       "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "289"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.405",
+           "spread": "0.0173"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.405",
+           "spread": "0.0170"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Trough Forced Expiratory Volume in 1 Second (FEV1) After 12 Weeks of Treatment (Analysis of Superiority)",
+     "description": "FEV1 is the amount of air which can be forcibly exhaled from the lungs in the first second of a forced exhalation, measured through spirometry testing. The trough in FEV1 was defined as the mean of two measurements at 23h 15min and 23h 45min post dosing. ANCOVA model: Trough FEV1 = treatment + baseline FEV1 + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center(region). This analysis excluded values within 6 hours of rescue medication use or 7 days of systemic corticosteroid.",
+     "populationDescription": "The Full Analysis Set (FAS) includes all randomized patients who received at least one dose of study drug and had available data for analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "NVA237",
+       "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium",
+       "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "316"
+        },
+        {
+         "groupId": "OG001",
+         "value": "319"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.398",
+           "spread": "0.0154"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.393",
+           "spread": "0.0149"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Transition Dyspnea Index (TDI) Focal Score After 4 Weeks and 12 Weeks of Treatment",
+     "description": "Transition Dyspnea Index (TDI) captures changes from baseline. The TDI score is based on three domains with each domain scored from -3 (major deterioration) to +3 (major improvement), to give an overall score of -9 to +9, a negative score indicating a deterioration from baseline. A TDI focal score of 1 is considered to be a clinically significant improvement from baseline.\n\nANCOVA model: TDI focal score = treatment + Baseline dyspnea index (BDI) + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center(region). Center is included as a random effect nested within region.",
+     "populationDescription": "The per-protocol set included all randomized patients who received at least one dose of study drug, with available data and without any major protocol deviations.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Units on a scale",
+     "timeFrame": "Weeks 4 and 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "NVA237",
+       "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium",
+       "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "290"
+        },
+        {
+         "groupId": "OG001",
+         "value": "287"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Week 4 (n= 289, 287)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.209",
+           "spread": "0.2957"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.086",
+           "spread": "0.2945"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12 (n= 290, 285)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.990",
+           "spread": "0.3169"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.178",
+           "spread": "0.3159"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "St. George's Respiratory Questionnaire Total Score After 12 Weeks of Treatment",
+     "description": "St. George's Respiratory Questionnaire (SGRQ) is a health related quality of life questionnaire consisting of 51 items in three areas: symptoms (respiratory symptoms and severity), activity (activities that cause or are limited by breathlessness) and impacts (social functioning and psychological disturbances due to airway disease). The total score is 0 to 100 with a higher score indicating poorer health status. ANCOVA model: SGRQ total score = treatment + baseline SGRQ score + baseline ICS use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center (region).",
+     "populationDescription": "The per-protocol set included all randomized patients who received at least one dose of study drug, with available data and without any major protocol deviations.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Units on a scale",
+     "timeFrame": "Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "NVA237",
+       "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium",
+       "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "290"
+        },
+        {
+         "groupId": "OG001",
+         "value": "285"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "39.42",
+           "spread": "1.313"
+          },
+          {
+           "groupId": "OG001",
+           "value": "38.77",
+           "spread": "1.306"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Mean Daily Number of Puffs of Rescue Medication Used Over the 12 Week Treatment",
+     "description": "A day with no rescue medication use is defined from the diary data as any day where the patient recorded no rescue medicine use during the previous 12 hours.\n\nBaseline mean daily, daytime and nighttime (combined) number of puffs is defined as the average of the respective number of puffs. Only patients with a value at both baseline and post-baseline visits were included.",
+     "populationDescription": "The per-protocol set included all randomized patients who received at least one dose of study drug, with a value at both baseline and post-baseline visits were included.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "puffs",
+     "timeFrame": "Baseline and Day 1 to Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "NVA237",
+       "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium",
+       "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "296"
+        },
+        {
+         "groupId": "OG001",
+         "value": "290"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "4.09",
+           "spread": "3.816"
+          },
+          {
+           "groupId": "OG001",
+           "value": "4.10",
+           "spread": "3.791"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1 to week 12",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.76",
+           "spread": "2.768"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.84",
+           "spread": "2.934"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Trough Forced Expiratory Volume in 1 Second (FEV1) at Day 1 and Week 4",
+     "description": "FEV1 is the amount of air which can be forcibly exhaled from the lungs in the first second of a forced exhalation, measured through spirometry testing.\n\nTrough FEV1 is defined as the average of the post-dose 23 h 15 min and the 23 h 45 min FEV1 values. Trough assessments taken outside 22 h 45 min - 24 h 15 min are excluded from this analysis.\n\nANCOVA model: Trough FEV1 = treatment + baseline FEV1 + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center(region). Center is included as a random effect nested within region.",
+     "populationDescription": "The per-protocol set included all randomized patients who received at least one dose of study drug, with available data and without any major protocol deviations or who did not take study drug as per protocol in the 14 day period prior to trough.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Day 1 and Week 4",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "NVA237",
+       "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium",
+       "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "296"
+        },
+        {
+         "groupId": "OG001",
+         "value": "288"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Day 1 (n=296, 288)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.385",
+           "spread": "0.0124"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.386",
+           "spread": "0.0122"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4 (n=284, 280)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.416",
+           "spread": "0.0163"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.416",
+           "spread": "0.0160"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Peak Forced Expiratory Volume in 1 Second (FEV1) During 5 Min to 4 Hours Post-dose, at Day 1 and Week 12",
+     "description": "Spirometry was conducted according to internationally accepted standards. Peak FEV1 is the maximum FEV1 recorded during first 4 hours post dose. ANCOVA model: Peak FEV1 = treatment + baseline FEV1 + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center (region). Center is included as a random effect nested within region. This analysis excludes values within 6 hours of rescue medication use or 7 days of systemic corticosteroid use.",
+     "populationDescription": "The per-protocol set included all randomized patients who received at least one dose of study drug, with available data and without any major protocol deviations",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "5 min to 4 hours post-dose at Day 1 and Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "NVA237",
+       "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium",
+       "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "298"
+        },
+        {
+         "groupId": "OG001",
+         "value": "292"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Day 1 (n= 298, 292)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.575",
+           "spread": "0.0123"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.520",
+           "spread": "0.0121"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12 (n= 290, 282)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.577",
+           "spread": "0.0166"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.553",
+           "spread": "0.0163"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Inspiratory Capacity (IC) at Each Time-point, by Visit",
+     "description": "IC was measured with spirometry conducted according to internationally accepted standards. ANCOVA model: IC = treatment + baseline IC + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center(region). Center is included as a random effect nested within region.",
+     "populationDescription": "The per-protocol set included all randomized patients who received at least one dose of study drug, with available data and without any major protocol deviations",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "(25 min, 1 h 55 min, 3 h 55 min, 23 h 40 min Day 1), (-20 min, 25 min, 23 h 40 min Week 4),(-20 min, 25 min, 1 h 55 min, 3 h 55 min, 23 h 40 min Week 12)",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "NVA237",
+       "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium",
+       "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "216"
+        },
+        {
+         "groupId": "OG001",
+         "value": "214"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Day 1, 25 min (n= 216, 214)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.378",
+           "spread": "0.0263"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.300",
+           "spread": "0.0253"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 1 h 55 min (n= 212, 208)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.433",
+           "spread": "0.0313"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.335",
+           "spread": "0.0298"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 3 h 55 min (n= 211, 207)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.343",
+           "spread": "0.0325"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.309",
+           "spread": "0.0317"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 23 h 40 min (n= 213, 212)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.247",
+           "spread": "0.0306"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.244",
+           "spread": "0.0294"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, -20 min (n= 204, 204)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.231",
+           "spread": "0.0342"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.240",
+           "spread": "0.0326"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, 25 min (n= 201, 200)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.335",
+           "spread": "0.0330"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.334",
+           "spread": "0.0312"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, 23 h 40 min (n=199,205)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.284",
+           "spread": "0.0362"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.289",
+           "spread": "0.0347"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, -20 min (n= 205, 204)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.198",
+           "spread": "0.0408"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.227",
+           "spread": "0.0394"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 25 min (n= 215, 205)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.292",
+           "spread": "0.0397"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.280",
+           "spread": "0.0385"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 1 h 55 min (n= 213, 203)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.344",
+           "spread": "0.0432"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.289",
+           "spread": "0.0421"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 3 h 55 min (n= 203, 207)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.313",
+           "spread": "0.0395"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.275",
+           "spread": "0.0374"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 23 h 40 min (n= 208, 206)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.228",
+           "spread": "0.0390"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.262",
+           "spread": "0.0373"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Forced Expiratory Volume in 1 Second (FEV1) at Each Time-point by Visit",
+     "description": "Forced Expiratory Volume in 1 second (FEV1) is the amount of air which can be forcibly exhaled from the lungs in the first second of a forced exhalation. FEV1 was analyzed using Analysis of Covariance (ANCOVA) model: FEV1 = treatment + baseline FEV1 + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center(region). Center is included as a random effect nested within region.",
+     "populationDescription": "The per-protocol set included all randomized patients who received at least one dose of study drug, with available data and without any major protocol deviations",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "(5,15,30 min, 1, 2,3,4 h, 23h 15 min and 23h 45 min postdose of Day 1), (-45, -15 min predose, 5,15,30 min, 1h, 23h 15 min and 23h 45 min postdose of Week 4), (-45, -15 min predose, 5,15,30 min, 1, 2, 3,4 h, 23h 15 min and 23h 45 min postdose of Week 12)",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "NVA237",
+       "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium",
+       "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "291"
+        },
+        {
+         "groupId": "OG001",
+         "value": "286"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Day 1, 5 min (n= 283, 278)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.382",
+           "spread": "0.0087"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.331",
+           "spread": "0.0086"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 15 min (n= 282, 276)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.428",
+           "spread": "0.0086"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.365",
+           "spread": "0.0084"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 30 min (n= 285, 281)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.442",
+           "spread": "0.0104"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.379",
+           "spread": "0.0102"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 1 hour (n= 291, 286)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.482",
+           "spread": "0.0111"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.419",
+           "spread": "0.0109"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 2 hours (n= 290, 286)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.517",
+           "spread": "0.0127"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.454",
+           "spread": "0.0126"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 3 hours (n= 291, 285)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.527",
+           "spread": "0.0141"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.471",
+           "spread": "0.0138"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 4 hours (n= 285, 281)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.490",
+           "spread": "0.0137"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.448",
+           "spread": "0.0135"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 23 h 15 min (n= 289, 279)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.384",
+           "spread": "0.0127"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.384",
+           "spread": "0.0124"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 23 h 45 min (n= 285, 278)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.381",
+           "spread": "0.0139"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.379",
+           "spread": "0.0140"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, -45 min (n= 280, 280)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.403",
+           "spread": "0.0145"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.391",
+           "spread": "0.0140"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, -15 min (n= 278, 279)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.388",
+           "spread": "0.0146"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.393",
+           "spread": "0.0139"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, 5 min (n= 277, 274)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.422",
+           "spread": "0.0165"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.423",
+           "spread": "0.0160"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, 15 min (n= 271, 270)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.459",
+           "spread": "0.0163"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.466",
+           "spread": "0.0159"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, 30 min (n= 272, 276)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.454",
+           "spread": "0.0179"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.442",
+           "spread": "0.0175"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, 1 hr (n= 280, 282)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.513",
+           "spread": "0.0152"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.494",
+           "spread": "0.0147"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, 23 h 15 min (n= 278, 276)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.422",
+           "spread": "0.0171"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.417",
+           "spread": "0.0167"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, 23 h 45 min (n= 274, 276)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.418",
+           "spread": "0.0165"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.416",
+           "spread": "0.0162"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, -45 min (n= 286, 279)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.394",
+           "spread": "0.0176"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.380",
+           "spread": "0.0174"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, -15 min (n= 283, 279)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.377",
+           "spread": "0.0168"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.370",
+           "spread": "0.0165"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 5 min (n= 283, 271)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.430",
+           "spread": "0.0182"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.411",
+           "spread": "0.0181"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 15 min (n= 275, 271)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.440",
+           "spread": "0.0168"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.423",
+           "spread": "0.0163"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 30 min (n= 282, 278)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.461",
+           "spread": "0.0168"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.432",
+           "spread": "0.0163"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 1 hr (n= 286, 279)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.500",
+           "spread": "0.0164"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.475",
+           "spread": "0.0160"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 2 hours (n= 278, 277)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.507",
+           "spread": "0.0173"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.484",
+           "spread": "0.0169"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 3 hours (n= 281, 279)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.506",
+           "spread": "0.0179"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.484",
+           "spread": "0.0175"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 4 hours (n= 282, 280)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.473",
+           "spread": "0.0187"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.462",
+           "spread": "0.0183"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 23 h 15 min (n= 276, 266)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.414",
+           "spread": "0.0185"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.422",
+           "spread": "0.0183"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 23 h 45 min (n= 278, 276)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.415",
+           "spread": "0.0183"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.420",
+           "spread": "0.0180"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Forced Vital Capacity (FVC) at Each Time-point by Visit",
+     "description": "Forced Vital Capacity (FVC) is the amount of air which can be forcibly exhaled from the lungs after taking the deepest breath possible. FVC was assessed via spirometry. ANCOVA model: FVC = treatment + baseline FVC + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center(region). Center is included as a random effect nested within region.",
+     "populationDescription": "The per-protocol set included all randomized patients who received at least one dose of study drug, with available data and without any major protocol deviations",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "(5,15,30 min, 1, 2,3,4 h, 23h 15 min and 23h 45 min postdose of Day 1), (-45, -15 min predose, 5,15,30 min, 1h, 23h 15 min and 23h 45 min postdose of Week 4), (-45, -15 min predose, 5,15,30 min, 1, 2, 3,4 h, 23h 15 min and 23h 45 min postdose of Week 12)",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "NVA237",
+       "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium",
+       "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "291"
+        },
+        {
+         "groupId": "OG001",
+         "value": "286"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Day 1, 5 min (n= 283, 278)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.925",
+           "spread": "0.0249"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.874",
+           "spread": "0.0247"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 15 min (n= 282, 276)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.004",
+           "spread": "0.0281"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.954",
+           "spread": "0.0280"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 30 min (n= 285, 281)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.036",
+           "spread": "0.0277"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.991",
+           "spread": "0.0274"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 1 hour (n= 291, 286)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.036",
+           "spread": "0.0298"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.006",
+           "spread": "0.0296"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 2 hours (n= 290, 286)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.061",
+           "spread": "0.0314"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.029",
+           "spread": "0.0312"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 3 hours (n= 291, 285)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.135",
+           "spread": "0.0334"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.111",
+           "spread": "0.0329"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 4 hours (n= 285, 281)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.073",
+           "spread": "0.0305"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.046",
+           "spread": "0.0301"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 23 h 15 min (n= 289, 279)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.911",
+           "spread": "0.0287"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.951",
+           "spread": "0.0284"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1, 23 h 45 min (n= 285, 278)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.942",
+           "spread": "0.0279"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.951",
+           "spread": "0.0279"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, -45 min (n= 280, 280)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.933",
+           "spread": "0.0338"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.943",
+           "spread": "0.0331"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, -15 min (n= 278, 279)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.879",
+           "spread": "0.0356"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.898",
+           "spread": "0.0345"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, 5 min (n= 277, 274)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.954",
+           "spread": "0.0363"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.997",
+           "spread": "0.0354"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, 15 min (n= 271, 270)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.021",
+           "spread": "0.0378"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.058",
+           "spread": "0.0372"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, 30 min (n= 272, 276)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.005",
+           "spread": "0.0413"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.011",
+           "spread": "0.0407"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, 1 hr (n= 280, 282)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.068",
+           "spread": "0.0381"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.093",
+           "spread": "0.0374"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, 23 h 15 min (n= 278, 276)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.982",
+           "spread": "0.0364"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.013",
+           "spread": "0.0359"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 4, 23 h 45 min (n= 274, 276)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.953",
+           "spread": "0.0372"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.978",
+           "spread": "0.0366"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, -45 min (n= 286, 279)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.889",
+           "spread": "0.0416"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.905",
+           "spread": "0.0415"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, -15 min (n= 283, 279)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.827",
+           "spread": "0.0358"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.837",
+           "spread": "0.0355"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 5 min (n= 283, 271)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.929",
+           "spread": "0.0403"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.953",
+           "spread": "0.0403"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 15 min (n= 275, 271)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.945",
+           "spread": "0.0370"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.963",
+           "spread": "0.0364"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 30 min (n= 282, 278)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.963",
+           "spread": "0.0374"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.982",
+           "spread": "0.0367"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 1 hr (n= 286, 279)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.011",
+           "spread": "0.0377"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.009",
+           "spread": "0.0373"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 2 hours (n= 278, 277)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.008",
+           "spread": "0.0390"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.012",
+           "spread": "0.0386"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 3 hours (n= 281, 279)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.014",
+           "spread": "0.0404"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.018",
+           "spread": "0.0399"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 4 hours (n= 282, 280)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.964",
+           "spread": "0.0404"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.977",
+           "spread": "0.0398"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 23 h 15 min (n= 276, 266)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.923",
+           "spread": "0.0403"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.953",
+           "spread": "0.0404"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12, 23 h 45 min (n= 278, 276)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.929",
+           "spread": "0.0436"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.955",
+           "spread": "0.0434"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Standardized Forced Expiratory Volume in One Second (FEV1) Area Under the Curve (AUC) (5 Min-4 h) Post-dose",
+     "description": "Forced Expiratory Volume in one second (FEV1) was measured with spirometry conducted according to internationally accepted standards.\n\nArea Under the Curve (AUC) is calculated using the trapezoidal rule using the existing FEV1 measurements (i.e., the missing FEV1 measurements are not interpolated).\n\nANCOVA model: FEV1 AUC = treatment + baseline FEV1 + baseline Inhaled corticosteroid (ICS) use (Yes/No) + FEV1 reversibility components + baseline smoking status + region + center(region). Center is included as a random effect nested within region.",
+     "populationDescription": "The per-protocol set included all randomized patients who received at least one dose of study drug, with available data and without any major protocol deviations.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Day 1 and week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "NVA237",
+       "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium",
+       "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "298"
+        },
+        {
+         "groupId": "OG001",
+         "value": "292"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Day 1 (n=298, 292)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.496",
+           "spread": "0.0109"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.438",
+           "spread": "0.0107"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12 (290, 282)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.493",
+           "spread": "0.0164"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.470",
+           "spread": "0.0160"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Event Free Rate at Weeks 4, 8 and 12 After Treatment",
+     "description": "Event free rate was calculated as a percentage of participants who did not experience any moderate or severe COPD exacerbation leading to hospitalization/treatment with systemic corticosteroids/treatment with antibiotics. The event free rate reflects the percent of patients who did NOT have an exacerbation by 4, 8 and 12 weeks. Event-free rates are calculated at the end of the specified weeks (i.e. Day 29, Day 57 and Day 85) by the Kaplan Meier method.",
+     "populationDescription": "The per-protocol set included all randomized patients who received at least one dose of study drug, with available data and without any major protocol deviations and described as patients with moderate to severe exacerbations were included in this analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "percentage of participants",
+     "timeFrame": "Weeks 4, 8 and 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "NVA237",
+       "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium",
+       "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "29"
+        },
+        {
+         "groupId": "OG001",
+         "value": "22"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Week 4",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "95.6",
+           "lowerLimit": "92.6",
+           "upperLimit": "97.4"
+          },
+          {
+           "groupId": "OG001",
+           "value": "96.6",
+           "lowerLimit": "93.7",
+           "upperLimit": "98.1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 8",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "92.9",
+           "lowerLimit": "89.3",
+           "upperLimit": "95.3"
+          },
+          {
+           "groupId": "OG001",
+           "value": "93.8",
+           "lowerLimit": "90.4",
+           "upperLimit": "96.1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Week 12",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "90.2",
+           "lowerLimit": "86.1",
+           "upperLimit": "93.2"
+          },
+          {
+           "groupId": "OG001",
+           "value": "92.4",
+           "lowerLimit": "88.8",
+           "upperLimit": "95.0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Mean Daily, Daytime and Nighttime (Combined) Symptom Scores Over the 12 Week Treatment Period",
+     "description": "Participants completed eDiaries providing scores 0 to 3 for symptoms: Cough and wheeze (none, mild, moderate, severe); sputum volume (none, less than 5 mL, 5-25 mL, \\>25 mL); sputum color (none, white-grey, yellow, green); lowest level of activity causing breathlessness (never or only when running, when walking uphill or upstairs, when walking on flat ground, at rest). Symptoms in the morning, for the previous night (no waking due to symptoms, woke up once due to symptoms, woke up more than once due to symptoms, woke up frequently or could not sleep due to symptoms). Symptoms experienced during the day that had prevented them for performing normal activities (not at all, a little, quite a lot, completely). The mean change from baseline in the total scores and in the individual scores was summarized by treatment. Only participants with a value at both baseline and post-baseline were included. Possible total scores 0-18 (night); 0-36 (day). A higher score means worsening of symptoms.",
+     "populationDescription": "The per-protocol set included all randomized patients who received at least one dose of study drug. Only patients with a value at both baseline and post-baseline are included.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "units on a scale",
+     "timeFrame": "12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "NVA237",
+       "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium",
+       "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "296"
+        },
+        {
+         "groupId": "OG001",
+         "value": "290"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "7.21",
+           "spread": "2.539"
+          },
+          {
+           "groupId": "OG001",
+           "value": "6.90",
+           "spread": "2.627"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 1 to Week 12",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "5.96",
+           "spread": "2.469"
+          },
+          {
+           "groupId": "OG001",
+           "value": "5.96",
+           "spread": "2.531"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "NVA237",
+     "description": "NVA237 50 μg once a day and placebo to tiotropium once a day during 85 days. Salbutamol/albuterol was provided as rescue medication.",
+     "seriousNumAffected": 11,
+     "seriousNumAtRisk": 327,
+     "otherNumAffected": 48,
+     "otherNumAtRisk": 327
+    },
+    {
+     "id": "EG001",
+     "title": "Tiotropium",
+     "description": "Tiotropium 18 μg once a day and placebo to NVA237 once a day during 85 days. Salbutamol/albuterol was provided as rescue medication.",
+     "seriousNumAffected": 13,
+     "seriousNumAtRisk": 330,
+     "otherNumAffected": 54,
+     "otherNumAtRisk": 330
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Cardiac failure",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Diverticulum intestinal",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Intestinal obstruction",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Oesophagitis",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Pancreatitis chronic",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Non-cardiac chest pain",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Bronchitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Cellulitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Lobar pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Femur fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Spinal cord injury cervical",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Myalgia",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Spinal osteoarthritis",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Gastric cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Dizziness",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Hemiparesis",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Ischaemic stroke",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Acute respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 6,
+       "numAtRisk": 330
+      }
+     ]
+    },
+    {
+     "term": "Pulmonary arterial hypertension",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 330
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 48,
+       "numAtRisk": 327
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 54,
+       "numAtRisk": 330
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "The terms and conditions of Novartis' agreements with its investigators may vary. However, Novartis does not prohibit any investigator from publishing. Any publications from a single-site are postponed until the publication of pooled data (i.e.,data from all sites) in clinical trial or disclosure of trial results in their entirety."
+   },
+   "pointOfContact": {
+    "title": "Study Director",
+    "organization": "Novartis Pharmaceuticals",
+    "phone": "4 161 324 1111"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16",
+   "removedCountries": [
+    "Argentina",
+    "Turkey (Türkiye)"
+   ]
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D006024",
+     "term": "Glycopyrrolate"
+    },
+    {
+     "id": "D000069447",
+     "term": "Tiotropium Bromide"
+    },
+    {
+     "id": "D000420",
+     "term": "Albuterol"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D000644",
+     "term": "Quaternary Ammonium Compounds"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D009861",
+     "term": "Onium Compounds"
+    },
+    {
+     "id": "D011759",
+     "term": "Pyrrolidines"
+    },
+    {
+     "id": "D006573",
+     "term": "Heterocyclic Compounds, 1-Ring"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D012602",
+     "term": "Scopolamine Derivatives"
+    },
+    {
+     "id": "D014326",
+     "term": "Tropanes"
+    },
+    {
+     "id": "D053961",
+     "term": "Azabicyclo Compounds"
+    },
+    {
+     "id": "D001372",
+     "term": "Aza Compounds"
+    },
+    {
+     "id": "D000470",
+     "term": "Alkaloids"
+    },
+    {
+     "id": "D019086",
+     "term": "Bridged Bicyclo Compounds, Heterocyclic"
+    },
+    {
+     "id": "D006572",
+     "term": "Heterocyclic Compounds, Bridged-Ring"
+    },
+    {
+     "id": "D004983",
+     "term": "Ethanolamines"
+    },
+    {
+     "id": "D000605",
+     "term": "Amino Alcohols"
+    },
+    {
+     "id": "D000438",
+     "term": "Alcohols"
+    },
+    {
+     "id": "D010627",
+     "term": "Phenethylamines"
+    },
+    {
+     "id": "D005021",
+     "term": "Ethylamines"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

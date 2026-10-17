@@ -224,11 +224,12 @@ class ComputeCache:
         self.hits = 0
         self.misses = 0
 
-    def get(self, key: tuple[Any, ...]) -> ScenarioResult | None:
+    def get(self, key: tuple[Any, ...], count_miss: bool = True) -> ScenarioResult | None:
         with self._lock:
             val = self._data.get(key)
             if val is None:
-                self.misses += 1
+                if count_miss:
+                    self.misses += 1
                 return None
             self._data.move_to_end(key)
             self.hits += 1
@@ -320,7 +321,8 @@ class EngineAdapter:
 
         Both are cached on the inputs A3 reads: every lever except the ones in
         NOT_READ_BY_A3, so a remote-monitoring slider drag never re-runs the ~1 s supply
-        simulation, while the supply strategy toggle re-runs supply but reuses the forecast."""
+        simulation, while the supply strategy toggle re-runs supply but reuses the forecast.
+        Callers hold an engine slot around it; it never takes one itself (not reentrant)."""
         kwargs: dict[str, Any] = {}
         warnings: list[str] = []
         if self.fns.forecast is None or not _accepts(target, "forecast"):
@@ -367,7 +369,7 @@ class EngineAdapter:
     ) -> ComputeOutcome:
         start = time.perf_counter()
         key = self.cache_key(design, levers, param_version, seed, draws)
-        cached = self.cache.get(key)
+        cached = self.cache.get(key, count_miss=False)  # a miss is counted once, in the slot
         if cached is not None:
             return ComputeOutcome(cached, True, (time.perf_counter() - start) * 1000)
         compute = self.fns.compute
@@ -408,18 +410,18 @@ class EngineAdapter:
         if fn is None:
             raise _not_ready("compare_levers")
         target = self.fns.compute or fn
-        a3a = self.a3_inputs(target, design, levers_a, params, seed, draws)
-        a3b = self.a3_inputs(target, design, levers_b, params, seed, draws)
-        kwargs: dict[str, Any] = {"seed": seed, "draws": draws}
-        for side, a3 in (("a", a3a), ("b", a3b)):
-            for name, value in a3.kwargs.items():
-                if _accepts(fn, f"{name}_{side}"):
-                    kwargs[f"{name}_{side}"] = value
-        try:
-            with self._slot():
+        with self._slot():
+            a3a = self.a3_inputs(target, design, levers_a, params, seed, draws)
+            a3b = self.a3_inputs(target, design, levers_b, params, seed, draws)
+            kwargs: dict[str, Any] = {"seed": seed, "draws": draws}
+            for side, a3 in (("a", a3a), ("b", a3b)):
+                for name, value in a3.kwargs.items():
+                    if _accepts(fn, f"{name}_{side}"):
+                        kwargs[f"{name}_{side}"] = value
+            try:
                 _, _, deltas = fn(design, levers_a, levers_b, params, **kwargs)
-        except Exception as exc:
-            raise _engine_failure(exc, "compare_levers") from exc
+            except Exception as exc:
+                raise _engine_failure(exc, "compare_levers") from exc
         return dict(deltas), list(dict.fromkeys([*a3a.warnings, *a3b.warnings]))
 
     # ---------------------------------------------------------------- drivers
@@ -436,14 +438,14 @@ class EngineAdapter:
         fn = self.fns.drivers
         if fn is None:
             raise _not_ready("drivers")
-        a3 = self.a3_inputs(fn, design, levers, params, seed, draws)
-        kwargs: dict[str, Any] = {"metric": metric, "top": top, **a3.kwargs}
-        for name, value in (("seed", seed), ("draws", draws)):
-            if _accepts(fn, name):
-                kwargs[name] = value
-        try:
-            with self._slot():
+        with self._slot():
+            a3 = self.a3_inputs(fn, design, levers, params, seed, draws)
+            kwargs: dict[str, Any] = {"metric": metric, "top": top, **a3.kwargs}
+            for name, value in (("seed", seed), ("draws", draws)):
+                if _accepts(fn, name):
+                    kwargs[name] = value
+            try:
                 out = fn(design, levers, params, **kwargs)
-        except Exception as exc:
-            raise _engine_failure(exc, "drivers") from exc
+            except Exception as exc:
+                raise _engine_failure(exc, "drivers") from exc
         return [(str(pid), float(share)) for pid, share in out], a3.warnings

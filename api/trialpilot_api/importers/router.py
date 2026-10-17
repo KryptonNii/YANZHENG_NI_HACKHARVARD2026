@@ -41,15 +41,23 @@ from .ctgov import (
     CtgovError,
     FieldNote,
     cached_study_ids,
+    design_id_for,
     fetch_study_result,
     map_study_report,
     normalize_nct,
     note_payload,
     protocol_documents,
 )
+from .endpoints import link_visits
 from .paths import demo_offline, protocols_dir, runtime_cache_dir
 from .procedures import default_vocabulary
-from .protocol_extract import ExtractionFailed, extract_schedule, load_cached, pdf_sha256
+from .protocol_extract import (
+    ExtractionFailed,
+    ExtractionResult,
+    extract_schedule,
+    load_cached,
+    pdf_sha256,
+)
 
 router = APIRouter(tags=["import"])
 
@@ -121,6 +129,12 @@ def get_actor(request: Request, x_user: str | None = Header(default=None),
     return x_user.strip()[:64], role if role in _ROLES else "viewer"
 
 
+def get_offline(request: Request) -> bool:
+    """A5's `Settings.demo_offline` when mounted (the flag /api/health reports), else `DEMO_OFFLINE`."""
+    offline = getattr(getattr(request.app.state, "settings", None), "demo_offline", None)
+    return demo_offline() if offline is None else bool(offline)
+
+
 def _require_confirmer(actor: tuple[str, str]) -> JSONResponse | None:
     """Accepting extracted candidates is a human decision: a registered, non-viewer, non-AI identity."""
     user, role = actor
@@ -159,6 +173,36 @@ def _with_group_labels(node: Any) -> Any:
     return node
 
 
+def _stored_design(request: Request, design_id: str | None) -> TrialDesign | None:
+    """Read existing human annotations when mounted in the app; standalone has no store."""
+    services = getattr(request.app.state, "services", None)
+    if services is None or not design_id:
+        return None
+    from sqlmodel import Session
+
+    from trialpilot_api.errors import ApiError
+    from trialpilot_api.routes_designs import load_design
+
+    with Session(services.db_engine) as session:
+        try:
+            return load_design(session, design_id)[1]
+        except ApiError as exc:
+            if exc.status_code != 404:
+                raise
+    return None
+
+
+def _cached_outcomes(registry_id: str | None) -> dict[str, Any]:
+    """An upload without registry metadata stays unknown; never invent links from the PDF."""
+    if not registry_id or not registry_id.strip().upper().startswith("NCT"):
+        return {}
+    try:
+        raw = fetch_study_result(registry_id, offline=True).raw
+    except CtgovError:
+        return {}
+    return (raw.get("protocolSection") or {}).get("outcomesModule") or {}
+
+
 def _lock_for(sha: str) -> threading.Lock:
     with _sha_locks_guard:
         return _sha_locks.setdefault(sha, threading.Lock())
@@ -175,7 +219,7 @@ def known_protocols() -> dict[str, dict[str, Any]]:
 
 # ---------------------------------------------------------------- ClinicalTrials.gov
 @router.get("/ctgov")
-def list_cached_studies() -> Any:
+def list_cached_studies(offline: bool = Depends(get_offline)) -> Any:
     known = known_protocols()
     items = []
     for nct in cached_study_ids():
@@ -191,7 +235,7 @@ def list_cached_studies() -> Any:
             "conditions": d.conditions, "protocol_extraction_cached": bool(
                 nct in known and load_cached(known[nct]["sha256"]) is not None),
         })
-    return {"studies": items, "offline": demo_offline()}
+    return {"studies": items, "offline": offline}
 
 
 @router.get("/procedure-codes")
@@ -203,16 +247,21 @@ def list_procedure_codes() -> Any:
 @router.post("/ctgov/{nct_id}")
 def import_ctgov(
     nct_id: str,
+    request: Request,
     refresh: bool = Query(False, description="Re-download even if cached (falls back to cache on network failure)."),
     actor: tuple[str, str] = Depends(get_actor),
     audit: AuditFn = Depends(get_auditor),
+    offline: bool = Depends(get_offline),
 ) -> Any:
     try:
-        res = fetch_study_result(nct_id, refresh=refresh)
+        res = fetch_study_result(nct_id, refresh=refresh, offline=offline)
         rep = map_study_report(res.raw, meta=res.meta)
     except CtgovError as exc:
         return _error(exc.status, exc.code, exc.message, exc.details)
     d = rep.design
+    stored = _stored_design(request, d.id)
+    d.visits = link_visits(d.visits, (res.raw.get("protocolSection") or {}).get("outcomesModule") or {},
+                          stored.visits if stored else None)
     known = known_protocols()
     docs = []
     for doc in rep.documents:
@@ -256,9 +305,9 @@ def import_ctgov(
 
 
 # ---------------------------------------------------------------- protocol PDF
-def _download_protocol(nct: str) -> tuple[bytes, dict[str, Any]]:
+def _download_protocol(nct: str, offline: bool) -> tuple[bytes, dict[str, Any]]:
     """Protocol PDF for a cached study: runtime cache first (gitignored), else the ClinicalTrials.gov CDN."""
-    res = fetch_study_result(nct)
+    res = fetch_study_result(nct, offline=offline)
     docs = [d for d in protocol_documents(res.raw) if d["has_protocol"]]
     if not docs:
         raise ExtractionFailed(404, "no_protocol_document", f"{nct} has no protocol document on ClinicalTrials.gov.")
@@ -266,7 +315,7 @@ def _download_protocol(nct: str) -> tuple[bytes, dict[str, Any]]:
     path = runtime_cache_dir() / f"{nct}_{doc['filename']}"
     if path.exists():
         return path.read_bytes(), doc
-    if demo_offline():
+    if offline:
         raise ExtractionFailed(503, "offline_cache_miss", f"Offline demo mode: the protocol PDF for {nct} is not cached.")
     if (doc.get("size_bytes") or 0) > MAX_UPLOAD_BYTES:
         raise ExtractionFailed(413, "payload_too_large", "The protocol PDF is larger than 20 MB.", {"size_bytes": doc["size_bytes"]})
@@ -284,6 +333,22 @@ def _download_protocol(nct: str) -> tuple[bytes, dict[str, Any]]:
     return r.content, doc
 
 
+def _annotated_candidates(request: Request, result: ExtractionResult, nct_id: str | None,
+                          design_id: str | None) -> ExtractionResult:
+    """A copy of `result` (cached extractions stay untouched) annotated from the registry cache and saved
+    human decisions. `nct_id` is normalized; a stored design for another registry id gives way to the
+    design imported from `nct_id`."""
+    stored = _stored_design(request, design_id)
+    registry_id = nct_id or (stored.registry_id if stored else None)
+    if nct_id and (stored is None or stored.registry_id != nct_id):
+        stored = _stored_design(request, design_id_for(nct_id))
+    result = result.model_copy(deep=True)
+    linked = link_visits(result.visits, _cached_outcomes(registry_id), stored.visits if stored else None)
+    for candidate, visit in zip(result.candidates, linked, strict=True):
+        candidate.visit = visit
+    return result
+
+
 @router.post("/protocol")
 def import_protocol(
     request: Request,
@@ -293,12 +358,15 @@ def import_protocol(
     refresh: bool = Form(default=False),
     actor: tuple[str, str] = Depends(get_actor),
     audit: AuditFn = Depends(get_auditor),
+    offline: bool = Depends(get_offline),
 ) -> Any:
     clen = request.headers.get("content-length")
     if clen and clen.isdigit() and int(clen) > MAX_UPLOAD_BYTES + 64 * 1024:
         return _error(413, "payload_too_large", "The upload is larger than 20 MB.", {"limit_bytes": MAX_UPLOAD_BYTES})
     document: dict[str, Any] | None = None
     try:
+        if nct_id:
+            nct_id = normalize_nct(nct_id)
         if file is not None:
             data = file.file.read(MAX_UPLOAD_BYTES + 1)
             if len(data) > MAX_UPLOAD_BYTES:
@@ -307,25 +375,25 @@ def import_protocol(
                 return _error(400, "empty_file", "The uploaded file is empty.")
             document = {"filename": file.filename, "size_bytes": len(data), "source": "upload"}
         elif nct_id:
-            nct = normalize_nct(nct_id)
-            known = known_protocols().get(nct)
+            known = known_protocols().get(nct_id)
             if known and not refresh and (cached := load_cached(known["sha256"])) is not None:
                 data = b""
                 result = cached
                 document = {**known, "source": "ctgov"}
             else:
-                data, doc = _download_protocol(nct)
+                data, doc = _download_protocol(nct_id, offline)
                 document = {**doc, "source": "ctgov"}
         else:
             return _error(400, "missing_input", "Send a protocol PDF as multipart field 'file', or a form field 'nct_id'.")
         if data:
             with _lock_for(pdf_sha256(data)):  # a double submit waits and then hits the cache
-                result = extract_schedule(data, use_cache=not refresh)
+                result = extract_schedule(data, use_cache=not refresh, offline=offline)
     except CtgovError as exc:
         return _error(exc.status, exc.code, exc.message, exc.details)
     except ExtractionFailed as exc:
         return _error(exc.status, exc.code, exc.message, exc.details)
 
+    result = _annotated_candidates(request, result, nct_id, design_id)
     candidates_hash = record_hash({"candidates": [c.model_dump(mode="json") for c in result.candidates]})
     if (err := _audit(audit, actor, "import.protocol.extract", "protocol_extraction", result.extraction_id, None,
                       candidates_hash, f"{len(result.candidates)} candidate visits ({result.method}"
@@ -364,7 +432,8 @@ def apply_visits(body: ApplyRequest, actor: tuple[str, str] = Depends(get_actor)
     before = record_hash(body.design)
     cleared_fields = [f for f in body.design.missing_fields if f == "visits"]
     new = body.design.model_copy(update={
-        "visits": sorted(body.visits, key=lambda v: v.number),
+        "visits": link_visits(sorted(body.visits, key=lambda v: v.number),
+                              _cached_outcomes(body.design.registry_id), body.design.visits),
         "missing_fields": [f for f in body.design.missing_fields if f != "visits"],
     })
     if (err := _audit(audit, actor, "import.protocol.apply", "trial_design", new.id, before, record_hash(new),

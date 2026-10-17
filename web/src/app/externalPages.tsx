@@ -1,53 +1,22 @@
 /**
- * A9's pages (command center + compliance) are loaded lazily from their index.tsx default
- * exports. import.meta.glob keeps the build green while A9's files don't exist yet: the route
- * then shows a "not available yet" placeholder instead of failing the whole app.
- * features/compliance/index.tsx may also export ApprovalsPage / AuditPage / ValidationPage;
- * otherwise its default export serves all three routes (and reads the path itself).
+ * A9's pages (command center + compliance) are loaded lazily, so their code is split from the
+ * plan pages: the command center is features/command's default export, the compliance pages are
+ * features/compliance's named exports.
  */
-import { lazy, Suspense, type ComponentType, type LazyExoticComponent } from "react";
-import { Link } from "react-router-dom";
-import { EmptyState, Spinner } from "./ui";
+import { lazy, Suspense, type ComponentType } from "react";
+import { Spinner } from "./ui";
+import { useTranslation } from "./i18n";
 
-type PageModule = { default?: ComponentType; [name: string]: unknown };
-
-const commandModules = import.meta.glob<PageModule>("../features/command/index.tsx");
-const complianceModules = import.meta.glob<PageModule>("../features/compliance/index.tsx");
-
-function lazyFrom(
-  modules: Record<string, () => Promise<PageModule>>,
-  exportName: string | null,
-  label: string,
-): LazyExoticComponent<ComponentType> {
-  const loader = Object.values(modules)[0];
-  return lazy(async () => {
-    if (!loader) return { default: () => <NotAvailable label={label} /> };
-    const mod = await loader();
-    const named = exportName ? (mod[exportName] as ComponentType | undefined) : undefined;
-    const Comp = named ?? mod.default;
-    return { default: Comp ?? (() => <NotAvailable label={label} />) };
-  });
-}
-
-function NotAvailable({ label }: { label: string }) {
-  return (
-    <div className="mx-auto max-w-xl pt-10">
-      <EmptyState title={`${label} is not available in this build yet`} action={<Link className="btn-secondary" to="/">Back to import</Link>}>
-        This page is built by another module (A9) and loads automatically once it is present.
-      </EmptyState>
-    </div>
-  );
-}
-
-const CommandPage = lazyFrom(commandModules, null, "Command center");
-const ApprovalsPage = lazyFrom(complianceModules, "ApprovalsPage", "Approvals");
-const AuditPage = lazyFrom(complianceModules, "AuditPage", "Audit trail");
-const ValidationPage = lazyFrom(complianceModules, "ValidationPage", "Validation package");
+const CommandPage = lazy(() => import("../features/command"));
+const ApprovalsPage = lazy(() => import("../features/compliance").then((m) => ({ default: m.ApprovalsPage })));
+const AuditPage = lazy(() => import("../features/compliance").then((m) => ({ default: m.AuditPage })));
+const ValidationPage = lazy(() => import("../features/compliance").then((m) => ({ default: m.ValidationPage })));
 
 function withSuspense(Comp: ComponentType) {
   return function Suspended() {
+    const t = useTranslation();
     return (
-      <Suspense fallback={<div className="pt-10"><Spinner label="Loading page" /></div>}>
+      <Suspense fallback={<div className="pt-10"><Spinner label={t("Loading page", "正在加载页面")} /></div>}>
         <Comp />
       </Suspense>
     );

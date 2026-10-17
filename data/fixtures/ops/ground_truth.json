@@ -221,6 +221,19 @@
       "mechanism": "no effect; starts the day the northern winter ends, when missed visits fall at every northern site (winter multiplier on missed visits)"
     }
   ],
+  "command_lock_recovery": {
+    "simulated": true,
+    "note": "Answer key for the authored command-center rehearsal. Lock dates assume query clearance is the final bottleneck; they are not outputs of the operations milestone forecaster. I1/I4 evidence retains its original start dates and is estimated independently of this key.",
+    "intervention_ids": ["I1", "I4"],
+    "early_verdict": "inconclusive",
+    "plan_band": { "p10": "2028-10-26", "p50": "2028-11-09", "p90": "2028-11-23" },
+    "slipped_p50": "2028-12-14",
+    "recovered_p50": "2028-11-16",
+    "recovery_intervention_id": "I1",
+    "coincidence_intervention_id": "I4",
+    "recovery_days": 28,
+    "slip_beyond_band_days": 21
+  },
   "site_truth": {
     "S01": {
       "rate_mult": 1.056,

@@ -24,6 +24,7 @@ from typing import Any, Literal
 import httpx
 
 from ._contracts import Site, TrialDesign, Visit
+from .endpoints import link_visits
 from .geocode import Geocoder, default_geocoder
 from .paths import ctgov_read_dirs, ctgov_write_dir, demo_offline
 from .templates import TemplateLibrary, default_templates, treatment_weeks_from_registry
@@ -198,7 +199,17 @@ def fetch_study_result(
                 f"ClinicalTrials.gov answered HTTP {resp.status_code} for {nct}.",
                 {"nct_id": nct, "status": resp.status_code},
             )
-        raw = resp.json()
+        try:
+            raw = resp.json()
+        except ValueError:  # a maintenance or firewall page instead of JSON
+            raw = None
+        if not isinstance(raw, dict):  # treated like an unreachable registry; nothing is cached
+            if cached is not None:
+                return FetchResult(cached[0], True, cached[1], stale_fallback=True)
+            raise RegistryUnavailable(
+                f"ClinicalTrials.gov returned a response for {nct} that is not a study record.",
+                {"nct_id": nct, "status": resp.status_code},
+            )
         version: dict[str, Any] = {}
         try:
             v = _get_json(client, f"{API_BASE}/version")
@@ -535,6 +546,8 @@ def map_study_report(
         src["visits"] = f"assumption: data/fixtures/visit_templates.yaml#{sched.template_id}"
     else:
         src["visits"] = "human-confirmed schedule (protocol extraction)"
+
+    visits = link_visits(visits, ps.get("outcomesModule") or {})
 
     if start is not None and end is not None and end > start:
         duration = round((end - start).days / _DAYS_PER_MONTH, 1)

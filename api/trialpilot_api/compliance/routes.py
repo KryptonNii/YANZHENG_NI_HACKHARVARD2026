@@ -34,13 +34,6 @@ async def compliance_error_handler(_request: Request, exc: Exception) -> Respons
     return error_response(exc)
 
 
-def _guard(fn: Any, *args: Any, **kwargs: Any) -> Any:
-    try:
-        return fn(*args, **kwargs)
-    except ComplianceError as exc:
-        return error_response(exc)
-
-
 # ---- audit ---------------------------------------------------------------------------------------
 
 
@@ -54,20 +47,17 @@ def get_audit(
     object_id: str | None = None,
     order: Literal["desc", "asc"] = "desc",
 ) -> Any:
-    def run() -> dict[str, Any]:
-        items, total = audit.list_entries(
-            limit=limit, offset=offset, actor=actor, action=action, object_type=object_type,
-            object_id=object_id, newest_first=(order == "desc"),
-        )
-        return {"items": [e.model_dump(mode="json") for e in items], "total": total,
-                "limit": limit, "offset": offset}
-
-    return _guard(run)
+    items, total = audit.list_entries(
+        limit=limit, offset=offset, actor=actor, action=action, object_type=object_type,
+        object_id=object_id, newest_first=(order == "desc"),
+    )
+    return {"items": [e.model_dump(mode="json") for e in items], "total": total,
+            "limit": limit, "offset": offset}
 
 
 @router.get("/api/audit/verify")
 def get_audit_verify() -> Any:
-    return _guard(audit.verify_chain)
+    return audit.verify_chain()
 
 
 @router.get("/api/audit/export.csv")
@@ -77,15 +67,12 @@ def get_audit_export(
     object_type: str | None = None,
     object_id: str | None = None,
 ) -> Any:
-    def run() -> Response:
-        body = audit.export_csv(actor=actor, action=action, object_type=object_type,
-                                object_id=object_id)
-        return PlainTextResponse(
-            body, media_type="text/csv",
-            headers={"Content-Disposition": 'attachment; filename="audit_trail.csv"'},
-        )
-
-    return _guard(run)
+    body = audit.export_csv(actor=actor, action=action, object_type=object_type,
+                            object_id=object_id)
+    return PlainTextResponse(
+        body, media_type="text/csv",
+        headers={"Content-Disposition": 'attachment; filename="audit_trail.csv"'},
+    )
 
 
 # ---- approvals -----------------------------------------------------------------------------------
@@ -116,51 +103,41 @@ def get_approvals(
     record_type: str | None = None,
     record_id: str | None = None,
 ) -> Any:
-    return _guard(lambda: {"items": workflow.list_views(
-        status=status, record_type=record_type, record_id=record_id)})
+    return {"items": workflow.list_views(
+        status=status, record_type=record_type, record_id=record_id)}
+
+
+# Mutations check identity in the handler body, not as a dependency: FastAPI resolves dependencies
+# before it validates the body, and a malformed body must stay a 422 even without X-User.
 
 
 @router.post("/api/approvals", status_code=201)
 def post_approval(body: ApprovalCreate, x_user: str | None = Header(None)) -> Any:
-    def run() -> Any:
-        req = workflow.create_request(
-            body.record_type, body.record_id, x_user or "", record_hash=body.record_hash,
-            reason=body.reason, title=body.title,
-        )
-        return JSONResponse(status_code=201, content=workflow.view(req.id))
-
-    if not x_user:
-        return _guard(roles.require_user, None)
-    return _guard(run)
+    author = roles.require_identity(x_user)
+    req = workflow.create_request(
+        body.record_type, body.record_id, author, record_hash=body.record_hash,
+        reason=body.reason, title=body.title,
+    )
+    return workflow.view(req.id)
 
 
 @router.get("/api/approvals/{approval_id}")
 def get_approval(approval_id: str) -> Any:
-    return _guard(workflow.view, approval_id)
+    return workflow.view(approval_id)
 
 
 @router.post("/api/approvals/{approval_id}/sign")
 def post_sign(approval_id: str, body: SignBody, x_user: str | None = Header(None)) -> Any:
-    if not x_user:
-        return _guard(roles.require_user, None)
-
-    def run() -> Any:
-        workflow.sign_request(approval_id, x_user, body.pin, body.meaning, reason=body.reason)
-        return workflow.view(approval_id)
-
-    return _guard(run)
+    signer = roles.require_identity(x_user)
+    workflow.sign_request(approval_id, signer, body.pin, body.meaning, reason=body.reason)
+    return workflow.view(approval_id)
 
 
 @router.post("/api/approvals/{approval_id}/reject")
 def post_reject(approval_id: str, body: RejectBody, x_user: str | None = Header(None)) -> Any:
-    if not x_user:
-        return _guard(roles.require_user, None)
-
-    def run() -> Any:
-        workflow.reject_request(approval_id, x_user, body.pin, body.reason)
-        return workflow.view(approval_id)
-
-    return _guard(run)
+    signer = roles.require_identity(x_user)
+    workflow.reject_request(approval_id, signer, body.pin, body.reason)
+    return workflow.view(approval_id)
 
 
 # ---- signatures, users, roles --------------------------------------------------------------------
@@ -168,18 +145,18 @@ def post_reject(approval_id: str, body: RejectBody, x_user: str | None = Header(
 
 @router.get("/api/signatures")
 def get_signatures(record_type: str | None = None, record_id: str | None = None) -> Any:
-    return _guard(lambda: {"items": [
+    return {"items": [
         esign.signature_view(s)
         for s in esign.list_signatures(record_type=record_type, record_id=record_id)
-    ]})
+    ]}
 
 
 @router.get("/api/compliance/users")
 def get_users() -> Any:
-    return _guard(lambda: {"items": [
+    return {"items": [
         {"username": u.username, "display_name": u.display_name, "role": u.role}
         for u in roles.list_users()
-    ], "note": "Demo identities. Send the acting user as the X-User header."})
+    ], "note": "Demo identities. Send the acting user as the X-User header."}
 
 
 @router.get("/api/compliance/roles")
@@ -196,11 +173,32 @@ def _package_dir() -> Path:
     return validation_out_dir() / "package"
 
 
+def _live_status(build_status: str, st: dict[str, Any]) -> str:
+    """Deliverable label from the live approval `st` (`workflow.approval_status`).
+
+    `tpv package` labels a deliverable "approved" / "awaiting approval" from the approval at build
+    time; those labels follow the live approval, so a deliverable never shows "approved" without a
+    valid one. Other build labels (draft, generated, ...) are kept unless the record is approved.
+    """
+    if st["approved"]:
+        return "approved"
+    if build_status not in ("approved", "awaiting approval"):
+        return build_status
+    if st["status"] == "pending":
+        return "awaiting approval"
+    if st["status"] == "rejected":
+        return "rejected"
+    if st["status"] == "approved":
+        return "approval invalid"  # approved, then the record changed
+    # No approval request in this store (e.g. the package was built against another database).
+    return "approval unconfirmed" if build_status == "approved" else build_status
+
+
 @router.get("/api/validation/package")
 def get_validation_package() -> Any:
     index = fs_path(_package_dir() / "package_index.json")
     if not index.is_file():
-        return error_response(ComplianceError(
+        raise ComplianceError(
             404, "package_not_built",
             "No validation package has been generated yet. Run `tpv package`.",
             {
@@ -211,9 +209,9 @@ def get_validation_package() -> Any:
                     "else validation/out"
                 ),
             },
-        ))
+        )
     data = json.loads(index.read_text(encoding="utf-8"))
-    # Approval status is live (QA may sign after the package was generated).
+    # Approval status is live (QA may sign, or the record may change, after the package was built).
     try:
         for d in data.get("deliverables", []):
             rt, rid = d.get("approval_record_type"), d.get("approval_record_id")
@@ -221,7 +219,7 @@ def get_validation_package() -> Any:
                 st = workflow.approval_status(rt, rid)
                 d["approval"] = {k: st.get(k) for k in ("approved", "approval_id", "status",
                                                          "reason")}
-                d["status"] = "approved" if st["approved"] else d.get("status", "draft")
+                d["status"] = _live_status(d.get("status", "draft"), st)
     except ComplianceError:
         pass
     return data
@@ -232,10 +230,10 @@ def get_validation_file(file_path: str) -> Any:
     base = _package_dir().resolve()
     target = (base / file_path).resolve()
     if base not in target.parents and target != base:
-        return error_response(ComplianceError(400, "invalid_path", "Path escapes the package."))
+        raise ComplianceError(400, "invalid_path", "Path escapes the package.")
     target = fs_path(target)
     if not target.is_file():
-        return error_response(ComplianceError(404, "file_not_found", f"{file_path} not found."))
+        raise ComplianceError(404, "file_not_found", f"{file_path} not found.")
     media = mimetypes.guess_type(target.name)[0] or "application/octet-stream"
     if target.suffix == ".md":
         media = "text/markdown; charset=utf-8"

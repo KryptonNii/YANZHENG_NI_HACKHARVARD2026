@@ -1,0 +1,672 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT06067828",
+   "orgStudyIdInfo": {
+    "id": "D5988C00001"
+   },
+   "organization": {
+    "fullName": "AstraZeneca",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "A Study to Evaluate the Effect of Budesonide, Glycopyrronium, Formoterol Fumarate (BGF) Metered Dose Inhaler (MDI), Budesonide and Formoterol Fumarate (BFF) MDI and Placebo MDI on Exercise Parameters in Participants With Chronic Obstructive Pulmonary Disease (COPD).",
+   "officialTitle": "A Double-Blind, Multicentre, Randomized, Three-Period, Three-Treatment, Cross-Over Study to Evaluate the Effect of BGF MDI, BFF MDI, and Placebo MDI on Exercise Parameters in Participants With COPD (ATHLOS)",
+   "acronym": "ATHLOS"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-02",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2023-10-24",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2026-01-22",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2026-01-22",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2023-09-28",
+   "studyFirstSubmitQcDate": "2023-09-28",
+   "studyFirstPostDateStruct": {
+    "date": "2023-10-05",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-03-04",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-03-05",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "AstraZeneca",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false,
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "This study will investigate the effect of Budesonide, Glycopyrronium, and Formoterol Fumarate (BGF) metered dose inhaler (MDI) compared with Placebo MDI, and Budesonide and Formoterol Fumarate (BFF) MDI on isotime inspiratory capacity (IC) and exercise endurance time.",
+   "detailedDescription": "This is a multicenter, three-treatment, three-period, cross-over study to assess the effect of BGF MDI vs Placebo MDI and BFF MDI in participants with COPD who have exertional breathlessness despite treatment with mono or dual COPD maintenance therapy.\n\nEligible participants will be randomized equally (1:1:1:1:1:1) to 1 of 6 treatment sequences. The total duration of the study for each participant will be up to 14 weeks."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ],
+   "keywords": [
+    "Metered Dose Inhalers"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "CROSSOVER",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 171,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "BGF MDI",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Pressurized MDI fixed combination product of Budesonide 160 μg, Glycopyrronium 7.2 μg, and Formoterol Fumarate 4.8 μg per actuation.",
+     "interventionNames": [
+      "Drug: Treatment A : Budesonide, Glycopyrronium, and Formoterol Fumarate"
+     ]
+    },
+    {
+     "label": "BFF MDI",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Pressurized MDI fixed combination product of Budesonide 160 μg and Formoterol Fumarate 4.8 μg per actuation.",
+     "interventionNames": [
+      "Drug: Treatment B: Budesonide and Formoterol Fumarate"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo as pressurized inhalation suspension.",
+     "interventionNames": [
+      "Drug: Treatment C : Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Treatment A : Budesonide, Glycopyrronium, and Formoterol Fumarate",
+     "description": "Randomized participants will receive 2 inhalations of BGF MDI via oral inhalation twice daily (BID).",
+     "armGroupLabels": [
+      "BGF MDI"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Treatment B: Budesonide and Formoterol Fumarate",
+     "description": "Randomized participants will receive 2 inhalations of BFF MDI via oral inhalation BID.",
+     "armGroupLabels": [
+      "BFF MDI"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Treatment C : Placebo",
+     "description": "Randomized participants will receive 2 inhalations of placebo MDI via oral inhalation BID.",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Change from baseline in isotime Inspiratory capacity (IC)",
+     "description": "To assess the effect of BGF MDI relative to Placebo MDI and BGF MDI relative to BFF MDI on dynamic hyperinflation in participants with COPD.",
+     "timeFrame": "2 weeks post-treatment"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Change from baseline in constant work rate cycle ergometry endurance time",
+     "description": "To assess the effect of BGF MDI relative to Placebo MDI, BGF MDI relative to BFF MDI and BFF MDI relative to Placebo MDI on exercise endurance time in participants with COPD.",
+     "timeFrame": "2 weeks post-treatment"
+    },
+    {
+     "measure": "Change from baseline in Isotime dyspnea (NRS)",
+     "description": "To assess the effect of BGF MDI relative to Placebo MDI, BGF MDI relative to BFF MDI and BFF MDI relative to Placebo MDI on Isotime dyspnea in participants with COPD.",
+     "timeFrame": "2 weeks post-treatment"
+    },
+    {
+     "measure": "Change from baseline in functional residual capacity (FRC)",
+     "description": "To assess the effect of BGF MDI relative to BFF MDI and BFF MDI relative to Placebo MDI on FRC in participants with COPD.",
+     "timeFrame": "2 weeks post-treatment"
+    },
+    {
+     "measure": "Change from baseline in total lung capacity (TLC)",
+     "description": "To assess the effect of BGF MDI relative to BFF MDI and BFF MDI relative to Placebo MDI on TLC in participants with COPD.",
+     "timeFrame": "2 weeks post-treatment"
+    },
+    {
+     "measure": "Change from baseline in residual volume (RV)",
+     "description": "To assess the effect of BGF MDI relative to BFF MDI and BFF MDI relative to Placebo MDI on RV in participants with COPD.",
+     "timeFrame": "2 weeks post-treatment"
+    },
+    {
+     "measure": "Change from baseline in RV/TLC",
+     "description": "To assess the effect of BGF MDI relative to BFF MDI and BFF MDI relative to Placebo MDI on RV/TLC in participants with COPD.",
+     "timeFrame": "2 weeks post-treatment"
+    },
+    {
+     "measure": "Change from baseline in specific airway conductance (sGaw)",
+     "description": "To assess the effect of BGF MDI relative to BFF MDI and BFF MDI relative to Placebo MDI on sGaw in participants with COPD.",
+     "timeFrame": "2 weeks post-treatment"
+    },
+    {
+     "measure": "Change from baseline in static Inspiratory capacity (IC)",
+     "description": "To assess the effect of BGF MDI relative to BFF MDI and BFF MDI relative to Placebo MDI on static IC in participants with COPD.",
+     "timeFrame": "2 weeks post-treatment"
+    },
+    {
+     "measure": "Number of participants with serious adverse events (SAEs) and adverse event leading to discontinuation of study intervention (DAEs).",
+     "description": "To assess the safety and tolerability of BGF MDI and BFF MDI.",
+     "timeFrame": "2 weeks post-treatment"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Participant must be male or female, 40 to 80 years of age inclusive, at the time of signing the informed consent.\n* Participant must have:\n\n  * a diagnosis of COPD confirmed by a post-bronchodilator Forced expiratory volume (FEV1)/ Forced vital capacity (FVC) \\< 0.7 at Visit 1\n  * a post-bronchodilator FEV1 ≥ 30% and \\<80% predicted normal (moderate to severe COPD) at Visit 1.\n  * a score of ≥ 2 on the modified Medical Research Council at Visit 1.\n  * pre-bronchodilator FRC of \\> 120% of predicted normal FRC values at Visit 1.\n  * a constant work rate test endurance time of 3 to 8 minutes at Visit 2.\n* Participant must be on a stable dose of mono-or dual inhaled maintenance COPD treatment for at least 6 weeks.\n* Current or former smoker with a history of ≥ 10 pack-years of tobacco smoking\n* Body mass index \\< 40 kg/m2.\n* Male and Female participants (not applicable for female participants with non-childbearing potential) and their partners must use an acceptable method of contraception.\n\nExclusion Criteria:\n\n* A current diagnosis of asthma, asthma- COPD-overlap, or any other chronic respiratory disease other than COPD such as alpha-1 antitrypsin deficiency, active tuberculosis, lung cancer, lung fibrosis, sarcoidosis, interstitial lung disease and pulmonary hypertension.\n* Historical or current evidence of a clinically significant disease\n* Participants on oxygen therapy or that desaturate significantly (\\<82%) during exercise.\n* Participants who are enrolled or entering a pulmonary rehabilitation program during the study.\n* Participants who have cancer that has not been in complete remission for at least 5 years.\n* Participants with a diagnosis of narrow-angle glaucoma that has not been adequately treated and/or change in vision that may be relevant, in the opinion of the investigator.\n* Participants with symptomatic prostatic hypertrophy or bladder neck obstruction/urinary retention that, in the opinion of the investigator, is clinically significant.\n* Participants who have a history of hypersensitivity to β2-agonists, budesonide or any other corticosteroid components, glycopyrronium or other muscarinic anticholinergics, or any component of the MDI or dry powder inhaler.\n* Participant with resting (5 minutes) oxygen saturation SaO2 in room air ≤ 85%.\n* A COPD exacerbation that requires hospitalization within 12 months prior to Visit 1 or a COPD exacerbation that requires systemic corticosteroids or antibiotics within 4 months of Visit 1.\n* Participants with contraindications to cardiopulmonary exercise testing (CPET).\n* Participants who have had a respiratory tract infection within 8 weeks prior to Visit 1 and/or during the screening period.\n* Participants with lung lobectomy, lung volume reduction or lung transplantation.\n* Unable to withhold short-acting bronchodilators for 6 hours prior to lung function testing at each study visit.\n* Known history of drug or alcohol abuse within 12 months.\n* Any regular recreational use of marijuana in the 12 months.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "locations": [
+    {
+     "facility": "Research Site",
+     "city": "Los Angeles",
+     "state": "California",
+     "zip": "90095",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Tarzana",
+     "state": "California",
+     "zip": "91356",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.17334,
+      "lon": -118.55397
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Torrance",
+     "state": "California",
+     "zip": "90502",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.83585,
+      "lon": -118.34063
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Brooksville",
+     "state": "Florida",
+     "zip": "34613",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.55554,
+      "lon": -82.38991
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Anderson",
+     "state": "South Carolina",
+     "zip": "29621",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.50344,
+      "lon": -82.65013
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Greenville",
+     "state": "South Carolina",
+     "zip": "29615",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.85262,
+      "lon": -82.39401
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Spartanburg",
+     "state": "South Carolina",
+     "zip": "29303",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.94957,
+      "lon": -81.93205
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Edmonton",
+     "state": "Alberta",
+     "zip": "T6G 2B7",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 53.55014,
+      "lon": -113.46871
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Kingston",
+     "state": "Ontario",
+     "zip": "K7L 2V7",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 44.22976,
+      "lon": -76.48098
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Sainte-Foy",
+     "state": "Quebec",
+     "zip": "G1V 4G5",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 46.78139,
+      "lon": -71.29217
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Guangzhou",
+     "zip": "510163",
+     "country": "China",
+     "geoPoint": {
+      "lat": 23.11667,
+      "lon": 113.25
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Nanchang",
+     "zip": "330006",
+     "country": "China",
+     "geoPoint": {
+      "lat": 28.68396,
+      "lon": 115.85306
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Shenyang",
+     "zip": "110001",
+     "country": "China",
+     "geoPoint": {
+      "lat": 41.79222,
+      "lon": 123.43278
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Zhengzhou",
+     "zip": "450000",
+     "country": "China",
+     "geoPoint": {
+      "lat": 34.75778,
+      "lon": 113.64861
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Berlin",
+     "zip": "12159",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Berlin",
+     "zip": "14050",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Frankfurt",
+     "zip": "60596",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.68333,
+      "lon": 10.53333
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Großhansdorf",
+     "zip": "22927",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.66528,
+      "lon": 10.28552
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Hanover",
+     "zip": "30449",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.37052,
+      "lon": 9.73322
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Heidelberg",
+     "zip": "69115",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.40768,
+      "lon": 8.69079
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Lübeck",
+     "zip": "23552",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.86893,
+      "lon": 10.68729
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Mainz",
+     "zip": "55128",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.98185,
+      "lon": 8.28008
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Daegu",
+     "zip": "42415",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 35.87028,
+      "lon": 128.59111
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Seoul",
+     "zip": "02447",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Seoul",
+     "zip": "05030",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Benalmádena",
+     "zip": "29630",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 36.5961,
+      "lon": -4.57267
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Madrid",
+     "zip": "28007",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 40.4165,
+      "lon": -3.70256
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Santiago de Compostela",
+     "zip": "15706",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 42.88052,
+      "lon": -8.54569
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Seville",
+     "zip": "41013",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 37.38283,
+      "lon": -5.97317
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Leicester",
+     "zip": "LE1 5WW",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 52.6386,
+      "lon": -1.13169
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "London",
+     "zip": "SW3 6HP",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.50853,
+      "lon": -0.12574
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "London",
+     "zip": "W1T 6AH",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.50853,
+      "lon": -0.12574
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Manchester",
+     "zip": "M23 9GP",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.48095,
+      "lon": -2.23743
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "YES",
+   "description": "Qualified researchers can request access to anonymized individual patient-level data from AstraZeneca group of companies sponsored clinical trials via the request portal Vivli.org. All requests will be evaluated as per the AZ disclosure commitment:\n\nhttps://astrazenecagrouptrials.pharmacm.com/ST/Submission/Disclosure. \"Yes\", indicates that AZ are accepting requests for IPD, but this does not mean all requests will be approved.",
+   "infoTypes": [
+    "STUDY_PROTOCOL",
+    "SAP"
+   ],
+   "timeFrame": "AstraZeneca will meet or exceed data availability as per the commitments made to the EFPIA/PhRMA Data-Sharing Principles. For details of our timelines, please refer to our disclosure commitment at https://astrazenecagrouptrials.pharmacm.com/ST/Submission/Disclosure.",
+   "accessCriteria": "When a request has been approved AstraZeneca will provide access to the anonymized individual patient-level data via secure research environment Vivli.org. A Signed Data Usage Agreement (non-negotiable contract for data accessors) must be in place before accessing requested information.",
+   "url": "https://vivli.org/"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16",
+   "removedCountries": [
+    "Argentina"
+   ]
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D006024",
+     "term": "Glycopyrrolate"
+    },
+    {
+     "id": "D000068759",
+     "term": "Formoterol Fumarate"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D000644",
+     "term": "Quaternary Ammonium Compounds"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D009861",
+     "term": "Onium Compounds"
+    },
+    {
+     "id": "D011759",
+     "term": "Pyrrolidines"
+    },
+    {
+     "id": "D006573",
+     "term": "Heterocyclic Compounds, 1-Ring"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D004983",
+     "term": "Ethanolamines"
+    },
+    {
+     "id": "D000605",
+     "term": "Amino Alcohols"
+    },
+    {
+     "id": "D000438",
+     "term": "Alcohols"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

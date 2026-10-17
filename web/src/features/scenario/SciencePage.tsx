@@ -1,3 +1,4 @@
+import { useTranslation, translate as tr } from "@/app/i18n";
 import { Fragment, useEffect, useState } from "react";
 import { ApiError, api, isAbort } from "@/app/api/client";
 import type {
@@ -37,6 +38,20 @@ const STATUS_WORD: Record<ScienceRowStatus, string> = {
   unavailable: "Unavailable",
 };
 
+function statusWord(status: ScienceRowStatus): string {
+  const chinese: Record<ScienceRowStatus, string> = {
+    match: "一致", close: "接近", gap: "偏差", not_reported: "未报告", unavailable: "不可用",
+  };
+  return tr(STATUS_WORD[status], chinese[status]);
+}
+
+function checkLabel(id: string, fallback: string): string {
+  const chinese: Record<string, string> = {
+    method: "原方法", corrected: "修正结果", library: "参数库", engine_library: "引擎", engine_paper_factors: "引擎（论文因子）",
+  };
+  return tr(CHECK_SHORT[id] ?? fallback, chinese[id] ?? fallback);
+}
+
 function statusTone(status: ScienceRowStatus): "better" | "caution" | "worse" | "neutral" {
   if (status === "match") return "better";
   if (status === "close") return "caution";
@@ -65,7 +80,20 @@ function formatTonneRange(r: ScienceRange): string {
 }
 
 function rowLabel(row: ScienceModuleRow): string {
-  return row.label || moduleLabel(row.module);
+  const labels: Record<string, string> = {
+    "Trial set-up": "试验启动",
+    "Trial management (CTU emissions)": "试验管理（临床试验单位排放）",
+    "Meetings and travel": "会议与差旅",
+    "Intervention (distribution only)": "干预（仅配送）",
+    "Data collection and exchange": "数据采集与交换",
+    "Supplies and equipment": "耗材与设备",
+    "Patient assessments (incl. patient travel)": "患者评估（含患者出行）",
+    "Samples": "样本",
+    "Laboratory": "实验室",
+    "Close-out and archiving": "收尾与归档",
+    "Total": "总计",
+  };
+  return row.label ? tr(row.label, labels[row.label] ?? row.label) : moduleLabel(row.module);
 }
 
 function defaultCheckId(checks: ScienceCheck[]): string {
@@ -89,23 +117,22 @@ function hasSpread(r: ScienceRange | null): boolean {
 }
 
 function ModuleTable({ rows }: { rows: ScienceModuleRow[] }) {
+  const tr = useTranslation();
   const max = Math.max(...rows.flatMap((m) => [m.published_kg ?? 0, m.ours?.p90 ?? 0]), 1);
   const w = (v: number) => `${Math.max((v / max) * 100, 0.6)}%`;
   return (
     <table className="w-full text-sm" data-testid="science-modules">
-      <caption className="sr-only">Per-module carbon, published versus this check</caption>
+      <caption className="sr-only">{tr("Per-module carbon, published versus this check", "各模块碳排放：发表值与本次检验比较")}</caption>
       <thead>
         <tr className="text-left text-xs uppercase tracking-wide text-ink-500">
-          <th scope="col" className="w-44 pb-1 font-semibold">Module</th>
+          <th scope="col" className="w-44 pb-1 font-semibold">{tr("Module", "模块")}</th>
           <th scope="col" className="pb-1 font-semibold">
             <span className="mr-3 inline-flex items-center gap-1">
-              <span className="inline-block h-2 w-3 rounded-sm bg-ink-400" aria-hidden /> Published
-            </span>
+              <span className="inline-block h-2 w-3 rounded-sm bg-ink-400" aria-hidden />{tr(" Published", "发表值")}</span>
             <span className="inline-flex items-center gap-1">
-              <span className="inline-block h-2 w-3 rounded-sm bg-accent-600" aria-hidden /> This check, P50
-            </span>
+              <span className="inline-block h-2 w-3 rounded-sm bg-accent-600" aria-hidden />{tr(" This check, P50", "本次检验，P50")}</span>
           </th>
-          <th scope="col" className="w-36 pb-1 text-right font-semibold">Result</th>
+          <th scope="col" className="w-36 pb-1 text-right font-semibold">{tr("Result", "结果")}</th>
         </tr>
       </thead>
       <tbody>
@@ -124,7 +151,7 @@ function ModuleTable({ rows }: { rows: ScienceModuleRow[] }) {
                     aria-hidden
                   />
                   <span className="whitespace-nowrap text-xs tabular text-ink-600">
-                    {m.published_kg !== null ? formatCo2e(m.published_kg) : "not reported"}
+                    {m.published_kg !== null ? formatCo2e(m.published_kg) : tr("not reported", "未报告")}
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -141,13 +168,13 @@ function ModuleTable({ rows }: { rows: ScienceModuleRow[] }) {
                     </div>
                   ) : null}
                   <span className="whitespace-nowrap text-xs tabular text-ink-600">
-                    {m.ours ? `${formatCo2e(m.ours.p50)} (${formatRange(asKg(m.ours))})` : "not computed"}
+                    {m.ours ? `${formatCo2e(m.ours.p50)} (${formatRange(asKg(m.ours))})` : tr("not computed", "未计算")}
                   </span>
                 </div>
               </div>
             </td>
             <td className="py-2 text-right">
-              <Badge tone={statusTone(m.status)}>{STATUS_WORD[m.status]}</Badge>
+              <Badge tone={statusTone(m.status)}>{statusWord(m.status)}</Badge>
               <span className="mt-1 block text-sm font-semibold tabular text-ink-800">{formatSciPct(m.diff_pct)}</span>
             </td>
           </tr>
@@ -166,29 +193,30 @@ function ModuleTable({ rows }: { rows: ScienceModuleRow[] }) {
 }
 
 function TotalStrip({ row }: { row: ScienceModuleRow }) {
+  const tr = useTranslation();
   const inside =
     row.published_within_range === true
-      ? "Published total is inside the P10–P90 range."
+      ? tr("Published total is inside the P10–P90 range.", "发表总量位于 P10–P90 区间内。")
       : row.published_within_range === false && hasSpread(row.ours)
-        ? "Published total is outside the P10–P90 range."
+        ? tr("Published total is outside the P10–P90 range.", "发表总量位于 P10–P90 区间外。")
         : null;
   return (
     <div className="mt-4">
       <dl className="grid grid-cols-3 gap-3 rounded-lg bg-ink-50 p-3">
         <div>
-          <dt className="text-xs text-ink-500">Published total</dt>
+          <dt className="text-xs text-ink-500">{tr("Published total", "发表总量")}</dt>
           <dd className="text-lg font-bold tabular text-ink-900">{row.published_kg !== null ? formatCo2e(row.published_kg) : "—"}</dd>
         </div>
         <div>
-          <dt className="text-xs text-ink-500">This check (P50)</dt>
+          <dt className="text-xs text-ink-500">{tr("This check (P50)", "本次检验（P50）")}</dt>
           <dd className="text-lg font-bold tabular text-ink-900">{row.ours ? formatCo2e(row.ours.p50) : "—"}</dd>
           {row.ours && <dd className="text-xs tabular text-ink-500">P10–P90 {formatRange(asKg(row.ours))}</dd>}
         </div>
         <div>
-          <dt className="text-xs text-ink-500">Difference</dt>
+          <dt className="text-xs text-ink-500">{tr("Difference", "差异")}</dt>
           <dd className="text-lg font-bold tabular text-ink-900">{formatSciPct(row.diff_pct)}</dd>
           <dd className="mt-1">
-            <Badge tone={statusTone(row.status)}>{STATUS_WORD[row.status]}</Badge>
+            <Badge tone={statusTone(row.status)}>{statusWord(row.status)}</Badge>
           </dd>
         </div>
       </dl>
@@ -206,24 +234,25 @@ const SEVERITY_TONE: Record<string, "worse" | "caution" | "neutral"> = {
 
 function effectText(kg: number | null): string | null {
   if (kg === null) return null;
-  if (kg === 0) return "No change to the published total";
+  if (kg === 0) return tr("No change to the published total", "发表总量无变化");
   const sign = kg > 0 ? "+" : "−";
-  return `${sign}${formatCo2e(Math.abs(kg))} versus the published arithmetic`;
+  return tr(`${sign}${formatCo2e(Math.abs(kg))} versus the published arithmetic`, `相较论文计算值 ${sign}${formatCo2e(Math.abs(kg))}`);
 }
 
 function Findings({ findings }: { findings: ScienceFinding[] }) {
+  const tr = useTranslation();
   if (findings.length === 0) return null;
   const order = { large: 0, medium: 1, info: 2 };
   const rows = [...findings].sort((a, b) => (order[a.severity as keyof typeof order] ?? 3) - (order[b.severity as keyof typeof order] ?? 3));
   return (
-    <section className="mt-4" data-testid="science-findings" aria-label="Findings">
-      <h3 className="text-sm font-semibold text-ink-800">Findings in the paper</h3>
+    <section className="mt-4" data-testid="science-findings" aria-label={tr("Findings", "发现")}>
+      <h3 className="text-sm font-semibold text-ink-800">{tr("Findings in the paper", "论文中的发现")}</h3>
       <ul className="mt-2 space-y-2">
         {rows.map((f) => (
           <li key={f.id} className="rounded-lg border border-ink-100 px-3 py-2">
             <p className="text-sm text-ink-800">
               <Badge tone={SEVERITY_TONE[f.severity] ?? "neutral"} className="mr-2 align-middle">
-                {f.severity}
+                {tr(f.severity, ({ large: "较大", medium: "中等", info: "信息" } as Record<string, string>)[f.severity] ?? f.severity)}
               </Badge>
               {f.summary}
             </p>
@@ -237,13 +266,14 @@ function Findings({ findings }: { findings: ScienceFinding[] }) {
 }
 
 function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: string }) {
+  const tr = useTranslation();
   const [checkId, setCheckId] = useState(() => defaultCheckId(trial.checks));
   const check = trial.checks.find((c) => c.id === checkId) ?? trial.checks[0];
   const assumptions = trial.design_inputs.filter((d) => d.origin === "assumption");
   const facts = [
     trial.phase,
-    trial.patients !== null ? `${trial.patients.toLocaleString("en-US")} patients` : null,
-    trial.sites !== null ? `${trial.sites.toLocaleString("en-US")} sites` : null,
+    trial.patients !== null ? tr(`${trial.patients.toLocaleString("en-US")} patients`, `${trial.patients.toLocaleString("en-US")} 名患者`) : null,
+    trial.sites !== null ? tr(`${trial.sites.toLocaleString("en-US")} sites`, `${trial.sites.toLocaleString("en-US")} 个研究中心`) : null,
     trial.countries.length ? trial.countries.join(", ") : null,
   ].filter(Boolean);
 
@@ -257,7 +287,7 @@ function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: s
           {trial.registry_id && <p className="text-xs text-ink-500">{trial.registry_id}</p>}
           {facts.length > 0 && <p className="mt-1 text-sm text-ink-600">{facts.join(" · ")}</p>}
         </div>
-        {trial.published.total_kg !== null && <Badge tone="neutral">Published {formatCo2e(trial.published.total_kg)}</Badge>}
+        {trial.published.total_kg !== null && <Badge tone="neutral">{tr("Published ", "发表值")}{formatCo2e(trial.published.total_kg)}</Badge>}
       </div>
 
       {trial.summary.length > 0 && (
@@ -271,13 +301,13 @@ function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: s
       {trial.checks.length > 1 && (
         <div className="mt-4">
           <Segmented
-            label={`${trial.name} check`}
+            label={tr(`${trial.name} check`, `${trial.name} 检验`)}
             size="sm"
             value={check?.id ?? checkId}
             onChange={setCheckId}
             options={orderedChecks(trial.checks).map((c) => ({
               value: c.id,
-              label: CHECK_SHORT[c.id] ?? c.title,
+              label: checkLabel(c.id, c.title),
               title: c.title,
             }))}
           />
@@ -289,8 +319,7 @@ function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: s
           <h3 className="text-sm font-semibold text-ink-900">{check.title}</h3>
           {check.description && <p className="mt-1 text-sm text-ink-600">{check.description}</p>}
           {!check.available ? (
-            <p className="mt-3 text-sm text-ink-700" role="status">
-              This check is unavailable. {check.unavailable_reason ?? "The reproduction did not produce it."}
+            <p className="mt-3 text-sm text-ink-700" role="status">{tr("This check is unavailable. ", "此项检验不可用。")}{check.unavailable_reason ?? tr("The reproduction did not produce it.", "复现过程未生成此结果。")}
             </p>
           ) : (
             <>
@@ -309,8 +338,7 @@ function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: s
               )}
               {check.line_changes.length > 0 && (
                 <details className="mt-3">
-                  <summary className="cursor-pointer text-sm font-semibold text-ink-800">
-                    Line-by-line factor changes ({check.line_changes.length})
+                  <summary className="cursor-pointer text-sm font-semibold text-ink-800">{tr("Line-by-line factor changes (", "逐行因子变化（")}{check.line_changes.length})
                   </summary>
                   <ul className="mt-2 space-y-2">
                     {check.line_changes.map((line) => (
@@ -318,9 +346,8 @@ function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: s
                         <p className="font-semibold text-ink-800">
                           {moduleLabel(line.module)} — {line.item}
                         </p>
-                        <p className="mt-0.5 tabular">
-                          Paper {line.paper_kg !== null ? formatCo2e(line.paper_kg) : "—"}
-                          {line.library_kg ? ` · library P50 ${formatCo2e(line.library_kg.p50)}` : ""}
+                        <p className="mt-0.5 tabular">{tr("Paper ", "论文")}{line.paper_kg !== null ? formatCo2e(line.paper_kg) : "—"}
+                          {line.library_kg ? tr(` · library P50 ${formatCo2e(line.library_kg.p50)}`, ` · 参数库 P50 ${formatCo2e(line.library_kg.p50)}`) : ""}
                           {` · ${line.kind.replace(/_/g, " ")}`}
                         </p>
                         {line.note && <p className="mt-0.5">{line.note}</p>}
@@ -334,14 +361,13 @@ function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: s
         </div>
       )}
 
-      {trial.checks.length === 0 && <p className="mt-3 text-sm text-ink-600">This result has no checks.</p>}
+      {trial.checks.length === 0 && <p className="mt-3 text-sm text-ink-600">{tr("This result has no checks.", "此结果没有检验项目。")}</p>}
 
       <Findings findings={trial.findings} />
 
       {assumptions.length > 0 && (
         <details className="mt-4">
-          <summary className="cursor-pointer text-sm font-semibold text-ink-800">
-            Assumptions used to rebuild the trial ({assumptions.length})
+          <summary className="cursor-pointer text-sm font-semibold text-ink-800">{tr("Assumptions used to rebuild the trial (", "重建试验使用的假设（")}{assumptions.length})
           </summary>
           <ul className="mt-2 space-y-1 text-xs text-ink-600">
             {assumptions.map((a) => (
@@ -354,8 +380,7 @@ function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: s
         </details>
       )}
 
-      <p className="mt-3 text-xs text-ink-500">
-        Source:{" "}
+      <p className="mt-3 text-xs text-ink-500">{tr("Source:", "来源：")}{" "}
         <a className="link" href={paperUrl} target="_blank" rel="noreferrer">
           Griffiths, Fox, Williamson et al., BMJ Open 2024
         </a>
@@ -372,34 +397,30 @@ function bandName(title: string, registryId: string | null): string {
 }
 
 function IndustryBand({ band }: { band: ScienceIndustryBand }) {
+  const tr = useTranslation();
   const fileUnits = [...new Set(band.demo_trials.map((t) => t.total_t?.unit).filter((u): u is string => !!u))];
   return (
     <section className="card p-5" aria-labelledby="industry-band-title" data-testid="science-band">
-      <h2 id="industry-band-title" className="text-lg font-bold text-ink-900">
-        Industry band
-      </h2>
+      <h2 id="industry-band-title" className="text-lg font-bold text-ink-900">{tr("Industry band", "行业区间")}</h2>
       <p className="mt-1 text-sm text-ink-700">
         {band.low_t !== null && band.high_t !== null
           ? `${formatTonnes(band.low_t)} – ${formatTonnes(band.high_t)} CO₂e`
-          : "Band not reported"}
-        {band.trials_t.length > 0 ? ` (published trials ${band.trials_t.map((t) => formatTonnes(t)).join(", ")})` : ""}. Sanity check only — a different method, and it includes drug manufacture.
-      </p>
+          : tr("Band not reported", "未报告区间")}
+        {band.trials_t.length > 0 ? tr(` (published trials ${band.trials_t.map((t) => formatTonnes(t)).join(", ")})`, `（已发表试验 ${band.trials_t.map((t) => formatTonnes(t)).join("、")}）`) : ""}{tr(". Sanity check only — a different method, and it includes drug manufacture.", "。仅用于合理性检验：其方法不同，且包含药物制造。")}</p>
       {band.note && <p className="mt-2 text-sm text-ink-600">{band.note}</p>}
       {fileUnits.length > 0 && (
-        <p className="mt-2 text-xs text-ink-500" data-testid="science-band-unit">
-          Demo trial totals are shown in tonnes. The results file labels them {fileUnits.join(", ")}. These numbers are not rescaled.
-          {fileUnits.includes("kg_co2e") ? " The file still says kg_co2e; the figures are displayed as stored." : ""}
+        <p className="mt-2 text-xs text-ink-500" data-testid="science-band-unit">{tr("Demo trial totals are shown in tonnes. The results file labels them ", "演示试验的总量以吨显示。结果文件中的单位标注为")}{fileUnits.join(", ")}{tr(". These numbers are not rescaled.", "。数值未进行换算。")}{fileUnits.includes("kg_co2e") ? tr(" The file still says kg_co2e; the figures are displayed as stored.", " 文件仍标注为 kg_co2e；此处按存储值显示。") : ""}
         </p>
       )}
       {band.demo_trials.length > 0 && (
         <table className="mt-4 w-full text-sm">
-          <caption className="sr-only">Demo trials against the industry carbon band</caption>
+          <caption className="sr-only">{tr("Demo trials against the industry carbon band", "演示试验与行业碳排放区间比较")}</caption>
           <thead>
             <tr className="text-left text-xs uppercase tracking-wide text-ink-500">
-              <th scope="col" className="pb-1 font-semibold">Trial</th>
+              <th scope="col" className="pb-1 font-semibold">{tr("Trial", "试验")}</th>
               <th scope="col" className="pb-1 text-right font-semibold">P50</th>
               <th scope="col" className="pb-1 text-right font-semibold">P10–P90</th>
-              <th scope="col" className="pb-1 text-right font-semibold">Versus band</th>
+              <th scope="col" className="pb-1 text-right font-semibold">{tr("Versus band", "与区间比较")}</th>
             </tr>
           </thead>
           <tbody>
@@ -412,8 +433,8 @@ function IndustryBand({ band }: { band: ScienceIndustryBand }) {
                 <td className="py-2 text-right tabular">{t.total_t ? formatTonnes(t.total_t.p50) : "—"}</td>
                 <td className="py-2 text-right tabular text-ink-600">{t.total_t ? formatTonneRange(t.total_t) : "—"}</td>
                 <td className="py-2 text-right">
-                  {t.within_band === true && <Badge tone="better">Inside the band</Badge>}
-                  {t.within_band === false && <Badge tone="caution">Outside the band</Badge>}
+                  {t.within_band === true && <Badge tone="better">{tr("Inside the band", "区间内")}</Badge>}
+                  {t.within_band === false && <Badge tone="caution">{tr("Outside the band", "区间外")}</Badge>}
                   {t.within_band === null && <span className="text-ink-500">—</span>}
                 </td>
               </tr>
@@ -427,6 +448,7 @@ function IndustryBand({ band }: { band: ScienceIndustryBand }) {
 }
 
 export function SciencePage() {
+  const tr = useTranslation();
   const [data, setData] = useState<ScienceResults | null>(null);
   const [error, setError] = useState<ApiError | Error | null>(null);
   const [loading, setLoading] = useState(true);
@@ -454,33 +476,26 @@ export function SciencePage() {
   return (
     <div className="space-y-5">
       <div className="max-w-3xl">
-        <h1 className="text-2xl font-bold tracking-tight text-ink-900">Science check</h1>
-        <p className="mt-1 text-sm text-ink-600">
-          Can our engine reproduce published trial carbon footprints? We rerun two trials measured with the Low Carbon Clinical Trials Group method
-          (CASPS and PRIMETIME,{" "}
+        <h1 className="text-2xl font-bold tracking-tight text-ink-900">{tr("Science check", "科学验证")}</h1>
+        <p className="mt-1 text-sm text-ink-600">{tr("Can our engine reproduce published trial carbon footprints? We rerun two trials measured with the Low Carbon Clinical Trials Group method (CASPS and PRIMETIME,", "我们的引擎能否复现已发表的试验碳足迹？我们使用低碳临床试验小组的方法重新计算两个试验（CASPS 和 PRIMETIME，")}{" "}
           <a className="link" href={paperUrl} target="_blank" rel="noreferrer">
             BMJ Open 2024
-          </a>
-          ) and report the gaps honestly — parameters are not tuned to hit the published number.
-        </p>
-        <p className="mt-2 text-xs text-ink-500">
-          Match means within {matchPct}%. Close means within {closePct}%. Anything larger is a gap, and each gap has an explanation. Drug supply is a
-          TrialPilot extension and is not in the published total.
-        </p>
+          </a>{tr(") and report the gaps honestly — parameters are not tuned to hit the published number.", "），如实报告差异，不为匹配发表值而调整参数。")}</p>
+        <p className="mt-2 text-xs text-ink-500">{tr("Match means within ", "“一致”表示差异在")}{matchPct}{tr("%. Close means within ", "% 以内；“接近”表示差异在")}{closePct}{tr("%. Anything larger is a gap, and each gap has an explanation. Drug supply is a TrialPilot extension and is not in the published total.", "% 以内；更大的差异均标为“偏差”并提供解释。药物供应是 TrialPilot 扩展项，不计入论文发表的总量。")}</p>
         <div className="mt-2 flex flex-wrap items-center gap-2">
-          {data?.simulated ? <SimulatedBadge /> : data?.data_label ? <Badge tone="neutral">Published data — not simulated</Badge> : null}
+          {data?.simulated ? <SimulatedBadge /> : data?.data_label ? <Badge tone="neutral">{tr("Published data — not simulated", "已发表数据，非模拟数据")}</Badge> : null}
           {data?.engine && (
             <Badge tone={data.engine.available ? "better" : "caution"}>
-              {data.engine.available ? "Engine check available" : "Engine check unavailable"}
+              {data.engine.available ? tr("Engine check available", "引擎检验可用") : tr("Engine check unavailable", "引擎检验不可用")}
             </Badge>
           )}
         </div>
         {data?.data_label && !data.simulated && <p className="mt-2 text-xs text-ink-500">{data.data_label}</p>}
         {(data?.parameter_set_version || data?.draws) && (
           <p className="mt-1 text-xs text-ink-500">
-            {data.parameter_set_version ? `Parameter set ${data.parameter_set_version}` : ""}
-            {data.seed !== null && data.draws !== null ? ` · seed ${data.seed}, ${data.draws.toLocaleString("en-US")} draws` : ""}
-            {data.how_to_reproduce ? ` · reproduce with ${data.how_to_reproduce}` : ""}
+            {data.parameter_set_version ? tr(`Parameter set ${data.parameter_set_version}`, `参数集 ${data.parameter_set_version}`) : ""}
+            {data.seed !== null && data.draws !== null ? tr(` · seed ${data.seed}, ${data.draws.toLocaleString("en-US")} draws`, ` · 随机种子 ${data.seed}，${data.draws.toLocaleString("en-US")} 次抽样`) : ""}
+            {data.how_to_reproduce ? tr(` · reproduce with ${data.how_to_reproduce}`, ` · 复现命令 ${data.how_to_reproduce}`) : ""}
           </p>
         )}
       </div>
@@ -490,17 +505,15 @@ export function SciencePage() {
           <Skeleton className="h-96" />
         </div>
       ) : notReady ? (
-        <EmptyState title="Reproduction results are not available yet">
-          The science module writes <code className="font-mono">science/out/results.json</code> (run{" "}
-          <code className="font-mono">python -m science.reproduce</code>); the API serves it at <code className="font-mono">/api/science/results</code>.
+        <EmptyState title={tr("Reproduction results are not available yet", "复现结果暂不可用")}>{tr("The science module writes ", "科学模块写入")}<code className="font-mono">science/out/results.json</code>{tr(" (run", "（运行")}{" "}
+          <code className="font-mono">python -m science.reproduce</code>{tr("); the API serves it at ", "）；API 通过以下端点提供结果：")}<code className="font-mono">/api/science/results</code>.
         </EmptyState>
       ) : error ? (
-        <ErrorPanel title="Could not load the science results" message={error.message} onRetry={() => setReload((r) => r + 1)} />
+        <ErrorPanel title={tr("Could not load the science results", "无法加载科学验证结果")} message={error.message} onRetry={() => setReload((r) => r + 1)} />
       ) : data && data.trials.length > 0 ? (
         <>
           {data.engine && !data.engine.available && data.engine.reason && (
-            <p className="text-sm text-ink-700" role="status">
-              Engine checks were not run. {data.engine.reason}
+            <p className="text-sm text-ink-700" role="status">{tr("Engine checks were not run. ", "尚未运行引擎检验。")}{data.engine.reason}
             </p>
           )}
           <div className="space-y-5">
@@ -511,7 +524,7 @@ export function SciencePage() {
           {data.industry_band && <IndustryBand band={data.industry_band} />}
         </>
       ) : (
-        <EmptyState title="No trials in the results file" />
+        <EmptyState title={tr("No trials in the results file", "结果文件中没有试验")} />
       )}
     </div>
   );

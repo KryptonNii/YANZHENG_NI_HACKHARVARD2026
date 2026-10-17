@@ -1,0 +1,496 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT06376994",
+   "orgStudyIdInfo": {
+    "id": "IRB00407311"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "1U24HL169566-01",
+     "type": "NIH",
+     "link": "https://reporter.nih.gov/quickSearch/1U24HL169566-01"
+    }
+   ],
+   "organization": {
+    "fullName": "JHSPH Center for Clinical Trials",
+    "class": "OTHER"
+   },
+   "briefTitle": "Multi-Center Clean Air Randomized Controlled Trial in COPD",
+   "officialTitle": "Multi-Center Clean Air Randomized Controlled Trial in COPD",
+   "acronym": "Clean Air"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-07",
+   "overallStatus": "RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2024-05-24",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2029-08-31",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2029-08-31",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2024-04-16",
+   "studyFirstSubmitQcDate": "2024-04-16",
+   "studyFirstPostDateStruct": {
+    "date": "2024-04-22",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-07-30",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-07-31",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "PRINCIPAL_INVESTIGATOR",
+    "investigatorFullName": "Stephan Ehrhardt",
+    "investigatorTitle": "Associate professor",
+    "investigatorAffiliation": "JHSPH Center for Clinical Trials"
+   },
+   "leadSponsor": {
+    "name": "JHSPH Center for Clinical Trials",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "National Heart, Lung, and Blood Institute (NHLBI)",
+     "class": "NIH"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false,
+   "isUsExport": false
+  },
+  "descriptionModule": {
+   "briefSummary": "This is a multi-center randomized, sham-controlled clinical trial to determine the effectiveness of an air cleaner intervention aimed at improving indoor air quality on reducing COPD exacerbation risk and improving quality of life, functional status, rescue medication use.",
+   "detailedDescription": "The Multi-Center Clean Air Randomized Controlled Trial in COPD (Clean Air) is a multi-center, prospective, randomized, double-blind, sham-controlled trial that will enroll 770 former smokers with COPD over a 4-year period and follow participants at regular intervals for one year. The primary endpoint is respiratory specific quality of life. Secondary endpoints include rate of acute exacerbations, rescue medication use, quality of life, and cost-effectiveness."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ],
+   "keywords": [
+    "air cleaner",
+    "indoor air quality",
+    "quality of life",
+    "rescue medication use"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "PREVENTION",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 770,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Active air cleaner",
+     "type": "EXPERIMENTAL",
+     "description": "The active arm will receive two active air cleaners with high efficiency particulate air (HEPA) filters which remove particulate matter (PM), as well as activated carbon filters to remove Nitrogen Dioxide (NO2) and other trace gases.",
+     "interventionNames": [
+      "Device: Air cleaner"
+     ]
+    },
+    {
+     "label": "Sham air cleaner",
+     "type": "SHAM_COMPARATOR",
+     "description": "The sham control treatment arm will receive two sham air cleaners that have the internal HEPA and carbon filters removed, but which will run normally, including similar noise, airflow, and overall appearance compared to active air cleaners, thus blinding participants to filter status.",
+     "interventionNames": [
+      "Device: Sham air cleaner"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DEVICE",
+     "name": "Air cleaner",
+     "description": "The intervention is two active air cleaners with high efficiency particulate air (HEPA) filters which remove PM, as well as activated carbon filters to remove NO2 (and other trace gases). These will be run for a year in a participant's house.",
+     "armGroupLabels": [
+      "Active air cleaner"
+     ]
+    },
+    {
+     "type": "DEVICE",
+     "name": "Sham air cleaner",
+     "description": "The sham intervention is two sham air cleaners that have the internal HEPA and carbon filters removed, but which will run normally, including similar noise, airflow, and overall appearance compared to active air cleaners, thus blinding participants to filter status. These will be run for a year in a participant's house.",
+     "armGroupLabels": [
+      "Sham air cleaner"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "St. George's Respiratory Questionnaire (SGRQ)",
+     "description": "The St. George's Respiratory Questionnaire (SGRQ) is a widely used measure of disease impact as an indicator of disease-specific quality of life. The SGRQ is a disease specific instrument containing 50 items in three subscales (symptoms, activity, and impact). Scores range from 0 to 100, with higher scores indicating more limitations.",
+     "timeFrame": "baseline and 3, 6, 9, and 12 months after baseline"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion criteria\n\nTo be eligible, subjects must meet all these criteria:\n\n1. Age ≥ 40 years.\n2. Self-report of physician diagnosis of COPD.\n3. Spirometry confirmed airway obstruction (post-bronchodilator spirometry of forced expiratory volume in 1 second (FEV1)/forced vital capacity (FVC) \\< 0.7) as defined by the Global Initiative for Obstructive Lung Disease (GOLD) criteria (6, 11)\n4. Tobacco exposure ≥ 10 pack-years. This refers to regular cigarette tobacco consumption.\n5. Self-reported former smoker of at least 6 months' duration. This does not include e-cigarette use.\n6. COPD Assessment Test (CAT) score ≥ 10, Modified Medical Research Council dyspnea scale (mMRC) ≥ 2, or history of moderate or severe exacerbation in the past 12 months (as defined by history of receiving a course of systemic corticosteroids or antibiotics for respiratory problems; or visiting an emergency department or being hospitalized for a COPD exacerbation within the past 12 months.)\n\nExclusion criteria\n\nTo be eligible, subjects must not meet any one of these criteria:\n\n1. Living in a location other than home (e.g., long-term care facility, nursing home)\n2. Other chronic lung diseases, except asthma\n3. Condition with less than a year of life expectancy (e.g., metastatic cancer) or in hospice\n4. Spends \\>2 months per year in location other than home; or plans to change residence in the next 12 months\n5. Pregnant or breastfeeding\n6. Current air cleaner use in the home (\\*If the individual is willing to discontinue use of the personal air cleaner, this person can be eligible if all other eligibility has been met)\n7. Inability to bring air cleaners (about 15 pounds each) into home, either by self, friend, or relative\n8. Deemed by the study investigator to be unable to complete study protocol, including likely lack of internet connectivity\n9. Participating in another interventional clinical trial",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Stephan Ehrhardt, MD, PhD",
+     "role": "CONTACT",
+     "phone": "(410) 502-3872",
+     "email": "sehrhar6@jhu.edu"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "University of Alabama, Lung Health Center",
+     "status": "RECRUITING",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "zip": "35233",
+     "country": "United States",
+     "contacts": [
+      {
+       "name": "Geneva Avery",
+       "role": "CONTACT",
+       "phone": "205-934-5555",
+       "email": "lunghealth@uabmc.edu"
+      },
+      {
+       "name": "James Michael Wells, MD",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "University of California, Los Angeles",
+     "status": "RECRUITING",
+     "city": "Los Angeles",
+     "state": "California",
+     "zip": "90095",
+     "country": "United States",
+     "contacts": [
+      {
+       "name": "Tiffany Bina",
+       "role": "CONTACT",
+       "phone": "310-206-1629",
+       "email": "tbina@mednet.ucla.edu"
+      },
+      {
+       "name": "Igor Barjaktarevic, MD",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "University of Iowa",
+     "status": "RECRUITING",
+     "city": "Iowa City",
+     "state": "Iowa",
+     "zip": "52242",
+     "country": "United States",
+     "contacts": [
+      {
+       "name": "Eric Garcia",
+       "role": "CONTACT",
+       "phone": "319-353-8863",
+       "email": "eric-garcia@uiowa.edu"
+      },
+      {
+       "name": "Alejandro Comellas, MD",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 41.66113,
+      "lon": -91.53017
+     }
+    },
+    {
+     "facility": "University of Maryland",
+     "status": "RECRUITING",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21201",
+     "country": "United States",
+     "contacts": [
+      {
+       "name": "Valeriya Rodionova",
+       "role": "CONTACT",
+       "phone": "410-328-2835",
+       "email": "vrodionova@som.umaryland.edu"
+      },
+      {
+       "name": "William Grier, MD",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "Johns Hopkins",
+     "status": "RECRUITING",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21224",
+     "country": "United States",
+     "contacts": [
+      {
+       "name": "Wendy Lorizio",
+       "role": "CONTACT",
+       "phone": "410-510-2449",
+       "email": "wlorizi1@jhmi.edu"
+      },
+      {
+       "name": "Maggie Maly",
+       "role": "CONTACT",
+       "phone": "410-550-9527",
+       "email": "mmaly1@jhmi.edu"
+      }
+     ],
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "Tidal Health",
+     "status": "RECRUITING",
+     "city": "Salisbury",
+     "state": "Maryland",
+     "zip": "21801",
+     "country": "United States",
+     "contacts": [
+      {
+       "name": "Sandra Fetko",
+       "role": "CONTACT",
+       "phone": "410-912-6045",
+       "email": "sandra.fetko@tidalhealth.org"
+      },
+      {
+       "name": "Robert Chasse, MD",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 38.36067,
+      "lon": -75.59937
+     }
+    },
+    {
+     "facility": "Beth Israel Deaconess Medical Center",
+     "status": "RECRUITING",
+     "city": "Boston",
+     "state": "Massachusetts",
+     "zip": "02215",
+     "country": "United States",
+     "contacts": [
+      {
+       "name": "Alethea atadika",
+       "role": "CONTACT",
+       "phone": "781-964-8163",
+       "email": "aatadika@bidmc.harvard.edu"
+      },
+      {
+       "name": "Mary Rice, MD",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 42.35843,
+      "lon": -71.05977
+     }
+    },
+    {
+     "facility": "University of Michigan",
+     "status": "RECRUITING",
+     "city": "Ann Arbor",
+     "state": "Michigan",
+     "zip": "48109",
+     "country": "United States",
+     "contacts": [
+      {
+       "name": "Crystal Cutlip",
+       "role": "CONTACT",
+       "phone": "734-647-6399",
+       "email": "ccutlip@med.umich.edu"
+      },
+      {
+       "name": "Meilan Han, MD",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 42.27756,
+      "lon": -83.74088
+     }
+    },
+    {
+     "facility": "Dartmouth Hitchcock",
+     "status": "RECRUITING",
+     "city": "Lebanon",
+     "state": "New Hampshire",
+     "zip": "03756",
+     "country": "United States",
+     "contacts": [
+      {
+       "name": "Athena Fowler",
+       "role": "CONTACT",
+       "phone": "603-650-0567",
+       "email": "athena.r.fowler.shaw@hitchcock.org"
+      },
+      {
+       "name": "Laura Paulin, MD",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 43.64229,
+      "lon": -72.25176
+     }
+    },
+    {
+     "facility": "Cleveland Clinic",
+     "status": "RECRUITING",
+     "city": "Cleveland",
+     "state": "Ohio",
+     "zip": "44195",
+     "country": "United States",
+     "contacts": [
+      {
+       "name": "Elena Engel",
+       "role": "CONTACT",
+       "phone": "224-235-8363",
+       "email": "engele2@ccf.org"
+      },
+      {
+       "name": "Russel Bowler, MD",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 41.4995,
+      "lon": -81.69541
+     }
+    },
+    {
+     "facility": "Reading Hospital",
+     "status": "RECRUITING",
+     "city": "West Reading",
+     "state": "Pennsylvania",
+     "zip": "19611",
+     "country": "United States",
+     "contacts": [
+      {
+       "name": "Pamela marrero",
+       "role": "CONTACT",
+       "phone": "484-628-8355",
+       "email": "pamela.marrero@towerhealth.org"
+      },
+      {
+       "name": "Luis Murillo, MD",
+       "role": "PRINCIPAL_INVESTIGATOR"
+      }
+     ],
+     "geoPoint": {
+      "lat": 40.3337,
+      "lon": -75.94743
+     }
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

@@ -7,9 +7,11 @@ from collections.abc import Callable
 
 import numpy as np
 import pytest
+from pydantic import ValidationError
 from trialpilot_contracts import Levers, Parameter, ScenarioResult, Site, TrialDesign
 
 from trialpilot_engine import EngineInputError, compute_scenario, scenario_draws
+from trialpilot_engine.levers import _sites, build_activity
 from trialpilot_engine.model import ScenarioDraws
 
 ALL_MODULES = ("setup", "trial_management", "meetings_travel", "intervention", "data_collection",
@@ -37,6 +39,106 @@ def module_keys(*modules: str) -> set[str]:
 
 
 # ---------------------------------------------------------------- hand-computed effects
+
+@pytest.mark.parametrize(("field", "value"), [
+    ("enrollment_rate_multiplier", 0.49), ("enrollment_rate_multiplier", 1.51),
+    ("enrollment_rate_multiplier", float("nan")),
+    ("added_country_count", -1), ("added_country_count", 6), ("added_country_count", 1.5),
+])
+def test_design_lever_bounds(field: str, value: float) -> None:
+    with pytest.raises(ValidationError):
+        Levers.model_validate({field: value})
+
+
+@pytest.mark.parametrize(("rate", "countries"), [(0.5, 0), (1.0, 2), (1.5, 5)])
+def test_design_lever_bounds_are_inclusive(rate: float, countries: int) -> None:
+    levers = Levers(enrollment_rate_multiplier=rate, added_country_count=countries)
+    assert levers.enrollment_rate_multiplier == rate
+    assert levers.added_country_count == countries
+
+
+def test_zero_added_countries_preserves_sites(
+    tiny: Callable[..., TrialDesign], unit_params: dict[str, Parameter],
+) -> None:
+    d = tiny(sites=[Site(id=f"s{i}", name=f"Site {i}", country="US") for i in range(3)])
+    sites, notes = _sites(d, Levers(added_country_count=0), unit_params, warnings := [])
+    assert sites == d.sites
+    assert all(a is b for a, b in zip(sites, d.sites, strict=True))
+    assert notes == warnings == []
+    included, _ = _sites(d, Levers(excluded_site_ids=["s1"], added_country_count=0), unit_params, [])
+    assert included == [d.sites[0], d.sites[2]]
+    implicit = compute_scenario(d, Levers(), unit_params, draws=20)
+    explicit = compute_scenario(d, Levers(added_country_count=0), unit_params, draws=20)
+    assert implicit.model_dump(exclude={"computed_at"}) == explicit.model_dump(exclude={"computed_at"})
+
+
+def test_added_countries_use_median_and_participate_in_activity(
+    tiny: Callable[..., TrialDesign], unit_params: dict[str, Parameter],
+) -> None:
+    d = tiny(sites=[Site(id=f"s{i}", name=f"Site {i}", country="US", expected_enrollment=e)
+                    for i, e in enumerate([10, 20, 30])])
+    original = d.model_dump()
+    levers = Levers(added_country_count=2)
+    sites, notes = _sites(d, levers, unit_params, warnings := [])
+    # A median of 20 patients is an enrollment weight, never 20 sites per country.
+    assert len(sites) == 5
+    assert [s.id for s in sites[3:]] == [f"assumed-country-{n}-site-1" for n in (1, 2)]
+    assert all(s.country == "assumed" and s.expected_enrollment == 20 for s in sites[3:])
+    assert all(s.lat is None and s.lon is None for s in sites[3:])
+    assert "Added countries are assumptions, not registry sites." in warnings
+    assert any("one site" in note and "median" in note and "(20)" in note for note in notes)
+    assert all(note in warnings for note in notes)
+    act = build_activity(d, levers, unit_params)
+    assert act.sites == 5
+    assert sum(c.patients for c in act.countries) == pytest.approx(d.enrollment_target)
+    assert next(c for c in act.countries if c.code == "assumed").patients == pytest.approx(4)
+    base = compute_scenario(d, Levers(), unit_params, draws=20)
+    added = compute_scenario(d, levers, unit_params, draws=20)
+    assert module(added, "meetings_travel")[0] > module(base, "meetings_travel")[0]
+    monitoring = next(m for m in added.modules if m.module == "meetings_travel")
+    assert any(p.inputs.get("active_sites") == 5 for p in monitoring.provenance)
+    assert "Added countries are assumptions, not registry sites." in added.warnings
+    assert d.model_dump() == original
+
+
+@pytest.mark.parametrize("expected", [None, 0.0, -10.0, float("nan"), float("inf")])
+def test_added_countries_without_median_assume_one_site(
+    tiny: Callable[..., TrialDesign], unit_params: dict[str, Parameter], expected: float | None,
+) -> None:
+    d = tiny(sites=[Site(id="s1", name="Site 1", country="US", expected_enrollment=expected)])
+    sites, notes = _sites(d, Levers(added_country_count=2), unit_params, warnings := [])
+    assert len(sites) == 3
+    assert [s.id for s in sites[1:]] == ["assumed-country-1-site-1", "assumed-country-2-site-1"]
+    assert all(s.expected_enrollment == unit_params["assume.design.patients_per_site"].value_mid
+               for s in sites[1:])
+    assert any("assume.design.patients_per_site" in note for note in notes)
+    assert all(note in warnings for note in notes)
+    assert "Added countries are assumptions, not registry sites." in warnings
+
+
+def test_added_country_weight_uses_only_active_positive_finite_sites(
+    tiny: Callable[..., TrialDesign], unit_params: dict[str, Parameter],
+) -> None:
+    d = tiny(sites=[Site(id=f"s{i}", name=f"Site {i}", country="US", expected_enrollment=e)
+                    for i, e in enumerate([10, 20, 30, 1000, 0, -10, float("nan"), float("inf")])])
+    sites, _ = _sites(d, Levers(added_country_count=1, excluded_site_ids=["s3"]), unit_params, [])
+    assert len(sites) == 8  # seven retained sites and one assumed site
+    assert sites[-1].id == "assumed-country-1-site-1"
+    assert sites[-1].expected_enrollment == 20
+
+
+def test_infinite_expected_enrollment_is_unknown_in_allocation(
+    tiny: Callable[..., TrialDesign], unit_params: dict[str, Parameter],
+) -> None:
+    d = tiny(sites=[Site(id="a", name="A", country="US", expected_enrollment=10),
+                    Site(id="b", name="B", country="GB", expected_enrollment=float("inf"))])
+    act = build_activity(d, Levers(), unit_params)
+    assert {g.code: g.patients for g in act.countries} == {"gb": 5.0, "us": 5.0}
+    assert "1 sites have no expected enrollment: given the mean of the others." in act.notes
+    r = compute_scenario(d, Levers(), unit_params, draws=10)
+    assert r.patient_travel_hours.p50 is not None
+    assert not any("unknown input" in w for w in r.warnings)
+
 
 def test_remote_monitoring_half(tiny: Callable[..., TrialDesign], unit_params: dict[str, Parameter]) -> None:
     r = compute_scenario(tiny(), Levers(remote_monitoring_share=0.5), unit_params, draws=10)

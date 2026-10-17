@@ -8,6 +8,7 @@ by `tpv defects-run` as an independent detection stage next to unit tests and th
 from __future__ import annotations
 
 import os
+import shutil
 import sqlite3
 import tempfile
 from collections.abc import Callable
@@ -29,13 +30,29 @@ def _expect_error(fn: Callable[[], Any], code: str, c: Any) -> tuple[bool, str]:
 def run_probes() -> list[dict[str, Any]]:
     from trialpilot_api import compliance as c
 
-    results: list[dict[str, Any]] = []
     saved = {k: os.environ.get(k) for k in ("TP_SECRET_PEPPER", "TP_DEMO_PINS")}
-    os.environ["TP_SECRET_PEPPER"] = "tpv-controls-probe"
-    os.environ["TP_DEMO_PINS"] = ""
     tmp = tempfile.mkdtemp(prefix="tpv-controls-")
-    st = c.store.Store(Path(tmp) / "probe.sqlite")
-    c.roles.seed_demo_users(st)
+    st = None
+    try:
+        os.environ["TP_SECRET_PEPPER"] = "tpv-controls-probe"
+        os.environ["TP_DEMO_PINS"] = ""
+        st = c.store.Store(Path(tmp) / "probe.sqlite")
+        c.roles.seed_demo_users(st)
+        return _probe(c, st, tmp)
+    finally:
+        if st is not None:
+            st.close()
+        for k, v in saved.items():
+            if v is None:
+                os.environ.pop(k, None)
+            else:
+                os.environ[k] = v
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
+def _probe(c: Any, st: Any, tmp: str) -> list[dict[str, Any]]:
+    results: list[dict[str, Any]] = []
+    cp = None
 
     def add(pid: str, req: str, title: str, outcome: tuple[bool, str]) -> None:
         results.append({"id": pid, "req": req, "control": title, "holds": bool(outcome[0]),
@@ -119,10 +136,6 @@ def run_probes() -> list[dict[str, Any]]:
     except Exception as exc:  # a crash in the probe is itself a finding
         add("CX", "", "probe crashed", (False, f"{type(exc).__name__}: {exc}"))
     finally:
-        st.close()
-        for k, v in saved.items():
-            if v is None:
-                os.environ.pop(k, None)
-            else:
-                os.environ[k] = v
+        if cp is not None:
+            cp.close()
     return results

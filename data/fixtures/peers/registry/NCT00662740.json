@@ -1,0 +1,1202 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT00662740",
+   "orgStudyIdInfo": {
+    "id": "1184.14"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2007-005134-36",
+     "type": "EUDRACT_NUMBER",
+     "domain": "EudraCT"
+    }
+   ],
+   "organization": {
+    "fullName": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Tiotropium/Salmeterol Inhalation Powder (Spiriva Handihaler and Salmeterol Polyethylene (PE) Capsule) in Chronic Obstructive Pulmonary Disease (COPD)",
+   "officialTitle": "1-yr Study Comparing TioSal Combo Regimens Versus Single Agent Therapies (Spiriva HandiHaler and Salmeterol PE Capsule)"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2023-08",
+   "overallStatus": "TERMINATED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2008-04-15",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2008-11-21",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2008-11-21",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2008-04-17",
+   "studyFirstSubmitQcDate": "2008-04-18",
+   "studyFirstPostDateStruct": {
+    "date": "2008-04-21",
+    "type": "ESTIMATED"
+   },
+   "dispFirstSubmitDate": "2014-04-30",
+   "dispFirstSubmitQcDate": "2014-04-30",
+   "dispFirstPostDateStruct": {
+    "date": "2014-05-16",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2023-08-18",
+   "lastUpdatePostDateStruct": {
+    "date": "2023-08-23",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "The primary objectives of this study are to assess bronchodilator efficacy as determined by forced expiratory volume in one second (FEV1), the effect on dyspnoea as determined by the Baseline Dyspnoea Index/Transition Dyspnoea Index (BDI/TDI), the effect on health status as determined by the St George Respiratory Questionnaire (SGRQ) and the effect on chronic obstructive pulmonary disease (COPD) exacerbations."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 220,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Tiotropium/Salmeterol quaque die (QD, once daily)",
+     "type": "EXPERIMENTAL",
+     "description": "Tiotropium/Salmeterol Inhalation Powder, Hard Polyethylene Capsule",
+     "interventionNames": [
+      "Drug: Tiotropium/Salmeterol QD"
+     ]
+    },
+    {
+     "label": "Tiotropium quaque die (QD, once daily)",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Tiotropium Inhalation Powder, hard gelatine capsule (Spiriva®)",
+     "interventionNames": [
+      "Drug: Tiotropium (Spiriva®)"
+     ]
+    },
+    {
+     "label": "Salmeterol bis in die (BID, twice daily)",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Salmeterol Inhalation Powder, hard PE capsule",
+     "interventionNames": [
+      "Drug: Salmeterol"
+     ]
+    },
+    {
+     "label": "Tiotropium/Salmeterol quaque die (QD, once daily)+ Salmeterol",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Tiotropium/Salmeterol Inhalation Powder, Hard Polyethylene Capsule, plus Salmeterol Inhalation Powder, hard PE capsule",
+     "interventionNames": [
+      "Drug: Tiotropium/Salmeterol QD+ Salmeterol"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo Inhalation Powder, hard PE capsule / hard gelatine capsule",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Tiotropium/Salmeterol QD",
+     "description": "Tiotropium/Salmeterol Inhalation Powder, Hard Polyethylene Capsule",
+     "armGroupLabels": [
+      "Tiotropium/Salmeterol quaque die (QD, once daily)"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Placebo Inhalation Powder, hard PE capsule / hard gelatine capsule",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Salmeterol",
+     "description": "Salmeterol Inhalation Powder, hard PE capsule",
+     "armGroupLabels": [
+      "Salmeterol bis in die (BID, twice daily)"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Tiotropium/Salmeterol QD+ Salmeterol",
+     "description": "Tiotropium/Salmeterol Inhalation Powder, Hard Polyethylene Capsule, plus Salmeterol Inhalation Powder, hard PE capsule",
+     "armGroupLabels": [
+      "Tiotropium/Salmeterol quaque die (QD, once daily)+ Salmeterol"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Tiotropium (Spiriva®)",
+     "description": "Tiotropium, Spiriva®",
+     "armGroupLabels": [
+      "Tiotropium quaque die (QD, once daily)"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Trough forced expiratory volume in one second (FEV1) response",
+     "timeFrame": "12 Weeks, 24 Weeks and 48 Weeks"
+    },
+    {
+     "measure": "FEV1 area under the curve (AUC) 0-8h response",
+     "timeFrame": "12 Weeks, 24 Weeks and 48 Weeks"
+    },
+    {
+     "measure": "Mahler Transition Dyspnoea Index (TDI) focal score",
+     "timeFrame": "12 Weeks, 24 Weeks and 48 Weeks"
+    },
+    {
+     "measure": "St George Respiratory Questionnaire (SGRQ) total score",
+     "timeFrame": "12 Weeks, 24 Weeks and 48 Weeks"
+    },
+    {
+     "measure": "Time to first moderate to severe COPD exacerbation",
+     "timeFrame": "12 Weeks, 24 Weeks and 48 Weeks"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "FEV1 AUC 0-8h response",
+     "timeFrame": "4, 36 and 48 weeks"
+    },
+    {
+     "measure": "Trough FEV1 response",
+     "timeFrame": "4, 36 and 48 weeks"
+    },
+    {
+     "measure": "Peak FEV1 response",
+     "timeFrame": "12, 24, 36 and 48 weeks"
+    },
+    {
+     "measure": "Use of rescue medication (weekly mean number of puffs of as-needed salbutamol/albuterol per day, daytime and night-time)",
+     "timeFrame": "24 hours"
+    },
+    {
+     "measure": "Forced vital capacity (FVC) AUC0-8h and trough FVC response",
+     "timeFrame": "48 weeks"
+    },
+    {
+     "measure": "Individual FEV1, FVC and peak expiratory flow (PEF) measurements",
+     "timeFrame": "48 weeks"
+    },
+    {
+     "measure": "Weekly mean morning pre-dose and evening pre-dose PEFs and FEV1 (recorded by Asthma Monitor® 2 (AM2+)); PEFs determined by spirometry ]",
+     "timeFrame": "48 weeks"
+    },
+    {
+     "measure": "Weekly mean number of COPD related night time awakenings",
+     "timeFrame": "1 week"
+    },
+    {
+     "measure": "Mahler TDI focal score",
+     "timeFrame": "4, 36 and 48 weeks"
+    },
+    {
+     "measure": "Mahler Dyspnoea Indices (Functional Impairment, Magnitude of Task and Magnitude of Effort)",
+     "timeFrame": "4, 12, 24, 36 and 48 weeks"
+    },
+    {
+     "measure": "SGRQ total score, and the impact, activity and symptoms domain scores from the SGRQ",
+     "timeFrame": "4, 12, 36 and 48 weeks"
+    },
+    {
+     "measure": "All adverse events",
+     "timeFrame": "48 weeks"
+    },
+    {
+     "measure": "Vital signs: pulse rate and blood pressure",
+     "timeFrame": "Baseline and 4 weeks"
+    },
+    {
+     "measure": "Routine blood chemistry, haematology and urinalysis",
+     "timeFrame": "Baseline and 48 weeks"
+    },
+    {
+     "measure": "Vital status of randomised patients",
+     "timeFrame": "48 weeks"
+    },
+    {
+     "measure": "Number of days in hospital (including ambulance transportation",
+     "timeFrame": "48 weeks"
+    },
+    {
+     "measure": "Number of unscheduled health care provider visits",
+     "timeFrame": "48 weeks"
+    },
+    {
+     "measure": "Number of visits in emergency room (including ambulance transportation)",
+     "timeFrame": "48 weeks"
+    },
+    {
+     "measure": "Number of days in intensive care unit",
+     "timeFrame": "48 weeks"
+    },
+    {
+     "measure": "Concomitant medications (for instance antibiotics and systemic steroids).",
+     "timeFrame": "48 weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Main Inclusion criteria:\n\n* Diagnosis of COPD\n* Post-bronchodilator FEV1\\<80% predicted and FEV1/FVC\\<70% predicted\n\nMain Exclusion criteria:\n\n* Significant other diseases then COPD\n* Recent myocardial infarction (MI)\n* Unstable or life-threatening arrythmia requiring intervention or change in drug therapy\n* Hospitalisation for cardiac failure in past year\n* History of asthma",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Boehringer Ingelheim",
+     "affiliation": "Boehringer Ingelheim",
+     "role": "STUDY_CHAIR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "1184.14.01013 Boehringer Ingelheim Investigational Site",
+     "city": "Boulder",
+     "state": "Colorado",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.01499,
+      "lon": -105.27055
+     }
+    },
+    {
+     "facility": "1184.14.01018 Boehringer Ingelheim Investigational Site",
+     "city": "Wheat Ridge",
+     "state": "Colorado",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.7661,
+      "lon": -105.07721
+     }
+    },
+    {
+     "facility": "1184.14.01006 Boehringer Ingelheim Investigational Site",
+     "city": "Winter Park",
+     "state": "Florida",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.6,
+      "lon": -81.33924
+     }
+    },
+    {
+     "facility": "1184.14.01003 Boehringer Ingelheim Investigational Site",
+     "city": "Coeur d'Alene",
+     "state": "Idaho",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.67768,
+      "lon": -116.78047
+     }
+    },
+    {
+     "facility": "1184.14.01015 Boehringer Ingelheim Investigational Site",
+     "city": "South Bend",
+     "state": "Indiana",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.68338,
+      "lon": -86.25001
+     }
+    },
+    {
+     "facility": "1184.14.01007 Boehringer Ingelheim Investigational Site",
+     "city": "Lafayette",
+     "state": "Louisiana",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.22409,
+      "lon": -92.01984
+     }
+    },
+    {
+     "facility": "1184.14.01005 Boehringer Ingelheim Investigational Site",
+     "city": "Bangor",
+     "state": "Maine",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.79884,
+      "lon": -68.77265
+     }
+    },
+    {
+     "facility": "1184.14.01020 Boehringer Ingelheim Investigational Site",
+     "city": "Edina",
+     "state": "Minnesota",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.88969,
+      "lon": -93.34995
+     }
+    },
+    {
+     "facility": "1184.14.01009 Boehringer Ingelheim Investigational Site",
+     "city": "Burlington",
+     "state": "North Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.09569,
+      "lon": -79.4378
+     }
+    },
+    {
+     "facility": "1184.14.01002 Boehringer Ingelheim Investigational Site",
+     "city": "Cincinnati",
+     "state": "Ohio",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.12711,
+      "lon": -84.51439
+     }
+    },
+    {
+     "facility": "1184.14.01021 Boehringer Ingelheim Investigational Site",
+     "city": "Toledo",
+     "state": "Ohio",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.66394,
+      "lon": -83.55521
+     }
+    },
+    {
+     "facility": "1184.14.01012 Boehringer Ingelheim Investigational Site",
+     "city": "East Providence",
+     "state": "Rhode Island",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.81371,
+      "lon": -71.37005
+     }
+    },
+    {
+     "facility": "1184.14.01017 Boehringer Ingelheim Investigational Site",
+     "city": "Greenville",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.85262,
+      "lon": -82.39401
+     }
+    },
+    {
+     "facility": "1184.14.01008 Boehringer Ingelheim Investigational Site",
+     "city": "Spartanburg",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.94957,
+      "lon": -81.93205
+     }
+    },
+    {
+     "facility": "1184.14.01014 Boehringer Ingelheim Investigational Site",
+     "city": "Houston",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.76328,
+      "lon": -95.36327
+     }
+    },
+    {
+     "facility": "1184.14.01022 Boehringer Ingelheim Investigational Site",
+     "city": "Killeen",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 31.11712,
+      "lon": -97.7278
+     }
+    },
+    {
+     "facility": "1184.14.01001 Boehringer Ingelheim Investigational Site",
+     "city": "San Antonio",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.42412,
+      "lon": -98.49363
+     }
+    },
+    {
+     "facility": "1184.14.01010 Boehringer Ingelheim Investigational Site",
+     "city": "Temple",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 31.09823,
+      "lon": -97.34278
+     }
+    },
+    {
+     "facility": "1184.14.01011 Boehringer Ingelheim Investigational Site",
+     "city": "Richmond",
+     "state": "Virginia",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.55376,
+      "lon": -77.46026
+     }
+    },
+    {
+     "facility": "1184.14.01019 Boehringer Ingelheim Investigational Site",
+     "city": "Richmond",
+     "state": "Virginia",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.55376,
+      "lon": -77.46026
+     }
+    },
+    {
+     "facility": "1184.14.43001 Boehringer Ingelheim Investigational Site",
+     "city": "Feldbach",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 46.95306,
+      "lon": 15.88833
+     }
+    },
+    {
+     "facility": "1184.14.32001 Boehringer Ingelheim Investigational Site",
+     "city": "Brussels",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.85045,
+      "lon": 4.34878
+     }
+    },
+    {
+     "facility": "1184.14.32004 Boehringer Ingelheim Investigational Site",
+     "city": "Turnhout",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.32254,
+      "lon": 4.94471
+     }
+    },
+    {
+     "facility": "1184.14.02005 Boehringer Ingelheim Investigational Site",
+     "city": "Calgary",
+     "state": "Alberta",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 51.05011,
+      "lon": -114.08529
+     }
+    },
+    {
+     "facility": "1184.14.02003 Boehringer Ingelheim Investigational Site",
+     "city": "Chilliwack",
+     "state": "British Columbia",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 49.16638,
+      "lon": -121.95257
+     }
+    },
+    {
+     "facility": "1184.14.02010 Boehringer Ingelheim Investigational Site",
+     "city": "Vancouver",
+     "state": "British Columbia",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 49.24966,
+      "lon": -123.11934
+     }
+    },
+    {
+     "facility": "1184.14.02001 Boehringer Ingelheim Investigational Site",
+     "city": "Niagara Falls",
+     "state": "Ontario",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.10012,
+      "lon": -79.06627
+     }
+    },
+    {
+     "facility": "1184.14.02002 Boehringer Ingelheim Investigational Site",
+     "city": "La Malbaie",
+     "state": "Quebec",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 47.654,
+      "lon": -70.15268
+     }
+    },
+    {
+     "facility": "1184.14.02008 Boehringer Ingelheim Investigational Site",
+     "city": "Ste-Foy",
+     "state": "Quebec",
+     "country": "Canada"
+    },
+    {
+     "facility": "1184.14.02007 Boehringer Ingelheim Investigational Site",
+     "city": "Saskatoon",
+     "state": "Saskatchewan",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 52.13238,
+      "lon": -106.66892
+     }
+    },
+    {
+     "facility": "1184.14.45001 Boehringer Ingelheim Investigational Site",
+     "city": "Hvidovre",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.64297,
+      "lon": 12.47708
+     }
+    },
+    {
+     "facility": "1184.14.45002 Boehringer Ingelheim Investigational Site",
+     "city": "København NV",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.71258,
+      "lon": 12.52343
+     }
+    },
+    {
+     "facility": "1184.14.37202 Boehringer Ingelheim Investigational Site",
+     "city": "Tallinn",
+     "country": "Estonia",
+     "geoPoint": {
+      "lat": 59.43696,
+      "lon": 24.75353
+     }
+    },
+    {
+     "facility": "1184.14.37201 Boehringer Ingelheim Investigational Site",
+     "city": "Tartu",
+     "country": "Estonia",
+     "geoPoint": {
+      "lat": 58.38062,
+      "lon": 26.72509
+     }
+    },
+    {
+     "facility": "1184.14.35802 Boehringer Ingelheim Investigational Site",
+     "city": "Espoo",
+     "country": "Finland",
+     "geoPoint": {
+      "lat": 60.2052,
+      "lon": 24.6522
+     }
+    },
+    {
+     "facility": "1184.14.35801 Boehringer Ingelheim Investigational Site",
+     "city": "HUS",
+     "country": "Finland"
+    },
+    {
+     "facility": "1184.14.3301A Boehringer Ingelheim Investigational Site",
+     "city": "Brest",
+     "country": "France",
+     "geoPoint": {
+      "lat": 48.39029,
+      "lon": -4.48628
+     }
+    },
+    {
+     "facility": "1184.14.3304A Boehringer Ingelheim Investigational Site",
+     "city": "Marseille",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.29695,
+      "lon": 5.38107
+     }
+    },
+    {
+     "facility": "1184.14.3302A Boehringer Ingelheim Investigational Site",
+     "city": "Montpellier",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.61093,
+      "lon": 3.87635
+     }
+    },
+    {
+     "facility": "1184.14.3303A Boehringer Ingelheim Investigational Site",
+     "city": "Perpignan",
+     "country": "France",
+     "geoPoint": {
+      "lat": 42.69764,
+      "lon": 2.89541
+     }
+    },
+    {
+     "facility": "1184.14.3303B Boehringer Ingelheim Investigational Site",
+     "city": "Perpignan",
+     "country": "France",
+     "geoPoint": {
+      "lat": 42.69764,
+      "lon": 2.89541
+     }
+    },
+    {
+     "facility": "1184.14.3303C Boehringer Ingelheim Investigational Site",
+     "city": "Perpignan",
+     "country": "France",
+     "geoPoint": {
+      "lat": 42.69764,
+      "lon": 2.89541
+     }
+    },
+    {
+     "facility": "1184.14.49003 Boehringer Ingelheim Investigational Site",
+     "city": "Berlin",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "1184.14.49004 Boehringer Ingelheim Investigational Site",
+     "city": "Berlin",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "1184.14.49006 Boehringer Ingelheim Investigational Site",
+     "city": "Berlin",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "1184.14.49008 Boehringer Ingelheim Investigational Site",
+     "city": "Berlin",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "1184.14.49002 Boehringer Ingelheim Investigational Site",
+     "city": "Hamburg",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "1184.14.49007 Boehringer Ingelheim Investigational Site",
+     "city": "Hamburg",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "1184.14.49001 Boehringer Ingelheim Investigational Site",
+     "city": "Leipzig",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.33962,
+      "lon": 12.37129
+     }
+    },
+    {
+     "facility": "1184.14.30001 Boehringer Ingelheim Investigational Site",
+     "city": "Athens",
+     "country": "Greece",
+     "geoPoint": {
+      "lat": 37.98376,
+      "lon": 23.72784
+     }
+    },
+    {
+     "facility": "1184.14.30004 Boehringer Ingelheim Investigational Site",
+     "city": "Nafplion",
+     "country": "Greece",
+     "geoPoint": {
+      "lat": 37.56863,
+      "lon": 22.80691
+     }
+    },
+    {
+     "facility": "1184.14.30006 Boehringer Ingelheim Investigational Site",
+     "city": "Rethymno",
+     "country": "Greece",
+     "geoPoint": {
+      "lat": 35.36555,
+      "lon": 24.48232
+     }
+    },
+    {
+     "facility": "1184.14.36002 Boehringer Ingelheim Investigational Site",
+     "city": "Debrecen",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.53167,
+      "lon": 21.62444
+     }
+    },
+    {
+     "facility": "1184.14.36001 Boehringer Ingelheim Investigational Site",
+     "city": "Hodmezövasarhely",
+     "country": "Hungary"
+    },
+    {
+     "facility": "1184.14.36005 Boehringer Ingelheim Investigational Site",
+     "city": "Komló",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 46.19278,
+      "lon": 18.26494
+     }
+    },
+    {
+     "facility": "1184.14.36004 Boehringer Ingelheim Investigational Site",
+     "city": "Miskolc",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 48.10327,
+      "lon": 20.77806
+     }
+    },
+    {
+     "facility": "1184.14.39001 Boehringer Ingelheim Investigational Site",
+     "city": "Pisa",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 43.70853,
+      "lon": 10.4036
+     }
+    },
+    {
+     "facility": "1184.14.37101 Boehringer Ingelheim Investigational Site",
+     "city": "Krāslava",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 55.89514,
+      "lon": 27.16799
+     }
+    },
+    {
+     "facility": "1184.14.37103 Boehringer Ingelheim Investigational Site",
+     "city": "Kuldīga",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 56.97399,
+      "lon": 21.95721
+     }
+    },
+    {
+     "facility": "1184.14.37102 Boehringer Ingelheim Investigational Site",
+     "city": "Talsi",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 57.24562,
+      "lon": 22.58137
+     }
+    },
+    {
+     "facility": "1184.14.37003 Boehringer Ingelheim Investigational Site",
+     "city": "Klaipėda",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 55.7068,
+      "lon": 21.13912
+     }
+    },
+    {
+     "facility": "1184.14.31004 Boehringer Ingelheim Investigational Site",
+     "city": "Eindhoven",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 51.44083,
+      "lon": 5.47778
+     }
+    },
+    {
+     "facility": "1184.14.31003 Boehringer Ingelheim Investigational Site",
+     "city": "Heerlen",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 50.88365,
+      "lon": 5.98154
+     }
+    },
+    {
+     "facility": "1184.14.31002 Boehringer Ingelheim Investigational Site",
+     "city": "Nieuwegein",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.02917,
+      "lon": 5.08056
+     }
+    },
+    {
+     "facility": "1184.14.31001 Boehringer Ingelheim Investigational Site",
+     "city": "Veldhoven",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 51.41833,
+      "lon": 5.40278
+     }
+    },
+    {
+     "facility": "1184.14.42103 Boehringer Ingelheim Investigational Site",
+     "city": "Bardejov",
+     "country": "Slovakia",
+     "geoPoint": {
+      "lat": 49.29175,
+      "lon": 21.27271
+     }
+    },
+    {
+     "facility": "1184.14.82001 Boehringer Ingelheim Investigational Site",
+     "city": "Seoul",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "1184.14.82002 Boehringer Ingelheim Investigational Site",
+     "city": "Seoul",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "1184.14.82003 Boehringer Ingelheim Investigational Site",
+     "city": "Seoul",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "1184.14.46002 Boehringer Ingelheim Investigational Site",
+     "city": "Linköping",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 58.41086,
+      "lon": 15.62157
+     }
+    },
+    {
+     "facility": "1184.14.46001 Boehringer Ingelheim Investigational Site",
+     "city": "Lund",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 55.70584,
+      "lon": 13.19321
+     }
+    },
+    {
+     "facility": "1184.14.46003 Boehringer Ingelheim Investigational Site",
+     "city": "Sundsvall",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 62.39129,
+      "lon": 17.3063
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "seeAlsoLinks": [
+    {
+     "label": "Related Info",
+     "url": "http://www.mystudywindow.com/"
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "YES",
+   "description": "Once the criteria in section \"Time Frame\" are fulfilled, researchers can use the following link https://www.mystudywindow.com/msw/datasharing to request access to the clinical study documents regarding this study, and upon a signed \"Document Sharing Agreement\".\n\nFurthermore, researchers can request access to the clinical study data, for this and other listed studies, after the submission of a research proposal and according to the terms outlined in the website.",
+   "infoTypes": [
+    "STUDY_PROTOCOL",
+    "SAP",
+    "CSR"
+   ],
+   "timeFrame": "After structured results have been posted, all regulatory activities are completed in the US and EU for the product and indication, and after the primary manuscript has been accepted for publication.",
+   "accessCriteria": "For study documents - upon signing of a 'Document Sharing Agreement'. For study data - 1. after the submission and approval of the research proposal (checks will be performed by the sponsor and/or the independent review panel, including checking that the planned analysis does not compete with sponsor's publication plan); 2. and upon signing of a legal agreement.",
+   "url": "https://www.mystudywindow.com/msw/datasharing"
+  }
+ },
+ "annotationSection": {
+  "annotationModule": {
+   "unpostedAnnotation": {
+    "unpostedResponsibleParty": "Boehringer Ingelheim",
+    "unpostedEvents": [
+     {
+      "type": "RELEASE",
+      "date": "2024-10-15"
+     },
+     {
+      "type": "RESET",
+      "date": "2024-11-04"
+     },
+     {
+      "type": "RELEASE",
+      "date": "2024-11-29"
+     },
+     {
+      "type": "RESET",
+      "date": "2024-12-17"
+     },
+     {
+      "type": "RELEASE",
+      "date": "2026-06-18"
+     },
+     {
+      "type": "RESET",
+      "date": "2026-07-15"
+     },
+     {
+      "type": "RELEASE",
+      "date": "2026-07-31"
+     },
+     {
+      "type": "RESET",
+      "date": "2026-08-25"
+     },
+     {
+      "type": "RELEASE",
+      "date": "2026-09-15"
+     },
+     {
+      "type": "RESET",
+      "date": "2026-10-06"
+     }
+    ]
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16",
+   "removedCountries": [
+    "Croatia",
+    "Mexico",
+    "Norway",
+    "Portugal",
+    "Romania",
+    "Russia",
+    "South Africa",
+    "Spain",
+    "Switzerland",
+    "Turkey (Türkiye)",
+    "Ukraine"
+   ],
+   "submissionTracking": {
+    "estimatedResultsFirstSubmitDate": "2024-10-15",
+    "submissionInfos": [
+     {
+      "releaseDate": "2024-10-15",
+      "resetDate": "2024-11-04"
+     },
+     {
+      "releaseDate": "2024-11-29",
+      "resetDate": "2024-12-17"
+     },
+     {
+      "releaseDate": "2026-06-18",
+      "resetDate": "2026-07-15"
+     },
+     {
+      "releaseDate": "2026-07-31",
+      "resetDate": "2026-08-25"
+     },
+     {
+      "releaseDate": "2026-09-15",
+      "resetDate": "2026-10-06"
+     },
+     {
+      "releaseDate": "2026-10-08"
+     }
+    ]
+   }
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D000069447",
+     "term": "Tiotropium Bromide"
+    },
+    {
+     "id": "D000068299",
+     "term": "Salmeterol Xinafoate"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D012602",
+     "term": "Scopolamine Derivatives"
+    },
+    {
+     "id": "D014326",
+     "term": "Tropanes"
+    },
+    {
+     "id": "D053961",
+     "term": "Azabicyclo Compounds"
+    },
+    {
+     "id": "D001372",
+     "term": "Aza Compounds"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000470",
+     "term": "Alkaloids"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D019086",
+     "term": "Bridged Bicyclo Compounds, Heterocyclic"
+    },
+    {
+     "id": "D006572",
+     "term": "Heterocyclic Compounds, Bridged-Ring"
+    },
+    {
+     "id": "D000420",
+     "term": "Albuterol"
+    },
+    {
+     "id": "D004983",
+     "term": "Ethanolamines"
+    },
+    {
+     "id": "D000605",
+     "term": "Amino Alcohols"
+    },
+    {
+     "id": "D000438",
+     "term": "Alcohols"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D010627",
+     "term": "Phenethylamines"
+    },
+    {
+     "id": "D005021",
+     "term": "Ethylamines"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

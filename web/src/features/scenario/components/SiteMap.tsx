@@ -1,3 +1,4 @@
+import { useTranslation, translate as t } from "@/app/i18n";
 import { useMemo, useState } from "react";
 import { geoEqualEarth, geoPath } from "d3-geo";
 import { feature } from "topojson-client";
@@ -24,6 +25,7 @@ export function SiteMap({
   onToggle?: (siteId: string) => void;
   height?: number;
 }) {
+  useTranslation();
   const [hover, setHover] = useState<string | null>(null);
   const located = useMemo(() => sites.filter((s) => s.lat !== null && s.lon !== null), [sites]);
   const unlocated = sites.length - located.length;
@@ -66,7 +68,7 @@ export function SiteMap({
 
   return (
     <figure className="relative" data-testid="site-map">
-      <svg viewBox={`0 0 ${W} ${height}`} className="w-full rounded-lg bg-[#eef4f7]" role="group" aria-label={`Map of ${located.length} trial sites`}>
+      <svg viewBox={`0 0 ${W} ${height}`} className="w-full rounded-lg bg-[#eef4f7]" role="group" aria-label={t(`Map of ${located.length} trial sites`, `${located.length} 个试验研究中心的地图`)}>
         <g>
           {countries.features.map((f, i) => (
             <path key={i} d={path(f) ?? undefined} fill="#dbe3ea" stroke="#ffffff" strokeWidth={0.6} />
@@ -77,14 +79,14 @@ export function SiteMap({
             const p = project(s);
             if (!p) return null;
             const isExcluded = excluded.includes(s.id);
-            const label = `${s.name}${s.city ? `, ${s.city}` : ""}, ${s.country} — ${isExcluded ? "excluded" : "included"}`;
+            const label = `${s.name}${s.city ? `, ${s.city}` : ""}, ${s.country} — ${isExcluded ? t("excluded", "已排除") : t("included", "已纳入")}`;
             return (
               <g
                 key={s.id}
                 transform={`translate(${p[0]},${p[1]})`}
                 role={onToggle ? "button" : "img"}
                 tabIndex={onToggle ? 0 : undefined}
-                aria-label={onToggle ? `${label}. Press to ${isExcluded ? "include" : "exclude"}.` : label}
+                aria-label={onToggle ? t(`${label}. Press to ${isExcluded ? "include" : "exclude"}.`, `${label}。按下以${isExcluded ? "纳入" : "排除"}。`) : label}
                 aria-pressed={onToggle ? !isExcluded : undefined}
                 onClick={onToggle ? () => onToggle(s.id) : undefined}
                 onKeyDown={
@@ -123,7 +125,7 @@ export function SiteMap({
           <p className="font-semibold text-ink-900">{hovered.name}</p>
           <p className="text-ink-600">
             {[hovered.city, hovered.country].filter(Boolean).join(", ")}
-            {excluded.includes(hovered.id) ? " · excluded" : ""}
+            {excluded.includes(hovered.id) ? t(" · excluded", " · 已排除") : ""}
           </p>
         </div>
       )}
@@ -133,19 +135,19 @@ export function SiteMap({
             <svg width="10" height="10" aria-hidden>
               <circle cx="5" cy="5" r="4" fill="#0f766e" />
             </svg>
-            included
+            {t("included", "已纳入")}
           </span>
           {excluded.length > 0 && (
             <span className="flex items-center gap-1">
               <svg width="10" height="10" aria-hidden>
                 <circle cx="5" cy="5" r="3.8" fill="#fff" stroke="#64748b" strokeWidth="1.3" />
               </svg>
-              excluded
+              {t("excluded", "已排除")}
             </span>
           )}
-          {unlocated > 0 && <span>{unlocated} site{unlocated === 1 ? "" : "s"} without coordinates not shown</span>}
+          {unlocated > 0 && <span>{t(`${unlocated} site${unlocated === 1 ? "" : "s"} without coordinates not shown`, `${unlocated} 个无坐标的研究中心未显示`)}</span>}
         </span>
-        <span>Map data: Natural Earth (public domain) via world-atlas</span>
+        <span>{t("Map data: Natural Earth (public domain) via world-atlas", "地图数据：Natural Earth（公共领域），由 world-atlas 提供")}</span>
       </figcaption>
     </figure>
   );

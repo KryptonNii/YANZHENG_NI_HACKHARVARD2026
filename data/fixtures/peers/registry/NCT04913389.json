@@ -1,0 +1,334 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT04913389",
+   "orgStudyIdInfo": {
+    "id": "01-2021-KEB"
+   },
+   "organization": {
+    "fullName": "University of Zurich",
+    "class": "OTHER"
+   },
+   "briefTitle": "Acetazolamide to Prevent Impending Altitude-illness in Patients With COPD",
+   "officialTitle": "Novel Approach to Prevention of Altitude-related Illness in Patients With Chronic Obstructive Pulmonary Disease"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2023-03",
+   "overallStatus": "UNKNOWN",
+   "lastKnownStatus": "ACTIVE_NOT_RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2021-06-01",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2022-08-10",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2023-12-31",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2021-05-23",
+   "studyFirstSubmitQcDate": "2021-06-03",
+   "studyFirstPostDateStruct": {
+    "date": "2021-06-04",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2023-03-02",
+   "lastUpdatePostDateStruct": {
+    "date": "2023-03-03",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "University of Zurich",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "National Center of Cardiology and Internal Medicine, Kyrgyz Republic",
+     "class": "UNKNOWN"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": false,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The purpose of this randomized, placebo-controlled double-blind trial is to evaluate efficacy of acetazolamide in preventing overt altitude-related adverse health effects (ARAHE) in lowlanders with chronic obstructive pulmonary disease (COPD) developing early signs of altitude-illness during altitude travel.",
+   "detailedDescription": "This randomized placebo-controlled, double-blind, parallel-design trial will evaluate effectiveness of acetazolamide in reducing the incidence of predefined altitude-related adverse health effects in lowlanders with chronic obstructive pulmonary disease (COPD) travelling to high altitude and developping early symptoms and/or signs of impending altitude-illness. Qualifying participants will be randomized 1:1 to acetazolamide or placebo treatment during their further stay of 2 days at 3'100 m.\n\nAn interim-analysis will be performed after the first year of the study or when 38 participants are randomized, whichever comes first. Symmetric stopping boundaries at P\\<0.001 will be applied (Peto approach)."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease",
+    "Altitude Sickness",
+    "Altitude Hypoxia"
+   ],
+   "keywords": [
+    "Acetazolamide",
+    "Mountain sickness",
+    "Hypoxemia",
+    "Prevention"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "interventionModelDescription": "randomized, placebo-controlled, double-blind",
+    "primaryPurpose": "PREVENTION",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "maskingDescription": "An independent pharmacist will prepare identically looking active and placebo capsules labelled with secret codes. Codes will be concealed to investigators and patients until completion of data analysis.",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 100,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Acetazolamide",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Acetazolamide (oral capsules)",
+     "interventionNames": [
+      "Drug: Acetazolamide"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo (oral capsules)",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Acetazolamide",
+     "description": "Acetazolamide (oral capsules @125 mg), starting dose 3 capsules (375 mg), subsequent doses 1 capsule (125 mg) in the morning, 2 capsules (250 mg) in the evening, administered in qualifying participants, during the stay at 3100 m.",
+     "armGroupLabels": [
+      "Acetazolamide"
+     ],
+     "otherNames": [
+      "Acetazolamide, oral capsule"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Placebo (oral capsules, identically looking as active drug), starting dose 3 capsules, subsequent doses 1 capsule in the morning, 2 capsules in the evening, administered in qualifying participants, during the stay at 3100 m.",
+     "armGroupLabels": [
+      "Placebo"
+     ],
+     "otherNames": [
+      "Placebo, oral capsule"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Incidence of altitude-related adverse health effects",
+     "description": "Difference between participants receiving acetazolamide and placebo in the incidence of altitude-related adverse health effects defined as:\n\n* Moderate to severe acute mountain sickness (Lake Louise score \\>4 including headache and/or Acute Mountain Sickness cerebral score ≥0.7)\n* Severe hypoxemia (SpO2 at rest \\<80% for \\>30 min; or SpO2 \\<75% for \\>15 min; or exercise oxygen desaturation SpO2 \\<75% for \\>1 min accompanied by symptoms or signs of hypoxemia)\n* Symptomatic cardiovascular disease (arterial blood pressure systolic \\>200 mmHg, diastolic \\>120 mmHg, chest pain with ECG signs of cardiac ischemia)\n* New onset neurologic impairment\n* Other intercurrent illness requiring medical treatment\n* Any discomfort leading to the wish of a patient to return to low altitude or withdraw from the study by the independent physician",
+     "timeFrame": "Day 1 to 3 at 3'100m"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Incidence and severity of the individual components of altitude-related adverse health effects",
+     "description": "Difference between participants receiving acetazolamide and placebo in the incidence and severity of components of altitude-related adverse health effects",
+     "timeFrame": "Day 1 to 3 at 3'100m"
+    },
+    {
+     "measure": "Arterial blood gases",
+     "description": "Difference between participants receiving acetazolamide and placebo in arterial blood gases",
+     "timeFrame": "Day 2 at 3'100 m"
+    },
+    {
+     "measure": "Forced expiratory volume in one second (FEV1)",
+     "description": "Difference between participants receiving acetazolamide and placebo in forced expiratory volume in one second (FEV1) measured by spirometry",
+     "timeFrame": "Day 2 at 3'100 m"
+    },
+    {
+     "measure": "Forced vital capacity (FVC)",
+     "description": "Difference between participants receiving acetazolamide and placebo in forced vital capacity (FVC) measured by spirometry",
+     "timeFrame": "Day 2 at 3'100 m"
+    },
+    {
+     "measure": "Drug side effects",
+     "description": "Difference between participants receiving acetazolamide and placebo in the incidence of drug side effects",
+     "timeFrame": "Day 1 to 3 at 3'100m"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion criteria\n\n* Men and women, age 35-75 y, living at low altitude (\\<800 m).\n* COPD diagnosed according to the Global Initiative for Obstructive Lung Disease (GOLD) guidelines, forced expiratory volume in one second 40-80% predicted, pulse oximetry ≥92%, PaCO2 \\<6 kilopascal, breathing ambient air at 760 m.\n* One of the following early signs and/or symptoms of impending altitude-illness identified by self-monitoring during ascent to or stay at 3100 m:\n\n  * Pulse oximetry SpO2≤84%\n  * Headache or nausea/vomiting or fatigue/weakness or dizziness/light-headedness of at least moderate intensity\n\nExclusion criteria\n\n* COPD exacerbation, very severe COPD with hypoxemia or hypercapnia at 760 m (see above).\n* Other lung disease, relevant comorbidities (such as uncontrolled cardiovascular disease, i.e., unstable arterial hypertension, coronary artery disease; previous stroke; obesity (body mass index \\>35 kg/m2); internal, neurologic, rheumatologic or psychiatric disease; current heavy smoking (\\>20 cigarettes per day).\n* Renal failure and/or allergy to sulfonamides.\n* Patients who do not have early signs and/or signs of impending altitude-illness by self-monitoring (as defined above) at 3'100m will not be included.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "35 Years",
+   "maximumAge": "75 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Konrad E Bloch",
+     "affiliation": "University Hospital, Zürich, Switzerland",
+     "role": "STUDY_CHAIR"
+    },
+    {
+     "name": "Talant M Sooronbaev",
+     "affiliation": "National Center of Cardiology and Internal Medicine, Bishkek, Kyrgyzstan",
+     "role": "STUDY_DIRECTOR"
+    },
+    {
+     "name": "Michael Furian",
+     "affiliation": "University Hospital, Zürich",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "National Center of Cardiology and Internal Medicine",
+     "city": "Bishkek",
+     "zip": "720040",
+     "country": "Kyrgyzstan",
+     "geoPoint": {
+      "lat": 42.87,
+      "lon": 74.59
+     }
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D000532",
+     "term": "Altitude Sickness"
+    },
+    {
+     "id": "D000860",
+     "term": "Hypoxia"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D012120",
+     "term": "Respiration Disorders"
+    },
+    {
+     "id": "D012818",
+     "term": "Signs and Symptoms, Respiratory"
+    },
+    {
+     "id": "D012816",
+     "term": "Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D000086",
+     "term": "Acetazolamide"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D013830",
+     "term": "Thiadiazoles"
+    },
+    {
+     "id": "D013844",
+     "term": "Thiazoles"
+    },
+    {
+     "id": "D013457",
+     "term": "Sulfur Compounds"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D001393",
+     "term": "Azoles"
+    },
+    {
+     "id": "D006573",
+     "term": "Heterocyclic Compounds, 1-Ring"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

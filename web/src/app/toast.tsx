@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { onApiError } from "./api/client";
+import { useTranslation } from "./i18n";
 
 export type ToastKind = "error" | "success" | "info";
 
@@ -34,6 +35,7 @@ const KIND_BAR: Record<ToastKind, string> = {
 
 /** Toasts for API errors (plain-English message from the API) and confirmations. */
 export function ToastProvider({ children }: { children: ReactNode }) {
+  const tr = useTranslation();
   const [toasts, setToasts] = useState<Toast[]>([]);
   const nextId = useRef(1);
 
@@ -75,7 +77,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
             <span className={`w-1.5 shrink-0 ${KIND_BAR[t.kind]}`} aria-hidden />
             <div className="flex-1 px-3 py-2.5">
               <p className="text-sm font-semibold text-ink-900">
-                <span className="sr-only">{KIND_LABEL[t.kind]}: </span>
+                <span className="sr-only">{tr(KIND_LABEL[t.kind], { error: "错误", success: "完成", info: "提示" }[t.kind])}: </span>
                 {t.title}
               </p>
               {t.message && <p className="mt-0.5 text-xs text-ink-500">{t.message}</p>}
@@ -84,7 +86,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
               type="button"
               onClick={() => dismiss(t.id)}
               className="px-3 text-ink-400 hover:text-ink-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-600"
-              aria-label="Dismiss notification"
+              aria-label={tr("Dismiss notification", "关闭通知")}
             >
               ×
             </button>

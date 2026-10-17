@@ -1,0 +1,3779 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01313494",
+   "orgStudyIdInfo": {
+    "id": "RO-2455-301-RD"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "U1111-1133-6304",
+     "type": "REGISTRY",
+     "domain": "WHO"
+    }
+   ],
+   "organization": {
+    "fullName": "AstraZeneca",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "A Chronic Obstructive Pulmonary Disease (COPD) Trial Investigating Roflumilast on Safety and Effectiveness in China, Hong Kong and Singapore:",
+   "officialTitle": "A 6-month, Double-blind, Randomised, Multicenter, Multinational Trial to Investigate the Effect of 500 µg Roflumilast Tablets Once Daily Versus Placebo on Pulmonary Function in Patients With COPD. The ACROSS Trial",
+   "acronym": "ACROSS"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2016-09",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2011-03"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2012-05",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2012-05",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2011-03-03",
+   "studyFirstSubmitQcDate": "2011-03-10",
+   "studyFirstPostDateStruct": {
+    "date": "2011-03-11",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2013-03-18",
+   "resultsFirstSubmitQcDate": "2013-07-31",
+   "resultsFirstPostDateStruct": {
+    "date": "2013-08-02",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2016-12-02",
+   "lastUpdatePostDateStruct": {
+    "date": "2017-02-01",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "AstraZeneca",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "The aim of this trial is to determine the efficacy, safety and tolerability of 500 µg Roflumilast tablets once daily in patients with COPD in China, Hong Kong, and Singapore."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "COPD"
+   ],
+   "keywords": [
+    "COPD",
+    "Roflumilast",
+    "FEV1",
+    "China"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 626,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Roflumilast",
+     "type": "EXPERIMENTAL",
+     "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks.",
+     "interventionNames": [
+      "Drug: Roflumilast",
+      "Drug: Salbutamol"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks.",
+     "interventionNames": [
+      "Drug: Placebo",
+      "Drug: Salbutamol"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Roflumilast",
+     "description": "Roflumilast tablets",
+     "armGroupLabels": [
+      "Roflumilast"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Placebo tablets",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Salbutamol",
+     "description": "Salbutamol (given by MDI and spacer) used as rescue medication on an ass needed basis throughout the trial, and was used for post-bronchodilator spirometry tests at all study visits.",
+     "armGroupLabels": [
+      "Placebo",
+      "Roflumilast"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Change From Baseline in Pre-bronchodilator Forced Expiratory Volume in First Second (FEV1)",
+     "description": "FEV1 is the amount of air which can be forcibly exhaled from the lungs in the first second of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value of pre-bronchodilator FEV1, time and a treatment-by-time interaction as independent variables.",
+     "timeFrame": "Baseline to Week 24"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Change From Baseline in Post-bronchodilator FEV1",
+     "description": "FEV1 is the amount of air which can be forcibly exhaled from the lungs in the first second of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value of post-bronchodilator FEV1, time and a treatment-by-time interaction as independent variables.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Pre-bronchodilator Forced Vital Capacity (FVC)",
+     "description": "Vital capacity is the amount of air which can be forcibly exhaled from the lungs after taking the deepest breath possible. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Post-bronchodilator Forced Vital Capacity (FVC)",
+     "description": "Vital capacity is the amount of air which can be forcibly exhaled from the lungs after taking the deepest breath possible. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Pre-bronchodilator Forced Expiratory Flow 25-75%",
+     "description": "Forced expiratory flow 25-75% (FEF25-75%) is the flow (or speed) of air coming out of the lung during the middle half of a forced expiration. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Post-bronchodilator Forced Expiratory Flow 25-75%",
+     "description": "Forced expiratory flow 25-75% (FEF25-75%) is the flow (or speed) of air coming out of the lung during the middle half of a forced expiration. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Pre-bronchodilator Forced Expiratory Volume in First Three Seconds (FEV3)",
+     "description": "FEV3 is the amount of air which can be forcibly exhaled from the lungs in the first three seconds of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value of pre-bronchodilator FEV3, time and a treatment-by-time interaction as independent variables.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Post-bronchodilator Forced Expiratory Volume in First Three Seconds (FEV3)",
+     "description": "FEV3 is the amount of air which can be forcibly exhaled from the lungs in the first three seconds of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value of post-bronchodilator FEV3, time and a treatment-by-time interaction as independent variables.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Pre-bronchodilator Forced Expiratory Volume in First Six Seconds (FEV6)",
+     "description": "FEV6 is the amount of air which can be forcibly exhaled from the lungs in the first six seconds of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value of pre-bronchodilator FEV6, time and a treatment-by-time interaction as independent variables.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Post-bronchodilator Forced Expiratory Volume in First Six Seconds (FEV6)",
+     "description": "FEV6 is the amount of air which can be forcibly exhaled from the lungs in the first three seconds of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value of post-bronchodilator FEV6, time and a treatment-by-time interaction as independent variables.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Pre-bronchodilator Peak Expiratory Flow Rate (PEF)",
+     "description": "PEF is the maximal flow (or speed) achieved during the maximally forced expiration initiated at full inspiration. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Post-bronchodilator Peak Expiratory Flow Rate (PEF)",
+     "description": "PEF is the maximal flow (or speed) achieved during the maximally forced expiration initiated at full inspiration. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Pre-bronchodilator Ratio of Forced Expiratory Volume After 1 Second to Forced Vital Capacity",
+     "description": "The FEV1/FVC ratio represents the percentage of vital capacity expelled from the lungs during the first second of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication.",
+     "timeFrame": "Baseline and Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Post-bronchodilator Ratio of Forced Expiratory Volume After 1 Second to Forced Vital Capacity",
+     "description": "The FEV1/FVC ratio represents the percentage of vital capacity expelled from the lungs during the first second of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol.",
+     "timeFrame": "Baseline and Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Pre-bronchodilator Ratio of Forced Expiratory Volume After 1 Second to Forced Expiratory Volume After 6 Seconds",
+     "description": "The FEV1/FEV6 ratio represents the percentage of the volume of air expired in the first six seconds that is expelled from the lungs during the first second of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication.",
+     "timeFrame": "Baseline and Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Post-bronchodilator Ratio of Forced Expiratory Volume After 1 Second to Forced Expiratory Volume After 6 Seconds",
+     "description": "The FEV1/FEV6 ratio represents the percentage of the volume of air expired in the first six seconds that is expelled from the lungs during the first second of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol.",
+     "timeFrame": "Baseline and Week 24"
+    },
+    {
+     "measure": "Change From Baseline in COPD Symptom Scores",
+     "description": "Symptoms of chronic bronchitis with respect to cough and sputum production were assessed daily by the patient and recorded in a diary. Symptoms were assessed on a 4-point scale as follows: Cough: 0: no cough; 1: mild cough (at some time during the day); 2: moderate cough (regularly during the day); 3: severe cough (never free of cough or feeling free of need to cough). Sputum production: 0: no sputum production (unnoticeable); 1: mild sputum production (noticeable as a problem); 2: moderate sputum production (frequent inconvenience); 3: severe sputum production (constant problem). Change from Baseline is reported for cough and sputum separately, and for the sum of the 2 scores (range 0 - 6). Least squares means (LSM) are from a repeated measures ANCOVA model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Use of Rescue Medication",
+     "description": "Salbutamol (given by metered dose inhaler and spacer) was used as rescue medication according to the individual needs of a patient. Each use was documented in the patient's paper diary. Least squares means (LSM) are from a repeated measures ANCOVA model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Transition Dyspnoea Index (TDI) Total Score at Week 24",
+     "description": "The TDI is a recognized questionnaire to measure dyspnoea (shortness of breath) in patients with COPD. Questions from the TDI were used to assess the 3 components: \"change in functional impairment\", \"change in magnitude of task\" and \"change in magnitude of effort\". Transitions or changes from baseline are rated from -3 (major deterioration) to +3 (major improvement), and summed to give a total score ranging from -9 to +9. Least squares means (LSM) are from a repeated measures ANCOVA model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Percentage of Participants With Moderate or Severe COPD Exacerbations",
+     "description": "A COPD exacerbation is an event characterised by a worsening in the patient's baseline dyspnoea, or cough and/or sputum beyond day-to-day variability sufficient to warrant a change in management, and may be accompanied by increased wheeze, chest tightness, purulent sputum and symptoms of cold and/or fatigue. COPD exacerbations were categorized as follows: - Severe: Requiring hospitalization and/or leading to death; - Moderate: Requiring oral or parenteral glucocorticosteroid therapy.",
+     "timeFrame": "24 weeks"
+    },
+    {
+     "measure": "Mean Rate of Moderate or Severe COPD Exacerbations Per Patient Per Year",
+     "description": "The mean rate of COPD exacerbations per patient per year rate = (number of exacerbations per treatment group/time to study withdrawal per treatment group) \\* 365. COPD exacerbations were categorized as follows: - Severe: Requiring hospitalization and/or leading to death; - Moderate: Requiring oral or parenteral glucocorticosteroid therapy.",
+     "timeFrame": "24 weeks"
+    },
+    {
+     "measure": "Time to Onset of First Moderate or Severe COPD Exacerbation",
+     "description": "Time to onset of a COPD exacerbation is defined as onset date of COPD exacerbation - date of first intake of study drug + 1 day. COPD exacerbations were categorized as follows: - Severe: Requiring hospitalization and/or leading to death; - Moderate: Requiring oral or parenteral glucocorticosteroid therapy.",
+     "timeFrame": "24 weeks"
+    },
+    {
+     "measure": "Time to Onset of Second Moderate or Severe COPD Exacerbation",
+     "description": "Time to onset of a COPD exacerbation is defined as onset date of COPD exacerbation - date of first intake of study drug + 1 day. At least 10 days between the stop date of an exacerbation and the start date of the following exacerbation was required for these to be be considered as two separate COPD exacerbations. COPD exacerbations were categorized as follows: - Severe: Requiring hospitalization and/or leading to death; - Moderate: Requiring oral or parenteral glucocorticosteroid therapy.",
+     "timeFrame": "24 weeks"
+    },
+    {
+     "measure": "Number of Participants With Adverse Events",
+     "description": "An adverse event (AE) is any untoward medical occurrence in a clinical trial participant regardless of causal relationship to study drug and regardless whether study drug has been administered. A serious adverse event (SAE) is any untoward medical occurrence or effect that at any dose results in death, is life-threatening, requires inpatient hospitalization or prolongation of existing hospitalization, results in persistent or significant disability / incapacity, is a congenital anomaly / birth defect or is medically important due to other reasons than the above mentioned criteria. A non-serious AE is any AE that does not meet the criteria above. Each AE was assessed by the Investigator as either 'related' or 'not related' to study drug.",
+     "timeFrame": "24 weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Main Inclusion Criteria:\n\n* Willingness to sign a written informed consent\n* Chronic obstructive pulmonary disease (COPD) according to Global Initiative for Chronic Obstructive Lung Disease (GOLD) guidelines 2009\n* Chinese or Malay or Indian ethnicity\n* History of chronic obstructive pulmonary disease symptoms for at least 12 months prior to baseline visit V0\n* Forced expiratory volume in the first second/ Forced vital capacity (FEV1/FVC) ratio (post-bronchodilator) \\< 70%\n* Forced expiratory volume in the first second (FEV1) (post-bronchodilator) \\< 50 % of predicted\n* Former smoker (defined as: smoking cessation at least one year ago) or current smoker both with a smoking history of at least 10 pack years\n\nMain Exclusion Criteria:\n\n* Moderate or severe COPD exacerbation and/or COPD exacerbations treated with antibiotics not stopped at V0\n* Lower respiratory tract infection not resolved 4 weeks prior to the baseline visit V0\n* History of asthma diagnosis in patients \\< 40 years of age or relevant lung disease other than COPD\n* Current participation in a pulmonary rehabilitation program or completion of a pulmonary rehabilitation program within 3 months preceding the baseline visit V0\n* Known alpha-1-antitrypsin deficiency",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "AstraZeneca AstraZeneca",
+     "affiliation": "AstraZeneca",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "city": "Beijing",
+     "country": "China",
+     "geoPoint": {
+      "lat": 39.9075,
+      "lon": 116.39723
+     }
+    },
+    {
+     "city": "Changsha",
+     "country": "China",
+     "geoPoint": {
+      "lat": 28.19874,
+      "lon": 112.97087
+     }
+    },
+    {
+     "city": "Chengdu",
+     "country": "China",
+     "geoPoint": {
+      "lat": 30.66667,
+      "lon": 104.06667
+     }
+    },
+    {
+     "city": "Chongqing",
+     "country": "China",
+     "geoPoint": {
+      "lat": 29.56026,
+      "lon": 106.55771
+     }
+    },
+    {
+     "city": "Fuzhou",
+     "country": "China",
+     "geoPoint": {
+      "lat": 26.06139,
+      "lon": 119.30611
+     }
+    },
+    {
+     "city": "Guangzhou",
+     "country": "China",
+     "geoPoint": {
+      "lat": 23.11667,
+      "lon": 113.25
+     }
+    },
+    {
+     "city": "Hangzhou",
+     "country": "China",
+     "geoPoint": {
+      "lat": 30.29365,
+      "lon": 120.16142
+     }
+    },
+    {
+     "city": "Nanjing",
+     "country": "China",
+     "geoPoint": {
+      "lat": 32.06167,
+      "lon": 118.77778
+     }
+    },
+    {
+     "city": "Nanning",
+     "country": "China",
+     "geoPoint": {
+      "lat": 22.81667,
+      "lon": 108.31667
+     }
+    },
+    {
+     "city": "Qingdao",
+     "country": "China",
+     "geoPoint": {
+      "lat": 36.06488,
+      "lon": 120.38042
+     }
+    },
+    {
+     "city": "Shanghai",
+     "country": "China",
+     "geoPoint": {
+      "lat": 31.22222,
+      "lon": 121.45806
+     }
+    },
+    {
+     "city": "Shenyang",
+     "country": "China",
+     "geoPoint": {
+      "lat": 41.79222,
+      "lon": 123.43278
+     }
+    },
+    {
+     "city": "Shijiazhuang",
+     "country": "China",
+     "geoPoint": {
+      "lat": 38.04139,
+      "lon": 114.47861
+     }
+    },
+    {
+     "city": "Hong Kong",
+     "country": "Hong Kong",
+     "geoPoint": {
+      "lat": 22.27832,
+      "lon": 114.17469
+     }
+    },
+    {
+     "city": "Singapore",
+     "country": "Singapore",
+     "geoPoint": {
+      "lat": 1.28967,
+      "lon": 103.85007
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "24135893",
+     "type": "DERIVED",
+     "citation": "Zheng J, Yang J, Zhou X, Zhao L, Hui F, Wang H, Bai C, Chen P, Li H, Kang J, Brose M, Richard F, Goehring UM, Zhong N. Roflumilast for the treatment of COPD in an Asian population: a randomized, double-blind, parallel-group study. Chest. 2014 Jan;145(1):44-52. doi: 10.1378/chest.13-1252."
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "Participants with a diagnosis of chronic obstructive pulmonary disease (COPD) were randomized in 1 of 2 treatment groups (placebo and roflumilast 500 μg once daily).",
+   "recruitmentDetails": "Participants took part in the study at 43 investigative sites in mainland China, Hong Kong and Singapore from 04 Mar 2011 to 16 May 2012.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Roflumilast",
+     "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+    },
+    {
+     "id": "FG001",
+     "title": "Placebo",
+     "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "313"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "313"
+        }
+       ]
+      },
+      {
+       "type": "Safety Set",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "comment": "2 patients in the placebo arm were misallocated and may have received roflumilast in error.",
+         "numSubjects": "315"
+        },
+        {
+         "groupId": "FG001",
+         "comment": "2 patients in the placebo arm were misallocated and may have received roflumilast in error.",
+         "numSubjects": "311"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "246"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "263"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "67"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "50"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Roflumilast",
+     "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+    },
+    {
+     "id": "BG001",
+     "title": "Placebo",
+     "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "313"
+      },
+      {
+       "groupId": "BG001",
+       "value": "313"
+      },
+      {
+       "groupId": "BG002",
+       "value": "626"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "64.2",
+           "spread": "8.76"
+          },
+          {
+           "groupId": "BG001",
+           "value": "64.0",
+           "spread": "8.27"
+          },
+          {
+           "groupId": "BG002",
+           "value": "64.1",
+           "spread": "8.51"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Gender",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "30"
+          },
+          {
+           "groupId": "BG001",
+           "value": "27"
+          },
+          {
+           "groupId": "BG002",
+           "value": "57"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "283"
+          },
+          {
+           "groupId": "BG001",
+           "value": "286"
+          },
+          {
+           "groupId": "BG002",
+           "value": "569"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Race (NIH/OMB)",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "American Indian or Alaska Native",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Asian",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "313"
+          },
+          {
+           "groupId": "BG001",
+           "value": "313"
+          },
+          {
+           "groupId": "BG002",
+           "value": "626"
+          }
+         ]
+        },
+        {
+         "title": "Native Hawaiian or Other Pacific Islander",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Black or African American",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "White",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "More than one race",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Unknown or Not Reported",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Height",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "cm",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "166.2",
+           "spread": "7.27"
+          },
+          {
+           "groupId": "BG001",
+           "value": "165.9",
+           "spread": "7.12"
+          },
+          {
+           "groupId": "BG002",
+           "value": "166.1",
+           "spread": "7.20"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Weight",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "kg",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "60.4",
+           "spread": "11.00"
+          },
+          {
+           "groupId": "BG001",
+           "value": "61.8",
+           "spread": "10.54"
+          },
+          {
+           "groupId": "BG002",
+           "value": "61.1",
+           "spread": "10.78"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Body Mass Index (BMI)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "kg/m^2",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "21.8",
+           "spread": "3.42"
+          },
+          {
+           "groupId": "BG001",
+           "value": "22.4",
+           "spread": "3.43"
+          },
+          {
+           "groupId": "BG002",
+           "value": "22.1",
+           "spread": "3.44"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Chronic obstructive pulmonary disease (COPD) severity",
+     "description": "COPD severity was classified according to the Global Initiative for Chronic Obstructive Lung Disease (GOLD) Guideline (2009) as: - Very severe COPD: baseline post-bronchodilator FEV1 %predicted \\< 30% - Severe COPD: baseline post-bronchodilator FEV1 %predicted ≥ 30% to \\< 50% - Moderate COPD: baseline post-bronchodilator FEV1 %predicted ≥ 50% to \\< 80% - Mild COPD: baseline post-bronchodilator FEV1 %predicted ≥ 80%.",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "title": "Mild",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1"
+          },
+          {
+           "groupId": "BG002",
+           "value": "2"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Moderate",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "28"
+          },
+          {
+           "groupId": "BG001",
+           "value": "16"
+          },
+          {
+           "groupId": "BG002",
+           "value": "44"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Severe",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "196"
+          },
+          {
+           "groupId": "BG001",
+           "value": "204"
+          },
+          {
+           "groupId": "BG002",
+           "value": "400"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Very severe",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "88"
+          },
+          {
+           "groupId": "BG001",
+           "value": "92"
+          },
+          {
+           "groupId": "BG002",
+           "value": "180"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "COPD disease characteristics",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "title": "Predominantly chronic bronchitis",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "56"
+          },
+          {
+           "groupId": "BG001",
+           "value": "61"
+          },
+          {
+           "groupId": "BG002",
+           "value": "117"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Combined emphysema and chronic bronchitis",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "217"
+          },
+          {
+           "groupId": "BG001",
+           "value": "216"
+          },
+          {
+           "groupId": "BG002",
+           "value": "433"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Predominantly emphysema",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "40"
+          },
+          {
+           "groupId": "BG001",
+           "value": "36"
+          },
+          {
+           "groupId": "BG002",
+           "value": "76"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Smoking status",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "title": "Former smoker",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "238"
+          },
+          {
+           "groupId": "BG001",
+           "value": "221"
+          },
+          {
+           "groupId": "BG002",
+           "value": "459"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Current smoker",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "75"
+          },
+          {
+           "groupId": "BG001",
+           "value": "92"
+          },
+          {
+           "groupId": "BG002",
+           "value": "167"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Cigarette pack years",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "pack years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "37.2",
+           "spread": "21.18"
+          },
+          {
+           "groupId": "BG001",
+           "value": "37.5",
+           "spread": "23.00"
+          },
+          {
+           "groupId": "BG002",
+           "value": "37.4",
+           "spread": "22.09"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Pre-bronchodilator forced expiratory volume in the first second (FEV1)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Liters",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0.8",
+           "spread": "0.31"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0.8",
+           "spread": "0.24"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0.8",
+           "spread": "0.28"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Post-bronchodilator FEV1",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Liters",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1.0",
+           "spread": "0.35"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0.9",
+           "spread": "0.27"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0.9",
+           "spread": "0.31"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Pre-bronchodilator FEV1 predicted",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Percent of predicted",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "32.7",
+           "spread": "10.23"
+          },
+          {
+           "groupId": "BG001",
+           "value": "32.7",
+           "spread": "9.00"
+          },
+          {
+           "groupId": "BG002",
+           "value": "32.7",
+           "spread": "9.63"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Post-bronchodilator FEV1 predicted",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Percent of predicted",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "36.8",
+           "spread": "11.42"
+          },
+          {
+           "groupId": "BG001",
+           "value": "36.4",
+           "spread": "10.13"
+          },
+          {
+           "groupId": "BG002",
+           "value": "36.6",
+           "spread": "10.79"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "FEV1 reversibility increase",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "mL",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "108.4",
+           "spread": "110.83"
+          },
+          {
+           "groupId": "BG001",
+           "value": "94.8",
+           "spread": "104.71"
+          },
+          {
+           "groupId": "BG002",
+           "value": "101.6",
+           "spread": "107.94"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "FEV1 reversibility % increase",
+     "description": "FEV reversibility (%) = (post-bronchodilator FEV minus pre-bronchodilator FEV) / pre-bronchodilator FEV \\* 100.",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Percent reversibility",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "13.6",
+           "spread": "15.29"
+          },
+          {
+           "groupId": "BG001",
+           "value": "11.8",
+           "spread": "13.15"
+          },
+          {
+           "groupId": "BG002",
+           "value": "12.7",
+           "spread": "14.27"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Post-bronchodilator FEV1/forced vital capacity (FVC)",
+     "description": "Calculated as FEV1/FVC \\* 100",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "FEV1/FVC percent",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "35.8",
+           "spread": "9.69"
+          },
+          {
+           "groupId": "BG001",
+           "value": "35.3",
+           "spread": "8.92"
+          },
+          {
+           "groupId": "BG002",
+           "value": "35.5",
+           "spread": "9.31"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Change From Baseline in Pre-bronchodilator Forced Expiratory Volume in First Second (FEV1)",
+     "description": "FEV1 is the amount of air which can be forcibly exhaled from the lungs in the first second of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value of pre-bronchodilator FEV1, time and a treatment-by-time interaction as independent variables.",
+     "populationDescription": "Intent-to-treat population included all randomly assigned patients who took at least 1 dose of trial treatment after randomization. Patients were assigned to the treatment group based on the treatment to which they were randomly assigned. Only patients with available data at Baseline and with at least 1 post-baseline measurement are included.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Baseline to Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "305"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.049",
+           "spread": "0.009"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.022",
+           "spread": "0.009"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "groupDescription": "The primary endpoint was tested in a confirmatory manner with a 2-sided significance level of 5%.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Repeated measures ANCOVA",
+       "statisticalComment": "Independent variables: treatment, baseline value of pre-bronchodilator FEV1, time and a treatment-by-time interaction.",
+       "paramType": "LSM Difference",
+       "paramValue": "0.071",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.046",
+       "ciUpperLimit": "0.095",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.012"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Post-bronchodilator FEV1",
+     "description": "FEV1 is the amount of air which can be forcibly exhaled from the lungs in the first second of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value of post-bronchodilator FEV1, time and a treatment-by-time interaction as independent variables.",
+     "populationDescription": "Intent-to-treat population with available data.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Baseline to Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "305"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.045",
+           "spread": "0.009"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.023",
+           "spread": "0.009"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Pre-bronchodilator Forced Vital Capacity (FVC)",
+     "description": "Vital capacity is the amount of air which can be forcibly exhaled from the lungs after taking the deepest breath possible. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "populationDescription": "Intent-to-treat population with available data.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Baseline to Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "305"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.100",
+           "spread": "0.017"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.009",
+           "spread": "0.017"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Post-bronchodilator Forced Vital Capacity (FVC)",
+     "description": "Vital capacity is the amount of air which can be forcibly exhaled from the lungs after taking the deepest breath possible. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "populationDescription": "Intent-to-treat population with available data.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Baseline to Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "305"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.094",
+           "spread": "0.017"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.007",
+           "spread": "0.016"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Pre-bronchodilator Forced Expiratory Flow 25-75%",
+     "description": "Forced expiratory flow 25-75% (FEF25-75%) is the flow (or speed) of air coming out of the lung during the middle half of a forced expiration. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "populationDescription": "Intent-to-treat population with available data.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters/second",
+     "timeFrame": "Baseline to Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "305"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.023",
+           "spread": "0.005"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.010",
+           "spread": "0.005"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Post-bronchodilator Forced Expiratory Flow 25-75%",
+     "description": "Forced expiratory flow 25-75% (FEF25-75%) is the flow (or speed) of air coming out of the lung during the middle half of a forced expiration. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "populationDescription": "Intent-to-treat population with available data.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters/second",
+     "timeFrame": "Baseline to Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "305"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.022",
+           "spread": "0.005"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.008",
+           "spread": "0.005"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Pre-bronchodilator Forced Expiratory Volume in First Three Seconds (FEV3)",
+     "description": "FEV3 is the amount of air which can be forcibly exhaled from the lungs in the first three seconds of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value of pre-bronchodilator FEV3, time and a treatment-by-time interaction as independent variables.",
+     "populationDescription": "Intent-to-treat population with available data.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Baseline to Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "305"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.072",
+           "spread": "0.012"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.030",
+           "spread": "0.012"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Post-bronchodilator Forced Expiratory Volume in First Three Seconds (FEV3)",
+     "description": "FEV3 is the amount of air which can be forcibly exhaled from the lungs in the first three seconds of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value of post-bronchodilator FEV3, time and a treatment-by-time interaction as independent variables.",
+     "populationDescription": "Intent-to-treat population with available data.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Baseline to Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "305"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.064",
+           "spread": "0.012"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.030",
+           "spread": "0.011"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Pre-bronchodilator Forced Expiratory Volume in First Six Seconds (FEV6)",
+     "description": "FEV6 is the amount of air which can be forcibly exhaled from the lungs in the first six seconds of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value of pre-bronchodilator FEV6, time and a treatment-by-time interaction as independent variables.",
+     "populationDescription": "Intent-to-treat population with available data.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Baseline to Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "305"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.084",
+           "spread": "0.014"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.031",
+           "spread": "0.014"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Post-bronchodilator Forced Expiratory Volume in First Six Seconds (FEV6)",
+     "description": "FEV6 is the amount of air which can be forcibly exhaled from the lungs in the first three seconds of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value of post-bronchodilator FEV6, time and a treatment-by-time interaction as independent variables.",
+     "populationDescription": "Intent-to-treat population with available data.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Baseline to Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "304"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.078",
+           "spread": "0.013"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.032",
+           "spread": "0.013"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Pre-bronchodilator Peak Expiratory Flow Rate (PEF)",
+     "description": "PEF is the maximal flow (or speed) achieved during the maximally forced expiration initiated at full inspiration. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "populationDescription": "Intent-to-treat population with available data.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters/minute",
+     "timeFrame": "Baseline to Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "305"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.096",
+           "spread": "0.027"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.036",
+           "spread": "0.026"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Post-bronchodilator Peak Expiratory Flow Rate (PEF)",
+     "description": "PEF is the maximal flow (or speed) achieved during the maximally forced expiration initiated at full inspiration. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol. Change from baseline over 24 weeks of treatment was calculated from a repeated measures analysis of covariance (ANCOVA) model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "populationDescription": "Intent-to-treat population with available data.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters/minute",
+     "timeFrame": "Baseline to Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "305"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.099",
+           "spread": "0.027"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.030",
+           "spread": "0.027"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Pre-bronchodilator Ratio of Forced Expiratory Volume After 1 Second to Forced Vital Capacity",
+     "description": "The FEV1/FVC ratio represents the percentage of vital capacity expelled from the lungs during the first second of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication.",
+     "populationDescription": "Intent-to-treat population with available data; last observation carried forward (LOCF) was used.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Full Range",
+     "unitOfMeasure": "percent FEV1/FVC",
+     "timeFrame": "Baseline and Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "305"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.570",
+           "spread": "4.5667",
+           "lowerLimit": "-14.32",
+           "upperLimit": "28.35"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-1.370",
+           "spread": "4.9968",
+           "lowerLimit": "-19.81",
+           "upperLimit": "27.36"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Post-bronchodilator Ratio of Forced Expiratory Volume After 1 Second to Forced Vital Capacity",
+     "description": "The FEV1/FVC ratio represents the percentage of vital capacity expelled from the lungs during the first second of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol.",
+     "populationDescription": "Intent-to-treat population with available data; last observation carried forward (LOCF) was used.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Full Range",
+     "unitOfMeasure": "percent FEV1/FVC",
+     "timeFrame": "Baseline and Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "305"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.320",
+           "spread": "4.5400",
+           "lowerLimit": "-16.38",
+           "upperLimit": "18.30"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.940",
+           "spread": "5.1677",
+           "lowerLimit": "-23.53",
+           "upperLimit": "33.77"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Pre-bronchodilator Ratio of Forced Expiratory Volume After 1 Second to Forced Expiratory Volume After 6 Seconds",
+     "description": "The FEV1/FEV6 ratio represents the percentage of the volume of air expired in the first six seconds that is expelled from the lungs during the first second of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication.",
+     "populationDescription": "Intent-to-treat population with available data; last observation carried forward (LOCF) was used.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Full Range",
+     "unitOfMeasure": "percentage of FEV1/FEV6",
+     "timeFrame": "Baseline and Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "305"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.210",
+           "spread": "3.9213",
+           "lowerLimit": "-14.05",
+           "upperLimit": "27.48"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.950",
+           "spread": "3.9173",
+           "lowerLimit": "-17.09",
+           "upperLimit": "21.03"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Post-bronchodilator Ratio of Forced Expiratory Volume After 1 Second to Forced Expiratory Volume After 6 Seconds",
+     "description": "The FEV1/FEV6 ratio represents the percentage of the volume of air expired in the first six seconds that is expelled from the lungs during the first second of a forced exhalation. Pulmonary function testing was performed using centralized spirometry prior to taking study medication. Post-bronchodilator measurements were taken 30 minutes after four inhalations of 100 μg salbutamol.",
+     "populationDescription": "Intent-to-treat population with available data; last observation carried forward (LOCF) was used.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Full Range",
+     "unitOfMeasure": "percentage of FEV1/FEV6",
+     "timeFrame": "Baseline and Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "295"
+        },
+        {
+         "groupId": "OG001",
+         "value": "304"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.340",
+           "spread": "3.7240",
+           "lowerLimit": "-25.56",
+           "upperLimit": "17.08"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.420",
+           "spread": "4.1957",
+           "lowerLimit": "-20.53",
+           "upperLimit": "25.55"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in COPD Symptom Scores",
+     "description": "Symptoms of chronic bronchitis with respect to cough and sputum production were assessed daily by the patient and recorded in a diary. Symptoms were assessed on a 4-point scale as follows: Cough: 0: no cough; 1: mild cough (at some time during the day); 2: moderate cough (regularly during the day); 3: severe cough (never free of cough or feeling free of need to cough). Sputum production: 0: no sputum production (unnoticeable); 1: mild sputum production (noticeable as a problem); 2: moderate sputum production (frequent inconvenience); 3: severe sputum production (constant problem). Change from Baseline is reported for cough and sputum separately, and for the sum of the 2 scores (range 0 - 6). Least squares means (LSM) are from a repeated measures ANCOVA model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "populationDescription": "Intent-to-treat population with available data.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "units on a scale",
+     "timeFrame": "Baseline to Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "284"
+        },
+        {
+         "groupId": "OG001",
+         "value": "299"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Score Sum (n=282, 296)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.013",
+           "spread": "0.054"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.064",
+           "spread": "0.053"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Cough (n=284, 299)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.019",
+           "spread": "0.029"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.036",
+           "spread": "0.028"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Sputum (n=284, 296)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.035",
+           "spread": "0.030"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.037",
+           "spread": "0.029"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Use of Rescue Medication",
+     "description": "Salbutamol (given by metered dose inhaler and spacer) was used as rescue medication according to the individual needs of a patient. Each use was documented in the patient's paper diary. Least squares means (LSM) are from a repeated measures ANCOVA model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "populationDescription": "Intent-to-treat population with available data.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "puffs/day",
+     "timeFrame": "Baseline to Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "286"
+        },
+        {
+         "groupId": "OG001",
+         "value": "293"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.485",
+           "spread": "0.134"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.518",
+           "spread": "0.131"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Transition Dyspnoea Index (TDI) Total Score at Week 24",
+     "description": "The TDI is a recognized questionnaire to measure dyspnoea (shortness of breath) in patients with COPD. Questions from the TDI were used to assess the 3 components: \"change in functional impairment\", \"change in magnitude of task\" and \"change in magnitude of effort\". Transitions or changes from baseline are rated from -3 (major deterioration) to +3 (major improvement), and summed to give a total score ranging from -9 to +9. Least squares means (LSM) are from a repeated measures ANCOVA model with treatment, baseline value, time and a treatment-by-time interaction as independent variables.",
+     "populationDescription": "Intent-to-treat population with available data.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "units on a scale",
+     "timeFrame": "Baseline to Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "299"
+        },
+        {
+         "groupId": "OG001",
+         "value": "305"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.335",
+           "spread": "0.124"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.396",
+           "spread": "0.122"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Percentage of Participants With Moderate or Severe COPD Exacerbations",
+     "description": "A COPD exacerbation is an event characterised by a worsening in the patient's baseline dyspnoea, or cough and/or sputum beyond day-to-day variability sufficient to warrant a change in management, and may be accompanied by increased wheeze, chest tightness, purulent sputum and symptoms of cold and/or fatigue. COPD exacerbations were categorized as follows: - Severe: Requiring hospitalization and/or leading to death; - Moderate: Requiring oral or parenteral glucocorticosteroid therapy.",
+     "populationDescription": "Intent-to-treat",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "percentage of participants",
+     "timeFrame": "24 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "313"
+        },
+        {
+         "groupId": "OG001",
+         "value": "313"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "No exacerbations",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "81.8"
+          },
+          {
+           "groupId": "OG001",
+           "value": "84.7"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "One exacerbation",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "15.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "12.8"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Two exacerbations",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.6"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.9"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Three exacerbations",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.6"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.6"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Mean Rate of Moderate or Severe COPD Exacerbations Per Patient Per Year",
+     "description": "The mean rate of COPD exacerbations per patient per year rate = (number of exacerbations per treatment group/time to study withdrawal per treatment group) \\* 365. COPD exacerbations were categorized as follows: - Severe: Requiring hospitalization and/or leading to death; - Moderate: Requiring oral or parenteral glucocorticosteroid therapy.",
+     "populationDescription": "Intent-to-treat",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "exacerbations per patient per year",
+     "timeFrame": "24 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "313"
+        },
+        {
+         "groupId": "OG001",
+         "value": "313"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.55"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.44"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Time to Onset of First Moderate or Severe COPD Exacerbation",
+     "description": "Time to onset of a COPD exacerbation is defined as onset date of COPD exacerbation - date of first intake of study drug + 1 day. COPD exacerbations were categorized as follows: - Severe: Requiring hospitalization and/or leading to death; - Moderate: Requiring oral or parenteral glucocorticosteroid therapy.",
+     "populationDescription": "Intent-to-treat population with at least one moderate or severe exacerbation",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Full Range",
+     "unitOfMeasure": "days",
+     "timeFrame": "24 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "57"
+        },
+        {
+         "groupId": "OG001",
+         "value": "48"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "67.0",
+           "lowerLimit": "3",
+           "upperLimit": "165"
+          },
+          {
+           "groupId": "OG001",
+           "value": "86.0",
+           "lowerLimit": "2",
+           "upperLimit": "168"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Time to Onset of Second Moderate or Severe COPD Exacerbation",
+     "description": "Time to onset of a COPD exacerbation is defined as onset date of COPD exacerbation - date of first intake of study drug + 1 day. At least 10 days between the stop date of an exacerbation and the start date of the following exacerbation was required for these to be be considered as two separate COPD exacerbations. COPD exacerbations were categorized as follows: - Severe: Requiring hospitalization and/or leading to death; - Moderate: Requiring oral or parenteral glucocorticosteroid therapy.",
+     "populationDescription": "Intent-to-treat population who experienced a second moderate to severe COPD exacerbation.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Full Range",
+     "unitOfMeasure": "days",
+     "timeFrame": "24 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "10"
+        },
+        {
+         "groupId": "OG001",
+         "value": "8"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "119.5",
+           "lowerLimit": "50",
+           "upperLimit": "166"
+          },
+          {
+           "groupId": "OG001",
+           "value": "117.0",
+           "lowerLimit": "71",
+           "upperLimit": "163"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Participants With Adverse Events",
+     "description": "An adverse event (AE) is any untoward medical occurrence in a clinical trial participant regardless of causal relationship to study drug and regardless whether study drug has been administered. A serious adverse event (SAE) is any untoward medical occurrence or effect that at any dose results in death, is life-threatening, requires inpatient hospitalization or prolongation of existing hospitalization, results in persistent or significant disability / incapacity, is a congenital anomaly / birth defect or is medically important due to other reasons than the above mentioned criteria. A non-serious AE is any AE that does not meet the criteria above. Each AE was assessed by the Investigator as either 'related' or 'not related' to study drug.",
+     "populationDescription": "Safety population, all randomized patients who took at least 1 dose of the trial treatment after randomization.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "24 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Roflumilast",
+       "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "315"
+        },
+        {
+         "groupId": "OG001",
+         "value": "311"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "All AEs",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "213"
+          },
+          {
+           "groupId": "OG001",
+           "value": "196"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Non-serious AEs",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "189"
+          },
+          {
+           "groupId": "OG001",
+           "value": "172"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serious AEs (including death)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "62"
+          },
+          {
+           "groupId": "OG001",
+           "value": "48"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Death",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serious AEs not including death",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "60"
+          },
+          {
+           "groupId": "OG001",
+           "value": "46"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "AEs with suggested relationship to trial treatment",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "65"
+          },
+          {
+           "groupId": "OG001",
+           "value": "18"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "AEs leading to withdrawal from the trial",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "15"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "AEs not recovered at trial termination",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "54"
+          },
+          {
+           "groupId": "OG001",
+           "value": "45"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "AEs with changes in concomitant medication",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "164"
+          },
+          {
+           "groupId": "OG001",
+           "value": "155"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "24 weeks.",
+   "description": "At each visit the investigator had to document any occurrence of adverse events and abnormal laboratory findings. Any event spontaneously reported by the participant or observed by the investigator was recorded, irrespective of the relation to study treatment.",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Roflumilast",
+     "description": "Roflumilast 500 μg, tablet, oral, once daily for up to 24 weeks.",
+     "seriousNumAffected": 62,
+     "seriousNumAtRisk": 315,
+     "otherNumAffected": 143,
+     "otherNumAtRisk": 315
+    },
+    {
+     "id": "EG001",
+     "title": "Placebo",
+     "description": "Placebo to roflumilast, tablet, oral, once daily for up to 24 weeks.",
+     "seriousNumAffected": 48,
+     "seriousNumAtRisk": 311,
+     "otherNumAffected": 133,
+     "otherNumAtRisk": 311
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Acute myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Angina unstable",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Cardiac failure",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Cor pulmonale chronic",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Hydrocele",
+     "organSystem": "Congenital, familial and genetic disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Colonic polyp",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Diarrhoea",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Rectal haemorrhage",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Hepatitis B",
+     "organSystem": "Hepatobiliary disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Liver injury",
+     "organSystem": "Hepatobiliary disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Appendicitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Herpes zoster infection neurological",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Upper respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Laceration",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Thermal burn",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Bladder cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Multiple myeloma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Prostate cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Rectal cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Cerebral infarction",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Hypoxic-ischaemic encephalopathy",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Nephrolithiasis",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Ureteric dilatation",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Benign prostatic hyperplasia",
+     "organSystem": "Reproductive system and breast disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Epididymitis",
+     "organSystem": "Reproductive system and breast disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Acute respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 44,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 39,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Pneumothorax",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Vocal cord polyp",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Varicose vein",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 311
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 90,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 89,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Nasopharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 28,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 45,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Upper respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 17,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 18,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Diarrhoea",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 21,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 3,
+       "numAtRisk": 311
+      }
+     ]
+    },
+    {
+     "term": "Decreased appetite",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA 15.0",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 19,
+       "numAtRisk": 315
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 311
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "The first study related publication will be a multi-center publication submitted within 24 months after conclusion or termination of a study at all sites. After such multi site publication, all proposed site publications and presentations will be submitted to sponsor for review 60 days in advance of publication. Site will remove Sponsor confidential information unrelated to study results. Sponsor can delay a proposed publication for another 60 days to preserve intellectual property."
+   },
+   "pointOfContact": {
+    "title": "AstraZeneca Clinical Study Information Center",
+    "organization": "AstraZeneca",
+    "email": "information.center@astrazeneca.com",
+    "phone": "1-877-240-9479"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C424423",
+     "term": "Roflumilast"
+    },
+    {
+     "id": "D000420",
+     "term": "Albuterol"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D004983",
+     "term": "Ethanolamines"
+    },
+    {
+     "id": "D000605",
+     "term": "Amino Alcohols"
+    },
+    {
+     "id": "D000438",
+     "term": "Alcohols"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D010627",
+     "term": "Phenethylamines"
+    },
+    {
+     "id": "D005021",
+     "term": "Ethylamines"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

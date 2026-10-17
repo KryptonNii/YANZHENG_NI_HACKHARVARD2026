@@ -1,0 +1,4483 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT02347761",
+   "orgStudyIdInfo": {
+    "id": "SUN101-301"
+   },
+   "organization": {
+    "fullName": "Sunovion Respiratory Development Inc.",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Efficacy and Safety Trial of 12 Weeks of Treatment With Nebulized SUN-101 in Patients With COPD",
+   "officialTitle": "Randomized, Double-Blind, Placebo-Controlled, Parallel-Group, Multicenter, Efficacy and Safety Trial of 12 Weeks of Treatment With Nebulized SUN-101 in Patients With COPD: GOLDEN-3 (Glycopyrrolate for Obstructive Lung Disease Via Electronic Nebulizer)",
+   "acronym": "GOLDEN-3"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2018-02",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2015-02"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2015-11",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2015-11",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2015-01-21",
+   "studyFirstSubmitQcDate": "2015-01-26",
+   "studyFirstPostDateStruct": {
+    "date": "2015-01-27",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2018-01-02",
+   "resultsFirstSubmitQcDate": "2018-02-22",
+   "resultsFirstPostDateStruct": {
+    "date": "2018-03-22",
+    "type": "ACTUAL"
+   },
+   "dispFirstSubmitDate": "2016-03-18",
+   "dispFirstSubmitQcDate": "2016-03-18",
+   "dispFirstPostDateStruct": {
+    "date": "2016-04-15",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2018-02-22",
+   "lastUpdatePostDateStruct": {
+    "date": "2018-03-22",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Sunovion Respiratory Development Inc.",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false
+  },
+  "descriptionModule": {
+   "briefSummary": "This is a trial of 12 weeks of treatment with nebulized SUN-101 using an Investigational eFlow® Closed System (CS) nebulizer in subjects with chronic obstructive pulmonary disease (COPD) according to the Global Initiative for Chronic Obstructive Lung Disease (GOLD 2014) guidelines.",
+   "detailedDescription": "This is a Phase 3, randomized, double-blind, placebo-controlled, parallel-group, multicenter, efficacy and safety trial of 12 weeks of treatment with nebulized SUN-101 using an Investigational eFlow® Closed System (CS) nebulizer in approximately 645 subjects with chronic obstructive pulmonary disease (COPD) according to the Global Initiative for Chronic Obstructive Lung Disease (GOLD 2014) guidelines.\n\nSUN-101 or placebo will be administered twice daily as an oral inhalation using the investigational eFlow CS nebulizer. Approximately 150 subjects will be enrolled in the substudy (at selected sites only). These subjects will be required to participate in serial spirometry, vital signs, ECGs, and an additional Holter monitor assessment at Visit 6 (Week 12). This subset of subjects will be referred to as the Substudy Population."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "COPD"
+   ],
+   "keywords": [
+    "Chronic Obstructive Pulmonary Disease"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 653,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "SUN-101 50 mcg BID eFlow (CS) nebulizer",
+     "type": "EXPERIMENTAL",
+     "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer",
+     "interventionNames": [
+      "Drug: SUN-101 50 mcg BID eFlow (CS) nebulizer"
+     ]
+    },
+    {
+     "label": "SUN-101 25 mcg BID eFlow (CS) nebulizer",
+     "type": "EXPERIMENTAL",
+     "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer",
+     "interventionNames": [
+      "Drug: SUN-101 25 mcg BID eFlow (CS) nebulizer"
+     ]
+    },
+    {
+     "label": "Placebo BID eFlow (CS) nebulizer",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer",
+     "interventionNames": [
+      "Drug: Placebo BID eFlow Closed System (CS) nebulizer"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "SUN-101 50 mcg BID eFlow (CS) nebulizer",
+     "description": "SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer",
+     "armGroupLabels": [
+      "SUN-101 50 mcg BID eFlow (CS) nebulizer"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "SUN-101 25 mcg BID eFlow (CS) nebulizer",
+     "description": "SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer",
+     "armGroupLabels": [
+      "SUN-101 25 mcg BID eFlow (CS) nebulizer"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo BID eFlow Closed System (CS) nebulizer",
+     "description": "Placebo twice daily (BID) eFlow Closed System (CS) nebulizer",
+     "armGroupLabels": [
+      "Placebo BID eFlow (CS) nebulizer"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Change From Baseline in Trough Forced Expiratory Volume in 1 Second (FEV1) at Week 12",
+     "description": "ALL COLLECTED-Spirometry was performed according to internationally accepted standards.Trough FEV1 at Week 12 was defined as the mean of the values collected at two time points 30 minutes apart at approximately 24 hours (± 1 hour) after the previous morning dose.Change from baseline in trough FEV1 was calculated as the trough FEV1 value at Week 12 minus the morning trough FEV1 at baseline (mean of the two pre-dose values at 45 and 15 minutes prior to the first dose). All collected values were used in this analyses, regardless if the subject remained on randomized treatment or not, and regardless if the values might potentially be affected by other therapies or not Values not collected remained as missing values and were assumed to be missing at random (MAR) \"ALL COLLECTED\" and \"ON TREATMENT\" data are the same. The only difference is in the number of visits included for those participants who may have discontinued randomized treatment but remained in the study.\" for all endpoints",
+     "timeFrame": "Baseline and Week 12"
+    },
+    {
+     "measure": "Change From Baseline in Trough Forced Expiratory Volume in 1 Second (FEV1) Week 12",
+     "description": "ON TEATMENT-Spirometry was performed according to internationally accepted standards.Trough FEV1 at Week 12 was defined as the mean of the values collected at two time points 30 minutes apart at approximately 24 hours (± 1 hour) after the previous morning dose.Change from baseline in trough FEV1 was calculated as the trough FEV1 value at Week 12 minus the morning trough FEV1 at baseline (mean of the two pre-dose values at 45 and 15 minutes prior to the first dose).Only on-treatment values (which included only data collected while subjects were taking study drug) are used for this analysis. Values affected by other medication use were set to missing. Non-collected or missing data were not imputed for this analysis. Values not collected remained as missing values and were assumed to be missing at random (MAR).",
+     "timeFrame": "Baseline and Week 12"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Standardized Change From Baseline at Week 12 in FEV1 Area Under the Curve (AUC) (0-12) in the Substudy Population",
+     "description": "ALL COLLECTED The standardized FEV1 AUC(0-12) was calculated at weeks 0 and 12 for the Substudy Population with extended spirometry measurements. The trapezoidal rule was used to calculate FEV1 AUC and then normalized to the length of time. Intermittent missing spirometry measurements were ignored and the trapezoidal rule would simply span the missing time point(s). If the Hour 12 time point was missing, then the AUC(0-12) calculation was based on the time interval up to the last non-missing time point prior to Hour 12. If a subject has a missing baseline FEV1, then that subject had a missing AUC. All collected values were used in the analyses, regardless if the subject remained on randomized treatment or not, and regardless if the values might potentially be affected by other therapies or not Values not collected remained as missing values and were assumed to be missing at random (MAR).",
+     "timeFrame": "Baseline and Week 12"
+    },
+    {
+     "measure": "Standardized Change From Baseline at Week 12 in FEV1 Area Under the Curve (AUC) (0-12) in Substudy Population",
+     "description": "ON TREATMENT The standardized FEV1 AUC(0-12) was calculated at weeks 0 and 12 for the Substudy Population with extended spirometry measurements. The trapezoidal rule was used to calculate FEV1 AUC and then normalized to the length of time. Intermittent missing spirometry measurements were ignored and the trapezoidal rule would simply span the missing time points. If the Hour 12 time point was missing, then the AUC(0-12) calculation was based on the time interval up to the last non-missing time point prior to Hour 12. If a subject has a missing baseline FEV1, then that subject had a missing AUC.Only on-treatment values (which included only data collected while subjects were taking study drug) are used for this analysis. Values affected by other medication use were set to missing. Non-collected or missing data were not imputed for this analysis. Values not collected remained as missing values and were assumed to be missing at random (MAR).",
+     "timeFrame": "Baseline and Week 12"
+    },
+    {
+     "measure": "Change From Baseline in Trough Forced Vital Capacity (FVC) at Week 12",
+     "description": "ALL COLLECTED Spirometry was performed according to internationally accepted standards. Trough FVC at Week 12 was defined as the mean of the values collected at two time points 30 minutes apart at approximately 24 hours (± 1 hour) after the previous morning dose.\n\nAll collected values were used in the analyses, regardless if the subject remained on randomized treatment or not, and regardless if the values might potentially be affected by other therapies or not Values not collected remained as missing values and were assumed to be missing at random",
+     "timeFrame": "Baseline and Week 12"
+    },
+    {
+     "measure": "Change From Baseline in Trough Forced Vital Capacity (FVC) Week 12",
+     "description": "ON TREATMENT Spirometry was performed according to internationally accepted standards. Trough FVC at Week 12 was defined as the mean of the values collected at two time points 30 minutes apart at approximately 24 hours (± 1 hour) after the previous morning dose. Change from baseline in trough FVC was calculated as the trough FVC value at Week 12 minus the morning trough FVC at baseline (mean of the two pre-dose values at 45 and 15 minutes prior to the first dose).Only on-treatment values (which included only data collected while subjects were taking study drug) are used for this analysis. Values affected by other medication use were set to missing. Non-collected or missing data were not imputed for this analysis. Values not collected remained as missing values and were assumed to be missing at random (MAR).",
+     "timeFrame": "Baseline and Week 12"
+    },
+    {
+     "measure": "Change From Baseline in Health Status Measured by St. George's Respiratory Questionnaire (SGRQ) at Week 12/End of Study",
+     "description": "ALL COLLECTED Participants reported change in health status by using the SGRQ. The SGRQ contains 50 items divided into 2 parts covering 3 aspects of health related to COPD: symptoms, activity, and impacts. A score was calculated for each of these 3 subscales and a \"Total\" score was calculated. In each case the lowest possible value is 0 and the highest 100. Higher values correspond to greater impairment of health status.\n\nAll collected values were used in the analyses, regardless if the subject remained on randomized treatment or not. Values not collected remained as missing values and were assumed to be missing at random (MAR).",
+     "timeFrame": "Baseline and Week 12"
+    },
+    {
+     "measure": "Change From Baseline in Health Status Measured by St. George's Respiratory Questionnaire (SGRQ) Week 12/End of Study",
+     "description": "ON TREATMENT Participants reported change in health status by using the SGRQ. The SGRQ contains 50 items divided into 2 parts covering 3 aspects of health related to COPD: symptoms, activity, and impacts. A score was calculated for each of these 3 subscales and a \"Total\" score was calculated. In each case the lowest possible value is 0 and the highest 100. Higher values correspond to greater impairment of health status.\n\nOnly on-treatment values (which included only data collected while subjects were taking study drug) are used for this analysis. Values affected by other medication use were set to missing. Non-collected or missing data were not imputed for this analysis. Values not collected remained as missing values and were assumed to be missing at random (MAR).",
+     "timeFrame": "Baseline and Week 12"
+    },
+    {
+     "measure": "Change in Number of Rescue Medication Puffs Per Day Over the 12-week Double-blind Treatment Period",
+     "description": "ALL COLLECTED Participants completed an electronic diary (eDiary) daily (night time) to record the number of puffs of rescue medication inhaled in the previous 24 hours. A negative change from baseline indicates improvement.\n\nAll collected values were used in the analyses, regardless if the subject remained on randomized treatment or not. Values not collected remained as missing values and were assumed to be missing at random (MAR).",
+     "timeFrame": "Week 0-12"
+    },
+    {
+     "measure": "Number of Subjects With Major Adverse Cardiac Events (MACE)",
+     "description": "ALL COLLECTED All deaths and any other findings suggestive of a potential MACE (including clinically relevant information and SAEs, and all PTs form the SMQs \"myocardial infarction\", \"other ischemic heart disease\", \"central nervous system hemorrhages and cerebrovascular conditions\") were sent to an adjudication committee for review and categorized as CV death, nonfatal MI, and nonfatal stroke. The MACE score was defined as the total number of subjects with CV deaths, nonfatal MIs, and nonfatal strokes. These events were collected for the double-blind period (from the first date of study medication until the date of last contact)",
+     "timeFrame": "Week 0-12"
+    },
+    {
+     "measure": "Percentage of Subjects With Major Cardiac Events (MACE)",
+     "description": "ALL COLLECTED All deaths and any other findings suggestive of a potential MACE (including clinically relevant information and SAEs, and all PTs form the SMQs \"myocardial infarction\", \"other ischemic heart disease\", \"central nervous system hemorrhages and cerebrovascular conditions\") were sent to an adjudication committee for review and categorized as CV death, nonfatal MI, and nonfatal stroke. The MACE score was defined as the total number of subjects with CV deaths, nonfatal MIs, and nonfatal strokes. These events were collected for the double-blind period (from the first date of study medication until the date of last contact)",
+     "timeFrame": "Week 0-12"
+    },
+    {
+     "measure": "Number of Subjects With Treatment Emergent Adverse Events (TEAE)",
+     "description": "ON TREATMENT A TEAE is defined as any non-serious AE that occurred on or after the first dose of study medication and within 7 days after the last dose of study medication, or any serious AE that occurred on or after the first dose of study medication and within 30 days after the last dose of study medication. A treatment emergent AE is an on-treatment AE.",
+     "timeFrame": "Week 0-12"
+    },
+    {
+     "measure": "Percent of Subjects With Treatment Emergent Adverse Events (TEAE)",
+     "description": "ON TREATMENT A TEAE is defined as any non-serious AE that occurred on or after the first dose of study medication and within 7 days after the last dose of study medication, or any serious AE that occurred on or after the first dose of study medication and within 30 days after the last dose of study medication. A treatment emergent AE is an on-treatment AE.",
+     "timeFrame": "Week 0-12"
+    },
+    {
+     "measure": "Number of Subjects With Treatment Emergent Serious Adverse Events (SAE)",
+     "description": "ON TREATMENT A treatment emergent SAE is defined as any SAE that occurred on or after the first dose of study medication and within 30 days after the last dose of study medication. A treatment emergent SAE is an on-treatment SAE",
+     "timeFrame": "Week 0-12"
+    },
+    {
+     "measure": "Percent of Subjects With Treatment Emergent Serious Adverse Events (SAE)",
+     "description": "ON TREATMENT A treatment emergent SAE is defined as any SAE that occurred on or after the first dose of study medication and within 30 days after the last dose of study medication. A treatment emergent SAE is an on-treatment SAE",
+     "timeFrame": "Week 0-12"
+    },
+    {
+     "measure": "Number of Subjects Who Discontinue Treatment Due to TEAE",
+     "description": "ON TREATMENT A TEAE is defined as any AE that occurred on or after the first dose of study medication and within 7 days after the last dose of study medication, or any serious AE that occurred on or after the first dose of study medication and within 30 days after the last dose of study medication. A treatment emergent AE is an on-treatment AE.",
+     "timeFrame": "Week 0-12"
+    },
+    {
+     "measure": "Percent of Subjects Who Discontinue Treatment Due to TEAE",
+     "description": "ON TREATMENT A TEAE is defined as any AE that occurred on or after the first dose of study medication and within 7 days after the last dose of study medication, or any serious AE that occurred on or after the first dose of study medication and within 30 days after the last dose of study medication. A treatment emergent AE is an on-treatment AE.",
+     "timeFrame": "Week 0-12"
+    },
+    {
+     "measure": "Incidence Rate Per 100 Person-years of Subjects With Treatment Emergent Adverse Events (TEAE)",
+     "description": "ALL COLLECTED All deaths and any other findings suggestive of a potential MACE (including clinically relevant information and SAEs, and all PTs form the SMQs \"myocardial infarction\", \"other ischemic heart disease\", \"central nervous system hemorrhages and cerebrovascular conditions\") were sent to an adjudication committee for review and categorized as CV death, nonfatal MI, and nonfatal stroke. The MACE score was defined as the total number of subjects with CV deaths, nonfatal MIs, and nonfatal strokes. These events were collected for the double-blind period (from the first date of study medication until the date of last contact)I ncidence rate: TT= Total Time in years. Total Time (TT) is defined as the time from the first date of study drug until the latter of the date of last contact or 30 days after the date of last dose. Incidence Rate (per 1000 person-years) = n/TT x 1000.",
+     "timeFrame": "Week 0-12"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1. Male or female patients age ≥ 40 years, inclusive\n2. A clinical diagnosis of COPD according to the GOLD 2014 guidelines\n3. Current smokers or ex-smokers with at least 10 pack-year smoking history (eg, at least 1 pack/day for 10 years, or equivalent)\n4. Post-bronchodilator (following inhalation of ipratropium bromide) FEV1 \\< 80% of predicted normal and \\> 0.7 L during Screening (Visit 1)\n5. Post-bronchodilator (following inhalation of ipratropium bromide) FEV1/FVC ratio \\< 0.70 during Screening (Visit 1)\n6. Ability to perform reproducible spirometry according to the American Thoracic Society (ATS) and European Respiratory Society (ERS) guidelines (2005)\n7. Subject, if female ≤ 65 years of age and of child bearing potential, must have a negative serum pregnancy test at Visit 1. Females of childbearing potential must be instructed to and agree to avoid pregnancy during the study and must use an acceptable method of birth control: a) an oral contraceptive, an intrauterine device (IUD), implantable contraceptive, transdermal or injectable contraceptive for at least 1 month prior to entering the study with continued use throughout the study and for thirty days following participation; b) barrier method of contraception, eg, condom and /or diaphragm with spermicide while participating in the study; and/or c) abstinence\n8. Willing and able to provide written informed consent\n9. Willing and able to attend all study visits and adhere to all study assessments and procedures\n\nExclusion Criteria:\n\n1. Severe comorbidities including unstable cardiac or pulmonary disease or any other medical conditions that would, in the opinion of the Investigator, preclude the subject from safely completing the required tests or the study, or is likely to result in disease progression that would require withdrawal of the subject\n2. Concomitant clinically significant respiratory disease other than COPD (eg, asthma, tuberculosis, bronchiectasis or other non-specific pulmonary disease).\n3. Recent history of COPD exacerbation requiring hospitalization or need for increased treatments for COPD within 6 weeks prior to Screening (Visit 1)\n4. Use of daily oxygen therapy \\> 12 hours per day\n5. Respiratory tract infection within 6 weeks prior to Screening (Visit 1)\n6. Use of oral, intravenous, or intramuscular steroids within 3 months prior to Screening (Visit 1)\n7. History of malignancy of any organ system, treated or untreated within the past 5 years, with the exception of localized basal cell carcinoma of the skin\n8. Prolonged QTcF (\\> 450 msec for males and \\> 470 msec for females) during Screening (Visit 1) as determined from the report provided by the central laboratory, or history of long QT syndrome\n9. History of or clinically significant ongoing bladder outflow obstruction or history of catheterization for relief of bladder outflow obstruction within the previous 6 months.\n10. History of narrow angle glaucoma\n11. History of hypersensitivity or intolerance to aerosol medications\n12. Recent documented history (within the previous 3 months) of substance abuse\n13. Significant psychiatric disease that would likely result in the subject not being able to complete the study, in the opinion of the Investigator\n14. Participation in another investigational drug study where drug was received within 30 days prior to Screening (Visit 1) or current participation in another investigational drug trial, including a SUN-101 study\n15. Previously received SUN-101 (active treatment; formerly known as EP-101).\n16. Contraindicated for treatment with, or having a history of reactions/hypersensitivity to anticholinergic agents, beta2 agonists, or sympathomimetic amines",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Respiratory Medical Director, MD",
+     "affiliation": "Sunovion Respiratory Director",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Pinnacle Research Group, LLC",
+     "city": "Anniston",
+     "state": "Alabama",
+     "zip": "36207",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.65983,
+      "lon": -85.83163
+     }
+    },
+    {
+     "facility": "Pulmonary Associates, PA",
+     "city": "Phoenix",
+     "state": "Arizona",
+     "zip": "85006",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.44838,
+      "lon": -112.07404
+     }
+    },
+    {
+     "facility": "Clinical Research Consortium - Arizona",
+     "city": "Tempe",
+     "state": "Arizona",
+     "zip": "85283",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.41477,
+      "lon": -111.90931
+     }
+    },
+    {
+     "facility": "Desert Sun Clinical Research, LLC",
+     "city": "Tucson",
+     "state": "Arizona",
+     "zip": "85710",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.22174,
+      "lon": -110.92648
+     }
+    },
+    {
+     "facility": "Western States Clinical Research, Inc.",
+     "city": "Wheat Ridge",
+     "state": "Colorado",
+     "zip": "80033",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.7661,
+      "lon": -105.07721
+     }
+    },
+    {
+     "facility": "Clinical Research of West Florida, Inc.",
+     "city": "Clearwater",
+     "state": "Florida",
+     "zip": "33765",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.96585,
+      "lon": -82.8001
+     }
+    },
+    {
+     "facility": "Clermont Medical Research",
+     "city": "Clermont",
+     "state": "Florida",
+     "zip": "34711",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.54944,
+      "lon": -81.77285
+     }
+    },
+    {
+     "facility": "Riverside Clinical Research",
+     "city": "Edgewater",
+     "state": "Florida",
+     "zip": "32132",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.98888,
+      "lon": -80.90228
+     }
+    },
+    {
+     "facility": "Pulmonary Disease Specialists, PA, d/b/a PDS Research",
+     "city": "Kissimmee",
+     "state": "Florida",
+     "zip": "34741",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.30468,
+      "lon": -81.41667
+     }
+    },
+    {
+     "facility": "AppleMed Research, Inc.",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33155",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Clinical Trials of Florida, LLC",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33186",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Florida Institute for Clinical Research, LLC",
+     "city": "Orlando",
+     "state": "Florida",
+     "zip": "32825",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.53834,
+      "lon": -81.37924
+     }
+    },
+    {
+     "facility": "Emerald Coast Research Associates",
+     "city": "Panama City",
+     "state": "Florida",
+     "zip": "32405",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.15946,
+      "lon": -85.65983
+     }
+    },
+    {
+     "facility": "Clinical Research of West Florida, Inc",
+     "city": "Tampa",
+     "state": "Florida",
+     "zip": "33603",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.94752,
+      "lon": -82.45843
+     }
+    },
+    {
+     "facility": "Abraham Reasearch, PLLC",
+     "city": "Fort Mitchell",
+     "state": "Kentucky",
+     "zip": "41017",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.0595,
+      "lon": -84.54744
+     }
+    },
+    {
+     "facility": "Pulmonary Research Institute of Southeast Michigan",
+     "city": "Livonia",
+     "state": "Michigan",
+     "zip": "48152",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.36837,
+      "lon": -83.35271
+     }
+    },
+    {
+     "facility": "Minnesota Lung Center",
+     "city": "Edina",
+     "state": "Minnesota",
+     "zip": "55435",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.88969,
+      "lon": -93.34995
+     }
+    },
+    {
+     "facility": "Minnesota Lung Center",
+     "city": "Woodbury",
+     "state": "Minnesota",
+     "zip": "55125",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.92386,
+      "lon": -92.95938
+     }
+    },
+    {
+     "facility": "Midwest Chest Consultants, P.C.",
+     "city": "Saint Charles",
+     "state": "Missouri",
+     "zip": "63301",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.78394,
+      "lon": -90.48123
+     }
+    },
+    {
+     "facility": "Clinical Research Consortium",
+     "city": "Las Vegas",
+     "state": "Nevada",
+     "zip": "89119",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.17497,
+      "lon": -115.13722
+     }
+    },
+    {
+     "facility": "AAIR Research Center",
+     "city": "Rochester",
+     "state": "New York",
+     "zip": "14618",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.15478,
+      "lon": -77.61556
+     }
+    },
+    {
+     "facility": "American Health Research, Inc.",
+     "city": "Charlotte",
+     "state": "North Carolina",
+     "zip": "28207",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.22709,
+      "lon": -80.84313
+     }
+    },
+    {
+     "facility": "Hickory Research Center",
+     "city": "Hickory",
+     "state": "North Carolina",
+     "zip": "28602",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.73319,
+      "lon": -81.3412
+     }
+    },
+    {
+     "facility": "North Carolina Clinical Research",
+     "city": "Raleigh",
+     "state": "North Carolina",
+     "zip": "27607",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.7721,
+      "lon": -78.63861
+     }
+    },
+    {
+     "facility": "PMG Research of Wilmington",
+     "city": "Wilmington",
+     "state": "North Carolina",
+     "zip": "28401",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.23556,
+      "lon": -77.94604
+     }
+    },
+    {
+     "facility": "Columbus Regional Research Institute",
+     "city": "Columbus",
+     "state": "Ohio",
+     "zip": "31904",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.96118,
+      "lon": -82.99879
+     }
+    },
+    {
+     "facility": "Columbus Clinical Research, Inc",
+     "city": "Columbus",
+     "state": "Ohio",
+     "zip": "43213",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.96118,
+      "lon": -82.99879
+     }
+    },
+    {
+     "facility": "Optimed Research, LTD",
+     "city": "Columbus",
+     "state": "Ohio",
+     "zip": "43235",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.96118,
+      "lon": -82.99879
+     }
+    },
+    {
+     "facility": "Clinical Research Institute of Southern Oregon, PC",
+     "city": "Medford",
+     "state": "Oregon",
+     "zip": "97504",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.32652,
+      "lon": -122.87559
+     }
+    },
+    {
+     "facility": "Research Protocol Management Specialists",
+     "city": "Pittsburgh",
+     "state": "Pennsylvania",
+     "zip": "15243",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.44062,
+      "lon": -79.99589
+     }
+    },
+    {
+     "facility": "Safe Harbor Clinical Research",
+     "city": "East Providence",
+     "state": "Rhode Island",
+     "zip": "02914",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.81371,
+      "lon": -71.37005
+     }
+    },
+    {
+     "facility": "Palmetto Medical Research Associates, LLC",
+     "city": "Easley",
+     "state": "South Carolina",
+     "zip": "29640",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.82984,
+      "lon": -82.60152
+     }
+    },
+    {
+     "facility": "Greenville Pharmaceutical Research, Inc",
+     "city": "Greenville",
+     "state": "South Carolina",
+     "zip": "29615",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.85262,
+      "lon": -82.39401
+     }
+    },
+    {
+     "facility": "Upstate Pharmaceutical Research",
+     "city": "Greenville",
+     "state": "South Carolina",
+     "zip": "29615",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.85262,
+      "lon": -82.39401
+     }
+    },
+    {
+     "facility": "Piedmont Research Partners, LLC",
+     "city": "Old Point Station",
+     "state": "South Carolina",
+     "zip": "29707",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.95987,
+      "lon": -81.04869
+     }
+    },
+    {
+     "facility": "S. Carolina Pharmaceutical Research",
+     "city": "Spartanburg",
+     "state": "South Carolina",
+     "zip": "29303",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.94957,
+      "lon": -81.93205
+     }
+    },
+    {
+     "facility": "Spartanburg Medical Research",
+     "city": "Spartanburg",
+     "state": "South Carolina",
+     "zip": "29303",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.94957,
+      "lon": -81.93205
+     }
+    },
+    {
+     "facility": "CU Pharmaceutical Research",
+     "city": "Union",
+     "state": "South Carolina",
+     "zip": "29379",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.71541,
+      "lon": -81.62371
+     }
+    },
+    {
+     "facility": "Texas Pulmonary and Critical Care Consultants, PA",
+     "city": "Fort Worth",
+     "state": "Texas",
+     "zip": "76104",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.72541,
+      "lon": -97.32085
+     }
+    },
+    {
+     "facility": "Pioneer Research Solutions, Inc.",
+     "city": "Houston",
+     "state": "Texas",
+     "zip": "77099",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.76328,
+      "lon": -95.36327
+     }
+    },
+    {
+     "facility": "Central Texas Health Research",
+     "city": "New Braunfels",
+     "state": "Texas",
+     "zip": "78130",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.703,
+      "lon": -98.12445
+     }
+    },
+    {
+     "facility": "Sylvana Research Associates",
+     "city": "San Antonio",
+     "state": "Texas",
+     "zip": "78229",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.42412,
+      "lon": -98.49363
+     }
+    },
+    {
+     "facility": "Pulmonary Research of Abingdon, LLC",
+     "city": "Abingdon",
+     "state": "Virginia",
+     "zip": "24210",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.70983,
+      "lon": -81.97735
+     }
+    },
+    {
+     "facility": "Pulmonary Associates of Richmond, Inc.",
+     "city": "Richmond",
+     "state": "Virginia",
+     "zip": "23225",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.55376,
+      "lon": -77.46026
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "28838685",
+     "type": "RESULT",
+     "citation": "Kerwin E, Donohue JF, Goodin T, Tosiello R, Wheeler A, Ferguson GT. Efficacy and safety of glycopyrrolate/eFlow(R) CS (nebulized glycopyrrolate) in moderate-to-very-severe COPD: Results from the glycopyrrolate for obstructive lung disease via electronic nebulizer (GOLDEN) 3 and 4 randomized controlled trials. Respir Med. 2017 Nov;132:238-250. doi: 10.1016/j.rmed.2017.07.011. Epub 2017 Jul 19."
+    },
+    {
+     "pmid": "30587959",
+     "type": "DERIVED",
+     "citation": "Ohar J, Tosiello R, Goodin T, Sanjar S. Efficacy and safety of a novel, nebulized glycopyrrolate for the treatment of COPD: effect of baseline disease severity and age; pooled analysis of GOLDEN 3 and GOLDEN 4. Int J Chron Obstruct Pulmon Dis. 2018 Dec 18;14:27-37. doi: 10.2147/COPD.S184808. eCollection 2019."
+    },
+    {
+     "pmid": "30584583",
+     "type": "DERIVED",
+     "citation": "Ferguson GT, Kerwin EM, Donohue JF, Ganapathy V, Tosiello RL, Bollu VK, Rajagopalan K. Health-Related Quality of Life Improvements in Moderate to Very Severe Chronic Obstructive Pulmonary Disease Patients on Nebulized Glycopyrrolate: Evidence from the GOLDEN Studies. Chronic Obstr Pulm Dis. 2018 Jun 6;5(3):193-207. doi: 10.15326/jcopdf.5.3.2017.0178."
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+     "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+    },
+    {
+     "id": "FG001",
+     "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+     "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+    },
+    {
+     "id": "FG002",
+     "title": "Placebo BID eFlow (CS) Nebulizer",
+     "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+    }
+   ],
+   "periods": [
+    {
+     "title": "All Collected",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "218"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "217"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "218"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "201"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "203"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "191"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "17"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "14"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "27"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Death",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "3"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "11"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "11"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "22"
+        }
+       ]
+      },
+      {
+       "type": "invetigator disretion",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "instillation site pain",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "exacerbation of COPD",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "moved/travel",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "On Study Treatment",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "218"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "217"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "218"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "191"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "194"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "176"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "27"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "23"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "42"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Lack of Efficacy",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "4"
+        }
+       ]
+      },
+      {
+       "type": "non-compliance with study medication",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "2"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "7"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "5"
+        }
+       ]
+      },
+      {
+       "type": "move/travel",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "6"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "5"
+        }
+       ]
+      },
+      {
+       "type": "dissastisfaction with device",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "4"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "investigator discretion",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "durg not working",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "10"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "8"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "20"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+     "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+    },
+    {
+     "id": "BG001",
+     "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+     "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+    },
+    {
+     "id": "BG002",
+     "title": "Placebo BID eFlow (CS) Nebulizer",
+     "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+    },
+    {
+     "id": "BG003",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "218"
+      },
+      {
+       "groupId": "BG001",
+       "value": "217"
+      },
+      {
+       "groupId": "BG002",
+       "value": "218"
+      },
+      {
+       "groupId": "BG003",
+       "value": "653"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Categorical",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "<=18 years",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          },
+          {
+           "groupId": "BG003",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Between 18 and 65 years",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "135"
+          },
+          {
+           "groupId": "BG001",
+           "value": "122"
+          },
+          {
+           "groupId": "BG002",
+           "value": "109"
+          },
+          {
+           "groupId": "BG003",
+           "value": "366"
+          }
+         ]
+        },
+        {
+         "title": ">=65 years",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "83"
+          },
+          {
+           "groupId": "BG001",
+           "value": "95"
+          },
+          {
+           "groupId": "BG002",
+           "value": "109"
+          },
+          {
+           "groupId": "BG003",
+           "value": "287"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "62.5",
+           "spread": "8.09"
+          },
+          {
+           "groupId": "BG001",
+           "value": "63.1",
+           "spread": "8.78"
+          },
+          {
+           "groupId": "BG002",
+           "value": "63.7",
+           "spread": "8.37"
+          },
+          {
+           "groupId": "BG003",
+           "value": "63.1",
+           "spread": "8.42"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "98"
+          },
+          {
+           "groupId": "BG001",
+           "value": "99"
+          },
+          {
+           "groupId": "BG002",
+           "value": "107"
+          },
+          {
+           "groupId": "BG003",
+           "value": "304"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "120"
+          },
+          {
+           "groupId": "BG001",
+           "value": "118"
+          },
+          {
+           "groupId": "BG002",
+           "value": "111"
+          },
+          {
+           "groupId": "BG003",
+           "value": "349"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Ethnicity (NIH/OMB)",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Hispanic or Latino",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "6"
+          },
+          {
+           "groupId": "BG001",
+           "value": "7"
+          },
+          {
+           "groupId": "BG002",
+           "value": "6"
+          },
+          {
+           "groupId": "BG003",
+           "value": "19"
+          }
+         ]
+        },
+        {
+         "title": "Not Hispanic or Latino",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "212"
+          },
+          {
+           "groupId": "BG001",
+           "value": "210"
+          },
+          {
+           "groupId": "BG002",
+           "value": "212"
+          },
+          {
+           "groupId": "BG003",
+           "value": "634"
+          }
+         ]
+        },
+        {
+         "title": "Unknown or Not Reported",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          },
+          {
+           "groupId": "BG003",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Race (NIH/OMB)",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "American Indian or Alaska Native",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1"
+          },
+          {
+           "groupId": "BG002",
+           "value": "1"
+          },
+          {
+           "groupId": "BG003",
+           "value": "3"
+          }
+         ]
+        },
+        {
+         "title": "Asian",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1"
+          },
+          {
+           "groupId": "BG002",
+           "value": "1"
+          },
+          {
+           "groupId": "BG003",
+           "value": "2"
+          }
+         ]
+        },
+        {
+         "title": "Native Hawaiian or Other Pacific Islander",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          },
+          {
+           "groupId": "BG003",
+           "value": "1"
+          }
+         ]
+        },
+        {
+         "title": "Black or African American",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "18"
+          },
+          {
+           "groupId": "BG001",
+           "value": "15"
+          },
+          {
+           "groupId": "BG002",
+           "value": "20"
+          },
+          {
+           "groupId": "BG003",
+           "value": "53"
+          }
+         ]
+        },
+        {
+         "title": "White",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "198"
+          },
+          {
+           "groupId": "BG001",
+           "value": "200"
+          },
+          {
+           "groupId": "BG002",
+           "value": "196"
+          },
+          {
+           "groupId": "BG003",
+           "value": "594"
+          }
+         ]
+        },
+        {
+         "title": "More than one race",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          },
+          {
+           "groupId": "BG003",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Unknown or Not Reported",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          },
+          {
+           "groupId": "BG003",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Region of Enrollment",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "calculatePct": false,
+     "classes": [
+      {
+       "title": "United States",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "218"
+          },
+          {
+           "groupId": "BG001",
+           "value": "217"
+          },
+          {
+           "groupId": "BG002",
+           "value": "218"
+          },
+          {
+           "groupId": "BG003",
+           "value": "653"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "cardiovascular risk (low/high) and categories for high caridovascular risk",
+     "description": "Cardiovascular risk was stratified as low versus high risk where the high risk stratum was defined as any participant with a pre-existing diagnosis of ischemic heart cardiovascular risk disease, cerebrovascular disease, peripheral arterial disease, hypertension, clinically significant arrhythmia or heart failure.",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "calculatePct": false,
+     "classes": [
+      {
+       "title": "low cardiovascular risk",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "77"
+          },
+          {
+           "groupId": "BG001",
+           "value": "78"
+          },
+          {
+           "groupId": "BG002",
+           "value": "76"
+          },
+          {
+           "groupId": "BG003",
+           "value": "231"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "high cardiovascular risk",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "141"
+          },
+          {
+           "groupId": "BG001",
+           "value": "139"
+          },
+          {
+           "groupId": "BG002",
+           "value": "142"
+          },
+          {
+           "groupId": "BG003",
+           "value": "422"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "cerebrovascular disease",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "10"
+          },
+          {
+           "groupId": "BG001",
+           "value": "13"
+          },
+          {
+           "groupId": "BG002",
+           "value": "14"
+          },
+          {
+           "groupId": "BG003",
+           "value": "37"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "peripheral arterial disease",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "10"
+          },
+          {
+           "groupId": "BG001",
+           "value": "13"
+          },
+          {
+           "groupId": "BG002",
+           "value": "14"
+          },
+          {
+           "groupId": "BG003",
+           "value": "37"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "clinically significant arrhythmia",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "7"
+          },
+          {
+           "groupId": "BG001",
+           "value": "13"
+          },
+          {
+           "groupId": "BG002",
+           "value": "2"
+          },
+          {
+           "groupId": "BG003",
+           "value": "22"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "heart failure",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "9"
+          },
+          {
+           "groupId": "BG001",
+           "value": "7"
+          },
+          {
+           "groupId": "BG002",
+           "value": "8"
+          },
+          {
+           "groupId": "BG003",
+           "value": "24"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "hyertension",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "127"
+          },
+          {
+           "groupId": "BG001",
+           "value": "128"
+          },
+          {
+           "groupId": "BG002",
+           "value": "138"
+          },
+          {
+           "groupId": "BG003",
+           "value": "393"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "background long-acting beta(2) agonist (LABA) use",
+     "description": "background LABA \\[+/- ICS\\] use was stratified as \"yes\" or \"no\" where the continuation of background therapy, in approximately 30% of the study population, required the subject to be on a stable dose of the medication for 4 weeks prior to study entry.",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "calculatePct": false,
+     "classes": [
+      {
+       "title": "background LABA use =yes",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "68"
+          },
+          {
+           "groupId": "BG001",
+           "value": "66"
+          },
+          {
+           "groupId": "BG002",
+           "value": "63"
+          },
+          {
+           "groupId": "BG003",
+           "value": "197"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "background LABA use =no",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "150"
+          },
+          {
+           "groupId": "BG001",
+           "value": "151"
+          },
+          {
+           "groupId": "BG002",
+           "value": "155"
+          },
+          {
+           "groupId": "BG003",
+           "value": "456"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Forced expiratory volume in one second (FEV1)",
+     "description": "spirometry was performed according to internationally accepted standards. Baseline FEV1 is defined as the mean of the two dose values at 45 and 15 minutes prior to first dose.",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "liters",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1.3745",
+           "spread": "0.52957"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1.3108",
+           "spread": "0.50243"
+          },
+          {
+           "groupId": "BG002",
+           "value": "1.3122",
+           "spread": "0.47511"
+          },
+          {
+           "groupId": "BG003",
+           "value": "1.3325",
+           "spread": "0.50297"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Change From Baseline in Trough Forced Expiratory Volume in 1 Second (FEV1) at Week 12",
+     "description": "ALL COLLECTED-Spirometry was performed according to internationally accepted standards.Trough FEV1 at Week 12 was defined as the mean of the values collected at two time points 30 minutes apart at approximately 24 hours (± 1 hour) after the previous morning dose.Change from baseline in trough FEV1 was calculated as the trough FEV1 value at Week 12 minus the morning trough FEV1 at baseline (mean of the two pre-dose values at 45 and 15 minutes prior to the first dose). All collected values were used in this analyses, regardless if the subject remained on randomized treatment or not, and regardless if the values might potentially be affected by other therapies or not Values not collected remained as missing values and were assumed to be missing at random (MAR) \"ALL COLLECTED\" and \"ON TREATMENT\" data are the same. The only difference is in the number of visits included for those participants who may have discontinued randomized treatment but remained in the study.\" for all endpoints",
+     "populationDescription": "Intent to Treat (ITT) Population: all subjects who were randomized to treatment and received at least one dose of study medication. Subjects were analyzed based on the treatment they were randomized to.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Baseline and Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.0961",
+           "spread": "0.01371"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.0886",
+           "spread": "0.01369"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-0.0075",
+           "spread": "0.01397"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "groupDescription": "The change from baseline in trough FEV1 was analyzed using a mixed model for repeated measures including terms for treatment, cardiovascular risk, background LABA use, visit, visit by treatment interaction, and baseline FEV1 as a covariate. An unstructured covariance matrix was used.",
+       "nonInferiorityType": "SUPERIORITY",
+       "nonInferiorityComment": "A sample size of 215 subjects per treatment would give \\~ 90% power to detect a treatment difference of 80 mL in the change from baseline in trough FEV1 at Week 12 between each of the 2 SUN-101 dose groups and placebo at alpha= 0.05, assuming a standard deviation of 255 mL and using a 2-sided test.",
+       "pValue": "<0.0001",
+       "pValueComment": "The primary null hypothesis for this study is that the mean change from baseline in trough FEV1 at Week 12 for the SUN-101 50 mcg dose is equal to the mean change from baseline in trough FEV1 at Week 12 for Placebo.",
+       "statisticalMethod": "MMixed Model Repeat Measurement",
+       "statisticalComment": "to control the family-wise Type I error rate,the Hochberg procedure(a tree-structured gatekeeping procedure)was used for comparisons of this endpoint",
+       "paramType": "Least Squares Mea Difference (SE)",
+       "paramValue": "0.1036",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.0663",
+       "ciUpperLimit": "0.1409",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.01900",
+       "estimateComment": "standard error of the least squares mean"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "groupDescription": "The change from baseline in trough FEV1 was analyzed using a mixed model for repeated measures including terms for treatment, cardiovascular risk, background LABA use, visit, visit by treatment interaction, and baseline FEV1 as a covariate. An unstructured covariance matrix was used.",
+       "nonInferiorityType": "SUPERIORITY",
+       "nonInferiorityComment": "A sample size of 215 subjects per treatment would give \\~ 90% power to detect a treatment difference of 80 mL in the change from baseline in trough FEV1 at Week 12 between each of the 2 SUN-101 dose groups and placebo at alpha= 0.05, assuming a standard deviation of 255 mL and using a 2-sided test.",
+       "pValue": "<0.0001",
+       "pValueComment": "The primary null hypothesis for this study is that the mean change from baseline in trough FEV1 at Week 12 for the SUN-101 50 mcg dose is equal to the mean change from baseline in trough FEV1 at Week 12 for Placebo.",
+       "statisticalMethod": "Mixed Model Repeat Measurement",
+       "statisticalComment": "to control the family-wise Type I error rate,the Hochberg procedure(a tree-structured gatekeeping procedure)was used for comparisons of the endpoint.",
+       "paramType": "Least Squares Mean Difference (SE)",
+       "paramValue": "0.0961",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.0589",
+       "ciUpperLimit": "0.1334",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.01896",
+       "estimateComment": "Standard error of the least squares mean"
+      }
+     ]
+    },
+    {
+     "type": "PRIMARY",
+     "title": "Change From Baseline in Trough Forced Expiratory Volume in 1 Second (FEV1) Week 12",
+     "description": "ON TEATMENT-Spirometry was performed according to internationally accepted standards.Trough FEV1 at Week 12 was defined as the mean of the values collected at two time points 30 minutes apart at approximately 24 hours (± 1 hour) after the previous morning dose.Change from baseline in trough FEV1 was calculated as the trough FEV1 value at Week 12 minus the morning trough FEV1 at baseline (mean of the two pre-dose values at 45 and 15 minutes prior to the first dose).Only on-treatment values (which included only data collected while subjects were taking study drug) are used for this analysis. Values affected by other medication use were set to missing. Non-collected or missing data were not imputed for this analysis. Values not collected remained as missing values and were assumed to be missing at random (MAR).",
+     "populationDescription": "Intent to Treat (ITT) Population: all subjects who were randomized to treatment and received at least one dose of study medication. Subjects were analyzed based on the treatment they were randomized to.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Baseline and Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1025",
+           "spread": "0.01497"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.0814",
+           "spread": "0.01475"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-0.0238",
+           "spread": "0.01534"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "groupDescription": "The change from baseline in trough FEV1 was analyzed using mixed model repeated measures including terms for treatment, cardiovascular risk, background LABA use, visit week, visit week by treatment interaction, and baseline FEV1 as a covariate. An unstructured covariance matrix was used.",
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "<0.0001",
+       "pValueComment": "In order to control the family-wise Type I error rate, the Hochberg procedure (a tree-structured gatekeeping procedure) was used for comparisons of the primary efficacy endpoints and the key secondary efficacy endpoints.",
+       "statisticalMethod": "Least squares mean (SE)",
+       "paramType": "Least Squares Mean (SE)",
+       "paramValue": "0.1264",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.0856",
+       "ciUpperLimit": "0.1672",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.02076"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "groupDescription": "The change from baseline in trough FEV1 was analyzed using mixed model repeated measures including terms for treatment, cardiovascular risk, background LABA use, visit week, visit week by treatment interaction, and baseline FEV1 as a covariate. An unstructured covariance matrix was used.",
+       "nonInferiorityType": "SUPERIORITY",
+       "nonInferiorityComment": "In order to control the family-wise Type I error rate, the Hochberg procedure (a tree-structured gatekeeping procedure) was used for comparisons of the primary efficacy endpoints and the key secondary efficacy endpoints.",
+       "pValue": "<0.0001",
+       "statisticalMethod": "LS mean (SE)",
+       "paramType": "LS mean (SE)",
+       "paramValue": "0.1052",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.0647",
+       "ciUpperLimit": "0.1457",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.02060"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Standardized Change From Baseline at Week 12 in FEV1 Area Under the Curve (AUC) (0-12) in the Substudy Population",
+     "description": "ALL COLLECTED The standardized FEV1 AUC(0-12) was calculated at weeks 0 and 12 for the Substudy Population with extended spirometry measurements. The trapezoidal rule was used to calculate FEV1 AUC and then normalized to the length of time. Intermittent missing spirometry measurements were ignored and the trapezoidal rule would simply span the missing time point(s). If the Hour 12 time point was missing, then the AUC(0-12) calculation was based on the time interval up to the last non-missing time point prior to Hour 12. If a subject has a missing baseline FEV1, then that subject had a missing AUC. All collected values were used in the analyses, regardless if the subject remained on randomized treatment or not, and regardless if the values might potentially be affected by other therapies or not Values not collected remained as missing values and were assumed to be missing at random (MAR).",
+     "populationDescription": "The Substudy Population consisted of all ITT subjects who participated in post-dose serial measurements",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Baseline and Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "62"
+        },
+        {
+         "groupId": "OG001",
+         "value": "49"
+        },
+        {
+         "groupId": "OG002",
+         "value": "42"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.0749",
+           "spread": "0.02638"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.0579",
+           "spread": "0.3011"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-0.0474",
+           "spread": "0.03229"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Standardized Change From Baseline at Week 12 in FEV1 Area Under the Curve (AUC) (0-12) in Substudy Population",
+     "description": "ON TREATMENT The standardized FEV1 AUC(0-12) was calculated at weeks 0 and 12 for the Substudy Population with extended spirometry measurements. The trapezoidal rule was used to calculate FEV1 AUC and then normalized to the length of time. Intermittent missing spirometry measurements were ignored and the trapezoidal rule would simply span the missing time points. If the Hour 12 time point was missing, then the AUC(0-12) calculation was based on the time interval up to the last non-missing time point prior to Hour 12. If a subject has a missing baseline FEV1, then that subject had a missing AUC.Only on-treatment values (which included only data collected while subjects were taking study drug) are used for this analysis. Values affected by other medication use were set to missing. Non-collected or missing data were not imputed for this analysis. Values not collected remained as missing values and were assumed to be missing at random (MAR).",
+     "populationDescription": "The Substudy Population consisted of all ITT subjects who participated in post-dose serial measurements, including serial spirometry, serial ECGs, serial vital sign measurements, as well as Holter monitoring at Visit 6.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Baseline and Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "62"
+        },
+        {
+         "groupId": "OG001",
+         "value": "49"
+        },
+        {
+         "groupId": "OG002",
+         "value": "42"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.0708",
+           "spread": "0.02792"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.0496",
+           "spread": "0.03280"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-0.0527",
+           "spread": "0.03450"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Trough Forced Vital Capacity (FVC) at Week 12",
+     "description": "ALL COLLECTED Spirometry was performed according to internationally accepted standards. Trough FVC at Week 12 was defined as the mean of the values collected at two time points 30 minutes apart at approximately 24 hours (± 1 hour) after the previous morning dose.\n\nAll collected values were used in the analyses, regardless if the subject remained on randomized treatment or not, and regardless if the values might potentially be affected by other therapies or not Values not collected remained as missing values and were assumed to be missing at random",
+     "populationDescription": "Intent to Treat (ITT) Population: all subjects who were randomized to treatment and received at least one dose of study medication. Subjects were analyzed based on the treatment they were randomized to.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Baseline and Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1476",
+           "spread": "0.02226"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.1515",
+           "spread": "0.02220"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.0147",
+           "spread": "0.2266"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Trough Forced Vital Capacity (FVC) Week 12",
+     "description": "ON TREATMENT Spirometry was performed according to internationally accepted standards. Trough FVC at Week 12 was defined as the mean of the values collected at two time points 30 minutes apart at approximately 24 hours (± 1 hour) after the previous morning dose. Change from baseline in trough FVC was calculated as the trough FVC value at Week 12 minus the morning trough FVC at baseline (mean of the two pre-dose values at 45 and 15 minutes prior to the first dose).Only on-treatment values (which included only data collected while subjects were taking study drug) are used for this analysis. Values affected by other medication use were set to missing. Non-collected or missing data were not imputed for this analysis. Values not collected remained as missing values and were assumed to be missing at random (MAR).",
+     "populationDescription": "Intent to Treat (ITT) Population: all subjects who were randomized to treatment and received at least one dose of study medication. Subjects were analyzed based on the treatment they were randomized to.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "Baseline and Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.1566",
+           "spread": "0.02392"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.1393",
+           "spread": "0.02353"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-0.0101",
+           "spread": "0.2450"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Health Status Measured by St. George's Respiratory Questionnaire (SGRQ) at Week 12/End of Study",
+     "description": "ALL COLLECTED Participants reported change in health status by using the SGRQ. The SGRQ contains 50 items divided into 2 parts covering 3 aspects of health related to COPD: symptoms, activity, and impacts. A score was calculated for each of these 3 subscales and a \"Total\" score was calculated. In each case the lowest possible value is 0 and the highest 100. Higher values correspond to greater impairment of health status.\n\nAll collected values were used in the analyses, regardless if the subject remained on randomized treatment or not. Values not collected remained as missing values and were assumed to be missing at random (MAR).",
+     "populationDescription": "Intent to Treat (ITT) Population: all subjects who were randomized to treatment and received at least one dose of study medication. Subjects were analyzed based on the treatment they were randomized to.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "scores on a scale",
+     "timeFrame": "Baseline and Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-2.363",
+           "spread": "0.8344"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-4.250",
+           "spread": "0.8211"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-0.844",
+           "spread": "0.8396"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Health Status Measured by St. George's Respiratory Questionnaire (SGRQ) Week 12/End of Study",
+     "description": "ON TREATMENT Participants reported change in health status by using the SGRQ. The SGRQ contains 50 items divided into 2 parts covering 3 aspects of health related to COPD: symptoms, activity, and impacts. A score was calculated for each of these 3 subscales and a \"Total\" score was calculated. In each case the lowest possible value is 0 and the highest 100. Higher values correspond to greater impairment of health status.\n\nOnly on-treatment values (which included only data collected while subjects were taking study drug) are used for this analysis. Values affected by other medication use were set to missing. Non-collected or missing data were not imputed for this analysis. Values not collected remained as missing values and were assumed to be missing at random (MAR).",
+     "populationDescription": "Intent to Treat (ITT) Population: all subjects who were randomized to treatment and received at least one dose of study medication. Subjects were analyzed based on the treatment they were randomized to.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "scores on a scale",
+     "timeFrame": "Baseline and Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-2.538",
+           "spread": "0.8391"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-3.762",
+           "spread": "0.8187"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-0.690",
+           "spread": "0.8535"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change in Number of Rescue Medication Puffs Per Day Over the 12-week Double-blind Treatment Period",
+     "description": "ALL COLLECTED Participants completed an electronic diary (eDiary) daily (night time) to record the number of puffs of rescue medication inhaled in the previous 24 hours. A negative change from baseline indicates improvement.\n\nAll collected values were used in the analyses, regardless if the subject remained on randomized treatment or not. Values not collected remained as missing values and were assumed to be missing at random (MAR).",
+     "populationDescription": "Intent to Treat (ITT) Population: all subjects who were randomized to treatment and received at least one dose of study medication. Subjects were analyzed based on the treatment they were randomized to.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "puffs (medication used)",
+     "timeFrame": "Week 0-12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.815",
+           "spread": "0.1234"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.609",
+           "spread": "0.1259"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-0.632",
+           "spread": "0.1257"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Subjects With Major Adverse Cardiac Events (MACE)",
+     "description": "ALL COLLECTED All deaths and any other findings suggestive of a potential MACE (including clinically relevant information and SAEs, and all PTs form the SMQs \"myocardial infarction\", \"other ischemic heart disease\", \"central nervous system hemorrhages and cerebrovascular conditions\") were sent to an adjudication committee for review and categorized as CV death, nonfatal MI, and nonfatal stroke. The MACE score was defined as the total number of subjects with CV deaths, nonfatal MIs, and nonfatal strokes. These events were collected for the double-blind period (from the first date of study medication until the date of last contact)",
+     "populationDescription": "Safety population was defined as all subjects who were randomized to treatment and received at least one dose of study medication.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "Week 0-12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "MACE score",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Cardiovascular Death",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "non-fatal myocardial infraction",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "non-fatal stroke",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Percentage of Subjects With Major Cardiac Events (MACE)",
+     "description": "ALL COLLECTED All deaths and any other findings suggestive of a potential MACE (including clinically relevant information and SAEs, and all PTs form the SMQs \"myocardial infarction\", \"other ischemic heart disease\", \"central nervous system hemorrhages and cerebrovascular conditions\") were sent to an adjudication committee for review and categorized as CV death, nonfatal MI, and nonfatal stroke. The MACE score was defined as the total number of subjects with CV deaths, nonfatal MIs, and nonfatal strokes. These events were collected for the double-blind period (from the first date of study medication until the date of last contact)",
+     "populationDescription": "Safety population was defined as all subjects who were randomized to treatment and received at least one dose of study medication.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "percentage of participants",
+     "timeFrame": "Week 0-12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "MACE score",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.4"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Cardiovascular Death",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.5"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "non-fatal myocardial infraction",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.5"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "non-fatal stroke",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.5"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Subjects With Treatment Emergent Adverse Events (TEAE)",
+     "description": "ON TREATMENT A TEAE is defined as any non-serious AE that occurred on or after the first dose of study medication and within 7 days after the last dose of study medication, or any serious AE that occurred on or after the first dose of study medication and within 30 days after the last dose of study medication. A treatment emergent AE is an on-treatment AE.",
+     "populationDescription": "Safety population was defined as all subjects who were randomized to treatment and received at least one dose of study medication.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "Week 0-12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "105"
+          },
+          {
+           "groupId": "OG001",
+           "value": "86"
+          },
+          {
+           "groupId": "OG002",
+           "value": "114"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Percent of Subjects With Treatment Emergent Adverse Events (TEAE)",
+     "description": "ON TREATMENT A TEAE is defined as any non-serious AE that occurred on or after the first dose of study medication and within 7 days after the last dose of study medication, or any serious AE that occurred on or after the first dose of study medication and within 30 days after the last dose of study medication. A treatment emergent AE is an on-treatment AE.",
+     "populationDescription": "Safety population was defined as all subjects who were randomized to treatment and received at least one dose of study medication.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "percentage of participants",
+     "timeFrame": "Week 0-12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "48.2"
+          },
+          {
+           "groupId": "OG001",
+           "value": "39.6"
+          },
+          {
+           "groupId": "OG002",
+           "value": "52.3"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Subjects With Treatment Emergent Serious Adverse Events (SAE)",
+     "description": "ON TREATMENT A treatment emergent SAE is defined as any SAE that occurred on or after the first dose of study medication and within 30 days after the last dose of study medication. A treatment emergent SAE is an on-treatment SAE",
+     "populationDescription": "Safety population was defined as all subjects who were randomized to treatment and received at least one dose of study medication",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "Week 0-12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "10"
+          },
+          {
+           "groupId": "OG001",
+           "value": "8"
+          },
+          {
+           "groupId": "OG002",
+           "value": "11"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Percent of Subjects With Treatment Emergent Serious Adverse Events (SAE)",
+     "description": "ON TREATMENT A treatment emergent SAE is defined as any SAE that occurred on or after the first dose of study medication and within 30 days after the last dose of study medication. A treatment emergent SAE is an on-treatment SAE",
+     "populationDescription": "Safety population was defined as all subjects who were randomized to treatment and received at least one dose of study medication",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "percentage of participants",
+     "timeFrame": "Week 0-12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "4.6"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.7"
+          },
+          {
+           "groupId": "OG002",
+           "value": "5.0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Subjects Who Discontinue Treatment Due to TEAE",
+     "description": "ON TREATMENT A TEAE is defined as any AE that occurred on or after the first dose of study medication and within 7 days after the last dose of study medication, or any serious AE that occurred on or after the first dose of study medication and within 30 days after the last dose of study medication. A treatment emergent AE is an on-treatment AE.",
+     "populationDescription": "Safety population was defined as all subjects who were randomized to treatment and received at least one dose of study meidcation",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "Week 0-12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "8"
+          },
+          {
+           "groupId": "OG001",
+           "value": "7"
+          },
+          {
+           "groupId": "OG002",
+           "value": "21"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Percent of Subjects Who Discontinue Treatment Due to TEAE",
+     "description": "ON TREATMENT A TEAE is defined as any AE that occurred on or after the first dose of study medication and within 7 days after the last dose of study medication, or any serious AE that occurred on or after the first dose of study medication and within 30 days after the last dose of study medication. A treatment emergent AE is an on-treatment AE.",
+     "populationDescription": "Safety population was defined as all subjects who were randomized to treatment and received at least one dose of study meidcation",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "percentage of participants",
+     "timeFrame": "Week 0-12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.7"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.2"
+          },
+          {
+           "groupId": "OG002",
+           "value": "9.6"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Incidence Rate Per 100 Person-years of Subjects With Treatment Emergent Adverse Events (TEAE)",
+     "description": "ALL COLLECTED All deaths and any other findings suggestive of a potential MACE (including clinically relevant information and SAEs, and all PTs form the SMQs \"myocardial infarction\", \"other ischemic heart disease\", \"central nervous system hemorrhages and cerebrovascular conditions\") were sent to an adjudication committee for review and categorized as CV death, nonfatal MI, and nonfatal stroke. The MACE score was defined as the total number of subjects with CV deaths, nonfatal MIs, and nonfatal strokes. These events were collected for the double-blind period (from the first date of study medication until the date of last contact)I ncidence rate: TT= Total Time in years. Total Time (TT) is defined as the time from the first date of study drug until the latter of the date of last contact or 30 days after the date of last dose. Incidence Rate (per 1000 person-years) = n/TT x 1000.",
+     "populationDescription": "Safety population was defined as all subjects who were randomized to treatment and received at least one dose of study medication.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "events per 100 person-years",
+     "timeFrame": "Week 0-12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG001",
+       "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+       "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer"
+      },
+      {
+       "id": "OG002",
+       "title": "Placebo BID eFlow (CS) Nebulizer",
+       "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "218"
+        },
+        {
+         "groupId": "OG001",
+         "value": "217"
+        },
+        {
+         "groupId": "OG002",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "MACE score",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "45.5"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Cardiovascular Death",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "15.2"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "non-fatal myocardial infraction",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "15.2"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "non-fatal stroke",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "15.2"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "Week 0-12",
+   "description": "A treatment emergent SAE is defined as any SAE that occurred on or after the first dose of study medication and within 30 days after the last does of study medication. A treatment emergent SAE is an on-treatment SAE",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "SUN-101 50 mcg BID eFlow (CS) Nebulizer",
+     "description": "SUN-101 50 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 50 mcg BID eFlow (CS) nebulizer: SUN-101 50 mcg twice daily (BID) eFlow Closed System (CS) nebulizer",
+     "seriousNumAffected": 10,
+     "seriousNumAtRisk": 218,
+     "otherNumAffected": 37,
+     "otherNumAtRisk": 218
+    },
+    {
+     "id": "EG001",
+     "title": "SUN-101 25 mcg BID eFlow (CS) Nebulizer",
+     "description": "SUN-101 25 mcg twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nSUN-101 25 mcg BID eFlow (CS) nebulizer: SUN-101 25 mcg twice daily (BID) eFlow Closed System (CS) nebulizer",
+     "seriousNumAffected": 8,
+     "seriousNumAtRisk": 217,
+     "otherNumAffected": 23,
+     "otherNumAtRisk": 217
+    },
+    {
+     "id": "EG002",
+     "title": "Placebo BID eFlow (CS) Nebulizer",
+     "description": "Placebo twice daily (BID) eFlow (R) Closed System (CR) nebulizer\n\nPlacebo BID eFlow Closed System (CS) nebulizer: Placebo twice daily (BID) eFlow Closed System (CS) nebulizer",
+     "seriousNumAffected": 11,
+     "seriousNumAtRisk": 218,
+     "otherNumAffected": 38,
+     "otherNumAtRisk": 218
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "angina pectoris",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "angina unstable",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "coronary artery stenosis",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "diastolic dysfunction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "small intestinal obstruction",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "chest pain",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "gallbladder necrosis",
+     "organSystem": "Hepatobiliary disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "bronchitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "emphysematous cholecystitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "lobar pheumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "pneumonia",
+     "organSystem": "Immune system disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "pyelonephritis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "septic shock",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "intentional overdose",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "subdural haematoma",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "antiphospholiid antibodies",
+     "organSystem": "Investigations",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "dehydration",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "diabetes mellitus inadequate control",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "arthralgia",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "lung adenocarcinoma stage IV",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "malignant neoplasm of pleura metastatic",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "carotid artery stenosis",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "lacunar infarction",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "transient ischaemic attack",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "nephrolithiasis",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "obstructive uropathy",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "renal failure acute",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "acute respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "pleural effusion",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "pulmonary hypertension",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 218
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "chronic obstructive ulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 19,
+       "numAffected": 19,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 9,
+       "numAffected": 9,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 19,
+       "numAffected": 17,
+       "numAtRisk": 218
+      }
+     ]
+    },
+    {
+     "term": "cough",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 15.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 22,
+       "numAffected": 21,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 20,
+       "numAffected": 16,
+       "numAtRisk": 217
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 23,
+       "numAffected": 22,
+       "numAtRisk": 218
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "In the event the Study is part of a multi-center study, the first publication of the results of the Study shall be made in conjunction with the results of other participating study sites as a multi-center publication; provided however, if a multi-center publication is not forthcoming within twenty-four (24) months following completion of the Study at all sites, Institution and Investigator shall be free to publish."
+   },
+   "pointOfContact": {
+    "title": "Respiratory Medical Director",
+    "organization": "Sunovion Pharmaceuticals Inc.",
+    "phone": "1-866-503-6351"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D009330",
+     "term": "Nebulizers and Vaporizers"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D004864",
+     "term": "Equipment and Supplies"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

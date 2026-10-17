@@ -126,7 +126,8 @@ def _demo_designs() -> list[tuple[Path, TrialDesign | None, str | None]]:
     return found
 
 
-def _industry_band(params: Mapping[str, Parameter], engine: Any, engine_reason: str | None) -> IndustryBand:
+def _industry_band(params: Mapping[str, Parameter], engine: Any, engine_reason: str | None, seed: int,
+                   draws: int) -> IndustryBand:
     demo: list[BandTrial] = []
     for path, design, err in _demo_designs():
         if design is None:
@@ -138,7 +139,7 @@ def _industry_band(params: Mapping[str, Parameter], engine: Any, engine_reason: 
                                   available=False, reason=engine_reason))
             continue
         try:
-            r = engine(design, Levers(), dict(params), seed=SEED, draws=DRAWS)
+            r = engine(design, Levers(), dict(params), seed=seed, draws=draws)
             t = TonneRange(p10=round(r.co2e_kg.p10 / 1000, 3), p50=round(r.co2e_kg.p50 / 1000, 3),
                            p90=round(r.co2e_kg.p90 / 1000, 3))
             demo.append(BandTrial(design_id=design.id, title=design.title, registry_id=design.registry_id,
@@ -215,7 +216,7 @@ def run(seed: int = SEED, draws: int = DRAWS) -> ScienceResults:
         parameter_set_version=param_set_version(library), seed=seed, draws=draws,
         thresholds_pct={"match": 1.0, "close": 10.0},
         engine=EngineInfo(available=engine is not None, reason=engine_reason),
-        trials=trials, industry_band=_industry_band(library, engine, engine_reason),
+        trials=trials, industry_band=_industry_band(library, engine, engine_reason, seed, draws),
         how_to_reproduce="uv run --project science python -m science.reproduce",
     )
 

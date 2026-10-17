@@ -1,0 +1,305 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT02173691",
+   "orgStudyIdInfo": {
+    "id": "205.137"
+   },
+   "organization": {
+    "fullName": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Efficacy and Safety of Tiotropium Compared to Salmeterol and Placebo in Patients With Chronic Obstructive Bronchitis (COPD)",
+   "officialTitle": "A Multiple Dose Comparison of Tiotropium Inhalation Capsules, Salmeterol Inhalation Aerosol and Placebo in a Six-Month, Double-Blind, Double-Dummy, Safety and Efficacy Study in Patients With Chronic Obstructive Pulmonary Disease (COPD)"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2014-06",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "1999-02"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2000-05",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2014-06-20",
+   "studyFirstSubmitQcDate": "2014-06-24",
+   "studyFirstPostDateStruct": {
+    "date": "2014-06-25",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2014-06-25",
+   "lastUpdatePostDateStruct": {
+    "date": "2014-06-26",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "The objective of this study is to compare the long-term (six month) bronchodilator efficacy and safety of tiotropium inhalation capsules, salmeterol inhalation aerosol and placebo inpatients with COPD."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 584,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Tiotropium",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Drug: Tiotropium inhalation powder capsules",
+      "Drug: Placebo inhalation aerosol"
+     ]
+    },
+    {
+     "label": "Salmeterol",
+     "type": "ACTIVE_COMPARATOR",
+     "interventionNames": [
+      "Drug: Salmeterol inhalation aerosol",
+      "Drug: Placebo inhalation powder capsules"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "interventionNames": [
+      "Drug: Placebo inhalation aerosol",
+      "Drug: Placebo inhalation powder capsules"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Tiotropium inhalation powder capsules",
+     "armGroupLabels": [
+      "Tiotropium"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Salmeterol inhalation aerosol",
+     "armGroupLabels": [
+      "Salmeterol"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo inhalation aerosol",
+     "armGroupLabels": [
+      "Placebo",
+      "Tiotropium"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo inhalation powder capsules",
+     "armGroupLabels": [
+      "Placebo",
+      "Salmeterol"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Trough forced expiratory volume in one second (FEV1) response",
+     "timeFrame": "6 months"
+    },
+    {
+     "measure": "Transition Dyspnoea Index (TDI) focal score",
+     "timeFrame": "6 months"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Average FEV1 response",
+     "timeFrame": "30 and 60 min prior to and 30 and 60 min, 2 and 3 h post treatment on day 1, week 2, 8, 16, 24"
+    },
+    {
+     "measure": "Peak FEV1 response",
+     "timeFrame": "30 and 60 min prior to and 30 and 60 min, 2 and 3 h post treatment on day 1, week 2, 8, 16, 24"
+    },
+    {
+     "measure": "Trough FVC (forced vital capacity) response",
+     "timeFrame": "30 and 60 min prior to and 30 and 60 min, 2 and 3 h post treatment on day 1, week 2, 8, 16, 24"
+    },
+    {
+     "measure": "Average FVC (forced vital capacity) response",
+     "timeFrame": "30 and 60 min prior to and 30 and 60 min, 2 and 3 h post treatment on day 1, week 2, 8, 16, 24"
+    },
+    {
+     "measure": "Peak FVC (forced vital capacity) response",
+     "timeFrame": "30 and 60 min prior to and 30 and 60 min, 2 and 3 h post treatment on day 1, week 2, 8, 16, 24"
+    },
+    {
+     "measure": "Individual FEV1 measurement",
+     "timeFrame": "Day 1, weeks 2, 8, 16, 24"
+    },
+    {
+     "measure": "Individual FVC measurement",
+     "timeFrame": "Day 1, weeks 2, 8, 16, 24"
+    },
+    {
+     "measure": "Patient peak expiratory flow rates (PEFR) twice daily",
+     "timeFrame": "27 weeks"
+    },
+    {
+     "measure": "Physician's global evaluation on an 8-point-scale",
+     "timeFrame": "27 weeks"
+    },
+    {
+     "measure": "COPD symptom scores (wheezing, shortness of breath, coughing and tightness of chest)",
+     "timeFrame": "27 weeks"
+    },
+    {
+     "measure": "Amount of salbutamol therapy used during the treatment period",
+     "timeFrame": "27 weeks"
+    },
+    {
+     "measure": "Number and length of exacerbations of COPD",
+     "timeFrame": "27 weeks"
+    },
+    {
+     "measure": "Number and length of hospitalizations for respiratory disease",
+     "timeFrame": "27 weeks"
+    },
+    {
+     "measure": "Changes from baseline in St. George's Hospital Respiratory Questionnaire (SGRQ)",
+     "timeFrame": "Day 1, week 8, 16, 24 and 27"
+    },
+    {
+     "measure": "Changes from baseline in Mahler Dyspnoea Index (Baseline Dyspnoea Index /Transitional Dyspnoea Index (BDI/TDI))",
+     "timeFrame": "Baseline, week 8, 16, 24, 27"
+    },
+    {
+     "measure": "Health resource utilisation",
+     "timeFrame": "27 weeks"
+    },
+    {
+     "measure": "Patient preference measures",
+     "description": "patient satisfaction questionnaire score",
+     "timeFrame": "Day 1 and week 24"
+    },
+    {
+     "measure": "Changes from baseline in Shuttle walking tests (SWT) and Borg dyspnea score",
+     "timeFrame": "Day 1, week 8, 16, 24, 27"
+    },
+    {
+     "measure": "Occurrence of Adverse Events",
+     "timeFrame": "27 weeks"
+    },
+    {
+     "measure": "Changes from baseline in pulse rate and blood pressure in conjunction with spirometry",
+     "timeFrame": "baseline, Day 1, week 2, 8, 16 and 24"
+    },
+    {
+     "measure": "Changes from baseline in physical examination and ECG",
+     "timeFrame": "baseline and week 24"
+    },
+    {
+     "measure": "Changes from baseline in laboratory tests",
+     "timeFrame": "baseline and week 24"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Age ≥ 40 years.\n* A diagnosis of relatively stable, moderate to severe COPD with:\n\n  * Screening FEV1 ≤ 60% of predicted normal value (calculated according to European Community for Coal and Steel (ECCS) criteria and screening FEV1/FVC ≤ 70%\n* Smoking history ≥ 10 pack-years (a pack-year is 20 cigarettes per day for one year or equivalent)\n* Ability to be trained in the proper use of the HandiHaler® device and Metered Dose Inhaler (MDI).\n* Ability to perform all study related tests including the Shuttle Walking Test, acceptable pulmonary function tests, including Peak expiratory flow rate (PEFR) measurements, and maintenance of diary card records.\n* Ability to give written informed consent in accordance with Good Clinical Practice and local regulations.\n\nExclusion Criteria:\n\n* Clinically significant diseases other than COPD.\n* Patients with clinically relevant abnormal baseline haematology, blood chemistry or urinalysis, if the abnormality defines a disease listed as an exclusion criterion, will be excluded.\n* All patients with a serum glutamic oxaloacetic transaminase (SGOT) \\> 80 IU/L, serum glutamic pyruvic transaminase (SGPT) \\> 80 IU/L, bilirubin \\>2.0 mg/dL or creatinine \\> 2.0 mg/dL will be excluded regardless of clinical condition.\n* A recent history (i.e., one year or less) of myocardial infarction.\n* Any cardiac arrhythmia requiring drug therapy or hospitalisation for heart failure within the past three years.\n* Inability to abstain from regular daytime use of oxygen therapy for more than 1 hour per day.\n* Known active tuberculosis.\n* History of cancer within the last five years (excluding basal cell carcinoma)\n* History of life-threatening pulmonary obstruction, or a history of cystic fibrosis or bronchiectasis.\n* Patients who have undergone thoracotomy with pulmonary resection.\n* Any upper respiratory infection in the past six weeks prior to the screening visit or during the run-in period.\n* Current participation in a pulmonary rehabilitation programme or completion of a pulmonary rehabilitation programme in the six week prior to the screening visit.\n* Known hypersensitivity to anticholinergic drugs, salmeterol, or any of the components of the lactose powder capsule or MDI delivery systems.\n* Known symptomatic prostatic hypertrophy or bladder neck obstruction.\n* Patients with known narrow-angle glaucoma.\n* Current treatment with cromolyn sodium or nedocromil sodium.\n* Current treatment with antihistamines (H1 receptor antagonists).\n* Oral corticosteroid medication at unstable doses (i.e., less than six weeks on a stable dose) or at doses in excess of the equivalent of 10 mg of prednisolone per day or 20 mg every other day.\n* Current use of β-blocker medication.\n* Current treatment with monoamine oxidase inhibitors or tricyclic antidepressants.\n* Pregnant or nursing women or women of childbearing potential not using a medically approved means of contraception.\n* Patients with a history of asthma, allergic rhinitis or atopy or who have a total blood eosinophil count \\> 600mm3.\n* History of and/or active significant alcohol or drug abuse.\n* Concomitant or recent use of an investigational drug within one month or six half lives (whichever is greater) prior to the screening visit.\n* Changes in the pulmonary therapeutic plan within the six weeks prior to the screening visit.\n* Inability to comply with the medication restrictions specified in Section 4.2 of the trial protocol",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "referencesModule": {
+   "seeAlsoLinks": [
+    {
+     "label": "Related Info",
+     "url": "http://trials.boehringer-ingelheim.com/content/dam/internet/opu/clinicaltrial/com_EN/results/205/205.137_U01-1231-02.pdf"
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

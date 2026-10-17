@@ -1,3 +1,4 @@
+import { useTranslation, translate as t } from "@/app/i18n";
 import { useEffect, useMemo, useState } from "react";
 import type { Levers, MetricRange, Parameter, ProvenanceItem } from "@/app/contracts";
 import { api, isAbort } from "@/app/api/client";
@@ -5,7 +6,7 @@ import type { Driver, ScenarioResultX } from "@/app/api/types";
 import { formatRange, formatUtc, formatValue } from "@/app/format";
 import { AssumptionTag, Badge, Drawer, Spinner } from "@/app/ui";
 import { useParamLibrary } from "../hooks/useParamLibrary";
-import { allProvenance, findModule, isExtensionModule, METRIC_BY_KEY, moduleLabel, provenanceForMetric, type MetricKey } from "../metrics";
+import { allProvenance, findModule, isExtensionModule, METRIC_BY_KEY, metricLabel, moduleLabel, provenanceForMetric, type MetricKey } from "../metrics";
 
 export type ProvenanceTarget =
   | { kind: "metric"; key: MetricKey }
@@ -25,6 +26,7 @@ function isWellToTank(formulaId: string): boolean {
 }
 
 function FormulaCard({ item }: { item: Item }) {
+  useTranslation();
   const inputs = Object.entries(item.inputs);
   const wtt = isWellToTank(item.formula_id);
   return (
@@ -34,7 +36,7 @@ function FormulaCard({ item }: { item: Item }) {
         <span className="flex items-center gap-1.5 text-xs text-ink-500">
           {wtt && (
             <span className="chip border-accent-300 bg-accent-50 text-accent-800" data-testid="wtt-label">
-              Well-to-tank
+              {t("Well-to-tank", "燃料上游排放")}
             </span>
           )}
           {moduleLabel(item.module)}
@@ -42,13 +44,13 @@ function FormulaCard({ item }: { item: Item }) {
       </div>
       {wtt && (
         <p className="mt-2 text-xs text-ink-600">
-          Upstream fuel production and distribution, kept as its own term beside the direct emissions. A missing well-to-tank factor stays unknown and is not added as zero.
+          {t("Upstream fuel production and distribution, kept as its own term beside the direct emissions. A missing well-to-tank factor stays unknown and is not added as zero.", "燃料生产和配送产生的上游排放，与直接排放分项列示。缺失的上游排放因子保留为未知，不按零计入。")}
         </p>
       )}
       <p className="mt-2 text-sm text-ink-800">{item.description}</p>
       {inputs.length > 0 && (
         <table className="mt-2 w-full text-xs">
-          <caption className="sr-only">Resolved inputs</caption>
+          <caption className="sr-only">{t("Resolved inputs", "已解析输入")}</caption>
           <tbody>
             {inputs.map(([k, v]) => (
               <tr key={k} className="border-t border-ink-100">
@@ -66,6 +68,7 @@ function FormulaCard({ item }: { item: Item }) {
 
 /** Many assumptions differ only by a country code; collapse beyond the first few. */
 function AssumptionList({ assumptions }: { assumptions: string[] }) {
+  useTranslation();
   const unique = [...new Set(assumptions)];
   const [open, setOpen] = useState(false);
   const shown = open ? unique : unique.slice(0, 3);
@@ -80,7 +83,7 @@ function AssumptionList({ assumptions }: { assumptions: string[] }) {
       </ul>
       {unique.length > 3 && (
         <button type="button" className="link mt-1 text-xs" onClick={() => setOpen((o) => !o)} aria-expanded={open}>
-          {open ? "Show fewer assumptions" : `Show all ${unique.length} assumptions`}
+          {open ? t("Show fewer assumptions", "收起假设") : t(`Show all ${unique.length} assumptions`, `显示全部 ${unique.length} 项假设`)}
         </button>
       )}
     </div>
@@ -88,11 +91,12 @@ function AssumptionList({ assumptions }: { assumptions: string[] }) {
 }
 
 function ParameterRow({ id, param }: { id: string; param: Parameter | undefined }) {
+  useTranslation();
   if (!param) {
     return (
       <li className="rounded-lg border border-caution-300 bg-caution-50 p-3 text-sm" data-testid="provenance-param">
         <code className="font-mono text-xs">{id}</code>
-        <p className="mt-1 text-caution-900">Not found in the parameter library — reported as missing, not zero.</p>
+        <p className="mt-1 text-caution-900">{t("Not found in the parameter library — reported as missing, not zero.", "参数库中未找到 — 标记为缺失，而非零。")}</p>
       </li>
     );
   }
@@ -111,9 +115,9 @@ function ParameterRow({ id, param }: { id: string; param: Parameter | undefined 
       <dl className="mt-2 grid grid-cols-3 gap-2 text-center">
         {(
           [
-            ["Low", param.value_low],
-            ["Mid", param.value_mid],
-            ["High", param.value_high],
+            [t("Low", "低值"), param.value_low],
+            [t("Mid", "中值"), param.value_mid],
+            [t("High", "高值"), param.value_high],
           ] as const
         ).map(([k, v]) => (
           <div key={k} className="rounded-md bg-ink-50 py-1">
@@ -127,7 +131,7 @@ function ParameterRow({ id, param }: { id: string; param: Parameter | undefined 
       <div className="mt-2 text-xs text-ink-700">
         {param.source_url || param.source_title ? (
           <p>
-            Source:{" "}
+            {t("Source:", "来源：")}{" "}
             {param.source_url ? (
               <a className="link" href={param.source_url} target="_blank" rel="noreferrer">
                 {param.source_title ?? param.source_url}
@@ -138,14 +142,14 @@ function ParameterRow({ id, param }: { id: string; param: Parameter | undefined 
             {param.source_year ? ` (${param.source_year})` : ""}
           </p>
         ) : (
-          !param.assumption && <p className="text-caution-900">No source recorded.</p>
+          !param.assumption && <p className="text-caution-900">{t("No source recorded.", "未记录来源。")}</p>
         )}
         {param.id.startsWith("ef.wtt.") && (
-          <p className="mt-1 text-ink-600">Well-to-tank factor. The source line above is the library entry; it is not a modelled default.</p>
+          <p className="mt-1 text-ink-600">{t("Well-to-tank factor. The source line above is the library entry; it is not a modelled default.", "燃料上游排放因子。上方来源行对应参数库条目，并非模型默认值。")}</p>
         )}
         {param.assumption && (
           <p className="mt-1">
-            <span className="font-semibold">Rationale:</span> {param.rationale ?? "No rationale recorded."}
+            <span className="font-semibold">{t("Rationale:", "依据：")}</span> {param.rationale ?? t("No rationale recorded.", "未记录依据。")}
           </p>
         )}
       </div>
@@ -154,6 +158,7 @@ function ParameterRow({ id, param }: { id: string; param: Parameter | undefined 
 }
 
 function Drivers({ drivers, library }: { drivers: Driver[]; library: Map<string, Parameter> | null }) {
+  useTranslation();
   const max = Math.max(...drivers.map((d) => d.share), 0.0001);
   return (
     <ol className="space-y-2" data-testid="provenance-drivers">
@@ -198,6 +203,7 @@ export function ProvenanceDrawer({
   levers: Levers | null;
   onClose: () => void;
 }) {
+  const currentTranslation = useTranslation();
   const lib = useParamLibrary();
   const library = lib.status === "ready" ? lib.byId : null;
 
@@ -210,12 +216,12 @@ export function ProvenanceDrawer({
     }
     if (target.kind === "waste") {
       const items = allProvenance(result).filter((p) => p.formula_id.startsWith("supply.") || p.module === "drug_supply");
-      return { title: "Drug waste share", range: result.drug_waste_share, items, matched: items.length > 0, metric: "drug_waste_share" };
+      return { title: t("Drug waste share", "药物浪费比例"), range: result.drug_waste_share, items, matched: items.length > 0, metric: "drug_waste_share" };
     }
     const mod = findModule(result, target.module);
     const items: Item[] = (mod?.provenance ?? []).map((p) => ({ ...p, module: target.module }));
     return { title: moduleLabel(target.module), range: mod?.cost_usd ?? null, carbon: mod?.co2e_kg ?? null, items, matched: true, metric: null };
-  }, [target, result]);
+  }, [target, result, currentTranslation]);
 
   const [drivers, setDrivers] = useState<Driver[] | null>(null);
   const [driversState, setDriversState] = useState<"idle" | "loading" | "error">("idle");
@@ -247,12 +253,12 @@ export function ProvenanceDrawer({
     <Drawer
       open={target !== null && view !== null}
       onClose={onClose}
-      title={view ? `How we calculate: ${view.title}` : ""}
+      title={view ? t(`How we calculate: ${view.title}`, `计算方式：${target?.kind === "metric" ? metricLabel(target.key) : view.title}`) : ""}
       subtitle={
         view?.range ? (
           <span className="tabular">
             P50 <strong className="text-ink-800">{formatValue(view.range.p50, view.range.unit)}</strong> · P10–P90 {formatRange(view.range)}
-            {"carbon" in view && view.carbon ? ` · carbon ${formatValue(view.carbon.p50, "kg_co2e")}` : ""}
+            {"carbon" in view && view.carbon ? t(` · carbon ${formatValue(view.carbon.p50, "kg_co2e")}`, ` · 碳排放 ${formatValue(view.carbon.p50, "kg_co2e")}`) : ""}
           </span>
         ) : undefined
       }
@@ -261,16 +267,16 @@ export function ProvenanceDrawer({
         <div className="space-y-6" data-testid="provenance-drawer">
           {target?.kind === "module" && isExtensionModule(target.module) && (
             <p className="rounded-lg bg-ink-50 px-3 py-2 text-xs text-ink-700">
-              <Badge tone="neutral">Extension</Badge> This module goes beyond the published Low Carbon Clinical Trials Group method.
+              <Badge tone="neutral">{t("Extension", "扩展")}</Badge> {t("This module goes beyond the published Low Carbon Clinical Trials Group method.", "此模块超出已发表的低碳临床试验组方法范围。")}
             </p>
           )}
           <section>
-            <h3 className="card-title mb-2">Formula{view.items.length === 1 ? "" : "s"}</h3>
+            <h3 className="card-title mb-2">{t("Formula", "公式")}{t(view.items.length === 1 ? "" : "s", "")}</h3>
             {!view.matched && view.items.length > 0 && (
-              <p className="mb-2 text-xs text-ink-500">No formula is tagged specifically for this metric; showing every formula in this result.</p>
+              <p className="mb-2 text-xs text-ink-500">{t("No formula is tagged specifically for this metric; showing every formula in this result.", "没有专门标注用于此指标的公式；现显示此结果中的全部公式。")}</p>
             )}
             {view.items.length === 0 ? (
-              <p className="text-sm text-ink-500">The API returned no provenance for this number.</p>
+              <p className="text-sm text-ink-500">{t("The API returned no provenance for this number.", "API 未返回此数值的计算来源。")}</p>
             ) : (
               <ul className="space-y-2">
                 {view.items.map((it, i) => (
@@ -281,9 +287,9 @@ export function ProvenanceDrawer({
           </section>
 
           <section>
-            <h3 className="card-title mb-2">Parameters ({paramIds.length})</h3>
-            {lib.status === "loading" && <Spinner label="Loading parameter library" />}
-            {lib.status === "error" && <p className="text-sm text-worse-800">Parameter library unavailable: {lib.message}</p>}
+            <h3 className="card-title mb-2">{t("Parameters (", "参数（")}{paramIds.length}{t(")", "）")}</h3>
+            {lib.status === "loading" && <Spinner label={t("Loading parameter library", "正在加载参数库")} />}
+            {lib.status === "error" && <p className="text-sm text-worse-800">{t("Parameter library unavailable:", "参数库不可用：")} {lib.message}</p>}
             {library && (
               <ul className="space-y-2">
                 {paramIds.map((id) => (
@@ -295,22 +301,22 @@ export function ProvenanceDrawer({
 
           {view.metric && (
             <section>
-              <h3 className="card-title mb-2">What drives the uncertainty</h3>
+              <h3 className="card-title mb-2">{t("What drives the uncertainty", "不确定性的主要来源")}</h3>
               {drivers && drivers.length > 0 ? (
                 <Drivers drivers={drivers} library={library} />
               ) : driversState === "loading" ? (
-                <Spinner label="Ranking parameters" />
+                <Spinner label={t("Ranking parameters", "正在排序参数")} />
               ) : driversState === "error" ? (
-                <p className="text-sm text-worse-800">Could not load the top drivers.</p>
+                <p className="text-sm text-worse-800">{t("Could not load the top drivers.", "无法加载主要影响因素。")}</p>
               ) : (
-                <p className="text-sm text-ink-500">No driver ranking returned.</p>
+                <p className="text-sm text-ink-500">{t("No driver ranking returned.", "未返回影响因素排序。")}</p>
               )}
             </section>
           )}
 
           {result.warnings.length > 0 && (
             <section>
-              <h3 className="card-title mb-2">Warnings &amp; filled-in assumptions</h3>
+              <h3 className="card-title mb-2">{t("Warnings & filled-in assumptions", "警告与补全假设")}</h3>
               <ul className="list-disc space-y-1 pl-5 text-sm text-ink-700">
                 {result.warnings.map((w) => (
                   <li key={w}>{w}</li>
@@ -320,8 +326,7 @@ export function ProvenanceDrawer({
           )}
 
           <p className="border-t border-ink-100 pt-3 text-xs text-ink-500">
-            Parameter set <code className="font-mono">{result.parameter_set_version}</code> · computed {formatUtc(result.computed_at)} ·
-            Monte Carlo, triangular(low, mid, high) per parameter.
+            {t("Parameter set", "参数集")} <code className="font-mono">{result.parameter_set_version}</code> {t("· computed", "· 计算于")} {formatUtc(result.computed_at)} {t("· Monte Carlo, triangular(low, mid, high) per parameter.", "· 蒙特卡洛模拟，各参数采用三角分布（低值、中值、高值）。")}
           </p>
         </div>
       )}

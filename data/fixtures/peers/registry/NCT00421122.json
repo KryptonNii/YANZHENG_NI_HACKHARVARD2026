@@ -1,0 +1,423 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT00421122",
+   "orgStudyIdInfo": {
+    "id": "D5892C00013"
+   },
+   "organization": {
+    "fullName": "AstraZeneca",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Efficacy and Safety Study of Symbicort Turbuhaler in Chinese Patients With COPD",
+   "officialTitle": "A 6-Month, Phase IIIA, Multi-Center,Randomised,Double-Blind, Double-Dummy, Parallel-Group Study of the Efficacy and Safety of Symbicort® Turbuhaler®+ Bricasol® pMDI Compared With Pulmicort® Turbuhaler®+Bricasol® pMDI in Chinese Patients With COPD"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2009-03",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2006-09"
+   },
+   "completionDateStruct": {
+    "date": "2007-11",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2007-01-09",
+   "studyFirstSubmitQcDate": "2007-01-09",
+   "studyFirstPostDateStruct": {
+    "date": "2007-01-11",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2009-03-26",
+   "lastUpdatePostDateStruct": {
+    "date": "2009-03-27",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "leadSponsor": {
+    "name": "AstraZeneca",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "This study aims at evaluating efficacy and safety of Symbicort® Turbuhaler® in Chinese COPD patients as defined by GOLD treatment guidelines in order to obtain an approval for indication of COPD from Chinese State Food and Drug Administration."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ],
+   "keywords": [
+    "Chinese patients",
+    "COPD"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 315,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "1",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Bricasol®",
+     "interventionNames": [
+      "Drug: terbutaline sulfate (Bricasol)"
+     ]
+    },
+    {
+     "label": "2",
+     "type": "EXPERIMENTAL",
+     "description": "Bricasol® + Pulmicort®",
+     "interventionNames": [
+      "Drug: budesonide (Pulmicort)",
+      "Drug: terbutaline sulfate (Bricasol)"
+     ]
+    },
+    {
+     "label": "3",
+     "type": "EXPERIMENTAL",
+     "description": "Bricasol® + Symbicort®",
+     "interventionNames": [
+      "Drug: budesonide/formoterol (Symbicort)",
+      "Drug: terbutaline sulfate (Bricasol)"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "budesonide/formoterol (Symbicort)",
+     "description": "inhalation therapy",
+     "armGroupLabels": [
+      "3"
+     ],
+     "otherNames": [
+      "Symbicort® Turbuhaler"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "budesonide (Pulmicort)",
+     "description": "inhalation",
+     "armGroupLabels": [
+      "2"
+     ],
+     "otherNames": [
+      "Pulmicort® Turbuhaler"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "terbutaline sulfate (Bricasol)",
+     "description": "inhalation therapy",
+     "armGroupLabels": [
+      "1",
+      "2",
+      "3"
+     ],
+     "otherNames": [
+      "Bricasol pMDI"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Post-study medication FEV1",
+     "timeFrame": "1 hour after medication"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "FVC",
+     "timeFrame": "Pre dose and 1 hour post dose"
+    },
+    {
+     "measure": "FEV1",
+     "timeFrame": "Pre-dose and 15 minutes post dose"
+    },
+    {
+     "measure": "SGRQ symptom scores"
+    },
+    {
+     "measure": "COPD symptom scores"
+    },
+    {
+     "measure": "morning and evening PEF",
+     "timeFrame": "Assessed daily"
+    },
+    {
+     "measure": "reliever medication use"
+    },
+    {
+     "measure": "AE"
+    },
+    {
+     "measure": "lab measures"
+    },
+    {
+     "measure": "ECG"
+    },
+    {
+     "measure": "physician examination"
+    },
+    {
+     "measure": "vital signs"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Signed and dated inform consent\n* Out-patient, clinical diagnosis of COPD\n* Men or women at the age of 40 or over\n\nExclusion Criteria:\n\n* A history of asthma\n* Seasonal allergic rhinitis before 40 years of age\n* Patients with significant or unstable ischemic heart disease, arrhythmia, cardiomyopathy, heart failure, uncontrolled hypertension as defined by the investigator or other disorder",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Symbicort Medical Science Director, MD",
+     "affiliation": "AstraZeneca",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Research Site",
+     "city": "Beijing",
+     "state": "Beijing Municipality",
+     "country": "China",
+     "geoPoint": {
+      "lat": 39.9075,
+      "lon": 116.39723
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Guangzhou",
+     "state": "Guangdong",
+     "country": "China",
+     "geoPoint": {
+      "lat": 23.11667,
+      "lon": 113.25
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Nanjing",
+     "state": "Jiangsu",
+     "country": "China",
+     "geoPoint": {
+      "lat": 32.06167,
+      "lon": 118.77778
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Shenyang",
+     "state": "Liaoling",
+     "country": "China",
+     "geoPoint": {
+      "lat": 41.79222,
+      "lon": 123.43278
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Shanghai",
+     "state": "Shanghai Municipality",
+     "country": "China",
+     "geoPoint": {
+      "lat": 31.22222,
+      "lon": 121.45806
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Xi’an",
+     "state": "Shanxi",
+     "country": "China",
+     "geoPoint": {
+      "lat": 35.99785,
+      "lon": 113.52486
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Chengdu",
+     "state": "Sichuan",
+     "country": "China",
+     "geoPoint": {
+      "lat": 30.66667,
+      "lon": 104.06667
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Hangzhou",
+     "state": "Zhejiang",
+     "country": "China",
+     "geoPoint": {
+      "lat": 30.29365,
+      "lon": 120.16142
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "22046961",
+     "type": "DERIVED",
+     "citation": "Zhong N, Zheng J, Wen F, Yang L, Chen P, Xiu Q, Yao W, Sun T, Zhao Z, Shen H, Shi Y, Lin J, Li Q. Efficacy and safety of budesonide/formoterol via a dry powder inhaler in Chinese patients with chronic obstructive pulmonary disease. Curr Med Res Opin. 2012 Feb;28(2):257-65. doi: 10.1185/03007995.2011.636420. Epub 2012 Jan 20."
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D019819",
+     "term": "Budesonide"
+    },
+    {
+     "id": "D000068759",
+     "term": "Formoterol Fumarate"
+    },
+    {
+     "id": "D000069502",
+     "term": "Budesonide, Formoterol Fumarate Drug Combination"
+    },
+    {
+     "id": "D013726",
+     "term": "Terbutaline"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D011282",
+     "term": "Pregnenediones"
+    },
+    {
+     "id": "D011283",
+     "term": "Pregnenes"
+    },
+    {
+     "id": "D011278",
+     "term": "Pregnanes"
+    },
+    {
+     "id": "D013256",
+     "term": "Steroids"
+    },
+    {
+     "id": "D000072473",
+     "term": "Fused-Ring Compounds"
+    },
+    {
+     "id": "D011083",
+     "term": "Polycyclic Compounds"
+    },
+    {
+     "id": "D004983",
+     "term": "Ethanolamines"
+    },
+    {
+     "id": "D000605",
+     "term": "Amino Alcohols"
+    },
+    {
+     "id": "D000438",
+     "term": "Alcohols"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D004338",
+     "term": "Drug Combinations"
+    },
+    {
+     "id": "D004364",
+     "term": "Pharmaceutical Preparations"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

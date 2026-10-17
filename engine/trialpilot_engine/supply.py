@@ -48,7 +48,7 @@ from .forecast import (
     draw_parameter,
     metric_range,
 )
-from .levers import DISPENSING_MARKERS
+from .levers import is_dispensing_code
 
 __all__ = [
     "SUPPLY_DEFAULTS",
@@ -201,11 +201,6 @@ def _kits(x: IntArray) -> MetricRange:
 # ---------------------------------------------------------------------------------------------
 
 
-def _is_dispensing(code: str) -> bool:
-    c = code.lower()
-    return any(h in c for h in DISPENSING_MARKERS)  # same detection as A2's engine
-
-
 def dispensing_offsets_weeks(
     design: TrialDesign, res: ParameterResolver, followup_weeks: float, notes: list[str]
 ) -> IntArray:
@@ -213,7 +208,7 @@ def dispensing_offsets_weeks(
     on_study = sorted((v for v in design.visits if v.week >= 0), key=lambda v: v.week)
     if on_study:
         base = on_study[0].week
-        disp = [v for v in on_study if any(_is_dispensing(p.code) for p in v.procedures)]
+        disp = [v for v in on_study if any(is_dispensing_code(p.code) for p in v.procedures)]
         if not disp:
             disp = on_study[:-1] if len(on_study) > 1 else on_study
             notes.append(
@@ -304,26 +299,13 @@ def _cohort(cells: IntArray, weeks: IntArray, n_weeks: int) -> _Cohort:
     return _Cohort(cells, ptr)
 
 
-def _week_cells(families: list[tuple[_Cohort, int]], t: int, n_weeks: int) -> IntArray | None:
-    """Cells with an event at week t, one entry per event (a cell repeats when it has several);
-    event = a patient of the cohort randomised at week t − shift. None when there is no event."""
-    pieces = []
-    for co, shift in families:
-        e = t - shift
-        if 0 <= e < n_weeks:
-            a, b = co.ptr[e], co.ptr[e + 1]
-            if b > a:
-                pieces.append(co.cells[a:b])
-    if not pieces:
-        return None
-    return pieces[0] if len(pieces) == 1 else np.concatenate(pieces)
-
-
 def _materialize(families: list[tuple[_Cohort, int]], horizon: int) -> list[IntArray | None]:
     """Every family's events grouped by week, so the inventory loop indexes one array per week.
 
-    The multiset of cells at week t matches `_week_cells` (addition order does not matter:
-    dispensing and the IRT window are scatter-adds).
+    Week t holds the cells with an event at t, one entry per event (a cell repeats when it has
+    several), or None when there is none; an event is a patient of the cohort randomised at week
+    t − shift. Entry order within a week does not matter: dispensing and the IRT window are
+    scatter-adds.
     """
     buckets: list[list[IntArray]] = [[] for _ in range(horizon)]
     for co, shift in families:

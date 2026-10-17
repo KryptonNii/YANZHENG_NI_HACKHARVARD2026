@@ -1,0 +1,3113 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01533935",
+   "orgStudyIdInfo": {
+    "id": "1237.14"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2011-004660-30",
+     "type": "EUDRACT_NUMBER",
+     "domain": "EudraCT"
+    }
+   ],
+   "organization": {
+    "fullName": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Effect on Exercise Endurance and Lung Hyperinflation of Tiotropium + Olodaterol in COPD Patients.",
+   "officialTitle": "A Randomised, Double-blind, 5 Treatment Arms, 4-period, Incomplete Cross-over Study to Determine the Effect of 6 Weeks Treatment of Orally Inhaled Tiotropium + Olodaterol Fixed Dose Combination (FDC) (2.5 / 5 µg; and 5 / 5 µg) (Delivered by the Respimat® Inhaler) Compared With Tiotropium (5 µg), Olodaterol (5 µg ) and Placebo (Delivered by the Respimat® Inhaler) on Lung Hyperinflation and Exercise Endurance Time During Constant Work Rate Cycle Ergometry in Patients With Chronic Obstructive Pulmonary Disease (COPD) [MORACTO TM 2]"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2015-08",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2012-02"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2013-11",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2013-11",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2012-02-13",
+   "studyFirstSubmitQcDate": "2012-02-15",
+   "studyFirstPostDateStruct": {
+    "date": "2012-02-16",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2015-06-19",
+   "resultsFirstSubmitQcDate": "2015-08-12",
+   "resultsFirstPostDateStruct": {
+    "date": "2015-09-15",
+    "type": "ESTIMATED"
+   },
+   "dispFirstSubmitDate": "2014-04-30",
+   "dispFirstSubmitQcDate": "2014-04-30",
+   "dispFirstPostDateStruct": {
+    "date": "2014-05-16",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2015-08-12",
+   "lastUpdatePostDateStruct": {
+    "date": "2015-09-15",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "The primary objective of this trial is to investigate the effect of 6 weeks treatment with tiotropium + olodaterol fixed dose combination inhalation solution on lung hyperinflation and exercise tolerance in patients with COPD."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "CROSSOVER",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 291,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Olodaterol 5 mcg QD",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "patient will receive olodaterol 5 mcg once daily",
+     "interventionNames": [
+      "Drug: Olodaterol",
+      "Device: Respimat"
+     ]
+    },
+    {
+     "label": "Placebo QD",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "placebo comparator for tiotropium + olodaterol",
+     "interventionNames": [
+      "Drug: Placebo",
+      "Device: Respimat"
+     ]
+    },
+    {
+     "label": "Tiotropium 5 mcg QD",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "patient will receive tiotropium 5 mcg once daily",
+     "interventionNames": [
+      "Drug: Tiotropium",
+      "Device: Respimat"
+     ]
+    },
+    {
+     "label": "Tiotropium + olodaterol low dose QD",
+     "type": "EXPERIMENTAL",
+     "description": "patient will receive tiotropium 2.5 mcg + olodaterol 5 mcg in fixed dose combination once daily",
+     "interventionNames": [
+      "Drug: Tiotropium + Olodaterol",
+      "Device: Respimat"
+     ]
+    },
+    {
+     "label": "Tiotropium + olodaterol high dose",
+     "type": "EXPERIMENTAL",
+     "description": "patient will receive tiotropium 5 mcg + olodaterol 5 mcg in fixed dose combination once daily",
+     "interventionNames": [
+      "Drug: tiotropium + Olodaterol",
+      "Device: Respimat"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "placebo matching tiotropium + olodaterol",
+     "armGroupLabels": [
+      "Placebo QD"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Tiotropium + Olodaterol",
+     "description": "Tiotropium 2.5 mcg + olodaterol 5 mcg once daily",
+     "armGroupLabels": [
+      "Tiotropium + olodaterol low dose QD"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "tiotropium + Olodaterol",
+     "description": "tiotropium 5 mcg + olodaterol 5 mcg once daily",
+     "armGroupLabels": [
+      "Tiotropium + olodaterol high dose"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Tiotropium",
+     "description": "tiotropium",
+     "armGroupLabels": [
+      "Tiotropium 5 mcg QD"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Olodaterol",
+     "description": "Olodaterol 5 mcg once daily",
+     "armGroupLabels": [
+      "Olodaterol 5 mcg QD"
+     ]
+    },
+    {
+     "type": "DEVICE",
+     "name": "Respimat",
+     "description": "Respimat inhaler",
+     "armGroupLabels": [
+      "Olodaterol 5 mcg QD",
+      "Placebo QD",
+      "Tiotropium + olodaterol high dose",
+      "Tiotropium + olodaterol low dose QD",
+      "Tiotropium 5 mcg QD"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Inspiratory Capacity at Rest Before Constant Work Rate Cycle Ergometry to Symptom Limitation at 75% Work Capacity",
+     "description": "Inspiratory capacity (IC) at rest before constant work rate cycle ergometry to symptom limitation at 75% maximal work capacity (Wcap).\n\nWcap was defined as the maximum work rate achieved for at least 30 seconds during the incremental cycle ergometry performed at Visit 1.\n\nThe presented means are adjusted means from the MMRM (Mixed Effects Model Repeated Measures) model.",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Endurance Time During Constant Work Rate Cycle Ergometry to Symptom Limitation at 75% Wcap",
+     "description": "Endurance time during constant work rate cycle ergometry (CWRCE) to symptom limitation at 75% Wcap\n\nWcap was defined as the maximum work rate achieved for at least 30 seconds during the incremental cycle ergometry performed at Visit 1.\n\nThe presented means are adjusted mean from the MMRM model.",
+     "timeFrame": "6 weeks"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Slope of the Intensity of Breathing Discomfort (Borg Scale) During Constant Work Rate Cycle Ergometry to Symptom Limitation at 75% Wcap",
+     "description": "Slope of the intensity of breathing discomfort (Borg Scale) during CWRCE to symptom limitation at 75% Wcap. The intensity of breathing discomfort was rated using the modified Borg scale with ratings from 0 (nothing at all) to 10 (maximal).\n\nSlope is defined as : (intensity of breathing discomfort at the end of exercise minus intensity of breathing discomfort at rest) / endurance time.\n\nA decrease in slope indicates improvement.\n\nThe presented means are adjusted means from MMRM model.",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "FEV1 (1 Hour Post-dose)",
+     "description": "Forced Expiratory Volume in 1 Second (FEV1) (one hour post-dose).\n\nThe presented means are adjusted means from MMRM model.",
+     "timeFrame": "6 weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion criteria:\n\n1. All patients must sign an informed consent consistent with ICH-GCP guidelines prior to participation in the trial, which includes medication washout and restrictions.\n2. All patients must have a diagnosis of chronic obstructive pulmonary disease and must meet the following spirometric criteria:\n\n   Patients must have relatively stable airway obstruction with a post-bronchodilator FEV1 \\<80% of predicted normal and a post-bronchodilator FEV1/FVC \\<70% at Visit 1.\n3. Male or female patients, between 40 and 75 years of age (inclusive) on day of signing informed consent.\n4. Patients must be current or ex-smokers with a smoking history of more than 10 pack years.\n\nExclusion criteria:\n\n1. Patients with a significant disease other than COPD; a significant disease is defined as a disease which, in the opinion of the investigator, may (i) put the patient at risk because of participation in the study, (ii) influence the results of the study, or (iii) cause concern regarding the patient's ability to participate in the study\n2. Patients with clinically relevant abnormal baseline haematology, blood chemistry, or urinalysis; all patients with an SGOT \\>x2 ULN, SGPT \\>x2 ULN, bilirubin \\>x2 ULN or creatinine \\>x2 ULN will be excluded regardless of clinical condition\n3. Patients with a history of asthma. For patients with allergic rhinitis or atopy, source documentation is required to verify that the patient does not have asthma.\n\n   Patients with any of the following conditions:\n4. A diagnosis of thyrotoxicosis (due to the known class side effect profile of ß2-agonists)\n5. A diagnosis of paroxysmal tachycardia (\\>100 beats per minute) (due to the known class side effect profile of ß2-agonists)\n6. A history of myocardial infarction within 1 year of screening visit (Visit 1)\n7. Unstable or life-threatening cardiac arrhythmia\n8. Hospitalized for heart failure within the past year\n9. Known active tuberculosis\n10. A malignancy for which patient has undergone resection, radiation therapy or chemotherapy within last five years (patients with treated basal cell carcinoma are allowed)\n11. A history of life-threatening pulmonary obstruction\n12. A history of cystic fibrosis\n13. Clinically evident bronchiectasis\n14. A history of significant alcohol or drug abuse\n15. Any contraindications for exercise testing.\n16. Patients who have undergone thoracotomy with pulmonary resection (patients with a history of thoracotomy for other reasons should be evaluated as per exclusion criterion No. 1)\n17. Patients being treated with any oral ß-adrenergics\n18. Patients being treated with oral corticosteroid medication at unstable doses\n19. Patients who regularly use daytime oxygen therapy for more than one hour per day and in the investigator's opinion will be unable to abstain from the use of oxygen therapy during clinic visits\n20. Patients who have completed a pulmonary rehabilitation program in the six weeks prior to the screening visit or patients who are currently in a pulmonary rehabilitation program\n21. Patients who have a limitation of exercise performance as a result of factors other than fatigue or exertional dyspnoea, such as arthritis in the leg, angina pectoris or claudication or morbid obesity.\n22. Patients who have taken an investigational drug within one month or six half lives (whichever is greater) prior to screening visit\n23. Patients with known hypersensitivity to ß-adrenergics drugs, anticholinergic drugs, BAC, EDTA or any other component of the Respimat® inhalation solution delivery system\n24. Pregnant or nursing women\n25. Women of childbearing potential not using highly effective methods of birth control.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "75 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Boehringer Ingelheim",
+     "affiliation": "Boehringer Ingelheim",
+     "role": "STUDY_CHAIR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "1237.14.01404 Boehringer Ingelheim Investigational Site",
+     "city": "Phoenix",
+     "state": "Arizona",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.44838,
+      "lon": -112.07404
+     }
+    },
+    {
+     "facility": "1237.14.01414 Boehringer Ingelheim Investigational Site",
+     "city": "Austell",
+     "state": "Georgia",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.81261,
+      "lon": -84.63438
+     }
+    },
+    {
+     "facility": "1237.14.01417 Boehringer Ingelheim Investigational Site",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "1237.14.01418 Boehringer Ingelheim Investigational Site",
+     "city": "Rochester",
+     "state": "Minnesota",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.02163,
+      "lon": -92.4699
+     }
+    },
+    {
+     "facility": "1237.14.01408 Boehringer Ingelheim Investigational Site",
+     "city": "Saint Charles",
+     "state": "Missouri",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.78394,
+      "lon": -90.48123
+     }
+    },
+    {
+     "facility": "1237.14.01409 Boehringer Ingelheim Investigational Site",
+     "city": "Charlotte",
+     "state": "North Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.22709,
+      "lon": -80.84313
+     }
+    },
+    {
+     "facility": "1237.14.01407 Boehringer Ingelheim Investigational Site",
+     "city": "Greenville",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.85262,
+      "lon": -82.39401
+     }
+    },
+    {
+     "facility": "1237.14.01403 Boehringer Ingelheim Investigational Site",
+     "city": "Spartanburg",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.94957,
+      "lon": -81.93205
+     }
+    },
+    {
+     "facility": "1237.14.01401 Boehringer Ingelheim Investigational Site",
+     "city": "Union",
+     "state": "South Carolina",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.71541,
+      "lon": -81.62371
+     }
+    },
+    {
+     "facility": "1237.14.01412 Boehringer Ingelheim Investigational Site",
+     "city": "Dallas",
+     "state": "Texas",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.78306,
+      "lon": -96.80667
+     }
+    },
+    {
+     "facility": "1237.14.01410 Boehringer Ingelheim Investigational Site",
+     "city": "Seattle",
+     "state": "Washington",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.60621,
+      "lon": -122.33207
+     }
+    },
+    {
+     "facility": "1237.14.54402 Boehringer Ingelheim Investigational Site",
+     "city": "Buenos Aires",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -34.61315,
+      "lon": -58.37723
+     }
+    },
+    {
+     "facility": "1237.14.54401 Boehringer Ingelheim Investigational Site",
+     "city": "Mendoza",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -32.88946,
+      "lon": -68.84582
+     }
+    },
+    {
+     "facility": "1237.14.43402 Boehringer Ingelheim Investigational Site",
+     "city": "Grieskirchen",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 48.23333,
+      "lon": 13.83333
+     }
+    },
+    {
+     "facility": "1237.14.43401 Boehringer Ingelheim Investigational Site",
+     "city": "Neumarkt am Wallersee",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 47.95,
+      "lon": 13.23333
+     }
+    },
+    {
+     "facility": "1237.14.11404 Boehringer Ingelheim Investigational Site",
+     "city": "Vancouver",
+     "state": "British Columbia",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 49.24966,
+      "lon": -123.11934
+     }
+    },
+    {
+     "facility": "1237.14.11403 Boehringer Ingelheim Investigational Site",
+     "city": "Toronto",
+     "state": "Ontario",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.70643,
+      "lon": -79.39864
+     }
+    },
+    {
+     "facility": "1237.14.11402 Boehringer Ingelheim Investigational Site",
+     "city": "Montreal",
+     "state": "Quebec",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.50884,
+      "lon": -73.58781
+     }
+    },
+    {
+     "facility": "1237.14.11401 Boehringer Ingelheim Investigational Site",
+     "city": "Ste-Foy",
+     "state": "Quebec",
+     "country": "Canada"
+    },
+    {
+     "facility": "1237.14.49406 Boehringer Ingelheim Investigational Site",
+     "city": "Bamberg",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.89873,
+      "lon": 10.90067
+     }
+    },
+    {
+     "facility": "1237.14.49404 Boehringer Ingelheim Investigational Site",
+     "city": "Bochum",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.48165,
+      "lon": 7.21648
+     }
+    },
+    {
+     "facility": "1237.14.49401 Boehringer Ingelheim Investigational Site",
+     "city": "Großhansdorf",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.66528,
+      "lon": 10.28552
+     }
+    },
+    {
+     "facility": "1237.14.49405 Boehringer Ingelheim Investigational Site",
+     "city": "Hamburg",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "1237.14.49403 Boehringer Ingelheim Investigational Site",
+     "city": "Hanover",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.37052,
+      "lon": 9.73322
+     }
+    },
+    {
+     "facility": "1237.14.49402 Boehringer Ingelheim Investigational Site",
+     "city": "Kiel",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 54.32133,
+      "lon": 10.13489
+     }
+    },
+    {
+     "facility": "1237.14.31001 Boehringer Ingelheim Investigational Site",
+     "city": "Heerlen",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 50.88365,
+      "lon": 5.98154
+     }
+    },
+    {
+     "facility": "1237.14.31005 Boehringer Ingelheim Investigational Site",
+     "city": "Hoofddorp",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.3025,
+      "lon": 4.68889
+     }
+    },
+    {
+     "facility": "1237.14.31004 Boehringer Ingelheim Investigational Site",
+     "city": "Hoorn",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.6425,
+      "lon": 5.05972
+     }
+    },
+    {
+     "facility": "1237.14.31006 Medisch Centrum Leeuwarden",
+     "city": "Leeuwarden",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 53.20271,
+      "lon": 5.80973
+     }
+    },
+    {
+     "facility": "1237.14.31007 Boehringer Ingelheim Investigational Site",
+     "city": "Leiden",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.15833,
+      "lon": 4.49306
+     }
+    },
+    {
+     "facility": "1237.14.70401 Boehringer Ingelheim Investigational Site",
+     "city": "Moscow",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 55.75204,
+      "lon": 37.61781
+     }
+    },
+    {
+     "facility": "1237.14.70402 Boehringer Ingelheim Investigational Site",
+     "city": "Saint Petersburg",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 59.93863,
+      "lon": 30.31413
+     }
+    },
+    {
+     "facility": "1237.14.46001 Boehringer Ingelheim Investigational Site",
+     "city": "Lund",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 55.70584,
+      "lon": 13.19321
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "28424359",
+     "type": "DERIVED",
+     "citation": "O'Donnell DE, Casaburi R, Frith P, Kirsten A, De Sousa D, Hamilton A, Xue W, Maltais F. Effects of combined tiotropium/olodaterol on inspiratory capacity and exercise endurance in COPD. Eur Respir J. 2017 Apr 19;49(4):1601348. doi: 10.1183/13993003.01348-2016. Print 2017 Apr."
+    }
+   ],
+   "seeAlsoLinks": [
+    {
+     "label": "Related Info",
+     "url": "http://trials.boehringer-ingelheim.com/"
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "This was a randomised, 4-period incomplete block cross-over trial. 291 patients were randomized to one of five treatments sequences and treated. It was a double-blind trial in which each treatment period lasted 6 weeks with a washout period of 21 days between each.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Tio+Olo 2.5/5 / Tio+Olo 5/5 / Tio / Olo",
+     "description": "Patients received a total of four treatments, and each treatment period is separated by a washout period of 21 days. The treatments administered, by oral inhalation delivered once daily in the morning, via the respimat inhaler, were\n\n* Fixed dose combination (FDC) of Tiotropium 2.5 µg and Olodaterol 5 µg.\n* Fixed dose combination (FDC) of Tiotropium 5 µg and Olodaterol 5 µg\n* Tiotropium fixed dose 5 µg\n* Olodaterol fixed dose 5 µg"
+    },
+    {
+     "id": "FG001",
+     "title": "Tio+Olo 5/5 / Tio / Olo / Placebo",
+     "description": "Patients received a total of four treatments, and each treatment period is separated by a washout period of 21 days. The treatments administered, by oral inhalation delivered once daily in the morning, via the respimat inhaler, were\n\n* Fixed dose combination (FDC) of Tiotropium 5 µg and Olodaterol 5 µg\n* Tiotropium fixed dose 5 µg\n* Olodaterol fixed dose 5 µg\n* Oral inhalation of placebo"
+    },
+    {
+     "id": "FG002",
+     "title": "Tio / Olo / Placebo / Tio+Olo 2.5/5",
+     "description": "Patients received a total of four treatments, and each treatment period is separated by a washout period of 21 days. The treatments administered, by oral inhalation delivered once daily in the morning, via the respimat inhaler, were\n\n* Tiotropium fixed dose 5 µg\n* Olodaterol fixed dose 5 µg\n* Oral inhalation of placebo\n* Fixed dose combination (FDC) of Tiotropium 2.5 µg and Olodaterol 5 µg"
+    },
+    {
+     "id": "FG003",
+     "title": "Olo / Placebo / Tio+Olo 2.5/5 / Tio+Olo 5/5",
+     "description": "Patients received a total of four treatments, and each treatment period is separated by a washout period of 21 days. The treatments administered, by oral inhalation delivered once daily in the morning, via the respimat inhaler, were\n\n* Olodaterol fixed dose 5 µg\n* Oral inhalation of placebo\n* Fixed dose combination (FDC) of Tiotropium 2.5 µg and Olodaterol 5 µg\n* Fixed dose combination (FDC) of Tiotropium 5 µg and Olodaterol 5 µg"
+    },
+    {
+     "id": "FG004",
+     "title": "Placebo / Tio+Olo 2.5/5 / Tio+Olo 5/5 / Tio",
+     "description": "Patients received a total of four treatments, and each treatment period is separated by a washout period of 21 days. The treatments administered, by oral inhalation delivered once daily in the morning, via the respimat inhaler, were\n\n* Oral inhalation of placebo\n* Fixed dose combination (FDC) of Tiotropium 2.5 µg and Olodaterol 5 µg\n* Fixed dose combination (FDC) of Tiotropium 5 µg and Olodaterol 5 µg\n* Tiotropium fixed dose 5 µg"
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "58"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "58"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "58"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "59"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "58"
+        }
+       ]
+      },
+      {
+       "type": "Received Placebo",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "47"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "52"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "57"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "58"
+        }
+       ]
+      },
+      {
+       "type": "Received Olo 5",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "52"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "52"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "55"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "59"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Received Tio 5",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "54"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "54"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "58"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "52"
+        }
+       ]
+      },
+      {
+       "type": "Received Tio+Olo 2.5/5",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "58"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "49"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "56"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "56"
+        }
+       ]
+      },
+      {
+       "type": "Received Tio+Olo 5/5",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "56"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "58"
+        },
+        {
+         "groupId": "FG002",
+         "comment": "One patient received Tio+Olo 5/5 instead of Tio+Olo 2.5/5 by mistake.",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "54"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "55"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "comment": "All treatment periods",
+         "numSubjects": "52"
+        },
+        {
+         "groupId": "FG001",
+         "comment": "All treatment periods",
+         "numSubjects": "45"
+        },
+        {
+         "groupId": "FG002",
+         "comment": "All treatment periods",
+         "numSubjects": "50"
+        },
+        {
+         "groupId": "FG003",
+         "comment": "All treatment periods",
+         "numSubjects": "52"
+        },
+        {
+         "groupId": "FG004",
+         "comment": "All treatment periods",
+         "numSubjects": "50"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "6"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "13"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "8"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "7"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "8"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "7"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "3"
+        }
+       ]
+      },
+      {
+       "type": "Protocol Violation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "4"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "4"
+        }
+       ]
+      },
+      {
+       "type": "Other reason not defined above",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "1"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "populationDescription": "Treated Set (TS) : This patient set included all patients of the Randomised Set (RS : patients who signed the informed consent form and were also randomised, regardless of whether the patient was treated with study medication or not) who were dispensed study medication and were documented to have taken at least 1 dose of study medication.",
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Overall Study",
+     "description": "A randomised, double-blind, placebo controlled, 5 treatment, 4-period, incomplete, crossover study. Each treatment period was separated by a washout period of 21 days. The treatments administered, by oral inhalation delivered once daily in the morning, via the respimat inhaler, were:\n\n* Oral inhalation of placebo\n* Tiotropium fixed dose 5 µg\n* Olodaterol fixed dose 5 µg\n* Fixed dose combination (FDC) of Tiotropium 2.5 µg and Olodaterol 5 µg\n* Fixed dose combination (FDC) of Tiotropium 5 µg and Olodaterol 5 µg\n\nTreatment sequence is not considered as a factor which may affect the treatment effect due to sufficient washout period added between treatment cycles. As a result, we only display baseline characteristics as a whole population, but not by treatment sequence"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "291"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "61.2",
+           "spread": "7.9"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "87"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "204"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Inspiratory Capacity at Rest Before Constant Work Rate Cycle Ergometry to Symptom Limitation at 75% Work Capacity",
+     "description": "Inspiratory capacity (IC) at rest before constant work rate cycle ergometry to symptom limitation at 75% maximal work capacity (Wcap).\n\nWcap was defined as the maximum work rate achieved for at least 30 seconds during the incremental cycle ergometry performed at Visit 1.\n\nThe presented means are adjusted means from the MMRM (Mixed Effects Model Repeated Measures) model.",
+     "populationDescription": "Full Analysis Set (FAS) : This patient set included all patients in the TS who had the study baseline and at least 1 evaluable post-dose measurement for 1 of the primary endpoints. Assignment to the FAS was done after implementation of any data handling rules,which set measurements to missing.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Oral inhalation of placebo, 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG001",
+       "title": "Olodaterol 5 µg",
+       "description": "Oral inhalation of Olodaterol fixed dose 5 µg (2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium 5 µg",
+       "description": "Oral inhalation of Tiotropium fixed dose 5 µg (2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium + Olodaterol 2.5/5",
+       "description": "Oral inhalation of fixed dose combination (FDC) of Tiotropium 2.5 µg and Olodaterol 5 µg (Tiotropium: 1.25 µg per actuation and Olodaterol: 2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG004",
+       "title": "Tiotropium + Olodaterol 5/5",
+       "description": "Oral inhalation of fixed dose combination (FDC) of Tiotropium 5 µg and Olodaterol 5 µg (Tiotropium: 2.5 µg per actuation and Olodaterol: 2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "202"
+        },
+        {
+         "groupId": "OG001",
+         "value": "208"
+        },
+        {
+         "groupId": "OG002",
+         "value": "208"
+        },
+        {
+         "groupId": "OG003",
+         "value": "212"
+        },
+        {
+         "groupId": "OG004",
+         "value": "218"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.502",
+           "spread": "0.026"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.687",
+           "spread": "0.025"
+          },
+          {
+           "groupId": "OG002",
+           "value": "2.679",
+           "spread": "0.025"
+          },
+          {
+           "groupId": "OG003",
+           "value": "2.776",
+           "spread": "0.025"
+          },
+          {
+           "groupId": "OG004",
+           "value": "2.767",
+           "spread": "0.025"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.265",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.215",
+       "ciUpperLimit": "0.315",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.025",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 5/5 QD minus Placebo QD"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0015",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.080",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.031",
+       "ciUpperLimit": "0.129",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.025",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 5/5 QD minus Olodaterol 5 mcg QD"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0005",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.088",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.039",
+       "ciUpperLimit": "0.137",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.025",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 5/5 QD minus Tiotropium 5 mcg QD"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.274",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.224",
+       "ciUpperLimit": "0.324",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.025",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 2.5/5 QD minus Placebo QD"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0004",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.089",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.039",
+       "ciUpperLimit": "0.138",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.025",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 2.5/5 QD minus Olodaterol 5 mcg QD"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.097",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.047",
+       "ciUpperLimit": "0.147",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.025",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 2.5/5 QD minus Tiotropium 5 mcg QD"
+      }
+     ]
+    },
+    {
+     "type": "PRIMARY",
+     "title": "Endurance Time During Constant Work Rate Cycle Ergometry to Symptom Limitation at 75% Wcap",
+     "description": "Endurance time during constant work rate cycle ergometry (CWRCE) to symptom limitation at 75% Wcap\n\nWcap was defined as the maximum work rate achieved for at least 30 seconds during the incremental cycle ergometry performed at Visit 1.\n\nThe presented means are adjusted mean from the MMRM model.",
+     "populationDescription": "FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "GEOMETRIC_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "seconds",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Oral inhalation of placebo, 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG001",
+       "title": "Olodaterol 5 µg",
+       "description": "Oral inhalation of Olodaterol fixed dose 5 µg (2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium 5 µg",
+       "description": "Oral inhalation of Tiotropium fixed dose 5 µg (2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium + Olodaterol 2.5/5",
+       "description": "Oral inhalation of fixed dose combination (FDC) of Tiotropium 2.5 µg and Olodaterol 5 µg (Tiotropium: 1.25 µg per actuation and Olodaterol: 2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG004",
+       "title": "Tiotropium + Olodaterol 5/5",
+       "description": "Oral inhalation of fixed dose combination (FDC) of Tiotropium 5 µg and Olodaterol 5 µg (Tiotropium: 2.5 µg per actuation and Olodaterol: 2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "205"
+        },
+        {
+         "groupId": "OG001",
+         "value": "207"
+        },
+        {
+         "groupId": "OG002",
+         "value": "209"
+        },
+        {
+         "groupId": "OG003",
+         "value": "212"
+        },
+        {
+         "groupId": "OG004",
+         "value": "216"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "410.77",
+           "spread": "12.009"
+          },
+          {
+           "groupId": "OG001",
+           "value": "419.06",
+           "spread": "12.207"
+          },
+          {
+           "groupId": "OG002",
+           "value": "446.50",
+           "spread": "12.958"
+          },
+          {
+           "groupId": "OG003",
+           "value": "460.66",
+           "spread": "13.310"
+          },
+          {
+           "groupId": "OG004",
+           "value": "465.68",
+           "spread": "13.359"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Ratio",
+       "paramValue": "1.134",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "1.065",
+       "ciUpperLimit": "1.206",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.036",
+       "estimateComment": "Ratio calculated as Tiotropium + olodaterol 5/5 QD divided by Placebo QD"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0009",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Ratio",
+       "paramValue": "1.111",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "1.045",
+       "ciUpperLimit": "1.182",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.035",
+       "estimateComment": "Ratio calculated Tiotropium + olodaterol 5/5 QD as divided by Olodaterol 5 mcg QD"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.1807",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Ratio",
+       "paramValue": "1.043",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.981",
+       "ciUpperLimit": "1.109",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.033",
+       "estimateComment": "Ratio calculated as Tiotropium + olodaterol 5/5 QD divided by Tiotropium 5 mcg QD"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0003",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Ratio",
+       "paramValue": "1.121",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "1.054",
+       "ciUpperLimit": "1.193",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.036",
+       "estimateComment": "Ratio calculated as Tiotropium + olodaterol 2.5/5 QD divided by Placebo QD"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0029",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Ratio",
+       "paramValue": "1.099",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "1.033",
+       "ciUpperLimit": "1.170",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.035",
+       "estimateComment": "Ratio calculated as Tiotropium + olodaterol 2.5/5 QD divided by Olodaterol 5 mcg QD"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.3240",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Ratio",
+       "paramValue": "1.032",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.970",
+       "ciUpperLimit": "1.098",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.033",
+       "estimateComment": "Ratio calculated as Tiotropium + olodaterol 2.5/5 QD divided by Tiotropium 5 mcg QD"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Slope of the Intensity of Breathing Discomfort (Borg Scale) During Constant Work Rate Cycle Ergometry to Symptom Limitation at 75% Wcap",
+     "description": "Slope of the intensity of breathing discomfort (Borg Scale) during CWRCE to symptom limitation at 75% Wcap. The intensity of breathing discomfort was rated using the modified Borg scale with ratings from 0 (nothing at all) to 10 (maximal).\n\nSlope is defined as : (intensity of breathing discomfort at the end of exercise minus intensity of breathing discomfort at rest) / endurance time.\n\nA decrease in slope indicates improvement.\n\nThe presented means are adjusted means from MMRM model.",
+     "populationDescription": "FAS",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "units on a scale / s",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Oral inhalation of placebo, 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG001",
+       "title": "Olodaterol 5 µg",
+       "description": "Oral inhalation of Olodaterol fixed dose 5 µg (2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium 5 µg",
+       "description": "Oral inhalation of Tiotropium fixed dose 5 µg (2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium + Olodaterol 2.5/5",
+       "description": "Oral inhalation of fixed dose combination (FDC) of Tiotropium 2.5 µg and Olodaterol 5 µg (Tiotropium: 1.25 µg per actuation and Olodaterol: 2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG004",
+       "title": "Tiotropium + Olodaterol 5/5",
+       "description": "Oral inhalation of fixed dose combination (FDC) of Tiotropium 5 µg and Olodaterol 5 µg (Tiotropium: 2.5 µg per actuation and Olodaterol: 2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "205"
+        },
+        {
+         "groupId": "OG001",
+         "value": "207"
+        },
+        {
+         "groupId": "OG002",
+         "value": "208"
+        },
+        {
+         "groupId": "OG003",
+         "value": "212"
+        },
+        {
+         "groupId": "OG004",
+         "value": "216"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.018",
+           "spread": "0.001"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.017",
+           "spread": "0.001"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.015",
+           "spread": "0.001"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.014",
+           "spread": "0.001"
+          },
+          {
+           "groupId": "OG004",
+           "value": "0.015",
+           "spread": "0.001"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-0.003",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.004",
+       "ciUpperLimit": "-0.002",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.001",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 5/5 QD minus Placebo QD"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0033",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-0.002",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.003",
+       "ciUpperLimit": "-0.001",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.001",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 5/5 QD minus Olodaterol 5 mcg QD"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.2306",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-0.001",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.002",
+       "ciUpperLimit": "0.001",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.001",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 5/5 QD minus Tiotropium 5 mcg QD"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-0.003",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.005",
+       "ciUpperLimit": "-0.002",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.001",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 2.5/5 QD minus Placebo QD"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0010",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-0.002",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.004",
+       "ciUpperLimit": "-0.001",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.001",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 2.5/5 QD minus Olodaterol 5 mcg QD"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.1206",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-0.001",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.002",
+       "ciUpperLimit": "0.000",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.001",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 2.5/5 QD minus Tiotropium 5 mcg QD"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "FEV1 (1 Hour Post-dose)",
+     "description": "Forced Expiratory Volume in 1 Second (FEV1) (one hour post-dose).\n\nThe presented means are adjusted means from MMRM model.",
+     "populationDescription": "All patients in FAS with available FEV1 data at baseline and week 6 are included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Litres",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Oral inhalation of placebo, 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG001",
+       "title": "Olodaterol 5 µg",
+       "description": "Oral inhalation of Olodaterol fixed dose 5 µg (2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium 5 µg",
+       "description": "Oral inhalation of Tiotropium fixed dose 5 µg (2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG003",
+       "title": "Tiotropium + Olodaterol 2.5/5",
+       "description": "Oral inhalation of fixed dose combination (FDC) of Tiotropium 2.5 µg and Olodaterol 5 µg (Tiotropium: 1.25 µg per actuation and Olodaterol: 2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      },
+      {
+       "id": "OG004",
+       "title": "Tiotropium + Olodaterol 5/5",
+       "description": "Oral inhalation of fixed dose combination (FDC) of Tiotropium 5 µg and Olodaterol 5 µg (Tiotropium: 2.5 µg per actuation and Olodaterol: 2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "210"
+        },
+        {
+         "groupId": "OG001",
+         "value": "215"
+        },
+        {
+         "groupId": "OG002",
+         "value": "211"
+        },
+        {
+         "groupId": "OG003",
+         "value": "215"
+        },
+        {
+         "groupId": "OG004",
+         "value": "219"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.548",
+           "spread": "0.016"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.742",
+           "spread": "0.016"
+          },
+          {
+           "groupId": "OG002",
+           "value": "1.741",
+           "spread": "0.016"
+          },
+          {
+           "groupId": "OG003",
+           "value": "1.852",
+           "spread": "0.016"
+          },
+          {
+           "groupId": "OG004",
+           "value": "1.876",
+           "spread": "0.016"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.329",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.294",
+       "ciUpperLimit": "0.364",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.018",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 5/5 QD minus Placebo QD"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.134",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.099",
+       "ciUpperLimit": "0.169",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.018",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 5/5 QD minus Olodaterol 5 mcg QD"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.135",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.100",
+       "ciUpperLimit": "0.170",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.018",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 5/5 QD minus Tiotropium 5 mcg QD"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.305",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.269",
+       "ciUpperLimit": "0.340",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.018",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 2.5/5 QD minus Placebo QD"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.110",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.075",
+       "ciUpperLimit": "0.145",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.018",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 2.5/5 QD minus Olodaterol 5 mcg QD"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.111",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.076",
+       "ciUpperLimit": "0.146",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.018",
+       "estimateComment": "Difference calculated as Tiotropium + olodaterol 2.5/5 QD minus Tiotropium 5 mcg QD"
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "From drug administration until 21 days after the last administration, up to 139 days",
+   "description": "One patient received treatment for 118 days, rather than 6 weeks, due to non-compliance with study visit requirements.",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Placebo",
+     "description": "Oral inhalation of placebo, 2 puffs from the Respimat inhaler, once daily, in the morning.",
+     "seriousNumAffected": 3,
+     "seriousNumAtRisk": 214,
+     "otherNumAffected": 41,
+     "otherNumAtRisk": 214
+    },
+    {
+     "id": "EG001",
+     "title": "Olodaterol 5 µg",
+     "description": "Oral inhalation of Olodaterol fixed dose 5 µg (2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning.",
+     "seriousNumAffected": 3,
+     "seriousNumAtRisk": 218,
+     "otherNumAffected": 42,
+     "otherNumAtRisk": 218
+    },
+    {
+     "id": "EG002",
+     "title": "Tiotropium 5 µg",
+     "description": "Oral inhalation of Tiotropium fixed dose 5 µg (2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning.",
+     "seriousNumAffected": 8,
+     "seriousNumAtRisk": 218,
+     "otherNumAffected": 48,
+     "otherNumAtRisk": 218
+    },
+    {
+     "id": "EG003",
+     "title": "Tiotropium + Olodaterol 2.5/5",
+     "description": "Oral inhalation of fixed dose combination (FDC) of Tiotropium 2.5 µg and Olodaterol 5 µg (Tiotropium: 1.25 µg per actuation and Olodaterol: 2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning.",
+     "seriousNumAffected": 3,
+     "seriousNumAtRisk": 219,
+     "otherNumAffected": 36,
+     "otherNumAtRisk": 219
+    },
+    {
+     "id": "EG004",
+     "title": "Tiotropium + Olodaterol 5/5",
+     "description": "Oral inhalation of fixed dose combination (FDC) of Tiotropium 5 µg and Olodaterol 5 µg (Tiotropium: 2.5 µg per actuation and Olodaterol: 2.5 µg per actuation), 2 puffs from the Respimat inhaler, once daily, in the morning.",
+     "seriousNumAffected": 4,
+     "seriousNumAtRisk": 224,
+     "otherNumAffected": 40,
+     "otherNumAtRisk": 224
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Atrial fibrillation",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Sick sinus syndrome",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Supraventricular tachycardia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Abdominal discomfort",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Diarrhoea",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Nausea",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Vomiting",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Death",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Pain",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Acute tonsillitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Cellulitis gangrenous",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Infective exacerbation of chronic obstructive airways disease",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Parainfluenzae virus infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Concussion",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Contusion",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Overdose",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Road traffic accident",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Gastric neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Prostate cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Rectal cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Convulsion",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Suicide attempt",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Acute respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 2,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Dyspnoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Rash",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Peripheral arterial occlusive disease",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 224
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Nasopharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 10,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 14,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 13,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 18,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 16,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 16,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 24,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 19,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 15,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 20,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Cough",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 11,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 5,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 8,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 4,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 3,
+       "numAtRisk": 224
+      }
+     ]
+    },
+    {
+     "term": "Dyspnoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MEDDRA 16.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 12,
+       "numAtRisk": 214
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 6,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 13,
+       "numAtRisk": 218
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 6,
+       "numAtRisk": 219
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 6,
+       "numAtRisk": 224
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "Boehringer Ingelheim (BI) acknowledges that investigators have the right to publish the study results. Investigators shall provide BI with a copy of any publication or presentation for review prior to any submission. Such review will be done with regard to proprietary information, information related to patentable inventions, medical, scientific, and statistical accuracy within 60 days. BI may request a delay of the publication in order to protect BI's intellectual property rights."
+   },
+   "pointOfContact": {
+    "title": "Boehringer Ingelheim Call Center",
+    "organization": "Boehringer Ingelheim",
+    "email": "clintriage.rdg@boehringer-ingelheim.com",
+    "phone": "1-800-243-0127"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16",
+   "removedCountries": [
+    "Colombia"
+   ]
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C000611386",
+     "term": "tiotropium-olodaterol"
+    },
+    {
+     "id": "D000069447",
+     "term": "Tiotropium Bromide"
+    },
+    {
+     "id": "C549647",
+     "term": "olodaterol"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D012602",
+     "term": "Scopolamine Derivatives"
+    },
+    {
+     "id": "D014326",
+     "term": "Tropanes"
+    },
+    {
+     "id": "D053961",
+     "term": "Azabicyclo Compounds"
+    },
+    {
+     "id": "D001372",
+     "term": "Aza Compounds"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000470",
+     "term": "Alkaloids"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D019086",
+     "term": "Bridged Bicyclo Compounds, Heterocyclic"
+    },
+    {
+     "id": "D006572",
+     "term": "Heterocyclic Compounds, Bridged-Ring"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

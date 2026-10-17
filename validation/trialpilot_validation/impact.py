@@ -90,7 +90,10 @@ def render(ctx: Ctx, base: str, head: str, a: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
-def run_impact(ctx: Ctx, base: str, head: str, *, submit_as: str | None = None) -> dict[str, Any]:
+def run_impact(ctx: Ctx, base: str, head: str, *, submit: bool = False,
+               submit_as: str | None = None) -> dict[str, Any]:
+    """Write the change record draft; with `submit` (or `submit_as`) also submit it for approval
+    as `submit_as` or TPV_USER."""
     files = changed_files(ctx, base, head)
     a = analyse(ctx, files)
     body = render(ctx, base, head, a)
@@ -102,15 +105,10 @@ def run_impact(ctx: Ctx, base: str, head: str, *, submit_as: str | None = None) 
             "generated_at": utc_now(), "path": ctx.rel(path), **a}
     write_json(d / f"{record_id}.json", meta)
     write_json(d / "latest.json", meta)
-    if submit_as:
-        c = identity.compliance()
-        c.records.register_file("change_record", record_id, path)
-        user = identity.resolve_user(submit_as)
-        try:
-            req = c.workflow.create_request("change_record", record_id, user.username,
-                                            title=f"Change record {record_id}",
-                                            reason=f"impact {base}..{head}")
-            meta["approval_id"] = req.id
-        except c.ComplianceError as exc:
-            raise TpvError(f"{exc.code}: {exc.message}") from exc
+    if submit or submit_as:
+        identity.compliance().records.register_file("change_record", record_id, path)
+        r = identity.submit_for_approval("change_record", record_id, submit_as,
+                                         title=f"Change record {record_id}",
+                                         reason=f"impact {base}..{head}")
+        meta.update(approval_id=r["approval_id"], approval_status=r["status"])
     return meta

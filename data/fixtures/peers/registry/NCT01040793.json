@@ -1,0 +1,4018 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01040793",
+   "orgStudyIdInfo": {
+    "id": "1222.38"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2009-014416-35",
+     "type": "EUDRACT_NUMBER",
+     "domain": "EudraCT"
+    },
+    {
+     "id": "2009",
+     "type": "NIH",
+     "link": "https://reporter.nih.gov/quickSearch/2009"
+    }
+   ],
+   "organization": {
+    "fullName": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Effect of Treatment BI 1744 CL (5 and 10 mcg) Versus Placebo on Exercise Endurance Time During Constant Work Rate Cycle Ergometry II",
+   "officialTitle": "Randomised, Double-blind, Placebo-controlled, 3-way Cross-over Study to Determine the Effect of Treatment of Orally Inhaled BI 1744 CL (5 µg [2 Actuations of 2.5 µg] and 10 µg [2 Actuations of 5 µg]) Delivered by the Respimat® Inhaler on Exercise Endurance Time During Constant Work Rate Cycle Ergometry in Patients With Chronic Obstructive Pulmonary Disease."
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2014-07",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2010-01"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2011-04",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2009-12-29",
+   "studyFirstSubmitQcDate": "2009-12-29",
+   "studyFirstPostDateStruct": {
+    "date": "2009-12-30",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2014-03-28",
+   "resultsFirstSubmitQcDate": "2014-07-04",
+   "resultsFirstPostDateStruct": {
+    "date": "2014-07-08",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2014-07-04",
+   "lastUpdatePostDateStruct": {
+    "date": "2014-07-08",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "To compare the effects of BI 1744 CL versus placebo on exercise tolerance after 6 weeks of treatment in patients with Chronic Obstructive Pulmonary Disease."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "CROSSOVER",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 157,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Olodaterol (BI 1744) Low",
+     "type": "EXPERIMENTAL",
+     "description": "Low dose inhaled orally once daily from the Respimat inhaler",
+     "interventionNames": [
+      "Drug: Olodaterol (BI 1744)",
+      "Drug: Olodaterol (BI1744)",
+      "Drug: Olodaterol (BI 1744) placebo"
+     ]
+    },
+    {
+     "label": "Olodaterol (BI 1744) High",
+     "type": "EXPERIMENTAL",
+     "description": "High dose inhaled orally once daily from the Respimat inhaler",
+     "interventionNames": [
+      "Drug: Olodaterol (BI 1744)"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Olodaterol (BI 1744) placebo inhaled orally from the Respimat inhaler",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Olodaterol (BI 1744)",
+     "description": "Comparison of low and high dose on exercise endurance time in COPD patients",
+     "armGroupLabels": [
+      "Olodaterol (BI 1744) Low"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Olodaterol (BI 1744)",
+     "description": "Comparison of low and high dose on exercise endurance time in COPD patients",
+     "armGroupLabels": [
+      "Olodaterol (BI 1744) High"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Comparison of low and high dose and placebo on exercise endurance time in COPD patients",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Olodaterol (BI1744)",
+     "description": "Comparison of low and high dose on exercise endurance time in COPD patients",
+     "armGroupLabels": [
+      "Olodaterol (BI 1744) Low"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Olodaterol (BI 1744) placebo",
+     "description": "Placebo that represents olodaterol",
+     "armGroupLabels": [
+      "Olodaterol (BI 1744) Low"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Adjusted Mean Endurance Time After 6 Weeks",
+     "description": "Primary endpoint was endurance time during constant work rate ergometry to symptom limitation at 75% of maximal work capacity after 6 weeks of treatment. Mixed effects model on log10 transformation data. Adjusted means are back transformed to report as geometric means. Standard errors (SEs) are calculated using the delta method.",
+     "timeFrame": "6 weeks"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Adjusted Mean Inspiratory Capacity at Isotime After 6 Weeks",
+     "description": "Isotime is defined as the endurance time of the constant work rate exercise test of shortest duration from Baseline visit, and Week 6 of each of the three treatment periods.",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Borg Scale of Breathing Discomfort at Isotime After 6 Weeks",
+     "description": "Isotime is defined as the endurance time of the constant work rate exercise test of shortest duration from Baseline visit, and Week 6 of each of the three treatment periods.\n\nBorg scale rates discomfort with breathing at rest, during exercise and at end-exercise on a scale from 0=Nothing at all to 10=Maximal discomfort.",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Inspiratory Capacity at Pre-exercise After 6 Weeks",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Inspiratory Capacity at End of Exercise After 6 Weeks",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Borg Scale of Breathing Discomfort at Pre-exercise After 6 Weeks",
+     "description": "Borg scale rates discomfort with breathing at rest, during exercise and at end-exercise on a scale from 0=Nothing at all to 10=Maximal discomfort.",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Borg Scale of Breathing Discomfort at End of Exercise After 6 Weeks",
+     "description": "Borg scale rates discomfort with breathing at rest, during exercise and at end-exercise on a scale from 0=Nothing at all to 10=Maximal discomfort.",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Functional Residual Capacity 30 Minutes Pre-dose After 6 Weeks",
+     "description": "Measured using body plethysmography",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Functional Residual Capacity 1 Hour Post-dose After 6 Weeks",
+     "description": "Measured using body plethysmography",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Inspiratory Capacity 30 Minutes Pre-dose After 6 Weeks",
+     "description": "Measured using body plethysmography",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Inspiratory Capacity 1 Hour Post-dose After 6 Weeks",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Total Lung Capacity 30 Minutes Pre-dose After 6 Weeks",
+     "description": "Measured using body plethysmography",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Total Lung Capacity 1 Hour Post-dose After 6 Weeks",
+     "description": "Measured using body plethysmography",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Forced Expiratory Volume in 1 Second, 30 Minutes Pre-dose After 6 Weeks",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Forced Expiratory Volume in 1 Second, 1 Hour Post-dose After 6 Weeks",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Forced Vital Capacity, 30 Minutes Pre-dose After 6 Weeks",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Forced Vital Capacity, 1 Hour Post-dose After 6 Weeks",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Peak Expiratory Flow Rate, 30 Minutes Pre-dose After 6 Weeks",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Adjusted Mean Peak Expiratory Flow Rate, 1 Hour Post-dose After 6 Weeks",
+     "timeFrame": "6 weeks"
+    },
+    {
+     "measure": "Change From Baseline to Day 43 in Blood Pressure",
+     "description": "Change from Baseline to Day 43 in Blood Pressure with spirometry. Baseline is defined as mean of pre-treatment values at a given time point.",
+     "timeFrame": "Baseline and Week 6"
+    },
+    {
+     "measure": "Change From Baseline to Day 43 in Pulse Rate",
+     "description": "Change from Baseline to Day 43 in Pulse rate with spirometry. Baseline is defined as mean of pre-treatment values at a given time point.",
+     "timeFrame": "Baseline and Week 6"
+    },
+    {
+     "measure": "Number of Patients With Notable Changes in Heart Rate",
+     "description": "Number of Patients with notable changes in heart rate (HR). Notable HR increase defined as \\>=25% increase and on-treatment HR \\> 100 bpm; Notable HR decrease defined as \\>=25% decrease and on-treatment HR \\< 50 bpm.",
+     "timeFrame": "Baseline and Week 6"
+    },
+    {
+     "measure": "Number of Patients With Notable Increase in PR Intervals",
+     "description": "Number of Patients with notable increase in PR intervals. Notable PR interval increase defined as \\>=25% increase and on-treatment PR interval \\> 200 ms.",
+     "timeFrame": "Baseline and Week 6"
+    },
+    {
+     "measure": "Number of Patients With Notable Increase in QRS Intervals",
+     "description": "Number of Patients with notable increase in QRS intervals. Notable QRS interval increase defined as \\>=10% increase and on-treatment QRS interval \\> 110 ms.",
+     "timeFrame": "Baseline and Week 6"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion criteria:\n\n1. Signed informed consent prior to participation.\n2. Diagnosis of chronic obstructive pulmonary disease and post-bronchodilator FEV1(Forced Expiratory Volume in 1 sec) \\<80% of predicted normal and post-bronchodilator FEV1(Forced Expiratory Volume in 1 sec)/FVC of \\< 70% at Visit 1.\n3. Male or female between 40 and 75 years of age.\n4. Current or ex-smokers with smoking history of more than 10-pack years.\n5. Able to perform technically acceptable pulmonary function tests, multiple exercise tests and able to maintain records.\n6. Able to inhale medication in a competent manner from a metered-dose inhaler and Respimat inhaler.\n\nExclusion criteria:\n\n1. Patients with clinically relevant abnormal baseline haematology, blood chemistry, or urinalysis; all patients with an SGOT \\>x2 ULN, SGPT \\>x2 ULN, bilirubin \\>x2 ULN or creatinine \\>x2 ULN.\n2. Patients with a history of asthma and/or total blood eosinophil count of 600 cells/mm3.\n3. Patients with thyrotoxicosis, paroxysmal tachycardia (\\>100 beats per minute).\n4. Patients with a history of myocardial infarction within 1 year of screening visit, unstable or life-threatening cardiac arrhythmia, hospitalization for heart failure within the past year, known active tuberculosis, a malignancy for which patient has undergone resection, radiation therapy or chemotherapy within last five years, life-threatening pulmonary obstruction, cystic fibrosis, clinically evident bronchiectasis, significant alcohol or drug abuse or contraindications to exercise.\n5. Patients who have undergone thoracotomy with pulmonary resection.\n6. Patients being treated with oral beta-adrenergics or oral corticosteroid medication at unstable doses (i.e., less than six weeks on a stable dose) or at doses in excess of the equivalent of 10 mg of prednisone per day or 20 mg every other day.\n7. Patients who regularly use daytime oxygen for more than one hour per day.\n8. Patients who have completed a pulmonary rehabilitation program in the six weeks prior to the screening visit or patients who are currently in a pulmonary rehabilitation program.\n9. Patients who have a limitation of exercise performance as a result of factors other than fatigue or exertional dyspnea.\n10. Pregnant or nursing women.\n11. Women of childbearing potential not using two effective methods of birth control (one barrier and one non-barrier).",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "75 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Boehringer Ingelheim",
+     "affiliation": "Boehringer Ingelheim",
+     "role": "STUDY_CHAIR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "1222.38.4380 Boehringer Ingelheim Investigational Site",
+     "city": "Hallein",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 47.68333,
+      "lon": 13.1
+     }
+    },
+    {
+     "facility": "1222.38.4381 Boehringer Ingelheim Investigational Site",
+     "city": "Leoben",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 47.379,
+      "lon": 15.094
+     }
+    },
+    {
+     "facility": "1222.38.32004 Boehringer Ingelheim Investigational Site",
+     "city": "Brussels",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.85045,
+      "lon": 4.34878
+     }
+    },
+    {
+     "facility": "1222.38.32002 Boehringer Ingelheim Investigational Site",
+     "city": "Edegem",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.15662,
+      "lon": 4.44504
+     }
+    },
+    {
+     "facility": "1222.38.32001 Boehringer Ingelheim Investigational Site",
+     "city": "Leuven",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.87959,
+      "lon": 4.70093
+     }
+    },
+    {
+     "facility": "1222.38.32003 Boehringer Ingelheim Investigational Site",
+     "city": "Liège",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.63373,
+      "lon": 5.56749
+     }
+    },
+    {
+     "facility": "1222.38.1082 Boehringer Ingelheim Investigational Site",
+     "city": "Vancouver",
+     "state": "British Columbia",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 49.24966,
+      "lon": -123.11934
+     }
+    },
+    {
+     "facility": "1222.38.1081 Boehringer Ingelheim Investigational Site",
+     "city": "Hamilton",
+     "state": "Ontario",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.25011,
+      "lon": -79.84963
+     }
+    },
+    {
+     "facility": "1222.38.1083 Boehringer Ingelheim Investigational Site",
+     "city": "Toronto",
+     "state": "Ontario",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.70643,
+      "lon": -79.39864
+     }
+    },
+    {
+     "facility": "1222.38.1080 Boehringer Ingelheim Investigational Site",
+     "city": "Montreal",
+     "state": "Quebec",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.50884,
+      "lon": -73.58781
+     }
+    },
+    {
+     "facility": "1222.38.4980 Boehringer Ingelheim Investigational Site",
+     "city": "Berlin",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "1222.38.4985 Boehringer Ingelheim Investigational Site",
+     "city": "Cologne",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.93333,
+      "lon": 6.95
+     }
+    },
+    {
+     "facility": "1222.38.4983 Boehringer Ingelheim Investigational Site",
+     "city": "Dortmund",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.51494,
+      "lon": 7.466
+     }
+    },
+    {
+     "facility": "1222.38.4984 Boehringer Ingelheim Investigational Site",
+     "city": "Großhansdorf",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.66528,
+      "lon": 10.28552
+     }
+    },
+    {
+     "facility": "1222.38.4981 Boehringer Ingelheim Investigational Site",
+     "city": "Kiel",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 54.32133,
+      "lon": 10.13489
+     }
+    },
+    {
+     "facility": "1222.38.4986 Boehringer Ingelheim Investigational Site",
+     "city": "Koblenz",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.35357,
+      "lon": 7.57883
+     }
+    },
+    {
+     "facility": "1222.38.7080 Boehringer Ingelheim Investigational Site",
+     "city": "Moscow",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 55.75204,
+      "lon": 37.61781
+     }
+    },
+    {
+     "facility": "1222.38.7081 Boehringer Ingelheim Investigational Site",
+     "city": "Moscow",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 55.75204,
+      "lon": 37.61781
+     }
+    },
+    {
+     "facility": "1222.38.7082 Boehringer Ingelheim Investigational Site",
+     "city": "Saint Petersburg",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 59.93863,
+      "lon": 30.31413
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "27383762",
+     "type": "DERIVED",
+     "citation": "Maltais F, Kirsten AM, Hamilton A, De Sousa D, Voss F, Decramer M. Evaluation of the effects of olodaterol on exercise endurance in patients with chronic obstructive pulmonary disease: results from two 6-week crossover studies. Respir Res. 2016 Jul 6;17(1):77. doi: 10.1186/s12931-016-0389-5."
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "This was a randomised, double-blind, placebo-controlled, 3-way crossover trial. The duration of each treatment period was 6 weeks with a 14 day washout period between treatments.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Placebo / Olo 5mcg / Olo 10mcg",
+     "description": "Patients were administered placebo in the first period, Olodaterol 5 mcg qd in the second period and Olodaterol 10 mcg qd in the third period. Olodaterol was administered via the Respimat inhaler."
+    },
+    {
+     "id": "FG001",
+     "title": "Placebo / Olo 10mcg / Olo 5mcg",
+     "description": "Patients were administered placebo in the first period, Olodaterol 10 mcg qd in the second period and Olodaterol 5 mcg qd in the third period. Olodaterol was administered via the Respimat inhaler."
+    },
+    {
+     "id": "FG002",
+     "title": "Olo 5mcg/ Placebo / Olo 10mcg",
+     "description": "Patients were administered Olodaterol 5 mcg qd in the first period, placebo in the second period and Olodaterol 10 mcg qd in the third period. Olodaterol was administered via the Respimat inhaler."
+    },
+    {
+     "id": "FG003",
+     "title": "Olo 5mcg / Olo 10mcg / Placebo",
+     "description": "Patients were administered Olodaterol 5 mcg qd in the first period, Olodaterol 10 mcg qd in the second period and placebo in the third period. Olodaterol was administered via the Respimat inhaler."
+    },
+    {
+     "id": "FG004",
+     "title": "Olo 10mcg / Placebo / Olo 5mcg",
+     "description": "Patients were administered Olodaterol 10 mcg qd in the first period, placebo in the second period and Olodaterol 5 mcg qd in the third period. Olodaterol was administered via the Respimat inhaler."
+    },
+    {
+     "id": "FG005",
+     "title": "Olo 10mcg / Olo 5mcg / Placebo",
+     "description": "Patients were administered Olodaterol 10 mcg qd in the first period, Olodaterol 5 mcg qd in the second period and placebo in the third period. Olodaterol was administered via the Respimat inhaler."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "comment": "Entered and treated",
+         "numSubjects": "26"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "26"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "26"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "26"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "26"
+        },
+        {
+         "groupId": "FG005",
+         "numSubjects": "27"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "20"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "21"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "23"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "22"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "22"
+        },
+        {
+         "groupId": "FG005",
+         "numSubjects": "26"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "6"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "4"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "4"
+        },
+        {
+         "groupId": "FG005",
+         "numSubjects": "1"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG005",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Protocol Violation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG005",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG005",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG005",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Other reasons not listed above",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG005",
+         "numSubjects": "0"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Overall Study",
+     "description": "Total number of patients treated in the study. This was a randomised, double-blind, placebo-controlled, 3-way crossover trial. 151 patients were assigned randomly to one of 3 treatment sequences in which they received each of 3 treatments. The duration of each treatment period was 6 weeks with a 14 day washout period between treatments."
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "157"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "60.6",
+           "spread": "7.7"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "41"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "116"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Adjusted Mean Endurance Time After 6 Weeks",
+     "description": "Primary endpoint was endurance time during constant work rate ergometry to symptom limitation at 75% of maximal work capacity after 6 weeks of treatment. Mixed effects model on log10 transformation data. Adjusted means are back transformed to report as geometric means. Standard errors (SEs) are calculated using the delta method.",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint.",
+     "reportingStatus": "POSTED",
+     "paramType": "GEOMETRIC_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "seconds",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "146"
+        },
+        {
+         "groupId": "OG001",
+         "value": "141"
+        },
+        {
+         "groupId": "OG002",
+         "value": "140"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "354.33",
+           "spread": "12.069"
+          },
+          {
+           "groupId": "OG001",
+           "value": "396.31",
+           "spread": "13.680"
+          },
+          {
+           "groupId": "OG002",
+           "value": "391.45",
+           "spread": "13.566"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0018",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline endurance time and period as fixed and patient as random effect. Means, CI back-transformed.",
+       "paramType": "Ratio to placebo",
+       "paramValue": "1.118",
+       "ciPctValue": "95",
+       "ciLowerLimit": "1.043",
+       "ciUpperLimit": "1.199",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.040",
+       "estimateComment": "Olo 5 mcg divided by Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0052",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline endurance time and period as fixed and patient as random effect. Means, CI back-transformed.",
+       "paramType": "Ratio to placebo",
+       "paramValue": "1.105",
+       "ciPctValue": "95",
+       "ciLowerLimit": "1.030",
+       "ciUpperLimit": "1.184",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.039",
+       "estimateComment": "Olo 10 mcg divided by Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Inspiratory Capacity at Isotime After 6 Weeks",
+     "description": "Isotime is defined as the endurance time of the constant work rate exercise test of shortest duration from Baseline visit, and Week 6 of each of the three treatment periods.",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint. Only patients who have baseline and at least one post-baseline measurement available were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "146"
+        },
+        {
+         "groupId": "OG001",
+         "value": "141"
+        },
+        {
+         "groupId": "OG002",
+         "value": "139"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.162",
+           "spread": "0.039"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.246",
+           "spread": "0.039"
+          },
+          {
+           "groupId": "OG002",
+           "value": "2.328",
+           "spread": "0.039"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0155",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.084",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.016",
+       "ciUpperLimit": "0.152",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.035",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.166",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.098",
+       "ciUpperLimit": "0.234",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.034",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Borg Scale of Breathing Discomfort at Isotime After 6 Weeks",
+     "description": "Isotime is defined as the endurance time of the constant work rate exercise test of shortest duration from Baseline visit, and Week 6 of each of the three treatment periods.\n\nBorg scale rates discomfort with breathing at rest, during exercise and at end-exercise on a scale from 0=Nothing at all to 10=Maximal discomfort.",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Scores on a scale",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "146"
+        },
+        {
+         "groupId": "OG001",
+         "value": "141"
+        },
+        {
+         "groupId": "OG002",
+         "value": "140"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "5.585",
+           "spread": "0.177"
+          },
+          {
+           "groupId": "OG001",
+           "value": "5.250",
+           "spread": "0.180"
+          },
+          {
+           "groupId": "OG002",
+           "value": "5.520",
+           "spread": "0.181"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.1176",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-0.366",
+       "ciPctValue": "95",
+       "ciLowerLimit": "-0.757",
+       "ciUpperLimit": "0.085",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.214",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.7591",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-0.066",
+       "ciPctValue": "95",
+       "ciLowerLimit": "-0.486",
+       "ciUpperLimit": "0.355",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.214",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Inspiratory Capacity at Pre-exercise After 6 Weeks",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint. Only patients who have baseline and at least one post-baseline measurement available were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "146"
+        },
+        {
+         "groupId": "OG001",
+         "value": "141"
+        },
+        {
+         "groupId": "OG002",
+         "value": "138"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.273",
+           "spread": "0.036"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.437",
+           "spread": "0.036"
+          },
+          {
+           "groupId": "OG002",
+           "value": "2.468",
+           "spread": "0.037"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.164",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.094",
+       "ciUpperLimit": "0.234",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.036",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.195",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.125",
+       "ciUpperLimit": "0.265",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.036",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Inspiratory Capacity at End of Exercise After 6 Weeks",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint. Only patients who have baseline and at least one post-baseline measurement available were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "146"
+        },
+        {
+         "groupId": "OG001",
+         "value": "141"
+        },
+        {
+         "groupId": "OG002",
+         "value": "139"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.158",
+           "spread": "0.039"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.236",
+           "spread": "0.040"
+          },
+          {
+           "groupId": "OG002",
+           "value": "2.330",
+           "spread": "0.040"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0245",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.078",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.010",
+       "ciUpperLimit": "0.146",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.034",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.172",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.105",
+       "ciUpperLimit": "0.240",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.034",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Borg Scale of Breathing Discomfort at Pre-exercise After 6 Weeks",
+     "description": "Borg scale rates discomfort with breathing at rest, during exercise and at end-exercise on a scale from 0=Nothing at all to 10=Maximal discomfort.",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Scores on a scale",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "146"
+        },
+        {
+         "groupId": "OG001",
+         "value": "141"
+        },
+        {
+         "groupId": "OG002",
+         "value": "140"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.389",
+           "spread": "0.062"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.315",
+           "spread": "0.063"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.364",
+           "spread": "0.064"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.2897",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-0.074",
+       "ciPctValue": "95",
+       "ciLowerLimit": "-0.211",
+       "ciUpperLimit": "0.063",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.070",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.7199",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-0.025",
+       "ciPctValue": "95",
+       "ciLowerLimit": "-0.162",
+       "ciUpperLimit": "0.112",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.069",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Borg Scale of Breathing Discomfort at End of Exercise After 6 Weeks",
+     "description": "Borg scale rates discomfort with breathing at rest, during exercise and at end-exercise on a scale from 0=Nothing at all to 10=Maximal discomfort.",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Scores on a scale",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "146"
+        },
+        {
+         "groupId": "OG001",
+         "value": "141"
+        },
+        {
+         "groupId": "OG002",
+         "value": "140"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "7.010",
+           "spread": "0.129"
+          },
+          {
+           "groupId": "OG001",
+           "value": "7.101",
+           "spread": "0.131"
+          },
+          {
+           "groupId": "OG002",
+           "value": "7.351",
+           "spread": "0.132"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.5313",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.091",
+       "ciPctValue": "95",
+       "ciLowerLimit": "-0.196",
+       "ciUpperLimit": "0.379",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.146",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0198",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.341",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.055",
+       "ciUpperLimit": "0.628",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.146",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Functional Residual Capacity 30 Minutes Pre-dose After 6 Weeks",
+     "description": "Measured using body plethysmography",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint. Only patients who have baseline and at least one post-baseline measurement available were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "147"
+        },
+        {
+         "groupId": "OG001",
+         "value": "145"
+        },
+        {
+         "groupId": "OG002",
+         "value": "141"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "4.842",
+           "spread": "0.062"
+          },
+          {
+           "groupId": "OG001",
+           "value": "4.757",
+           "spread": "0.063"
+          },
+          {
+           "groupId": "OG002",
+           "value": "4.723",
+           "spread": "0.063"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.1048",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-0.086",
+       "ciPctValue": "95",
+       "ciLowerLimit": "-0.190",
+       "ciUpperLimit": "0.018",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.053",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0246",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-0.120",
+       "ciPctValue": "95",
+       "ciLowerLimit": "-0.224",
+       "ciUpperLimit": "-0.015",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.053",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Functional Residual Capacity 1 Hour Post-dose After 6 Weeks",
+     "description": "Measured using body plethysmography",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint. Only patients who have baseline and at least one post-baseline measurement available were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "147"
+        },
+        {
+         "groupId": "OG001",
+         "value": "145"
+        },
+        {
+         "groupId": "OG002",
+         "value": "141"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "4.770",
+           "spread": "0.065"
+          },
+          {
+           "groupId": "OG001",
+           "value": "4.557",
+           "spread": "0.065"
+          },
+          {
+           "groupId": "OG002",
+           "value": "4.583",
+           "spread": "0.065"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-0.213",
+       "ciPctValue": "95",
+       "ciLowerLimit": "-0.318",
+       "ciUpperLimit": "-0.108",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.053",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0005",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "-0.187",
+       "ciPctValue": "95",
+       "ciLowerLimit": "-0.293",
+       "ciUpperLimit": "-0.082",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.054",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Inspiratory Capacity 30 Minutes Pre-dose After 6 Weeks",
+     "description": "Measured using body plethysmography",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint. Only patients who have baseline and at least one post-baseline measurement available were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "147"
+        },
+        {
+         "groupId": "OG001",
+         "value": "146"
+        },
+        {
+         "groupId": "OG002",
+         "value": "142"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.463",
+           "spread": "0.041"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.613",
+           "spread": "0.041"
+          },
+          {
+           "groupId": "OG002",
+           "value": "2.618",
+           "spread": "0.042"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0002",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.150",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.071",
+       "ciUpperLimit": "0.228",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.040",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.154",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.076",
+       "ciUpperLimit": "0.233",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.040",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Inspiratory Capacity 1 Hour Post-dose After 6 Weeks",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint. Only patients who have baseline and at least one post-baseline measurement available were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "147"
+        },
+        {
+         "groupId": "OG001",
+         "value": "146"
+        },
+        {
+         "groupId": "OG002",
+         "value": "142"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.493",
+           "spread": "0.040"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.725",
+           "spread": "0.040"
+          },
+          {
+           "groupId": "OG002",
+           "value": "2.696",
+           "spread": "0.040"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.232",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.162",
+       "ciUpperLimit": "0.303",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.036",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.203",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.133",
+       "ciUpperLimit": "0.273",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.036",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Total Lung Capacity 30 Minutes Pre-dose After 6 Weeks",
+     "description": "Measured using body plethysmography",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint. Only patients who have baseline and at least one post-baseline measurement available were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "147"
+        },
+        {
+         "groupId": "OG001",
+         "value": "146"
+        },
+        {
+         "groupId": "OG002",
+         "value": "142"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "7.311",
+           "spread": "0.067"
+          },
+          {
+           "groupId": "OG001",
+           "value": "7.368",
+           "spread": "0.067"
+          },
+          {
+           "groupId": "OG002",
+           "value": "7.340",
+           "spread": "0.068"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.3109",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.057",
+       "ciPctValue": "95",
+       "ciLowerLimit": "-0.053",
+       "ciUpperLimit": "0.166",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.056",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.6080",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.029",
+       "ciPctValue": "95",
+       "ciLowerLimit": "-0.081",
+       "ciUpperLimit": "0.138",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.056",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Total Lung Capacity 1 Hour Post-dose After 6 Weeks",
+     "description": "Measured using body plethysmography",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint. Only patients who have baseline and at least one post-baseline measurement available were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "147"
+        },
+        {
+         "groupId": "OG001",
+         "value": "146"
+        },
+        {
+         "groupId": "OG002",
+         "value": "142"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "7.262",
+           "spread": "0.069"
+          },
+          {
+           "groupId": "OG001",
+           "value": "7.285",
+           "spread": "0.069"
+          },
+          {
+           "groupId": "OG002",
+           "value": "7.272",
+           "spread": "0.069"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.6809",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.023",
+       "ciPctValue": "95",
+       "ciLowerLimit": "-0.087",
+       "ciUpperLimit": "0.133",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.056",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.8580",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.010",
+       "ciPctValue": "95",
+       "ciLowerLimit": "-0.100",
+       "ciUpperLimit": "0.120",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.056",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Forced Expiratory Volume in 1 Second, 30 Minutes Pre-dose After 6 Weeks",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint. Only patients who have baseline and at least one post-baseline measurement available were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "146"
+        },
+        {
+         "groupId": "OG001",
+         "value": "143"
+        },
+        {
+         "groupId": "OG002",
+         "value": "139"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.520",
+           "spread": "0.024"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.630",
+           "spread": "0.025"
+          },
+          {
+           "groupId": "OG002",
+           "value": "1.630",
+           "spread": "0.025"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.110",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.073",
+       "ciUpperLimit": "0.148",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.110",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.073",
+       "ciUpperLimit": "0.148",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.019",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Forced Expiratory Volume in 1 Second, 1 Hour Post-dose After 6 Weeks",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint. Only patients who have baseline and at least one post-baseline measurement available were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "146"
+        },
+        {
+         "groupId": "OG001",
+         "value": "143"
+        },
+        {
+         "groupId": "OG002",
+         "value": "139"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.577",
+           "spread": "0.026"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.768",
+           "spread": "0.026"
+          },
+          {
+           "groupId": "OG002",
+           "value": "1.771",
+           "spread": "0.026"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.192",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.151",
+       "ciUpperLimit": "0.233",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.021",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.195",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.153",
+       "ciUpperLimit": "0.236",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.021",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Forced Vital Capacity, 30 Minutes Pre-dose After 6 Weeks",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint. Only patients who have baseline and at least one post-baseline measurement available were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "146"
+        },
+        {
+         "groupId": "OG001",
+         "value": "143"
+        },
+        {
+         "groupId": "OG002",
+         "value": "139"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.103",
+           "spread": "0.039"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.222",
+           "spread": "0.040"
+          },
+          {
+           "groupId": "OG002",
+           "value": "3.222",
+           "spread": "0.040"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0013",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.119",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.047",
+       "ciUpperLimit": "0.191",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.036",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0013",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.119",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.047",
+       "ciUpperLimit": "0.191",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.037",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Forced Vital Capacity, 1 Hour Post-dose After 6 Weeks",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint. Only patients who have baseline and at least one post-baseline measurement available were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "146"
+        },
+        {
+         "groupId": "OG001",
+         "value": "143"
+        },
+        {
+         "groupId": "OG002",
+         "value": "139"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3.144",
+           "spread": "0.039"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.409",
+           "spread": "0.040"
+          },
+          {
+           "groupId": "OG002",
+           "value": "3.425",
+           "spread": "0.040"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.265",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.196",
+       "ciUpperLimit": "0.333",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.035",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.281",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.212",
+       "ciUpperLimit": "0.350",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.035",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Peak Expiratory Flow Rate, 30 Minutes Pre-dose After 6 Weeks",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint. Only patients who have baseline and at least one post-baseline measurement available were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters/second",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "146"
+        },
+        {
+         "groupId": "OG001",
+         "value": "143"
+        },
+        {
+         "groupId": "OG002",
+         "value": "139"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "4.258",
+           "spread": "0.081"
+          },
+          {
+           "groupId": "OG001",
+           "value": "4.539",
+           "spread": "0.081"
+          },
+          {
+           "groupId": "OG002",
+           "value": "4.549",
+           "spread": "0.082"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.281",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.156",
+       "ciUpperLimit": "0.405",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.063",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.291",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.166",
+       "ciUpperLimit": "0.416",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.063",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Adjusted Mean Peak Expiratory Flow Rate, 1 Hour Post-dose After 6 Weeks",
+     "populationDescription": "Full analysis set (FAS). FAS is defined as all patients that were randomised, received treatment and had baseline data and any evaluable post-dose data for the primary endpoint. Only patients who have baseline and at least one post-baseline measurement available were included in the analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "liters/second",
+     "timeFrame": "6 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg qd",
+       "description": "Olodaterol 5 mcg qd delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg qd",
+       "description": "Olodaterol 10 mcg qd delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "146"
+        },
+        {
+         "groupId": "OG001",
+         "value": "143"
+        },
+        {
+         "groupId": "OG002",
+         "value": "139"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "4.324",
+           "spread": "0.085"
+          },
+          {
+           "groupId": "OG001",
+           "value": "4.904",
+           "spread": "0.085"
+          },
+          {
+           "groupId": "OG002",
+           "value": "4.876",
+           "spread": "0.086"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.580",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.441",
+       "ciUpperLimit": "0.719",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.070",
+       "estimateComment": "Olo 5 mcg minus Placebo"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Mixed effects repeated measures with treatment, baseline and period as fixed and patient as random effect.",
+       "paramType": "Mean Difference (Final Values)",
+       "paramValue": "0.552",
+       "ciPctValue": "95",
+       "ciLowerLimit": "0.412",
+       "ciUpperLimit": "0.691",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.071",
+       "estimateComment": "Olo 10 mcg minus Placebo"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline to Day 43 in Blood Pressure",
+     "description": "Change from Baseline to Day 43 in Blood Pressure with spirometry. Baseline is defined as mean of pre-treatment values at a given time point.",
+     "populationDescription": "Treated set. Statistics only include patients with both a baseline and a post dose value.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "mmHg",
+     "timeFrame": "Baseline and Week 6",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "147"
+        },
+        {
+         "groupId": "OG001",
+         "value": "144"
+        },
+        {
+         "groupId": "OG002",
+         "value": "139"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Systolic blood pressure",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.5",
+           "spread": "15.87"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-1.5",
+           "spread": "15.47"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-1.4",
+           "spread": "15.31"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Diastolic blood pressure",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.8",
+           "spread": "8.95"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-1.8",
+           "spread": "8.35"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-2.2",
+           "spread": "9.5"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline to Day 43 in Pulse Rate",
+     "description": "Change from Baseline to Day 43 in Pulse rate with spirometry. Baseline is defined as mean of pre-treatment values at a given time point.",
+     "populationDescription": "Treated set. Statistics only include patients with both a baseline and a post dose value.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "beats/min",
+     "timeFrame": "Baseline and Week 6",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "147"
+        },
+        {
+         "groupId": "OG001",
+         "value": "144"
+        },
+        {
+         "groupId": "OG002",
+         "value": "139"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-2.3",
+           "spread": "12.33"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-1.8",
+           "spread": "11.69"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-1.6",
+           "spread": "10.36"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Patients With Notable Changes in Heart Rate",
+     "description": "Number of Patients with notable changes in heart rate (HR). Notable HR increase defined as \\>=25% increase and on-treatment HR \\> 100 bpm; Notable HR decrease defined as \\>=25% decrease and on-treatment HR \\< 50 bpm.",
+     "populationDescription": "Treated set.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "percentage of participants",
+     "timeFrame": "Baseline and Week 6",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "147"
+        },
+        {
+         "groupId": "OG001",
+         "value": "143"
+        },
+        {
+         "groupId": "OG002",
+         "value": "140"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "30 min pre-dose: increase",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.7"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.7"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "30 min pre-dose: decrease",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.7"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.4"
+          },
+          {
+           "groupId": "OG002",
+           "value": "2.9"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "30 min pre-dose: no notable change",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "98.6"
+          },
+          {
+           "groupId": "OG001",
+           "value": "97.9"
+          },
+          {
+           "groupId": "OG002",
+           "value": "97.1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "40 min post-dose: increase (N=147,142,140)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "40 min post-dose: decrease (N=147,142,140)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.7"
+          },
+          {
+           "groupId": "OG001",
+           "value": "4.2"
+          },
+          {
+           "groupId": "OG002",
+           "value": "3.6"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "40 min post-dose: no notable change(N=147,142,140)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "99.3"
+          },
+          {
+           "groupId": "OG001",
+           "value": "95.8"
+          },
+          {
+           "groupId": "OG002",
+           "value": "96.4"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Patients With Notable Increase in PR Intervals",
+     "description": "Number of Patients with notable increase in PR intervals. Notable PR interval increase defined as \\>=25% increase and on-treatment PR interval \\> 200 ms.",
+     "populationDescription": "Treated set.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "percentage of participants",
+     "timeFrame": "Baseline and Week 6",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "147"
+        },
+        {
+         "groupId": "OG001",
+         "value": "143"
+        },
+        {
+         "groupId": "OG002",
+         "value": "140"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "30 min pre-dose: increase",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "30 min pre-dose: no increase",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "100.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "100.0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "100.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "40 min post-dose: increase (N=147, 142, 140)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.7"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "40 min post-dose: no increase (N=147, 142, 140)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "99.3"
+          },
+          {
+           "groupId": "OG001",
+           "value": "100.0"
+          },
+          {
+           "groupId": "OG002",
+           "value": "100.0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Patients With Notable Increase in QRS Intervals",
+     "description": "Number of Patients with notable increase in QRS intervals. Notable QRS interval increase defined as \\>=10% increase and on-treatment QRS interval \\> 110 ms.",
+     "populationDescription": "Treated set.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "percentage of participants",
+     "timeFrame": "Baseline and Week 6",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Matching Placebo delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG001",
+       "title": "Olo 5 mcg",
+       "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler."
+      },
+      {
+       "id": "OG002",
+       "title": "Olo 10 mcg",
+       "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "147"
+        },
+        {
+         "groupId": "OG001",
+         "value": "143"
+        },
+        {
+         "groupId": "OG002",
+         "value": "140"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "30 min pre-dose: increase",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.7"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.7"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.7"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "30 min pre-dose: no increase",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "99.3"
+          },
+          {
+           "groupId": "OG001",
+           "value": "99.3"
+          },
+          {
+           "groupId": "OG002",
+           "value": "99.3"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "40 min post-dose: increase (N=147, 142, 140)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.4"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.7"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.7"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "40 min post-dose: no increase (N=147, 142, 140)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "98.6"
+          },
+          {
+           "groupId": "OG001",
+           "value": "99.3"
+          },
+          {
+           "groupId": "OG002",
+           "value": "99.3"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "6 weeks",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Placebo",
+     "description": "Matching Placebo delivered by the Respimat resp. Aerolizer Inhaler.",
+     "seriousNumAffected": 3,
+     "seriousNumAtRisk": 149,
+     "otherNumAffected": 9,
+     "otherNumAtRisk": 149
+    },
+    {
+     "id": "EG001",
+     "title": "Olo 5 mcg",
+     "description": "Olodaterol 5 mcg qd (morning) delivered by the Respimat Inhaler.",
+     "seriousNumAffected": 8,
+     "seriousNumAtRisk": 150,
+     "otherNumAffected": 8,
+     "otherNumAtRisk": 150
+    },
+    {
+     "id": "EG002",
+     "title": "Olo 10 mcg",
+     "description": "Olodaterol 10 mcg qd (morning) delivered by the Respimat Inhaler.",
+     "seriousNumAffected": 3,
+     "seriousNumAtRisk": 147,
+     "otherNumAffected": 4,
+     "otherNumAtRisk": 147
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Atrial fibrillation",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 13.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 149
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 150
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 147
+      }
+     ]
+    },
+    {
+     "term": "Mallory-Weiss syndrome",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA 13.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 149
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 150
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 147
+      }
+     ]
+    },
+    {
+     "term": "Death",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA 13.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 149
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 150
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 147
+      }
+     ]
+    },
+    {
+     "term": "Erysipelas",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 13.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 149
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 150
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 147
+      }
+     ]
+    },
+    {
+     "term": "Pyelonephritis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 13.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 149
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 150
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 147
+      }
+     ]
+    },
+    {
+     "term": "Joint injury",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 13.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 149
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 150
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 147
+      }
+     ]
+    },
+    {
+     "term": "Road traffic accident",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 13.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 149
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 150
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 147
+      }
+     ]
+    },
+    {
+     "term": "Intervertebral disc protrusion",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA 13.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 149
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 150
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 147
+      }
+     ]
+    },
+    {
+     "term": "Rotator cuff syndrome",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA 13.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 149
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 150
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 147
+      }
+     ]
+    },
+    {
+     "term": "Prostate cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 13.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 149
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 150
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 147
+      }
+     ]
+    },
+    {
+     "term": "Cerebrovascular accident",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 13.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 149
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 150
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 147
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 13.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 149
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 150
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 147
+      }
+     ]
+    },
+    {
+     "term": "Dyspnoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 13.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 149
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 150
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 147
+      }
+     ]
+    },
+    {
+     "term": "Foreign body aspiration",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 13.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 149
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 150
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 147
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 13.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 9,
+       "numAtRisk": 149
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 8,
+       "numAtRisk": 150
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 4,
+       "numAtRisk": 147
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "Any publication of the result of this trial must be consistent with the Boehringer Ingelheim publication policy. The rights of the investigator and of the sponsor with regard to publication"
+   },
+   "pointOfContact": {
+    "title": "Boehringer Ingelheim Call Center",
+    "organization": "Boehringer Ingelheim Pharmaceuticals",
+    "email": "clintriage.rdg@boehringer-ingelheim.com",
+    "phone": "1-800-243-0127"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C549647",
+     "term": "olodaterol"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

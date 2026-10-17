@@ -1,0 +1,294 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT07828353",
+   "orgStudyIdInfo": {
+    "id": "REGEND001-COPD-251"
+   },
+   "organization": {
+    "fullName": "Regend Therapeutics",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "A Clinical Study of REGEND001 for the Treatment of Chronic Obstructive Pulmonary Disease (COPD)",
+   "officialTitle": "A Multicenter, Randomized, Blinded, Placebo-Controlled Confirmatory Clinical Trial of Autologous REGEND001 Cell Therapy for the Treatment of Chronic Obstructive Pulmonary Disease (COPD)"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-09",
+   "overallStatus": "NOT_YET_RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2026-10",
+    "type": "ESTIMATED"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2028-09",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2028-09",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2026-09-14",
+   "studyFirstSubmitQcDate": "2026-09-14",
+   "studyFirstPostDateStruct": {
+    "date": "2026-09-18",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-09-21",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-09-24",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Regend Therapeutics",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "Chronic obstructive pulmonary disease (COPD) is a common, progressive, and heterogeneous respiratory disorder. It is associated with substantial morbidity and mortality worldwide, leading to progressive decline in lung function, impaired quality of life, and a significant healthcare burden. REGEND001, made from airway basal stem cells with ability to regenerate lung tissue, is promising to COPD treatment. In this study, a multicenter, randomized, blinded, placebo-parallel-controlled trial is performed to verify the efficacy and safety of REGEND001 in treatment of COPD patients with emphysema."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "COPD (Chronic Obstructive Pulmonary Disease)"
+   ],
+   "keywords": [
+    "airway basal stem cells",
+    "regenerative medicine",
+    "COPD"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 102,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Participants randomized to the Placebo Comparator arm will receive a single administration of placebo.",
+     "interventionNames": [
+      "Biological: Placebo"
+     ]
+    },
+    {
+     "label": "REGEND001",
+     "type": "EXPERIMENTAL",
+     "description": "Participants randomized to the experimental arm will receive a single administration of REGEND001.",
+     "interventionNames": [
+      "Biological: REGEND001"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "BIOLOGICAL",
+     "name": "Placebo",
+     "description": "Participants enrolled will have a bronchoscopy with brushing for cell collection, followed by a single adiministratoin of placebo via bronchoscopy and 1 year of follow-up.",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    },
+    {
+     "type": "BIOLOGICAL",
+     "name": "REGEND001",
+     "description": "Participants enrolled will have a bronchoscopy with brushing for cell collection, followed by a single adiministratoin of REGEND001 via bronchoscopy and 1 year of follow-up.",
+     "armGroupLabels": [
+      "REGEND001"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Change from baseline in the measured Diffusing Capacity of the Lung for Carbon Monoxide (DLCO）",
+     "description": "The change from baseline in measured DLCO is defined as the difference between the absolute measured DLCO value at baseline and that measured at the assessment time point after treatment.",
+     "timeFrame": "Week 52 after treatment"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Change from baseline in COPD Assessment Test (CAT) score",
+     "description": "The COPD Assessment Test (CAT) is an 8-item questionnaire used to assess the impact of COPD on health status. The total score ranges from 0 to 40, with higher scores indicating a greater impact of COPD and worse health status. Change from baseline is calculated as the post-treatment CAT score minus the baseline CAT score.",
+     "timeFrame": "Week 12, 24 and 52 after treatment"
+    },
+    {
+     "measure": "Proportion of subjects with a ≥2-point improvement or worsening from baseline in CAT score",
+     "description": "Minimal clinically important difference for CAT is recognized as 2 points.",
+     "timeFrame": "Week 12, 24 and 52 after treatment"
+    },
+    {
+     "measure": "Change from baseline in DLCO",
+     "description": "DLCO is assessed by absolute measured value, hemoglobin (Hb)-corrected measured/predicted ratios and corresponding area under curve (AUC).",
+     "timeFrame": "Week 12, 24 and 52 after treatment"
+    },
+    {
+     "measure": "Proportion of subjects with a ≥11% relative improvement or worsening from baseline in absolute measured DLCO",
+     "description": "Minimal clinically important difference (MCID) of DLCO is recognized as 11%.",
+     "timeFrame": "Week 12, 24 and 52 after treatment"
+    },
+    {
+     "measure": "Change from baseline in alveolar volume (VA)",
+     "description": "VA is assessed by measured values, measured/predicted ratio and corresponding area under curve (AUC).",
+     "timeFrame": "Week 12, 24 and 52 after treatment"
+    },
+    {
+     "measure": "Change from baseline in forced expiratory volume in the first second (FEV1) post-bronchodilator",
+     "description": "FEV1 is assessed by measured value, measured/predicted ratio and corresponding area under curve (AUC).",
+     "timeFrame": "Week 12, 24 and 52 after treatment"
+    },
+    {
+     "measure": "Change from baseline in 6-minute walk distance (6MWD)",
+     "description": "6MWD is assessed by the measured value and corresponding area under curve",
+     "timeFrame": "Week 12, 24 and 52 after treatment"
+    },
+    {
+     "measure": "Proportion of subjects with a ≥30-meter change from baseline in 6MWD",
+     "description": "Minimal clinically important difference (MCID) of 6MWD is recognized as 30 meters.",
+     "timeFrame": "Week 12, 24 and 52 after treatment"
+    },
+    {
+     "measure": "Change from baseline in St. George's Respiratory Questionnaire for COPD (SGRQ-C) score",
+     "description": "The St. George's Respiratory Questionnaire for COPD (SGRQ-C) is a validated disease-specific patient-reported outcome measure used to assess the impact of COPD on patients' health status and quality of life. Total score, ranged from 0 to 100, is the sum of points from all items. A higher value represents a worse outcome.",
+     "timeFrame": "Week 12, 24 and 52 after treatment"
+    },
+    {
+     "measure": "Proportion of subjects with a ≥4-point improvement or worsening from baseline in SGRQ-C score",
+     "description": "Minimal clinically important difference for SGRQ is recognized as 4 points.",
+     "timeFrame": "Week 12, 24 and 52 after treatment"
+    },
+    {
+     "measure": "Annualized rate of COPD exacerbations (AECOPD), adjusted for prior exacerbation history and baseline characteristics",
+     "description": "The annualized rate of COPD exacerbations (AECOPD), adjusted for prior exacerbation history and baseline characteristics, represents the adjusted frequency of acute exacerbations of COPD over the assessment period.",
+     "timeFrame": "Week 52 after treatment"
+    },
+    {
+     "measure": "Change from baseline in arterial blood gas parameters",
+     "description": "The change from baseline in arterial blood gas parameters reflects changes in gas exchange function and respiratory status over the assessment period.",
+     "timeFrame": "Week 52 after treatment"
+    },
+    {
+     "measure": "Change from baseline in HRCT images",
+     "description": "HRCT images are quantitatively analyzed using dedicated software to measure emphysema volume (mL) and functional lung volume (mL).",
+     "timeFrame": "Week 52 after treatment"
+    },
+    {
+     "measure": "Adverse Event",
+     "description": "An adverse event (AE) is any untoward medical occurrence in a subject who has received a study intervention, regardless of whether or not it is considered related to the intervention.",
+     "timeFrame": "Hour 24, Week 12, 24 and 52 after treatment"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Male or female, aged 40-75 years；\n* Diagnosed with COPD;\n* Post-bronchodilator FEV1/FVC \\<0.7\n* Emphysematous lesions demonstrated by HRCT;\n* Hemoglobin-corrected DLCO%predicted ≥20% and \\<70%;\n* Post-bronchodilator FEV1%predicted ≤80%;\n* COPD Assessment Test (CAT) score ≥3;\n\nExclusion Criteria:\n\n* History of ≥2 COPD exacerbations leading to hospitalization within 1 year prior to screening, or a COPD exacerbation leading to hospitalization within 2 months prior to screening;\n* Current or previous history of malignancy;\n* An assessed life expectancy of \\<1 year;\n* Respiratory tract infection or systemic infection requiring treatment, or severe localized infection within 4 weeks prior to screening;\n* History of invasive or non-invasive mechanical ventilation within 4 weeks prior to screening;\n* Diagnosis of pneumonia within 3 months prior to screening;\n* Abnormal coagulation function affecting the safety of fiberoptic bronchoscopy procedures at screening;\n* Subjects requiring long-term maintenance anticoagulant therapy or antiplatelet therapy, who are unable to discontinue such medications for at least 1 week prior to cell collection and cell infusion;",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "75 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Shiyue Li, Professor and Chief Physician",
+     "role": "CONTACT",
+     "phone": "86-20-83062114",
+     "email": "lishiyue@188.com"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "The First Affiliated Hospital of Guangzhou Medical University",
+     "city": "Guangzhou",
+     "state": "Guangdong",
+     "country": "China",
+     "geoPoint": {
+      "lat": 23.11667,
+      "lon": 113.25
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

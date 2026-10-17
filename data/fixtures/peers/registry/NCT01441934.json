@@ -1,0 +1,482 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01441934",
+   "orgStudyIdInfo": {
+    "id": "ARC209"
+   },
+   "organization": {
+    "fullName": "Italian Association of Hospital Pneumologists",
+    "class": "OTHER"
+   },
+   "briefTitle": "SPHERIC-1. Sildenafil and Pulmonary HypERtension In COPD",
+   "officialTitle": "A Multicenter, Randomized, Double-blind, Placebo-controlled Study Evaluating the Effect of Sildenafil in the Treatment of Patients With Pulmonary Hypertension Associated to Chronic Obstructive Lung Disease",
+   "acronym": "SPHERIC-1"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2013-02",
+   "overallStatus": "UNKNOWN",
+   "lastKnownStatus": "RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2010-10"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2013-02",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2013-02",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2011-07-29",
+   "studyFirstSubmitQcDate": "2011-09-27",
+   "studyFirstPostDateStruct": {
+    "date": "2011-09-28",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2013-02-01",
+   "lastUpdatePostDateStruct": {
+    "date": "2013-02-04",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "PRINCIPAL_INVESTIGATOR",
+    "investigatorFullName": "Dr. Patrizio Vitulo",
+    "investigatorTitle": "Head of Pulmonary Medicine",
+    "investigatorAffiliation": "The Mediterranean Institute for Transplantation and Advanced Specialized Therapies"
+   },
+   "leadSponsor": {
+    "name": "Italian Association of Hospital Pneumologists",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "Although pulmonary hypertension (PH) is a quite frequent complication of advanced pulmonary diseases, and it is an independent prognostic factor, until now no evidence-based treatment approach exists for those patients.\n\nThis study will address if the drug sildenafil can lower pulmonary vascular resistance in patients with significant pulmonary hypertension (high blood pressure in the lungs) associated to chronic obstructive pulmonary disease (COPD). It will see if this treatment can improve effort capacity, quality of life without causing a deterioration in pulmonary gas exchange (mainly arterial oxygenation).\n\nPatients 18 years of age and older with moderate COPD and pulmonary hypertension (mean pulmonary arterial pressure \\>30 mmHg) may be eligible for this study. Participants are randomly assigned to receive sildenafil or placebo (pill with no drug) for 16 weeks.\n\nBefore starting treatment (baseline), and a the end of the study, the patients have a comprehensive assessment including:\n\n* a chest x-ray and CT scan (only at baseline);\n* pulmonary function tests to measure how much air the patient can breathe in and out, and the capacity of diffusion of gases;\n* arterial blood gases analysis (for safety reason this examination is performed at baseline, before the randomization after one hour from the administration of a tablet (20 mg) of sildenafil, and every month)\n* an echocardiogram (heart ultrasound) (only at baseline);\n* a 6-minute walk test to measure exercise capacity;\n* a quality-of-life assessment (SF-36 questionnaire)\n* a right heart catheterization to evaluate the severity of hypertension\n\nAt the end of the 16-week period, patients may opt to continue to receive sildenafil and monitoring in an open-label phase of the study for up to 1 year."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Hypertension",
+    "COPD"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 32,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Sildenafil citrate",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "20 mg t.i.d.",
+     "interventionNames": [
+      "Drug: Sildenafil citrate"
+     ]
+    },
+    {
+     "label": "Sugar pill",
+     "type": "PLACEBO_COMPARATOR",
+     "interventionNames": [
+      "Drug: Sugar pills"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Sildenafil citrate",
+     "description": "sildenafil 20 mg t.i.d. compared to placebo 20 mg t.i.d - 16 weeks treatment",
+     "armGroupLabels": [
+      "Sildenafil citrate"
+     ],
+     "otherNames": [
+      "Revatio"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Sugar pills",
+     "description": "placebo t.i.d.",
+     "armGroupLabels": [
+      "Sugar pill"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Pulmonary vascular resistance (PVR)",
+     "description": "PVR are measured by right cath study as the following formula:\n\nPVR= (mean pulmonary arterial pressure-pulmonary arterial wedge pressure)/cardiac output",
+     "timeFrame": "16 weeks"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Arterial blood gas analysis",
+     "timeFrame": "16 Weeks"
+    },
+    {
+     "measure": "Pulmonary function - Borg scale",
+     "description": "The dyspnea is assessed by an analogic scale from 0 (no dyspnea) to 10 (very severe dyspnea)",
+     "timeFrame": "16 Weeks"
+    },
+    {
+     "measure": "Pulmonary function - Bode Index",
+     "description": "The BODE Index is a composite marker of disease taking into consideration the systemic nature of COPD: FEV1% pred = predicted amount as a percentage of the forced expiratory lung volume in one second; 6MWD = six minute walking distance; MMRC = modified medical research council dyspnea scale; BMI = body mass index.",
+     "timeFrame": "16 Weeks"
+    },
+    {
+     "measure": "Functional capacity - Quality of Life",
+     "description": "Quality of Life is assessed by a standardized questionnaire (SF-36 questionnaire) at baseline and the end of study",
+     "timeFrame": "16 Weeks"
+    },
+    {
+     "measure": "Functional capacity testing - 6 Minutes walking test",
+     "description": "The six-minute walk test is performed in a straight corridor (length 25-30 meters) in the same environmental conditions",
+     "timeFrame": "16 Weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Patient affected by stable COPD under optimal treatment, chronic oxygen therapy in patients with hypoxia, with PaO2 at rest ≥ 60 mmHg and PaCO2≤ 55 mmHg, aged between 18 and 80 years old:\n* Group 1: BPCO GOLD I-III (post bronchodilator FEV1 ≥ 30%, FEV1/FVC ≤ 0,7 , TLC ≥ 70%) + PAPm ≥ 30 mmHg and PCP \\<15 mmHg\n* Group 2: BPCO GOLD IV (post bronchodilator FEV1 \\<30%, FEV1/FVC ≤ 0,7 , TLC ≥ 70%) + PAPm ≥ 35 mmHg and PCP \\<15 mmHg\n\nExclusion Criteria:\n\n* Different types of pulmonary hypertension (chronic, thromboembolic pulmonary hypertension, pulmonary arterial hypertension etc.)\n* Significant left cardiac disease (LVEF \\<45%, cardiomyopathy, valvulopathy, unstable coronaropathy)\n* Treatment with nitrates in the last 10 days, or in need of other nitrate therapy for different diseases\n* Treatment with other specific drugs for arterial pulmonary hypertension (less than 4 weeks)\n* Significant systemic disease other than COPD\n* Recent exacerbations of chronic bronchitis (\\< 4 weeks)\n* Pregnancy or breastfeeding, or women without an adequate contraceptive method for the whole study duration\n* History of anaphylaxis or allergic reactions to 5-phosphodiesterase inhibitors\n* Cancers within the last 5 years with the exception of localized cancers of the skin or of the cervix\n* Hepatic insufficiency or chronic renal failure or hemoglobinemia \\< 10 g/dL during the screening phase\n* Contraindications to subministration as per SPC\n* Mental disorder, alcohol abuse, chronic alcoholism, drug abuse\n* Subjects unable to sign the informed consent form\n* Subjects unable to walk",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Patrizio Vitulo, MD",
+     "affiliation": "Dept. of Medicine - Pulmonary Medicine - IsMeTT Palermo, Italy",
+     "role": "STUDY_CHAIR"
+    },
+    {
+     "name": "Carmine D. Vizza, MD",
+     "affiliation": "Pulmonary Hypertension Center - Dept. of Cardiovascular and Respiratory Sciences - I° School of Medicine - Sapienza University of Rome (Italy)",
+     "role": "STUDY_CHAIR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Pulmonary Unit - Azienda Ospedaliera Ospedale Niguarda Ca' Granda",
+     "status": "ACTIVE_NOT_RECRUITING",
+     "city": "Milan",
+     "state": "Milano",
+     "zip": "20162",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 42.78235,
+      "lon": 12.59836
+     }
+    },
+    {
+     "facility": "Pulmonary Diseases Clinic - Azienda Ospedaliera Universitaria - Policlinico di Modena",
+     "status": "ACTIVE_NOT_RECRUITING",
+     "city": "Modena",
+     "state": "Modena",
+     "zip": "41100",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 44.64783,
+      "lon": 10.92539
+     }
+    },
+    {
+     "facility": "Pulmonary Clinic - Federico II University - Azienda Ospedaliera V. Monaldi",
+     "status": "RECRUITING",
+     "city": "Naples",
+     "state": "Napoli",
+     "zip": "80131",
+     "country": "Italy",
+     "contacts": [
+      {
+       "name": "Matteo Sofia, MD",
+       "role": "CONTACT",
+       "email": "matteo.sofia@unina.it"
+      }
+     ],
+     "geoPoint": {
+      "lat": 40.85216,
+      "lon": 14.26811
+     }
+    },
+    {
+     "facility": "Thoracic Surgery Clinic - Azienda Ospedaliera di Padova",
+     "status": "ACTIVE_NOT_RECRUITING",
+     "city": "Padova",
+     "state": "Padova",
+     "zip": "35128",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 44.38225,
+      "lon": 11.14261
+     }
+    },
+    {
+     "facility": "Dept. of Medicine - Pulmonary Medicine - IsMeTT",
+     "status": "RECRUITING",
+     "city": "Palermo",
+     "state": "Palermo",
+     "zip": "90127",
+     "country": "Italy",
+     "contacts": [
+      {
+       "name": "Patrizio Vitulo, MD",
+       "role": "CONTACT",
+       "phone": "00390912192111",
+       "email": "pvitulo@ismett.edu"
+      }
+     ],
+     "geoPoint": {
+      "lat": 38.1166,
+      "lon": 13.3636
+     }
+    },
+    {
+     "facility": "Pulmonary Diseases Clinic - Fondazione IRCCS Policlinico San Matteo",
+     "status": "RECRUITING",
+     "city": "Pavia",
+     "state": "Pavia",
+     "zip": "27100",
+     "country": "Italy",
+     "contacts": [
+      {
+       "name": "Tiberio Oggionni, MD",
+       "role": "CONTACT",
+       "email": "t.oggionni@smatteo.pv.it"
+      }
+     ],
+     "geoPoint": {
+      "lat": 45.19205,
+      "lon": 9.15917
+     }
+    },
+    {
+     "facility": "Pulmonary Hypertension Center - Policlinico Umberto I",
+     "status": "RECRUITING",
+     "city": "Rome",
+     "state": "Rome",
+     "zip": "00161",
+     "country": "Italy",
+     "contacts": [
+      {
+       "name": "Carmime D. Vizza, MD",
+       "role": "CONTACT",
+       "phone": "00390649979051",
+       "email": "dario.vizza@uniroma1.it"
+      }
+     ],
+     "geoPoint": {
+      "lat": 41.89193,
+      "lon": 12.51133
+     }
+    },
+    {
+     "facility": "University Pulmonary Unit - Azienda Ospedaliera Universitaria Senese",
+     "status": "RECRUITING",
+     "city": "Siena",
+     "state": "Siena",
+     "zip": "53100",
+     "country": "Italy",
+     "contacts": [
+      {
+       "name": "Paola Rottoli, MD",
+       "role": "CONTACT",
+       "email": "rottoli@unisi.it"
+      }
+     ],
+     "geoPoint": {
+      "lat": 43.31822,
+      "lon": 11.33064
+     }
+    },
+    {
+     "facility": "Pulmonary Unit - Azienda Ospedaliera Universitaria San Giovanni Battista",
+     "status": "RECRUITING",
+     "city": "Torino",
+     "state": "Torino",
+     "zip": "10143",
+     "country": "Italy",
+     "contacts": [
+      {
+       "name": "Daniela Libertucci, MD",
+       "role": "CONTACT",
+       "email": "dlibertucci@molinette.piemonte.it"
+      }
+     ],
+     "geoPoint": {
+      "lat": 44.88856,
+      "lon": 11.99138
+     }
+    },
+    {
+     "facility": "Pulmonary Unit - Azienda Ospedaliera Universitaria Ospedali Riuniti di Trieste",
+     "status": "RECRUITING",
+     "city": "Trieste",
+     "state": "Trieste",
+     "zip": "34100",
+     "country": "Italy",
+     "contacts": [
+      {
+       "name": "Marco Confalonieri, MD",
+       "role": "CONTACT",
+       "email": "marco.confalonieri@aots.sanita.fvg.it"
+      }
+     ],
+     "geoPoint": {
+      "lat": 45.64953,
+      "lon": 13.77678
+     }
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D006976",
+     "term": "Hypertension, Pulmonary"
+    },
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D006973",
+     "term": "Hypertension"
+    },
+    {
+     "id": "D014652",
+     "term": "Vascular Diseases"
+    },
+    {
+     "id": "D002318",
+     "term": "Cardiovascular Diseases"
+    },
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D000068677",
+     "term": "Sildenafil Citrate"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D013449",
+     "term": "Sulfonamides"
+    },
+    {
+     "id": "D000577",
+     "term": "Amides"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D013450",
+     "term": "Sulfones"
+    },
+    {
+     "id": "D013457",
+     "term": "Sulfur Compounds"
+    },
+    {
+     "id": "D010879",
+     "term": "Piperazines"
+    },
+    {
+     "id": "D006573",
+     "term": "Heterocyclic Compounds, 1-Ring"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D011687",
+     "term": "Purines"
+    },
+    {
+     "id": "D006574",
+     "term": "Heterocyclic Compounds, 2-Ring"
+    },
+    {
+     "id": "D000072471",
+     "term": "Heterocyclic Compounds, Fused-Ring"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

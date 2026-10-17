@@ -1,0 +1,310 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT07874815",
+   "orgStudyIdInfo": {
+    "id": "5884-031"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2026-526255-61-00",
+     "type": "REGISTRY",
+     "domain": "EU CT"
+    },
+    {
+     "id": "U1111-1337-6442",
+     "type": "REGISTRY",
+     "domain": "UTN"
+    },
+    {
+     "id": "MK-5884-031",
+     "type": "OTHER",
+     "domain": "MSD"
+    },
+    {
+     "id": "RPL554",
+     "type": "OTHER",
+     "domain": "Verona"
+    }
+   ],
+   "organization": {
+    "fullName": "Merck Sharp & Dohme LLC",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Ensifentrine (MK-5884) Study for the Prevention of Chronic Obstructive Pulmonary Disease (COPD) Exacerbations in Adults With a History of Moderate or Severe Exacerbations While Receiving Standard of Care (SOC) (MK-5884-031/RPL554/ENHANCE-3)",
+   "officialTitle": "A Phase 3, Randomized, Double-Blind, Placebo-Controlled Study to Evaluate the Efficacy and Safety of Ensifentrine (MK-5884) Versus Placebo for the Prevention of COPD Exacerbations in Adults With a History of Moderate or Severe Exacerbations While Receiving Standard of Care (ENHANCE-3)",
+   "acronym": "ENHANCE-3"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-10",
+   "overallStatus": "NOT_YET_RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2026-10-23",
+    "type": "ESTIMATED"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2029-04-29",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2029-04-29",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2026-09-30",
+   "studyFirstSubmitQcDate": "2026-10-08",
+   "studyFirstPostDateStruct": {
+    "date": "2026-10-15",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-10-08",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-10-15",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Merck Sharp & Dohme LLC",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The purpose of this study is to evaluate the efficacy and safety of ensifentrine (MK-5884) compared with placebo for the prevention of moderate and severe COPD exacerbation in adults with COPD and a history of exacerbations while receiving SOC treatment. The study will also evaluate the efficacy of ensifentrine compared with placebo in improving lung function, improving health related quality of life, and preventing severe exacerbations."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 2136,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Ensifentrine",
+     "type": "EXPERIMENTAL",
+     "description": "Participants, who meet the criteria of being on standard of care (SOC) background treatment receive ensifentrine twice a day (bid) by oral inhalation via a standard jet nebulizer for up to 52 weeks.",
+     "interventionNames": [
+      "Drug: Ensifentrine",
+      "Drug: Standard of Care (SOC)"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Participants, who meet the criteria of being on SOC background treatment receive placebo bid by oral inhalation via a standard jet nebulizer for up to 52 weeks.",
+     "interventionNames": [
+      "Other: Placebo",
+      "Drug: Standard of Care (SOC)"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Ensifentrine",
+     "description": "Delivered twice daily by oral inhalation via a standard jet nebulizer",
+     "armGroupLabels": [
+      "Ensifentrine"
+     ],
+     "otherNames": [
+      "MK-5884",
+      "RPL554"
+     ]
+    },
+    {
+     "type": "OTHER",
+     "name": "Placebo",
+     "description": "Placebo matched to ensifentrine delivered twice daily by oral inhalation via a standard jet nebulizer",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Standard of Care (SOC)",
+     "description": "Background treatment of LAMA/LABA/ICS or LAMA/LABA (if ICS is not appropriate) administered per product approved label delivered by oral inhalation as part of standard of care",
+     "armGroupLabels": [
+      "Ensifentrine",
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Annualized Rate of Adjudicated Moderate or Severe Chronic Obstructive Pulmonary Disease (COPD) Exacerbations",
+     "description": "The annualized rate of moderate or severe exacerbations over 52 weeks will be reported.",
+     "timeFrame": "Up to 52 Weeks"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Change From Baseline in Forced Expiratory Volume in One Second Area Under the Curve From 0-4 Hours (FEV1 AUC0-4h)",
+     "description": "FEV1 measures the volume of air exhaled during the first second of a forced exhalation maneuver from the point of maximal inspiration. FEV1 AUC0-4h represents the bronchodilator response over the 4-hour period following administration of study intervention. Spirometry will be performed to determine the FEV1. Change from baseline in average FEV1 AUC0-4h on Week 12 will be reported.",
+     "timeFrame": "Baseline and Week 12"
+    },
+    {
+     "measure": "Change From Baseline in St. George's Respiratory Questionnaire (SGRQ) Total Score Responder Status",
+     "description": "The SGRQ is a 50-item patient-reported outcome (PRO) questionnaire used to evaluate health-related quality of life (HRQOL) in patients with COPD. The questionnaire contains 3 domains: Symptoms (frequency and severity of respiratory symptoms), Activity (effect of disease on common daily physical activities), and Impacts (psychological effects of the disease). The recall period of the questionnaire is over the past 4 weeks. The total score ranges from 0 to 100, with lower scores indicating better health status. A clinically meaningful improvement in HRQOL, as measured by the SGRQ, is defined as a ≥4.0-point decrease in SGRQ total score. HRQOL, as measured by the percentage of SGRQ responders (≥4-point decrease) at Week 24 will be reported.",
+     "timeFrame": "Baseline and Week 24"
+    },
+    {
+     "measure": "Annualized Rate of Adjudicated Severe COPD Exacerbations",
+     "description": "The annualized rate of adjudicated severe COPD exacerbations over 52 weeks will be reported.",
+     "timeFrame": "Up to 52 Weeks"
+    },
+    {
+     "measure": "Number of Participants with at Least One Adverse Event (AE)",
+     "description": "An AE is any untoward medical occurrence in a subject, temporally associated with the use of the study medication, whether or not considered related to the study medication. Number of participants who experience at least one AE will be reported.",
+     "timeFrame": "Up to 53 weeks"
+    },
+    {
+     "measure": "Number of Participants who Discontinued Study Intervention Due to an Adverse Event",
+     "description": "An AE is any untoward medical occurrence in a subject, temporally associated with the use of the study medication, whether or not considered related to the study medication. Number of participants who discontinue study intervention due to an AE will be reported.",
+     "timeFrame": "Up to 52 Weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\nInclusion Criteria include but are not limited to:\n\n* Has a diagnosis of Chronic Obstructive Pulmonary Disease (COPD) that was made ≥12 months prior to randomization\n* Has been on the stable treatment with the same standard of care (SOC) with long-acting muscarinic antagonist (LAMA)/long-acting beta-2 agonist (LABA)/inhaled corticosteroid (ICS) or LAMA/LABA (if ICS is not appropriate), for at least 2 months prior to Screening\n* Has a documented history of ≥1 moderate or severe COPD exacerbation while on standard of care (SOC) within 1 year of Screening\n* Is a current or former cigarette smoker with a history of cigarette smoking ≥10 packyears at Screening (number of pack-years = \\[number of cigarettes per day/20\\] × number of years smoked \\[e.g., 20 cigarettes per day for 10 years, or 10 cigarettes per day for 20 years\\]). Pipe, cigar, and/or e-cigarette/vape use cannot be used to calculate pack-year history.\n* Has post-bronchodilator forced expiratory volume 1 (FEV1) ≥25% and \\<70% of Predicted Normal Value\n\nExclusion Criteria:\n\nExclusion criteria include but are not limited to:\n\n* Has a history of intubation for respiratory failure within 1 year of Screening\n* Is receiving long-term oxygen therapy defined as \\>15 hours per day\n* Uses chronic bilevel positive airway pressure for treatment of respiratory condition unless for treatment of sleep apnea at a stable pressure for at least 3 months\n* Is currently using or has used a biologic therapy (e.g., dupilumab, mepolizumab, or tozorakimab) within 6 months prior to Screening Visit\n* Has history of or current malignancy of any organ system, treated or untreated within the past 5 years, except for localized basal or squamous cell carcinoma of the skin.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Medical Director",
+     "affiliation": "Merck Sharp & Dohme LLC",
+     "role": "STUDY_DIRECTOR"
+    }
+   ]
+  },
+  "referencesModule": {
+   "seeAlsoLinks": [
+    {
+     "label": "Merck Clinical Trials Information",
+     "url": "https://www.merckclinicaltrials.com"
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "YES",
+   "description": "https://trialstransparency.msdclinicaltrials.com/pdf/ProcedureAccessClinicalTrialData.pdf",
+   "url": "https://externaldatasharing-msd.com/"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C512996",
+     "term": "ensifentrine"
+    },
+    {
+     "id": "D059039",
+     "term": "Standard of Care"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D019984",
+     "term": "Quality Indicators, Health Care"
+    },
+    {
+     "id": "D011787",
+     "term": "Quality of Health Care"
+    },
+    {
+     "id": "D006298",
+     "term": "Health Services Administration"
+    },
+    {
+     "id": "D017530",
+     "term": "Health Care Quality, Access, and Evaluation"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

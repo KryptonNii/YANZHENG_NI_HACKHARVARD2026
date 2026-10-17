@@ -1,0 +1,319 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT00435760",
+   "orgStudyIdInfo": {
+    "id": "M/34273/24"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2005-005804-17",
+     "type": "EUDRACT_NUMBER"
+    },
+    {
+     "id": "2005",
+     "type": "NIH",
+     "link": "https://reporter.nih.gov/quickSearch/2005"
+    }
+   ],
+   "organization": {
+    "fullName": "AstraZeneca",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Clinical Trial to Assess Rate of Onset of Bronchodilator Action in Severe Stable Chronic Obstructive Pulmonary Disease (COPD) Patients",
+   "officialTitle": "Single Dose, Double-blind, Double-dummy, 3 Period Cross-over, Placebo Controlled Clinical Trial to Assess the Reate of Onset of Action of Inhaled Aclidinium Bromide 200µg Compared to Placebo and Tiotropium 18µg in Patients With Chronic Obstructive Pulmonary Disease (COPD)."
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2016-11",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2007-02"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2007-08",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2007-08",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2007-02-14",
+   "studyFirstSubmitQcDate": "2007-02-14",
+   "studyFirstPostDateStruct": {
+    "date": "2007-02-15",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2016-11-16",
+   "lastUpdatePostDateStruct": {
+    "date": "2016-11-17",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "AstraZeneca",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "This trial evaluates the rate of onset of bronchodilator action of aclidinium bromide compared to placebo and tiotropium in patients with severe COPD after a single dose treatment.",
+   "detailedDescription": "This is a single dose, randomised, double-blind, double-dummy, 3 period cross-over, placebo controlled, multinational, multicentre trial."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ],
+   "keywords": [
+    "COPD"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "CROSSOVER",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 115,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Tiotropium",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "1 puff, 1 day treatment",
+     "interventionNames": [
+      "Drug: Tiotropium"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Tiotropium or Aclidinium Placebo, 1 day treatment",
+     "interventionNames": [
+      "Drug: Placebo Tiotropium",
+      "Drug: Placebo LAS34273"
+     ]
+    },
+    {
+     "label": "Aclidinium bromide",
+     "type": "EXPERIMENTAL",
+     "description": "200 micrograms, once daily, 1 day treatment",
+     "interventionNames": [
+      "Drug: Aclidinium bromide"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Aclidinium bromide",
+     "description": "200 micrograms, once daily, 1 day treatment",
+     "armGroupLabels": [
+      "Aclidinium bromide"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo Tiotropium",
+     "description": "1 puff once daily, 1 day treatment",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Tiotropium",
+     "description": "1 puff of 18 µg (22.5 µg tiotropium bromide monohydrate) in the morning between 8:00 and 10:00",
+     "armGroupLabels": [
+      "Tiotropium"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo LAS34273",
+     "description": "1 puff, 1 dat treatment",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "FEV1 Percentage Increase",
+     "description": "Percentage of patients achieving a FEV1 increase from baseline equal to or greater than 10% at 30 minutes",
+     "timeFrame": "30 minutes"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Normalised Area FEV1 AUC 0-3h",
+     "description": "Normalised area under the curve (AUC) 0-3 hours of FEV1 and change form baseline in FEV1 at 30 min",
+     "timeFrame": "0-3 hours"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Males and females aged ≥ 40 years\n* Current or ex-smokers of ≥ 10 pack-year\n* Clinical diagnosis of severe stable COPD\n\nExclusion Criteria:\n\n* History or current diagnosis of asthma, allergic rhinitis, or atopy\n* Respiratory tract infection or acute COPD exacerbation in the last 6 weeks\n* Hospitalised for an acute COPD exacerbation in the last 3 months\n* Evidence of contraindicated use of anticholinergic drugs",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Esther Garcia, MD",
+     "affiliation": "AstraZeneca",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Respiratory Clinical Trials Ltd",
+     "city": "London",
+     "zip": "W1G 8HU",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.50853,
+      "lon": -0.12574
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "seeAlsoLinks": [
+    {
+     "label": "Sponsor web site",
+     "url": "http://www.almirall.com/webcorp2/cda/ImD_04_02.jsp"
+    },
+    {
+     "label": "Co-Sponsor web site",
+     "url": "http://www.frx.com"
+    },
+    {
+     "label": "CSR Synopsis",
+     "url": "http://filehosting.pharmacm.com/DownloadService.ashx?client=CTR_MED_7111&studyid=4055&filename=Synopsis-m-34273-24-Final.pdf"
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C542859",
+     "term": "aclidinium bromide"
+    },
+    {
+     "id": "D000069447",
+     "term": "Tiotropium Bromide"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D012602",
+     "term": "Scopolamine Derivatives"
+    },
+    {
+     "id": "D014326",
+     "term": "Tropanes"
+    },
+    {
+     "id": "D053961",
+     "term": "Azabicyclo Compounds"
+    },
+    {
+     "id": "D001372",
+     "term": "Aza Compounds"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000470",
+     "term": "Alkaloids"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D019086",
+     "term": "Bridged Bicyclo Compounds, Heterocyclic"
+    },
+    {
+     "id": "D006572",
+     "term": "Heterocyclic Compounds, Bridged-Ring"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

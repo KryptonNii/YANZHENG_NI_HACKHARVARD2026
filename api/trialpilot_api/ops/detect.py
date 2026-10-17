@@ -90,6 +90,11 @@ def delay_range(days: np.ndarray) -> MetricRange:
     return mr(d if DELAY_UNIT == "days" else d / DAYS_PER_MONTH, DELAY_UNIT)
 
 
+def _dominant_mode(modes: list[str]) -> str:
+    """Most frequent travel mode; a tie goes to the alphabetically first mode, never to set/hash order."""
+    return max(sorted(set(modes)), key=modes.count) if modes else "car"
+
+
 class Detector:
     def __init__(self, plan: OpsPlan, feed: Feed, seed: int = 0):
         self.plan, self.feed, self.p = plan, feed, feed.params
@@ -460,7 +465,7 @@ class Detector:
             per_month = avoidable / (MON_WINDOW_WEEKS * 7 / DAYS_PER_MONTH)
             n_future = per_month * months_left
             avg_km = float(np.mean(km)) if km else 0.0
-            mode = max(set(modes), key=modes.count) if modes else "car"
+            mode = _dominant_mode(modes)
             from .metrics import TRIP_EF
 
             ef = self.d(TRIP_EF.get(mode, "ops.ef.car_km"), key)

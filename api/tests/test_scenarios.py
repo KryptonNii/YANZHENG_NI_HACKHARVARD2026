@@ -3,6 +3,9 @@
 from __future__ import annotations
 
 import sqlite3
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor
 
 import pytest
 from a5_support import (
@@ -15,8 +18,9 @@ from a5_support import (
     save_scenario,
 )
 from fastapi.testclient import TestClient
+from trialpilot_contracts.models import Levers, TrialDesign
 
-from trialpilot_api.engine_adapter import EngineFns
+from trialpilot_api.engine_adapter import EngineAdapter, EngineFns
 
 
 # ------------------------------------------------------------------------------ compute
@@ -47,6 +51,15 @@ def test_compute_cache_hit_on_identical_request(
     assert fake_engine.calls == 1
     client.post("/api/scenarios/compute", json={**req, "seed": 12})
     assert fake_engine.calls == 2  # seed is part of the cache key
+
+
+@pytest.mark.req("URS-005")
+def test_health_counts_one_cache_miss_per_engine_run(client: TestClient, design_id: str) -> None:
+    req = {"design_id": design_id, "design_version": 1, "seed": 21}
+    first = client.post("/api/scenarios/compute", json=req)
+    second = client.post("/api/scenarios/compute", json=req)
+    assert (first.headers["x-cache"], second.headers["x-cache"]) == ("miss", "hit")
+    assert client.get("/api/health").json()["engine"]["cache"] == {"hits": 1, "misses": 1}
 
 
 def test_compute_inline_design(client: TestClient) -> None:
@@ -338,6 +351,59 @@ def test_save_pins_the_design_version_on_screen(client: TestClient, design_id: s
     assert moved["result"]["cost_usd"]["p50"] == latest.json()["cost_usd"]["p50"]
 
 
+@pytest.mark.req("URS-010")
+def test_edit_and_new_version_keep_unsent_fields_and_send_the_pin_headers(
+    client: TestClient, design_id: str
+) -> None:
+    created = client.post("/api/scenarios", headers=AUTHOR, json={
+        "name": "Pinned", "description": "first", "design_id": design_id, "design_version": 1,
+        "levers": {"remote_monitoring_share": 0.5}, "seed": 11, "draws": 500})
+    assert created.status_code == 201, created.text
+    sid = created.json()["id"]
+    v1_etag = client.get(f"/api/designs/{design_id}").headers["etag"]
+    changed = make_design()
+    changed["enrollment_target"] = 120
+    v2 = client.post("/api/designs", json=changed, headers={**AUTHOR, "If-Match": v1_etag})
+    assert v2.status_code == 201
+    v2_etag = v2.headers["etag"]
+
+    def check(r, version: int, etag: str) -> dict:  # type: ignore[no-untyped-def]
+        body = r.json()
+        assert body["levers"]["remote_monitoring_share"] == 0.5
+        assert (body["seed"], body["draws"], body["design_version"]) == (11, 500, version)
+        assert r.headers["x-design-version"] == str(version) and r.headers["etag"] == etag
+        assert float(r.headers["x-compute-ms"]) >= 0 and r.headers["x-cache"] in ("hit", "miss")
+        assert r.headers["x-parameter-set-version"] == body["parameter_set_version"]
+        return body
+
+    # PATCH with only a name keeps levers, seed, draws and the design version (not the latest)
+    r = client.patch(f"/api/scenarios/{sid}", headers=AUTHOR, json={"name": "Renamed"})
+    assert r.status_code == 200, r.text
+    assert check(r, 1, v1_etag)["description"] == "first" and "location" not in r.headers
+    r = client.patch(f"/api/scenarios/{sid}", headers=AUTHOR, json={"design_version": 2})
+    assert r.status_code == 200, r.text
+    check(r, 2, v2_etag)
+
+    # a new version inherits the base row's design version, unless the body pins another one
+    r = client.post(f"/api/scenarios/{sid}/versions", headers=AUTHOR)
+    assert r.status_code == 201, r.text
+    assert check(r, 2, v2_etag)["name"] == "Renamed"
+    assert r.headers["location"] == f"/api/scenarios/{r.json()['id']}"
+    r = client.post(f"/api/scenarios/{sid}/versions", headers=AUTHOR,
+                    json={"design_version": 1, "name": "Back to v1"})
+    assert r.status_code == 201, r.text
+    assert (check(r, 1, v1_etag)["name"], r.json()["version"]) == ("Back to v1", 3)
+
+    # error order: an unknown design version (404) wins over invalid levers (422)
+    bad_levers = {"levers": {"home_visit_numbers": [9]}}
+    for method, path in (("PATCH", ""), ("POST", "/versions")):
+        url = f"/api/scenarios/{sid}{path}"
+        r = client.request(method, url, headers=AUTHOR, json={**bad_levers, "design_version": 9})
+        assert r.status_code == 404 and r.json()["error"] == "design_not_found"
+        r = client.request(method, url, headers=AUTHOR, json=bad_levers)
+        assert r.status_code == 422 and r.json()["error"] == "invalid_levers"
+
+
 def _range(p10, p50, p90, unit):  # type: ignore[no-untyped-def]
     return {"p10": p10, "p50": p50, "p90": p90, "unit": unit}
 
@@ -506,3 +572,73 @@ def test_a3_forecast_and_supply_cached_on_the_levers_they_read(make_client) -> N
     assert run(home_visit_numbers=[3]) == {"forecast": 2, "supply": 3}
     assert c.post("/api/scenarios/compute", json={"design_id": "design-test-1", "design_version": 1}).headers[
         "x-queue-ms"]
+
+
+# ------------------------------------------------------------------------------ engine adapter
+def test_request_served_from_the_cache_after_waiting_counts_as_one_hit() -> None:
+    started, release = threading.Event(), threading.Event()
+    fake = FakeEngine()
+
+    def compute(design, levers, params, seed=7, draws=2000):  # type: ignore[no-untyped-def]
+        started.set()
+        release.wait(5)
+        return fake.compute_scenario(design, levers, params, seed, draws)
+
+    adapter = EngineAdapter(EngineFns(compute=compute), cache_size=8, max_concurrency=1)
+    args = (TrialDesign.model_validate(make_design()), Levers(), {}, "set-1", 7, 100)
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        first = pool.submit(adapter.compute, *args)
+        assert started.wait(5)
+        second = pool.submit(adapter.compute, *args)
+        time.sleep(0.05)  # the second request is now waiting for the only engine slot
+        release.set()
+        outcomes = first.result(5), second.result(5)
+    assert [o.cache_hit for o in outcomes] == [False, True]
+    assert fake.calls == 1
+    assert (adapter.cache.hits, adapter.cache.misses) == (1, 1)
+
+
+def test_compare_and_drivers_run_the_a3_forecast_inside_the_engine_slot() -> None:
+    lock = threading.Lock()
+    active = {"now": 0, "max": 0, "runs": 0}
+    fake = FakeEngine()
+
+    def forecast(design, levers, params, seed=7, draws=2000):  # type: ignore[no-untyped-def]
+        with lock:
+            active["now"] += 1
+            active["runs"] += 1
+            active["max"] = max(active["max"], active["now"])
+        time.sleep(0.05)
+        with lock:
+            active["now"] -= 1
+        return "FC"
+
+    def compute(design, levers, params, seed=7, draws=2000, forecast=None):  # type: ignore[no-untyped-def]
+        return fake.compute_scenario(design, levers, params, seed, draws)
+
+    def drivers(design, levers, params, metric, top=5, forecast=None):  # type: ignore[no-untyped-def]
+        assert forecast == "FC"
+        return fake.drivers(design, levers, params, metric, top)
+
+    adapter = EngineAdapter(EngineFns(compute=compute, compare_levers=fake.compare_levers,
+                                      drivers=drivers, forecast=forecast),
+                            cache_size=0, max_concurrency=1)
+    design, moved = TrialDesign.model_validate(make_design()), Levers(home_visit_numbers=[3])
+    gate = threading.Barrier(4)
+
+    def run_compare(seed: int) -> None:
+        gate.wait(5)
+        deltas, warnings = adapter.compare(design, Levers(), moved, {}, seed, 100)
+        assert set(deltas) >= {"cost_usd", "co2e_kg"} and warnings == []
+
+    def run_drivers(seed: int) -> None:
+        gate.wait(5)
+        assert adapter.drivers(design, moved, {}, "cost_usd", 3, seed, 100) == ([], [])
+
+    for run, seeds, runs in ((run_compare, (1, 2, 3, 4), 8), (run_drivers, (5, 6, 7, 8), 4)):
+        active.update(now=0, max=0, runs=0)
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            for f in [pool.submit(run, seed) for seed in seeds]:
+                f.result(10)
+        assert active["runs"] == runs  # distinct seeds: no A3 cache hits
+        assert active["max"] == 1, run.__name__

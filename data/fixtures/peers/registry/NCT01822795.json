@@ -1,0 +1,369 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01822795",
+   "orgStudyIdInfo": {
+    "id": "PD12133"
+   },
+   "organization": {
+    "fullName": "CHU de Reims",
+    "class": "OTHER"
+   },
+   "briefTitle": "Lung Volume Reduction Coil Treatment in Emphysema.",
+   "officialTitle": "Cost-effectiveness of Lung Volume Reduction Coil Treatment in Emphysema.",
+   "acronym": "STICREVOLENS"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2014-04",
+   "overallStatus": "UNKNOWN",
+   "lastKnownStatus": "ACTIVE_NOT_RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2013-03"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2015-03",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2019-12",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2013-03-28",
+   "studyFirstSubmitQcDate": "2013-03-28",
+   "studyFirstPostDateStruct": {
+    "date": "2013-04-02",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2014-04-29",
+   "lastUpdatePostDateStruct": {
+    "date": "2014-04-30",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "CHU de Reims",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "PneumRx, Inc.",
+     "class": "INDUSTRY"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "* BACKGROUND: Medical therapeutic options for the treatment of emphysema remain limited. Lung volume reduction surgery is infrequently used because of its high morbi-mortality. Endobronchial lung volume reduction coil (LVRC(®), PneumRx, Mountain View, CA) treatment has been recently developed and has been shown to be feasible and associated with an acceptable safety profile, while resulting in improvements in dyspnea, exercise capacity and lung function. The objective of this study is to analyze the cost effectiveness of LVRC treatment in severe emphysema.\n* METHODS:This prospective, multicenter study, randomized with a 1:1 ratio (LVRC vs conventional treatment) will include 100 patients who will be followed up for 1year. The primary outcome measure is the 6-month improvement of the 6-minute walk test: the percentage of patients showing an improvement of at least 54m will be compared between groups. A cost-effectiveness study will estimate the cost of LVRC treatment, the global cost of this therapeutic option and will compare the cost between patients treated by LVRC and by medical treatment alone.\n* EXPECTED RESULTS:This study should allow validating the clinical efficacy of LVRC in severe emphysema. The cost-effectiveness study will assess the medical-economic impact of the LVRC therapeutic option."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Emphysema"
+   ],
+   "keywords": [
+    "Chronic obstructive pulmonary disease",
+    "Endoscopic lung volume reduction"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "NONE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 100,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Lung volume reduction coïl treatment",
+     "type": "EXPERIMENTAL",
+     "description": "Lung volume reduction coïl treatment,added to usual medical treatment and follow up after the intervention",
+     "interventionNames": [
+      "Procedure: Lung volume reduction coïl treatment",
+      "Other: Regular medical treatment"
+     ]
+    },
+    {
+     "label": "Regular Medical Treatment",
+     "type": "OTHER",
+     "description": "No intervention, just a follow up under usual medical treatment",
+     "interventionNames": [
+      "Other: Regular medical treatment"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "PROCEDURE",
+     "name": "Lung volume reduction coïl treatment",
+     "armGroupLabels": [
+      "Lung volume reduction coïl treatment"
+     ]
+    },
+    {
+     "type": "OTHER",
+     "name": "Regular medical treatment",
+     "armGroupLabels": [
+      "Lung volume reduction coïl treatment",
+      "Regular Medical Treatment"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "6-month improvement of the 6-minute walk test",
+     "description": "6-month improvement of the 6-minute walk test : the percentage of patients showing an improvement of at least 54m will be compared between groups.",
+     "timeFrame": "6 months"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Cost-effectiveness",
+     "description": "Cost utility (incremental cost effectiveness ratio) of each therapeutic option according to the EuroQol-5 dimensions (EQ-5D) utility scores.",
+     "timeFrame": "6 and 12 months"
+    },
+    {
+     "measure": "Dyspnea",
+     "description": "Comparison of dyspnea assessed by the mMRC scale, BDI/TDI scale and the Borg scale",
+     "timeFrame": "6 and 12 months"
+    },
+    {
+     "measure": "Pulmonary function assessment",
+     "description": "Pulmonary function tests including FEV1, FVC, RV, TLC, RV/TLC.",
+     "timeFrame": "6 and 12 months"
+    },
+    {
+     "measure": "Quality of life",
+     "description": "Comparison of the St georges questionnaire score and the EuroQoL 5D (European Quality of Life 5 dimensions)",
+     "timeFrame": "6 and 12 months"
+    },
+    {
+     "measure": "Morbidity-mortality",
+     "description": "Comparison of mortality and severe adverse events using a composite score (death, haemoptysis \\> 150 cc, pneumonia requiring hospitalization, pneumothorax requiring chest tube drainage \\> 7 days, mechanical ventilation \\> 24 hours, lung transplantation).",
+     "timeFrame": "6 and 12 months"
+    }
+   ],
+   "otherOutcomes": [
+    {
+     "measure": "Exercise testing",
+     "description": "Comparison of the 6-min walking test between groups (using the \\> 25 meters change from baseline as cut-off for clinically significant change).",
+     "timeFrame": "6 and 12 months months"
+    },
+    {
+     "measure": "Exercise testing",
+     "description": "Comparison of the 6-min walking distance at 12 months using 54 meters as cut-off for clinically significant change.",
+     "timeFrame": "12 months"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Bilateral emphysema on Chest CT Scanner\n* Post bronchodilator FEV1 \\< 50 %\n* Total Lung Capacity \\> 100 %\n* Residual Volume \\> 220 %\n* Dyspnea score between 2 and 4 based on the mMRC scale\n* Stopped cigarette smoking for more than 8 weeks\n* Pulmonary rehabilitation within the previous twelve months\n* Consent form signed\n* Covered by Medical Insurance\n\nExclusion Criteria:\n\n* Post bronchodilator FEV1 \\< 15%\n* Post-bronchodilator change in FEV1 \\> 20%\n* Severe recurrent respiratory infections requiring more than 2 hospitalization stays within the past twelve months\n* COPD exacerbation requiring hospital stay within 3 months\n* Pulmonary Hypertension (Pulmonary systolic pressure \\>50 mmHg on cardiac echo)\n* Patient unable to perform a 6-min walking test in room air\n* Giant bulla of more than 1/3 of the lung field on Chest CT\n* Strictly homogeneous emphysema on Chest CT\n* Clinically significant bronchiectasis\n* Past history of lobectomy, lung volume reduction surgery, lung transplantation\n* Any extrapulmonary diseases compromising survival or evaluation within the protocol (severe cardiac disease, severe renal insufficiency, cancer…)\n* Lung carcinoma or pulmonary nodule on CT scan requiring Chest CT scan follow-up\n* Contra-indication to general anesthesia\n* Oral anticoagulant treatment (antivitamin K)\n* Allergy to nitinol\n* Inclusion in an other study assessing respiratory treatments\n* Patient protected by the law",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Gaëtan DESLEE, PhD, MD",
+     "affiliation": "CHU de Reims",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "CHU d'Amiens",
+     "city": "Amiens",
+     "zip": "80054",
+     "country": "France",
+     "geoPoint": {
+      "lat": 49.9,
+      "lon": 2.3
+     }
+    },
+    {
+     "facility": "CHU de Grenoble",
+     "city": "Grenoble",
+     "zip": "38043",
+     "country": "France",
+     "geoPoint": {
+      "lat": 45.17869,
+      "lon": 5.71479
+     }
+    },
+    {
+     "facility": "AP-HM",
+     "city": "Marseille",
+     "zip": "13015",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.29695,
+      "lon": 5.38107
+     }
+    },
+    {
+     "facility": "CHU de Montpellier",
+     "city": "Montpellier",
+     "zip": "34295",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.61093,
+      "lon": 3.87635
+     }
+    },
+    {
+     "facility": "CHU de Nice",
+     "city": "Nice",
+     "zip": "06002",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.70313,
+      "lon": 7.26608
+     }
+    },
+    {
+     "facility": "AP-HP - Hôpital Bichat",
+     "city": "Paris",
+     "zip": "75877",
+     "country": "France",
+     "geoPoint": {
+      "lat": 48.85341,
+      "lon": 2.3488
+     }
+    },
+    {
+     "facility": "CHU de Rouen",
+     "city": "Rouen",
+     "zip": "76031",
+     "country": "France",
+     "geoPoint": {
+      "lat": 49.44313,
+      "lon": 1.09932
+     }
+    },
+    {
+     "facility": "CHU de Saint-Etienne",
+     "city": "Saint-Priest-en-Jarez",
+     "zip": "42270",
+     "country": "France",
+     "geoPoint": {
+      "lat": 45.4739,
+      "lon": 4.37678
+     }
+    },
+    {
+     "facility": "Hôpitaux Universitaires de Strasbourg",
+     "city": "Strasbourg",
+     "zip": "67091",
+     "country": "France",
+     "geoPoint": {
+      "lat": 48.58392,
+      "lon": 7.74553
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "23200592",
+     "type": "BACKGROUND",
+     "citation": "Deslee G, Barbe C, Bourdin A, Durand-Zaleski I, Dutau H, Jolly D, Jounieaux V, Kessler R, Mal H, Pison C, Thiberville L, Vergnon JM, Marquette CH. [Cost-effectiveness of lung volume reduction coil treatment in emphysema. STIC REVOLENS]. Rev Mal Respir. 2012 Nov;29(9):1157-64. doi: 10.1016/j.rmr.2012.09.010. Epub 2012 Oct 12. French."
+    },
+    {
+     "pmid": "30464447",
+     "type": "DERIVED",
+     "citation": "Perotin JM, Leroy S, Marquette CH, Mal H, Dutau H, Bourdin A, Vergnon JM, Pison C, Barbe C, Deslee G; REVOLENS Study Group. Endobronchial coil treatment in severe emphysema patients with alpha-1 antitrypsin deficiency. Int J Chron Obstruct Pulmon Dis. 2018 Nov 5;13:3645-3649. doi: 10.2147/COPD.S176366. eCollection 2018."
+    },
+    {
+     "pmid": "29743071",
+     "type": "DERIVED",
+     "citation": "Bulsei J, Leroy S, Perotin JM, Mal H, Marquette CH, Dutau H, Bourdin A, Vergnon JM, Pison C, Kessler R, Jounieaux V, Salaun M, Marceau A, Dukic S, Barbe C, Bonnaire M, Deslee G, Durand-Zaleski I; REVOLENS study group. Cost-effectiveness of lung volume reduction coil treatment in patients with severe emphysema: results from the 2-year follow-up crossover REVOLENS study (REVOLENS-2 study). Respir Res. 2018 May 9;19(1):84. doi: 10.1186/s12931-018-0796-x."
+    },
+    {
+     "pmid": "29269583",
+     "type": "DERIVED",
+     "citation": "Deslee G, Leroy S, Perotin JM, Mal H, Dutau H, Bourdin A, Vergnon JM, Pison C, Kessler R, Jounieaux V, Salaun M, Marceau A, Dury S, Benzaquen J, Bonnaire M, Dukic S, Barbe C, Marquette CH; , on behalf of the REVOLENS Study Group13; REVOLENS Study Group. Two-year follow-up after endobronchial coil treatment in emphysema: results from the REVOLENS study. Eur Respir J. 2017 Dec 21;50(6):1701740. doi: 10.1183/13993003.01740-2017. Print 2017 Dec. No abstract available."
+    },
+    {
+     "pmid": "26757466",
+     "type": "DERIVED",
+     "citation": "Deslee G, Mal H, Dutau H, Bourdin A, Vergnon JM, Pison C, Kessler R, Jounieaux V, Thiberville L, Leroy S, Marceau A, Laroumagne S, Mallet JP, Dukic S, Barbe C, Bulsei J, Jolly D, Durand-Zaleski I, Marquette CH; REVOLENS Study Group. Lung Volume Reduction Coil Treatment vs Usual Care in Patients With Severe Emphysema: The REVOLENS Randomized Clinical Trial. JAMA. 2016 Jan 12;315(2):175-84. doi: 10.1001/jama.2015.17821."
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D004646",
+     "term": "Emphysema"
+    },
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

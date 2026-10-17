@@ -153,15 +153,6 @@ def submit(ctx: Ctx, username: str | None) -> dict[str, Any]:
     cur = current(ctx)
     if cur is None:
         raise TpvError("Run `tpv report` first.")
-    c = identity.compliance()
-    user = identity.resolve_user(username)
-    st = c.workflow.approval_status("validation_report", cur["record_id"])
-    if st["approval_id"] and st["status"] in ("pending", "approved"):
-        return {"approval_id": st["approval_id"], "status": st["status"], "created": False}
-    try:
-        req = c.workflow.create_request("validation_report", cur["record_id"], user.username,
+    return identity.submit_for_approval("validation_report", cur["record_id"], username,
                                         title=f"Validation summary report {cur['record_id']}",
                                         reason="submitted for QA approval")
-    except c.ComplianceError as exc:
-        raise TpvError(f"{exc.code}: {exc.message}") from exc
-    return {"approval_id": req.id, "status": req.status, "created": True}

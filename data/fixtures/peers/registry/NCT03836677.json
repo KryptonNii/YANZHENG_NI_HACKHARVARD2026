@@ -1,0 +1,1309 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT03836677",
+   "orgStudyIdInfo": {
+    "id": "D5980C00019"
+   },
+   "organization": {
+    "fullName": "AstraZeneca",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "A Study to Evaluate the Effects of BGF and GFF on Specific Image Based Airway Volumes and Resistance in Subjects With Moderate to Severe COPD",
+   "officialTitle": "A Randomized, Double-blind, Two Treatment, Two Period, Chronic Dosing (4 Weeks), Crossover, Multi-center Pilot Study to Evaluate the Effects of Budesonide/Glycopyrronium/Formoterol Fumarate and Glycopyrronium/Formoterol Fumarate on Specific Image Based Airway Volumes and Resistance in Subjects With Moderate to Severe COPD"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2021-01",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2019-02-26",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2019-11-11",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2019-11-11",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2018-09-24",
+   "studyFirstSubmitQcDate": "2019-02-08",
+   "studyFirstPostDateStruct": {
+    "date": "2019-02-11",
+    "type": "ACTUAL"
+   },
+   "resultsFirstSubmitDate": "2020-11-10",
+   "resultsFirstSubmitQcDate": "2021-01-25",
+   "resultsFirstPostDateStruct": {
+    "date": "2021-02-11",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2021-01-25",
+   "lastUpdatePostDateStruct": {
+    "date": "2021-02-11",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "AstraZeneca",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false,
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": false,
+   "isUsExport": true
+  },
+  "descriptionModule": {
+   "briefSummary": "This is a randomised, controlled, two period cross-over, 4 weeks chronic dosing, study to evaluate the effects of Budesonide/Glycopyrronium/Formoterol Fumarate (BGF) and Glycopyrronium/Formoterol Fumarate (GFF) on airway dimensions.",
+   "detailedDescription": "This is a randomised, controlled, two period cross-over, 4 weeks chronic dosing, study to evaluate the effects of Budesonide/Glycopyrronium/Formoterol Fumarate (BGF), and Glycopyrronium/Formoterol Fumarate (GFF), on specific image based airway volumes and resistance in subjects with moderate to severe Chronic Obstructive Pulmonary Disease. In this study, airway dimension parameters will be calculated for each of the active compounds.\n\nThis imaging methodology will allow an assessment of the extent of airway changes using a triple combination of Budesonide/Glycopyrronium/Formoterol Fumarate (BGF) and the dual combination Glycopyrronium/Formoterol Fumarate (GFF)."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ],
+   "keywords": [
+    "COPD"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "CROSSOVER",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 23,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "BGF-GFF",
+     "type": "EXPERIMENTAL",
+     "description": "Subject first treated with Budesonide/Glycopyrronium/Formoterol Fumarate followed by a washout period then treated with Glycopyrronium/Formoterol Fumarate",
+     "interventionNames": [
+      "Combination Product: BGF",
+      "Combination Product: GFF"
+     ]
+    },
+    {
+     "label": "GFF-BGF",
+     "type": "EXPERIMENTAL",
+     "description": "Subject first treated with Glycopyrronium/Formoterol Fumarate followed by a washout period then treated with Budesonide/Glycopyrronium/Formoterol Fumarate",
+     "interventionNames": [
+      "Combination Product: BGF",
+      "Combination Product: GFF"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "COMBINATION_PRODUCT",
+     "name": "BGF",
+     "description": "Treatment with Budesonide/Glycopyrronium/FormoterolFumarate",
+     "armGroupLabels": [
+      "BGF-GFF",
+      "GFF-BGF"
+     ]
+    },
+    {
+     "type": "COMBINATION_PRODUCT",
+     "name": "GFF",
+     "description": "Treatment with Glycopyrronium/Formoterol Fumarate",
+     "armGroupLabels": [
+      "BGF-GFF",
+      "GFF-BGF"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Specific Image-based Airway Volume (siVaw)",
+     "description": "Specific image-based airway volume (SiVaw) measured in mL/L. Average across lobes, adjusted for lobe volume. Reported as ratio to baseline.",
+     "timeFrame": "Baseline, Day 29"
+    },
+    {
+     "measure": "Specific Image-based Airway Resistance (siRaw)",
+     "description": "Specific image-based airway resistance (siRaw) measured in kPa∙s. Average across lobes, adjusted for lobe volume. Reported as ratio to baseline.",
+     "timeFrame": "Baseline, Day 29"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Image-based Airway Volume (iVaw)",
+     "description": "Image-based Airway Volume (iVaw) measured in mL. Average across lobes, without adjustment for lobe volume. Reported as ratio to baseline.",
+     "timeFrame": "Baseline, Day 29"
+    },
+    {
+     "measure": "Image-based Airway Resistance (iRaw)",
+     "description": "Image-based airway resistance (iRaw) measured in kPa∙s/L. Average across lobes, without adjustment for lobe volume. Reported as ratio to baseline.",
+     "timeFrame": "Baseline, 29 Days"
+    },
+    {
+     "measure": "Forced Expiratory Volume in One Second (Post-dose FEV1).",
+     "description": "Change from baseline in Forced Expiratory Volume in One Second (Post-dose FEV1).",
+     "timeFrame": "Baseline 29 Days"
+    },
+    {
+     "measure": "Functional Residual Capacity (FRC)",
+     "description": "Change from baseline in Functional residual capacity (FRC).",
+     "timeFrame": "Baseline, Day 29"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\nSubject must be 40 years to ≤80 years of age inclusive, at the time of signing the informed consent form at Visit 1.\n\n* COPD Diagnosis: Subjects with an established clinical history of COPD\n* Screening clinical laboratory tests must be acceptable to the Investigator.\n* Screening ECG must be acceptable to the Investigator\n* Individual Compliance: Subjects must be willing to remain at the study center as required per protocol to complete all visit assessments\n* Patients should be on scheduled maintenance treatment with one or more inhaled bronchodilator therapies.\n\nExclusion Criteria:\n\n* As judged by the investigator, any evidence of significant diseases other than COPD, i.e., disease or condition which, in the investigator's opinion makes it undesirable for the subject to participate in the trial.\n* Spirometry Performance:\n\n  1. Subjects who cannot perform acceptable spirometry, i.e., meet ATS/ERS acceptability criteria.\n  2. Repeatability: Subjects who cannot perform technically acceptable spirometry in accordance with ATS repeatability criteria\n* Cancer: Subjects who have cancer that has not been in complete remission for at least five years.\n* Substance Abuse: Subjects, who in the opinion of the Investigator, significantly abuse alcohol or drugs\n* Subjects who in the opinion of the investigator are unable to abstain from prohibited medications including LABA/LAMAs/ICS",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "locations": [
+    {
+     "facility": "Research Site",
+     "city": "Erpent",
+     "zip": "5101",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.45116,
+      "lon": 4.90557
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Eindhoven",
+     "zip": "5623 EJ",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 51.44083,
+      "lon": 5.47778
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Groningen",
+     "zip": "9713 GZ",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 53.21917,
+      "lon": 6.56667
+     }
+    },
+    {
+     "facility": "Research Site",
+     "city": "Zutphen",
+     "zip": "7207 AE",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.13833,
+      "lon": 6.20139
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "34210340",
+     "type": "DERIVED",
+     "citation": "van den Berge M, De Backer J, Van Holsbeke C, De Backer W, Trivedi R, Jenkins M, Dorinsky P, Aurivillius M. Functional respiratory imaging assessment of budesonide/glycopyrrolate/formoterol fumarate and glycopyrrolate/formoterol fumarate metered dose inhalers in patients with COPD: the value of inhaled corticosteroids. Respir Res. 2021 Jul 1;22(1):191. doi: 10.1186/s12931-021-01772-2."
+    }
+   ],
+   "seeAlsoLinks": [
+    {
+     "label": "Statistical Analysis Plan (SAP)",
+     "url": "https://filehosting-v2.pharmacm.com/api/Attachment/Download?tenantId=80217111&amp;parentIdentifier=D5980C00019&amp;attachmentIdentifier=a5d5dc54-7197-4031-9e83-0480baeaa3f2&amp;fileName=d5980c00019-sap-ed-2_Redacted.pdf&amp;versionIdentifier="
+    },
+    {
+     "label": "CSP",
+     "url": "https://filehosting-v2.pharmacm.com/api/Attachment/Download?tenantId=80217111&amp;parentIdentifier=D5980C00019&amp;attachmentIdentifier=603a22eb-76ce-4e33-af2d-84d7b45e7bb8&amp;fileName=d5980c00019-csp-v3_Redacted-v1.pdf&amp;versionIdentifier="
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "Subjects were randomized into 1 of 2 treatment sequences. Sequence 1 received BGF MDI in Period 1 followed by GFF MDI in Period 2. Sequence 2 received GFF MDI in Period 1 followed by BGF MDI in Period 2.",
+   "recruitmentDetails": "This study randomized 23 subjects at 4 study centers (1 center in Belgium and 3 centers in the Netherlands) from Feb 2019 to Nov 2019.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "BGF MDI/GFF MDI",
+     "description": "Budesonide/Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation followed by Washout and then Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation"
+    },
+    {
+     "id": "FG001",
+     "title": "GFF MDI/BGF MDI",
+     "description": "Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation followed by Washout and then Budesonide/Glycopyrronium/Formoterol Metered Dose Inhalation"
+    }
+   ],
+   "periods": [
+    {
+     "title": "Period 1",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "13"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "10"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "13"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "9"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Washout",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "13"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "9"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "13"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "9"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Period 2",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "13"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "9"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "12"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "9"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Severe non-compliance to protocol",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "populationDescription": "ITT Population - all subjects who were randomized to treatment.",
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Overall Study",
+     "description": "ITT Population"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "23"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "description": "ITT Population",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "64.9",
+           "spread": "7.6"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "description": "ITT Population",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "5"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "18"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Race (NIH/OMB)",
+     "description": "ITT Population",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "American Indian or Alaska Native",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Asian",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Native Hawaiian or Other Pacific Islander",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Black or African American",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "White",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "23"
+          }
+         ]
+        },
+        {
+         "title": "More than one race",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Unknown or Not Reported",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Specific Image-based Airway Volume (siVaw)",
+     "description": "Specific image-based airway volume (SiVaw) measured in mL/L. Average across lobes, adjusted for lobe volume. Reported as ratio to baseline.",
+     "populationDescription": "ITT Population",
+     "reportingStatus": "POSTED",
+     "paramType": "GEOMETRIC_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "Ratio to baseline",
+     "timeFrame": "Baseline, Day 29",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "BGF MDI",
+       "description": "Budesonide/Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation"
+      },
+      {
+       "id": "OG001",
+       "title": "GFF MDI",
+       "description": "Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "20"
+        },
+        {
+         "groupId": "OG001",
+         "value": "21"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.72",
+           "lowerLimit": "1.38",
+           "upperLimit": "2.13"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.53",
+           "lowerLimit": "1.28",
+           "upperLimit": "1.83"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000"
+       ],
+       "nonInferiorityType": "OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "Statistical significance assessed using Hochberg's procedure applied across primary endpoints within each treatment.",
+       "statisticalMethod": "t-test, 2 sided",
+       "statisticalComment": "Within-group comparison to baseline using paired test",
+       "paramType": "Geometric Mean ratio to baseline",
+       "paramValue": "1.72",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "1.38",
+       "ciUpperLimit": "2.13"
+      },
+      {
+       "groupIds": [
+        "OG001"
+       ],
+       "nonInferiorityType": "OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "Statistical significance assessed using Hochberg's procedure applied across primary endpoints within each treatment.",
+       "statisticalMethod": "t-test, 2 sided",
+       "statisticalComment": "Within-group comparison to baseline using paired test.",
+       "paramType": "Geometric mean ratio to baseline",
+       "paramValue": "1.53",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "1.28",
+       "ciUpperLimit": "1.83"
+      }
+     ]
+    },
+    {
+     "type": "PRIMARY",
+     "title": "Specific Image-based Airway Resistance (siRaw)",
+     "description": "Specific image-based airway resistance (siRaw) measured in kPa∙s. Average across lobes, adjusted for lobe volume. Reported as ratio to baseline.",
+     "populationDescription": "ITT Population",
+     "reportingStatus": "POSTED",
+     "paramType": "GEOMETRIC_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "Ratio to baseline",
+     "timeFrame": "Baseline, Day 29",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "BGF MDI",
+       "description": "Budesonide/Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation"
+      },
+      {
+       "id": "OG001",
+       "title": "GFF MDI",
+       "description": "Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "20"
+        },
+        {
+         "groupId": "OG001",
+         "value": "21"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.50",
+           "lowerLimit": "0.39",
+           "upperLimit": "0.63"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.52",
+           "lowerLimit": "0.40",
+           "upperLimit": "0.67"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000"
+       ],
+       "nonInferiorityType": "OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "Statistical significance assessed using Hochberg's procedure applied across primary endpoints within each treatment.",
+       "statisticalMethod": "t-test, 2 sided",
+       "statisticalComment": "Within-group comparison to baseline using paired test",
+       "paramType": "Geometric mean ratio to baseline",
+       "paramValue": "0.50",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.39",
+       "ciUpperLimit": "0.63"
+      },
+      {
+       "groupIds": [
+        "OG001"
+       ],
+       "nonInferiorityType": "OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "Statistical significance assessed using Hochberg's procedure applied across primary endpoints within each treatment.",
+       "statisticalMethod": "t-test, 2 sided",
+       "statisticalComment": "Within-group comparison to baseline using paired test",
+       "paramType": "Geometric mean ratio to baseline",
+       "paramValue": "0.52",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.40",
+       "ciUpperLimit": "0.67"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Image-based Airway Volume (iVaw)",
+     "description": "Image-based Airway Volume (iVaw) measured in mL. Average across lobes, without adjustment for lobe volume. Reported as ratio to baseline.",
+     "populationDescription": "ITT Population",
+     "reportingStatus": "POSTED",
+     "paramType": "GEOMETRIC_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "Ratio to baseline",
+     "timeFrame": "Baseline, Day 29",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "BGF MDI",
+       "description": "Budesonide/Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation"
+      },
+      {
+       "id": "OG001",
+       "title": "GFF MDI",
+       "description": "Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "20"
+        },
+        {
+         "groupId": "OG001",
+         "value": "21"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.70",
+           "lowerLimit": "1.37",
+           "upperLimit": "2.11"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.51",
+           "lowerLimit": "1.26",
+           "upperLimit": "1.80"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000"
+       ],
+       "nonInferiorityType": "OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "t-test, 2 sided",
+       "statisticalComment": "Within-group comparison to baseline using paired test",
+       "paramType": "Geometric mean ratio to baseline",
+       "paramValue": "1.70",
+       "ciPctValue": "95",
+       "ciLowerLimit": "1.37",
+       "ciUpperLimit": "2.11"
+      },
+      {
+       "groupIds": [
+        "OG001"
+       ],
+       "nonInferiorityType": "OTHER",
+       "pValue": "0.0001",
+       "statisticalMethod": "t-test, 2 sided",
+       "statisticalComment": "Within-group comparison to baseline using paired test",
+       "paramType": "Geometric mean ratio to baseline",
+       "paramValue": "1.51",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "1.26",
+       "ciUpperLimit": "1.80"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Image-based Airway Resistance (iRaw)",
+     "description": "Image-based airway resistance (iRaw) measured in kPa∙s/L. Average across lobes, without adjustment for lobe volume. Reported as ratio to baseline.",
+     "populationDescription": "ITT Population",
+     "reportingStatus": "POSTED",
+     "paramType": "GEOMETRIC_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "Ratio to baseline",
+     "timeFrame": "Baseline, 29 Days",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "BGF MDI",
+       "description": "Budesonide/Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation"
+      },
+      {
+       "id": "OG001",
+       "title": "GFF MDI",
+       "description": "Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "20"
+        },
+        {
+         "groupId": "OG001",
+         "value": "21"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.50",
+           "lowerLimit": "0.40",
+           "upperLimit": "0.63"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.52",
+           "lowerLimit": "0.40",
+           "upperLimit": "0.68"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000"
+       ],
+       "nonInferiorityType": "OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "t-test, 2 sided",
+       "statisticalComment": "Within-group comparison to baseline using paired test",
+       "paramType": "Geometric mean ratio to baseline",
+       "paramValue": "0.50",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.40",
+       "ciUpperLimit": "0.63"
+      },
+      {
+       "groupIds": [
+        "OG001"
+       ],
+       "nonInferiorityType": "OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "t-test, 2 sided",
+       "statisticalComment": "Within-group comparison to baseline using paired test",
+       "paramType": "Geometric mean ratio to baseline",
+       "paramValue": "0.52",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.40",
+       "ciUpperLimit": "0.68"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Forced Expiratory Volume in One Second (Post-dose FEV1).",
+     "description": "Change from baseline in Forced Expiratory Volume in One Second (Post-dose FEV1).",
+     "populationDescription": "ITT Population",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "L",
+     "timeFrame": "Baseline 29 Days",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "BGF MDI",
+       "description": "Budesonide/Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation"
+      },
+      {
+       "id": "OG001",
+       "title": "GFF MDI",
+       "description": "Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "21"
+        },
+        {
+         "groupId": "OG001",
+         "value": "21"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.346",
+           "lowerLimit": "0.182",
+           "upperLimit": "0.509"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.273",
+           "lowerLimit": "0.140",
+           "upperLimit": "0.405"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000"
+       ],
+       "nonInferiorityType": "OTHER",
+       "pValue": "0.0003",
+       "statisticalMethod": "t-test, 2 sided",
+       "statisticalComment": "Within-group comparison to baseline using paired test.",
+       "paramType": "Mean Change from Baseline",
+       "paramValue": "0.346",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.182",
+       "ciUpperLimit": "0.509"
+      },
+      {
+       "groupIds": [
+        "OG001"
+       ],
+       "nonInferiorityType": "OTHER",
+       "pValue": "0.0004",
+       "statisticalMethod": "t-test, 2 sided",
+       "statisticalComment": "Within-group comparison to baseline using paired test.",
+       "paramType": "Mean Change from Baseline",
+       "paramValue": "0.273",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.140",
+       "ciUpperLimit": "0.405"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Functional Residual Capacity (FRC)",
+     "description": "Change from baseline in Functional residual capacity (FRC).",
+     "populationDescription": "ITT Population",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "L",
+     "timeFrame": "Baseline, Day 29",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "BGF MDI",
+       "description": "Budesonide/Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation"
+      },
+      {
+       "id": "OG001",
+       "title": "GFF MDI",
+       "description": "Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "22"
+        },
+        {
+         "groupId": "OG001",
+         "value": "21"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.28",
+           "lowerLimit": "-0.77",
+           "upperLimit": "0.21"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.50",
+           "lowerLimit": "-0.81",
+           "upperLimit": "-0.18"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000"
+       ],
+       "nonInferiorityType": "OTHER",
+       "pValue": "0.2515",
+       "statisticalMethod": "t-test, 2 sided",
+       "statisticalComment": "Within-group comparison to baseline using paired test.",
+       "paramType": "Mean ratio to baseline",
+       "paramValue": "-0.28",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.77",
+       "ciUpperLimit": "0.21"
+      },
+      {
+       "groupIds": [
+        "OG001"
+       ],
+       "nonInferiorityType": "OTHER",
+       "pValue": "0.0040",
+       "statisticalMethod": "t-test, 2 sided",
+       "statisticalComment": "Within-group comparison to baseline using paired test.",
+       "paramType": "Mean ratio to baseline",
+       "paramValue": "-0.50",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.81",
+       "ciUpperLimit": "-0.18"
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "Adverse events were collected from visit 2 throughout the treatment period and including the follow-up period telephone call.",
+   "description": "The Safety Population was defined as all subjects who were randomized to treatment and received at least one dose of study treatment. Serious adverse events were collected visit 2 throughout the treatment period and including the follow-up period telephone call.",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "BGF MDI",
+     "description": "Budoesonide/Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation",
+     "deathsNumAffected": 0,
+     "deathsNumAtRisk": 22,
+     "seriousNumAffected": 1,
+     "seriousNumAtRisk": 22,
+     "otherNumAffected": 0,
+     "otherNumAtRisk": 22
+    },
+    {
+     "id": "EG001",
+     "title": "GFF MDI",
+     "description": "Glycopyrronium/Formoterol Fumarate Metered Dose Inhalation",
+     "deathsNumAffected": 0,
+     "deathsNumAtRisk": 23,
+     "seriousNumAffected": 0,
+     "seriousNumAtRisk": 23,
+     "otherNumAffected": 2,
+     "otherNumAtRisk": 23
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Colon cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 22
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 23
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Dyspnoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 22
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 23
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "GT60",
+    "restrictiveAgreement": true
+   },
+   "pointOfContact": {
+    "title": "AstraZeneca AB",
+    "organization": "AstraZeneca AB",
+    "email": "information.center@astrazeneca.com",
+    "phone": "1-877-240-9479"
+   }
+  }
+ },
+ "documentSection": {
+  "largeDocumentModule": {
+   "largeDocs": [
+    {
+     "typeAbbrev": "Prot",
+     "hasProtocol": true,
+     "hasSap": false,
+     "hasIcf": false,
+     "label": "Study Protocol",
+     "date": "2019-07-05",
+     "uploadDate": "2020-11-10T03:24",
+     "filename": "Prot_001.pdf",
+     "size": 2594629
+    },
+    {
+     "typeAbbrev": "SAP",
+     "hasProtocol": false,
+     "hasSap": true,
+     "hasIcf": false,
+     "label": "Statistical Analysis Plan",
+     "date": "2019-08-26",
+     "uploadDate": "2021-01-25T06:53",
+     "filename": "SAP_002.pdf",
+     "size": 457844
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16",
+   "submissionTracking": {
+    "firstMcpInfo": {
+     "postDateStruct": {
+      "date": "2020-12-03",
+      "type": "ACTUAL"
+     }
+    }
+   }
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

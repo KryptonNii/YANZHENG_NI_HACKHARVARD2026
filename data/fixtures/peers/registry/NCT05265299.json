@@ -1,0 +1,397 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT05265299",
+   "orgStudyIdInfo": {
+    "id": "IRB00309828"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "1K23HL151758-01A1",
+     "type": "NIH",
+     "link": "https://reporter.nih.gov/quickSearch/1K23HL151758-01A1"
+    }
+   ],
+   "organization": {
+    "fullName": "Johns Hopkins University",
+    "class": "OTHER"
+   },
+   "briefTitle": "Trial to Determine Effective Aspirin Dose in COPD",
+   "officialTitle": "Randomized Trial to Determine Effective Aspirin Dose in COPD"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-03",
+   "overallStatus": "RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2023-05-16",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2026-12",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2026-12",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2022-02-22",
+   "studyFirstSubmitQcDate": "2022-02-22",
+   "studyFirstPostDateStruct": {
+    "date": "2022-03-03",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-03-13",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-03-16",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Johns Hopkins University",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "National Heart, Lung, and Blood Institute (NHLBI)",
+     "class": "NIH"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": false,
+   "isUsExport": false
+  },
+  "descriptionModule": {
+   "briefSummary": "Chronic obstructive pulmonary disease (COPD) is the fourth leading cause of death in the United States. Current treatments for COPD focus on inhaler therapies that do not address manifestations of the disease on other organ systems. Platelets, which are small blood cells that typically help with clotting, are also involved in generalized inflammation and dysfunctionality of immune cells when these cells become activated. Activated platelets have long been known to play a role in the development of cardiovascular disease. However, there is recent evidence that activated platelets may be involved in worse respiratory symptoms in COPD independent of cardiovascular disease. Individuals with COPD who are taking aspirin, which is an antiplatelet agent that blocks activation of platelets, have been shown to have improved respiratory symptoms, fewer COPD flares, and lower mortality. The investigators' ultimate goal is to study whether aspirin use improves respiratory symptoms independent of cardiovascular disease. The investigators are conducting the current pilot trial to determine the optimal dose of aspirin that blocks platelet activation in this population and investigate whether there are any blood or urine tests that can help with understanding response to therapy. The results will inform the design of a larger trial investigating clinical outcomes. The investigators hypothesize that daily low-dose aspirin will not be sufficient to adequately suppress platelet activation and that an aspirin dose of at least 162mg daily will be necessary.",
+   "detailedDescription": "The trial will enroll individuals with chronic obstructive pulmonary disease (COPD). The primary design will be a randomized double-blind 6-sequence, 3-period, 3-treatment sequential crossover trial for which the investigators will randomize participants to receive 81mg, 162mg, and 325mg aspirin in one of six pre-specified sequences with a 14-day washout period between doses. Participants will have three follow-up visits after randomization.\n\nIndividuals who agree to participate in the clinical trial will be randomized to one of six treatment sequences using a computer algorithm at the baseline study visit. Study drug will be provided by the Johns Hopkins Research Pharmacy and participants instructed to take one pill once per day at the same time. All study drug doses will be compounded to appear identical and placed in identical containers fitted with an electronic cap for monitoring medication adherence. Participants will be scheduled to return for a follow-up visit at two weeks, six weeks, and ten weeks after randomization. Blood and urine samples will be collected at each visit. Data will be collected by the principal investigator or trained study coordinator and will be electronically entered into a database stored on the secure Johns Hopkins servers through an online interface that is password protected. Urine will be collected and analyzed for 11-dehydro-thromboxane B2 at each study visit and constitutes the primary outcome of the study. Secondary outcomes will include measurement of platelet reactivity to U46619, a thromboxane A2 agonist, through identification of platelet surface markers CD62P, CD63, CD154 and PAC1.\n\nThe following adherence measurements will also be collected:\n\n1. Drug discontinuation rate\n2. Date and time of each dose of study medication obtained through electronic monitoring to assess adherence\n\nThe following clinical data will be collected at randomization:\n\n1\\. Spirometry performed before and after administration of albuterol per American Thoracic Society protocol in a certified laboratory\n\nThe following clinical data will be collected at randomization and each subsequent study visit:\n\n1. Respiratory symptom and quality of life questionnaires\n2. Occurrence of COPD flares (exacerbations)"
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "SEQUENTIAL",
+    "interventionModelDescription": "6-sequence, 3-period, 3-treatment sequential crossover trial",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 48,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Sequence 1",
+     "type": "EXPERIMENTAL",
+     "description": "* Week 1-2: aspirin 81mg\n* Week 5-6: aspirin 162mg\n* Week 9-10: aspirin 325mg",
+     "interventionNames": [
+      "Drug: Aspirin 81mg",
+      "Drug: Aspirin 162 mg",
+      "Drug: Aspirin 325mg"
+     ]
+    },
+    {
+     "label": "Sequence 2",
+     "type": "EXPERIMENTAL",
+     "description": "* Week 1-2: aspirin 162mg\n* Week 5-6: aspirin 81mg\n* Week 9-10: aspirin 325mg",
+     "interventionNames": [
+      "Drug: Aspirin 81mg",
+      "Drug: Aspirin 162 mg",
+      "Drug: Aspirin 325mg"
+     ]
+    },
+    {
+     "label": "Sequence 3",
+     "type": "EXPERIMENTAL",
+     "description": "* Week 1-2: aspirin 325mg\n* Week 5-6: aspirin 81mg\n* Week 9-10: aspirin 162mg",
+     "interventionNames": [
+      "Drug: Aspirin 81mg",
+      "Drug: Aspirin 162 mg",
+      "Drug: Aspirin 325mg"
+     ]
+    },
+    {
+     "label": "Sequence 4",
+     "type": "EXPERIMENTAL",
+     "description": "* Week 1-2: aspirin 325mg\n* Week 5-6: aspirin 162mg\n* Week 9-10: aspirin 81mg",
+     "interventionNames": [
+      "Drug: Aspirin 81mg",
+      "Drug: Aspirin 162 mg",
+      "Drug: Aspirin 325mg"
+     ]
+    },
+    {
+     "label": "Sequence 5",
+     "type": "EXPERIMENTAL",
+     "description": "* Week 1-2: aspirin 162mg\n* Week 5-6: aspirin 325mg\n* Week 9-10: aspirin 81mg",
+     "interventionNames": [
+      "Drug: Aspirin 81mg",
+      "Drug: Aspirin 162 mg",
+      "Drug: Aspirin 325mg"
+     ]
+    },
+    {
+     "label": "Sequence 6",
+     "type": "EXPERIMENTAL",
+     "description": "* Week 1-2: aspirin 81mg\n* Week 5-6: aspirin 325mg\n* Week 9-10: aspirin 162mg",
+     "interventionNames": [
+      "Drug: Aspirin 81mg",
+      "Drug: Aspirin 162 mg",
+      "Drug: Aspirin 325mg"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Aspirin 81mg",
+     "description": "Aspirin 81mg once daily",
+     "armGroupLabels": [
+      "Sequence 1",
+      "Sequence 2",
+      "Sequence 3",
+      "Sequence 4",
+      "Sequence 5",
+      "Sequence 6"
+     ],
+     "otherNames": [
+      "Acetylsalicylic acid"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Aspirin 162 mg",
+     "description": "Aspirin 162 mg once daily",
+     "armGroupLabels": [
+      "Sequence 1",
+      "Sequence 2",
+      "Sequence 3",
+      "Sequence 4",
+      "Sequence 5",
+      "Sequence 6"
+     ],
+     "otherNames": [
+      "Acetylsalicylic acid"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Aspirin 325mg",
+     "description": "Aspirin 325mg once daily",
+     "armGroupLabels": [
+      "Sequence 1",
+      "Sequence 2",
+      "Sequence 3",
+      "Sequence 4",
+      "Sequence 5",
+      "Sequence 6"
+     ],
+     "otherNames": [
+      "Acetylsalicylic acid"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Change in urinary 11-dehydro-thromboxane B2 level",
+     "description": "Urine 11-dehydro-thromboxane B2 level (pg/mg Creatinine) - a urinary metabolite of thromboxane A2.",
+     "timeFrame": "Baseline, week 2, week 6, week 10"
+    },
+    {
+     "measure": "Change in serum thromboxane B2 level",
+     "description": "Serum thromboxane B2",
+     "timeFrame": "Baseline, week 2, week 6, week 10"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Change in proportion of platelets displaying CD62P",
+     "description": "Proportion of platelets displaying CD62P (activated platelets) following stimulation with U46619, a thromboxane A2 agonist.",
+     "timeFrame": "Baseline, 2 weeks, 6 weeks, 10 weeks"
+    },
+    {
+     "measure": "Change in proportion of platelets displaying CD63",
+     "description": "Proportion of platelets displaying CD63 (activated platelets) following stimulation with U46619, a thromboxane A2 agonist.",
+     "timeFrame": "Baseline, 2 weeks, 6 weeks, 10 weeks"
+    },
+    {
+     "measure": "Change in proportion of platelets displaying CD154",
+     "description": "Proportion of platelets displaying CD154 (activated platelets) following stimulation with U46619, a thromboxane A2 agonist",
+     "timeFrame": "Baseline, 2 weeks, 6 weeks, 10 weeks"
+    },
+    {
+     "measure": "Change in proportion of platelets displaying PAC1",
+     "description": "Proportion of platelets displaying PAC1 (activated platelets) following stimulation with U46619, a thromboxane A2 agonist",
+     "timeFrame": "Baseline, 2 weeks, 6 weeks, 10 weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Age ≥40 years\n* Former smoker\n* At least 10 pack-year smoking history\n* Post-bronchodilator ratio of forced expiratory volume in 1 second to forced vital capacity (FEV1/FVC) \\< 0.7\n\nExclusion Criteria:\n\n* History of myocardial infarction, percutaneous coronary intervention, or stroke\n* Currently taking antiplatelet therapy (other than aspirin 81mg) or anticoagulant medication\n* Contraindication to aspirin (including low platelet count, hematocrit \\<25%, known aspirin-exacerbated respiratory disease, bleeding disorder, history of bleeding or gastrointestinal (GI) ulcer, coagulopathy, or major surgery within 6 weeks before randomization)\n* Oral corticosteroids within the past 6 weeks\n* Currently taking immunosuppressant medication\n* Active malignancy (other than non-melanoma skin cancer)\n* Uncontrolled hypertension\n* Pregnant or planning pregnancy in the next year\n* Plans to move residence away from the immediate area within the next 3 months",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Wendy Lorizio, MD, MPH",
+     "role": "CONTACT",
+     "phone": "410-510-2449",
+     "email": "wlorizi1@jhmi.edu"
+    }
+   ],
+   "overallOfficials": [
+    {
+     "name": "Ashraf Fawzy, MD, MPH",
+     "affiliation": "Johns Hopkins University",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Johns Hopkins Bayview Medical Center",
+     "status": "RECRUITING",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21224",
+     "country": "United States",
+     "contacts": [
+      {
+       "name": "Wendy Lorizio, MD, MPH",
+       "role": "CONTACT",
+       "phone": "410-510-2449",
+       "email": "wlorizi1@jhmi.edu"
+      }
+     ],
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D001241",
+     "term": "Aspirin"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D012459",
+     "term": "Salicylates"
+    },
+    {
+     "id": "D062385",
+     "term": "Hydroxybenzoates"
+    },
+    {
+     "id": "D010636",
+     "term": "Phenols"
+    },
+    {
+     "id": "D001555",
+     "term": "Benzene Derivatives"
+    },
+    {
+     "id": "D006841",
+     "term": "Hydrocarbons, Aromatic"
+    },
+    {
+     "id": "D006844",
+     "term": "Hydrocarbons, Cyclic"
+    },
+    {
+     "id": "D006838",
+     "term": "Hydrocarbons"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

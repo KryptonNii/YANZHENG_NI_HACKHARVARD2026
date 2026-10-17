@@ -1,0 +1,3880 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT02085161",
+   "orgStudyIdInfo": {
+    "id": "1237.16"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2013-002671-18",
+     "type": "EUDRACT_NUMBER",
+     "domain": "EudraCT"
+    }
+   ],
+   "organization": {
+    "fullName": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "To Evaluate the Effect of Inhaled Medication Together With Exercise and Activity Training on Exercise Capacity and Daily Activities in Patients With Chronic Lung Disease With Obstruction of Airways",
+   "officialTitle": "An Exploratory, 12 Week, Randomised, Partially Double-blinded, Placebo-controlled Parallel Group Trial to Explore the Effects of Once Daily Treatments of Orally Inhaled Tiotropium + Olodaterol Fixed Dose Combination or Tiotropium (Both Delivered by Respimat® Inhaler), Supervised Exercise Training and Behavior Modification on Exercise Capacity and Physical Activity in Patients With Chronic Obstructive Pulmonary Disease (COPD)"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2016-11",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2014-03"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2015-08",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2015-10",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2014-03-07",
+   "studyFirstSubmitQcDate": "2014-03-07",
+   "studyFirstPostDateStruct": {
+    "date": "2014-03-12",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2016-08-30",
+   "resultsFirstSubmitQcDate": "2016-11-09",
+   "resultsFirstPostDateStruct": {
+    "date": "2017-01-06",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2016-11-09",
+   "lastUpdatePostDateStruct": {
+    "date": "2017-01-06",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "The primary objectives of the study are to explore the effect of treatment with orally inhaled tiotropium + olodaterol fixed dose combination with and without exercise training, and tiotropium comparing to placebo, on top of behavioural modification in improving exercise capacity in patients with COPD"
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "SINGLE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 304,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "patient will receive placebo once daily, 2 puffs in the morning",
+     "interventionNames": [
+      "Drug: placebo to tiotropium + olodaterol"
+     ]
+    },
+    {
+     "label": "tiotropium + olodaterol high dose with BM",
+     "type": "EXPERIMENTAL",
+     "description": "patient will receive tiotropium 5 mcg + olodaterol 5 mcg in fixed dose combination once daily, 2 puffs in the morning",
+     "interventionNames": [
+      "Drug: tiotropium +olodaterol"
+     ]
+    },
+    {
+     "label": "tiotropium",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "patient will receive tiotropium 5 mcg once daily, 2 puffs in the morning",
+     "interventionNames": [
+      "Drug: tiotropium"
+     ]
+    },
+    {
+     "label": "tiotropium + olodaterol with exercise training and BM",
+     "type": "EXPERIMENTAL",
+     "description": "patient will receive tiotropium 5 mcg + olodaterol 5 mcg in fixed dose combination once daily, 2 puffs in the morning",
+     "interventionNames": [
+      "Drug: tiotropium+olodaterol"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "placebo to tiotropium + olodaterol",
+     "description": "comparator",
+     "armGroupLabels": [
+      "placebo"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "tiotropium+olodaterol",
+     "description": "tiotropium 5 mcg once daily",
+     "armGroupLabels": [
+      "tiotropium + olodaterol with exercise training and BM"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "tiotropium +olodaterol",
+     "description": "olodaterol 5 mcg once daily fixed dose combination",
+     "armGroupLabels": [
+      "tiotropium + olodaterol high dose with BM"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "tiotropium",
+     "description": "tiotropium 5 mcg once daily fixed dose combination",
+     "armGroupLabels": [
+      "tiotropium"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Endurance Time During Endurance Shuttle Walk Test (ESWT) to Symptom Limitation After 8 Weeks",
+     "description": "Endurance time during ESWT to symptom limitation at walking speed corresponding to 85% of predicted maximum oxygen consumption (VO2 peak) after 8 weeks of pharmacological treatment and non-pharmacological intervention. The numerical value of endurance time in seconds was transformed in log10 scale to correct for skewness and then an analysis of covariance (ANCOVA) was fitted to the log10-transformed data and the least square means (LSMean) and standard error (SE) were obtained. To present the results in a way easier for interpretation, the least square mean from the ANCOVA fitted to the log10-transformed data were transformed back taking 10 to the power of the least square estimate to obtain the geometric mean and the corresponding SE was transformed using delta method to get the corresponding SE of the geometric mean.",
+     "timeFrame": "Week 8"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Average Daily Walking Time Measured by the Activity Monitor in the Week Prior to Week 12",
+     "description": "Average daily walking time measured by the activity monitor in the week prior to Week 12.",
+     "timeFrame": "Week 12"
+    },
+    {
+     "measure": "Average Daily Walking Intensity Measured by the Activity Monitor in the Week Prior to 12 Weeks of Treatment",
+     "description": "Average daily walking intensity measured by the activity monitor in the week prior to 12 weeks of treatment. The Movement Intensity (MI) is derived from the acceleration signals. Since seismic sensors measure gravitational acceleration (g) in static situations, the acceleration signal is expressed relative to g (1g = 9.81m/s2). To calculate movement intensity (MI) the gravitational acceleration in static situations was removed and the rotation vector of the three accelerometer signals was calculated. The MI gives an indication of the power of movements.",
+     "timeFrame": "Week 12"
+    },
+    {
+     "measure": "Perceived Difficulties as Evaluated With Functional Performance Inventory-Short Form (FPI-SF) Total Score at Week 12",
+     "description": "Perceived difficulties as evaluated with FPI-SF. FPI-SF self-report questionnaire has 6 domains: Body care(5 items), Household maintenance(8 items), Physical exercise(5 items), Recreation(5 items), Spiritual activities(4 items) and Social interaction(5 items) with five possible answers on each item: Do with no difficulty - 3, Do with some difficulty - 2, Do with great difficulty - 1, don't do because of health reasons - 0, and don't do because choose not to - 0. Domain scores are expressed as mean values, with at least 6 non-missing items required for the household maintenance domain and at least 3 non-missing items for the other domains. Total score is the mean across the six domains. So total and domain scores range from 0 to 3, with higher scores indicating higher levels of functional activity within and across domains. Respondents engaged in many activities with no difficulty will score high on the FPI, while those who perform few activities with much difficulty will score low.",
+     "timeFrame": "Week 12"
+    },
+    {
+     "measure": "Endurance Time During Endurance Shuttle Walk Test (ESWT) to Symptom Limitation After 12 Weeks",
+     "description": "Endurance time during ESWT to symptom limitation at walking speed corresponding to 85% of maximum oxygen consumption (VO2 peak) after 12 weeks of pharmacological treatment and non-pharmacological intervention. The numerical value of endurance time in seconds was transformed in log10 scale to correct for skewness and then the ANCOVA was fitted to the log10-transformed data and the least square means and SE were obtained. To present the results in a way easier for interpretation, the least square mean from the ANCOVA fitted to the log10-transformed data were transformed back taking 10 to the power of the least square estimate to obtain the geometric mean and the corresponding SE was transformed using delta method to get the corresponding SE of the geometric mean.",
+     "timeFrame": "Week 12"
+    },
+    {
+     "measure": "One Hour, Post-dose Forced Expiratory Volume in One Second (FEV1) After 8 Weeks of Treatment",
+     "description": "One hour, Post-dose Forced Expiratory Volume in One Second (FEV1) after 8 weeks of treatment.",
+     "timeFrame": "Week 8"
+    },
+    {
+     "measure": "One Hour, Post-dose Forced Vital Capacity (FVC) After 8 Weeks of Treatment",
+     "description": "One hour, Post-dose Forced Vital Capacity (FVC) after 8 weeks of treatment.",
+     "timeFrame": "Week 8"
+    },
+    {
+     "measure": "Resting Inspiratory Capacity (IC) Measured at 1.5 Hours Post Dose After 8 Weeks of Treatment",
+     "description": "Resting inspiratory capacity (IC) measured at 1.5 hours post dose after 8 weeks of treatment.",
+     "timeFrame": "Week 8"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion criteria:\n\n* All patients must sign an informed consent consistent with International Conference on Harmonisation of Technical Requirements for Registration of Pharmaceuticals for Human Use (ICH) - Good Clinical Practice (GCP) guidelines prior to participation in the trial, which includes medication washout and restrictions.\n* All patients must have a diagnosis of chronic obstructive pulmonary disease and must meet the following spirometric criteria: Patients must have relatively stable airway obstruction with a post-bronchodilator forced expiratory volume in one second \\>=30% and \\<80% of predicted normal; Global Initiative for Chronic Obstructive Lung Disease grade II - III, and a post-bronchodilator Tiffeneau index \\<70% at Visit 1.\n* Male or female patients, aged \\>=40 years and \\<=75 years.\n* Patients must be current or ex-smokers with a smoking history of more than 10 pack years. Patients who have never smoked cigarettes must be excluded.\n\nExclusion criteria:\n\n* Patients with a significant disease other than chronic obstructive pulmonary disease.\n* Patients with clinically relevant abnormal baseline haematology, blood chemistry, or urinalysis.\n* Patients with a history of asthma.\n* A diagnosis of thyrotoxicosis.\n* A diagnosis of paroxysmal tachycardia (\\>100 beats per minute).\n* A history of myocardial infarction within 1 year of screening visit.\n* Unstable or life-threatening cardiac arrhythmia.\n* Hospitalized for heart failure within the past year.\n* Known active tuberculosis.\n* A malignancy for which patient has undergone resection, radiation therapy or chemotherapy within last five years.\n* A history of life-threatening pulmonary obstruction and patients with chronic respiratory failure.\n* A history of cystic fibrosis.\n* Clinically evident bronchiectasis.\n* A history of significant alcohol or drug abuse.\n* Any contraindications for exercise testing.\n* Patients who have undergone thoracotomy with pulmonary resection.\n* Patients being treated with any oral ß-adrenergics.\n* Patients being treated with oral corticosteroid medication at unstable doses (i.e., less than six weeks on a stable dose) or at doses in excess of the equivalent of 10 mg of prednisone per day or 20 mg every other day.\n* Patients who regularly use daytime oxygen therapy for more than one hour per day and in the investigators opinion will be unable to abstain from the use of oxygen therapy during clinic visits.\n* Patients who have completed a pulmonary rehabilitation program in the six weeks prior to the screening visit or patients who are currently in a pulmonary rehabilitation program.\n* Patients who have a limitation of exercise performance as a result of factors other than fatigue or exertional dyspnoea, such as arthritis in the leg, angina pectoris or claudication or morbid obesity.\n* Patients who have taken an investigational drug within one month or six half lives (whichever is greater) prior to screening visit.\n* Patients with known hypersensitivity to ß-adrenergics drugs, anticholinergic drugs, benzalkonium chloride, disodium edentat, or any other component of the Respimat® inhalation solution delivery system.\n* Pregnant or nursing women.\n* Women of childbearing potential not using highly effective methods of birth control.\n* Patients who have previously been randomized in this study or are currently participating in another study.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "75 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Boehringer Ingelheim",
+     "affiliation": "Boehringer Ingelheim",
+     "role": "STUDY_CHAIR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "San Diego",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.71571,
+      "lon": -117.16472
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Torrance",
+     "state": "California",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.83585,
+      "lon": -118.34063
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Hartford",
+     "state": "Connecticut",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.76371,
+      "lon": -72.68509
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Daw Park",
+     "state": "South Australia",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -34.98975,
+      "lon": 138.58407
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Glen Osmond",
+     "state": "South Australia",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -34.9596,
+      "lon": 138.64873
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Salzburg",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 47.79941,
+      "lon": 13.04399
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Genk",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.965,
+      "lon": 5.50082
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Hasselt",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.93106,
+      "lon": 5.33781
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Leuven",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.87959,
+      "lon": 4.70093
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Montreal",
+     "state": "Quebec",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.50884,
+      "lon": -73.58781
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Ste-Foy",
+     "state": "Quebec",
+     "country": "Canada"
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Saskatoon",
+     "state": "Saskatchewan",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 52.13238,
+      "lon": -106.66892
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Kolding",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.4904,
+      "lon": 9.47216
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "København NV",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.71258,
+      "lon": 12.52343
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Odense",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.39594,
+      "lon": 10.38831
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Berlin",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Bochum",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.48165,
+      "lon": 7.21648
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Frankfurt",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.68333,
+      "lon": 10.53333
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Großhansdorf",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.66528,
+      "lon": 10.28552
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Heidelberg",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.40768,
+      "lon": 8.69079
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Leverkusen",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.0303,
+      "lon": 6.98432
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Solingen",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.17343,
+      "lon": 7.0845
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Teuchern",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.12094,
+      "lon": 12.0241
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Tübingen",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 48.52266,
+      "lon": 9.05222
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Greenlane East Auckland NZ",
+     "country": "New Zealand"
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Gdansk",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 54.35227,
+      "lon": 18.64912
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Lodz",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 51.77058,
+      "lon": 19.47395
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Starachowice",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 51.0374,
+      "lon": 21.07126
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Coimbra",
+     "country": "Portugal",
+     "geoPoint": {
+      "lat": 40.20686,
+      "lon": -8.41996
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Lisbon",
+     "country": "Portugal",
+     "geoPoint": {
+      "lat": 38.72509,
+      "lon": -9.1498
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Porto",
+     "country": "Portugal",
+     "geoPoint": {
+      "lat": 41.1485,
+      "lon": -8.61097
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Leicester",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 52.6386,
+      "lon": -1.13169
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Norwich",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 52.62783,
+      "lon": 1.29834
+     }
+    },
+    {
+     "facility": "Boehringer Ingelheim Investigational Site",
+     "city": "Sheffield",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.38297,
+      "lon": -1.4659
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "27075841",
+     "type": "DERIVED",
+     "citation": "Troosters T, Bourbeau J, Maltais F, Leidy N, Erzen D, De Sousa D, Korducki L, Hamilton A. Enhancing exercise tolerance and physical activity in COPD with combined pharmacological and non-pharmacological interventions: PHYSACTO randomised, placebo-controlled study design. BMJ Open. 2016 Apr 13;6(4):e010106. doi: 10.1136/bmjopen-2015-010106."
+    },
+    {
+     "pmid": "27044576",
+     "type": "DERIVED",
+     "citation": "Bourbeau J, Lavoie KL, Sedeno M, De Sousa D, Erzen D, Hamilton A, Maltais F, Troosters T, Leidy N. Behaviour-change intervention in a multicentre, randomised, placebo-controlled COPD study: methodological considerations and implementation. BMJ Open. 2016 Apr 4;6(4):e010109. doi: 10.1136/bmjopen-2015-010109."
+    }
+   ],
+   "seeAlsoLinks": [
+    {
+     "label": "Related Info",
+     "url": "http://trials.boehringer-ingelheim.com/"
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "An exploratory, randomised, partially double-blinded, placebo-controlled, parallel group trial to explore the effects of tiotropium + olodaterol fixed dose combination (FDC) or tiotropium, supervised exercise training and behaviour modification on exercise capacity and physical activity in patients with Chronic Obstructive Pulmonary Disease (COPD)",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Placebo With Behavioural Modification (BM)",
+     "description": "Placebo matching tiotropium + olodaterol FDC or tiotropium solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+    },
+    {
+     "id": "FG001",
+     "title": "Tiotropium (Tio) 5 Micro-grams (μg) With BM",
+     "description": "Tiotropium 5 μg solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+    },
+    {
+     "id": "FG002",
+     "title": "Tiotropium + Olodaterol (Olo) (5/5 μg) FDC With BM",
+     "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+    },
+    {
+     "id": "FG003",
+     "title": "Tio+Olo (5/5 μg) FDC With Exercise Training (ET) and BM",
+     "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks; ET was conducted for 8 weeks."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "76"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "76"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "76"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "76"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "64"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "66"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "71"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "66"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "12"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "10"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "10"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Not Treated",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "8"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "4"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "5"
+        }
+       ]
+      },
+      {
+       "type": "Protocol Violation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "4"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "3"
+        }
+       ]
+      },
+      {
+       "type": "Other Reason",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "1"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "populationDescription": "Treated set (TS): This patient set included all patients of the Randomised set (All patients who signed informed consent form and were also randomised, regardless whether the patient was treated with study medication or not.) who were dispensed study medication and were documented to have taken any dose of study medication.",
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Placebo With Behavioural Modification (BM)",
+     "description": "Placebo matching tiotropium + olodaterol FDC or tiotropium solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+    },
+    {
+     "id": "BG001",
+     "title": "Tiotropium (Tio) 5 Micro-grams (μg) With BM",
+     "description": "Tiotropium 5 μg solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+    },
+    {
+     "id": "BG002",
+     "title": "Tiotropium + Olodaterol (Olo) (5/5 μg) FDC With BM",
+     "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+    },
+    {
+     "id": "BG003",
+     "title": "Tio+Olo (5/5 μg) FDC With Exercise Training (ET) and BM",
+     "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks; ET was conducted for 8 weeks."
+    },
+    {
+     "id": "BG004",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "75"
+      },
+      {
+       "groupId": "BG001",
+       "value": "76"
+      },
+      {
+       "groupId": "BG002",
+       "value": "76"
+      },
+      {
+       "groupId": "BG003",
+       "value": "76"
+      },
+      {
+       "groupId": "BG004",
+       "value": "303"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "64.4",
+           "spread": "6.6"
+          },
+          {
+           "groupId": "BG001",
+           "value": "65.1",
+           "spread": "6.4"
+          },
+          {
+           "groupId": "BG002",
+           "value": "65.0",
+           "spread": "6.9"
+          },
+          {
+           "groupId": "BG003",
+           "value": "64.7",
+           "spread": "6.5"
+          },
+          {
+           "groupId": "BG004",
+           "value": "64.8",
+           "spread": "6.6"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Gender",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "23"
+          },
+          {
+           "groupId": "BG001",
+           "value": "21"
+          },
+          {
+           "groupId": "BG002",
+           "value": "28"
+          },
+          {
+           "groupId": "BG003",
+           "value": "31"
+          },
+          {
+           "groupId": "BG004",
+           "value": "103"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "52"
+          },
+          {
+           "groupId": "BG001",
+           "value": "55"
+          },
+          {
+           "groupId": "BG002",
+           "value": "48"
+          },
+          {
+           "groupId": "BG003",
+           "value": "45"
+          },
+          {
+           "groupId": "BG004",
+           "value": "200"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Endurance Time During Endurance Shuttle Walk Test (ESWT) to Symptom Limitation After 8 Weeks",
+     "description": "Endurance time during ESWT to symptom limitation at walking speed corresponding to 85% of predicted maximum oxygen consumption (VO2 peak) after 8 weeks of pharmacological treatment and non-pharmacological intervention. The numerical value of endurance time in seconds was transformed in log10 scale to correct for skewness and then an analysis of covariance (ANCOVA) was fitted to the log10-transformed data and the least square means (LSMean) and standard error (SE) were obtained. To present the results in a way easier for interpretation, the least square mean from the ANCOVA fitted to the log10-transformed data were transformed back taking 10 to the power of the least square estimate to obtain the geometric mean and the corresponding SE was transformed using delta method to get the corresponding SE of the geometric mean.",
+     "populationDescription": "Full analysis set (FAS): This patient set included all patients in the Treated set (TS) who had baseline measurement and at least 1 post-baseline measurement for the primary endpoint. Patients were assigned to the FAS after implementation of any data handling rules that set measurements to missing. Patients with available data were included.",
+     "reportingStatus": "POSTED",
+     "paramType": "GEOMETRIC_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Second",
+     "timeFrame": "Week 8",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo With Behavioural Modification (BM)",
+       "description": "Placebo matching tiotropium + olodaterol FDC or tiotropium solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium (Tio) 5 Micro-grams (μg) With BM",
+       "description": "Tiotropium 5 μg solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium + Olodaterol (Olo) (5/5 μg) FDC With BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tio+Olo (5/5 μg) FDC With Exercise Training (ET) and BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks; ET was conducted for 8 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "65"
+        },
+        {
+         "groupId": "OG001",
+         "value": "67"
+        },
+        {
+         "groupId": "OG002",
+         "value": "72"
+        },
+        {
+         "groupId": "OG003",
+         "value": "70"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "244.07",
+           "spread": "17.666"
+          },
+          {
+           "groupId": "OG001",
+           "value": "254.18",
+           "spread": "18.099"
+          },
+          {
+           "groupId": "OG002",
+           "value": "315.32",
+           "spread": "21.671"
+          },
+          {
+           "groupId": "OG003",
+           "value": "355.73",
+           "spread": "24.787"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "groupDescription": "This treatment comparison is the first one in the alpha-protected hierarchical testing chain.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0002",
+       "pValueComment": "ANCOVA model with categorical effect of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "statisticalComment": "Mean and 95% confidence limits were transformed from log10 back to the original scale. SE was back transformed using the delta method.",
+       "paramType": "Treatment ratio",
+       "paramValue": "1.458",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "1.196",
+       "ciUpperLimit": "1.777",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.147",
+       "estimateComment": "Ratio of means calculated as back transformation of difference on log 10 scale between Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Placebo with behavioural modification (BM)."
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "groupDescription": "This treatment comparison is the second one in the alpha-protected hierarchical testing chain.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0109",
+       "pValueComment": "ANCOVA model with categorical effect of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "statisticalComment": "Mean and 95% confidence limits were transformed from log10 back to the original scale. SE was back transformed using the delta method.",
+       "paramType": "Treatment ratio",
+       "paramValue": "1.292",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "1.061",
+       "ciUpperLimit": "1.573",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.129",
+       "estimateComment": "Ratio of means calculated as back transformation of difference on log 10 scale between Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Placebo with behavioural modification (BM)."
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "groupDescription": "This treatment comparison is the third one in the alpha-protected hierarchical testing chain. Since the p-value for this treatment comparison is \\>0.05, the hierarchical testing chain is broken and all of the following hypothesis tests in this hierarchical chain are considered as descriptive only.",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.6895",
+       "pValueComment": "ANCOVA model with categorical effect of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "statisticalComment": "Mean and 95% confidence limits were transformed from log10 back to the original scale. SE was back transformed using the delta method.",
+       "paramType": "Treatment ratio",
+       "paramValue": "1.041",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.853",
+       "ciUpperLimit": "1.272",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.106",
+       "estimateComment": "Ratio of means calculated as back transformation of difference on log 10 scale between Tiotropium (Tio) 5 micro-grams (μg) with BM minus Placebo with behavioural modification (BM)."
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.2188",
+       "pValueComment": "ANCOVA model with categorical effect of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "statisticalComment": "Mean and 95% confidence limits were transformed from log10 back to the original scale. SE was back transformed using the delta method.",
+       "paramType": "Treatment ratio",
+       "paramValue": "1.128",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.931",
+       "ciUpperLimit": "1.368",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.110",
+       "estimateComment": "Ratio of means calculated as back transformation of difference on log 10 scale between Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0303",
+       "pValueComment": "ANCOVA model with categorical effect of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "statisticalComment": "Mean and 95% confidence limits were transformed from log10 back to the original scale. SE was back transformed using the delta method.",
+       "paramType": "Treatment ratio",
+       "paramValue": "1.241",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "1.021",
+       "ciUpperLimit": "1.507",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.123",
+       "estimateComment": "Ratio of means calculated as back transformation of difference on log 10 scale between Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Tiotropium (Tio) 5 micro-grams (μg) with BM."
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Average Daily Walking Time Measured by the Activity Monitor in the Week Prior to Week 12",
+     "description": "Average daily walking time measured by the activity monitor in the week prior to Week 12.",
+     "populationDescription": "Full analysis set (FAS): This patient set included all patients in the TS who had baseline measurement and at least 1 post-baseline measurement for the primary endpoint. Patients were assigned to the FAS after implementation of any data handling rules that set measurements to missing. Patients with available data were included.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Second",
+     "timeFrame": "Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo With Behavioural Modification (BM)",
+       "description": "Placebo matching tiotropium + olodaterol FDC or tiotropium solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium (Tio) 5 Micro-grams (μg) With BM",
+       "description": "Tiotropium 5 μg solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium + Olodaterol (Olo) (5/5 μg) FDC With BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tio+Olo (5/5 μg) FDC With Exercise Training (ET) and BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks; ET was conducted for 8 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "55"
+        },
+        {
+         "groupId": "OG001",
+         "value": "57"
+        },
+        {
+         "groupId": "OG002",
+         "value": "60"
+        },
+        {
+         "groupId": "OG003",
+         "value": "57"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "4670.78",
+           "spread": "211.798"
+          },
+          {
+           "groupId": "OG001",
+           "value": "4145.85",
+           "spread": "207.351"
+          },
+          {
+           "groupId": "OG002",
+           "value": "4831.85",
+           "spread": "202.261"
+          },
+          {
+           "groupId": "OG003",
+           "value": "4338.80",
+           "spread": "207.252"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.2639",
+       "pValueComment": "An ANCOVA model with categorical effects of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "paramType": "LSMean Difference",
+       "paramValue": "-331.975",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-916.015",
+       "ciUpperLimit": "252.064",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "296.375",
+       "estimateComment": "The LSMean Difference is calculated as Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.5837",
+       "pValueComment": "An ANCOVA model with categorical effects of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "paramType": "LSMean Difference",
+       "paramValue": "161.072",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-417.314",
+       "ciUpperLimit": "739.459",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "293.506",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0783",
+       "pValueComment": "An ANCOVA model with categorical effects of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "paramType": "LSMean Difference",
+       "paramValue": "-524.926",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-1109.806",
+       "ciUpperLimit": "59.954",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "296.802",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium (Tio) 5 micro-grams (μg) with BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0900",
+       "pValueComment": "An ANCOVA model with categorical effects of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "paramType": "LSMean Difference",
+       "paramValue": "-493.048",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-1063.670",
+       "ciUpperLimit": "77.575",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "289.566",
+       "estimateComment": "The LSMean Difference is calculated as Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0186",
+       "pValueComment": "An ANCOVA model with categorical effects of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "paramType": "LSMean Difference",
+       "paramValue": "685.998",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "115.635",
+       "ciUpperLimit": "1256.362",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "289.435",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Tiotropium (Tio) 5 micro-grams (μg) with BM"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Average Daily Walking Intensity Measured by the Activity Monitor in the Week Prior to 12 Weeks of Treatment",
+     "description": "Average daily walking intensity measured by the activity monitor in the week prior to 12 weeks of treatment. The Movement Intensity (MI) is derived from the acceleration signals. Since seismic sensors measure gravitational acceleration (g) in static situations, the acceleration signal is expressed relative to g (1g = 9.81m/s2). To calculate movement intensity (MI) the gravitational acceleration in static situations was removed and the rotation vector of the three accelerometer signals was calculated. The MI gives an indication of the power of movements.",
+     "populationDescription": "Full analysis set (FAS): This patient set included all patients in the TS who had baseline measurement and at least 1 post-baseline measurement for the primary endpoint. Patients were assigned to the FAS after implementation of any data handling rules that set measurements to missing. Patients with available data were included.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Multiple of 9.8*(meters / (second^2))",
+     "timeFrame": "Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo With Behavioural Modification (BM)",
+       "description": "Placebo matching tiotropium + olodaterol FDC or tiotropium solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium (Tio) 5 Micro-grams (μg) With BM",
+       "description": "Tiotropium 5 μg solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium + Olodaterol (Olo) (5/5 μg) FDC With BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tio+Olo (5/5 μg) FDC With Exercise Training (ET) and BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks; ET was conducted for 8 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "54"
+        },
+        {
+         "groupId": "OG001",
+         "value": "56"
+        },
+        {
+         "groupId": "OG002",
+         "value": "58"
+        },
+        {
+         "groupId": "OG003",
+         "value": "57"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.20",
+           "spread": "0.003"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.20",
+           "spread": "0.003"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.20",
+           "spread": "0.003"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.20",
+           "spread": "0.003"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.5186",
+       "pValueComment": "An ANCOVA model with categorical effects of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "paramType": "LSMean Difference",
+       "paramValue": "-0.002",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.010",
+       "ciUpperLimit": "0.005",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.004",
+       "estimateComment": "The LSMean Difference is calculated as Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.6436",
+       "pValueComment": "An ANCOVA model with categorical effects of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.002",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.006",
+       "ciUpperLimit": "0.009",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.004",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.1081",
+       "pValueComment": "An ANCOVA model with categorical effects of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "paramType": "LSMean Difference",
+       "paramValue": "-0.006",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.014",
+       "ciUpperLimit": "0.001",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.004",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium (Tio) 5 micro-grams (μg) with BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.2612",
+       "pValueComment": "An ANCOVA model with categorical effects of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "paramType": "LSMean Difference",
+       "paramValue": "-0.004",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.011",
+       "ciUpperLimit": "0.003",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.004",
+       "estimateComment": "The LSMean Difference is calculated as Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0361",
+       "pValueComment": "An ANCOVA model with categorical effects of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.008",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.001",
+       "ciUpperLimit": "0.015",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.004",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Tiotropium (Tio) 5 micro-grams (μg) with BM"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Perceived Difficulties as Evaluated With Functional Performance Inventory-Short Form (FPI-SF) Total Score at Week 12",
+     "description": "Perceived difficulties as evaluated with FPI-SF. FPI-SF self-report questionnaire has 6 domains: Body care(5 items), Household maintenance(8 items), Physical exercise(5 items), Recreation(5 items), Spiritual activities(4 items) and Social interaction(5 items) with five possible answers on each item: Do with no difficulty - 3, Do with some difficulty - 2, Do with great difficulty - 1, don't do because of health reasons - 0, and don't do because choose not to - 0. Domain scores are expressed as mean values, with at least 6 non-missing items required for the household maintenance domain and at least 3 non-missing items for the other domains. Total score is the mean across the six domains. So total and domain scores range from 0 to 3, with higher scores indicating higher levels of functional activity within and across domains. Respondents engaged in many activities with no difficulty will score high on the FPI, while those who perform few activities with much difficulty will score low.",
+     "populationDescription": "Full analysis set (FAS): This patient set included all patients in the TS who had baseline measurement and at least 1 post-baseline measurement for the primary endpoint. Patients were assigned to the FAS after implementation of any data handling rules that set measurements to missing. Patients with available data were included.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Units on a scale",
+     "timeFrame": "Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo With Behavioural Modification (BM)",
+       "description": "Placebo matching tiotropium + olodaterol FDC or tiotropium solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium (Tio) 5 Micro-grams (μg) With BM",
+       "description": "Tiotropium 5 μg solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium + Olodaterol (Olo) (5/5 μg) FDC With BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tio+Olo (5/5 μg) FDC With Exercise Training (ET) and BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks; ET was conducted for 8 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "64"
+        },
+        {
+         "groupId": "OG001",
+         "value": "65"
+        },
+        {
+         "groupId": "OG002",
+         "value": "71"
+        },
+        {
+         "groupId": "OG003",
+         "value": "67"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.191",
+           "spread": "0.040"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.207",
+           "spread": "0.040"
+          },
+          {
+           "groupId": "OG002",
+           "value": "2.335",
+           "spread": "0.038"
+          },
+          {
+           "groupId": "OG003",
+           "value": "2.268",
+           "spread": "0.039"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.1727",
+       "pValueComment": "An ANCOVA model with categorical effects of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.076",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.034",
+       "ciUpperLimit": "0.187",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.056",
+       "estimateComment": "The LSMean Difference is calculated as Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0097",
+       "pValueComment": "An ANCOVA model with categorical effects of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.143",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.035",
+       "ciUpperLimit": "0.252",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.055",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.7815",
+       "pValueComment": "An ANCOVA model with categorical effects of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.016",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.095",
+       "ciUpperLimit": "0.126",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.056",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium (Tio) 5 micro-grams (μg) with BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.2183",
+       "pValueComment": "An ANCOVA model with categorical effects of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "paramType": "LSMean Difference",
+       "paramValue": "-0.067",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.174",
+       "ciUpperLimit": "0.040",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.054",
+       "estimateComment": "The LSMean Difference is calculated as Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0203",
+       "pValueComment": "An ANCOVA model with categorical effects of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.128",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.020",
+       "ciUpperLimit": "0.236",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.055",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Tiotropium (Tio) 5 micro-grams (μg) with BM"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Endurance Time During Endurance Shuttle Walk Test (ESWT) to Symptom Limitation After 12 Weeks",
+     "description": "Endurance time during ESWT to symptom limitation at walking speed corresponding to 85% of maximum oxygen consumption (VO2 peak) after 12 weeks of pharmacological treatment and non-pharmacological intervention. The numerical value of endurance time in seconds was transformed in log10 scale to correct for skewness and then the ANCOVA was fitted to the log10-transformed data and the least square means and SE were obtained. To present the results in a way easier for interpretation, the least square mean from the ANCOVA fitted to the log10-transformed data were transformed back taking 10 to the power of the least square estimate to obtain the geometric mean and the corresponding SE was transformed using delta method to get the corresponding SE of the geometric mean.",
+     "populationDescription": "Full analysis set (FAS): This patient set included all patients in the TS who had baseline measurement and at least 1 post-baseline measurement for the primary endpoint. Patients were assigned to the FAS after implementation of any data handling rules that set measurements to missing. Patients with available data were included.",
+     "reportingStatus": "POSTED",
+     "paramType": "GEOMETRIC_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Second",
+     "timeFrame": "Week 12",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo With Behavioural Modification (BM)",
+       "description": "Placebo matching tiotropium + olodaterol FDC or tiotropium solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium (Tio) 5 Micro-grams (μg) With BM",
+       "description": "Tiotropium 5 μg solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium + Olodaterol (Olo) (5/5 μg) FDC With BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tio+Olo (5/5 μg) FDC With Exercise Training (ET) and BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks; ET was conducted for 8 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "62"
+        },
+        {
+         "groupId": "OG001",
+         "value": "64"
+        },
+        {
+         "groupId": "OG002",
+         "value": "71"
+        },
+        {
+         "groupId": "OG003",
+         "value": "66"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "243.30",
+           "spread": "18.680"
+          },
+          {
+           "groupId": "OG001",
+           "value": "255.67",
+           "spread": "19.292"
+          },
+          {
+           "groupId": "OG002",
+           "value": "302.61",
+           "spread": "21.691"
+          },
+          {
+           "groupId": "OG003",
+           "value": "324.21",
+           "spread": "24.095"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0077",
+       "pValueComment": "ANCOVA model with categorical effect of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "statisticalComment": "Mean and 95% confidence limits were transformed from log10 back to the original scale. SE was back transformed using the delta method.",
+       "paramType": "Treatment ratio",
+       "paramValue": "1.333",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "1.080",
+       "ciUpperLimit": "1.645",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.142",
+       "estimateComment": "Ratio of means calculated as back transformation of difference on log 10 scale between Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Placebo with behavioural modification (BM)."
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0390",
+       "pValueComment": "ANCOVA model with categorical effect of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "statisticalComment": "Mean and 95% confidence limits were transformed from log10 back to the original scale. SE was back transformed using the delta method.",
+       "paramType": "Treatment ratio",
+       "paramValue": "1.244",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "1.011",
+       "ciUpperLimit": "1.530",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.131",
+       "estimateComment": "Ratio of means calculated as back transformation of difference on log 10 scale between Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Placebo with behavioural modification (BM)."
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.6452",
+       "pValueComment": "ANCOVA model with categorical effect of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "statisticalComment": "Mean and 95% confidence limits were transformed from log10 back to the original scale. SE was back transformed using the delta method.",
+       "paramType": "Treatment ratio",
+       "paramValue": "1.051",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.850",
+       "ciUpperLimit": "1.299",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.113",
+       "estimateComment": "Ratio of means calculated as back transformation of difference on log 10 scale between Tiotropium (Tio) 5 micro-grams (μg) with BM minus Placebo with behavioural modification (BM)."
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.5048",
+       "pValueComment": "ANCOVA model with categorical effect of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "statisticalComment": "Mean and 95% confidence limits were transformed from log10 back to the original scale. SE was back transformed using the delta method.",
+       "paramType": "Treatment ratio",
+       "paramValue": "1.071",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.874",
+       "ciUpperLimit": "1.313",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.111",
+       "estimateComment": "Ratio of means calculated as back transformation of difference on log 10 scale between Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM."
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.1066",
+       "pValueComment": "ANCOVA model with categorical effect of treatment and baseline as covariate.",
+       "statisticalMethod": "ANCOVA",
+       "statisticalComment": "Mean and 95% confidence limits were transformed from log10 back to the original scale. SE was back transformed using the delta method.",
+       "paramType": "Treatment ratio",
+       "paramValue": "1.184",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.964",
+       "ciUpperLimit": "1.453",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.123",
+       "estimateComment": "Ratio of means calculated as back transformation of difference on log 10 scale between Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Tiotropium (Tio) 5 micro-grams (μg) with BM."
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "One Hour, Post-dose Forced Expiratory Volume in One Second (FEV1) After 8 Weeks of Treatment",
+     "description": "One hour, Post-dose Forced Expiratory Volume in One Second (FEV1) after 8 weeks of treatment.",
+     "populationDescription": "Full analysis set (FAS): This patient set included all patients in the TS who had baseline measurement and at least 1 post-baseline measurement for the primary endpoint. Patients were assigned to the FAS after implementation of any data handling rules that set measurements to missing. Patients with available data were included.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "Week 8",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo With Behavioural Modification (BM)",
+       "description": "Placebo matching tiotropium + olodaterol FDC or tiotropium solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium (Tio) 5 Micro-grams (μg) With BM",
+       "description": "Tiotropium 5 μg solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium + Olodaterol (Olo) (5/5 μg) FDC With BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tio+Olo (5/5 μg) FDC With Exercise Training (ET) and BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks; ET was conducted for 8 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "65"
+        },
+        {
+         "groupId": "OG001",
+         "value": "67"
+        },
+        {
+         "groupId": "OG002",
+         "value": "72"
+        },
+        {
+         "groupId": "OG003",
+         "value": "70"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.375",
+           "spread": "0.027"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.550",
+           "spread": "0.027"
+          },
+          {
+           "groupId": "OG002",
+           "value": "1.731",
+           "spread": "0.026"
+          },
+          {
+           "groupId": "OG003",
+           "value": "1.705",
+           "spread": "0.026"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "Mixed effect Model Repeat Measurement (MMRM) including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.329",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.255",
+       "ciUpperLimit": "0.403",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.038",
+       "estimateComment": "The LSMean Difference is calculated as Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "MMRM model including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.356",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.282",
+       "ciUpperLimit": "0.429",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.037",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "MMRM model including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.174",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.099",
+       "ciUpperLimit": "0.249",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.038",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium (Tio) 5 micro-grams (μg) with BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.4677",
+       "pValueComment": "MMRM model including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom",
+       "paramType": "LSMean Difference",
+       "paramValue": "-0.027",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.099",
+       "ciUpperLimit": "0.045",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.037",
+       "estimateComment": "The LSMean Difference is calculated as Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "MMRM model including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.182",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.109",
+       "ciUpperLimit": "0.255",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.037",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Tiotropium (Tio) 5 micro-grams (μg) with BM"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "One Hour, Post-dose Forced Vital Capacity (FVC) After 8 Weeks of Treatment",
+     "description": "One hour, Post-dose Forced Vital Capacity (FVC) after 8 weeks of treatment.",
+     "populationDescription": "Full analysis set (FAS): This patient set included all patients in the TS who had baseline measurement and at least 1 post-baseline measurement for the primary endpoint. Patients were assigned to the FAS after implementation of any data handling rules that set measurements to missing. Patients with available data were included.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "Week 8",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo With Behavioural Modification (BM)",
+       "description": "Placebo matching tiotropium + olodaterol FDC or tiotropium solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium (Tio) 5 Micro-grams (μg) With BM",
+       "description": "Tiotropium 5 μg solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium + Olodaterol (Olo) (5/5 μg) FDC With BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tio+Olo (5/5 μg) FDC With Exercise Training (ET) and BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks; ET was conducted for 8 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "65"
+        },
+        {
+         "groupId": "OG001",
+         "value": "67"
+        },
+        {
+         "groupId": "OG002",
+         "value": "72"
+        },
+        {
+         "groupId": "OG003",
+         "value": "70"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.974",
+           "spread": "0.047"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.259",
+           "spread": "0.046"
+          },
+          {
+           "groupId": "OG002",
+           "value": "3.504",
+           "spread": "0.044"
+          },
+          {
+           "groupId": "OG003",
+           "value": "3.452",
+           "spread": "0.045"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "Mixed effect Model Repeat Measurement (MMRM) including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.478",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.350",
+       "ciUpperLimit": "0.606",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.065",
+       "estimateComment": "The LSMean Difference is calculated as Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "MMRM model including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.530",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.403",
+       "ciUpperLimit": "0.657",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.064",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "MMRM model including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.286",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.157",
+       "ciUpperLimit": "0.415",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.066",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium (Tio) 5 micro-grams (μg) with BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.4107",
+       "pValueComment": "MMRM model including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom",
+       "paramType": "LSMean Difference",
+       "paramValue": "-0.052",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.176",
+       "ciUpperLimit": "0.072",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.063",
+       "estimateComment": "The LSMean Difference is calculated as Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0002",
+       "pValueComment": "MMRM model including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.244",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.119",
+       "ciUpperLimit": "0.370",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.064",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Tiotropium (Tio) 5 micro-grams (μg) with BM"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Resting Inspiratory Capacity (IC) Measured at 1.5 Hours Post Dose After 8 Weeks of Treatment",
+     "description": "Resting inspiratory capacity (IC) measured at 1.5 hours post dose after 8 weeks of treatment.",
+     "populationDescription": "Full analysis set (FAS): This patient set included all patients in the TS who had baseline measurement and at least 1 post-baseline measurement for the primary endpoint. Patients were assigned to the FAS after implementation of any data handling rules that set measurements to missing. Patients with available data were included.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "Week 8",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo With Behavioural Modification (BM)",
+       "description": "Placebo matching tiotropium + olodaterol FDC or tiotropium solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG001",
+       "title": "Tiotropium (Tio) 5 Micro-grams (μg) With BM",
+       "description": "Tiotropium 5 μg solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG002",
+       "title": "Tiotropium + Olodaterol (Olo) (5/5 μg) FDC With BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks."
+      },
+      {
+       "id": "OG003",
+       "title": "Tio+Olo (5/5 μg) FDC With Exercise Training (ET) and BM",
+       "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks; ET was conducted for 8 weeks."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "64"
+        },
+        {
+         "groupId": "OG001",
+         "value": "66"
+        },
+        {
+         "groupId": "OG002",
+         "value": "72"
+        },
+        {
+         "groupId": "OG003",
+         "value": "68"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.452",
+           "spread": "0.051"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.627",
+           "spread": "0.050"
+          },
+          {
+           "groupId": "OG002",
+           "value": "2.755",
+           "spread": "0.048"
+          },
+          {
+           "groupId": "OG003",
+           "value": "2.771",
+           "spread": "0.049"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "Mixed effect Model Repeat Measurement (MMRM) including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.318",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.179",
+       "ciUpperLimit": "0.457",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.071",
+       "estimateComment": "The LSMean Difference is calculated as Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "pValueComment": "MMRM model including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.302",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.165",
+       "ciUpperLimit": "0.439",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.070",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0145",
+       "pValueComment": "MMRM model including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.174",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.035",
+       "ciUpperLimit": "0.314",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.071",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium (Tio) 5 micro-grams (μg) with BM minus Placebo with behavioural modification (BM)"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.8150",
+       "pValueComment": "MMRM model including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.016",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.118",
+       "ciUpperLimit": "0.151",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.068",
+       "estimateComment": "The LSMean Difference is calculated as Tio+Olo (5/5 μg) FDC with exercise training (ET) and BM minus Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM"
+      },
+      {
+       "groupIds": [
+        "OG001",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0642",
+       "pValueComment": "MMRM model including fixed effects of treatment, planned test day, treatment by test day interaction, baseline, and baseline by test day interaction; patient as a random effect",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Compound symmetry covariance structure for within-patient variation and Kenward-Roger approximation of denominator degrees of freedom",
+       "paramType": "LSMean Difference",
+       "paramValue": "0.128",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-0.008",
+       "ciUpperLimit": "0.263",
+       "dispersionType": "STANDARD_ERROR_OF_MEAN",
+       "dispersionValue": "0.069",
+       "estimateComment": "The LSMean Difference is calculated as Tiotropium + olodaterol (Olo) (5/5 μg) FDC with BM minus Tiotropium (Tio) 5 micro-grams (μg) with BM"
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "From first dose of study medication up to a period of 21 days after the last dose of study medication were assigned to the treatment period, up to 134 days.",
+   "description": "All adverse events, serious and non-serious, occurring during the course of the clinical trial (i.e. from signing the informed consent onwards through the observational phase) were to be collected, documented and reported to the sponsor by the investigator on the appropriate electronic case report form / serious adverse event reporting forms.",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Placebo With Behavioural Modification (BM)",
+     "description": "Placebo matching tiotropium + olodaterol FDC or tiotropium solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks.",
+     "seriousNumAffected": 4,
+     "seriousNumAtRisk": 75,
+     "otherNumAffected": 22,
+     "otherNumAtRisk": 75
+    },
+    {
+     "id": "EG001",
+     "title": "Tiotropium (Tio) 5 Micro-grams (μg) With BM",
+     "description": "Tiotropium 5 μg solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks.",
+     "seriousNumAffected": 11,
+     "seriousNumAtRisk": 76,
+     "otherNumAffected": 19,
+     "otherNumAtRisk": 76
+    },
+    {
+     "id": "EG002",
+     "title": "Tiotropium + Olodaterol (Olo) (5/5 μg) FDC With BM",
+     "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks.",
+     "seriousNumAffected": 3,
+     "seriousNumAtRisk": 76,
+     "otherNumAffected": 16,
+     "otherNumAtRisk": 76
+    },
+    {
+     "id": "EG003",
+     "title": "Tio+Olo (5/5 μg) FDC With Exercise Training (ET) and BM",
+     "description": "Tiotropium 5 μg plus olodaterol 5 μg FDC solution was delivered to the patients orally once daily via RESPIMAT inhaler, with BM for 12 weeks; ET was conducted for 8 weeks.",
+     "seriousNumAffected": 8,
+     "seriousNumAtRisk": 76,
+     "otherNumAffected": 19,
+     "otherNumAtRisk": 76
+    },
+    {
+     "id": "EG004",
+     "title": "Total",
+     "description": "Total",
+     "seriousNumAffected": 26,
+     "seriousNumAtRisk": 303,
+     "otherNumAffected": 76,
+     "otherNumAtRisk": 303
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Acute myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Angina pectoris",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Atrial fibrillation",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Coronary artery disease",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Cholelithiasis",
+     "organSystem": "Hepatobiliary disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Hepatotoxicity",
+     "organSystem": "Hepatobiliary disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Abdominal abscess",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Infective exacerbation of chronic obstructive airways disease",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Urinary tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Alcohol poisoning",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Rib fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Road traffic accident",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Hypokalaemia",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Compartment syndrome",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Basal cell carcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Lung adenocarcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Malignant genitourinary tract neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Non-Hodgkin's lymphoma unspecified histology indolent stage IV",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Non-small cell lung cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Pancreatic neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Small cell lung cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Small cell lung cancer metastatic",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 2,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Carotid artery stenosis",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Syncope",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Benign prostatic hyperplasia",
+     "organSystem": "Reproductive system and breast disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Prostatitis",
+     "organSystem": "Reproductive system and breast disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 5,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Pneumothorax",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 2,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Pulmonary embolism",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Pulmonary hilum mass",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Aortic aneurysm",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Aortic stenosis",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Peripheral arterial occlusive disease",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 1,
+       "numAtRisk": 303
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Nasopharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 8,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 9,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 4,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 10,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 31,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Back pain",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 4,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 2,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 1,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 8,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 16,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 10,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 12,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 13,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 51,
+       "numAtRisk": 303
+      }
+     ]
+    },
+    {
+     "term": "Dyspnoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 18.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 75
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 6,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 2,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 2,
+       "numAtRisk": 76
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 12,
+       "numAtRisk": 303
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "Boehringer Ingelheim (BI) acknowledges that investigators have the right to publish the study results. Investigators shall provide BI with a copy of any publication or presentation for review prior to any submission. Such review will be done with regard to proprietary information, information related to patentable inventions, medical, scientific, and statistical accuracy within 60 days. BI may request a delay of the publication in order to protect BI's intellectual property rights."
+   },
+   "pointOfContact": {
+    "title": "Boehringer Ingelheim, Call Center",
+    "organization": "Boehringer Ingelheim",
+    "email": "clintriage.rdg@boehringer-ingelheim.com",
+    "phone": "1-800-243-0127"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C549647",
+     "term": "olodaterol"
+    },
+    {
+     "id": "C000611386",
+     "term": "tiotropium-olodaterol"
+    },
+    {
+     "id": "D000069447",
+     "term": "Tiotropium Bromide"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D012602",
+     "term": "Scopolamine Derivatives"
+    },
+    {
+     "id": "D014326",
+     "term": "Tropanes"
+    },
+    {
+     "id": "D053961",
+     "term": "Azabicyclo Compounds"
+    },
+    {
+     "id": "D001372",
+     "term": "Aza Compounds"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000470",
+     "term": "Alkaloids"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D019086",
+     "term": "Bridged Bicyclo Compounds, Heterocyclic"
+    },
+    {
+     "id": "D006572",
+     "term": "Heterocyclic Compounds, Bridged-Ring"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

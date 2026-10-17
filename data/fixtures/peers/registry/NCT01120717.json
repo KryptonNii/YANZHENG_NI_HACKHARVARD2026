@@ -1,0 +1,2994 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01120717",
+   "orgStudyIdInfo": {
+    "id": "CQVA149A2307"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2009-013235-38",
+     "type": "EUDRACT_NUMBER"
+    },
+    {
+     "id": "2009",
+     "type": "NIH",
+     "link": "https://reporter.nih.gov/quickSearch/2009"
+    }
+   ],
+   "organization": {
+    "fullName": "Novartis",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "A Study to Assess the Long-term Safety of QVA149",
+   "officialTitle": "A Multicener, Randomised, Double-blind, Placebo-controlled Study, to Assess the Long Term Safety of 52 Weeks Treatment With QVA149 (110 ug Indacaterol/50ug Glycopyrrolate) in Patients With Moderate to Severe Chronic Obstructive Pulmonary Disease (COPD)",
+   "acronym": "ENLIGHTEN"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2013-01",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2010-04"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2011-12",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2011-12",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2010-05-05",
+   "studyFirstSubmitQcDate": "2010-05-10",
+   "studyFirstPostDateStruct": {
+    "date": "2010-05-11",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2012-12-13",
+   "resultsFirstSubmitQcDate": "2012-12-13",
+   "resultsFirstPostDateStruct": {
+    "date": "2013-01-21",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2013-01-28",
+   "lastUpdatePostDateStruct": {
+    "date": "2013-01-31",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Novartis Pharmaceuticals",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "The study is designed to provide long-term safety data for QVA149 in patients with moderate to severe chronic obstructive pulmonary disease (COPD)."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ],
+   "keywords": [
+    "QVA149",
+    "COPD",
+    "combination bronchodilator"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 339,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "QVA149",
+     "type": "EXPERIMENTAL",
+     "description": "110µg/50µg capsule for oral inhalation, once daily, delivered by a single dose dry powder inhaler (SDDPI)",
+     "interventionNames": [
+      "Drug: QVA149"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo to match QVA149, capsules for inhalation once daily, delivered by an SDDPI",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "QVA149",
+     "description": "capsules for inhalation, delivered by an SDDPI",
+     "armGroupLabels": [
+      "QVA149"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "capsules for inhalation, delivered by an SDDPI",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Number of Participants With Adverse Events, Serious Adverse Events or Death",
+     "description": "Adverse events are defined as any unfavorable and unintended diagnosis, symptom, sign (including an abnormal lab finding), syndrome or disease which either occurs during study, having been absent at baseline, or, if present at baseline, appears to worsen. Serious adverse events are any untoward medical occurrences that result in death, are life threatening, require (or prolong) hospitalization, cause persistent or significant disability/incapacity, result in congenital anomalies or birth defects, or are other conditions which in judgments of the investigators represent significant hazards.",
+     "timeFrame": "52 weeks + Follow-up (Up to Day 394)"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Pre-dose FEV1",
+     "description": "Pre-dose FEV1 is defined as the average of the FEV1 15 minutes pre-dose and FEV1 45 minutes pre-dose. A mixed model was used with treatment as a fixed effect, average of 15 min and 45 min pre-dose FEV1 at visit 3 as the baseline measurement, and FEV1 prior to inhalation and FEV1 60 min post inhalation of two short acting bronchodialators as covariates. The model also included smoking status at baseline, history of ICS use and country as fixed effects with center nested within country as a random effect.",
+     "timeFrame": "52 weeks"
+    },
+    {
+     "measure": "Number of Patients With Newly Occurring or Worsening Clinically Notable Hematology Values at Any Timepoint Over the Whole Treatment Period",
+     "description": "Clinically notable hematology values were: hemoglobin - male \\<115g/L, female \\<95 g/L; hematocrit - male \\<0.37v/v, female \\<0.32v/v; white cell count - \\<2.8 10E9/L or \\>16.0 10E9/L; platelets - \\<75 10E9/L or \\>700 10E9/L",
+     "timeFrame": "52 weeks"
+    },
+    {
+     "measure": "Number of Patients With Newly Occurring or Worsening Clinically Notable Biochemistry Values at Any Timepoint Over the Whole Treatment Period",
+     "description": "Clinically notable biochemistry values were: sodium \\<125mmol/L or \\>160mmol/L; potassium \\<3.0mmol/L or \\>6.0mmol/L; BUN \\>9.99mmol/L; creatinine \\>176.8µmol/L; total protein (serum) \\<40g/L or \\>95g/L; albumin \\<25g/L; bilirubin (total) \\>34.2µmol/L; SGPT \\>3 x ULN; SGOT \\> 3 x ULN; gamma glutamyltransferase \\>3 x ULN; alkaline phosphatase (serum) \\>3 x ULN; glucose \\<2.78mmol/L or \\>9.99mmol/L",
+     "timeFrame": "52 weeks"
+    },
+    {
+     "measure": "Number of Patients With Newly Occurring or Worsening Clinically Notable Vital Signs Values at Any Timepoint Over the Whole Treatment Period",
+     "description": "Clinically notable vital sign values were: pulse rate - low, \\<40 bpm or \\<=50 bpm and decrease from baseline \\>=15bpm; pulse rate high, \\>130 bpm or \\>=120bpm and increase from baseline \\>=15 bpm. Systolic blood pressure - low, \\<75 mmHg or \\<=90 mmHg and decrease from baseline \\>=20 mmHg; high, \\>200 mmHg or \\>=180 mmHg and increase from baseline \\>=20 mmHg. Diastolic blood pressure - low, \\<40 mmHg or \\<=50 mmHg and decrease from baseline \\>=15 mmHg; high, \\>115 mmHg or \\>=105 mmHg and increase from baseline \\>=15 mmHg.",
+     "timeFrame": "52 weeks"
+    },
+    {
+     "measure": "Number of Patients With Notable Change From Baseline in Fridericia's QTc Values at Any Timepoint Over the Whole Treatment Period",
+     "description": "Clinically notable change from baseline was and increase from baseline of 30 or greater milliseconds (ms).",
+     "timeFrame": "52 weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Male or female adults aged ≥40 yrs\n* Smoking history of at least 10 pack years\n* Diagnosis of COPD (moderate-to-severe as classified by the Global Initiative for Chronic Obstructive Lung Disease (GOLD) Guidelines, 2008)\n* Post-bronchodilator FEV1 \\< 80% and ≥ 30% of the predicted normal value and post-bronchodilator FEV1/FVC (forced vital capacity) \\<70%\n\nExclusion Criteria:\n\n* Patients who have had a respiratory tract infection within 4 weeks prior to Visit 1\n* Patients with concomitant pulmonary disease\n* Patients with a history of asthma\n* Any patient with lung cancer or a history of lung cancer\n* Patients with a history of certain cardiovascular co-morbid conditions\n* Patients with a known history and diagnosis of alpha-1 antitrypsin deficiency\n* Patients in the active phase of a supervised pulmonary rehabilitation program\n* Patients contraindicated for inhaled anticholinergic agents and β2 agonists\n* Other protocol-defined inclusion/exclusion criteria may apply",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Novartis Pharmaceuticals",
+     "affiliation": "Novartis Pharmaceuticals",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Toronto",
+     "state": "Ontario",
+     "zip": "M3H 5S4",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.70643,
+      "lon": -79.39864
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Mirabel",
+     "state": "Quebec",
+     "zip": "J7J 2K8",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 45.65008,
+      "lon": -74.08251
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Québec",
+     "state": "Quebec",
+     "zip": "G1G 3Z4",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 46.81228,
+      "lon": -71.21454
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Québec",
+     "state": "Quebec",
+     "zip": "G1P 1J6",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 46.81228,
+      "lon": -71.21454
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Beuvry",
+     "state": "France",
+     "zip": "62660",
+     "country": "France",
+     "geoPoint": {
+      "lat": 50.51674,
+      "lon": 2.68541
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Ferolles-Attily",
+     "state": "France",
+     "zip": "77150",
+     "country": "France"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Montpellier",
+     "zip": "34059",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.61093,
+      "lon": 3.87635
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Nantes",
+     "zip": "44000",
+     "country": "France",
+     "geoPoint": {
+      "lat": 47.21725,
+      "lon": -1.55336
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Pessac",
+     "zip": "33604",
+     "country": "France",
+     "geoPoint": {
+      "lat": 44.80565,
+      "lon": -0.6324
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Aszód",
+     "zip": "2170",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.65174,
+      "lon": 19.4785
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Baja",
+     "zip": "6500",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 46.18299,
+      "lon": 18.95307
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Érd",
+     "zip": "2030",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.39489,
+      "lon": 18.91361
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Gödöllő",
+     "zip": "2100",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.59657,
+      "lon": 19.35515
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Makó",
+     "zip": "6900",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 46.21667,
+      "lon": 20.48333
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Chennai - Tamil Nadu",
+     "state": "India",
+     "zip": "600 087",
+     "country": "India"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Banglaore",
+     "state": "Karnataka",
+     "zip": "560027",
+     "country": "India"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Mysore",
+     "state": "Karnataka",
+     "zip": "570004",
+     "country": "India",
+     "geoPoint": {
+      "lat": 12.29791,
+      "lon": 76.63925
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Indore",
+     "state": "Madhya Pradesh",
+     "zip": "452001",
+     "country": "India",
+     "geoPoint": {
+      "lat": 22.71792,
+      "lon": 75.8333
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Mumbai",
+     "state": "Maharashtra",
+     "zip": "400007",
+     "country": "India",
+     "geoPoint": {
+      "lat": 19.07283,
+      "lon": 72.88261
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "New Delhi",
+     "state": "National Capital Territory of Delhi",
+     "zip": "110029",
+     "country": "India",
+     "geoPoint": {
+      "lat": 28.62137,
+      "lon": 77.2148
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Dehli",
+     "state": "New Delhi",
+     "zip": "110063",
+     "country": "India",
+     "geoPoint": {
+      "lat": 26.58587,
+      "lon": 81.22455
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Coimbatore",
+     "state": "Tamil Nadu",
+     "zip": "641044",
+     "country": "India",
+     "geoPoint": {
+      "lat": 11.00555,
+      "lon": 76.96612
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Mangalore",
+     "country": "India",
+     "geoPoint": {
+      "lat": 12.91723,
+      "lon": 74.85603
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Riga",
+     "state": "LV",
+     "zip": "LV-1038",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 56.946,
+      "lon": 24.10589
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Daugavpils",
+     "zip": "LV-5401",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 55.88333,
+      "lon": 26.53333
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Jēkabpils",
+     "zip": "LV-5201",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 56.49903,
+      "lon": 25.85735
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Riga",
+     "zip": "1002",
+     "country": "Latvia",
+     "geoPoint": {
+      "lat": 56.946,
+      "lon": 24.10589
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Alytus",
+     "zip": "LT-62114",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 54.39574,
+      "lon": 24.03885
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Kaunas",
+     "zip": "44320",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 54.90156,
+      "lon": 23.90909
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Klaipėda",
+     "zip": "92288",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 55.7068,
+      "lon": 21.13912
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Klaipėda",
+     "zip": "LT-92231",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 55.7068,
+      "lon": 21.13912
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Vilnius",
+     "zip": "06001",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 54.68916,
+      "lon": 25.2798
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Vilnius",
+     "zip": "LT-08661",
+     "country": "Lithuania",
+     "geoPoint": {
+      "lat": 54.68916,
+      "lon": 25.2798
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bucharest",
+     "state": "District 1",
+     "zip": "011422",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.43225,
+      "lon": 26.10626
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bucharest",
+     "state": "District 1",
+     "zip": "10457",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.43225,
+      "lon": 26.10626
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bucharest",
+     "state": "District 3",
+     "zip": "030303",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.43225,
+      "lon": 26.10626
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Brasov",
+     "state": "Jud. Brasov",
+     "zip": "500118",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 45.64861,
+      "lon": 25.60613
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Iași",
+     "state": "Jud. Iasi",
+     "zip": "700115",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 47.16667,
+      "lon": 27.6
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Pretoria",
+     "zip": "0184",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -25.74486,
+      "lon": 28.18783
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Pretoria",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -25.74486,
+      "lon": 28.18783
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Busan",
+     "state": "Busan",
+     "zip": "602-739",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 35.10168,
+      "lon": 129.03004
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Koyang-si",
+     "state": "Gyeonggi-do",
+     "zip": "410-773",
+     "country": "South Korea"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Seoul",
+     "state": "Seoul",
+     "zip": "140-743",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Seoul",
+     "zip": "158-710",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Cambridge",
+     "state": "United KIngdom",
+     "zip": "CB7 5JD",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 52.2,
+      "lon": 0.11667
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Watford",
+     "state": "United Kingdom",
+     "zip": "WD25 0EA",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.65531,
+      "lon": -0.39602
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bath",
+     "zip": "BA1 2SR",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.3751,
+      "lon": -2.36172
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Bath",
+     "zip": "BA2 3HT",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.3751,
+      "lon": -2.36172
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Chesterfield",
+     "zip": "S40 4TF",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.25,
+      "lon": -1.41667
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Glasgow",
+     "zip": "G69 7AD",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 55.86515,
+      "lon": -4.25763
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Irvine",
+     "zip": "KA12 0AY",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 55.6194,
+      "lon": -4.65508
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Lancashire",
+     "zip": "FY3 7EN",
+     "country": "United Kingdom"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Wellingborough",
+     "zip": "NN8 4RW",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 52.30273,
+      "lon": -0.69446
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "25677679",
+     "type": "DERIVED",
+     "citation": "Buhl R, Gessner C, Schuermann W, Foerster K, Sieder C, Hiltl S, Korn S. Efficacy and safety of once-daily QVA149 compared with the free combination of once-daily tiotropium plus twice-daily formoterol in patients with moderate-to-severe COPD (QUANTIFY): a randomised, non-inferiority study. Thorax. 2015 Apr;70(4):311-9. doi: 10.1136/thoraxjnl-2014-206345. Epub 2015 Feb 12."
+    },
+    {
+     "pmid": "23867808",
+     "type": "DERIVED",
+     "citation": "Dahl R, Chapman KR, Rudolf M, Mehta R, Kho P, Alagappan VK, Chen H, Banerji D. Safety and efficacy of dual bronchodilation with QVA149 in COPD patients: the ENLIGHTEN study. Respir Med. 2013 Oct;107(10):1558-67. doi: 10.1016/j.rmed.2013.05.016. Epub 2013 Jul 16."
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "Randomization ratio in the study was 2:1 for QVA149 and Placebo groups. Patients were not stratified by COPD disease severity.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "QVA149",
+     "description": "110µg/50µg capsule for oral inhalation, once daily, delivered by a single dose dry powder inhaler (SDDPI)"
+    },
+    {
+     "id": "FG001",
+     "title": "Placebo",
+     "description": "Placebo to match QVA149, capsules for inhalation once daily, delivered by an SDDPI"
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "226"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "113"
+        }
+       ]
+      },
+      {
+       "type": "Safety Population: Received Study Drug",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "225"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "113"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "194"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "89"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "32"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "24"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "11"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "6"
+        }
+       ]
+      },
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "10"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "6"
+        }
+       ]
+      },
+      {
+       "type": "Protocol Deviation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "5"
+        }
+       ]
+      },
+      {
+       "type": "Unsatisfactory Therapeutic Effect",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "3"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "3"
+        }
+       ]
+      },
+      {
+       "type": "Death",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Abnormal Test Procedure Result(s)",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "QVA149",
+     "description": "110µg/50µg capsule for oral inhalation, once daily, delivered by a single dose dry powder inhaler (SDDPI)"
+    },
+    {
+     "id": "BG001",
+     "title": "Placebo",
+     "description": "Placebo to match QVA149, capsules for inhalation once daily, delivered by an SDDPI"
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "225"
+      },
+      {
+       "groupId": "BG001",
+       "value": "113"
+      },
+      {
+       "groupId": "BG002",
+       "value": "338"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "62.5",
+           "spread": "8.81"
+          },
+          {
+           "groupId": "BG001",
+           "value": "62.9",
+           "spread": "8.14"
+          },
+          {
+           "groupId": "BG002",
+           "value": "62.6",
+           "spread": "8.58"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "51"
+          },
+          {
+           "groupId": "BG001",
+           "value": "27"
+          },
+          {
+           "groupId": "BG002",
+           "value": "78"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "174"
+          },
+          {
+           "groupId": "BG001",
+           "value": "86"
+          },
+          {
+           "groupId": "BG002",
+           "value": "260"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Number of Participants With Adverse Events, Serious Adverse Events or Death",
+     "description": "Adverse events are defined as any unfavorable and unintended diagnosis, symptom, sign (including an abnormal lab finding), syndrome or disease which either occurs during study, having been absent at baseline, or, if present at baseline, appears to worsen. Serious adverse events are any untoward medical occurrences that result in death, are life threatening, require (or prolong) hospitalization, cause persistent or significant disability/incapacity, result in congenital anomalies or birth defects, or are other conditions which in judgments of the investigators represent significant hazards.",
+     "populationDescription": "Safety population - all patients who received at least one dose of study drug whether or not they were randomized. Only patients with safety assessments were included in this analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "52 weeks + Follow-up (Up to Day 394)",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "110µg/50µg capsule for oral inhalation, once daily, delivered by a single dose dry powder inhaler (SDDPI)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to match QVA149, capsules for inhalation once daily, delivered by an SDDPI"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "225"
+        },
+        {
+         "groupId": "OG001",
+         "value": "113"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Adverse events",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "130"
+          },
+          {
+           "groupId": "OG001",
+           "value": "64"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Serious adverse events",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "37"
+          },
+          {
+           "groupId": "OG001",
+           "value": "12"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Death - 1st treatment day to 30d after last dose",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "4"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Death - last dose + 30d until end of follow-up",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Pre-dose FEV1",
+     "description": "Pre-dose FEV1 is defined as the average of the FEV1 15 minutes pre-dose and FEV1 45 minutes pre-dose. A mixed model was used with treatment as a fixed effect, average of 15 min and 45 min pre-dose FEV1 at visit 3 as the baseline measurement, and FEV1 prior to inhalation and FEV1 60 min post inhalation of two short acting bronchodialators as covariates. The model also included smoking status at baseline, history of ICS use and country as fixed effects with center nested within country as a random effect.",
+     "populationDescription": "Full analysis set - all randomized patients who received at least one dose of study drug. Only patients with the required data were included in this analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liter",
+     "timeFrame": "52 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "110µg/50µg capsule for oral inhalation, once daily, delivered by a single dose dry powder inhaler (SDDPI)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to match QVA149, capsules for inhalation once daily, delivered by an SDDPI"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "191"
+        },
+        {
+         "groupId": "OG001",
+         "value": "88"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.607",
+           "spread": "0.0230"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.418",
+           "spread": "0.0297"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Patients With Newly Occurring or Worsening Clinically Notable Hematology Values at Any Timepoint Over the Whole Treatment Period",
+     "description": "Clinically notable hematology values were: hemoglobin - male \\<115g/L, female \\<95 g/L; hematocrit - male \\<0.37v/v, female \\<0.32v/v; white cell count - \\<2.8 10E9/L or \\>16.0 10E9/L; platelets - \\<75 10E9/L or \\>700 10E9/L",
+     "populationDescription": "Safety population - all patients who received at least one dose of study drug whether or not they were randomized. Only patients with the required data were included in this analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "52 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "110µg/50µg capsule for oral inhalation, once daily, delivered by a single dose dry powder inhaler (SDDPI)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to match QVA149, capsules for inhalation once daily, delivered by an SDDPI"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "225"
+        },
+        {
+         "groupId": "OG001",
+         "value": "113"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Hemoglobin - male <115g/L (n = 164, 77)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "9"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Hemoglobin - female <95g/L (n = 50, 25)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Hematocrit - male <0.37v/v (n = 164, 77)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "11"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Hematocrit - female <0.32v/v (n = 49, 25)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "WBC (total) - <2.8 10E9/L (n = 214, 102)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "WBC (total) - >16.0 10E9/L (n = 214, 102)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Platelet count (direct) - <75 10E9/L (n = 214,102)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Platelet count (direct) - >700 10E9/L (n=214, 102)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Patients With Newly Occurring or Worsening Clinically Notable Biochemistry Values at Any Timepoint Over the Whole Treatment Period",
+     "description": "Clinically notable biochemistry values were: sodium \\<125mmol/L or \\>160mmol/L; potassium \\<3.0mmol/L or \\>6.0mmol/L; BUN \\>9.99mmol/L; creatinine \\>176.8µmol/L; total protein (serum) \\<40g/L or \\>95g/L; albumin \\<25g/L; bilirubin (total) \\>34.2µmol/L; SGPT \\>3 x ULN; SGOT \\> 3 x ULN; gamma glutamyltransferase \\>3 x ULN; alkaline phosphatase (serum) \\>3 x ULN; glucose \\<2.78mmol/L or \\>9.99mmol/L",
+     "populationDescription": "Safety population - all patients who received at least one dose of study drug whether or not they were randomized. Only patients with the required data were included in this analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "52 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "110µg/50µg capsule for oral inhalation, once daily, delivered by a single dose dry powder inhaler (SDDPI)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to match QVA149, capsules for inhalation once daily, delivered by an SDDPI"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "214"
+        },
+        {
+         "groupId": "OG001",
+         "value": "101"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Sodium - <125mmol/L",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Sodium - >160mmol/L",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Potassium - <3.0mmol/L",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Potassium - >6.0mmol/L",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "BUN - >9.99mmol/L",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "14"
+          },
+          {
+           "groupId": "OG001",
+           "value": "4"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Creatinine - >176.8µmol/L",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Total protein (serum) - <40g/L",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Total protein (serum) - >95g/L",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Albumin - <25g/L",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Bilirubin (total) - >34.2µmol/L (n = 213, 101)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "SGPT - >3 x ULN",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "SGOT - >3 x ULN",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Gamma glutamyltransferase - >3 x ULN",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "8"
+          },
+          {
+           "groupId": "OG001",
+           "value": "7"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Alkaline phosphatase, serum - >3 x ULN",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Glucose - <2.78mmol/L",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Glucose - >9.99mmol/L",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "16"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Patients With Newly Occurring or Worsening Clinically Notable Vital Signs Values at Any Timepoint Over the Whole Treatment Period",
+     "description": "Clinically notable vital sign values were: pulse rate - low, \\<40 bpm or \\<=50 bpm and decrease from baseline \\>=15bpm; pulse rate high, \\>130 bpm or \\>=120bpm and increase from baseline \\>=15 bpm. Systolic blood pressure - low, \\<75 mmHg or \\<=90 mmHg and decrease from baseline \\>=20 mmHg; high, \\>200 mmHg or \\>=180 mmHg and increase from baseline \\>=20 mmHg. Diastolic blood pressure - low, \\<40 mmHg or \\<=50 mmHg and decrease from baseline \\>=15 mmHg; high, \\>115 mmHg or \\>=105 mmHg and increase from baseline \\>=15 mmHg.",
+     "populationDescription": "Safety population - all patients who received at least one dose of study drug whether or not they were randomized. Only patients with the required data were included in this analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "52 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "110µg/50µg capsule for oral inhalation, once daily, delivered by a single dose dry powder inhaler (SDDPI)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to match QVA149, capsules for inhalation once daily, delivered by an SDDPI"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "225"
+        },
+        {
+         "groupId": "OG001",
+         "value": "113"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Pulse rate - low",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Pulse rate - high",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Systolic blood pressure - low",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Systolic blood pressure - high",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Diastolic blood pressure - low",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Diastolic blood pressure - high",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Patients With Notable Change From Baseline in Fridericia's QTc Values at Any Timepoint Over the Whole Treatment Period",
+     "description": "Clinically notable change from baseline was and increase from baseline of 30 or greater milliseconds (ms).",
+     "populationDescription": "Safety population - all patients who received at least one dose of study drug whether or not they were randomized. Only patients with the required data were included in this analysis.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "52 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "110µg/50µg capsule for oral inhalation, once daily, delivered by a single dose dry powder inhaler (SDDPI)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo to match QVA149, capsules for inhalation once daily, delivered by an SDDPI"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "225"
+        },
+        {
+         "groupId": "OG001",
+         "value": "113"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "30 to 60ms change from baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "7"
+          },
+          {
+           "groupId": "OG001",
+           "value": "5"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "> 60ms change from baseline",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "Adverse Events were collected up to Day 394",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "QVA149",
+     "description": "110µg/50µg capsule for oral inhalation, once daily, delivered by a single dose dry powder inhaler (SDDPI)",
+     "seriousNumAffected": 37,
+     "seriousNumAtRisk": 225,
+     "otherNumAffected": 82,
+     "otherNumAtRisk": 225
+    },
+    {
+     "id": "EG001",
+     "title": "Placebo",
+     "description": "Placebo to match QVA149, capsules for inhalation once daily, delivered by an SDDPI",
+     "seriousNumAffected": 12,
+     "seriousNumAtRisk": 113,
+     "otherNumAffected": 41,
+     "otherNumAtRisk": 113
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Anaemia",
+     "organSystem": "Blood and lymphatic system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Cardiac failure congestive",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Cardio-respiratory arrest",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Coronary artery disease",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Myocardial ischaemia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Sinus tachycardia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Supraventricular tachycardia",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Vertigo",
+     "organSystem": "Ear and labyrinth disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Vestibular disorder",
+     "organSystem": "Ear and labyrinth disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Autoimmune thyroiditis",
+     "organSystem": "Endocrine disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Bezoar",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Gastric ulcer",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Gastric ulcer haemorrhage",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Pancreatitis acute",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Volvulus",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Drug hypersensitivity",
+     "organSystem": "Immune system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Lower respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 8,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Pulmonary tuberculosis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Respiratory tract infection viral",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Upper respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Upper respiratory tract infection bacterial",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Urinary tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Contusion",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Femoral neck fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Foot fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Hip fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Road traffic accident",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Spinal compression fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Spinal fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Adenocarcinoma pancreas",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Basal cell carcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Bladder cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Bladder neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Hepatic neoplasm malignant",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Lung neoplasm",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Lung neoplasm malignant",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Metastases to central nervous system",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Prostatic adenoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Intracranial pressure increased",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Transient ischaemic attack",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Urinary retention",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Benign prostatic hyperplasia",
+     "organSystem": "Reproductive system and breast disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 12,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 4,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Lung disorder",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Pneumothorax",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Essential hypertension",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Hypertension",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Thrombosis",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 113
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Lower respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 14,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 4,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Upper respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 11,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 8,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Viral upper respiratory tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 18,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 15,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 56,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 27,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Cough",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 18,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 7,
+       "numAtRisk": 113
+      }
+     ]
+    },
+    {
+     "term": "Hypertension",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 225
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 6,
+       "numAtRisk": 113
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "The terms and conditions of Novartis' agreements with its investigators may vary. However, Novartis does not prohibit any investigator from publishing. Any publications from a single-site are postponed until the publication of the pooled data (i.e., data from all sites) in the clinical trial."
+   },
+   "pointOfContact": {
+    "title": "Study Director",
+    "organization": "Novartis Pharmaceuticals",
+    "phone": "862 778-8300"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16",
+   "removedCountries": [
+    "Turkey (Türkiye)"
+   ]
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C554862",
+     "term": "indacaterol-glycopyrronium combination"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

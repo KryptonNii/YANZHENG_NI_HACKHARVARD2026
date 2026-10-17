@@ -1,0 +1,616 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT05986591",
+   "orgStudyIdInfo": {
+    "id": "2019-TIOT-0200-PD-01"
+   },
+   "organization": {
+    "fullName": "Xiromed LLC",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Bioequivalence Study of Tiotropium 18 μg Inhalation Powder, Hard Capsule With Spiriva®Handihaler® 18 μg Inhalation Powder, Hard Capsule in Patients With Chronic Obstructive Pulmonary Disease (COPD)",
+   "officialTitle": "A Multicenter, Randomized, Placebo-Controlled, Crossover, Single Dose Study To Demonstrate Clinical Pharmacodynamic Bioequivalence of Tiotropium 18 μg Inhalation Powder, Hard Capsule With Spiriva®Handihaler® 18 μg Inhalation Powder, Hard Capsule in Patients With Chronic Obstructive Pulmonary Disease (COPD)",
+   "acronym": "ARBORUS"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2024-01",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2022-08-17",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2023-08-11",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2023-08-14",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2023-08-03",
+   "studyFirstSubmitQcDate": "2023-08-03",
+   "studyFirstPostDateStruct": {
+    "date": "2023-08-14",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2024-01-29",
+   "lastUpdatePostDateStruct": {
+    "date": "2024-01-31",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Xiromed LLC",
+    "class": "INDUSTRY"
+   },
+   "collaborators": [
+    {
+     "name": "Exeltis",
+     "class": "INDUSTRY"
+    },
+    {
+     "name": "Laboratorios Liconsa",
+     "class": "INDUSTRY"
+    }
+   ]
+  },
+  "oversightModule": {
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": false,
+   "isUsExport": false
+  },
+  "descriptionModule": {
+   "briefSummary": "Bioequivalence Study of Tiotropium Bromide Inhalation Powder 18 μg",
+   "detailedDescription": "Pharmacodynamic bioequivalence study after a single dose of Tiotropium Bromide Inhalation Powder 18 μg vs Spiriva Handihaler (Tiotropium Bromide) 18 mcg"
+  },
+  "conditionsModule": {
+   "conditions": [
+    "COPD"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "CROSSOVER",
+    "interventionModelDescription": "Randomized, placebo-controlled, single dose, three-way crossover design.",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 335,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Treatment A: 18 mcg of Test Product (tiotropium bromide inhalation powder)",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Combination Product: Test Product - Tiotropium Bromide Inhalation Powder 18 mcg"
+     ]
+    },
+    {
+     "label": "Treatment B: 18 mcg of Reference Product (Spiriva)",
+     "type": "ACTIVE_COMPARATOR",
+     "interventionNames": [
+      "Combination Product: Spiriva Handihaler (Tiotropium Bromide) 18 mcg"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "interventionNames": [
+      "Combination Product: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "COMBINATION_PRODUCT",
+     "name": "Test Product - Tiotropium Bromide Inhalation Powder 18 mcg",
+     "description": "Test Product",
+     "armGroupLabels": [
+      "Treatment A: 18 mcg of Test Product (tiotropium bromide inhalation powder)"
+     ]
+    },
+    {
+     "type": "COMBINATION_PRODUCT",
+     "name": "Spiriva Handihaler (Tiotropium Bromide) 18 mcg",
+     "description": "RLD",
+     "armGroupLabels": [
+      "Treatment B: 18 mcg of Reference Product (Spiriva)"
+     ]
+    },
+    {
+     "type": "COMBINATION_PRODUCT",
+     "name": "Placebo",
+     "description": "Placebo Product",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Primary PD parameter - Adjusted area under the serial spirometry FEV1-time curve",
+     "description": "Baseline-adjusted area under the serial spirometry FEV1-time curve calculated from time 0 to 24 hours (AUC0-24h) following treatment",
+     "timeFrame": "24 Hours"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Patients who have signed informed consent form before initiation of any study related procedure.\n* Male or non-pregnant female patients between 40 to 75 years of age at Screening Visit.\n* General good health (except the COPD diagnosis) and free of any concomitant conditions or treatment that could interfere with study conduct.\n* An established physician diagnosis of COPD (GOLD 2022).\n* Post-bronchodilator FEV1≤80% and ≥40% of predicted normal values (GLI-2012), and post-bronchodilator FEV1/FVC ratio ≤0.70.\n* Predose FEV1 values at Visits 4 and 5 within ± 20% of the Visit 3 FEV1.\n* Able to replace their current short-acting bronchodilators with study-provided albuterol/salbutamol inhalation aerosol provided at the Screening Visit (Visit 1) for use as needed for the duration of the study.\n* Patients must be able to discontinue their COPD maintenance medications during the run-in and treatment periods.\n* Patients must be able to withhold their short-acting β2-agonists for at least 6 hours prior to spirometry on each clinic visit at the discretion of the investigator.\n* Current or ex-smokers with ≥10 pack-year smoking history (Note: Pack-Year= (cigarettes smoked per day x years smoked)/20)).\n* Not pregnant , breastfeeding, not a woman of childbearing potential (WOCBP) or WOCBP using an acceptable contraceptive\n* No occurrence of an upper or lower respiratory tract infection during the run-in period.\n* No COPD exacerbation, defined as any worsening of COPD requiring an emergency department visit or hospitalization, or requiring excessive use of the albuterol/salbutamol rescue medication during the run-in and/or treatment period at the discretion of the Investigator, or the use of antibiotics and/or corticosteroids during the run-in period and/or treatment period.\n\nExclusion Criteria:\n\n* Treatment for COPD exacerbation within 12 weeks prior to the Screening Visit or 2 or more exacerbations in the last year.\n* Hospitalization for COPD or pneumonia within 12 weeks prior to the Screening Visit.\n* History of a life-threatening COPD episode that required intubation and/or was associated with hypercapnia, respiratory arrest, hypoxic seizures, or mMRC (Modified Medical Research Council) dyspnea Grade 4.\n* Acute upper or lower respiratory tract infection, sinusitis, rhinitis, pharyngitis, urinary tract infection or illness within 8 weeks prior to the Screening Visit.\n* Use of immediate-release (Oral or IV) corticosteroids within the last 30 days and/or extended-release corticosteroids (Depot or Local) within the last 12 weeks prior to the Screening Visit\n* Patients with a history of asthma or a clinical diagnosis of asthma, allergic rhinitis, or atopy; a total blood eosinophil count above 600/mm3.\n* Patients with an abnormal/clinically significant 12-lead electrocardiogram (ECG) prior to and during screening visit, during the run-in and treatment periods.\n* Patients with myocardial infarction or unstable angina in the last 12 months; unstable or life-threatening cardiac arrhythmia requiring intervention in the last 12 months; or New York Heart Association Class II-IV heart failure.\n* Patients with documented pulmonary hypertension or clinical signs of right heart failure (indicated by an increase in jugular venous pressure with or without peripheral edema) or patients who require chronic oxygen use for \\>12 hours per day.\n* Presence of glaucoma or a history/family history of glaucoma.\n* History of paradoxical bronchospasm, narrow-angle glaucoma, prostatic hyperplasia, bladder-neck obstruction, or any other condition, which, in the opinion of the Investigator, would contraindicate the use of an anticholinergic agent.\n* Presence or history of urinary retention.\n* Historical or current evidence of a clinically significant disease (Note: Significant is defined as any disease that, in the opinion of the Investigator, would put the safety of the patient at risk through participation, or which could affect the efficacy or safety analysis if the disease/condition exacerbated during the study) including, but not limited to:\n* Cardiovascular (e.g., congestive heart failure, uncontrolled hypertension, uncontrolled coronary artery disease, stroke, or non-controlled arrhythmias),\n* Hepatic, renal, hematological, neuropsychological, endocrine (e.g., uncontrolled diabetes mellitus, uncontrolled thyroid disorder, Addison's disease, and Cushing's syndrome),\n* Gastrointestinal (e.g., poorly-controlled peptic ulcer disease),\n* Pulmonary disease other than COPD (e.g., alpha-1 antitrypsin deficiency, active bronchiectasis, cystic fibrosis, broncho-pulmonary dysplasia, sarcoidosis, lung fibrosis, pulmonary edema, interstitial lung disease, lung or mediastinum proliferative process including malignancies).\n* Patients who have undergone thoracotomy with pulmonary resection, have plans to undergo lung transplantation or lung volume reduction therapy, or have had lung volume reduction surgery within 12 months prior to the Screening Visit.\n* Have any of the following conditions that, in the judgment of the Investigator, might cause participation in this study to be detrimental to the patient, including but not limited to:\n* Current malignancy excluding basal cell carcinoma. (Note: History of malignancy is acceptable only if the patient has been in remission for one year prior to the Screening Visit. Remission is defined as no current evidence of malignancy and no treatment for the malignancy in the 5 years prior to the Screening Visit.\n* Current or untreated tuberculosis (Note: History of tuberculosis is acceptable only if a patient has received an approved prophylactic treatment regimen or an approved active treatment regimen and has had no evidence of active disease for a minimum of 2 years).\n* Uncontrolled hypertension (systolic blood pressure \\[BP\\] ≥160 or diastolic BP \\>100).\n* Stroke within 12 months prior to the Screening Visit\n* Immunocompromised\n* History of allergy or hypersensitivity to anticholinergic/muscarinic receptor antagonist agents, beta-2 adrenergic agonists, lactose/milk proteins, or specific intolerance to aerosolized tiotropium-containing products or its derivatives (e.g., ipratropium, oxitropium), or known hypersensitivity to any of the proposed ingredients or components of the delivery system.\n* History of alcohol or drug abuse within 2 years prior to the Screening Visit (Visit 1).",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "75 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "locations": [
+    {
+     "facility": "DownTown LA Research (West Coast)",
+     "city": "Los Angeles",
+     "state": "California",
+     "zip": "90017",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "Southwest General Heathcare",
+     "city": "Fort Myers",
+     "state": "Florida",
+     "zip": "33907",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.62168,
+      "lon": -81.84059
+     }
+    },
+    {
+     "facility": "SIMED Health",
+     "city": "Gainesville",
+     "state": "Florida",
+     "zip": "32607",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.65163,
+      "lon": -82.32483
+     }
+    },
+    {
+     "facility": "Clinical Research Solutions",
+     "city": "Kissimmee",
+     "state": "Florida",
+     "zip": "34744",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.30468,
+      "lon": -81.41667
+     }
+    },
+    {
+     "facility": "Clintex Research Group, Inc.",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33145",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Research Institue of South Florida",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33173",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Vista Health Research",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33176",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research - New Smyrna Beach",
+     "city": "New Smyrna Beach",
+     "state": "Florida",
+     "zip": "32132",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.02582,
+      "lon": -80.927
+     }
+    },
+    {
+     "facility": "Southern Clinical Research",
+     "city": "Zachary",
+     "state": "Louisiana",
+     "zip": "70791",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.64852,
+      "lon": -91.1565
+     }
+    },
+    {
+     "facility": "Velocity clinical Research Syracuse (East North))",
+     "city": "Syracuse",
+     "state": "New York",
+     "zip": "13057",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.04812,
+      "lon": -76.14742
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research-Cincinnati",
+     "city": "Cincinnati",
+     "state": "Ohio",
+     "zip": "45242",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.12711,
+      "lon": -84.51439
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research Grants Pass (W Coast)",
+     "city": "Grants Pass",
+     "state": "Oregon",
+     "zip": "97527",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.43933,
+      "lon": -123.33067
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research Medford",
+     "city": "Medford",
+     "state": "Oregon",
+     "zip": "97504",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.32652,
+      "lon": -122.87559
+     }
+    },
+    {
+     "facility": "Greater Providence Clinical Research (East North)",
+     "city": "Cranston",
+     "state": "Rhode Island",
+     "zip": "02920",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.77982,
+      "lon": -71.43728
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research Anderson",
+     "city": "Anderson",
+     "state": "South Carolina",
+     "zip": "29621",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.50344,
+      "lon": -82.65013
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research Columbia",
+     "city": "Columbia",
+     "state": "South Carolina",
+     "zip": "29204",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.00071,
+      "lon": -81.03481
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research Gaffney",
+     "city": "Gaffney",
+     "state": "South Carolina",
+     "zip": "29340",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.07179,
+      "lon": -81.64982
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research Greenville",
+     "city": "Greenville",
+     "state": "South Carolina",
+     "zip": "29615",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.85262,
+      "lon": -82.39401
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research Spartanburg",
+     "city": "Spartanburg",
+     "state": "South Carolina",
+     "zip": "29303",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.94957,
+      "lon": -81.93205
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research Union",
+     "city": "Union",
+     "state": "South Carolina",
+     "zip": "29379",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.71541,
+      "lon": -81.62371
+     }
+    },
+    {
+     "facility": "Inquest Clinical Research",
+     "city": "Cypress",
+     "state": "Texas",
+     "zip": "77433",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.96911,
+      "lon": -95.69717
+     }
+    },
+    {
+     "facility": "Mt. Olympus Medical Research",
+     "city": "Houston",
+     "state": "Texas",
+     "zip": "77479",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.76328,
+      "lon": -95.36327
+     }
+    },
+    {
+     "facility": "Sante Clinical Research",
+     "city": "Kerrville",
+     "state": "Texas",
+     "zip": "78028",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.04743,
+      "lon": -99.14032
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research-Utah",
+     "city": "West Jordan",
+     "state": "Utah",
+     "zip": "84088",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.60967,
+      "lon": -111.9391
+     }
+    },
+    {
+     "facility": "Anand Surgical Hospital Pvt. Ltd",
+     "city": "Ahmedabad",
+     "country": "India",
+     "geoPoint": {
+      "lat": 23.02579,
+      "lon": 72.58727
+     }
+    },
+    {
+     "facility": "Care and Cure Multispeciality Hospital",
+     "city": "Ahmedabad",
+     "country": "India",
+     "geoPoint": {
+      "lat": 23.02579,
+      "lon": 72.58727
+     }
+    },
+    {
+     "facility": "Hope Medicare Centre",
+     "city": "Ahmedabad",
+     "country": "India",
+     "geoPoint": {
+      "lat": 23.02579,
+      "lon": 72.58727
+     }
+    },
+    {
+     "facility": "Divine Multispeciality Hopsital",
+     "city": "Gandhinagar",
+     "country": "India",
+     "geoPoint": {
+      "lat": 23.21667,
+      "lon": 72.68333
+     }
+    },
+    {
+     "facility": "Maharaja Agrasen Superspeciality Hospital",
+     "city": "Jaipur",
+     "country": "India",
+     "geoPoint": {
+      "lat": 26.91962,
+      "lon": 75.78781
+     }
+    },
+    {
+     "facility": "Shree Hospital & Critical Care Centre",
+     "city": "Nagpur",
+     "country": "India",
+     "geoPoint": {
+      "lat": 21.14631,
+      "lon": 79.08491
+     }
+    },
+    {
+     "facility": "Chest Disease Hospital",
+     "city": "Srinagar",
+     "country": "India",
+     "geoPoint": {
+      "lat": 34.08565,
+      "lon": 74.80555
+     }
+    },
+    {
+     "facility": "Global Hospital",
+     "city": "Surat",
+     "country": "India",
+     "geoPoint": {
+      "lat": 21.19594,
+      "lon": 72.83023
+     }
+    },
+    {
+     "facility": "Dhawal Multispeciality Hospital",
+     "city": "Vadodara",
+     "country": "India",
+     "geoPoint": {
+      "lat": 22.29941,
+      "lon": 73.20812
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "UNDECIDED"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D000069447",
+     "term": "Tiotropium Bromide"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D012602",
+     "term": "Scopolamine Derivatives"
+    },
+    {
+     "id": "D014326",
+     "term": "Tropanes"
+    },
+    {
+     "id": "D053961",
+     "term": "Azabicyclo Compounds"
+    },
+    {
+     "id": "D001372",
+     "term": "Aza Compounds"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000470",
+     "term": "Alkaloids"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    },
+    {
+     "id": "D019086",
+     "term": "Bridged Bicyclo Compounds, Heterocyclic"
+    },
+    {
+     "id": "D006572",
+     "term": "Heterocyclic Compounds, Bridged-Ring"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

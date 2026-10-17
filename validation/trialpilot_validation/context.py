@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any
 
 import yaml
+from trialpilot_api.compliance import config as compliance_config
 from trialpilot_api.compliance.hashing import fs_path
 
 REQ_ID = re.compile(r"^URS-\d{3}$")
@@ -86,7 +87,8 @@ class Ctx:
 
     @property
     def out(self) -> Path:
-        value = os.environ.get("TP_VALIDATION_OUT", "").strip()
+        # Process env, then the repo .env: the lookup the API and the compliance DB path use.
+        value = compliance_config.env("TP_VALIDATION_OUT")
         return Path(value) if value else self.vdir / "out"
 
     def rel(self, path: Path) -> str:

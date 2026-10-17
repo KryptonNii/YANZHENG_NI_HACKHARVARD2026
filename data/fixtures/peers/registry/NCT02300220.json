@@ -1,0 +1,1529 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT02300220",
+   "orgStudyIdInfo": {
+    "id": "14IC2031"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2012-002198-72",
+     "type": "EUDRACT_NUMBER"
+    }
+   ],
+   "organization": {
+    "fullName": "Imperial College London",
+    "class": "OTHER"
+   },
+   "briefTitle": "Targeted Retreatment of COPD Exacerbations",
+   "officialTitle": "Targeted Retreatment of Incompletely Recovered COPD Exacerbations With Ciprofloxacin: a Double-blind, Randomised, Placebo-controlled, Multicentre Phase III Trial"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2021-02",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2014-05-05",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2019-01-22",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2019-01-22",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2014-11-20",
+   "studyFirstSubmitQcDate": "2014-11-20",
+   "studyFirstPostDateStruct": {
+    "date": "2014-11-24",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2019-11-07",
+   "resultsFirstSubmitQcDate": "2021-02-16",
+   "resultsFirstPostDateStruct": {
+    "date": "2021-03-08",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2021-02-16",
+   "lastUpdatePostDateStruct": {
+    "date": "2021-03-08",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Imperial College London",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "This study investigates the effects of targeted re-treatment of patients who do not recover from an exacerbation of COPD. Half of the patients will receive ciprofloxacin while the other half will receive a placebo.",
+   "detailedDescription": "COPD is a long term lung condition where patients suffer recurrent symptom flare-ups, called 'exacerbations'. Patients who have lots of exacerbations have a worse quality of life, poorer ability to breath, and may die earlier than those who don't. Previous research by our group has shown that patients who have an exacerbation and have not completely recovered two weeks after the start of treatment are more likely to suffer another one early than those who completely recover.\n\nThis study aims to test whether we can prevent this early re-exacerbation by giving an extra course of antibiotics, compared to a placebo. Patients who experience an exacerbation of COPD and are treated with antibiotics will, two weeks after the start of their treatment, be invited to attend a screening visit. Patients will be eligible for the study if they have not fully recovered at this visit (i.e. if they either still have symptoms or if blood tests show there is still inflammation present) and fulfil other diagnostic measures for COPD. Patients will be allocated to the treatment groups at random, and if eligible will be treated with a further 1 week of ciprofloxacin 500mg twice daily or a placebo.\n\nPatients will then be followed up in the study for a further 3 months, and the primary study outcome will be the time to the next exacerbation."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ],
+   "keywords": [
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 144,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Ciprofloxacin",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "500 mg, twice daily for 1 week (oral).",
+     "interventionNames": [
+      "Drug: Ciprofloxacin"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "one capsule, twice daily for 1 week.",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Ciprofloxacin",
+     "description": "500 mg, twice daily for 1 week (oral)",
+     "armGroupLabels": [
+      "Ciprofloxacin"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "One capsule, twice daily for 1 week",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Time to the Next COPD Exacerbation",
+     "description": "The primary outcome will be the time to the next COPD exacerbation following targeted retreatment with the IMP or placebo, censored at 90 days.",
+     "timeFrame": "Up to 90 days"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Duration of the Initial Exacerbation",
+     "description": "Secondary endpoints will include duration of the initial exacerbation following targeted retreatment with the IMP or placebo.",
+     "timeFrame": "Up to 90 days"
+    },
+    {
+     "measure": "Number of Participants With Serious Non Fatal Adverse Events",
+     "description": "Secondary endpoints will include adverse events following targeted retreatment with the IMP or placebo.",
+     "timeFrame": "7 days of treatment"
+    },
+    {
+     "measure": "Changes in Lung Function",
+     "description": "Secondary endpoints will include changes from randomization to 90 days in FEV1.",
+     "timeFrame": "Baseline and 90 days"
+    },
+    {
+     "measure": "Number of Participants Who Have Resistance Bacteria in the Sputum",
+     "description": "Bacterial load and resistance Secondary endpoints will include resistance following targeted retreatment with the IMP or placebo.",
+     "timeFrame": "Up to 90 days"
+    },
+    {
+     "measure": "Hospital Readmission",
+     "description": "Secondary endpoints will include hospital readmission following targeted retreatment with the IMP or placebo.",
+     "timeFrame": "90 days of treatment"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1. Diagnosis of COPD confirmed spirometrically at screening\n2. COPD exacerbation with treatment commenced 14 days prior to study enrolment and treated with 5-14 days of a non-quinolone antibiotic.\n3. Exacerbation here will be defined as an episode of symptomatic worsening of COPD that was treated by the patient's attending clinician. Confirmation of the initial exacerbation diagnosis will be provided from the case notes, referral letter, or directly from the treating clinician, and will be documented in the CRF.\n4. Age: ≥ 45 years of age at screening.\n5. Persistent symptoms and/or a CRP≥8mg/L when assessed 2 weeks after exacerbation onset\n6. Able to complete questionnaires for health status and symptoms and keep written diary cards\n7. Severity of disease: Patients with a measured FEV1\\<80% of predicted normal values at 2 weeks post exacerbation\n8. Able and willing to give signed and dated written informed consent to participate.\n\nExclusion Criteria:\n\n1. Other clinically predominant chronic respiratory disease.\n2. Intubated and receiving mechanical ventilation\n3. Patients with known hypersensitivity to the antibiotic under evaluation, to other quinolones or any excipients of the IMP/placebo.\n4. Patients with a prior history of tendonopathy or tendon rupture\n5. Elderly patients taking long term systemic corticosteroids\n6. Patients on long term antibiotics for other conditions\n7. Patient too unwell for randomisation, i.e. requiring retreatment in the judgment of the study doctor\n8. Female patients who are pregnant or planning on becoming pregnant during the study, or are breastfeeding.\n9. Patient taking clinically significant contraindicated medication as per the SmPC s, such as use of concomitant tizanidine or methotrexate.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "45 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Wisia Wedzicha, Professor",
+     "affiliation": "Imperial College London",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Aintree University Hospital NHS Foundation Trust",
+     "city": "Liverpool",
+     "zip": "L9 7AL",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.41058,
+      "lon": -2.97794
+     }
+    },
+    {
+     "facility": "St Georges University Hospitals NHS Foundation Trust",
+     "city": "London",
+     "zip": "SW17 0RE",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.50853,
+      "lon": -0.12574
+     }
+    },
+    {
+     "facility": "Royal Brompton and Harefield Hospital NHS Foundation Trust",
+     "city": "London",
+     "zip": "SW36NP",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.50853,
+      "lon": -0.12574
+     }
+    },
+    {
+     "facility": "St Mary's Hospital",
+     "city": "London",
+     "zip": "W2 1NY",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.50853,
+      "lon": -0.12574
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "32267724",
+     "type": "DERIVED",
+     "citation": "Ritchie AI, Brill SE, Vlies BH, Finney LJ, Allinson JP, Alves-Moreira L, Wiseman DJ, Walker PP, Baker E, Elkin SL, Mallia P, Law M, Donaldson GC, Calverley PMA, Wedzicha JA. Targeted Retreatment of Incompletely Recovered Chronic Obstructive Pulmonary Disease Exacerbations with Ciprofloxacin. A Double-Blind, Randomized, Placebo-controlled, Multicenter, Phase III Clinical Trial. Am J Respir Crit Care Med. 2020 Aug 15;202(4):549-557. doi: 10.1164/rccm.201910-2058OC."
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Ciproflaxacin",
+     "description": "Retreatment with Ciproflaxacin"
+    },
+    {
+     "id": "FG001",
+     "title": "Placebo",
+     "description": "Retreatment with Placebo"
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "72"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "72"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "68"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "65"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "4"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "7"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        }
+       ]
+      },
+      {
+       "type": "Death",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Protocol Violation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        }
+       ]
+      },
+      {
+       "type": "Did not tolerate IMP",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Ciprofloxacin",
+     "description": "500 mg, twice daily for 1 week (oral).\n\nCiprofloxacin: 500 mg, twice daily for 1 week (oral)"
+    },
+    {
+     "id": "BG001",
+     "title": "Placebo",
+     "description": "one capsule, twice daily for 1 week.\n\nPlacebo: One capsule, twice daily for 1 week"
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "72"
+      },
+      {
+       "groupId": "BG001",
+       "value": "72"
+      },
+      {
+       "groupId": "BG002",
+       "value": "144"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Categorical",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "<=18 years",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Between 18 and 65 years",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "17"
+          },
+          {
+           "groupId": "BG001",
+           "value": "20"
+          },
+          {
+           "groupId": "BG002",
+           "value": "37"
+          }
+         ]
+        },
+        {
+         "title": ">=65 years",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "55"
+          },
+          {
+           "groupId": "BG001",
+           "value": "52"
+          },
+          {
+           "groupId": "BG002",
+           "value": "107"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "69.1",
+           "spread": "8.8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "69.1",
+           "spread": "7.4"
+          },
+          {
+           "groupId": "BG002",
+           "value": "69.1",
+           "spread": "8.1"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "28"
+          },
+          {
+           "groupId": "BG001",
+           "value": "25"
+          },
+          {
+           "groupId": "BG002",
+           "value": "53"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "44"
+          },
+          {
+           "groupId": "BG001",
+           "value": "47"
+          },
+          {
+           "groupId": "BG002",
+           "value": "91"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Race (NIH/OMB)",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "American Indian or Alaska Native",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Asian",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "1"
+          }
+         ]
+        },
+        {
+         "title": "Native Hawaiian or Other Pacific Islander",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Black or African American",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "2"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1"
+          },
+          {
+           "groupId": "BG002",
+           "value": "3"
+          }
+         ]
+        },
+        {
+         "title": "White",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "69"
+          },
+          {
+           "groupId": "BG001",
+           "value": "69"
+          },
+          {
+           "groupId": "BG002",
+           "value": "138"
+          }
+         ]
+        },
+        {
+         "title": "More than one race",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        },
+        {
+         "title": "Unknown or Not Reported",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "2"
+          },
+          {
+           "groupId": "BG002",
+           "value": "2"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Region of Enrollment",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "classes": [
+      {
+       "title": "United Kingdom",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "72"
+          },
+          {
+           "groupId": "BG001",
+           "value": "72"
+          },
+          {
+           "groupId": "BG002",
+           "value": "144"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Time to the Next COPD Exacerbation",
+     "description": "The primary outcome will be the time to the next COPD exacerbation following targeted retreatment with the IMP or placebo, censored at 90 days.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Inter-Quartile Range",
+     "unitOfMeasure": "days",
+     "timeFrame": "Up to 90 days",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Ciprofloxacin",
+       "description": "500 mg, twice daily for 1 week (oral).\n\nCiprofloxacin: 500 mg, twice daily for 1 week (oral)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "one capsule, twice daily for 1 week.\n\nPlacebo: One capsule, twice daily for 1 week"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "72"
+        },
+        {
+         "groupId": "OG001",
+         "value": "72"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "72",
+           "lowerLimit": "29",
+           "upperLimit": "90"
+          },
+          {
+           "groupId": "OG001",
+           "value": "58",
+           "lowerLimit": "24.5",
+           "upperLimit": "90"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "groupDescription": "The primary endpoint was assessed using a Cox's proportional hazard model with pre-specified adjustment for patient's self-reported history of exacerbations over the previous year and with stratification for study centre. The onset of exacerbation will be monitored up to 90 days or at patient withdrawal.",
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "0.764",
+       "statisticalMethod": "Regression, Cox",
+       "paramType": "Cox Proportional Hazard",
+       "paramValue": "1.071",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.684",
+       "ciUpperLimit": "1.676"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Duration of the Initial Exacerbation",
+     "description": "Secondary endpoints will include duration of the initial exacerbation following targeted retreatment with the IMP or placebo.",
+     "populationDescription": "Missing participants data 16 for ciprofloxacin and 15 for placebo",
+     "reportingStatus": "POSTED",
+     "paramType": "MEDIAN",
+     "dispersionType": "Inter-Quartile Range",
+     "unitOfMeasure": "days",
+     "timeFrame": "Up to 90 days",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Ciprofloxacin",
+       "description": "500 mg, twice daily for 1 week (oral).\n\nCiprofloxacin: 500 mg, twice daily for 1 week (oral)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "one capsule, twice daily for 1 week.\n\nPlacebo: One capsule, twice daily for 1 week"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "56"
+        },
+        {
+         "groupId": "OG001",
+         "value": "57"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "3",
+           "lowerLimit": "0",
+           "upperLimit": "8"
+          },
+          {
+           "groupId": "OG001",
+           "value": "4",
+           "lowerLimit": "0",
+           "upperLimit": "9"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "0.703",
+       "statisticalMethod": "Wilcoxon (Mann-Whitney)"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Participants With Serious Non Fatal Adverse Events",
+     "description": "Secondary endpoints will include adverse events following targeted retreatment with the IMP or placebo.",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "7 days of treatment",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Ciprofloxacin",
+       "description": "500 mg, twice daily for 1 week (oral).\n\nCiprofloxacin: 500 mg, twice daily for 1 week (oral)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "one capsule, twice daily for 1 week.\n\nPlacebo: One capsule, twice daily for 1 week"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "72"
+        },
+        {
+         "groupId": "OG001",
+         "value": "72"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1"
+          },
+          {
+           "groupId": "OG001",
+           "value": "9"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Changes in Lung Function",
+     "description": "Secondary endpoints will include changes from randomization to 90 days in FEV1.",
+     "populationDescription": "Only the participants who completed the study",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "litres",
+     "timeFrame": "Baseline and 90 days",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Ciprofloxacin",
+       "description": "500 mg, twice daily for 1 week (oral).\n\nCiprofloxacin: 500 mg, twice daily for 1 week (oral)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "one capsule, twice daily for 1 week.\n\nPlacebo: One capsule, twice daily for 1 week"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "63"
+        },
+        {
+         "groupId": "OG001",
+         "value": "63"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.0229",
+           "spread": "0.199"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.0041",
+           "spread": "0.198"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "0.239",
+       "statisticalMethod": "t-test, 2 sided"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Participants Who Have Resistance Bacteria in the Sputum",
+     "description": "Bacterial load and resistance Secondary endpoints will include resistance following targeted retreatment with the IMP or placebo.",
+     "populationDescription": "Lower participants number due to the number of patients with a pathogenic organism with newly acquired ciprofloxacin resistance, present in a sputum sample collected at 90 days",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "Up to 90 days",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Ciprofloxacin",
+       "description": "500 mg, twice daily for 1 week (oral).\n\nCiprofloxacin: 500 mg, twice daily for 1 week (oral)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "one capsule, twice daily for 1 week.\n\nPlacebo: One capsule, twice daily for 1 week"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "16"
+        },
+        {
+         "groupId": "OG001",
+         "value": "17"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Hospital Readmission",
+     "description": "Secondary endpoints will include hospital readmission following targeted retreatment with the IMP or placebo.",
+     "populationDescription": "Data not collected",
+     "reportingStatus": "POSTED",
+     "timeFrame": "90 days of treatment",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Ciprofloxacin",
+       "description": "500 mg, twice daily for 1 week (oral).\n\nCiprofloxacin: 500 mg, twice daily for 1 week (oral)"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "one capsule, twice daily for 1 week.\n\nPlacebo: One capsule, twice daily for 1 week"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "0"
+        },
+        {
+         "groupId": "OG001",
+         "value": "0"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "0",
+   "timeFrame": "90 days + 1 month",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Ciprofloxacin",
+     "description": "500 mg, twice daily for 1 week (oral).\n\nCiprofloxacin: 500 mg, twice daily for 1 week (oral)",
+     "deathsNumAffected": 1,
+     "deathsNumAtRisk": 72,
+     "seriousNumAffected": 1,
+     "seriousNumAtRisk": 72,
+     "otherNumAffected": 12,
+     "otherNumAtRisk": 72
+    },
+    {
+     "id": "EG001",
+     "title": "Placebo",
+     "description": "one capsule, twice daily for 1 week.\n\nPlacebo: One capsule, twice daily for 1 week",
+     "deathsNumAffected": 1,
+     "deathsNumAtRisk": 72,
+     "seriousNumAffected": 9,
+     "seriousNumAtRisk": 72,
+     "otherNumAffected": 8,
+     "otherNumAtRisk": 72
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Oncology",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA (10.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 72
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 72
+      }
+     ]
+    },
+    {
+     "term": "Cardiovascular",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA (10.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 72
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 72
+      }
+     ]
+    },
+    {
+     "term": "Gastrointestinal",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (10.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 72
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 72
+      }
+     ]
+    },
+    {
+     "term": "Psychological",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA (10.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 72
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 72
+      }
+     ]
+    },
+    {
+     "term": "Respiratory",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA (10.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 72
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 72
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Nausea",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (10.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 72
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 72
+      }
+     ]
+    },
+    {
+     "term": "Vomiting",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (10.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 72
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 72
+      }
+     ]
+    },
+    {
+     "term": "Diarrhoea",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (10.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 5,
+       "numAffected": 5,
+       "numAtRisk": 72
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 72
+      }
+     ]
+    },
+    {
+     "term": "Dyspepsia",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (10.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 72
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 72
+      }
+     ]
+    },
+    {
+     "term": "Abdominal Colic/Pain",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA (10.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 72
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 72
+      }
+     ]
+    },
+    {
+     "term": "Pruritis/Rash",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "sourceVocabulary": "MedDRA (10.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 72
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 72
+      }
+     ]
+    },
+    {
+     "term": "Dry Mouth",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA (10.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 72
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 72
+      }
+     ]
+    },
+    {
+     "term": "Ankle Pain/Tendonitis",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA (10.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 72
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 72
+      }
+     ]
+    },
+    {
+     "term": "Tremor",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA (10.0)",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 72
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 72
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": true
+   },
+   "pointOfContact": {
+    "title": "Professor Jadwiga Wedzicha",
+    "organization": "Imperial College London",
+    "email": "j.wedzicha@imperial.ac.uk",
+    "phone": "02075947947"
+   }
+  }
+ },
+ "documentSection": {
+  "largeDocumentModule": {
+   "largeDocs": [
+    {
+     "typeAbbrev": "Prot",
+     "hasProtocol": true,
+     "hasSap": false,
+     "hasIcf": false,
+     "label": "Study Protocol",
+     "date": "2015-07-20",
+     "uploadDate": "2019-11-07T08:56",
+     "filename": "Prot_000.pdf",
+     "size": 796416
+    },
+    {
+     "typeAbbrev": "SAP",
+     "hasProtocol": false,
+     "hasSap": true,
+     "hasIcf": false,
+     "label": "Statistical Analysis Plan",
+     "date": "2019-01-15",
+     "uploadDate": "2019-11-07T08:59",
+     "filename": "SAP_001.pdf",
+     "size": 314984
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D002939",
+     "term": "Ciprofloxacin"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D024841",
+     "term": "Fluoroquinolones"
+    },
+    {
+     "id": "D042462",
+     "term": "4-Quinolones"
+    },
+    {
+     "id": "D015363",
+     "term": "Quinolones"
+    },
+    {
+     "id": "D011804",
+     "term": "Quinolines"
+    },
+    {
+     "id": "D006574",
+     "term": "Heterocyclic Compounds, 2-Ring"
+    },
+    {
+     "id": "D000072471",
+     "term": "Heterocyclic Compounds, Fused-Ring"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

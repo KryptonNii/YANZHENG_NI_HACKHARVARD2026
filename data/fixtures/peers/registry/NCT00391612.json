@@ -1,0 +1,718 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT00391612",
+   "orgStudyIdInfo": {
+    "id": "Protocol 30"
+   },
+   "organization": {
+    "fullName": "Broncus Technologies",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "EASE Trial: Exhale Airway Stents for Emphysema",
+   "officialTitle": "A Randomized, Double-blind Study to Evaluate the Safety and Effectiveness of the Exhale® Drug-Eluting Stent in Homogeneous Emphysema Subjects With Severe Hyperinflation",
+   "acronym": "EASE"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2011-01",
+   "overallStatus": "UNKNOWN",
+   "lastKnownStatus": "ACTIVE_NOT_RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2006-05"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2009-10",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2013-12",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2006-10-20",
+   "studyFirstSubmitQcDate": "2006-10-20",
+   "studyFirstPostDateStruct": {
+    "date": "2006-10-24",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2011-01-10",
+   "lastUpdatePostDateStruct": {
+    "date": "2011-01-12",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "oldNameTitle": "Nancy Isaac, Senior Vice President, Clinical and Regulatory Affairs and Quality Assurance",
+    "oldOrganization": "Broncus Technologies, Inc"
+   },
+   "leadSponsor": {
+    "name": "Broncus Technologies",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "This is an international clinical research study evaluating the safety and effectiveness of a new procedure called airway bypass. The goal of this research is to see if airway bypass can relieve hyperinflation (overfilling) of the lungs, thereby improving lung function and reducing shortness of breath in patients with severe homogeneous (diffuse) emphysema. \"EASE\" stands for Exhale Airway Stents for Emphysema.",
+   "detailedDescription": "Over 3 million people in the United States and tens of millions more throughout the world live with emphysema, a chronic, progressive, irreversible disease of the lungs. The hallmark of emphysema is hyperinflation of the lungs -- air is trapped in the lungs and cannot escape, causing the lungs to become larger and larger. This makes it difficult to breathe and dyspnea (shortness of breath) is the result.\n\nThe airway bypass procedure is performed using a bronchoscope with the patient under anesthesia. Very small passageways are created between the damaged lung tissue and the larger breathing passages (airways). Small stents are inserted to keep the new pathways from closing. These pathways could potentially provide a way for the trapped air to escape when the patient exhales. If the amount of air trapped in the lungs is reduced then it should be easier for the person to breathe.\n\nThe EASE study will compare the effects of Exhale Drug-Eluting Stents in patients to a sham-control group of patients who do not receive the stents. Two out of three (2/3) of the participants in the trial will be in the airway bypass group, or \"treatment\" group. Participants in the treatment group will undergo the airway bypass procedure with up to six drug-eluting stents implanted in their lungs, creating the passageways for the trapped air to escape. A smaller group - one out of three (1/3) participants - will be the \"control\" group. The control group will have bronchoscopy, but passages will not be made and stents will not be implanted.\n\nParticipants will need to return to the study center four times during the year for follow-up visits and tests. All participants will be told which group they were in when they come back for a follow-up visit one year after the procedure. Participants in the control group will be finished with the trial after one year. Participants in the treatment group will have a follow-up visit once a year for the next four years to monitor the longer term effects of the airway bypass procedure. This is why the end date of the trial is listed as 2012."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Emphysema"
+   ],
+   "keywords": [
+    "COPD (Chronic Obstructive Pulmonary Disease)",
+    "Emphysema",
+    "Hyperinflation",
+    "Minimally Invasive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 450,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "2",
+     "type": "SHAM_COMPARATOR",
+     "description": "subject receives optimal medical management, supervised pulmonary rehabilitation therapy and undergoes bronchoscopy but no stents are placed",
+     "interventionNames": [
+      "Device: Sham control"
+     ]
+    },
+    {
+     "label": "1",
+     "type": "EXPERIMENTAL",
+     "description": "subject receives optimal medical management, supervised pulmonary rehabilitation therapy and undergoes bronchoscopy during which up to six Exhale drug-eluting stents are placed in the lungs",
+     "interventionNames": [
+      "Device: Exhale® Drug-Eluting Stent"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DEVICE",
+     "name": "Exhale® Drug-Eluting Stent",
+     "description": "Bronchoscopic procedure in which up to six Exhale Drug-Eluting Stents are placed in the lungs; total procedure time is 1 to 2 hours",
+     "armGroupLabels": [
+      "1"
+     ]
+    },
+    {
+     "type": "DEVICE",
+     "name": "Sham control",
+     "description": "5-10 minute bronchoscopic procedure in which the lungs are examined and a bronchial lavage is performed; the bronchoscope is then retracted to a point above the carina and below the vocal folds for the remained of the time; total procedure time is about 1-2 hours",
+     "armGroupLabels": [
+      "2"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Forced Vital Capacity (FVC)",
+     "timeFrame": "6 months"
+    },
+    {
+     "measure": "modified Medical Research Council (mMRC) score (breathlessness)",
+     "timeFrame": "6 months"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Residual Volume/Total Lung Capacity (RV/TLC)",
+     "timeFrame": "6 months"
+    },
+    {
+     "measure": "Forced Vital Capacity (FVC)",
+     "timeFrame": "6 months"
+    },
+    {
+     "measure": "modified Medical Research Council Dyspnea Scale (mMRC)",
+     "timeFrame": "6 months"
+    },
+    {
+     "measure": "Forced Expiratory Volume in 1 second (FEV1)",
+     "timeFrame": "6 months"
+    },
+    {
+     "measure": "St. George's Respiratory Questionnaire (SGRQ)",
+     "timeFrame": "6 months"
+    },
+    {
+     "measure": "6-minute walk (6MW)",
+     "timeFrame": "6 months"
+    },
+    {
+     "measure": "Cycle Ergometry",
+     "timeFrame": "6 months"
+    },
+    {
+     "measure": "Note: Residual Volume/Total Lung Capacity (RV/TLC) will be analyzed for superiority. All other secondary endpoints will be analyzed for informational purposes.",
+     "timeFrame": "6 months"
+    },
+    {
+     "measure": "Residual Volume (RV)",
+     "timeFrame": "6 months"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1. High resolution computed tomography (CT) scan evidence of homogeneous emphysema.\n2. Stopped smoking at least 8 weeks before entering the trial.\n3. Post-bronchodilator RV/TLC ≥ 0.65.\n4. Post-bronchodilator Forced Expiratory Volume (FEV1) ≤ 50% or FEV1 \\< 1 liter.\n5. Marked dyspnea, scoring ≥ 2 on the modified Medical Research Council scale of 0-4.\n6. Patient has undergone supervised pulmonary rehabilitation of 16-20 sessions over 6-10 weeks.\n\nExclusion Criteria:\n\n1. Change in FEV1 \\> 20% pre- and post- bronchodilator measurements or \\> 200 ml if post-bronchodilator FEV1 \\< 1 liter.\n2. Respiratory infections requiring 3 or more hospitalizations in past year.\n3. Inability to walk \\> 140 meters (150 yards) in 6 minutes.\n4. Previous lung volume reduction surgery (LVRS) or lobectomy.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "35 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Joel D. Cooper, MD, FACS, FRCS",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Gerhard W. Sybrecht, Prof. Dr. med.",
+     "affiliation": "Universitätskliniken des Saarlandes",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Pulmonary Associates, PA",
+     "city": "Phoenix",
+     "state": "Arizona",
+     "zip": "85006",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.44838,
+      "lon": -112.07404
+     }
+    },
+    {
+     "facility": "UCSF-Fresno",
+     "city": "Fresno",
+     "state": "California",
+     "zip": "93701",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.74773,
+      "lon": -119.77237
+     }
+    },
+    {
+     "facility": "University of Southern California",
+     "city": "Los Angeles",
+     "state": "California",
+     "zip": "90033",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "Cedars-Sinai Medical Center",
+     "city": "Los Angeles",
+     "state": "California",
+     "zip": "90048",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "University of California, Davis Medical Center",
+     "city": "Sacramento",
+     "state": "California",
+     "zip": "95817",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.58157,
+      "lon": -121.4944
+     }
+    },
+    {
+     "facility": "National Jewish Medical and Research Center",
+     "city": "Denver",
+     "state": "Colorado",
+     "zip": "80206",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.73915,
+      "lon": -104.9847
+     }
+    },
+    {
+     "facility": "Sarasota Memorial Health Care System",
+     "city": "Sarasota",
+     "state": "Florida",
+     "zip": "34239",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.33643,
+      "lon": -82.53065
+     }
+    },
+    {
+     "facility": "Emory Healthcare",
+     "city": "Atlanta",
+     "state": "Georgia",
+     "zip": "30322",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.749,
+      "lon": -84.38798
+     }
+    },
+    {
+     "facility": "Peoria Pulmonary Associates, LTD",
+     "city": "Peoria",
+     "state": "Illinois",
+     "zip": "61603",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.69365,
+      "lon": -89.58899
+     }
+    },
+    {
+     "facility": "Southern Illinois University School of Medicine",
+     "city": "Springfield",
+     "state": "Illinois",
+     "zip": "62781",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.80172,
+      "lon": -89.64371
+     }
+    },
+    {
+     "facility": "Chicago Chest Center at Central DuPage Hospital",
+     "city": "Winfield",
+     "state": "Illinois",
+     "zip": "60190",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.8617,
+      "lon": -88.1609
+     }
+    },
+    {
+     "facility": "University of Iowa Hospitals and Clinics",
+     "city": "Iowa City",
+     "state": "Iowa",
+     "zip": "52242",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.66113,
+      "lon": -91.53017
+     }
+    },
+    {
+     "facility": "Topeka Pulmonary/Veritas Clinical Specialties, LTD",
+     "city": "Topeka",
+     "state": "Kansas",
+     "zip": "66606",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.04833,
+      "lon": -95.67804
+     }
+    },
+    {
+     "facility": "Pulmonary and Critical Care Associates of Baltimore",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21237",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "Beth Israel Deaconess Medical Center",
+     "city": "Boston",
+     "state": "Massachusetts",
+     "zip": "02215",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.35843,
+      "lon": -71.05977
+     }
+    },
+    {
+     "facility": "University of Michigan",
+     "city": "Ann Arbor",
+     "state": "Michigan",
+     "zip": "48109",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.27756,
+      "lon": -83.74088
+     }
+    },
+    {
+     "facility": "Henry Ford Hospital & Medical Center",
+     "city": "Detroit",
+     "state": "Michigan",
+     "zip": "48202",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.33143,
+      "lon": -83.04575
+     }
+    },
+    {
+     "facility": "Mayo Clinic",
+     "city": "Rochester",
+     "state": "Minnesota",
+     "zip": "55905",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.02163,
+      "lon": -92.4699
+     }
+    },
+    {
+     "facility": "International Heart Institute of Montana Foundation",
+     "city": "Missoula",
+     "state": "Montana",
+     "zip": "59802",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 46.87215,
+      "lon": -113.994
+     }
+    },
+    {
+     "facility": "New York Methodist Hospital",
+     "city": "Brooklyn",
+     "state": "New York",
+     "zip": "11215",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.6501,
+      "lon": -73.94958
+     }
+    },
+    {
+     "facility": "New York University - Bellevue Hospital",
+     "city": "New York",
+     "state": "New York",
+     "zip": "10016",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.71427,
+      "lon": -74.00597
+     }
+    },
+    {
+     "facility": "Columbia University Medical Center",
+     "city": "New York",
+     "state": "New York",
+     "zip": "10032",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.71427,
+      "lon": -74.00597
+     }
+    },
+    {
+     "facility": "Duke University Medical Center",
+     "city": "Durham",
+     "state": "North Carolina",
+     "zip": "27710",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.99403,
+      "lon": -78.89862
+     }
+    },
+    {
+     "facility": "Cleveland Clinic Foundation",
+     "city": "Cleveland",
+     "state": "Ohio",
+     "zip": "44195",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.4995,
+      "lon": -81.69541
+     }
+    },
+    {
+     "facility": "University of Pennsylvania Health System",
+     "city": "Philadelphia",
+     "state": "Pennsylvania",
+     "zip": "19104",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.95238,
+      "lon": -75.16362
+     }
+    },
+    {
+     "facility": "Sentara Norfolk General Hospital",
+     "city": "Norfolk",
+     "state": "Virginia",
+     "zip": "23507",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.84681,
+      "lon": -76.28522
+     }
+    },
+    {
+     "facility": "The Alfred Hospital",
+     "city": "Melbourne",
+     "state": "Victoria",
+     "country": "Australia",
+     "geoPoint": {
+      "lat": -37.814,
+      "lon": 144.96332
+     }
+    },
+    {
+     "facility": "Otto Wagner Hospital",
+     "city": "Vienna",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 48.20849,
+      "lon": 16.37208
+     }
+    },
+    {
+     "facility": "Santa Casa Hospital",
+     "city": "Porto Alegre",
+     "state": "Rio Grande do Sul",
+     "zip": "90020-090",
+     "country": "Brazil",
+     "geoPoint": {
+      "lat": -30.03283,
+      "lon": -51.23019
+     }
+    },
+    {
+     "facility": "London Health Sciences Centre",
+     "city": "London",
+     "state": "Ontario",
+     "zip": "N6A 4G5",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 42.98339,
+      "lon": -81.23304
+     }
+    },
+    {
+     "facility": "Hopital Laval",
+     "city": "Québec",
+     "state": "Quebec",
+     "zip": "G1V 4G5",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 46.81228,
+      "lon": -71.21454
+     }
+    },
+    {
+     "facility": "Universitatsklinik des Saarlandes",
+     "city": "Homburg",
+     "state": "Saarland",
+     "zip": "66421",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.32637,
+      "lon": 7.33867
+     }
+    },
+    {
+     "facility": "Mater Misericordiae University Hospital",
+     "city": "Dublin",
+     "zip": "7",
+     "country": "Ireland",
+     "geoPoint": {
+      "lat": 53.33306,
+      "lon": -6.24889
+     }
+    },
+    {
+     "facility": "University Medical Center, Groningen",
+     "city": "Groningen",
+     "zip": "9700 RB",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 53.21917,
+      "lon": 6.56667
+     }
+    },
+    {
+     "facility": "Fundación Jiménez Díaz",
+     "city": "Madrid",
+     "zip": "28040",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 40.4165,
+      "lon": -3.70256
+     }
+    },
+    {
+     "facility": "Papworth Hospital",
+     "city": "Cambridge",
+     "zip": "CB23 3RE",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 52.2,
+      "lon": 0.11667
+     }
+    },
+    {
+     "facility": "The Royal Brompton Hospital",
+     "city": "London",
+     "zip": "SW3 6NP",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.50853,
+      "lon": -0.12574
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "12607646",
+     "type": "BACKGROUND",
+     "citation": "Lausberg HF, Chino K, Patterson GA, Meyers BF, Toeniskoetter PD, Cooper JD. Bronchial fenestration improves expiratory flow in emphysematous human lungs. Ann Thorac Surg. 2003 Feb;75(2):393-7; discussion 398. doi: 10.1016/s0003-4975(02)04553-8."
+    },
+    {
+     "pmid": "12830047",
+     "type": "BACKGROUND",
+     "citation": "Rendina EA, De Giacomo T, Venuta F, Coloni GF, Meyers BF, Patterson GA, Cooper JD. Feasibility and safety of the airway bypass procedure for patients with emphysema. J Thorac Cardiovasc Surg. 2003 Jun;125(6):1294-9. doi: 10.1016/s0022-5223(02)73243-1."
+    },
+    {
+     "pmid": "15746748",
+     "type": "BACKGROUND",
+     "citation": "Choong CK, Haddad FJ, Gee EY, Cooper JD. Feasibility and safety of airway bypass stent placement and influence of topical mitomycin C on stent patency. J Thorac Cardiovasc Surg. 2005 Mar;129(3):632-8. doi: 10.1016/j.jtcvs.2004.07.062."
+    },
+    {
+     "pmid": "16399295",
+     "type": "BACKGROUND",
+     "citation": "Choong CK, Phan L, Massetti P, Haddad FJ, Martinez C, Roschak E, Cooper JD. Prolongation of patency of airway bypass stents with use of drug-eluting stents. J Thorac Cardiovasc Surg. 2006 Jan;131(1):60-4. doi: 10.1016/j.jtcvs.2005.07.057. Epub 2005 Dec 5."
+    },
+    {
+     "pmid": "618444",
+     "type": "BACKGROUND",
+     "citation": "Terry PB, Traystman RJ, Newball HH, Batra G, Menkes HA. Collateral ventilation in man. N Engl J Med. 1978 Jan 5;298(1):10-5. doi: 10.1056/NEJM197801052980103."
+    },
+    {
+     "pmid": "618452",
+     "type": "BACKGROUND",
+     "citation": "Macklem PT. Collateral ventilation. N Engl J Med. 1978 Jan 5;298(1):49-50. doi: 10.1056/NEJM197801052980112. No abstract available."
+    },
+    {
+     "pmid": "17412776",
+     "type": "BACKGROUND",
+     "citation": "Choong CK, Macklem PT, Pierce JA, Lefrak SS, Woods JC, Conradi MS, Yablonskiy DA, Hogg JC, Chino K, Cooper JD. Transpleural ventilation of explanted human lungs. Thorax. 2007 Jul;62(7):623-30. doi: 10.1136/thx.2005.053256. Epub 2007 Apr 5."
+    },
+    {
+     "pmid": "17903516",
+     "type": "BACKGROUND",
+     "citation": "Cardoso PF, Snell GI, Hopkins P, Sybrecht GW, Stamatis G, Ng AW, Eng P. Clinical application of airway bypass with paclitaxel-eluting stents: early results. J Thorac Cardiovasc Surg. 2007 Oct;134(4):974-81. doi: 10.1016/j.jtcvs.2007.05.040. Epub 2007 Aug 20."
+    },
+    {
+     "pmid": "21907863",
+     "type": "DERIVED",
+     "citation": "Shah PL, Slebos DJ, Cardoso PF, Cetti E, Voelker K, Levine B, Russell ME, Goldin J, Brown M, Cooper JD, Sybrecht GW; EASE trial study group. Bronchoscopic lung-volume reduction with Exhale airway stents for emphysema (EASE trial): randomised, sham-controlled, multicentre trial. Lancet. 2011 Sep 10;378(9795):997-1005. doi: 10.1016/S0140-6736(11)61050-7."
+    },
+    {
+     "pmid": "21214899",
+     "type": "DERIVED",
+     "citation": "Shah PL, Slebos DJ, Cardoso PF, Cetti EJ, Sybrecht GW, Cooper JD. Design of the exhale airway stents for emphysema (EASE) trial: an endoscopic procedure for reducing hyperinflation. BMC Pulm Med. 2011 Jan 7;11:1. doi: 10.1186/1471-2466-11-1."
+    }
+   ],
+   "seeAlsoLinks": [
+    {
+     "label": "Broncus Technologies, Inc., corporate web page.",
+     "url": "http://www.broncus.com"
+    },
+    {
+     "label": "American Lung Association",
+     "url": "http://www.lungusa.org"
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D004646",
+     "term": "Emphysema"
+    },
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

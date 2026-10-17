@@ -5,8 +5,10 @@ import json
 
 import pytest
 
+from trialpilot_api.ops import audit
+from trialpilot_api.ops.fixtures import load_demo_design
 from trialpilot_api.ops.router import stream_messages
-from trialpilot_api.ops.store import OpsError
+from trialpilot_api.ops.store import OpsError, TrialState
 
 AUTHOR = {"X-User": "alex.author", "X-Role": "author"}
 VIEWER = {"X-User": "val.viewer", "X-Role": "viewer"}
@@ -115,6 +117,26 @@ def test_crud_failures_and_audit_failure_leave_state_unchanged(client):
     started = st.create_intervention({**body, "status": "in_progress"}, "tester", "author")
     with pytest.raises(OpsError, match="return to planned"):
         st.update_intervention(started.id, {"status": "planned"}, "tester", "author")
+
+
+def test_ops_audit_requires_a_bound_sink():
+    """No silent fallback: without a bound sink an ops mutation cannot be audited, so it fails."""
+    entry = {"actor": "alex.author", "role": "author", "action": "ops.x", "object_type": "ops_trial",
+             "object_id": "t"}
+    with pytest.raises(RuntimeError, match="not bound"):
+        audit.append(**entry)
+    with pytest.raises(TypeError, match="audit_sink"):
+        TrialState("t", load_demo_design(), None, 42, 0, "demo", 0, 600)  # type: ignore[call-arg]
+    seen = []
+
+    def sink(actor, role, action, object_type, object_id, before_hash, after_hash, reason=None):
+        seen.append((actor, role, action, object_type, object_id, before_hash, after_hash, reason))
+        return "entry"
+
+    with audit.bound(sink):
+        assert audit.append(**{**entry, "role": "owner"}, after={"a": 1}, reason="why") == "entry"
+    assert seen == [("alex.author", "viewer", "ops.x", "ops_trial", "t", None, audit.record_hash({"a": 1}),
+                     "why")]
 
 
 @pytest.mark.req("URS-015")

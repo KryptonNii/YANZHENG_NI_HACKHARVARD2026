@@ -1,7 +1,8 @@
 /**
  * Typed API client. Every request carries the demo identity headers (X-User / X-Role).
  * Errors become ApiError with the API's plain-English message (§5 error shape); unless a call
- * passes `silent: true`, the message is also broadcast to the toast layer.
+ * passes `silent: true`, every ApiError the client throws (HTTP, network, or a reply it rejects
+ * itself) is also broadcast to the toast layer, once.
  */
 import type { Levers, Parameter, TrialDesign, Visit } from "../contracts";
 import { identityHeaders } from "../identity";
@@ -60,6 +61,12 @@ export function onApiError(listener: ErrorListener): () => void {
   return () => {
     errorListeners.delete(listener);
   };
+}
+
+/** Throw `err`, broadcasting it to the toast layer first unless the call is silent. */
+function raise(err: ApiError, opts: { silent?: boolean }): never {
+  if (!opts.silent) errorListeners.forEach((l) => l(err));
+  throw err;
 }
 
 export const API_BASE = "/api";
@@ -137,15 +144,9 @@ export async function requestFull<T = unknown>(method: string, path: string, opt
     res = await fetch(`${API_BASE}${path}`, { method, headers, body, signal: opts.signal });
   } catch (err) {
     if (isAbort(err)) throw err;
-    const e = new ApiError(0, "network_error", "Can't reach the TrialPilot API. Check that the server is running.");
-    if (!opts.silent) errorListeners.forEach((l) => l(e));
-    throw e;
+    raise(new ApiError(0, "network_error", "Can't reach the TrialPilot API. Check that the server is running."), opts);
   }
-  if (!res.ok) {
-    const e = await parseError(res);
-    if (!opts.silent) errorListeners.forEach((l) => l(e));
-    throw e;
-  }
+  if (!res.ok) raise(await parseError(res), opts);
   if (res.status === 204) return { data: undefined as T, response: res };
   const text = await res.text();
   return { data: (text ? JSON.parse(text) : undefined) as T, response: res };
@@ -156,11 +157,11 @@ export async function request<T = unknown>(method: string, path: string, opts: R
   return data;
 }
 
-function designRecord(design: TrialDesign, response: Response): DesignRecord {
+function designRecord(design: TrialDesign, response: Response, opts: RequestOptions): DesignRecord {
   const raw = Number(response.headers.get("X-Design-Version"));
   const etag = response.headers.get("ETag")?.replace(/^W\//, "").replaceAll('"', "").trim() || null;
   if (!Number.isInteger(raw) || raw < 1 || !etag || response.headers.get("ETag")?.startsWith("W/")) {
-    throw new ApiError(502, "design_version_missing", "The API did not provide a valid design version and strong ETag. Reload before editing or computing.");
+    raise(new ApiError(502, "design_version_missing", "The API did not provide a valid design version and strong ETag. Reload before editing or computing."), opts);
   }
   return { design, version: raw, etag };
 }
@@ -196,7 +197,7 @@ export const api = {
       ...opts,
       body: { design, visits, extraction_id: extractionId },
     });
-    if (!res?.design) throw new ApiError(502, "protocol_design_missing", "The API did not return the reviewed design. Nothing was saved; retry applying the protocol.");
+    if (!res?.design) raise(new ApiError(502, "protocol_design_missing", "The API did not return the reviewed design. Nothing was saved; retry applying the protocol."), opts);
     return res.design;
   },
   /** Accepted / edited / rejected counts — the extraction accuracy metric. `bulk_accepted` is rows never opened. */
@@ -210,49 +211,31 @@ export const api = {
       .filter((d): d is DesignSummary => d !== null),
   getDesign: async (id: string, opts: RequestOptions = {}): Promise<DesignRecord> => {
     const { data, response } = await requestFull<TrialDesign>("GET", `/designs/${enc(id)}`, opts);
-    return designRecord(data, response);
+    return designRecord(data, response, opts);
   },
   /**
-   * Store a design. When `ifMatch` is set, refuse to post if the stored hash has moved (and send
-   * that hash as If-Match so A5 can answer 409 design_changed).
+   * Store a design. With `ifMatch` (the ETag of the version being replaced), A5 refuses a stale
+   * tag with 409 design_changed, shown as the plain designConflictMessage sentence.
    */
   saveDesign: async (design: TrialDesign, opts: RequestOptions = {}): Promise<DesignRecord> => {
-    if (opts.ifMatch) {
-      try {
-        const current = await api.getDesign(design.id, { signal: opts.signal, silent: true });
-        if (current.etag && current.etag !== opts.ifMatch) {
-          const err = new ApiError(
-            409,
-            "design_changed",
-            `This design changed while you were editing — it is now design v${current.version}. Reload it before saving so a confirmed protocol schedule is not replaced.`,
-            { version: current.version, design_hash: current.etag },
-          );
-          if (!opts.silent) errorListeners.forEach((l) => l(err));
-          throw err;
-        }
-      } catch (err) {
-        if (!(err instanceof ApiError && err.status === 404)) throw err;
-      }
-    }
+    let saved: { data: TrialDesign; response: Response };
     try {
-      const { data, response } = await requestFull<TrialDesign>("POST", "/designs", { ...opts, silent: true, body: design });
-      return designRecord(data, response);
+      saved = await requestFull<TrialDesign>("POST", "/designs", { ...opts, silent: true, body: design });
     } catch (err) {
       if (err instanceof ApiError) {
         const message = err.code === "design_changed" ? (designConflictMessage(err) ?? err.message) : err.message;
-        const wrapped = message === err.message ? err : new ApiError(err.status, err.code, message, err.details);
-        if (!opts.silent) errorListeners.forEach((l) => l(wrapped));
-        throw wrapped;
+        raise(message === err.message ? err : new ApiError(err.status, err.code, message, err.details), opts);
       }
       throw err;
     }
+    return designRecord(saved.data, saved.response, opts);
   },
 
   // ---- A5 scenarios ----
   compute: async (designId: string, levers: Levers, opts: RequestOptions = {}): Promise<ScenarioResultX> => {
     const { data, response } = await requestFull("POST", "/scenarios/compute", { ...opts, body: withVersion({ design_id: designId, levers }, opts.designVersion) });
     if (opts.designVersion != null && Number(response.headers.get("X-Design-Version")) !== opts.designVersion) {
-      throw new ApiError(502, "compute_version_mismatch", "The calculation did not confirm the design version on screen. Retry before saving.");
+      raise(new ApiError(502, "compute_version_mismatch", "The calculation did not confirm the design version on screen. Retry before saving."), opts);
     }
     return normalizeScenarioResult(data);
   },

@@ -1,0 +1,371 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT07604103",
+   "orgStudyIdInfo": {
+    "id": "400/259/K.3/102.7/2025"
+   },
+   "organization": {
+    "fullName": "University of Brawijaya",
+    "class": "OTHER"
+   },
+   "briefTitle": "Analysis of Growth Differentiation Factor 15 (GDF-15), Mid Regional proAdrenomedullin (MR proADM), and Persepsin Levels in Patient in Acute Coronary Syndrome Patients With Pneumonia, With or Without Influenza Vaccination",
+   "officialTitle": "Analysis of the Relationship Between Growth Differentiation Factor 15 (GDF-15), Mid Regional proAdrenomedullin (MR proADM), and Persepsin Levels in Patients With Acute Coronary Syndrome With Pneumonia and Chronic Obstructive Pulmonary Disease (COPD) With Influenza Vaccination"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-05",
+   "overallStatus": "RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2026-01-01",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2026-08-30",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2026-10-10",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2026-05-16",
+   "studyFirstSubmitQcDate": "2026-05-16",
+   "studyFirstPostDateStruct": {
+    "date": "2026-05-22",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-05-16",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-05-22",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "PRINCIPAL_INVESTIGATOR",
+    "investigatorFullName": "Martha Fitri Alextina Tatodi",
+    "investigatorTitle": "dr",
+    "investigatorAffiliation": "University of Brawijaya"
+   },
+   "leadSponsor": {
+    "name": "University of Brawijaya",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The goal of this observational study is to analyze the relationship between various biomarkers (GDF-15, MR proADM, and Presepsin) in patients with Acute Coronary Syndrome (ACS) who also have Pneumonia and Chronic Obstructive Pulmonary Disease (COPD) and have received Influenza vaccinations.\n\nThe main questions it aims to answer are:\n\n* Is there a significant correlation between the levels of these specific biomarkers and the clinical outcomes or inflammatory status of these patients?\n* How does Influenza vaccinations relate to the levels of these biomarkers in the context of ACS with comorbid respiratory conditions? Researchers will compare the levels of these biomarkers across the participant group to see if they can serve as indicators of the patients' health status or the impact of the vaccinations.\n\nParticipants will:\n\n\\- Undergo clinical assessment for Acute Coronary Syndrome, Pneumonia, and COPD. Provide medical history regarding Influenza vaccination status. Provide blood samples for the measurement of GDF-15, MR proADM, and Presepsin levels.",
+   "detailedDescription": "This study focuses on the complex interplay between cardiovascular health and respiratory complications. Acute Coronary Syndrome (ACS) often occurs alongside respiratory conditions like Pneumonia and Chronic Obstructive Pulmonary Disease (COPD), a combination that significantly increases clinical complexity and patient risk. The presence of these comorbidities often triggers a systemic inflammatory response that can be difficult to monitor using standard clinical tools alone.\n\nTo better understand this inflammatory landscape, this research evaluates five specific biomarkers:Proteins often associated with heart stress and the body's response to severe infection or inflammation and highly specific markers used to detect and monitor the severity of sepsis and bacterial infections.\n\nA unique aspect of this research is the consideration of Influenza vaccinations. Vaccinations are standard preventative measures for patients with chronic lung and heart diseases, but their influence on the specific biological markers of inflammation during an acute cardiac event remains an area of active investigation.\n\nBy measuring these levels, the study seeks to determine if these biomarkers can provide a more \"detailed picture\" of a patient's condition than traditional methods. This could potentially help clinicians better predict disease progression and understand how prior immunizations might modulate the inflammatory process in patients facing the triple challenge of ACS, pneumonia, and COPD."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Acute Coronary Syndromes (ACS)",
+    "Pneumonia",
+    "COPD (Chronic Obstructive Pulmonary Disease)"
+   ],
+   "keywords": [
+    "GDF-15",
+    "MR proADM",
+    "Persepsin",
+    "Acute coronary syndrome",
+    "Pneumonia",
+    "influenza vaccination"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "DIAGNOSTIC",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 60,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "influenza tetravaccine",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "influenza tetravaccine 1 dose for each randomized sample",
+     "interventionNames": [
+      "Drug: Vaxigrip",
+      "Drug: antibiotic treatments",
+      "Procedure: percutaneus coronary intervention"
+     ]
+    },
+    {
+     "label": "Placebo Group",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo group receive 1 dose shot placebo as comparison of the interventional group",
+     "interventionNames": [
+      "Drug: antibiotic treatments",
+      "Procedure: percutaneus coronary intervention"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Vaxigrip",
+     "description": "Influenza vaccination for 1 interventional group and comparison of GDF-15, MR proADM, Persepsin before and after vaccination in patient with ACS and Pneumonia",
+     "armGroupLabels": [
+      "influenza tetravaccine"
+     ],
+     "otherNames": [
+      "MR proADM",
+      "Persepsin",
+      "GDF-15"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "antibiotic treatments",
+     "description": "The patient will get standard care for pneumonia therapy",
+     "armGroupLabels": [
+      "Placebo Group",
+      "influenza tetravaccine"
+     ]
+    },
+    {
+     "type": "PROCEDURE",
+     "name": "percutaneus coronary intervention",
+     "description": "patient will get percutaneus coronary intervention",
+     "armGroupLabels": [
+      "Placebo Group",
+      "influenza tetravaccine"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Levels of Inflammatory Biomarkers (GDF-15, MR proADM, and Presepsin)",
+     "description": "The measurement of serum or plasma concentrations for Growth Differentiation Factor 15, Mid-Regional pro-Adrenomedullin, and Presepsin. This outcome aims to evaluate the systemic inflammatory profile in patients with Acute Coronary Syndrome, Pneumonia, and COPD, and to observe their relationship with vaccination status.",
+     "timeFrame": "At baseline (admission) and up to 30 days post-vaccination follow-up."
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Changes in Biomarker Levels Post-Vaccination",
+     "description": "To evaluate the changes and modulation of GDF-15, MR proADM, and Presepsin levels following Pneumococcal and Influenza vaccinations compared to baseline levels.",
+     "timeFrame": "Measured at 4 weeks post-vaccination."
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Adult male patients (\\< 65 years old).\n* History of being an active smoker.\n* Confirmed diagnosis of Acute Coronary Syndrome (ACS) and Pneumonia based on clinical, laboratory, and radiological criteria.\n* Demonstrated clinical improvement (stabilization) after receiving standard ACS and Pneumonia therapy in the acute intrahospital phase.\n* Willing to undergo all study procedures and sign the Informed Consent form.\n\nExclusion Criteria:\n\n* Presence of absolute contraindications to pneumococcal and influenza vaccination (history of anaphylactic reactions to vaccine components).\n* Patients with malignancies (cancer), systemic autoimmune diseases, or those currently on long-term immunosuppressant therapy.\n* Patients with End-Stage Renal Disease (ESRD) or severe liver dysfunction that could confound inflammatory biomarker values.\n* Patients with persistently unstable hemodynamic conditions or unresolved cardiogenic shock during the acute care phase.\n* Patient death before the observation period (up to post-vaccination) is completed.\n* Patient unilaterally resigns or withdraws consent during the study.\n* Lost to follow-up during scheduled outpatient clinic visits or scheduled follow-up biomarker evaluations.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "maximumAge": "65 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Martha FA Tatodi, MD",
+     "role": "CONTACT",
+     "phone": "+62895633927741",
+     "email": "3downdoomdrop@gmail.com"
+    },
+    {
+     "name": "Rizky Tania Fadillah, MD",
+     "role": "CONTACT",
+     "phone": "+6281335808012"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "RSUD Dr. Saiful Anwar",
+     "status": "RECRUITING",
+     "city": "Malang",
+     "state": "East Java",
+     "zip": "65111",
+     "country": "Indonesia",
+     "contacts": [
+      {
+       "name": "Martha FA Tatodi, MD",
+       "role": "CONTACT",
+       "phone": "+62895633927741",
+       "email": "3downdoomdrop@gmail.com"
+      },
+      {
+       "name": "Rizky Tania Fadillah, MD",
+       "role": "CONTACT"
+      }
+     ],
+     "geoPoint": {
+      "lat": -7.9797,
+      "lon": 112.6304
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "UNDECIDED",
+   "description": "Because of the privacy of the data (currently anticipated)"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D054058",
+     "term": "Acute Coronary Syndrome"
+    },
+    {
+     "id": "D011014",
+     "term": "Pneumonia"
+    },
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D007251",
+     "term": "Influenza, Human"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D017202",
+     "term": "Myocardial Ischemia"
+    },
+    {
+     "id": "D006331",
+     "term": "Heart Diseases"
+    },
+    {
+     "id": "D002318",
+     "term": "Cardiovascular Diseases"
+    },
+    {
+     "id": "D014652",
+     "term": "Vascular Diseases"
+    },
+    {
+     "id": "D012141",
+     "term": "Respiratory Tract Infections"
+    },
+    {
+     "id": "D007239",
+     "term": "Infections"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D009976",
+     "term": "Orthomyxoviridae Infections"
+    },
+    {
+     "id": "D012327",
+     "term": "RNA Virus Infections"
+    },
+    {
+     "id": "D014777",
+     "term": "Virus Diseases"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C478242",
+     "term": "vaxigrip"
+    },
+    {
+     "id": "D055436",
+     "term": "Growth Differentiation Factor 15"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D016207",
+     "term": "Cytokines"
+    },
+    {
+     "id": "D036341",
+     "term": "Intercellular Signaling Peptides and Proteins"
+    },
+    {
+     "id": "D010455",
+     "term": "Peptides"
+    },
+    {
+     "id": "D000602",
+     "term": "Amino Acids, Peptides, and Proteins"
+    },
+    {
+     "id": "D055412",
+     "term": "Growth Differentiation Factors"
+    },
+    {
+     "id": "D055411",
+     "term": "TGF-beta Superfamily Proteins"
+    },
+    {
+     "id": "D011506",
+     "term": "Proteins"
+    },
+    {
+     "id": "D001685",
+     "term": "Biological Factors"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

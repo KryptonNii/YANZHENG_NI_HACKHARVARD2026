@@ -3,9 +3,11 @@
 from __future__ import annotations
 
 import json
+from collections.abc import Iterator
 from pathlib import Path
 from typing import Any
 
+import httpx
 import pytest
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
@@ -72,6 +74,23 @@ def test_network_failure_maps_to_503(client: TestClient, monkeypatch: pytest.Mon
     monkeypatch.setattr(router_mod, "fetch_study_result", down)
     r = client.post("/api/import/ctgov/NCT09999999")
     assert r.status_code == 503 and r.json()["error"] == "registry_unavailable"
+
+
+@pytest.mark.req("URS-001")
+def test_non_json_registry_answer_maps_to_503(client: TestClient, monkeypatch: pytest.MonkeyPatch) -> None:
+    from trialpilot_api.importers import ctgov
+
+    def maintenance_page(*_: Any, **__: Any) -> httpx.Response:
+        return httpx.Response(200, text="<html>Down for maintenance</html>")
+
+    monkeypatch.setattr(ctgov, "_get_json", maintenance_page)
+    r = client.post("/api/import/ctgov/NCT09999999")
+    assert r.status_code == 503 and set(r.json()) == {"error", "message", "details"}
+    assert r.json()["error"] == "registry_unavailable"
+    assert r.json()["details"] == {"nct_id": "NCT09999999", "status": 200}
+    r = client.post(f"/api/import/ctgov/{DEMO_NCT}", params={"refresh": "true"})
+    assert r.status_code == 200 and r.json()["stale_fallback"] is True
+    assert r.json()["notes"][0].startswith("ClinicalTrials.gov could not be reached; the cached copy from ")
 
 
 @pytest.mark.req("URS-001", "URS-029")
@@ -396,3 +415,167 @@ def test_real_app_takes_the_role_from_the_registry(tmp_path: Path, monkeypatch: 
         entries = c.get("/api/audit", params={"action": "import.ctgov"}).json()["items"]
         mine = [e for e in entries if e["object_id"] == design["id"] and e["actor"] == "riley.reviewer"]
         assert mine and all(e["role"] == "reviewer" for e in mine)
+
+
+# ---------------------------------------------------------------- mounted app: endpoint annotations
+def _mounted_app(tmp_path: Path, **settings: Any) -> Any:
+    main = pytest.importorskip("trialpilot_api.main")
+    settings_mod = pytest.importorskip("trialpilot_api.settings")
+    return main.create_app(settings_mod.Settings(db_path=str(tmp_path / "tp.sqlite"), seed_fixture_designs=False,
+                                                 **settings))
+
+
+@pytest.fixture
+def mounted(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Iterator[TestClient]:
+    """A5's app, offline through both the environment and its Settings (the documented launch paths)."""
+    monkeypatch.setenv("DEMO_OFFLINE", "1")
+    app = _mounted_app(tmp_path, _env_file=None)
+    with TestClient(app) as c:
+        yield c
+    app.state.db_engine.dispose()
+
+
+def _candidate_visits(body: dict[str, Any]) -> list[dict[str, Any]]:
+    return [c["visit"] for c in body["candidates"]]
+
+
+def _annotation(body: dict[str, Any], target: dict[str, Any]) -> tuple[str, str, str]:
+    """(role, note, basis) of the candidate procedure in visit 2 with the target's code and label."""
+    visit = next(v for v in _candidate_visits(body) if v["number"] == 2)
+    p = next(p for p in visit["procedures"] if (p["code"], p["label"]) == (target["code"], target["label"]))
+    return p["endpoint_role"], p["endpoint_note"], p["link_basis"]
+
+
+def _human_count(body: dict[str, Any]) -> int:
+    return sum(p["link_basis"] == "human" for v in _candidate_visits(body) for p in v["procedures"])
+
+
+def _save_with_human_choice(c: TestClient, design: dict[str, Any], visits: list[dict[str, Any]],
+                            role: str, note: str) -> dict[str, Any]:
+    """Store `design` with `visits`, where visit 2's first procedure carries a human endpoint decision."""
+    visits = json.loads(json.dumps(visits))
+    target: dict[str, Any] = next(v for v in visits if v["number"] == 2)["procedures"][0]
+    target.update(endpoint_role=role, endpoint_note=note, link_basis="human")
+    r = c.post("/api/designs", json={**design, "visits": visits}, headers=AUTHOR)
+    assert r.status_code in (200, 201), r.text
+    return target
+
+
+@pytest.mark.req("URS-002", "URS-001")
+def test_protocol_candidates_get_the_saved_human_choice(mounted: TestClient) -> None:
+    c = mounted
+    first = c.post("/api/import/protocol", data={"nct_id": DEMO_NCT}).json()
+    design = c.post(f"/api/import/ctgov/{DEMO_NCT}", headers=AUTHOR).json()["design"]
+    target = _save_with_human_choice(c, design, _candidate_visits(first), "supports_secondary", "checked by a person")
+    for form in ({"nct_id": DEMO_NCT.lower()}, {"nct_id": DEMO_NCT, "design_id": design["id"]}):
+        body = c.post("/api/import/protocol", data=form).json()
+        assert _annotation(body, target) == ("supports_secondary", "checked by a person", "human"), form
+        assert _human_count(body) == 1, form
+        assert body["design_id"] == form.get("design_id") and body["document"]["source"] == "ctgov"
+    # The cached extraction itself is not rewritten: without a stored design nothing is human.
+    assert _human_count(first) == 0
+
+
+@pytest.mark.req("URS-002", "URS-001")
+def test_protocol_annotation_uses_design_id_only_for_the_same_registry_id(mounted: TestClient) -> None:
+    c = mounted
+    visits = _candidate_visits(c.post("/api/import/protocol", data={"nct_id": DEMO_NCT}).json())
+    demo = c.post(f"/api/import/ctgov/{DEMO_NCT}", headers=AUTHOR).json()["design"]
+    other = c.post("/api/import/ctgov/NCT04535986", headers=AUTHOR).json()["design"]
+    target = _save_with_human_choice(c, demo, visits, "not_linked", "from the imported design")
+    _save_with_human_choice(c, other, visits, "supports_secondary", "from another trial")
+    _save_with_human_choice(c, {**demo, "id": "copy-of-demo"}, visits, "supports_primary", "from a saved copy")
+    # A design for another registry id is ignored; the design imported from nct_id is used instead.
+    body = c.post("/api/import/protocol", data={"nct_id": DEMO_NCT, "design_id": other["id"]}).json()
+    assert _annotation(body, target) == ("not_linked", "from the imported design", "human")
+    assert body["design_id"] == other["id"]
+    # A design for the same registry id is the one given.
+    body = c.post("/api/import/protocol", data={"nct_id": DEMO_NCT, "design_id": "copy-of-demo"}).json()
+    assert _annotation(body, target) == ("supports_primary", "from a saved copy", "human")
+
+
+@pytest.mark.req("URS-002", "URS-001")
+def test_uploaded_protocol_uses_the_stored_design(mounted: TestClient) -> None:
+    c = mounted
+    upload = {"file": ("tp-syn.pdf", make_pdf("text"), "application/pdf")}
+    first = c.post("/api/import/protocol", files=upload).json()
+    design = c.post(f"/api/import/ctgov/{DEMO_NCT}", headers=AUTHOR).json()["design"]
+    target = _save_with_human_choice(c, design, _candidate_visits(first), "supports_secondary", "seen in the CSR")
+    body = c.post("/api/import/protocol", files=upload, data={"design_id": design["id"]}).json()
+    assert _annotation(body, target) == ("supports_secondary", "seen in the CSR", "human")
+    assert _human_count(body) == 1 and body["document"]["source"] == "upload"
+    # An unknown design and no NCT id: no registry record and no saved decision, so nothing is linked.
+    body = c.post("/api/import/protocol", files=upload, data={"design_id": "no-such-design"}).json()
+    assert all((p["endpoint_role"], p["endpoint_note"], p["link_basis"]) == ("unknown", "", "unmatched")
+               for v in _candidate_visits(body) for p in v["procedures"])
+
+
+@pytest.mark.req("URS-002")
+def test_uploaded_protocol_without_registry_record_stays_unknown(client: TestClient) -> None:
+    pdf = make_pdf("text")
+    body = client.post("/api/import/protocol", files={"file": ("tp-syn.pdf", pdf, "application/pdf")}).json()
+    procedures = [p for v in _candidate_visits(body) for p in v["procedures"]]
+    assert procedures and all((p["endpoint_role"], p["endpoint_note"], p["link_basis"]) == ("unknown", "", "unmatched")
+                              for p in procedures)
+    assert body["document"] == {"filename": "tp-syn.pdf", "size_bytes": len(pdf), "source": "upload"}
+    assert body["design_id"] is None
+
+
+@pytest.mark.req("URS-001")
+def test_reimport_keeps_the_saved_human_choice(mounted: TestClient) -> None:
+    c = mounted
+    design = c.post(f"/api/import/ctgov/{DEMO_NCT}", headers=AUTHOR).json()["design"]
+    visits = json.loads(json.dumps(design["visits"]))
+    target = visits[0]["procedures"][0]
+    target.update(endpoint_role="supports_primary", endpoint_note="a person linked this", link_basis="human")
+    assert c.post("/api/designs", json={**design, "visits": visits}, headers=AUTHOR).status_code in (200, 201)
+    again = c.post(f"/api/import/ctgov/{DEMO_NCT}", headers=AUTHOR).json()["design"]
+    got = again["visits"][0]["procedures"][0]
+    assert (got["code"], got["label"]) == (target["code"], target["label"])
+    assert (got["endpoint_role"], got["endpoint_note"], got["link_basis"]) == (
+        "supports_primary", "a person linked this", "human")
+    # Every other procedure is linked exactly as on the first import.
+    first = [p for v in design["visits"] for p in v["procedures"]][1:]
+    second = [p for v in again["visits"] for p in v["procedures"]][1:]
+    assert second == first
+
+
+# ---------------------------------------------------------------- mounted app: offline flag
+def _no_network(*_: Any, **__: Any) -> Any:
+    raise AssertionError("network used")
+
+
+@pytest.mark.req("URS-029", "URS-001", "URS-002")
+def test_mounted_importers_follow_the_app_offline_setting(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    """Settings say offline (what /api/health reports) while DEMO_OFFLINE is unset: no network call."""
+    monkeypatch.delenv("DEMO_OFFLINE", raising=False)
+    monkeypatch.delenv("TP_DEMO_OFFLINE", raising=False)
+    monkeypatch.setattr(httpx, "Client", _no_network)
+    app = _mounted_app(tmp_path, _env_file=None, demo_offline=True)
+    with TestClient(app) as c:
+        assert c.get("/api/health").json()["offline"] is True
+        assert c.get("/api/import/ctgov").json()["offline"] is True
+        r = c.post("/api/import/ctgov/NCT09999999", headers=AUTHOR)
+        assert r.status_code == 503 and r.json()["error"] == "offline_cache_miss"
+        r = c.post(f"/api/import/ctgov/{DEMO_NCT}", params={"refresh": "true"}, headers=AUTHOR)
+        assert r.status_code == 200 and r.json()["raw_cached"] is True and r.json()["stale_fallback"] is False
+        r = c.post("/api/import/protocol", data={"nct_id": "NCT04456673"})
+        assert r.status_code == 503 and r.json()["error"] == "offline_cache_miss"
+        r = c.post("/api/import/protocol", files={"file": ("scan.pdf", make_pdf("image"), "application/pdf")})
+        assert r.status_code == 503 and r.json()["error"] == "extraction_unavailable"
+        assert "offline demo mode" in r.json()["message"]
+    app.state.db_engine.dispose()
+
+
+@pytest.mark.req("URS-029", "URS-001")
+def test_mounted_importers_online_setting_wins_over_the_environment(tmp_path: Path,
+                                                                     monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("DEMO_OFFLINE", "1")
+    monkeypatch.setattr(httpx, "Client", _no_network)
+    app = _mounted_app(tmp_path, _env_file=None, demo_offline=False)
+    with TestClient(app) as c:
+        assert c.get("/api/health").json()["offline"] is False
+        assert c.get("/api/import/ctgov").json()["offline"] is False
+        r = c.post(f"/api/import/ctgov/{DEMO_NCT}", headers=AUTHOR)  # cache first, so still no network call
+        assert r.status_code == 200 and r.json()["raw_cached"] is True
+    app.state.db_engine.dispose()

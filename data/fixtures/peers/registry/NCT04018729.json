@@ -1,0 +1,234 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT04018729",
+   "orgStudyIdInfo": {
+    "id": "2018-0327"
+   },
+   "organization": {
+    "fullName": "Hospital de Clinicas de Porto Alegre",
+    "class": "OTHER"
+   },
+   "briefTitle": "Cell Therapy Associated With Endobronchial Valve",
+   "officialTitle": "Bone Marrow-Derived Mesenchymal Stromal Cell Therapy Associated With Unidirectional Endobronchial Valve in Patients With Severe Pulmonary Emphysema: A Randomized Clinical Trial",
+   "acronym": "CEL&VAL"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2022-12",
+   "overallStatus": "RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2019-11-19",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2020-08-17",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2029-04-30",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2019-05-10",
+   "studyFirstSubmitQcDate": "2019-07-11",
+   "studyFirstPostDateStruct": {
+    "date": "2019-07-12",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2022-12-12",
+   "lastUpdatePostDateStruct": {
+    "date": "2022-12-14",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Hospital de Clinicas de Porto Alegre",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "Pontifícia Universidade Católica do Paraná",
+     "class": "OTHER"
+    },
+    {
+     "name": "Universidade Federal do Rio de Janeiro",
+     "class": "OTHER"
+    }
+   ]
+  },
+  "oversightModule": {
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": true,
+   "isUsExport": true
+  },
+  "descriptionModule": {
+   "briefSummary": "Chronic obstructive pulmonary disease (COPD) is one of the most common diseases worldwide and is considered a public health problem. The World Health Organization estimates that about 210 million people have COPD. Disease-related mortality is more than 3 million, representing 5% of all deaths, 90% of this mortality being concentrated in middle- and low-income countries. COPD can be subdivided into chronic bronchitis and emphysema. Emphysema, the focus of this project, is histologically defined by the permanent increase of the distal air spaces to the terminal bronchioles associated with the destruction of the alveolar septa in the lung. Approximately two-thirds of adult men and a quarter of women (most without dysfunction) will have well-defined emphysema, but often of limited extent.\n\nMesenchymal stem cells (MSCs) have anti-inflammatory, anti-fibrotic, microbicide and repair potential. Regarding COPD, several authors have concentrated efforts in the investigation of the relationship between the severity of the condition and the various sources of adult stem cells. Apparently the lungs have a high chemotactic effect in relation to adult stem cells, since several studies have evidenced a high implantation (6-20%) of stem cells derived from bone marrow, administered systemically, in the pulmonary tissue of receptors. Therefore, MSCs has been tested in different lung diseases have no effective treatment, such as pulmonary fibrosis, acute respiratory distress syndrome, asthma, COPD positive results, such as reduction of fibrosis, reduction of proliferation inflammatory cells and cytokines, reduction of infectious processes and recovery of the histological changes caused by pulmonary emphysema.\n\nBased on these findings, the purpose of this project is to evaluate the safety and efficacy of endoscopic administration of bone marrow stem cells in patients with severe homogeneous emphysema and evaluating the feasibility, efficacy and safety of this procedure."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease Severe"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 34,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Endobronchial valve + marrow-derived mesenchymal stromal cell",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Device: Zephyr Endobronchial Valve",
+      "Biological: Marrow-derived mesenchymal stromal cell"
+     ]
+    },
+    {
+     "label": "Endobronchial valve",
+     "type": "ACTIVE_COMPARATOR",
+     "interventionNames": [
+      "Device: Zephyr Endobronchial Valve"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DEVICE",
+     "name": "Zephyr Endobronchial Valve",
+     "description": "Endoscopic lung volume reduction therapy.",
+     "armGroupLabels": [
+      "Endobronchial valve",
+      "Endobronchial valve + marrow-derived mesenchymal stromal cell"
+     ]
+    },
+    {
+     "type": "BIOLOGICAL",
+     "name": "Marrow-derived mesenchymal stromal cell",
+     "description": "Mesenchymal stem cells have anti-inflammatory, anti-fibrotic, microbicide and repair potential.",
+     "armGroupLabels": [
+      "Endobronchial valve + marrow-derived mesenchymal stromal cell"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "All-cause death",
+     "description": "Expressed as the total number of death due to all conditions during the clinical trial.",
+     "timeFrame": "6 months"
+    },
+    {
+     "measure": "Number of participants with worsening of dyspnea",
+     "description": "Number of participants with worsening of dyspnea as measured by the mMRC-Modified Medical Research Council (1 point increase in the measured scale). The mMRC Dyspnea Scale quantifies disability attributable to breathlessness (range from 1-4), and is useful for characterizing baseline dyspnea in patients with respiratory diseases.",
+     "timeFrame": "6 months"
+    },
+    {
+     "measure": "Number of participants with respiratory functional worsening",
+     "description": "Number of participants with respiratory functional worsening as measured by decrease of 15% or more in FEV1 (forced expiratory volume in one second). FEV1 is a measurement taken from a pulmonary function test. It calculates the amount of air that a person can force out of their lungs in 1 second.",
+     "timeFrame": "6 months"
+    },
+    {
+     "measure": "Impairment of exercise capacity",
+     "description": "Impairment of exercise capacity as measured by reduction of 35 m in the 6-minute walk test. The 6-min walk test (6 MWT) is a submaximal exercise test that entails measurement of distance walked over a span of 6 minutes. The test provides a measure for integrated global response of multiple cardiopulmonary and musculoskeletal systems involved in exercise.",
+     "timeFrame": "6 months"
+    },
+    {
+     "measure": "Increased oxygen use",
+     "description": "Outcome measure result: number of participants with 1 point increase in oxygen need as classification on the chart above 0 - no oxygen use 1- intermittent use \\<6h/day 2- intermittent use \\>6h/dia 3 - continuous oxygen use",
+     "timeFrame": "6 months"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Diagnosis of severe heterogeneous pulmonary emphysema (at least 10% of total lung parenchyma or 25% of target lobe with density \\< -950HU);\n* Heterogeneity\\> 15pp (difference of at least 15 percentage points of lung parenchyma with density greater than -950HU between the treated lobe(s) and the remaining lung on the same side)\n* Estimates of low or non-existent collateral ventilation (fissure integrity\\> 95% measured by VIDA Diagnostics or collateral ventilation measured by negative Chartis® System)\n* Total lung capacity\\> 100% of predicted\n* Residual volume\\> 175% of predicted\n* FEV1 \\<50% of predicted post-bronchodilator\n* DLCO (diffusing capacity of the lungs for carbon monoxide) \\<45% of predicted post-bronchodilator\n* Body Mass Index (BMI) Greater than 18Kg/m2 and less than 35Kg/m2.\n* Optimized clinical treatment\n* Daily physical activities limitation\n* Possibility of pulmonary rehabilitation\n* Preserved ventricular function (LVEF\\> 40%)\n* Cessation of smoking ≥ 4 months\n* Dyspnea MMRC ≥ 2\n\nExclusion Criteria:\n\n* Homogeneous emphysema\n* Estimated collateral ventilation observed on CT scanned by VIDA vision software (VIDA vision®, VIDA Diagnostics, Iowa-USA) - Fissure integrity on target lobe less than 75%.\n* Use of continuous systemic corticosteroid therapy\\> 20mg QD (quaque die, once a day) of prednisone (or equivalent)\n* Active lung or extra pulmonary infection\n* Coronary heart disease and/or severe ventricular dysfunction\n* Significant renal or hepatic disease\n* Immunosuppressive disease\n* Rheumatologic or orthopedic disease limiting physical capacity;\n* Cognitive inability to understand study procedures;\n* Impression by clinical research investigators with a lifespan of less than a year1;\n* Active smoking\n* Malignant neoplasia with estimated prognosis of survival \\<2 years\n* Psychosocial problems\n* Pregnancy",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Hugo G Oliveira, PhD",
+     "role": "CONTACT",
+     "phone": "+55 51 3359-8241",
+     "phoneExt": "8241",
+     "email": "hugo@hugooliveira.org"
+    }
+   ],
+   "overallOfficials": [
+    {
+     "name": "Hugo G Oliveira, PhD",
+     "affiliation": "Hospital de Clinicas de Porto Alegre",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Hospital de Clinicas de Porto Alegre",
+     "status": "RECRUITING",
+     "city": "Porto Alegre",
+     "state": "Rio Grande do Sul",
+     "zip": "90035903",
+     "country": "Brazil",
+     "contacts": [
+      {
+       "name": "Hugo G Oliveira, PhD",
+       "role": "CONTACT",
+       "phone": "55 51 3359-1337",
+       "email": "holiveira@hcpa.edu.br"
+      },
+      {
+       "name": "Igor G Benedetto, MSc",
+       "role": "CONTACT",
+       "phone": "55 51 3359-1337",
+       "email": "ibenedetto@hcpa.edu.br"
+      }
+     ],
+     "geoPoint": {
+      "lat": -30.03283,
+      "lon": -51.23019
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  }
+ },
+ "hasResults": false
+}

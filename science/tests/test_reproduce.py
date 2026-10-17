@@ -9,7 +9,7 @@ import numpy as np
 import pytest
 from trialpilot_contracts import load_params
 
-from trialpilot_science import paths
+from trialpilot_science import paths, reproduce
 from trialpilot_science.designs import load_design
 from trialpilot_science.library import evaluate, triangular_draws
 from trialpilot_science.reproduce import run, write
@@ -144,3 +144,17 @@ def test_factor_expressions_are_sandboxed() -> None:
     for bad in ("__import__('os')", "a.b", "a ** 2", "[a]"):
         with pytest.raises((ValueError, KeyError, SyntaxError)):
             evaluate(bad, {"a": 1.0})
+
+
+def test_industry_band_uses_the_run_seed_and_draws(monkeypatch: pytest.MonkeyPatch) -> None:
+    calls: list[tuple[int, int]] = []
+
+    def recording_engine(design: object, levers: object, params: object, *, seed: int, draws: int) -> object:
+        calls.append((seed, draws))
+        raise RuntimeError("recorded only")
+
+    monkeypatch.setattr(reproduce, "load_engine", lambda: (recording_engine, None))
+    res = reproduce.run(seed=8, draws=300)
+    assert len(calls) > 4  # 2 trials x 2 engine checks, plus every demo trial in the band
+    assert set(calls) == {(8, 300)}
+    assert (res.seed, res.draws) == (8, 300)

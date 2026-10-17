@@ -1,0 +1,561 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT04361552",
+   "orgStudyIdInfo": {
+    "id": "STUDY00000419"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "NCI-2020-02314",
+     "type": "REGISTRY",
+     "domain": "CTRP (Clinical Trial Reporting Program)"
+    },
+    {
+     "id": "WINSHIP4998-20",
+     "type": "OTHER",
+     "domain": "Emory University Hospital/Winship Cancer Institute"
+    },
+    {
+     "id": "P30CA138292",
+     "type": "NIH",
+     "link": "https://reporter.nih.gov/quickSearch/P30CA138292"
+    }
+   ],
+   "organization": {
+    "fullName": "Emory University",
+    "class": "OTHER"
+   },
+   "briefTitle": "Tocilizumab for the Treatment of Cytokine Release Syndrome in Patients With COVID-19 (SARS-CoV-2 Infection)",
+   "officialTitle": "Tociluzumab for Cytokine Release Syndrome With SARS-CoV-2: An Open-Labeled, Randomized Phase 3 Trial"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2020-06",
+   "overallStatus": "WITHDRAWN",
+   "whyStopped": "Study abandoned due to drug billing issues",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2020-04-07",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2020-06-02",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2020-06-02",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2020-04-07",
+   "studyFirstSubmitQcDate": "2020-04-22",
+   "studyFirstPostDateStruct": {
+    "date": "2020-04-24",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2020-06-16",
+   "lastUpdatePostDateStruct": {
+    "date": "2020-06-18",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "PRINCIPAL_INVESTIGATOR",
+    "investigatorFullName": "Ajay Nooka",
+    "investigatorTitle": "Principal Investigator",
+    "investigatorAffiliation": "Emory University"
+   },
+   "leadSponsor": {
+    "name": "Emory University",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "National Cancer Institute (NCI)",
+     "class": "NIH"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "This phase III trial compares the effect of adding tocilizumab to standard of care versus standard of care alone in treating cytokine release syndrome (CRS) in patients with SARS-CoV-2 infection. CRS is a potentially serious disorder caused by the release of an excessive amount of substance that is made by cells of the immune system (cytokines) as a response to viral infection. Tocilizumab is used to decrease the body's immune response. Adding tocilizumab to standard of care may work better in treating CRS in patients with SARS-CoV-2 infection compared to standard of care alone.",
+   "detailedDescription": "PRIMARY OBJECTIVE:\n\nI. To decrease the length of invasive mechanical ventilation (MV) and rate of 30-day mortality from CRS due to SARS-CoV-2.\n\nSECONDARY OBJECTIVES:\n\nI. To decrease the rates of intensive care unit (ICU) transfer. II. To decrease the rate of invasive mechanical ventilation (MV). III. To decrease the length of ICU stay. IV. To decrease the rate of tracheostomy. V. Safety and efficacy of tociluzumab. VI. Biomarker assessment for response.\n\nOUTLINE: Patients are randomized to 1 of 2 arms.\n\nARM I: Patients receive tocilizumab intravenously (IV) every 12 hours for up to 3 doses in the absence of disease progression or unacceptable toxicity. Patients also receive standard of care.\n\nARM II: Patients receive standard of care."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Cerebrovascular Accident",
+    "Chronic Obstructive Pulmonary Disease",
+    "Chronic Renal Failure",
+    "Coronary Artery Disease",
+    "Diabetes Mellitus",
+    "Malignant Neoplasm",
+    "SARS Coronavirus 2 Infection"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "NONE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 0,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Arm I (tocilizumab, standard of care)",
+     "type": "EXPERIMENTAL",
+     "description": "Patients receive tocilizumab IV every 12 hours for up to 3 doses in the absence of disease progression or unacceptable toxicity. Patients also receive standard of care.",
+     "interventionNames": [
+      "Other: Best Practice",
+      "Biological: Tocilizumab"
+     ]
+    },
+    {
+     "label": "Arm II (standard of care)",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Patients receive standard of care.",
+     "interventionNames": [
+      "Other: Best Practice"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "OTHER",
+     "name": "Best Practice",
+     "description": "Receive standard of care",
+     "armGroupLabels": [
+      "Arm I (tocilizumab, standard of care)",
+      "Arm II (standard of care)"
+     ],
+     "otherNames": [
+      "standard of care",
+      "standard therapy"
+     ]
+    },
+    {
+     "type": "BIOLOGICAL",
+     "name": "Tocilizumab",
+     "description": "Given IV",
+     "armGroupLabels": [
+      "Arm I (tocilizumab, standard of care)"
+     ],
+     "otherNames": [
+      "Actemra",
+      "Immunoglobulin G1, Anti-(Human Interleukin 6 Receptor) (Human-Mouse Monoclonal MRA Heavy Chain), Disulfide with Human-Mouse Monoclonal MRA Kappa-Chain, Dimer",
+      "MRA",
+      "R-1569",
+      "RoActemra"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "7-day length of invasive mechanical ventilation (MV)",
+     "description": "The 7-day length of invasive MV for each arm will be estimated with 95% confidence intervals (CIs) using the exact binomial distribution. Their difference by the arms will be tested by Cochran-Mantel-Haenszel (CMH) test stratified by the age group and Sequential Organ Failure Assessment (SOFA) score at significance level of 0.05.",
+     "timeFrame": "Up to 7 days"
+    },
+    {
+     "measure": "30-day mortality rate",
+     "description": "Defined as death within 30-day after randomization. The 30-day mortality rate for each arm will be estimated with 95% CIs using the exact binomial distribution. Their difference by the arms will be tested CMH test stratified by the age group and SOFA score at significance level of 0.05.",
+     "timeFrame": "Up to 30-day after randomization"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Rate of intensive care (ICU) transfer",
+     "description": "The rate of ICU transfer for each arm will be estimated with 95% CIs using the exact binomial distribution. Their difference by the arms will be tested CMH test stratified by the age group and SOFA score at significance level of 0.05.",
+     "timeFrame": "Up to 2 years"
+    },
+    {
+     "measure": "Rate of invasive mechanical ventilation",
+     "description": "The rate of invasive mechanical ventilation for each arm will be estimated with 95% CIs using the exact binomial distribution. Their difference by the arms will be tested CMH test stratified by the age group and SOFA score at significance level of 0.05.",
+     "timeFrame": "Up to 2 years"
+    },
+    {
+     "measure": "Rate of tracheostomy",
+     "description": "The rate of tracheostomy for each arm will be estimated with 95% CIs using the exact binomial distribution. Their difference by the arms will be tested CMH test stratified by the age group and SOFA score at significance level of 0.05.",
+     "timeFrame": "Up to 2 years"
+    },
+    {
+     "measure": "Length of ICU stay",
+     "description": "Will first be described by median and inter-quartile, and then compared between two arms by Wilcoxon Sum-Rank test",
+     "timeFrame": "Up to 2 years"
+    },
+    {
+     "measure": "Length of hospital stay",
+     "timeFrame": "Up 2 years"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Diagnosis with SARS-CoV-2 by the currently available assays (Food and Drug Administration \\[FDA\\] approved)\n* Should be hospitalized and exhibit at least one of the following predictors of mortality\n\n  * Age \\>= 65 years\n  * Current smoker (smoked \\>= 100 cigarettes in life and actively smoking)\n  * Chronic obstructive pulmonary disease (COPD)\n  * Diabetes\n  * Hypertension\n  * Coronary artery disease\n  * Cerebrovascular accident (CVA)\n  * Chronic renal disease (creatinine of \\>= 2 mg/dl)\n  * Cancer\n  * Patients that have C-reactive protein (CRP) \\>= 10 mg/L\n  * D-dimer \\>= 0.5 mg/L\n  * Procalcitonin \\>= 0.5 mg/L\n  * Lactate dehydrogenase (LDH) \\>= upper limit of normal (ULN)\n* Patients or authorized family member willing to sign informed consent to participate in this study\n\nExclusion Criteria:\n\n* Pregnant or lactating women\n* Hypersensitivity to tocilizumab\n* Patients or authorized family member unwilling to sign informed consent to participate in this study\n* Uncontrolled tuberculosis, or any uncontrolled fungal infection (eg: candidemia)",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Ajay K Nooka",
+     "affiliation": "Emory University Hospital/Winship Cancer Institute",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Emory University Hospital/Winship Cancer Institute",
+     "city": "Atlanta",
+     "state": "Georgia",
+     "zip": "30322",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.749,
+      "lon": -84.38798
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO",
+   "description": "Results of the trial and not individual patient data will be shared. The study protocol, consent, and investigator's brochure will be available. The statistical plan is incorporated into the protocol, along with inclusion and exclusion criteria."
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D020521",
+     "term": "Stroke"
+    },
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D007676",
+     "term": "Kidney Failure, Chronic"
+    },
+    {
+     "id": "D003324",
+     "term": "Coronary Artery Disease"
+    },
+    {
+     "id": "D003920",
+     "term": "Diabetes Mellitus"
+    },
+    {
+     "id": "D009369",
+     "term": "Neoplasms"
+    },
+    {
+     "id": "D000086382",
+     "term": "COVID-19"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D002561",
+     "term": "Cerebrovascular Disorders"
+    },
+    {
+     "id": "D001927",
+     "term": "Brain Diseases"
+    },
+    {
+     "id": "D002493",
+     "term": "Central Nervous System Diseases"
+    },
+    {
+     "id": "D009422",
+     "term": "Nervous System Diseases"
+    },
+    {
+     "id": "D014652",
+     "term": "Vascular Diseases"
+    },
+    {
+     "id": "D002318",
+     "term": "Cardiovascular Diseases"
+    },
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D051436",
+     "term": "Renal Insufficiency, Chronic"
+    },
+    {
+     "id": "D051437",
+     "term": "Renal Insufficiency"
+    },
+    {
+     "id": "D007674",
+     "term": "Kidney Diseases"
+    },
+    {
+     "id": "D014570",
+     "term": "Urologic Diseases"
+    },
+    {
+     "id": "D052776",
+     "term": "Female Urogenital Diseases"
+    },
+    {
+     "id": "D005261",
+     "term": "Female Urogenital Diseases and Pregnancy Complications"
+    },
+    {
+     "id": "D000091642",
+     "term": "Urogenital Diseases"
+    },
+    {
+     "id": "D052801",
+     "term": "Male Urogenital Diseases"
+    },
+    {
+     "id": "D003327",
+     "term": "Coronary Disease"
+    },
+    {
+     "id": "D017202",
+     "term": "Myocardial Ischemia"
+    },
+    {
+     "id": "D006331",
+     "term": "Heart Diseases"
+    },
+    {
+     "id": "D001161",
+     "term": "Arteriosclerosis"
+    },
+    {
+     "id": "D001157",
+     "term": "Arterial Occlusive Diseases"
+    },
+    {
+     "id": "D044882",
+     "term": "Glucose Metabolism Disorders"
+    },
+    {
+     "id": "D008659",
+     "term": "Metabolic Diseases"
+    },
+    {
+     "id": "D009750",
+     "term": "Nutritional and Metabolic Diseases"
+    },
+    {
+     "id": "D004700",
+     "term": "Endocrine System Diseases"
+    },
+    {
+     "id": "D011024",
+     "term": "Pneumonia, Viral"
+    },
+    {
+     "id": "D011014",
+     "term": "Pneumonia"
+    },
+    {
+     "id": "D012141",
+     "term": "Respiratory Tract Infections"
+    },
+    {
+     "id": "D007239",
+     "term": "Infections"
+    },
+    {
+     "id": "D014777",
+     "term": "Virus Diseases"
+    },
+    {
+     "id": "D018352",
+     "term": "Coronavirus Infections"
+    },
+    {
+     "id": "D003333",
+     "term": "Coronaviridae Infections"
+    },
+    {
+     "id": "D030341",
+     "term": "Nidovirales Infections"
+    },
+    {
+     "id": "D012327",
+     "term": "RNA Virus Infections"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D017410",
+     "term": "Practice Guidelines as Topic"
+    },
+    {
+     "id": "D059039",
+     "term": "Standard of Care"
+    },
+    {
+     "id": "C502936",
+     "term": "tocilizumab"
+    },
+    {
+     "id": "D007074",
+     "term": "Immunoglobulin G"
+    },
+    {
+     "id": "D004220",
+     "term": "Disulfides"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D017408",
+     "term": "Guidelines as Topic"
+    },
+    {
+     "id": "D011785",
+     "term": "Quality Assurance, Health Care"
+    },
+    {
+     "id": "D011787",
+     "term": "Quality of Health Care"
+    },
+    {
+     "id": "D006298",
+     "term": "Health Services Administration"
+    },
+    {
+     "id": "D017530",
+     "term": "Health Care Quality, Access, and Evaluation"
+    },
+    {
+     "id": "D019984",
+     "term": "Quality Indicators, Health Care"
+    },
+    {
+     "id": "D007132",
+     "term": "Immunoglobulin Isotypes"
+    },
+    {
+     "id": "D000906",
+     "term": "Antibodies"
+    },
+    {
+     "id": "D007136",
+     "term": "Immunoglobulins"
+    },
+    {
+     "id": "D007162",
+     "term": "Immunoproteins"
+    },
+    {
+     "id": "D001798",
+     "term": "Blood Proteins"
+    },
+    {
+     "id": "D011506",
+     "term": "Proteins"
+    },
+    {
+     "id": "D000602",
+     "term": "Amino Acids, Peptides, and Proteins"
+    },
+    {
+     "id": "D012712",
+     "term": "Serum Globulins"
+    },
+    {
+     "id": "D005916",
+     "term": "Globulins"
+    },
+    {
+     "id": "D013440",
+     "term": "Sulfides"
+    },
+    {
+     "id": "D000838",
+     "term": "Anions"
+    },
+    {
+     "id": "D007477",
+     "term": "Ions"
+    },
+    {
+     "id": "D004573",
+     "term": "Electrolytes"
+    },
+    {
+     "id": "D007287",
+     "term": "Inorganic Chemicals"
+    },
+    {
+     "id": "D006862",
+     "term": "Hydrogen Sulfide"
+    },
+    {
+     "id": "D013457",
+     "term": "Sulfur Compounds"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

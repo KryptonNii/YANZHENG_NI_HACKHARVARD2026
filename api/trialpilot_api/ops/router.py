@@ -19,7 +19,14 @@ from ..sse import SSEMessage, last_event_id_of
 from . import actions, audit
 from ._contracts import Levers, MetricRange, ProvenanceItem, ScenarioResult, TrialDesign
 from .fixtures import DEMO_TRIAL_ID, load_demo_design
-from .store import DEFAULT_HORIZON, DEFAULT_START_DAY, OpsError, TrialState
+from .store import (
+    DEFAULT_HORIZON,
+    DEFAULT_SEED,
+    DEFAULT_START_DAY,
+    MAX_ADVANCE_DAYS,
+    OpsError,
+    TrialState,
+)
 
 router = APIRouter(tags=["operations"])
 _registry_lock = threading.RLock()
@@ -55,7 +62,7 @@ class ForecastBody(Input):
 
 
 class SimulateBody(Input):
-    seed: int = Field(default=42, ge=0, le=2**32 - 1)
+    seed: int = Field(default=DEFAULT_SEED, ge=0, le=2**32 - 1)
     speed: float = Field(default=0, ge=0, le=30)
     scenario: Literal["demo", "healthy"] = "demo"
     start_day: float = Field(default=DEFAULT_START_DAY, ge=0)
@@ -75,7 +82,7 @@ class SimulateBody(Input):
 
 
 class ClockBody(Input):
-    advance_days: float = Field(gt=0, le=365)
+    advance_days: float = Field(gt=0, le=MAX_ADVANCE_DAYS)
 
 
 class AlertPatch(Input):

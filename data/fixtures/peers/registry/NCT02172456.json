@@ -1,0 +1,264 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT02172456",
+   "orgStudyIdInfo": {
+    "id": "205.238"
+   },
+   "organization": {
+    "fullName": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Evaluation of the Lung Deposition Rate and Distribution Pattern of Tiotropium Via HandiHalerTM in Healthy Subjects and Patients With Chronic Obstructive Pulmonary Disease (COPD)",
+   "officialTitle": "γ-Scintigraphic Evaluation of the Lung Deposition Rate and Distribution Pattern of a 99mTc-Labelled Tiotropium Powder Formulation Following Multiple Dose Inhalation of Tiotropium Via HandiHalerTM in Healthy Subjects and Patients With COPD"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2014-06",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2002-05"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2002-10",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2014-06-20",
+   "studyFirstSubmitQcDate": "2014-06-20",
+   "studyFirstPostDateStruct": {
+    "date": "2014-06-24",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2014-06-20",
+   "lastUpdatePostDateStruct": {
+    "date": "2014-06-24",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Boehringer Ingelheim",
+    "class": "INDUSTRY"
+   }
+  },
+  "descriptionModule": {
+   "briefSummary": "Primary endpoint: whole lung deposition and in-vivo distribution pattern of a 99mTc-labelled tiotropium powder formulation following inhalation via HandiHalerTM in healthy subjects as well as in patients with mild, moderate and severe COPD\n\nSecondary endpoints: pharmacokinetics, pharmacodynamics (effect on lung function), safety and tolerability"
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Disease, Chronic Obstructive"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "NA",
+    "interventionModel": "SINGLE_GROUP",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "NONE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 22,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Tiotropium",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Drug: 99mTc-radiolabelled tiotropium",
+      "Drug: non-radiolabelled tiotropium"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "99mTc-radiolabelled tiotropium",
+     "armGroupLabels": [
+      "Tiotropium"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "non-radiolabelled tiotropium",
+     "armGroupLabels": [
+      "Tiotropium"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Percentage of the total administered radioactivity of 99mTc-labelled tiotropium",
+     "timeFrame": "Day 15"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Peak plasma concentration at steady state (Cmax,ss)",
+     "timeFrame": "Day 14"
+    },
+    {
+     "measure": "Time to peak plasma concentration at steady state (Tmax,ss)",
+     "timeFrame": "Day 14"
+    },
+    {
+     "measure": "Pre-dose plasma concentration (Cpre)",
+     "timeFrame": "Day 1"
+    },
+    {
+     "measure": "Area under the curve from 0 to 4 hours at steady state (AUCss,0-4h )",
+     "timeFrame": "Day 14: 5, 10, 20 min, 1, 2, 4 hours after dosing"
+    },
+    {
+     "measure": "Renal clearance (CLr)",
+     "timeFrame": "Day 14: 0-4 hours and 4-8 hours after drug administration"
+    },
+    {
+     "measure": "Drug concentration (C20min)",
+     "timeFrame": "Day 15: 20 min after drug administration"
+    },
+    {
+     "measure": "Drug concentration (C2h)",
+     "timeFrame": "Day 15: 2 hours after drug administration"
+    },
+    {
+     "measure": "Change from baseline in forced expiratory volume in the first second (FEV1) in healthy subjects",
+     "timeFrame": "Baseline (day -14), day 15 (pre-dose)"
+    },
+    {
+     "measure": "Change from baseline in forced Vital Capacity (FVC) in healthy subjects",
+     "timeFrame": "Baseline (day -14), day 15 (pre-dose)"
+    },
+    {
+     "measure": "Number of adverse events",
+     "timeFrame": "up to day 38"
+    },
+    {
+     "measure": "Change from baseline in puls rate",
+     "timeFrame": "Baseline, day 28"
+    },
+    {
+     "measure": "Change from baseline in blood pressure",
+     "timeFrame": "Baseline, day 28"
+    },
+    {
+     "measure": "Change from baseline in laboratory tests",
+     "timeFrame": "Baseline, day 28"
+    },
+    {
+     "measure": "Change from baseline in 12 lead electrocardiogram (ECG)",
+     "timeFrame": "Baseline, day 28"
+    },
+    {
+     "measure": "Change from baseline in physical examination",
+     "timeFrame": "Baseline, day 28"
+    },
+    {
+     "measure": "Change from baseline in forced expiratory volume in the first second (FEV1) in COPD patients",
+     "timeFrame": "Baseline (day -14), pre-dose on day 1, 9, 14 (pre-dose and 0.5, 1, 2, and 3 hours after dosing), 15 and 28"
+    },
+    {
+     "measure": "Change from baseline in forced Vital Capacity (FVC) in COPD patients",
+     "timeFrame": "Baseline (day -14), pre-dose on day 1, 9, 14 (pre-dose and 0.5, 1, 2, and 3 hours after dosing), 15 and 28"
+    },
+    {
+     "measure": "Pre-dose plasma concentration in steady state (Cpre,ss)",
+     "timeFrame": "day 9, 14, 15"
+    },
+    {
+     "measure": "Area under the curve from 0 to 8 hours at steady state (AUCss,0-8h )",
+     "timeFrame": "Day 14: 5, 10, 20 min, 1, 2, 4, 8 hours after dosing"
+    },
+    {
+     "measure": "Amount excreted into urine from 0 to 4 hours (Aess,0-4h)",
+     "timeFrame": "Day 14: 0-4 hours, day 15: 0-4 hours"
+    },
+    {
+     "measure": "Amount excreted into urine from 0 to 8 hours (Aess,0-8h)",
+     "timeFrame": "Day 14: 0-8 hours, day 15: 0-8 hours"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* for healthy subjects and COPD patients:\n\n  * Males or females 40 years of age or older.\n  * Subjects/Patients must be able to inhale medication from the HandiHalerTM\n  * Subjects/Patients must be able to perform all study-related tests including acceptable pulmonary function tests, and must be able to maintain records during the study period as required in the protocol.\n  * All subjects/patients must sign an Informed Consent Form prior to participation in the trial in accordance with ICH-GCP and the local legislation, i.e., the COPD patients must give written informed consent prior to pre-study washout of their usual pulmonary medications.\n* for healthy subjects:\n\n  * Normal spirometry as evidenced by a baseline FEV1 ≥ 80 % of predicted normal value for age, height and sex, and FEV1 ≥ 70% of FVC\n  * Lifelong non-smokers or ex-smokers with a non-smoking period of at least five years and a maximum of five pack-years.\n* for COPD patients:\n\n  * All patients must have a diagnosis of relatively stable chronic obstructive pulmonary disease and must fulfil the spirometric criteria of the respective sub-group:\n\n    * Mild COPD: 50% ≤ FEV1 \\< 70% of predicted normal; FEV1/FVC \\< 70%.\n    * Moderate COPD: 35% ≤ FEV1 \\< 50% of predicted normal; FEV1/FVC \\< 70%.\n    * Severe COPD: FEV1 \\< 35% of predicted normal; FEV1/FVC \\< 70%.\n\nExclusion Criteria:\n\n* for healthy subjects and COPD patients:\n\n  * Subjects or patients with clinically relevant abnormal baseline haematology, blood chemistry or urinalysis, if the abnormality defines a disease listed as an exclusion criterion will be excluded.\n  * All subjects/patients with serum glutamic-oxaloacetic transaminase (SGOT) \\> 80 IU/L, serum glutamic-pyruvic transaminase (SGPT) \\> 80 IU/L, bilirubin \\>2.0 mg/dL or creatinine \\> 2.0 mg/dL will be excluded regardless of clinical condition. Repeat laboratory evaluation will not be conducted in these subjects/patients.\n  * Subjects/Patients with a recent history (i.e., one year or less) of myocardial infarction.\n  * Subjects/Patients with any cardiac arrhythmia requiring drug therapy or who have been hospitalised for heart failure within the past three years.\n  * Subjects/Patients with known active tuberculosis.\n  * Subjects/Patients with a history of cancer within the last five years.\n  * Subjects/Patients with a history of life-threatening pulmonary obstruction, or a history of cystic fibrosis or bronchiectasis.\n  * Subjects/Patients who have undergone thoracotomy with pulmonary resection.\n  * Patients with any upper respiratory infection in the past six weeks prior to the Screening Visit (Visit 1) or during the run-in period\n  * Subjects/Patients with known hypersensitivity to anticholinergic drugs, lactose or any other components of the inhalation capsule delivery system\n  * Subjects/Patients with known symptomatic prostatic hyperplasia or bladder neck obstruction.\n  * Subjects/Patients with known narrow-angle glaucoma.\n  * Subjects/Patients with a history of asthma, allergic rhinitis or atopy or who have a total blood eosinophil count ≥ 600 mm3. A repeat eosinophil count will not be conducted in these subjects/patients.\n  * Subjects/Patients with a history of and/or active significant alcohol or drug abuse.\n  * Subjects/Patients who have taken an investigational drug within one month or six half lives (whichever is shorter) prior to Screening Visit (Visit 1).\n* In addition, for female subjects/patients:\n\n  * Pregnancy.\n  * Positive pregnancy test.\n  * No adequate contraception, e.g. oral contraceptives, sterilisation, intra uterine device (IUD).\n  * Inability to maintain this adequate contraception during the whole study period.\n  * Lactation period.\n* for healthy subjects:\n\n  * Subjects with any significant disease will be excluded. A significant disease is defined as a disease which in the opinion of the investigator may either put the subject at risk because of participation in the study or a disease which may influence the results of the study or the subject's ability to participate in the study.\n  * Use of any drugs which might influence the results of the trial (within one week prior to administration or during the trial).\n* for COPD patients:\n\n  * Patients with significant diseases other than COPD will be excluded. A significant disease is defined as a disease which in the opinion of the investigator may either put the patient at risk because of participation in the study or a disease which may influence the results of the study or the patient's ability to participate in the study.\n  * COPD patients who regularly use daytime oxygen therapy for more than one hour per day and in the investigator's opinion will be unable to abstain from the use of oxygen therapy.\n  * Patients who are currently in a pulmonary rehabilitation programme or who have completed a pulmonary rehabilitation programme in the six week prior to the Screening Visit (Visit 1)\n  * Patients who are being treated with oral beta adrenergics or long-acting beta adrenergics such as salmeterol and formoterol.\n  * Patients who are being treated with beta blockers.\n  * Patients who are being treated with antileukotrienes.\n  * Patients who are being treated with cromolyn sodium or nedocromil sodium.\n  * Patients who are being treated with antihistamines (H1-receptor antagonists).\n  * Patients using oral corticosteroid medication at unstable doses (i.e., less than four weeks on a stable dose) or at doses in excess of the equivalent of 10 mg of prednisolone per day or 20 mg every other day.\n  * Patients who are being treated with monoamine oxidase inhibitors or tricyclic antidepressants.\n  * Patients with no adequate wash-out period of those medications specified in Section 4.2.2 of the study protocol.",
+   "healthyVolunteers": true,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "referencesModule": {
+   "seeAlsoLinks": [
+    {
+     "label": "Related Info",
+     "url": "http://trials.boehringer-ingelheim.com/content/dam/internet/opu/clinicaltrial/com_EN/results/205/205.238_U03-1522-01.pdf"
+    },
+    {
+     "label": "Related Info",
+     "url": "http://trials.boehringer-ingelheim.com/content/dam/internet/opu/clinicaltrial/com_EN/results/205/205.238_literature.pdf"
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

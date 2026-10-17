@@ -1,0 +1,2442 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT02867761",
+   "orgStudyIdInfo": {
+    "id": "1U01HL128952-01",
+    "type": "NIH",
+    "link": "https://reporter.nih.gov/quickSearch/1U01HL128952-01"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "1U01HL128952",
+     "type": "NIH",
+     "link": "https://reporter.nih.gov/quickSearch/1U01HL128952"
+    }
+   ],
+   "organization": {
+    "fullName": "University of Michigan",
+    "class": "OTHER"
+   },
+   "briefTitle": "RETHINC: REdefining THerapy In Early COPD for the Pulmonary Trials Cooperative",
+   "officialTitle": "RETHINC: REdefining THerapy In Early COPD for the Pulmonary Trials Cooperative",
+   "acronym": "RETHINC"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2023-04",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2017-08-29",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2021-07-07",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2021-07-07",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2016-08-12",
+   "studyFirstSubmitQcDate": "2016-08-12",
+   "studyFirstPostDateStruct": {
+    "date": "2016-08-16",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2022-07-07",
+   "resultsFirstSubmitQcDate": "2022-08-08",
+   "resultsFirstPostDateStruct": {
+    "date": "2022-08-30",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2023-04-11",
+   "lastUpdatePostDateStruct": {
+    "date": "2023-04-13",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "PRINCIPAL_INVESTIGATOR",
+    "investigatorFullName": "MeiLan Han",
+    "investigatorTitle": "Professor, Department of Internal Medicine",
+    "investigatorAffiliation": "University of Michigan"
+   },
+   "leadSponsor": {
+    "name": "University of Michigan",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "National Heart, Lung, and Blood Institute (NHLBI)",
+     "class": "NIH"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": false,
+   "isUsExport": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The study hypothesis is that symptomatic current and former smokers with spirometric values within the normal range (post-bronchodilator FEV1/FVC≥0.70 and post-BD FVC ≥ 70% predicted will still derive symptomatic benefit from long-acting bronchodilator therapy even though they are excluded from current GOLD guideline recommendations.",
+   "detailedDescription": "RETHINC is a 12-week multicenter, randomized, double-blind, placebo-controlled, parallel-group study to assess the efficacy and safety of indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily in symptomatic current and former smokers with respiratory symptoms despite preserved spirometry as defined by CAT ≥ 10 and post-bronchodilator FEV1/FVC ratio ≥0.70, respectively."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "COPD (Chronic Obstructive Pulmonary Disease)"
+   ],
+   "keywords": [
+    "COPD",
+    "Chronic Obstructive Pulmonary Disease",
+    "Pulmonary Function Tests",
+    "Current Smoker",
+    "Former Smoker",
+    "Chronic Obstructive Airway Disease",
+    "Respiratory Symptoms"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 780,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Indacaterol/Glycopyrrolate",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks",
+     "interventionNames": [
+      "Drug: Indacaterol/Glycopyrrolate"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Indacaterol/Glycopyrrolate",
+     "description": "27.5/15.6 mcg active indacaterol/glycopyrrolate",
+     "armGroupLabels": [
+      "Indacaterol/Glycopyrrolate"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "27.5/15.6 mcg placebo",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Proportion (Percentage) of Individuals Who Experience a 4 Unit Improvement in St. George's Respiratory Questionnaire (SGRQ) at 12 Weeks and do Not Meet Criteria for Treatment Failure During the 12 Week Treatment Period",
+     "description": "Measured by units of improvement in SGRQ scores at Baseline and 12 weeks, as well as review of treatment failure status at 4 weeks and 12 weeks of treatment (treatment failure is defined by an increase in lower respiratory symptoms necessitating treatment with active, long-acting inhaled bronchodilator, corticosteroids or antibiotics).\n\nA 4 unit change is the minimum clinically important difference. SGRQ has a 0 - 100 score; 0 as low symptoms (feeling better) and 100 as high symptoms (feeling worse).",
+     "timeFrame": "Baseline and 12 weeks"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Proportion of Individuals With a 2 Unit Improvement in CAT Without Treatment Failure",
+     "description": "Proportion of individuals with a 2 unit improvement in CAT without treatment failure",
+     "timeFrame": "12 weeks"
+    },
+    {
+     "measure": "Proportion of Individuals With a 1 Unit Improvement in the BDI/TDI Without Treatment Failure",
+     "description": "Proportion of individuals with a 1 unit improvement in the BDI/TDI without treatment failure",
+     "timeFrame": "12 weeks"
+    },
+    {
+     "measure": "Proportion of Individuals With Both a 4 Unit Improvement in SGRQ and a 1 Unit Improvement in BDI/TDI Without Treatment Failure",
+     "description": "Measured by units of improvement in SGRQ scores at Baseline and 12 weeks, as well as review of treatment failure status at 4 weeks and 12 weeks of treatment (treatment failure is defined by an increase in lower respiratory symptoms necessitating treatment with active, long-acting inhaled bronchodilator, corticosteroids or antibiotics).",
+     "timeFrame": "12 weeks"
+    },
+    {
+     "measure": "Mean Change in St. George's Respiratory Questionnaire (SGRQ)",
+     "description": "Value at 12 Weeks Minus Baseline. SGRQ has a 0 - 100 score; 0 as low symptoms (feeling better) and 100 as high symptoms (feeling worse).",
+     "timeFrame": "Baseline, 12 weeks"
+    },
+    {
+     "measure": "Mean Change in COPD Assessment Test (CAT)",
+     "description": "Value at 12 Weeks Minus Baseline. 0 - 40; 0 as low symptoms (feeling better) and 40 as high symptoms (feeling worse).",
+     "timeFrame": "Baseline, 12 weeks"
+    },
+    {
+     "measure": "Mean Change in Baseline Dyspnea Index (BDI)/Transition Dyspnea Index (TDI)",
+     "description": "Value at 12 Weeks Minus Baseline.",
+     "timeFrame": "12 Weeks"
+    },
+    {
+     "measure": "Area Under the Curve (AUC) 0-3 Hours for FEV1",
+     "description": "FEV1 AUC0-3h was calculated as the area under the FEV1-time curve from 0 to 3h post-dose using the trapezoidal rule, divided by the duration (3h) to report in liters.",
+     "timeFrame": "At 12 weeks, FEV1 is measured at 1-hour intervals for 3 hours"
+    },
+    {
+     "measure": "Change From Baseline in Trough Forced Expiratory Volume Per 1 Second (FEV1) - Absolute Value",
+     "description": "Trough FEV1 at 12 week minus trough FEV1 at baseline.",
+     "timeFrame": "Baseline to 12 Weeks"
+    },
+    {
+     "measure": "Change From Baseline in 12 Hour Trough Inspiratory Capacity - Absolute Value",
+     "description": "Change from baseline in 12 hour trough inspiratory capacity - absolute value",
+     "timeFrame": "Baseline"
+    },
+    {
+     "measure": "Symptoms and Rescue Medication Use Based on Daily Diary",
+     "description": "Percentage of days with symptoms (shortness of breath, chest tightness, wheezing, cough, or sputum) or use of albuterol",
+     "timeFrame": "During study follow-up (Baseline to 12 weeks)"
+    },
+    {
+     "measure": "Treatment Failure Defined by Increase in Lower Respiratory Symptoms Necessitating Treatment With Active, Long-acting Inhaled Bronchodilator, Corticosteroids or Antibiotics",
+     "description": "Treatment failure defined by increase in lower respiratory symptoms necessitating treatment with active, long-acting inhaled bronchodilator, corticosteroids or antibiotics",
+     "timeFrame": "During study follow-up (baseline to 12 Weeks)"
+    },
+    {
+     "measure": "Change From Baseline in Trough FEV1 - % Predicted",
+     "description": "Trough FEV1 at 12 week minus trough FEV1 at baseline.",
+     "timeFrame": "Baseline to 12 Weeks"
+    },
+    {
+     "measure": "Change in FEF25-75%",
+     "description": "FEF25-75%-Forced expiratory flow over the middle one half of the FVC; the average flow from the point at which 25 percent of the FVC has been exhaled to the point at which 75 percent of the FVC has been exhaled.",
+     "timeFrame": "Baseline to 12 weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1. Subject must be able to understand and provide informed consent\n2. Age 40-80\n3. ≥10 pack-year smoking history\n4. Post-bronchodilator FEV1/FVC ratio ≥0.70\n5. Baseline CAT≥10\n\nExclusion Criteria:\n\n1. Inability or unwillingness of a participant to give written informed consent or comply with study protocol.\n2. Subject is pregnant, breast-feeding, or plans to become pregnant.\n3. Active pulmonary infection or prior pulmonary infection where antibiotic and/or steroid treatment was completed ≤4 weeks prior to enrollment.\n4. Post-BD FVC \\< 70% predicted\n5. A primary diagnosis of asthma established by each study investigator based on ATS/ERS criteria as previously implemented in the MACRO clinical trial.\n6. Known concomitant lung disease, pulmonary tuberculosis (unless confirmed by chest x-ray to be no longer active), or clinically significant bronchiectasis.\n7. History (or family history) of long QT syndrome.\n8. History of paroxysmal (intermittent) atrial fibrillation will be considered an exclusion. Patients with persistent atrial fibrillation as defined by continuous atrial fibrillation for at least 6 months and controlled with a rate control strategy (i.e., selective beta blocker, calcium channel blocker, pacemaker placement, digoxin or ablation therapy) for at least 6 months may be considered for inclusion. In such patients, heart rate at enrollment must be \\< 100/min.\n9. Patients with BMI \\< 15 or more than 40 kg/m2.\n10. Patients with diabetes Type I or uncontrolled diabetes Type II.\n11. Patients who, in the judgment of the investigator, have a clinically relevant laboratory abnormality or a clinically significant condition such as (but not limited to) significant renal disease, psychiatric disease, gastrointestinal disease, unstable ischemic heart disease, arrhythmia (excluding chronic stable atrial fibrillation), uncontrolled hypertension or any other condition which in the opinion of investigator might compromise patient safety or compliance, interfere with evaluation, or preclude completion of the study.\n12. Patients with any history of lung cancer.\n13. Patients with narrow-angle glaucoma, symptomatic benign prostatic hyperplasia or bladder-neck obstruction or severe renal impairment or urinary retention. Benign Prostatic Hyperplasia (BPH) patients who are stable on treatment can be considered.\n14. Any other past or current medical problems or findings from physical examination or laboratory testing that are not listed above, which, in the opinion of the investigator, may pose additional risks from participation in the study, may interfere with the participant's ability to comply with study requirements or that may impact the quality or interpretation of the data obtained from the study.\n15. Patients with a history of hypersensitivity to any of the study drugs or to drugs from similar chemical classification, including untoward reactions to sympathomimetic amines or inhaled medication or any component thereof.\n16. Patients unable to successfully use a dry powder inhaler device or perform spirometry measurements.\n17. Use of other investigational drugs at the time of enrollment or within 30 days or 5 half-lives of enrollment, whichever is longer.\n18. Patients receiving any protocol-specified prohibited medications..\n19. Patients receiving any protocol-specified prohibited COPD related medications (will be required to undergo a required washout period prior to enrollment).",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "MeiLan Han, MD, MS",
+     "affiliation": "University of Michigan",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Prescott Woodruff, MD, MPH",
+     "affiliation": "University of California, San Francisco",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Universityof Alabama",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "zip": "35294",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "University of California",
+     "city": "Los Angeles",
+     "state": "California",
+     "zip": "90095",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "University of California",
+     "city": "San Francisco",
+     "state": "California",
+     "zip": "94143",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.77493,
+      "lon": -122.41942
+     }
+    },
+    {
+     "facility": "LABIOMED at Harbor-UCLA Medical Center",
+     "city": "Torrance",
+     "state": "California",
+     "zip": "90502",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.83585,
+      "lon": -118.34063
+     }
+    },
+    {
+     "facility": "University of Illinois",
+     "city": "Chicago",
+     "state": "Illinois",
+     "zip": "60608",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.85003,
+      "lon": -87.65005
+     }
+    },
+    {
+     "facility": "Northwestern University",
+     "city": "Chicago",
+     "state": "Illinois",
+     "zip": "60657",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.85003,
+      "lon": -87.65005
+     }
+    },
+    {
+     "facility": "University of Iowa",
+     "city": "Iowa City",
+     "state": "Iowa",
+     "zip": "52242",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.66113,
+      "lon": -91.53017
+     }
+    },
+    {
+     "facility": "Johns Hopkins University",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21224",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "University of Michigan",
+     "city": "Ann Arbor",
+     "state": "Michigan",
+     "zip": "48109",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.27756,
+      "lon": -83.74088
+     }
+    },
+    {
+     "facility": "Minneapolis VA Medical Center",
+     "city": "Minneapolis",
+     "state": "Minnesota",
+     "zip": "55417",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.97997,
+      "lon": -93.26384
+     }
+    },
+    {
+     "facility": "Minnesota Health partners",
+     "city": "Saint Paul",
+     "state": "Minnesota",
+     "zip": "55130",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.94441,
+      "lon": -93.09327
+     }
+    },
+    {
+     "facility": "Cornell University",
+     "city": "New York",
+     "state": "New York",
+     "zip": "10021",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.71427,
+      "lon": -74.00597
+     }
+    },
+    {
+     "facility": "Duke University",
+     "city": "Durham",
+     "state": "North Carolina",
+     "zip": "27705",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.99403,
+      "lon": -78.89862
+     }
+    },
+    {
+     "facility": "Temple University",
+     "city": "Philadelphia",
+     "state": "Pennsylvania",
+     "zip": "19140",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.95238,
+      "lon": -75.16362
+     }
+    },
+    {
+     "facility": "University of Pittsburgh",
+     "city": "Pittsburgh",
+     "state": "Pennsylvania",
+     "zip": "15213",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.44062,
+      "lon": -79.99589
+     }
+    },
+    {
+     "facility": "University of Utah",
+     "city": "Salt Lake City",
+     "state": "Utah",
+     "zip": "84132",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.76078,
+      "lon": -111.89105
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "36066078",
+     "type": "DERIVED",
+     "citation": "Han MK, Ye W, Wang D, White E, Arjomandi M, Barjaktarevic IZ, Brown SA, Buhr RG, Comellas AP, Cooper CB, Criner GJ, Dransfield MT, Drescher F, Folz RJ, Hansel NN, Kalhan R, Kaner RJ, Kanner RE, Krishnan JA, Lazarus SC, Maddipati V, Martinez FJ, Mathews A, Meldrum C, McEvoy C, Nyunoya T, Rogers L, Stringer WW, Wendt CH, Wise RA, Wisniewski SR, Sciurba FC, Woodruff PG; RETHINC Study Group. Bronchodilators in Tobacco-Exposed Persons with Symptoms and Preserved Lung Function. N Engl J Med. 2022 Sep 29;387(13):1173-1184. doi: 10.1056/NEJMoa2204752. Epub 2022 Sep 4."
+    }
+   ],
+   "seeAlsoLinks": [
+    {
+     "label": "Pulmonary Trials Cooperative website, containing information regarding RETHINC and other studies included in the Pulmonary Trials Cooperative",
+     "url": "http://www.pulmonarytrials.org/"
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "Of the 780 consented, 242 were screen fails and 3 dropped out before randomization, so 535 were randomized.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Indacaterol/Glycopyrrolate",
+     "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+    },
+    {
+     "id": "FG001",
+     "title": "Placebo",
+     "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "261"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "274"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "233"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "248"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "28"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "26"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Participant withdrawn by investigator",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "25"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "18"
+        }
+       ]
+      },
+      {
+       "type": "Unable to complete protocol",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "7"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Indacaterol/Glycopyrrolate",
+     "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+    },
+    {
+     "id": "BG001",
+     "title": "Placebo",
+     "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "261"
+      },
+      {
+       "groupId": "BG001",
+       "value": "274"
+      },
+      {
+       "groupId": "BG002",
+       "value": "535"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "58.6",
+           "spread": "9.6"
+          },
+          {
+           "groupId": "BG001",
+           "value": "59.1",
+           "spread": "9.8"
+          },
+          {
+           "groupId": "BG002",
+           "value": "58.8",
+           "spread": "9.7"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "134"
+          },
+          {
+           "groupId": "BG001",
+           "value": "140"
+          },
+          {
+           "groupId": "BG002",
+           "value": "274"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "127"
+          },
+          {
+           "groupId": "BG001",
+           "value": "134"
+          },
+          {
+           "groupId": "BG002",
+           "value": "261"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Ethnicity (NIH/OMB)",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Hispanic or Latino",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "25"
+          },
+          {
+           "groupId": "BG001",
+           "value": "22"
+          },
+          {
+           "groupId": "BG002",
+           "value": "47"
+          }
+         ]
+        },
+        {
+         "title": "Not Hispanic or Latino",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "236"
+          },
+          {
+           "groupId": "BG001",
+           "value": "252"
+          },
+          {
+           "groupId": "BG002",
+           "value": "488"
+          }
+         ]
+        },
+        {
+         "title": "Unknown or Not Reported",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Race (NIH/OMB)",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "American Indian or Alaska Native",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "2"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1"
+          },
+          {
+           "groupId": "BG002",
+           "value": "3"
+          }
+         ]
+        },
+        {
+         "title": "Asian",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1"
+          },
+          {
+           "groupId": "BG002",
+           "value": "2"
+          }
+         ]
+        },
+        {
+         "title": "Native Hawaiian or Other Pacific Islander",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "2"
+          },
+          {
+           "groupId": "BG002",
+           "value": "2"
+          }
+         ]
+        },
+        {
+         "title": "Black or African American",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "92"
+          },
+          {
+           "groupId": "BG001",
+           "value": "99"
+          },
+          {
+           "groupId": "BG002",
+           "value": "191"
+          }
+         ]
+        },
+        {
+         "title": "White",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "148"
+          },
+          {
+           "groupId": "BG001",
+           "value": "154"
+          },
+          {
+           "groupId": "BG002",
+           "value": "302"
+          }
+         ]
+        },
+        {
+         "title": "More than one race",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "7"
+          },
+          {
+           "groupId": "BG001",
+           "value": "5"
+          },
+          {
+           "groupId": "BG002",
+           "value": "12"
+          }
+         ]
+        },
+        {
+         "title": "Unknown or Not Reported",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "11"
+          },
+          {
+           "groupId": "BG001",
+           "value": "12"
+          },
+          {
+           "groupId": "BG002",
+           "value": "23"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Region of Enrollment",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "classes": [
+      {
+       "title": "United States",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "261"
+          },
+          {
+           "groupId": "BG001",
+           "value": "274"
+          },
+          {
+           "groupId": "BG002",
+           "value": "535"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "COPD Assessment Test (CAT) Score",
+     "description": "0 - 40; 0 as low symptoms (feeling better) and 40 as high symptoms (feeling worse)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "units on a scale",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "17.5",
+           "spread": "6.7"
+          },
+          {
+           "groupId": "BG001",
+           "value": "17.6",
+           "spread": "6"
+          },
+          {
+           "groupId": "BG002",
+           "value": "17.6",
+           "spread": "6.4"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "St. George's Respiratory Questionnaire (SGRQ) Score",
+     "description": "0 - 100 score; 0 as low symptoms (feeling better) and 100 as high symptoms (feeling worse)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "units on a scale",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "37.9",
+           "spread": "21"
+          },
+          {
+           "groupId": "BG001",
+           "value": "38.4",
+           "spread": "19.3"
+          },
+          {
+           "groupId": "BG002",
+           "value": "38.2",
+           "spread": "20.2"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Post bronchodilator FEV1 percent predicted",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "percent predicted",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "93.8",
+           "spread": "14.0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "94.9",
+           "spread": "12.6"
+          },
+          {
+           "groupId": "BG002",
+           "value": "94.2",
+           "spread": "13.3"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Proportion (Percentage) of Individuals Who Experience a 4 Unit Improvement in St. George's Respiratory Questionnaire (SGRQ) at 12 Weeks and do Not Meet Criteria for Treatment Failure During the 12 Week Treatment Period",
+     "description": "Measured by units of improvement in SGRQ scores at Baseline and 12 weeks, as well as review of treatment failure status at 4 weeks and 12 weeks of treatment (treatment failure is defined by an increase in lower respiratory symptoms necessitating treatment with active, long-acting inhaled bronchodilator, corticosteroids or antibiotics).\n\nA 4 unit change is the minimum clinically important difference. SGRQ has a 0 - 100 score; 0 as low symptoms (feeling better) and 100 as high symptoms (feeling worse).",
+     "populationDescription": "In the treatment arm, 5 subjects had primary efficacy assessment \\>=4 weeks after the last visit that were not included in the mITT (233 - 5 = 228). One additional subject was missing SGRQ at final visit (228 - 1 = 227). In the placebo arm, 5 subjects had primary efficacy assessment \\>=4 weeks after the last visit that were not included in the mITT (248 - 5 = 243). An additional person did not complete final visit but had treatment failure so are still included in mITT (243 + 1 = 244).",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "Baseline and 12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol/Glycopyrrolate",
+       "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "227"
+        },
+        {
+         "groupId": "OG001",
+         "value": "244"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "128"
+          },
+          {
+           "groupId": "OG001",
+           "value": "144"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "0.65",
+       "statisticalMethod": "Generalized Estimating Equation",
+       "paramType": "Odds Ratio (OR)",
+       "paramValue": "0.91",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.60",
+       "ciUpperLimit": "1.37"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Proportion of Individuals With a 2 Unit Improvement in CAT Without Treatment Failure",
+     "description": "Proportion of individuals with a 2 unit improvement in CAT without treatment failure",
+     "populationDescription": "In the treatment arm, 5 subjects had primary efficacy assessment \\>=4 weeks after the last visit that were not included in the mITT (233 - 5 = 228). One additional subject was missing SGRQ at final visit (228 - 1 = 227). In the placebo arm, 5 subjects had primary efficacy assessment \\>=4 weeks after the last visit that were not included in the mITT (248 - 5 = 243). An additional person did not complete final visit but had treatment failure so are still included in mITT (243 + 1 = 244).",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol/Glycopyrrolate",
+       "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "227"
+        },
+        {
+         "groupId": "OG001",
+         "value": "244"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "169"
+          },
+          {
+           "groupId": "OG001",
+           "value": "166"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Proportion of Individuals With a 1 Unit Improvement in the BDI/TDI Without Treatment Failure",
+     "description": "Proportion of individuals with a 1 unit improvement in the BDI/TDI without treatment failure",
+     "populationDescription": "Not all participants had all measures measured.",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol/Glycopyrrolate",
+       "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "220"
+        },
+        {
+         "groupId": "OG001",
+         "value": "234"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "80"
+          },
+          {
+           "groupId": "OG001",
+           "value": "80"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Proportion of Individuals With Both a 4 Unit Improvement in SGRQ and a 1 Unit Improvement in BDI/TDI Without Treatment Failure",
+     "description": "Measured by units of improvement in SGRQ scores at Baseline and 12 weeks, as well as review of treatment failure status at 4 weeks and 12 weeks of treatment (treatment failure is defined by an increase in lower respiratory symptoms necessitating treatment with active, long-acting inhaled bronchodilator, corticosteroids or antibiotics).",
+     "populationDescription": "Not all participants had all measures measured.",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol/Glycopyrrolate",
+       "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "220"
+        },
+        {
+         "groupId": "OG001",
+         "value": "234"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "55"
+          },
+          {
+           "groupId": "OG001",
+           "value": "60"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Mean Change in St. George's Respiratory Questionnaire (SGRQ)",
+     "description": "Value at 12 Weeks Minus Baseline. SGRQ has a 0 - 100 score; 0 as low symptoms (feeling better) and 100 as high symptoms (feeling worse).",
+     "populationDescription": "In the treatment arm, 5 subjects had primary efficacy assessment \\>=4 weeks after the last visit that were not included in the mITT (233 - 5 = 228). One additional subject was missing SGRQ at final visit (228 - 1 = 227). In the placebo arm, 5 subjects had primary efficacy assessment \\>=4 weeks after the last visit that were not included in the mITT (248 - 5 = 243). .",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "score on a scale",
+     "timeFrame": "Baseline, 12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol/Glycopyrrolate",
+       "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "227"
+        },
+        {
+         "groupId": "OG001",
+         "value": "243"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-7.7",
+           "lowerLimit": "-9.4",
+           "upperLimit": "-5.9"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-8.9",
+           "lowerLimit": "-10.6",
+           "upperLimit": "-7.2"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "0.30",
+       "statisticalMethod": "Linear Mixed Effects Model"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Mean Change in COPD Assessment Test (CAT)",
+     "description": "Value at 12 Weeks Minus Baseline. 0 - 40; 0 as low symptoms (feeling better) and 40 as high symptoms (feeling worse).",
+     "populationDescription": "In the treatment arm, 5 subjects had primary efficacy assessment \\>=4 weeks after the last visit that were not included in the mITT (233 - 5 = 228). One additional subject was missing CAT at final visit (228 - 1 = 227). In the placebo arm, 5 subjects had primary efficacy assessment \\>=4 weeks after the last visit that were not included in the mITT (248 - 5 = 243).",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "score on a scale",
+     "timeFrame": "Baseline, 12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol/Glycopyrrolate",
+       "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "227"
+        },
+        {
+         "groupId": "OG001",
+         "value": "243"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-4.5",
+           "lowerLimit": "-5.4",
+           "upperLimit": "-3.5"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-4.8",
+           "lowerLimit": "-5.8",
+           "upperLimit": "-3.9"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "0.49",
+       "statisticalMethod": "Linear Mixed Effects Model"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Mean Change in Baseline Dyspnea Index (BDI)/Transition Dyspnea Index (TDI)",
+     "description": "Value at 12 Weeks Minus Baseline.",
+     "populationDescription": "Not all participants had these measures taken.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "ratio",
+     "timeFrame": "12 Weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol/Glycopyrrolate",
+       "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "219"
+        },
+        {
+         "groupId": "OG001",
+         "value": "233"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.93",
+           "lowerLimit": "0.59",
+           "upperLimit": "1.27"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.92",
+           "lowerLimit": "0.59",
+           "upperLimit": "1.26"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "0.96",
+       "statisticalMethod": "Linear Mixed Effects Model"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Area Under the Curve (AUC) 0-3 Hours for FEV1",
+     "description": "FEV1 AUC0-3h was calculated as the area under the FEV1-time curve from 0 to 3h post-dose using the trapezoidal rule, divided by the duration (3h) to report in liters.",
+     "populationDescription": "Not all persons completed their lung function tests.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "liters",
+     "timeFrame": "At 12 weeks, FEV1 is measured at 1-hour intervals for 3 hours",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol/Glycopyrrolate",
+       "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "175"
+        },
+        {
+         "groupId": "OG001",
+         "value": "199"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "8.09",
+           "lowerLimit": "7.99",
+           "upperLimit": "8.20"
+          },
+          {
+           "groupId": "OG001",
+           "value": "7.82",
+           "lowerLimit": "7.72",
+           "upperLimit": "7.92"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "<0.001",
+       "statisticalMethod": "Linear Mixed Effects Model"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Trough Forced Expiratory Volume Per 1 Second (FEV1) - Absolute Value",
+     "description": "Trough FEV1 at 12 week minus trough FEV1 at baseline.",
+     "populationDescription": "Not all participants had all measures measured.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Baseline to 12 Weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol/Glycopyrrolate",
+       "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "198"
+        },
+        {
+         "groupId": "OG001",
+         "value": "205"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.04",
+           "lowerLimit": "0.01",
+           "upperLimit": "0.08"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.01",
+           "lowerLimit": "-0.04",
+           "upperLimit": "0.02"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in 12 Hour Trough Inspiratory Capacity - Absolute Value",
+     "description": "Change from baseline in 12 hour trough inspiratory capacity - absolute value",
+     "populationDescription": "Not all participants had all measures measured.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Baseline",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol/Glycopyrrolate",
+       "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "194"
+        },
+        {
+         "groupId": "OG001",
+         "value": "203"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.12",
+           "lowerLimit": "0.07",
+           "upperLimit": "0.18"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.02",
+           "lowerLimit": "-0.03",
+           "upperLimit": "0.08"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Symptoms and Rescue Medication Use Based on Daily Diary",
+     "description": "Percentage of days with symptoms (shortness of breath, chest tightness, wheezing, cough, or sputum) or use of albuterol",
+     "populationDescription": "Not all participants submitted complete diaries.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "percentage of days",
+     "timeFrame": "During study follow-up (Baseline to 12 weeks)",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol/Glycopyrrolate",
+       "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "198"
+        },
+        {
+         "groupId": "OG001",
+         "value": "210"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "67.0",
+           "lowerLimit": "59.0",
+           "upperLimit": "75.0"
+          },
+          {
+           "groupId": "OG001",
+           "value": "63.6",
+           "lowerLimit": "55.7",
+           "upperLimit": "71.5"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "groupDescription": "P Value for percentage of days with any symptoms (shortness of breath, chest tightness, wheezing, cough, or sputum)",
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "0.35",
+       "statisticalMethod": "Linear Mixed Effects Model"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "groupDescription": "P Value for percentage of days with shortness of breath",
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "0.61",
+       "statisticalMethod": "Linear Mixed Effects Model"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "groupDescription": "P Value for percentage of days with chest tightness",
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "0.48",
+       "statisticalMethod": "Linear Mixed Effects Model"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "groupDescription": "P Value for percentage of days with wheezing",
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "0.81",
+       "statisticalMethod": "Linear Mixed Effects Model"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "groupDescription": "P Value for percentage of days with cough",
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "0.17",
+       "statisticalMethod": "Linear Mixed Effects Model"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "groupDescription": "P Value for percentage of days with sputum",
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "0.64",
+       "statisticalMethod": "Linear Mixed Effects Model"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "groupDescription": "P Value for percentage of days with use of albuterol.",
+       "nonInferiorityType": "SUPERIORITY",
+       "pValue": "0.84",
+       "statisticalMethod": "Linear Mixed Effects Model"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Treatment Failure Defined by Increase in Lower Respiratory Symptoms Necessitating Treatment With Active, Long-acting Inhaled Bronchodilator, Corticosteroids or Antibiotics",
+     "description": "Treatment failure defined by increase in lower respiratory symptoms necessitating treatment with active, long-acting inhaled bronchodilator, corticosteroids or antibiotics",
+     "populationDescription": "In the treatment arm, 5 subjects had primary efficacy assessment \\>=4 weeks after the last visit that were not included in the mITT (233 - 5 = 228). One additional subject was missing SGRQ at final visit (228 - 1 = 227). In the placebo arm, 5 subjects had primary efficacy assessment \\>=4 weeks after the last visit that were not included in the mITT (248 - 5 = 243). An additional person did not complete final visit but had treatment failure so are still included in mITT (243 + 1 = 244).",
+     "reportingStatus": "POSTED",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "timeFrame": "During study follow-up (baseline to 12 Weeks)",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol/Glycopyrrolate",
+       "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "227"
+        },
+        {
+         "groupId": "OG001",
+         "value": "244"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "5"
+          },
+          {
+           "groupId": "OG001",
+           "value": "9"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Trough FEV1 - % Predicted",
+     "description": "Trough FEV1 at 12 week minus trough FEV1 at baseline.",
+     "populationDescription": "Not all participants had all measures measured.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "percentage of predicted number",
+     "timeFrame": "Baseline to 12 Weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol/Glycopyrrolate",
+       "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "198"
+        },
+        {
+         "groupId": "OG001",
+         "value": "205"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.48",
+           "lowerLimit": "1.49",
+           "upperLimit": "3.47"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.09",
+           "lowerLimit": "-1.06",
+           "upperLimit": "0.89"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change in FEF25-75%",
+     "description": "FEF25-75%-Forced expiratory flow over the middle one half of the FVC; the average flow from the point at which 25 percent of the FVC has been exhaled to the point at which 75 percent of the FVC has been exhaled.",
+     "populationDescription": "Not all participants had pulmonary function tests.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "95% Confidence Interval",
+     "unitOfMeasure": "Liters per second",
+     "timeFrame": "Baseline to 12 weeks",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Indacaterol/Glycopyrrolate",
+       "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate"
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "198"
+        },
+        {
+         "groupId": "OG001",
+         "value": "205"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "0.07",
+           "lowerLimit": "0.00",
+           "upperLimit": "0.15"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-0.08",
+           "lowerLimit": "-0.15",
+           "upperLimit": "0.00"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "During the trial, approximately 12 weeks.",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Indacaterol/Glycopyrrolate",
+     "description": "indacaterol/glycopyrrolate 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nIndacaterol/Glycopyrrolate: 27.5/15.6 mcg active indacaterol/glycopyrrolate",
+     "deathsNumAffected": 0,
+     "deathsNumAtRisk": 261,
+     "seriousNumAffected": 4,
+     "seriousNumAtRisk": 261,
+     "otherNumAffected": 0,
+     "otherNumAtRisk": 261
+    },
+    {
+     "id": "EG001",
+     "title": "Placebo",
+     "description": "Placebo 27.5/15.6 mcg inhaled twice daily for 12 weeks\n\nPlacebo: 27.5/15.6 mcg placebo",
+     "deathsNumAffected": 0,
+     "deathsNumAtRisk": 274,
+     "seriousNumAffected": 8,
+     "seriousNumAtRisk": 274,
+     "otherNumAffected": 0,
+     "otherNumAtRisk": 274
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Motor Vehicle Accident",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Abdominal Pain",
+     "organSystem": "Gastrointestinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Anastomotic Ulcer",
+     "organSystem": "Gastrointestinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Breakthrough Seizures",
+     "organSystem": "Psychiatric disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Gastric GJ junction ulcer and posterior wall perforation",
+     "organSystem": "Gastrointestinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Postprocedural Intraabdominal Abscess",
+     "organSystem": "Gastrointestinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Chest Pain",
+     "organSystem": "Cardiac disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Sigmoid diverticulitis with small abscess",
+     "organSystem": "Gastrointestinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Suicide Attempt",
+     "organSystem": "Psychiatric disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Diarrhea",
+     "organSystem": "Gastrointestinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Respiratory Exacerbation",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Uncontrolled hypertension",
+     "organSystem": "Psychiatric disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Acute Cholecystitis",
+     "organSystem": "Gastrointestinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Vitamin B12 Deficiency",
+     "organSystem": "Psychiatric disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Acute Pancreatitis",
+     "organSystem": "Gastrointestinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Portal Hypertension",
+     "organSystem": "Gastrointestinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Community Acquired Pneumonia",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Non-displaced Fibular Fracture",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 274
+      }
+     ]
+    },
+    {
+     "term": "Kidney stone with obstruction",
+     "organSystem": "Renal and urinary disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 261
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 274
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": true
+   },
+   "pointOfContact": {
+    "title": "Meilan K. Han",
+    "organization": "University of Michigan",
+    "email": "mrking@med.umich.edu",
+    "phone": "734 615-9772"
+   }
+  }
+ },
+ "documentSection": {
+  "largeDocumentModule": {
+   "largeDocs": [
+    {
+     "typeAbbrev": "Prot_SAP",
+     "hasProtocol": true,
+     "hasSap": true,
+     "hasIcf": false,
+     "label": "Study Protocol and Statistical Analysis Plan",
+     "date": "2020-07-27",
+     "uploadDate": "2022-06-29T11:48",
+     "filename": "Prot_SAP_000.pdf",
+     "size": 1089624
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16",
+   "submissionTracking": {
+    "firstMcpInfo": {
+     "postDateStruct": {
+      "date": "2022-08-03",
+      "type": "ACTUAL"
+     }
+    }
+   }
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D016540",
+     "term": "Smoking Cessation"
+    },
+    {
+     "id": "D012818",
+     "term": "Signs and Symptoms, Respiratory"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D015438",
+     "term": "Health Behavior"
+    },
+    {
+     "id": "D001519",
+     "term": "Behavior"
+    },
+    {
+     "id": "D012816",
+     "term": "Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C510790",
+     "term": "indacaterol"
+    },
+    {
+     "id": "D006024",
+     "term": "Glycopyrrolate"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D000644",
+     "term": "Quaternary Ammonium Compounds"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D009861",
+     "term": "Onium Compounds"
+    },
+    {
+     "id": "D011759",
+     "term": "Pyrrolidines"
+    },
+    {
+     "id": "D006573",
+     "term": "Heterocyclic Compounds, 1-Ring"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

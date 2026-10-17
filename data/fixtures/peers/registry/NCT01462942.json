@@ -1,0 +1,5977 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01462942",
+   "orgStudyIdInfo": {
+    "id": "M/40464/30"
+   },
+   "organization": {
+    "fullName": "AstraZeneca",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Long-term Efficacy and Safety of Aclidinium Bromide/Formoterol Fumarate Fixed-Dose Combination",
+   "officialTitle": "Efficacy and Safety of Aclidinium Bromide/Formoterol Fumarate Fixed-dose Combinations Compared With Individual Components and Placebo When Administered to Patients With Stable Chronic Obstructive Pulmonary Disease."
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2016-12",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2011-10"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2013-01",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2013-01",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2011-10-26",
+   "studyFirstSubmitQcDate": "2011-10-31",
+   "studyFirstPostDateStruct": {
+    "date": "2011-11-01",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2016-09-14",
+   "resultsFirstSubmitQcDate": "2016-12-22",
+   "resultsFirstPostDateStruct": {
+    "date": "2017-02-15",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2016-12-22",
+   "lastUpdatePostDateStruct": {
+    "date": "2017-02-15",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "AstraZeneca",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The objective is to provide data supporting the use of LAS40464 as an efficacious and safe maintenance bronchodilator treatment of patients with Chronic Obstructive Pulmonary Disease (COPD).",
+   "detailedDescription": "This Phase III study seeks to confirm the long-term bronchodilator efficacy and effects on COPD related health status and other secondary parameters as well as the safety of two doses of the combination of aclidinium bromide/formoterol FDC (FDC 400/12 μg and 400/6 μg) compared with aclidinium bromide monotherapy 400 μg, formoterol monotherapy 12 μg and placebo."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ],
+   "keywords": [
+    "COPD",
+    "Bronchitis",
+    "Chronic",
+    "Emphysema"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 2443,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Aclidinium/Formoterol 400/6 μg",
+     "type": "EXPERIMENTAL",
+     "description": "24 week, double blind treatment period",
+     "interventionNames": [
+      "Drug: Aclidinium Bromide/Formoterol Fumarate"
+     ]
+    },
+    {
+     "label": "Aclidinium/Formoterol 400/12 μg",
+     "type": "EXPERIMENTAL",
+     "description": "24 week, double blind treatment period",
+     "interventionNames": [
+      "Drug: Aclidinium Bromide/Formoterol Fumarate"
+     ]
+    },
+    {
+     "label": "Aclidinium monotherapy 400 μg",
+     "type": "EXPERIMENTAL",
+     "description": "24 week, double blind treatment period",
+     "interventionNames": [
+      "Drug: Aclidinium Bromide"
+     ]
+    },
+    {
+     "label": "Formoterol monotherapy 12 μg",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "24 week, double blind treatment period",
+     "interventionNames": [
+      "Drug: Formoterol Fumarate"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "24 week, double blind treatment period",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Aclidinium Bromide/Formoterol Fumarate",
+     "description": "Inhaled Aclidinium/formoterol Fixed Dose Combination (FDC) low dose (400/6 μg), twice per day",
+     "armGroupLabels": [
+      "Aclidinium/Formoterol 400/6 μg"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Aclidinium Bromide/Formoterol Fumarate",
+     "description": "Inhaled Aclidinium/formoterol FDC high dose (400/12 μg), twice per day",
+     "armGroupLabels": [
+      "Aclidinium/Formoterol 400/12 μg"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Aclidinium Bromide",
+     "description": "Inhaled Aclidinium 400 μg, twice per day",
+     "armGroupLabels": [
+      "Aclidinium monotherapy 400 μg"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Inhaled dose-matched placebo, twice per day",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Formoterol Fumarate",
+     "description": "Inhaled Formoterol 12 μg, twice per day",
+     "armGroupLabels": [
+      "Formoterol monotherapy 12 μg"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Change From Baseline in 1-hour Morning Post-dose Forced Expiratory Volume in One Second (FEV1)",
+     "timeFrame": "Baseline and Week 24"
+    },
+    {
+     "measure": "Change From Baseline in Morning Pre-dose (Trough) Forced Expiratory Volume in One Second (FEV1)",
+     "timeFrame": "Baseline and Week 24"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Change in Transition Dyspnoea Index (TDI) Focal Score",
+     "description": "Evaluation of dyspnea was performed by an independent interviewer experienced in taking a respiratory history The TDI includes three categories: functional impairment which determines the impact of breathlessness on the ability to perform activities, magnitude of task which determines the type of task that caused breathlessness and magnitude of effort which establishes the level of effort needed to evoke breathlessness Each category ranges from minus three (-3; major deterioration) to plus three (+3; major improvement) including a zero (0) score to indicate 'no change' The three categories are totalled to obtain a focal score (total score) ranging from minus nine (-9), including zero (0), to plus nine (+9) Provision is made for circumstances when dyspnoea could not be rated - if reduction of activities, effort or functional impairment was caused by reasons other than respiratory A change of 1 unit in TDI is used as the criterion for a minimal meaningful improvement",
+     "timeFrame": "Baseline and Week 24"
+    },
+    {
+     "measure": "Change From Baseline in St. George´s Respiratory Questionnaire (SGRQ) Total Score",
+     "description": "SGRQ is a standardised, self-administered tool for measuring impaired health and perceived well-being in respiratory diseases; a validated electronic version of the questionnaire in the relevant validated languages was used in this study The questionnaire contains 50 items divided into three dimensions (Symptoms, Activity and Impact) Each of the three dimensions of the questionnaire is scored separately in the range from 0 to 100: zero (0) score indicating no impairment of quality of life The total SGRQ score ranging from 0 to 100 is a summary score utilising responses to all items calculated using weights attached to each item of the questionnaire Higher scores indicate poorer health and change of 4 units in the SGRQ has been determined to be the threshold for a clinically relevant change in health status",
+     "timeFrame": "Baseline and Week 24"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Adult male or non-pregnant, non-lactating female aged ≥40. Women of childbearing potential are allowed to enter the trial if they show to have a negative serum pregnancy test at the Screening Visit and are using, during the last two months before the Screening Visit, at least one medically approved and highly effective method of birth control defined as those which result in a low failure rate (i.e less than 1% per year) when used consistently and correctly such as implants, injectables, oral contraceptives combined with at least one barrier method, hormonal Intrauterine Devices (IUDs), sexual abstinence or vasectomy of the partner.\n* Current or ex-cigarette smoker, with a smoking history of at least 10 pack-years.\n* Patient with a clinical diagnosis of stable COPD according to the Global Initiative for Chronic Lung Disease \"GOLD\" Guidelines at the Screening Visit.\n* Patient whose FEV1/FVC (Forced Vital Capacity) at the Screening Visit measured between 10-15 minutes post inhalation of 400 micrograms of salbutamol is \\< 70% (i.e., 100 x Post-salbutamol FEV1 /FVC \\< 70%).\n* Patient with a diagnosis of moderate to severe COPD according to the GOLD Guidelines classification (stages II and III) at the Screening Visit: FEV1 measured between 10-15 minutes post inhalation of 400 micro grams of salbutamol is 30% \\< FEV1 \\< 80% of the predicted normal value (i.e., 100 x Post-salbutamol FEV1/ Predicted FEV1 must be \\< 80% and ≥ 30%).\n* Patient must be able to perform repeatable pulmonary function testing for FEV1 according to American Thoracic Society/European Respiratory Society \"ATS/ERS\" 2005 criteria at Screening Visit.\n* Patient who is eligible and able to participate in the trial and who consent to do so in writing after the purpose and nature of the investigation have been explained.\n\nExclusion Criteria:\n\n* History or current diagnosis of asthma.\n* Any respiratory tract infection (including the upper respiratory tract) or COPD exacerbation in the 6 weeks before Screening Visit.\n* Patient hospitalised for COPD exacerbation within 3 months prior to Screening Visit.\n* Clinically significant respiratory conditions defined as:\n\n  * Known active tuberculosis.\n  * History of interstitial lung or massive pulmonary thromboembolic disease.\n  * Pulmonary resection or lung volume reduction surgery within 12 months prior to Screening Visit.\n  * History of lung transplantation.\n  * History of bronchiectasis secondary to respiratory diseases others than COPD (e.g., cystic fibrosis, Kartagener's syndrome, etc).\n  * Known a1-antitrypsin deficiency.\n* Patients who in the Investigator's opinion might have needed to start a pulmonary rehabilitation program during the study and/or patients who started/finished it within 3 months prior to screening.\n* Use of long-term oxygen therapy (≥ 15 hours/day).\n* Patients who did not maintain regular day/night, waking/sleeping cycles including night shift workers (eg, history of sleep apnoea syndrome, any condition related to sleep disturbances such as restless-legs syndrome or somnambulism).\n* Clinically significant cardiovascular conditions defined as:\n\n  * Myocardial infarction within the 6 months prior to screening.\n  * Thoracic surgery within 12 months prior to screening.\n  * Unstable angina or unstable arrhythmia which had required changes in the pharmacological therapy or other intervention within 12 months prior to screening, or newly diagnosed arrhythmia within the previous 3 months prior to screening.\n  * Hospitalisation within 12 months prior to screening for heart failure functional classes III (marked limitation of activity and only comfortable at rest) and IV (need of complete rest, confinement to bed or chair, discomfort at any physical activity and presence of symptoms at rest) as per the New York Heart Association.\n* Patients (with or without pharmacological therapy) with resting systolic blood pressure (SBP)\n\n  ≥200 mmHg, a resting diastolic blood pressure (DBP) ≥120 mmHg, or a resting heart rate ≥105 beats per minute (bpm) at screening and at Visit 1 prior to randomisation.\n* Patients with interval corrected for heart rate \"QTc\" \\[calculated according to formulae (QTc=QT/RR1/2) \\> 470 msec as indicated in the centralised reading report assessed at Screening Visit.\n* Patients with clinically relevant abnormalities in the clinical laboratory tests, ECG parameters (other than QT interval corrected using Bazett's formula \\[QTcB\\]) or in the physical examination at screening, if the abnormality defined a disease state listed as exclusion criteria, except for those related to COPD.\n* Patients with a history of hypersensitivity reactions to inhaled anticholinergics, sympathomimetic amines, or inhaled medication or any component thereof (including report of paradoxical bronchospasm). Patients with known narrow-angle glaucoma, symptomatic bladder neck obstruction or acute urinary retention.\n* Patients with symptomatic non-stable prostate hypertrophy. (However, patients with well-controlled, stable, asymptomatic benign prostatic hypertrophy were not excluded).\n* Patients with known uncontrolled history of infection with human immunodeficiency virus and/or active hepatitis.\n* Current diagnosis of cancer other than basal or squamous cell skin cancer.\n* Life expectancy of less than 1 year.\n* Patients with any other serious or uncontrolled physical or mental dysfunction that, as judged by the Investigator, could have placed the patient at higher risk from his/her participation in the study, could have confounded the results of the study, or is likely to prevent the patient from complying with the requirements of the study, or completing the study.\n* Patients with a history (within 2 years prior to screening) of drug and/or alcohol abuse that might have prevented study compliance based on the Investigator judgment.\n* Patients unlikely to be cooperative (eg, take the medication, complete the Patient Diaries or attend the clinic at the required times).\n* Patients unable to properly use a DPI or pMDI inhaler device or to perform spirometry measurements.\n* Patients previously randomised in a study involving aclidinium bromide/formoterol FDC.\n* Patients previously randomised in a study involving aclidinium bromide monotherapy except when participation finished at least 6 months before screening.\n* Patients treated with any investigational drug within 30 days (or 6 half-lives, whichever is longer) prior to screening.\n* Patients who intended to use any concomitant medication not permitted by this protocol or who had not undergone the required washout period for a particular prohibited medication.\n* Patients unable to give consent, or patients of consenting age but under guardianship, or vulnerable patients.\n* Patients employed, or relatives of employees at the study centre, Almirall or Forest Laboratories.\n* Any other conditions that, in the Investigator's opinion, might have indicated the patient to be unsuitable for the study.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Esther Garcia, Ph.D.",
+     "affiliation": "AstraZeneca",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Graz",
+     "zip": "8036",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 47.06733,
+      "lon": 15.44197
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #3",
+     "city": "Salzburg",
+     "zip": "5020",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 47.79941,
+      "lon": 13.04399
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #3",
+     "city": "Edegem",
+     "zip": "2650",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 51.15662,
+      "lon": 4.44504
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Genk",
+     "zip": "3600",
+     "country": "Belgium",
+     "geoPoint": {
+      "lat": 50.965,
+      "lon": 5.50082
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #6",
+     "city": "Rousse",
+     "zip": "7002",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.84872,
+      "lon": 25.9534
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #10",
+     "city": "Sevlievo",
+     "zip": "5400",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 43.02295,
+      "lon": 25.10364
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #8",
+     "city": "Sofia",
+     "zip": "1000",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Sofia",
+     "zip": "1431",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #11",
+     "city": "Sofia",
+     "zip": "1709",
+     "country": "Bulgaria",
+     "geoPoint": {
+      "lat": 42.69751,
+      "lon": 23.32415
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Zagreb",
+     "zip": "10000",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 45.81444,
+      "lon": 15.97798
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #4",
+     "city": "Zagreb",
+     "zip": "10000",
+     "country": "Croatia",
+     "geoPoint": {
+      "lat": 45.81444,
+      "lon": 15.97798
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #8",
+     "city": "Brno",
+     "zip": "65691",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.19522,
+      "lon": 16.60796
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #3",
+     "city": "Jindřichův Hradec",
+     "zip": "377 01",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.14404,
+      "lon": 15.00301
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #10",
+     "city": "Karlovy Vary",
+     "zip": "360 00",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.23271,
+      "lon": 12.87117
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #9",
+     "city": "Liberec",
+     "zip": "460 63",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.76711,
+      "lon": 15.05619
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #16",
+     "city": "Ostrava Hrabuvka",
+     "zip": "700 30",
+     "country": "Czechia"
+    },
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Prague",
+     "zip": "130 00",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #12",
+     "city": "Prague",
+     "zip": "155 00",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #15",
+     "city": "Prague",
+     "zip": "163 00",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #14",
+     "city": "Prague",
+     "zip": "18200",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.08804,
+      "lon": 14.42076
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #6",
+     "city": "Praha 5 - Radotin",
+     "zip": "153 00",
+     "country": "Czechia"
+    },
+    {
+     "facility": "Almirall Investigational Site #11",
+     "city": "Strakonice",
+     "zip": "386 01",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.26141,
+      "lon": 13.90237
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "Tábor",
+     "zip": "390 01",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.41441,
+      "lon": 14.6578
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #4",
+     "city": "Hillerød",
+     "zip": "3400",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.92791,
+      "lon": 12.30081
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "København NV",
+     "zip": "2400",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.71258,
+      "lon": 12.52343
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #5",
+     "city": "Odense",
+     "zip": "5000",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.39594,
+      "lon": 10.38831
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Silkeborg",
+     "zip": "8600",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 56.1697,
+      "lon": 9.54508
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #7",
+     "city": "Espoo",
+     "zip": "2740",
+     "country": "Finland",
+     "geoPoint": {
+      "lat": 60.2052,
+      "lon": 24.6522
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #8",
+     "city": "Jyväskylä",
+     "zip": "40100",
+     "country": "Finland",
+     "geoPoint": {
+      "lat": 62.24147,
+      "lon": 25.72088
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "Tampere",
+     "zip": "33520",
+     "country": "Finland",
+     "geoPoint": {
+      "lat": 61.49911,
+      "lon": 23.78712
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #6",
+     "city": "Tampere",
+     "zip": "33520",
+     "country": "Finland",
+     "geoPoint": {
+      "lat": 61.49911,
+      "lon": 23.78712
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #3",
+     "city": "Turku",
+     "zip": "20520",
+     "country": "Finland",
+     "geoPoint": {
+      "lat": 60.45148,
+      "lon": 22.26869
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #6",
+     "city": "Lille",
+     "zip": "59037",
+     "country": "France",
+     "geoPoint": {
+      "lat": 50.63391,
+      "lon": 3.05512
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #10",
+     "city": "Marseille",
+     "zip": "13291",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.29695,
+      "lon": 5.38107
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #11",
+     "city": "Montpellier",
+     "zip": "34295",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.61093,
+      "lon": 3.87635
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "Pessac",
+     "zip": "33604",
+     "country": "France",
+     "geoPoint": {
+      "lat": 44.80565,
+      "lon": -0.6324
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #3",
+     "city": "Rennes",
+     "zip": "35033",
+     "country": "France",
+     "geoPoint": {
+      "lat": 48.11109,
+      "lon": -1.67431
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #8",
+     "city": "Toulouse",
+     "zip": "31059",
+     "country": "France",
+     "geoPoint": {
+      "lat": 43.60426,
+      "lon": 1.44367
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #12",
+     "city": "Vieux-Condé",
+     "zip": "59690",
+     "country": "France",
+     "geoPoint": {
+      "lat": 50.45944,
+      "lon": 3.56738
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Berlin",
+     "zip": "10117",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #12",
+     "city": "Berlin",
+     "zip": "10629",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #19",
+     "city": "Berlin",
+     "zip": "12627",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #11",
+     "city": "Berlin",
+     "zip": "13125",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #24",
+     "city": "Berlin",
+     "zip": "14059",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #16",
+     "city": "Bochum",
+     "zip": "44787",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.48165,
+      "lon": 7.21648
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #23",
+     "city": "Bonn",
+     "zip": "53123",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.73438,
+      "lon": 7.09549
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #15",
+     "city": "Dresden",
+     "zip": "1067",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.05089,
+      "lon": 13.73832
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #10",
+     "city": "Dresden",
+     "zip": "1307",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.05089,
+      "lon": 13.73832
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #5",
+     "city": "Frankfurt",
+     "zip": "60389",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.68333,
+      "lon": 10.53333
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #13",
+     "city": "Frankfurt",
+     "zip": "60596",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.68333,
+      "lon": 10.53333
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #33",
+     "city": "Haltern am See",
+     "zip": "44263",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.74297,
+      "lon": 7.18163
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #7",
+     "city": "Hamburg",
+     "zip": "20253",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #21",
+     "city": "Hamburg",
+     "zip": "22143",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #36",
+     "city": "Hessen",
+     "zip": "60596",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.01702,
+      "lon": 10.779
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #32",
+     "city": "Land Niedersachsen",
+     "zip": "30159",
+     "country": "Germany"
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "Lübeck",
+     "zip": "23538",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.86893,
+      "lon": 10.68729
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #6",
+     "city": "Mainz",
+     "zip": "55131",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.98185,
+      "lon": 8.28008
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #20",
+     "city": "Marburg",
+     "zip": "35037",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.80904,
+      "lon": 8.77069
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #34",
+     "city": "München",
+     "zip": "80539",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.60698,
+      "lon": 13.31243
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #18",
+     "city": "Nuremberg",
+     "zip": "90402",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.45421,
+      "lon": 11.07752
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #22",
+     "city": "Reinfeld",
+     "zip": "23858",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.8311,
+      "lon": 10.49227
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #35",
+     "city": "Sachsen",
+     "zip": "1067",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.29433,
+      "lon": 10.40664
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #27",
+     "city": "Sachsen",
+     "zip": "2826",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.29433,
+      "lon": 10.40664
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #28",
+     "city": "Sachsen",
+     "zip": "39104",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.29433,
+      "lon": 10.40664
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #25",
+     "city": "Sachsen",
+     "zip": "4103",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.29433,
+      "lon": 10.40664
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #8",
+     "city": "Schwerin",
+     "zip": "19055",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.62937,
+      "lon": 11.41316
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #4",
+     "city": "Witten",
+     "zip": "58452",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.44362,
+      "lon": 7.35258
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #4",
+     "city": "Balassagyarmat",
+     "zip": "2660",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 48.07296,
+      "lon": 19.29614
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #16",
+     "city": "Budapest",
+     "zip": "1033",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.49835,
+      "lon": 19.04045
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #12",
+     "city": "Budapest",
+     "zip": "1036",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.49835,
+      "lon": 19.04045
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #17",
+     "city": "Budapest",
+     "zip": "1036",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.49835,
+      "lon": 19.04045
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #6",
+     "city": "Budapest",
+     "zip": "1125",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.49835,
+      "lon": 19.04045
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #14",
+     "city": "Budapest",
+     "zip": "1221",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.49835,
+      "lon": 19.04045
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #5",
+     "city": "Budapest",
+     "zip": "1529",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.49835,
+      "lon": 19.04045
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "Deszk",
+     "zip": "6772",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 46.21802,
+      "lon": 20.24322
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #9",
+     "city": "Komárom",
+     "zip": "2900",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.74318,
+      "lon": 18.11913
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Miskolc",
+     "zip": "3534",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 48.10327,
+      "lon": 20.77806
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #15",
+     "city": "Mosonmagyaróvár",
+     "zip": "9200",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.86789,
+      "lon": 17.26994
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #13",
+     "city": "Nagykanizsa",
+     "zip": "8800",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 46.45347,
+      "lon": 16.99104
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #3",
+     "city": "Nyíregyháza",
+     "zip": "4400",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.95539,
+      "lon": 21.71671
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #7",
+     "city": "Törökbálint",
+     "zip": "2045",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.42931,
+      "lon": 18.91356
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #11",
+     "city": "Zalaegerszeg",
+     "zip": "8900",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 46.83695,
+      "lon": 16.84401
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #15",
+     "city": "Genova",
+     "zip": "16132",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 45.21604,
+      "lon": 11.87211
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #3",
+     "city": "Parma",
+     "zip": "43100",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 44.79935,
+      "lon": 10.32618
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #5",
+     "city": "Pisa",
+     "zip": "56124",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 43.70853,
+      "lon": 10.4036
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "Siena",
+     "zip": "53100",
+     "country": "Italy",
+     "geoPoint": {
+      "lat": 43.31822,
+      "lon": 11.33064
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #8",
+     "city": "Beek",
+     "zip": "6191 JW",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 50.94083,
+      "lon": 5.79722
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #7",
+     "city": "Breda",
+     "zip": "4811 VL",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 51.58656,
+      "lon": 4.77596
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #13",
+     "city": "Eindhoven",
+     "zip": "5632 EJ",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 51.44083,
+      "lon": 5.47778
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "Leiderdorp",
+     "zip": "2352 RA",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.15833,
+      "lon": 4.52917
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #9",
+     "city": "Rotterdam",
+     "zip": "3021 HC",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 51.9225,
+      "lon": 4.47917
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #11",
+     "city": "Velp",
+     "zip": "6883 ES",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 51.995,
+      "lon": 5.97361
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #10",
+     "city": "Zoetermeer",
+     "zip": "2724 EK",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.0575,
+      "lon": 4.49306
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #26",
+     "city": "Bialystok",
+     "zip": "15-003",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 53.13333,
+      "lon": 23.16433
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #3",
+     "city": "Bialystok",
+     "zip": "15-540",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 53.13333,
+      "lon": 23.16433
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #19",
+     "city": "Bielsko-Biala",
+     "zip": "43-316",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 49.82245,
+      "lon": 19.04686
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #23",
+     "city": "Bydgoszcz",
+     "zip": "85-079",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 53.1235,
+      "lon": 18.00762
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #21",
+     "city": "Gdynia",
+     "zip": "81-384",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 54.51889,
+      "lon": 18.53188
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #5",
+     "city": "Katowice",
+     "zip": "40-748",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.2597,
+      "lon": 19.02173
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #22",
+     "city": "Katowice",
+     "zip": "40-751",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.2597,
+      "lon": 19.02173
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #7",
+     "city": "Krakow",
+     "zip": "31-024",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.06143,
+      "lon": 19.93658
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #9",
+     "city": "Krakow",
+     "zip": "31-159",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.06143,
+      "lon": 19.93658
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #6",
+     "city": "Lodz",
+     "zip": "92-216",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 51.77058,
+      "lon": 19.47395
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "Lodz",
+     "zip": "93-319",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 51.77058,
+      "lon": 19.47395
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #14",
+     "city": "Lublin",
+     "zip": "20-718",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 51.25058,
+      "lon": 22.57009
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #8",
+     "city": "Oława",
+     "zip": "55-200",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 50.9466,
+      "lon": 17.2926
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Poznan",
+     "zip": "60-214",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.40692,
+      "lon": 16.92993
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #11",
+     "city": "Poznan",
+     "zip": "60-693",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.40692,
+      "lon": 16.92993
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #4",
+     "city": "Poznan",
+     "zip": "60-823",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.40692,
+      "lon": 16.92993
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #13",
+     "city": "Torun",
+     "zip": "87-100",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 53.01375,
+      "lon": 18.59814
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #18",
+     "city": "Torun",
+     "zip": "87-100",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 53.01375,
+      "lon": 18.59814
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #10",
+     "city": "Warsaw",
+     "zip": "01-138",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.22977,
+      "lon": 21.01178
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #15",
+     "city": "Warsaw",
+     "zip": "01-138",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.22977,
+      "lon": 21.01178
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #16",
+     "city": "Warsaw",
+     "zip": "01-868",
+     "country": "Poland",
+     "geoPoint": {
+      "lat": 52.22977,
+      "lon": 21.01178
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "Brasov",
+     "zip": "500075",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 45.64861,
+      "lon": 25.60613
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #9",
+     "city": "Bucharest",
+     "zip": "21382",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.43225,
+      "lon": 26.10626
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #18",
+     "city": "Bucharest",
+     "zip": "21659",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.43225,
+      "lon": 26.10626
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #7",
+     "city": "Bucharest",
+     "zip": "30303",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.43225,
+      "lon": 26.10626
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #10",
+     "city": "Bucharest",
+     "zip": "50554",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.43225,
+      "lon": 26.10626
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #17",
+     "city": "Constanța",
+     "zip": "900002",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.18073,
+      "lon": 28.63432
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Constanța",
+     "zip": "900002",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.18073,
+      "lon": 28.63432
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #3",
+     "city": "Craiova",
+     "zip": "200515",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 44.31667,
+      "lon": 23.8
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #8",
+     "city": "Deva",
+     "zip": "330084",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 45.88333,
+      "lon": 22.9
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #6",
+     "city": "Iași",
+     "zip": "700115",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 47.16667,
+      "lon": 27.6
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #16",
+     "city": "Iași",
+     "zip": "700381",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 47.16667,
+      "lon": 27.6
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #5",
+     "city": "Târgu Mureş",
+     "zip": "RO540136",
+     "country": "Romania",
+     "geoPoint": {
+      "lat": 46.54245,
+      "lon": 24.55747
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Moscow",
+     "zip": "109240",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 55.75204,
+      "lon": 37.61781
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "Moscow",
+     "zip": "119620",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 55.75204,
+      "lon": 37.61781
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #9",
+     "city": "Novosibirsk",
+     "zip": "630089",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 55.02259,
+      "lon": 82.93175
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #7",
+     "city": "Saint Petersburg",
+     "zip": "194044",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 59.93863,
+      "lon": 30.31413
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #12",
+     "city": "Saint Petersburg",
+     "zip": "194354",
+     "country": "Russia",
+     "geoPoint": {
+      "lat": 59.93863,
+      "lon": 30.31413
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #6",
+     "city": "Banská Bystrica",
+     "zip": "975 17",
+     "country": "Slovakia",
+     "geoPoint": {
+      "lat": 48.73947,
+      "lon": 19.14932
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #5",
+     "city": "Bardejov",
+     "zip": "8501",
+     "country": "Slovakia",
+     "geoPoint": {
+      "lat": 49.29175,
+      "lon": 21.27271
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #3",
+     "city": "Bratislava",
+     "zip": "821 06",
+     "country": "Slovakia",
+     "geoPoint": {
+      "lat": 48.14816,
+      "lon": 17.10674
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "Nové Zámky",
+     "zip": "940 01",
+     "country": "Slovakia",
+     "geoPoint": {
+      "lat": 47.98544,
+      "lon": 18.16195
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #4",
+     "city": "Spišská Nová Ves",
+     "zip": "5201",
+     "country": "Slovakia",
+     "geoPoint": {
+      "lat": 48.94464,
+      "lon": 20.56153
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #9",
+     "city": "Štúrovo",
+     "zip": "943 01",
+     "country": "Slovakia",
+     "geoPoint": {
+      "lat": 47.79495,
+      "lon": 18.7175
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #10",
+     "city": "Vyšné Hágy",
+     "zip": "059 84",
+     "country": "Slovakia",
+     "geoPoint": {
+      "lat": 49.11855,
+      "lon": 20.12464
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #16",
+     "city": "Cape Town",
+     "zip": "7500",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -33.92584,
+      "lon": 18.42322
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Cape Town",
+     "zip": "7500",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -33.92584,
+      "lon": 18.42322
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #15",
+     "city": "Cape Town, Western Cape",
+     "zip": "7700",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -33.92584,
+      "lon": 18.42322
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "eManzimtoti",
+     "zip": "4126",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -30.05219,
+      "lon": 30.88527
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #12",
+     "city": "Pretoria",
+     "zip": "2",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -25.74486,
+      "lon": 28.18783
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #13",
+     "city": "Pretoria",
+     "zip": "2",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -25.74486,
+      "lon": 28.18783
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #3",
+     "city": "Pretoria",
+     "zip": "84",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -25.74486,
+      "lon": 28.18783
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #8",
+     "city": "Roodepoort",
+     "zip": "1724",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -26.1625,
+      "lon": 27.8725
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #5",
+     "city": "Somerset West",
+     "zip": "7129",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -34.08401,
+      "lon": 18.82113
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #7",
+     "city": "Buchon-si",
+     "zip": "420-767",
+     "country": "South Korea"
+    },
+    {
+     "facility": "Almirall Investigational Site #4",
+     "city": "Gyeonggi-do",
+     "zip": "431-070",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.58944,
+      "lon": 126.76917
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #8",
+     "city": "Seoul",
+     "zip": "110-744",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #6",
+     "city": "Seoul",
+     "zip": "120-752",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #3",
+     "city": "Seoul",
+     "zip": "136-705",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #5",
+     "city": "Seoul",
+     "zip": "137-710",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Seoul",
+     "zip": "152-703",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "Seoul",
+     "zip": "158-710",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #7",
+     "city": "Barcelona",
+     "zip": "8003",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.38879,
+      "lon": 2.15899
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #12",
+     "city": "Barcelona",
+     "zip": "8916",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.38879,
+      "lon": 2.15899
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #3",
+     "city": "Canet de Mar",
+     "zip": "8360",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 41.59054,
+      "lon": 2.58116
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #10",
+     "city": "Cáceres",
+     "zip": "10003",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 39.47649,
+      "lon": -6.37224
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "Málaga",
+     "zip": "29010",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 36.72016,
+      "lon": -4.42034
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #9",
+     "city": "Oviedo",
+     "zip": "33006",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 43.36029,
+      "lon": -5.84476
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #8",
+     "city": "Seville",
+     "zip": "41071",
+     "country": "Spain",
+     "geoPoint": {
+      "lat": 37.38283,
+      "lon": -5.97317
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Gothenburg",
+     "zip": "41263",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 57.70716,
+      "lon": 11.96679
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "Lund",
+     "zip": "22185",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 55.70584,
+      "lon": 13.19321
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #6",
+     "city": "Lund",
+     "zip": "22222",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 55.70584,
+      "lon": 13.19321
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #3",
+     "city": "Malmö",
+     "zip": "21152",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 55.60587,
+      "lon": 13.00073
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #4",
+     "city": "Vällingby",
+     "zip": "16268",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 59.36441,
+      "lon": 17.87407
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #18",
+     "city": "Crimea Oblast",
+     "zip": "98603",
+     "country": "Ukraine"
+    },
+    {
+     "facility": "Almirall Investigational Site #12",
+     "city": "Dnipropetrovsk",
+     "zip": "49051",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 48.46664,
+      "lon": 35.04066
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #9",
+     "city": "Donetsk",
+     "zip": "83099",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 48.023,
+      "lon": 37.80224
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #11",
+     "city": "Ivano-Frankivsk",
+     "zip": "76012",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 48.92312,
+      "lon": 24.71248
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "Kharkiv",
+     "zip": "61035",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 49.98177,
+      "lon": 36.25475
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #17",
+     "city": "Kharkiv",
+     "zip": "61039",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 49.98177,
+      "lon": 36.25475
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #15",
+     "city": "Kyiv",
+     "zip": "03680",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 50.45466,
+      "lon": 30.5238
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Kyiv",
+     "zip": "3680",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 50.45466,
+      "lon": 30.5238
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #3",
+     "city": "Kyiv",
+     "zip": "3680",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 50.45466,
+      "lon": 30.5238
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #4",
+     "city": "Kyiv",
+     "zip": "3680",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 50.45466,
+      "lon": 30.5238
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #5",
+     "city": "Kyiv",
+     "zip": "4050",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 50.45466,
+      "lon": 30.5238
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #6",
+     "city": "Luhansk",
+     "zip": "91045",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 48.56814,
+      "lon": 39.30553
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #8",
+     "city": "Mykolaiv",
+     "zip": "54003",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 50.34135,
+      "lon": 24.97731
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #10",
+     "city": "Vinnytsia",
+     "zip": "21029",
+     "country": "Ukraine",
+     "geoPoint": {
+      "lat": 49.2322,
+      "lon": 28.46871
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #6",
+     "city": "Birmingham",
+     "zip": "B15 2SQ",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 52.48142,
+      "lon": -1.89983
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #12",
+     "city": "Bradford",
+     "zip": "BD9 6RJ",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.79391,
+      "lon": -1.75206
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #10",
+     "city": "Cambridge",
+     "zip": "CB2 2QQ",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 52.2,
+      "lon": 0.11667
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #13",
+     "city": "Cardiff",
+     "zip": "CF14 5GJ",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.48,
+      "lon": -3.18
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #5",
+     "city": "Chorley",
+     "zip": "PR7 7NA",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.65,
+      "lon": -2.61667
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #2",
+     "city": "Glasgow",
+     "zip": "G81 2DR",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 55.86515,
+      "lon": -4.25763
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #11",
+     "city": "Hull",
+     "zip": "HU16 5JQ",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.7446,
+      "lon": -0.33525
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #14",
+     "city": "Liverpool",
+     "zip": "L22 0LG",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.41058,
+      "lon": -2.97794
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #1",
+     "city": "London",
+     "zip": "E2 9JX",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.50853,
+      "lon": -0.12574
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #4",
+     "city": "Manchester",
+     "zip": "M15 6SX",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.48095,
+      "lon": -2.23743
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #8",
+     "city": "Manchester",
+     "zip": "M23 9QZ",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.48095,
+      "lon": -2.23743
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #17",
+     "city": "Metropolitan Borough of Wirral",
+     "zip": "CH49 5PE",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.37616,
+      "lon": -3.10501
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #18",
+     "city": "Newcastle upon Tyne",
+     "zip": "NE7 7DN",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 54.97328,
+      "lon": -1.61396
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #7",
+     "city": "Reading",
+     "zip": "RG2 7AG",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.45625,
+      "lon": -0.97113
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #16",
+     "city": "Stockton-on-Tees",
+     "zip": "TS19 8PE",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 54.56848,
+      "lon": -1.3187
+     }
+    },
+    {
+     "facility": "Almirall Investigational Site #15",
+     "city": "West Midlands",
+     "zip": "WV10 0QP",
+     "country": "United Kingdom"
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "31827323",
+     "type": "DERIVED",
+     "citation": "Singh D, D'Urzo AD, Donohue JF, Kerwin EM, Molins E, Chuecos F, Ribera A, Jarreta D. An Evaluation Of Single And Dual Long-Acting Bronchodilator Therapy As Effective Interventions In Maintenance Therapy-Naive Patients With COPD. Int J Chron Obstruct Pulmon Dis. 2019 Dec 6;14:2835-2848. doi: 10.2147/COPD.S217710. eCollection 2019."
+    },
+    {
+     "pmid": "28558833",
+     "type": "DERIVED",
+     "citation": "Singh D, D'Urzo AD, Chuecos F, Munoz A, Garcia Gil E. Reduction in clinically important deterioration in chronic obstructive pulmonary disease with aclidinium/formoterol. Respir Res. 2017 May 30;18(1):106. doi: 10.1186/s12931-017-0583-0."
+    },
+    {
+     "pmid": "26233481",
+     "type": "DERIVED",
+     "citation": "Bateman ED, Chapman KR, Singh D, D'Urzo AD, Molins E, Leselbaum A, Gil EG. Aclidinium bromide and formoterol fumarate as a fixed-dose combination in COPD: pooled analysis of symptoms and exacerbations from two six-month, multicentre, randomised studies (ACLIFORM and AUGMENT). Respir Res. 2015 Aug 2;16(1):92. doi: 10.1186/s12931-015-0250-2."
+    },
+    {
+     "pmid": "25404569",
+     "type": "DERIVED",
+     "citation": "Singh D, Jones PW, Bateman ED, Korn S, Serra C, Molins E, Caracta C, Gil EG, Leselbaum A. Efficacy and safety of aclidinium bromide/formoterol fumarate fixed-dose combinations compared with individual components and placebo in patients with COPD (ACLIFORM-COPD): a multicentre, randomised study. BMC Pulm Med. 2014 Nov 18;14:178. doi: 10.1186/1471-2466-14-178."
+    }
+   ],
+   "seeAlsoLinks": [
+    {
+     "label": "CSRsynopsis",
+     "url": "http://filehosting.pharmacm.com/DownloadService.ashx?client=CTR_MED_7111&studyid=3970&filename=M-40464-30-CSRsynopsis.pdf"
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "In total, 2443 patients were screened, of whom 1729 were considered eligible and were randomized into the study. 714/2443 patients were not randomized due to screening failure (primarily for non-fulfillment of inclusion/exclusion criteria)",
+   "recruitmentDetails": "The study was conducted in 22 countries (Austria, Belgium, Bulgaria, Croatia, Czech Republic, Denmark, Finland, France, Germany, Hungary, Italy, the Netherlands, Poland, Romania, Russia, Slovakia, South Africa, South Korea, Spain, Sweden, Ukraine and UK). The first patient was screened in October 2011 and the last patient visit was in January 2013",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Placebo",
+     "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+    },
+    {
+     "id": "FG001",
+     "title": "Aclidinium/Formoterol 400/12 μg",
+     "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+    },
+    {
+     "id": "FG002",
+     "title": "Aclidinium/Formoterol 400/6 μg",
+     "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+    },
+    {
+     "id": "FG003",
+     "title": "Aclidinium 400 μg",
+     "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+    },
+    {
+     "id": "FG004",
+     "title": "Formoterol 12 μg",
+     "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "194"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "385"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "381"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "385"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "384"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "160"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "351"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "341"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "335"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "339"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "34"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "34"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "40"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "50"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "45"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "7"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "12"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "10"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "11"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "11"
+        }
+       ]
+      },
+      {
+       "type": "Other, including COPD exacerbation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "8"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "5"
+        }
+       ]
+      },
+      {
+       "type": "Withdrawal by Subject",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "14"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "10"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "14"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "16"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "19"
+        }
+       ]
+      },
+      {
+       "type": "Lack of Efficacy",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "6"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "4"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "5"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "3"
+        }
+       ]
+      },
+      {
+       "type": "Lost to Follow-up",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Protocol Violation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "4"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "6"
+        },
+        {
+         "groupId": "FG002",
+         "numSubjects": "9"
+        },
+        {
+         "groupId": "FG003",
+         "numSubjects": "9"
+        },
+        {
+         "groupId": "FG004",
+         "numSubjects": "6"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Placebo",
+     "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+    },
+    {
+     "id": "BG001",
+     "title": "Aclidinium/Formoterol 400/12 μg",
+     "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+    },
+    {
+     "id": "BG002",
+     "title": "Aclidinium/Formoterol 400/6 μg",
+     "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+    },
+    {
+     "id": "BG003",
+     "title": "Aclidinium 400 μg",
+     "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+    },
+    {
+     "id": "BG004",
+     "title": "Formoterol 12 μg",
+     "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+    },
+    {
+     "id": "BG005",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "194"
+      },
+      {
+       "groupId": "BG001",
+       "value": "385"
+      },
+      {
+       "groupId": "BG002",
+       "value": "381"
+      },
+      {
+       "groupId": "BG003",
+       "value": "385"
+      },
+      {
+       "groupId": "BG004",
+       "value": "384"
+      },
+      {
+       "groupId": "BG005",
+       "value": "1729"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "Years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "64.2",
+           "spread": "8.0"
+          },
+          {
+           "groupId": "BG001",
+           "value": "62.7",
+           "spread": "8.1"
+          },
+          {
+           "groupId": "BG002",
+           "value": "62.9",
+           "spread": "7.7"
+          },
+          {
+           "groupId": "BG003",
+           "value": "63.1",
+           "spread": "8.2"
+          },
+          {
+           "groupId": "BG004",
+           "value": "63.4",
+           "spread": "7.8"
+          },
+          {
+           "groupId": "BG005",
+           "value": "63.2",
+           "spread": "8.0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Gender",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "56"
+          },
+          {
+           "groupId": "BG001",
+           "value": "124"
+          },
+          {
+           "groupId": "BG002",
+           "value": "122"
+          },
+          {
+           "groupId": "BG003",
+           "value": "129"
+          },
+          {
+           "groupId": "BG004",
+           "value": "129"
+          },
+          {
+           "groupId": "BG005",
+           "value": "560"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "138"
+          },
+          {
+           "groupId": "BG001",
+           "value": "261"
+          },
+          {
+           "groupId": "BG002",
+           "value": "259"
+          },
+          {
+           "groupId": "BG003",
+           "value": "256"
+          },
+          {
+           "groupId": "BG004",
+           "value": "255"
+          },
+          {
+           "groupId": "BG005",
+           "value": "1169"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Change From Baseline in 1-hour Morning Post-dose Forced Expiratory Volume in One Second (FEV1)",
+     "populationDescription": "ITT Population defined as all randomized patients who took at least one administration of study medication and had a baseline and at least one post-baseline FEV1 assessment",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Baseline and Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG001",
+       "title": "Aclidinium/Formoterol 400/12 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG002",
+       "title": "Aclidinium/Formoterol 400/6 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG003",
+       "title": "Aclidinium 400 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG004",
+       "title": "Formoterol 12 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "157"
+        },
+        {
+         "groupId": "OG001",
+         "value": "347"
+        },
+        {
+         "groupId": "OG002",
+         "value": "339"
+        },
+        {
+         "groupId": "OG003",
+         "value": "327"
+        },
+        {
+         "groupId": "OG004",
+         "value": "335"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.030",
+           "spread": "0.018"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.269",
+           "spread": "0.013"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.213",
+           "spread": "0.013"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.144",
+           "spread": "0.013"
+          },
+          {
+           "groupId": "OG004",
+           "value": "0.129",
+           "spread": "0.013"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG001",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted by pre- and post-bronchodilator, age, and baseline FEV1 as covariates, and treatment group, sex, and smoking-status as fixed effect factors",
+       "paramType": "Least Squares Mean Difference",
+       "paramValue": "0.125",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.090",
+       "ciUpperLimit": "0.160"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG003"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted by pre- and post-bronchodilator, age, and baseline FEV1 as covariates, and treatment group, sex, and smoking-status as fixed effect factors",
+       "paramType": "Least Squares Mean Difference",
+       "paramValue": "0.069",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.034",
+       "ciUpperLimit": "0.105"
+      }
+     ]
+    },
+    {
+     "type": "PRIMARY",
+     "title": "Change From Baseline in Morning Pre-dose (Trough) Forced Expiratory Volume in One Second (FEV1)",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Baseline and Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG001",
+       "title": "Aclidinium/Formoterol 400/12 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG002",
+       "title": "Aclidinium/Formoterol 400/6 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG003",
+       "title": "Aclidinium 400 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG004",
+       "title": "Formoterol 12 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "159"
+        },
+        {
+         "groupId": "OG001",
+         "value": "349"
+        },
+        {
+         "groupId": "OG002",
+         "value": "340"
+        },
+        {
+         "groupId": "OG003",
+         "value": "332"
+        },
+        {
+         "groupId": "OG004",
+         "value": "337"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-0.061",
+           "spread": "0.018"
+          },
+          {
+           "groupId": "OG001",
+           "value": "0.083",
+           "spread": "0.012"
+          },
+          {
+           "groupId": "OG002",
+           "value": "0.050",
+           "spread": "0.012"
+          },
+          {
+           "groupId": "OG003",
+           "value": "0.056",
+           "spread": "0.012"
+          },
+          {
+           "groupId": "OG004",
+           "value": "-0.002",
+           "spread": "0.012"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG001",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted by pre- and post-bronchodilator, age, and baseline FEV1 as covariates, and treatment group, sex, and smoking-status as fixed effect factors",
+       "paramType": "Least Squares Mean Difference",
+       "paramValue": "0.085",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.051",
+       "ciUpperLimit": "0.119"
+      },
+      {
+       "groupIds": [
+        "OG002",
+        "OG004"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.0022",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted by pre- and post-bronchodilator, age, and baseline FEV1 as covariates, and treatment group, sex, and smoking-status as fixed effect factors",
+       "paramType": "Least Squares Mean Difference",
+       "paramValue": "0.053",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.019",
+       "ciUpperLimit": "0.087"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change in Transition Dyspnoea Index (TDI) Focal Score",
+     "description": "Evaluation of dyspnea was performed by an independent interviewer experienced in taking a respiratory history The TDI includes three categories: functional impairment which determines the impact of breathlessness on the ability to perform activities, magnitude of task which determines the type of task that caused breathlessness and magnitude of effort which establishes the level of effort needed to evoke breathlessness Each category ranges from minus three (-3; major deterioration) to plus three (+3; major improvement) including a zero (0) score to indicate 'no change' The three categories are totalled to obtain a focal score (total score) ranging from minus nine (-9), including zero (0), to plus nine (+9) Provision is made for circumstances when dyspnoea could not be rated - if reduction of activities, effort or functional impairment was caused by reasons other than respiratory A change of 1 unit in TDI is used as the criterion for a minimal meaningful improvement",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Score on a scale",
+     "timeFrame": "Baseline and Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG001",
+       "title": "Aclidinium/Formoterol 400/12 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG002",
+       "title": "Aclidinium/Formoterol 400/6 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG003",
+       "title": "Aclidinium 400 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG004",
+       "title": "Formoterol 12 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "156"
+        },
+        {
+         "groupId": "OG001",
+         "value": "344"
+        },
+        {
+         "groupId": "OG002",
+         "value": "333"
+        },
+        {
+         "groupId": "OG003",
+         "value": "331"
+        },
+        {
+         "groupId": "OG004",
+         "value": "333"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.215",
+           "spread": "0.241"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.508",
+           "spread": "0.162"
+          },
+          {
+           "groupId": "OG002",
+           "value": "2.377",
+           "spread": "0.165"
+          },
+          {
+           "groupId": "OG003",
+           "value": "2.112",
+           "spread": "0.165"
+          },
+          {
+           "groupId": "OG004",
+           "value": "2.062",
+           "spread": "0.164"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted by BDI baseline score and age as covariates, with treatment group, gender, smoking-status, visit, and group-by-visit as fixed effect factors",
+       "paramType": "Least squares mean difference",
+       "paramValue": "1.293",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.728",
+       "ciUpperLimit": "1.859"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "groupDescription": "Adjusted by BDI baseline score and age as covariates, with treatment group, gender, smoking-status, visit, and group-by-visit as fixed effect factors",
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "<0.0001",
+       "statisticalMethod": "Mixed Models Analysis",
+       "paramType": "Least Squares Mean Difference",
+       "paramValue": "1.162",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "0.593",
+       "ciUpperLimit": "1.730"
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in St. George´s Respiratory Questionnaire (SGRQ) Total Score",
+     "description": "SGRQ is a standardised, self-administered tool for measuring impaired health and perceived well-being in respiratory diseases; a validated electronic version of the questionnaire in the relevant validated languages was used in this study The questionnaire contains 50 items divided into three dimensions (Symptoms, Activity and Impact) Each of the three dimensions of the questionnaire is scored separately in the range from 0 to 100: zero (0) score indicating no impairment of quality of life The total SGRQ score ranging from 0 to 100 is a summary score utilising responses to all items calculated using weights attached to each item of the questionnaire Higher scores indicate poorer health and change of 4 units in the SGRQ has been determined to be the threshold for a clinically relevant change in health status",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Score on a scale",
+     "timeFrame": "Baseline and Week 24",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Placebo",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG001",
+       "title": "Aclidinium/Formoterol 400/12 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG002",
+       "title": "Aclidinium/Formoterol 400/6 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG003",
+       "title": "Aclidinium 400 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      },
+      {
+       "id": "OG004",
+       "title": "Formoterol 12 μg",
+       "description": "Administered BID by inhalation, in the mornings and evenings using a multi-dose dry powder inhaler (Genuair®)"
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "154"
+        },
+        {
+         "groupId": "OG001",
+         "value": "338"
+        },
+        {
+         "groupId": "OG002",
+         "value": "332"
+        },
+        {
+         "groupId": "OG003",
+         "value": "327"
+        },
+        {
+         "groupId": "OG004",
+         "value": "332"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "-6.511",
+           "spread": "1.029"
+          },
+          {
+           "groupId": "OG001",
+           "value": "-7.164",
+           "spread": "0.703"
+          },
+          {
+           "groupId": "OG002",
+           "value": "-8.339",
+           "spread": "0.706"
+          },
+          {
+           "groupId": "OG003",
+           "value": "-5.801",
+           "spread": "0.710"
+          },
+          {
+           "groupId": "OG004",
+           "value": "-5.579",
+           "spread": "0.706"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "analyses": [
+      {
+       "groupIds": [
+        "OG000",
+        "OG001"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.5980",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted by SGRQ baseline score and age as covariates, with treatment group, gender, smoking-status, visit, and group-by-visit as fixed effect factors",
+       "paramType": "Least squares mean difference",
+       "paramValue": "-0.653",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-3.082",
+       "ciUpperLimit": "1.776"
+      },
+      {
+       "groupIds": [
+        "OG000",
+        "OG002"
+       ],
+       "testedNonInferiority": false,
+       "nonInferiorityType": "SUPERIORITY_OR_OTHER",
+       "pValue": "0.1406",
+       "statisticalMethod": "Mixed Models Analysis",
+       "statisticalComment": "Adjusted by SGRQ baseline score and age as covariates, with treatment group, gender, smoking-status, visit, and group-by-visit as fixed effect factors",
+       "paramType": "Least squares mean difference",
+       "paramValue": "-1.828",
+       "ciPctValue": "95",
+       "ciNumSides": "TWO_SIDED",
+       "ciLowerLimit": "-4.259",
+       "ciUpperLimit": "0.604"
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "5",
+   "timeFrame": "26 Weeks",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Placebo",
+     "seriousNumAffected": 12,
+     "seriousNumAtRisk": 194,
+     "otherNumAffected": 42,
+     "otherNumAtRisk": 194
+    },
+    {
+     "id": "EG001",
+     "title": "Aclidinium/Formoterol 400/12 μg",
+     "seriousNumAffected": 23,
+     "seriousNumAtRisk": 385,
+     "otherNumAffected": 82,
+     "otherNumAtRisk": 385
+    },
+    {
+     "id": "EG002",
+     "title": "Aclidinium/Formoterol 400/6 μg",
+     "seriousNumAffected": 18,
+     "seriousNumAtRisk": 381,
+     "otherNumAffected": 84,
+     "otherNumAtRisk": 381
+    },
+    {
+     "id": "EG003",
+     "title": "Aclidinium 400 μg",
+     "seriousNumAffected": 16,
+     "seriousNumAtRisk": 385,
+     "otherNumAffected": 94,
+     "otherNumAtRisk": 385
+    },
+    {
+     "id": "EG004",
+     "title": "Formoterol 12 μg",
+     "seriousNumAffected": 14,
+     "seriousNumAtRisk": 384,
+     "otherNumAffected": 105,
+     "otherNumAtRisk": 384
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Ischaemic stroke",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Atrial fibrillation",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Allergy to arthropod sting",
+     "organSystem": "Immune system disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Peripheral ischaemia",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Lung abscess",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Right ventricular failure",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 5,
+       "numAffected": 5,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 7,
+       "numAffected": 7,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Prostate cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Non-small cell lung cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Acute myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Diverticulitis meckel's",
+     "organSystem": "Congenital, familial and genetic disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Lumbar vertebral fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Alcohol poisoning",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Bile duct obstruction",
+     "organSystem": "Hepatobiliary disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Inguinal hernia strangulated",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Infectious peritonitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Scrotal abscess",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Allergic oedema",
+     "organSystem": "Immune system disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Bladder cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Metastases to central nervous system",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Small cell lung cancer stage unspecified",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Bladder transitional cell carcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Dermatitis allergic",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Brain contusion",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Concussion",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Gastrointestinal injury",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Sternal fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Traumatic shock",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Syncope",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Cerebellar infarction",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Pharyngeal cancer stage unspecified",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Femur fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Hyperkalaemia",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Laceration",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Pancreatitis",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Humerus fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Gastrointestinal haemorrhage",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Pulmonary embolism",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Pharyngeal abscess",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Food allergy",
+     "organSystem": "Immune system disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Benign prostatic hyperplasia",
+     "organSystem": "Reproductive system and breast disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Ileus",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Cardiac failure",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Cholecystitis infective",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Liver abscess",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Diabetes mellitus",
+     "organSystem": "Metabolism and nutrition disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Deep vein thrombosis",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Metastatic gastric cancer",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Convulsion",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Episcleritis",
+     "organSystem": "Eye disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Angina pectoris",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Gastroenteritis viral",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Cholelithiasis",
+     "organSystem": "Hepatobiliary disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Pulmonary tuberculosis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Duodenal ulcer haemorrhage",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 0,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Acute coronary syndrome",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Lung squamous cell carcinoma stage unspecified",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Acute respiratory failure",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Lobar pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Infectious pleural effusion",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Tonsillitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Cardio-respiratory arrest",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Ventricular fibrillation",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Torsade de pointes",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Foot fracture",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Urinary tract infection",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Gastric ulcer haemorrhage",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Urinary retention",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Breast abscess",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Lung neoplasm malignant",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 0,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 0,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 384
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 23,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 33,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 36,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 39,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 59,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Headache",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 16,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 29,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 27,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 35,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 43,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Nasopharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 14,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 30,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 30,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 22,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 26,
+       "numAtRisk": 384
+      }
+     ]
+    },
+    {
+     "term": "Back pain",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA 14.1",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 9,
+       "numAtRisk": 194
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 18,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG002",
+       "numAffected": 13,
+       "numAtRisk": 381
+      },
+      {
+       "groupId": "EG003",
+       "numAffected": 20,
+       "numAtRisk": 385
+      },
+      {
+       "groupId": "EG004",
+       "numAffected": 19,
+       "numAtRisk": 384
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "Publication and/or presentation whether complete or partial, of any part of the data or results of this trial will not be allowed until global publication and study results disclosure by the sponsor as per EUDRACT/FDA regulatory compliance obligations, and only after mutual agreement between the investigator and sponsor"
+   },
+   "pointOfContact": {
+    "title": "Esther Garcia",
+    "organization": "AstraZeneca",
+    "email": "ClinicalTrialTransparency@astrazeneca.com"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D001991",
+     "term": "Bronchitis"
+    },
+    {
+     "id": "D000092122",
+     "term": "Bronchiolitis Obliterans Syndrome"
+    },
+    {
+     "id": "D004646",
+     "term": "Emphysema"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D012141",
+     "term": "Respiratory Tract Infections"
+    },
+    {
+     "id": "D007239",
+     "term": "Infections"
+    },
+    {
+     "id": "D001982",
+     "term": "Bronchial Diseases"
+    },
+    {
+     "id": "D000092124",
+     "term": "Organizing Pneumonia"
+    },
+    {
+     "id": "D001989",
+     "term": "Bronchiolitis Obliterans"
+    },
+    {
+     "id": "D001988",
+     "term": "Bronchiolitis"
+    },
+    {
+     "id": "D006086",
+     "term": "Graft vs Host Disease"
+    },
+    {
+     "id": "D007154",
+     "term": "Immune System Diseases"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C542859",
+     "term": "aclidinium bromide"
+    },
+    {
+     "id": "D000068759",
+     "term": "Formoterol Fumarate"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D004983",
+     "term": "Ethanolamines"
+    },
+    {
+     "id": "D000605",
+     "term": "Amino Alcohols"
+    },
+    {
+     "id": "D000438",
+     "term": "Alcohols"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

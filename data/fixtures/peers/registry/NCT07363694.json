@@ -1,0 +1,1756 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT07363694",
+   "orgStudyIdInfo": {
+    "id": "C4531031"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2024-518587-12-00",
+     "type": "REGISTRY",
+     "domain": "CTIS (EU)"
+    }
+   ],
+   "organization": {
+    "fullName": "Pfizer",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "A Study to Learn About the Study Medicine Called PF-07275315 in People With Moderate to Severe Chronic Obstructive Pulmonary Disease",
+   "officialTitle": "AN INTERVENTIONAL PHASE 2/3, RANDOMIZED, DOUBLE-BLIND, THIRD PARTY-UNBLINDED, PLACEBO-CONTROLLED, PARALLEL-GROUP STUDY TO INVESTIGATE EFFICACY AND SAFETY OF PF-07275315 IN ADULT PARTICIPANTS WITH MODERATE-TO-SEVERE CHRONIC OBSTRUCTIVE PULMONARY DISEASE (COPD)",
+   "acronym": "COPD"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-08",
+   "overallStatus": "RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2026-02-11",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2030-10-24",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2031-01-16",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2026-01-22",
+   "studyFirstSubmitQcDate": "2026-01-22",
+   "studyFirstPostDateStruct": {
+    "date": "2026-01-23",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-08-27",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-08-31",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Pfizer",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The purpose of this clinical trial is to learn about the effects and safety of the study medicine PF-07275315 for the potential treatment of COPD. COPD is a condition that makes it difficult to breathe, which negatively impacts the quality of life and functioning of people who are affected.\n\nThis study is seeking participants who:\n\n* Are 35 to 80 years old\n* Have had moderate-to-severe COPD for at least 12 months\n* Have a documented history of at least 2 moderate or severe exacerbations within the last 12 months\n* Have been continuously taking their regular maintenance treatment(s) for COPD over at least 6 months at a stable dose for 3 months\n\nAll participants will receive PF-07275315 or a placebo. A placebo does not have any medicine in it but looks just like the medicine being studied.\n\nPF-07275315 or placebo will be given as multiple shots in the clinic over the course of 24 weeks for the Phase 2 part and 52 weeks for the Phase 3 part. We will compare the results of people receiving PF-07275315 to those of the people who do not. This will help us determine if PF-07275315 is safe and effective.\n\nParticipants who will be involved in the Phase 2 part of the study for about 40 weeks. During this time, they will have 11 visits at the study clinic.\n\nParticipants who will be involved in the Phase 3 part of the study for about 68 weeks. During this time, they will have 18 visits at the study clinic."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Moderate to Severe Chronic Obstructive Pulmonary Disease"
+   ],
+   "keywords": [
+    "COPD"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "maskingDescription": "All dosing syringes will be masked and an unblinded administrator will administer the study intervention.",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 1156,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Phase 3 Treatment Arm A",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Drug: PF-07275315-dose 3"
+     ]
+    },
+    {
+     "label": "Phase 2 Treatment Arm B",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Drug: PF-07275315-dose 2"
+     ]
+    },
+    {
+     "label": "Phase 2 Treatment Arm A",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Drug: PF-07275315 dose 1"
+     ]
+    },
+    {
+     "label": "Phase 3 Treatment Arm B",
+     "type": "PLACEBO_COMPARATOR",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    },
+    {
+     "label": "Phase 2 Treatment Arm C",
+     "type": "PLACEBO_COMPARATOR",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "PF-07275315 dose 1",
+     "description": "SC injection dose 1",
+     "armGroupLabels": [
+      "Phase 2 Treatment Arm A"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "PF-07275315-dose 2",
+     "description": "SC injection dose 2",
+     "armGroupLabels": [
+      "Phase 2 Treatment Arm B"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "SC injection matched",
+     "armGroupLabels": [
+      "Phase 2 Treatment Arm C",
+      "Phase 3 Treatment Arm B"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "PF-07275315-dose 3",
+     "description": "SC injection dose 3",
+     "armGroupLabels": [
+      "Phase 3 Treatment Arm A"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Phase 2 part: Change from baseline in pre-bronchodilator Forced Expiratory Volume in 1 Second (FEV1) at Week 24",
+     "description": "FEV1 is the maximal volume of air exhaled in the first second of a forced expiration from a position of full inspiration. FEV1 is obtained from spirometry.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Phase 3 part: Annualized rate of moderate or severe ECOPD",
+     "description": "Exacerbation of Chronic Obstructive Pulmonary Disease (ECOPD) are sudden worsening of respiratory symptoms that significantly worsen lung function and quality of life.",
+     "timeFrame": "Baseline to Week 52"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Phase 2: Annualized rate of moderate or severe ECOPD.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Phase 2: Change from baseline in pre-BD FEV1 up to Week 24.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Phase 2: Change from baseline in trough, pre- and post-BD FEV1 up to Week 24",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Phase 2: Change from baseline in trough, pre- and post-BD FVC and FEV1/FVC ratio, % predicted FEV1, % predicted FVC up to Week 24.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Phase 2: Change from baseline in trough FEV1 responsiveness to BD up to Week 24.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Phase 2: Incidence and severity of TEAEs throughout Phase 2 part of the study.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Phase 2: Incidence of treatment-emergent adverse events and serious adverse events leading to discontinuation.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Phase 2: Incidence of clinical abnormalities in clinical laboratory values, ECG measurements, and vital signs.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Phase 3: change from baseline in pre- and post-BD FEV1 at Week 12 and Week 52.",
+     "timeFrame": "Baseline to Week 52"
+    },
+    {
+     "measure": "Phase 3: Percentage of participants with ≥4 points improvement from baseline in Saint George's Respiratory Questionnaire (SGRQ) score at Week 52.",
+     "timeFrame": "Baseline to Week 52"
+    },
+    {
+     "measure": "Phase 3: Percentage of participants with ≥2 points improvement from baseline in the COPD Assessment Test (CAT) total score at Week 52.",
+     "timeFrame": "Baseline to Week 52"
+    },
+    {
+     "measure": "Phase 3: Percentage of participants with ≥2 points improvement from baseline in E-RS:COPD total score at Week 52.",
+     "timeFrame": "Baseline to Week 52"
+    },
+    {
+     "measure": "Phase 3: Annualized rate of severe ECOPD.",
+     "timeFrame": "Baseline to Week 52"
+    },
+    {
+     "measure": "Phase 2: Change from baseline of clinical abnormalities in clinical laboratory values, ECG measurements, and vital signs.",
+     "timeFrame": "Baseline to Week 24"
+    },
+    {
+     "measure": "Phase 3: Annualized rate of exacerbations requiring emergency department visit and/or hospitalization.",
+     "timeFrame": "Baseline to Week 52"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Key Inclusion Criteria:\n\n* Diagnosis of chronic obstructive pulmonary disease (COPD) for at least 12 months (based on Global Initiative for Chronic Obstructive Lung Disease \\[GOLD\\] definition).\n* Spirometry values (post-bronchodilator forced expiratory volume in 1 second \\[FEV1\\]/forced vital capacity \\[FVC\\] less than \\[\\<\\] 70 percent (%) and post-bronchodilator FEV1 % predicted \\<70%, but greater than equal to 30%).\n* Continuous treatment with standard of care triple therapy of LABA + LAMA + ICS for ≥ 6 months prior to Screening Visit 1 and at a stable dose for ≥3 months\n* Documented history of at least 2 moderate or severe ECOPD within the last 12 months prior to Screening.\n\nKey Exclusion Criteria:\n\n* Significant pulmonary disease other than COPD.\n* Requirement for continuous chronic treatment with oxygen at \\>4.0 liters / minute by nasal cannula or equivalent.\n* Hypoxemia with a resting SpO2 \\<88% while breathing ambient air (or on the participant's usual level of oxygen supplementation).\n* Clinically significant cardiovascular disease, acute and/or severe left heart failure, or heart failure partial ejection fraction, and/or cor pulmonale.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "35 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Pfizer CT.gov Call Center",
+     "role": "CONTACT",
+     "phone": "1-800-718-1021",
+     "email": "ClinicalTrials.gov_Inquiries@pfizer.com"
+    }
+   ],
+   "overallOfficials": [
+    {
+     "name": "Pfizer CT.gov Call Center",
+     "affiliation": "Pfizer",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "University of Alabama at Birmingham Lung Health Center",
+     "status": "RECRUITING",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "zip": "35233",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "SEC Clinical Research",
+     "status": "RECRUITING",
+     "city": "Dothan",
+     "state": "Alabama",
+     "zip": "36305",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 31.22323,
+      "lon": -85.39049
+     }
+    },
+    {
+     "facility": "Pulmonary Associates of Mobile, P.C.",
+     "status": "RECRUITING",
+     "city": "Mobile",
+     "state": "Alabama",
+     "zip": "36608",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.69436,
+      "lon": -88.04305
+     }
+    },
+    {
+     "facility": "Chandler Clinical Trials",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Chandler",
+     "state": "Arizona",
+     "zip": "85224",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.30616,
+      "lon": -111.84125
+     }
+    },
+    {
+     "facility": "Pulmonary Associates, PA",
+     "status": "RECRUITING",
+     "city": "Phoenix",
+     "state": "Arizona",
+     "zip": "85027",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.44838,
+      "lon": -112.07404
+     }
+    },
+    {
+     "facility": "IMAX Clinical Trials",
+     "status": "RECRUITING",
+     "city": "La Palma",
+     "state": "California",
+     "zip": "90623",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.8464,
+      "lon": -118.04673
+     }
+    },
+    {
+     "facility": "NewportNativeMD, Inc.",
+     "status": "RECRUITING",
+     "city": "Newport Beach",
+     "state": "California",
+     "zip": "92663",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.61891,
+      "lon": -117.92895
+     }
+    },
+    {
+     "facility": "California Medical Research Associates",
+     "status": "RECRUITING",
+     "city": "Northridge",
+     "state": "California",
+     "zip": "91324",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.22834,
+      "lon": -118.53675
+     }
+    },
+    {
+     "facility": "Institute of HealthCare Assessment d/b/a Apex Clinical Research",
+     "status": "RECRUITING",
+     "city": "San Diego",
+     "state": "California",
+     "zip": "92120",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.71571,
+      "lon": -117.16472
+     }
+    },
+    {
+     "facility": "Finlay Medical Research",
+     "status": "RECRUITING",
+     "city": "Greenacres City",
+     "state": "Florida",
+     "zip": "33467",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.62368,
+      "lon": -80.12532
+     }
+    },
+    {
+     "facility": "Clinical Research Specialists LLC",
+     "status": "RECRUITING",
+     "city": "Kissimmee",
+     "state": "Florida",
+     "zip": "34746",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.30468,
+      "lon": -81.41667
+     }
+    },
+    {
+     "facility": "Advanced Pulmonary Research Institute",
+     "status": "RECRUITING",
+     "city": "Loxahatchee Groves",
+     "state": "Florida",
+     "zip": "33470",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.68368,
+      "lon": -80.27977
+     }
+    },
+    {
+     "facility": "Reed Medical Research",
+     "status": "RECRUITING",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33176",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Renstar Medical Research",
+     "status": "RECRUITING",
+     "city": "Ocala",
+     "state": "Florida",
+     "zip": "34470",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.1872,
+      "lon": -82.14009
+     }
+    },
+    {
+     "facility": "HCA Florida Ocala Imaging Center",
+     "status": "RECRUITING",
+     "city": "Ocala",
+     "state": "Florida",
+     "zip": "34471",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.1872,
+      "lon": -82.14009
+     }
+    },
+    {
+     "facility": "Ocala Lung and Critical Care Associates",
+     "status": "RECRUITING",
+     "city": "Ocala",
+     "state": "Florida",
+     "zip": "34471",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.1872,
+      "lon": -82.14009
+     }
+    },
+    {
+     "facility": "Renstar Medical Research",
+     "status": "RECRUITING",
+     "city": "Ocala",
+     "state": "Florida",
+     "zip": "34471",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.1872,
+      "lon": -82.14009
+     }
+    },
+    {
+     "facility": "Coastal Medical Research Institute, LLC",
+     "status": "RECRUITING",
+     "city": "St. Petersburg",
+     "state": "Florida",
+     "zip": "33704",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.77086,
+      "lon": -82.67927
+     }
+    },
+    {
+     "facility": "Coastal Pulmonary and Critical Care, P.L.C",
+     "status": "RECRUITING",
+     "city": "St. Petersburg",
+     "state": "Florida",
+     "zip": "33704",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.77086,
+      "lon": -82.67927
+     }
+    },
+    {
+     "facility": "Clinical Research Trials of Florida, Inc.",
+     "status": "RECRUITING",
+     "city": "Tampa",
+     "state": "Florida",
+     "zip": "33607",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 27.94752,
+      "lon": -82.45843
+     }
+    },
+    {
+     "facility": "Clinical Site Partners, LLC dba Flourish Research",
+     "status": "RECRUITING",
+     "city": "Winter Park",
+     "state": "Florida",
+     "zip": "32789",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.6,
+      "lon": -81.33924
+     }
+    },
+    {
+     "facility": "Cpcc-Research Llc",
+     "status": "RECRUITING",
+     "city": "East Point",
+     "state": "Georgia",
+     "zip": "30344",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.67955,
+      "lon": -84.43937
+     }
+    },
+    {
+     "facility": "Centricity Research Rincon Pulmonology",
+     "status": "RECRUITING",
+     "city": "Rincon",
+     "state": "Georgia",
+     "zip": "31326",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.29603,
+      "lon": -81.23539
+     }
+    },
+    {
+     "facility": "ASHA Clinical Research - Munster, LLC",
+     "status": "RECRUITING",
+     "city": "Hammond",
+     "state": "Indiana",
+     "zip": "46324",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.58337,
+      "lon": -87.50004
+     }
+    },
+    {
+     "facility": "Methodist Hospital Southlake",
+     "status": "RECRUITING",
+     "city": "Merrillville",
+     "state": "Indiana",
+     "zip": "46410",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.48281,
+      "lon": -87.33281
+     }
+    },
+    {
+     "facility": "University of Kansas Medical Center",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Kansas City",
+     "state": "Kansas",
+     "zip": "66160",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.11417,
+      "lon": -94.62746
+     }
+    },
+    {
+     "facility": "Southern Clinical Research, LLC",
+     "status": "RECRUITING",
+     "city": "Zachary",
+     "state": "Louisiana",
+     "zip": "70791",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.64852,
+      "lon": -91.1565
+     }
+    },
+    {
+     "facility": "Paul A. Shapero, MD, PA",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Bangor",
+     "state": "Maine",
+     "zip": "04401",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.79884,
+      "lon": -68.77265
+     }
+    },
+    {
+     "facility": "Exordia Medical Research Inc.",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Fall River",
+     "state": "Massachusetts",
+     "zip": "02723",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.70149,
+      "lon": -71.15505
+     }
+    },
+    {
+     "facility": "Infinity Medical Research",
+     "status": "NOT_YET_RECRUITING",
+     "city": "North Dartmouth",
+     "state": "Massachusetts",
+     "zip": "02747",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.63899,
+      "lon": -70.97032
+     }
+    },
+    {
+     "facility": "Revival Research Institute, LLC",
+     "status": "RECRUITING",
+     "city": "Dearborn",
+     "state": "Michigan",
+     "zip": "48126",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.32226,
+      "lon": -83.17631
+     }
+    },
+    {
+     "facility": "AA Medical Research Center",
+     "status": "RECRUITING",
+     "city": "Flint",
+     "state": "Michigan",
+     "zip": "48504",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.01253,
+      "lon": -83.68746
+     }
+    },
+    {
+     "facility": "Revive Research Institute, Inc.",
+     "status": "RECRUITING",
+     "city": "Southfield",
+     "state": "Michigan",
+     "zip": "48075",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.47337,
+      "lon": -83.22187
+     }
+    },
+    {
+     "facility": "Oakland Medical Research",
+     "status": "RECRUITING",
+     "city": "Troy",
+     "state": "Michigan",
+     "zip": "48085",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.60559,
+      "lon": -83.14993
+     }
+    },
+    {
+     "facility": "Washington University School of Medicine",
+     "status": "RECRUITING",
+     "city": "St Louis",
+     "state": "Missouri",
+     "zip": "63108",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.62727,
+      "lon": -90.19789
+     }
+    },
+    {
+     "facility": "Barnes-Jewish Hospital Investigational Drug Service",
+     "status": "RECRUITING",
+     "city": "St Louis",
+     "state": "Missouri",
+     "zip": "63110",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.62727,
+      "lon": -90.19789
+     }
+    },
+    {
+     "facility": "Barnes-Jewish Hospital",
+     "status": "RECRUITING",
+     "city": "St Louis",
+     "state": "Missouri",
+     "zip": "63110",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.62727,
+      "lon": -90.19789
+     }
+    },
+    {
+     "facility": "Washington University School of Medicine",
+     "status": "RECRUITING",
+     "city": "St Louis",
+     "state": "Missouri",
+     "zip": "63110",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.62727,
+      "lon": -90.19789
+     }
+    },
+    {
+     "facility": "Washington University School-Cardiovascular Imaging and Clinical Research Core Laboratory",
+     "status": "RECRUITING",
+     "city": "St Louis",
+     "state": "Missouri",
+     "zip": "63110",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.62727,
+      "lon": -90.19789
+     }
+    },
+    {
+     "facility": "Henderson Clinical Trials",
+     "status": "RECRUITING",
+     "city": "Henderson",
+     "state": "Nevada",
+     "zip": "89052",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.0397,
+      "lon": -114.98194
+     }
+    },
+    {
+     "facility": "Northwell Health Physician Partners at Chappaqua",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Chappaqua",
+     "state": "New York",
+     "zip": "10514",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.15954,
+      "lon": -73.76485
+     }
+    },
+    {
+     "facility": "New York Presbyterian Queens",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Flushing",
+     "state": "New York",
+     "zip": "11355",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.76538,
+      "lon": -73.81736
+     }
+    },
+    {
+     "facility": "Northern Westchester Hospital",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Mount Kisco",
+     "state": "New York",
+     "zip": "10549",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.20426,
+      "lon": -73.72708
+     }
+    },
+    {
+     "facility": "Salem Chest Specialists",
+     "status": "RECRUITING",
+     "city": "Winston-Salem",
+     "state": "North Carolina",
+     "zip": "27103",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.09986,
+      "lon": -80.24422
+     }
+    },
+    {
+     "facility": "Southeastern Research Center",
+     "status": "RECRUITING",
+     "city": "Winston-Salem",
+     "state": "North Carolina",
+     "zip": "27103",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.09986,
+      "lon": -80.24422
+     }
+    },
+    {
+     "facility": "Toledo Institute of Clinical Research Inc.",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Toledo",
+     "state": "Ohio",
+     "zip": "43617",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.66394,
+      "lon": -83.55521
+     }
+    },
+    {
+     "facility": "Clinical Research Associates of Central PA, LLC",
+     "status": "RECRUITING",
+     "city": "DuBois",
+     "state": "Pennsylvania",
+     "zip": "15801",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.11923,
+      "lon": -78.76003
+     }
+    },
+    {
+     "facility": "Bogan Sleep Consultants, LLC",
+     "status": "RECRUITING",
+     "city": "Columbia",
+     "state": "South Carolina",
+     "zip": "29201",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.00071,
+      "lon": -81.03481
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research, Gaffney",
+     "status": "RECRUITING",
+     "city": "Gaffney",
+     "state": "South Carolina",
+     "zip": "29340",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.07179,
+      "lon": -81.64982
+     }
+    },
+    {
+     "facility": "Clinical Research of Rock Hill",
+     "status": "RECRUITING",
+     "city": "Rock Hill",
+     "state": "South Carolina",
+     "zip": "29732",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.92487,
+      "lon": -81.02508
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research, Spartanburg",
+     "status": "RECRUITING",
+     "city": "Spartanburg",
+     "state": "South Carolina",
+     "zip": "29303",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.94957,
+      "lon": -81.93205
+     }
+    },
+    {
+     "facility": "Health Concepts",
+     "status": "RECRUITING",
+     "city": "Rapid City",
+     "state": "South Dakota",
+     "zip": "57702",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.08054,
+      "lon": -103.23101
+     }
+    },
+    {
+     "facility": "Clinical Trials Center of Middle Tennessee, LLC",
+     "status": "RECRUITING",
+     "city": "Franklin",
+     "state": "Tennessee",
+     "zip": "37067",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.92506,
+      "lon": -86.86889
+     }
+    },
+    {
+     "facility": "Premier Research Center, LLC",
+     "status": "RECRUITING",
+     "city": "Hendersonville",
+     "state": "Tennessee",
+     "zip": "37075",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.30477,
+      "lon": -86.62
+     }
+    },
+    {
+     "facility": "South Texas Medical Research Institute, Inc., DBA TTS Research",
+     "status": "RECRUITING",
+     "city": "Boerne",
+     "state": "Texas",
+     "zip": "78006",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.79466,
+      "lon": -98.73197
+     }
+    },
+    {
+     "facility": "Ten20 Clinical Research",
+     "status": "RECRUITING",
+     "city": "Carrollton",
+     "state": "Texas",
+     "zip": "75010",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.95373,
+      "lon": -96.89028
+     }
+    },
+    {
+     "facility": "Horizon Clinical Research Group",
+     "status": "RECRUITING",
+     "city": "Cypress",
+     "state": "Texas",
+     "zip": "77429",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.96911,
+      "lon": -95.69717
+     }
+    },
+    {
+     "facility": "Alina Clinical Trials, LLC.",
+     "status": "RECRUITING",
+     "city": "Dallas",
+     "state": "Texas",
+     "zip": "75209",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.78306,
+      "lon": -96.80667
+     }
+    },
+    {
+     "facility": "Greater Heights & Memorial Pulmonary and Sleep",
+     "status": "RECRUITING",
+     "city": "Houston",
+     "state": "Texas",
+     "zip": "77008",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.76328,
+      "lon": -95.36327
+     }
+    },
+    {
+     "facility": "Houston Pulmonary Sleep and Allergy Associates",
+     "status": "RECRUITING",
+     "city": "Houston",
+     "state": "Texas",
+     "zip": "77065",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.76328,
+      "lon": -95.36327
+     }
+    },
+    {
+     "facility": "Sherman Clinical Research",
+     "status": "RECRUITING",
+     "city": "Sherman",
+     "state": "Texas",
+     "zip": "75090",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.63566,
+      "lon": -96.60888
+     }
+    },
+    {
+     "facility": "IDIM - Instituto de Investigaciones Metabólicas",
+     "status": "RECRUITING",
+     "city": "Ciudad Autonoma de Buenos Aires",
+     "state": "Buenos Aires",
+     "zip": "C1012AAR",
+     "country": "Argentina"
+    },
+    {
+     "facility": "Centro Médico Dra. De Salvo - Fundación Respirar",
+     "status": "RECRUITING",
+     "city": "Ciudad Autonoma de Buenos Aires",
+     "state": "Buenos Aires",
+     "zip": "C1426ABP",
+     "country": "Argentina"
+    },
+    {
+     "facility": "Instituto de Salud Respiratoria - (INSARES)",
+     "status": "RECRUITING",
+     "city": "Mendoza",
+     "zip": "5500",
+     "country": "Argentina",
+     "geoPoint": {
+      "lat": -32.88946,
+      "lon": -68.84582
+     }
+    },
+    {
+     "facility": "Synergy Respiratory Care",
+     "status": "RECRUITING",
+     "city": "Sherwood Park",
+     "state": "Alberta",
+     "zip": "T8H 0N2",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 53.51684,
+      "lon": -113.3187
+     }
+    },
+    {
+     "facility": "Dr. Syed Anees Medicine Professional Corporation",
+     "status": "RECRUITING",
+     "city": "Windsor",
+     "state": "Ontario",
+     "zip": "N8X 1T3",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 42.30008,
+      "lon": -83.01654
+     }
+    },
+    {
+     "facility": "C.I.C. Mauricie inc.",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Trois-Rivières",
+     "state": "Quebec",
+     "zip": "G8T 7A1",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 46.34515,
+      "lon": -72.5477
+     }
+    },
+    {
+     "facility": "The People's Hospital of Chizhou",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Chizhou",
+     "state": "Anhui",
+     "zip": "247000",
+     "country": "China",
+     "geoPoint": {
+      "lat": 30.66134,
+      "lon": 117.47783
+     }
+    },
+    {
+     "facility": "Fuyang People's Hospital",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Fuyang",
+     "state": "Anhui",
+     "zip": "236000",
+     "country": "China",
+     "geoPoint": {
+      "lat": 32.9,
+      "lon": 115.81667
+     }
+    },
+    {
+     "facility": "Anhui Chest Hospital",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Hefei",
+     "state": "Anhui",
+     "zip": "230022",
+     "country": "China",
+     "geoPoint": {
+      "lat": 31.86389,
+      "lon": 117.28083
+     }
+    },
+    {
+     "facility": "China-Japan Friendship Hospital",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Beijing",
+     "state": "Beijing Municipality",
+     "zip": "100029",
+     "country": "China",
+     "geoPoint": {
+      "lat": 39.9075,
+      "lon": 116.39723
+     }
+    },
+    {
+     "facility": "The Third Affiliated Hospital of Guangzhou Medical University",
+     "status": "RECRUITING",
+     "city": "Guangzhou",
+     "state": "Guangdong",
+     "zip": "510150",
+     "country": "China",
+     "geoPoint": {
+      "lat": 23.11667,
+      "lon": 113.25
+     }
+    },
+    {
+     "facility": "Huizhou Central People's Hospital",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Huizhou",
+     "state": "Guangdong",
+     "zip": "516001",
+     "country": "China",
+     "geoPoint": {
+      "lat": 23.11147,
+      "lon": 114.41523
+     }
+    },
+    {
+     "facility": "The First People's Hospital of Xinxiang",
+     "status": "RECRUITING",
+     "city": "Xinxiang",
+     "state": "Henan",
+     "zip": "453000",
+     "country": "China",
+     "geoPoint": {
+      "lat": 35.19033,
+      "lon": 113.80151
+     }
+    },
+    {
+     "facility": "Inner Mongolia People's Hospital",
+     "status": "RECRUITING",
+     "city": "Hohhot",
+     "state": "Inner Mongolia",
+     "zip": "010017",
+     "country": "China",
+     "geoPoint": {
+      "lat": 40.81056,
+      "lon": 111.65222
+     }
+    },
+    {
+     "facility": "The Affiliated Hospital of Inner Mongolia Medical University",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Hohhot",
+     "state": "Inner Mongolia",
+     "zip": "010050",
+     "country": "China",
+     "geoPoint": {
+      "lat": 40.81056,
+      "lon": 111.65222
+     }
+    },
+    {
+     "facility": "Zhongda Hospital Southeast University",
+     "status": "RECRUITING",
+     "city": "Nanjing",
+     "state": "Jiangsu",
+     "zip": "210009",
+     "country": "China",
+     "geoPoint": {
+      "lat": 32.06167,
+      "lon": 118.77778
+     }
+    },
+    {
+     "facility": "The Affiliated Hospital of Xuzhou Medical College",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Xuzhou",
+     "state": "Jiangsu",
+     "zip": "221006",
+     "country": "China",
+     "geoPoint": {
+      "lat": 34.20442,
+      "lon": 117.28386
+     }
+    },
+    {
+     "facility": "Yangzhou University-Affiliated Hospital",
+     "status": "RECRUITING",
+     "city": "Yangzhou",
+     "state": "Jiangsu",
+     "zip": "225012",
+     "country": "China",
+     "geoPoint": {
+      "lat": 32.39722,
+      "lon": 119.43583
+     }
+    },
+    {
+     "facility": "Jiangxi Provincial People's Hospital",
+     "status": "RECRUITING",
+     "city": "Nanchang",
+     "state": "Jiangxi",
+     "zip": "330038",
+     "country": "China",
+     "geoPoint": {
+      "lat": 28.68396,
+      "lon": 115.85306
+     }
+    },
+    {
+     "facility": "Jinan Central Hospital",
+     "status": "RECRUITING",
+     "city": "Jinan",
+     "state": "Shandong",
+     "zip": "250013",
+     "country": "China",
+     "geoPoint": {
+      "lat": 36.66833,
+      "lon": 116.99722
+     }
+    },
+    {
+     "facility": "Ruijin Hospital Shanghai Jiaotong University School of Medicine",
+     "status": "RECRUITING",
+     "city": "Shanghai",
+     "state": "Shanghai Municipality",
+     "zip": "200025",
+     "country": "China",
+     "geoPoint": {
+      "lat": 31.22222,
+      "lon": 121.45806
+     }
+    },
+    {
+     "facility": "Shanghai Tongji Hospital",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Shanghai",
+     "state": "Shanghai Municipality",
+     "zip": "200065",
+     "country": "China",
+     "geoPoint": {
+      "lat": 31.22222,
+      "lon": 121.45806
+     }
+    },
+    {
+     "facility": "Chengdu Fifth People's Hospital",
+     "status": "RECRUITING",
+     "city": "Chengdu",
+     "state": "Sichuan",
+     "zip": "611130",
+     "country": "China",
+     "geoPoint": {
+      "lat": 30.66667,
+      "lon": 104.06667
+     }
+    },
+    {
+     "facility": "Taizhou Hospital of Zhejiang Province",
+     "status": "RECRUITING",
+     "city": "Linhai",
+     "state": "Zhejiang",
+     "zip": "317000",
+     "country": "China",
+     "geoPoint": {
+      "lat": 28.85535,
+      "lon": 121.1447
+     }
+    },
+    {
+     "facility": "MUDr.I. Cierna Peterova s.r.o.",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Brandýs nad Labem-Stará Boleslav",
+     "zip": "250 01",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.18709,
+      "lon": 14.66326
+     }
+    },
+    {
+     "facility": "MEDITRIAL s.r.o.",
+     "status": "RECRUITING",
+     "city": "Jindřichův Hradec",
+     "zip": "377 01",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 49.14404,
+      "lon": 15.00301
+     }
+    },
+    {
+     "facility": "Pneumologie Varnsdorf s.r.o.",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Varnsdorf",
+     "state": "Ústí nad Labem Region",
+     "zip": "407 47",
+     "country": "Czechia",
+     "geoPoint": {
+      "lat": 50.91154,
+      "lon": 14.61824
+     }
+    },
+    {
+     "facility": "Erzsebet Gondozohaz",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Gödöllő",
+     "state": "Pest County",
+     "zip": "2100",
+     "country": "Hungary",
+     "geoPoint": {
+      "lat": 47.59657,
+      "lon": 19.35515
+     }
+    },
+    {
+     "facility": "KLES Dr. Prabhakar Kore Hospital and Medical Research Centre",
+     "status": "RECRUITING",
+     "city": "Belagavi",
+     "state": "Karnataka",
+     "zip": "590010",
+     "country": "India",
+     "geoPoint": {
+      "lat": 15.85212,
+      "lon": 74.50447
+     }
+    },
+    {
+     "facility": "Bhaktivedanta Hospital and Research Institute",
+     "status": "RECRUITING",
+     "city": "Thane",
+     "state": "Maharashtra",
+     "zip": "401107",
+     "country": "India",
+     "geoPoint": {
+      "lat": 19.19704,
+      "lon": 72.96355
+     }
+    },
+    {
+     "facility": "Sir Ganga Ram Hospital",
+     "status": "RECRUITING",
+     "city": "New Delhi",
+     "state": "National Capital Territory of Delhi",
+     "zip": "110060",
+     "country": "India",
+     "geoPoint": {
+      "lat": 28.62137,
+      "lon": 77.2148
+     }
+    },
+    {
+     "facility": "Jawahar Lal Nehru Medical College",
+     "status": "NOT_YET_RECRUITING",
+     "city": "Ajmer",
+     "state": "Rajasthan",
+     "zip": "305001",
+     "country": "India",
+     "geoPoint": {
+      "lat": 26.4521,
+      "lon": 74.63867
+     }
+    },
+    {
+     "facility": "Maharaja Agrasen Superspeciality Hospital",
+     "status": "RECRUITING",
+     "city": "Jaipur",
+     "state": "Rajasthan",
+     "zip": "302039",
+     "country": "India",
+     "geoPoint": {
+      "lat": 26.91962,
+      "lon": 75.78781
+     }
+    },
+    {
+     "facility": "Hindusthan Hospital",
+     "status": "RECRUITING",
+     "city": "Coimbatore",
+     "state": "Tamil Nadu",
+     "zip": "641028",
+     "country": "India",
+     "geoPoint": {
+      "lat": 11.00555,
+      "lon": 76.96612
+     }
+    },
+    {
+     "facility": "Kamineni Hospitals Private Limited",
+     "status": "RECRUITING",
+     "city": "Hyderabad",
+     "state": "Telangana",
+     "zip": "500068",
+     "country": "India",
+     "geoPoint": {
+      "lat": 17.38405,
+      "lon": 78.45636
+     }
+    },
+    {
+     "facility": "Shri Guru Ram Rai Institute of Medical & Health Sciences & Shri Mahant lndiresh Hospital",
+     "status": "RECRUITING",
+     "city": "Dehradun",
+     "state": "Uttarakhand",
+     "zip": "248001",
+     "country": "India",
+     "geoPoint": {
+      "lat": 30.32443,
+      "lon": 78.03392
+     }
+    },
+    {
+     "facility": "Nil Ratan Sircar Medical College and Hospital",
+     "status": "RECRUITING",
+     "city": "Kolkata",
+     "state": "West Bengal",
+     "zip": "700014",
+     "country": "India",
+     "geoPoint": {
+      "lat": 22.56263,
+      "lon": 88.36304
+     }
+    },
+    {
+     "facility": "Koujunkai Daido Clinic",
+     "status": "RECRUITING",
+     "city": "Nagoya",
+     "state": "Aichi-ken",
+     "zip": "457-8511",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 35.18147,
+      "lon": 136.90641
+     }
+    },
+    {
+     "facility": "Nishifukuoka Hospital",
+     "status": "RECRUITING",
+     "city": "Fukuoka",
+     "state": "Fukuoka",
+     "zip": "819-8555",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 33.6,
+      "lon": 130.41667
+     }
+    },
+    {
+     "facility": "Aso Iizuka Hospital",
+     "status": "RECRUITING",
+     "city": "Iizuka-shi",
+     "state": "Fukuoka",
+     "zip": "820-8505",
+     "country": "Japan"
+    },
+    {
+     "facility": "Kure Kyosai Hospital",
+     "status": "RECRUITING",
+     "city": "Kure",
+     "state": "Hiroshima",
+     "zip": "737-8505",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.23222,
+      "lon": 132.56658
+     }
+    },
+    {
+     "facility": "National Hospital Organization Okinawa Hospital",
+     "status": "RECRUITING",
+     "city": "Ginowan",
+     "state": "Okinawa",
+     "zip": "901-2214",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 26.26265,
+      "lon": 127.76147
+     }
+    },
+    {
+     "facility": "NHO Kinki Chuo Chest Medical Center",
+     "status": "RECRUITING",
+     "city": "Sakai",
+     "state": "Osaka",
+     "zip": "591-8555",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.58216,
+      "lon": 135.46653
+     }
+    },
+    {
+     "facility": "Fujieda Municipal General Hospital",
+     "status": "RECRUITING",
+     "city": "Fujieda",
+     "state": "Shizuoka",
+     "zip": "426-8677",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.86667,
+      "lon": 138.26667
+     }
+    },
+    {
+     "facility": "Tokyo Medical University Hachioji Medical Center",
+     "status": "RECRUITING",
+     "city": "Hachiōji",
+     "state": "Tokyo",
+     "zip": "1930998",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 35.65583,
+      "lon": 139.32389
+     }
+    },
+    {
+     "facility": "Yamaguchi University Hospital",
+     "status": "RECRUITING",
+     "city": "Ube",
+     "state": "Yamaguchi",
+     "zip": "755-8505",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 33.94306,
+      "lon": 131.25111
+     }
+    },
+    {
+     "facility": "Hiroshima Prefectural Hospital",
+     "status": "RECRUITING",
+     "city": "Hiroshima",
+     "zip": "734-8530",
+     "country": "Japan",
+     "geoPoint": {
+      "lat": 34.4,
+      "lon": 132.45
+     }
+    },
+    {
+     "facility": "Jeonbuk National University Hospital",
+     "status": "RECRUITING",
+     "city": "Jeonju",
+     "state": "Jeonbuk-do",
+     "zip": "54907",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 35.82194,
+      "lon": 127.14889
+     }
+    },
+    {
+     "facility": "Korea University Anam Hospital",
+     "status": "RECRUITING",
+     "city": "Seoul",
+     "state": "Seoul-teukbyeolsi [seoul]",
+     "zip": "02841",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "The Catholic University of Korea, Eunpyeong St. Mary's Hospital",
+     "status": "RECRUITING",
+     "city": "Seoul",
+     "zip": "03312",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "Konkuk University Medical Center",
+     "status": "RECRUITING",
+     "city": "Seoul",
+     "zip": "05030",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "The Catholic Univ. of Korea Seoul St. Mary's Hospital",
+     "status": "RECRUITING",
+     "city": "Seoul",
+     "zip": "06591",
+     "country": "South Korea",
+     "geoPoint": {
+      "lat": 37.566,
+      "lon": 126.9784
+     }
+    },
+    {
+     "facility": "National Taiwan University Hospital - Hsinchu branch",
+     "status": "RECRUITING",
+     "city": "Hsinchu",
+     "zip": "302",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 24.80361,
+      "lon": 120.96861
+     }
+    },
+    {
+     "facility": "Kaohsiung Medical University Chung-Ho Memorial Hospital",
+     "status": "RECRUITING",
+     "city": "Kaohsiung City",
+     "zip": "807",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 22.61626,
+      "lon": 120.31333
+     }
+    },
+    {
+     "facility": "Far Eastern Memorial Hospital",
+     "status": "RECRUITING",
+     "city": "New Taipei City",
+     "zip": "220",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 25.06199,
+      "lon": 121.45703
+     }
+    },
+    {
+     "facility": "China Medical University Hospital",
+     "status": "RECRUITING",
+     "city": "Taichung",
+     "zip": "40447",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 24.1469,
+      "lon": 120.6839
+     }
+    },
+    {
+     "facility": "Taichung Veterans General Hospital",
+     "status": "RECRUITING",
+     "city": "Taichung",
+     "zip": "407219",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 24.1469,
+      "lon": 120.6839
+     }
+    },
+    {
+     "facility": "National Taiwan University Hospital",
+     "status": "RECRUITING",
+     "city": "Taipei",
+     "zip": "10002",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 25.05306,
+      "lon": 121.52639
+     }
+    },
+    {
+     "facility": "Chang Gung Medical Foundation-Linkou Branch",
+     "status": "RECRUITING",
+     "city": "Taoyuan",
+     "zip": "333",
+     "country": "Taiwan",
+     "geoPoint": {
+      "lat": 24.99368,
+      "lon": 121.29696
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "seeAlsoLinks": [
+    {
+     "label": "To obtain contact information for a study center near you, click here.",
+     "url": "https://pmiform.com/clinical-trial-info-request?StudyID=C4531031"
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "YES",
+   "description": "Pfizer will provide access to individual de-identified participant data and related study documents (e.g. protocol, Statistical Analysis Plan (SAP), Clinical Study Report (CSR)) upon request from qualified researchers, and subject to certain criteria, conditions, and exceptions. Further details on Pfizer's data sharing criteria and process for requesting access can be found at: https://www.pfizer.com/science/clinical\\_trials/trial\\_data\\_and\\_results/data\\_requests.",
+   "url": "https://www.pfizer.com/science/clinical_trials/trial_data_and_results/data_requests"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

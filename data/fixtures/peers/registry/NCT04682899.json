@@ -1,0 +1,266 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT04682899",
+   "orgStudyIdInfo": {
+    "id": "CAP-China PCT-AECOPD"
+   },
+   "organization": {
+    "fullName": "Capital Medical University",
+    "class": "OTHER"
+   },
+   "briefTitle": "A Trial of Procalcitonin in Patients With Acute Exacerbation of Chronic Obstructive Pulmonary Disease",
+   "officialTitle": "Procalcitonin-guided Initiation of Antibiotics in AECOPD Inpatients: a Multicenter Randomized Controlled Trial"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2020-10",
+   "overallStatus": "UNKNOWN",
+   "lastKnownStatus": "NOT_YET_RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2021-02-01",
+    "type": "ESTIMATED"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2022-02-01",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2022-04-01",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2020-12-08",
+   "studyFirstSubmitQcDate": "2020-12-19",
+   "studyFirstPostDateStruct": {
+    "date": "2020-12-24",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2020-12-19",
+   "lastUpdatePostDateStruct": {
+    "date": "2020-12-24",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "PRINCIPAL_INVESTIGATOR",
+    "investigatorFullName": "Bin Cao",
+    "investigatorTitle": "professor",
+    "investigatorAffiliation": "Capital Medical University"
+   },
+   "leadSponsor": {
+    "name": "Capital Medical University",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "Current antibiotic prescription for patients with acute exacerbation of chronic obstructive pulmonary disease (AECOPD) is generally based on the Anthonisen criteria in The Global Initiative for Chronic Obstructive Pulmonary Disease (GOLD) guideline, that has a potential risk of antibiotics overuse. The dilemma is to identify patients who are most likely to benefit from antibiotics while avoiding unnecessary antibiotic use. Procalcitonin (PCT), a more sensitive and specific biomarker of bacterial infection than other conventional laboratory tests, has the potential to determine those patients in whom antibiotics would be beneficial. It is unclear whether PCT-guided antibiotic therapy is safe and effective for inpatients with AECOPD. The investigators aim to conduct a 2-arm, multicenter randomized controlled trial in China to determine whether PCT-guided antibiotic therapy will reduce the antibiotic prescription rate for AECOPD without negatively impacting the treatment success rate, compared with the GOLD guideline antibiotic recommendations.",
+   "detailedDescription": "This trial will recruit 500 hopitalized patients with AECOPD. The eligible participants will be randomly assigned to either PCT group or guideline group.The investigators aim to compare the efficacy and safety between PCT-gudied antibiotic therapy and guideline-guided antibiotic recommendations. The primary hypothesis is that PCT-guided antibiotic therapy will reduce the antibiotic prescription rate for AECOPD without negatively impacting the treatment success rate, compared with the GOLD guideline antibiotic recommendations."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Procalcitonin",
+    "Chronic Obstructive Pulmonary Disease"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "SINGLE",
+     "whoMasked": [
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 500,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "PCT-guided antibiotic therapy (PCT group)",
+     "type": "EXPERIMENTAL",
+     "description": "Participants in the PCT group will complete a PCT test within 2 hours after randomization and the results will be sent back to the clinician by laboratory through the internal network of the hospital. The prescribing clinician will use the results of the PCT to help guide their antibiotic prescription decision. The detailed recommendations are as follows: if PCT\\<0.1ng/ml，strongly discouraged；if PCT (0.1-0.25ng/ml) and no sputum purulence, discouraged; if PCT (0.1-0.25ng/ml) and sputum purulence, Recommended; PCT\\>0.25 ng/ml, Strongly recommended.",
+     "interventionNames": [
+      "Drug: procalcitonin-guided antibiotic therapy"
+     ]
+    },
+    {
+     "label": "Guideline-guided antibiotic therapy (guideline group)",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Participants in the guideline group will also need to complete a PCT test within 2 hours after randomization, however, the laboratory will save the results and do not sent back to the clinician. The clinician will make an antibiotic prescribing decision on the basis of the recommendations of GOLD guideline. The guideline recommend the following patients to receive antibiotic therapy. Patients with exacerbations of COPD who have three cardinal symptoms: increase in dyspnea, sputum volume, and sputum purulence; have two of the cardinal symptoms, if increased purulence of sputum is one of the two symptoms; or require mechanical ventilation (invasive or noninvasive).",
+     "interventionNames": [
+      "Drug: guideline-guided antibiotic therapy"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "procalcitonin-guided antibiotic therapy",
+     "description": "In procalcitonin group, clinican make a decision of antibiotic precription based on the results of procalcitonin.",
+     "armGroupLabels": [
+      "PCT-guided antibiotic therapy (PCT group)"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "guideline-guided antibiotic therapy",
+     "description": "In guideline group, clinican make a decision of antibiotic precription based on the recommendations of GOLD guideline.",
+     "armGroupLabels": [
+      "Guideline-guided antibiotic therapy (guideline group)"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Antibiotic prescription rate",
+     "description": "proportion of patients receiving antibiotics for AECOPD",
+     "timeFrame": "within 30 days post randomization"
+    },
+    {
+     "measure": "Treatment success rate",
+     "description": "Treatment success is defined as cure (a complete resolution of signs and symptoms associated with the exacerbation) or improvement (a resolution or reduction of the symptoms and signs associated with the exacerbation, without new symptoms or signs).",
+     "timeFrame": "day 30 post randomization"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Antibiotic prescription rate",
+     "description": "the proportion of patients receiving antibiotics for AECOPD",
+     "timeFrame": "day 1 post randomization"
+    },
+    {
+     "measure": "Hospital antibiotic exposure",
+     "description": "the number of days of antibiotic consumed for AECOPD and the proportion of patients receiving antibiotic for AECOPD between randomization and hospital discharge",
+     "timeFrame": "from randomization to hospital discharge, up to 30 days"
+    },
+    {
+     "measure": "Length of hospital stay",
+     "description": "the number of days of hospitalization through study completion, an average of 30 days",
+     "timeFrame": "from randomization to hospital discharge, up to 30 days"
+    },
+    {
+     "measure": "Rate of subsequent exacerbation",
+     "description": "proportion of patients present with subsequent acute exacerbation after recovery",
+     "timeFrame": "within 30 days post randomization"
+    },
+    {
+     "measure": "rate of hospital readmission",
+     "description": "proportion of patients admit to hospital due to AECOPD after discharge",
+     "timeFrame": "from the date of discharge to day 30 post randomization"
+    },
+    {
+     "measure": "overall mortality",
+     "description": "death from all cause",
+     "timeFrame": "within 30 days post randomization"
+    },
+    {
+     "measure": "ICU admission rate",
+     "description": "proportion of patients admit to ICU",
+     "timeFrame": "within 30 days post randomization"
+    },
+    {
+     "measure": "Change in COPD assessment test",
+     "description": "the difference between the baseline of hospital admission and day 30 post randomization",
+     "timeFrame": "from the baseline of hospital admission to day 30 post randomization"
+    },
+    {
+     "measure": "Change in modified Medical Research Council (mMRC) score",
+     "description": "the difference between the baseline of hospital admission and day 30 post randomization",
+     "timeFrame": "from the baseline of hospital admission to day 30 post randomization"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Hospitalized patients with AECOPD\n* ≥40 years of age\n* Able to understand and communicate to ensure the completion of the trial\n* Voluntary participation and provide written informed consent\n\nExclusion Criteria:\n\n* Fever, Axillary temperature≥38°C\n* Pneumonia identified by X-Ray or CT of the chest\n* Severe respiratory failure requiring admittance to ICU\n* Concurrent infection at another site (e.g. urinary tract infection)\n* Immunosuppression secondary to chemotherapy, AIDS or malignant tumor of blood system\n* Comorbidities requiring corticosteroids (prednisone 30mg/d or equivalent more than 30 days )\n* Invasive mechanical ventilation\n* Patients with malignant tumors receiving chemotherapy or radiotherapy\n* Pregnancy\n* Participation in another clinical trial\n* Previously enrollment into the study\n* Refuse to attend",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Bin Cao, MD",
+     "role": "CONTACT",
+     "phone": "86-010-84206264",
+     "email": "caobin_ben@163.com"
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "34353802",
+     "type": "DERIVED",
+     "citation": "Huang L, Wang J, Gu X, Sheng W, Wang Y, Cao B. Procalcitonin-guided initiation of antibiotics in AECOPD inpatients: study protocol for a multicenter randomised controlled trial. BMJ Open. 2021 Aug 5;11(8):e049515. doi: 10.1136/bmjopen-2021-049515."
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

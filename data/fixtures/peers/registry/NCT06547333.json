@@ -1,0 +1,317 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT06547333",
+   "orgStudyIdInfo": {
+    "id": "CM310-003"
+   },
+   "organization": {
+    "fullName": "CSPC ZhongQi Pharmaceutical Technology Co., Ltd.",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "A Study of CM310 in Subjects With Moderate to Severe Chronic Obstructive Pulmonary Disease",
+   "officialTitle": "A Randomized, Double-Blind, Placebo-Controlled Clinical Study to Evaluate the Efficacy and Safety of CM310 Recombinant Humanized Monoclonal Antibody Injection in Subjects With Moderate to Severe Chronic Obstructive Pulmonary Disease（COPD）"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2024-08",
+   "overallStatus": "NOT_YET_RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2024-09-13",
+    "type": "ESTIMATED"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2032-04-29",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2032-10-31",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2024-08-07",
+   "studyFirstSubmitQcDate": "2024-08-07",
+   "studyFirstPostDateStruct": {
+    "date": "2024-08-09",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2024-08-11",
+   "lastUpdatePostDateStruct": {
+    "date": "2024-08-14",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "CSPC ZhongQi Pharmaceutical Technology Co., Ltd.",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "This study is a multi-center, randomized, double-blind, placebo-controlled Phase Ⅱ/Ⅲ clinical study to evaluate the efficacy, safety, PK characteristics, PD effects and immunogenicity of CM310 in subjects with moderate to severe Chronic Obstructive Pulmonary Disease（COPD）.\n\nThe study has two parts. Each part consists of three periods, including an up to 4-week screening period, a 52-week randomized treatment period, and a 8-week safety follow-up period.",
+   "detailedDescription": "The study has two parts. Each part consists of three periods, including an up to 4-week screening period, a 52-week randomized treatment period, and a 8-week safety follow-up period. During the first part, patients who meet eligibility criteria will be randomized 1:1:1 to receive either CM310 300 mg, CM310 150mg or matched placebo subcutaneously every two weeks (Q2W) for a total of 26 times at the double-blind treatment period. An interim analysis will be performed and an optimal dose will be recommended. During the second part, patients will be randomized 1:1 to receive either CM310 optimal dose or matched placebo subcutaneously at the double-blind treatment period."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 884,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "CM310 300mg Q2W",
+     "type": "EXPERIMENTAL",
+     "description": "CM310 is injected subcutaneously (SC) 300 mg each time, once every 2 weeks (Q2W) for a total of 26 doses.",
+     "interventionNames": [
+      "Drug: CM310"
+     ]
+    },
+    {
+     "label": "CM310 150mg Q2W",
+     "type": "EXPERIMENTAL",
+     "description": "CM310 is injected subcutaneously (SC) 150 mg each time, once every 2 weeks (Q2W) for a total of 26 doses.",
+     "interventionNames": [
+      "Drug: CM310"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Subcutaneous injection (SC), once every 2 weeks (Q2W) for a total of 26 doses.",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "CM310",
+     "description": "CM310 Recombinant Humanized Monoclonal Antibody Injection",
+     "armGroupLabels": [
+      "CM310 150mg Q2W",
+      "CM310 300mg Q2W"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Placebo",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Annualized Rate of Moderate or Severe Chronic Obstructive Pulmonary Disease (COPD) Acute Exacerbations",
+     "description": "Moderate acute exacerbation of COPD (AECOPD) are defined as exacerbations that require either systemic corticosteroids (intramuscular, intravenous, or oral) and/or antibiotics. Severe AECOPD are defined as exacerbations requiring hospitalization or observation \\>24 hours in emergency department/urgent care facility. For both moderate and severe events to be counted as separate events, they are separated by at least 14 days. Annualized event rate are the total number of exacerbations that occure during the treatment period divided by the total number of participant-years treated.",
+     "timeFrame": "Baseline (Day 1) to 52 weeks"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Time to First Moderate or Severe Acute Exacerbation of COPD (AECOPD)",
+     "description": "The time to first moderate or severe exacerbation is defined as date of the first event minus randomization date +1. The median time to first severe exacerbation is derived from Cox regression model.",
+     "timeFrame": "Baseline (Day 1) to 52 weeks"
+    },
+    {
+     "measure": "Annualized Rate of Severe Acute Exacerbations of COPD",
+     "description": "Severe AECOPD are defined as exacerbations requiring hospitalization or observation \\>24 hours in emergency department/urgent care facility. For severe events to be counted as separate events, they are separated by at least 14 days. Annualized event rate are the total number of exacerbations that occure during the treatment period divided by the total number of participant-years treated.",
+     "timeFrame": "Baseline (Day 1) to 52 weeks"
+    },
+    {
+     "measure": "Change from baseline in pre-bronchodilator Forced Expiratory Volume in One Second (FEV1) at week 12",
+     "description": "The FEV1 is the volume of air exhaled from the lungs in the first second of a forced expiration as measured by spirometer. Spirometry is performed after a wash out period of bronchodilators according to their action duration.",
+     "timeFrame": "Baseline (Day 1) to 12 weeks"
+    },
+    {
+     "measure": "Change from baseline in pre-bronchodilator FEV1 at week 52",
+     "description": "The FEV1 is the volume of air exhaled from the lungs in the first second of a forced expiration as measured by spirometer. Spirometry is performed after a wash out period of bronchodilators according to their action duration.",
+     "timeFrame": "Baseline (Day 1) to 52 weeks"
+    },
+    {
+     "measure": "Change from baseline in pre-bronchodilator FEV1 at week 2,4,8,16,20,24,28,36,44,48",
+     "description": "The FEV1 is the volume of air exhaled from the lungs in the first second of a forced expiration as measured by spirometer. Spirometry is performed after a wash out period of bronchodilators according to their action duration.",
+     "timeFrame": "Baseline (Day 1) to week 2,4,8,16,20,24,28,36,44,48"
+    },
+    {
+     "measure": "Change from baseline in post-bronchodilator FEV1 at week 2,4,8,12,24,36,52",
+     "description": "The FEV1 is the volume of air exhaled from the lungs in the first second of a forced expiration as measured by spirometer. Post-BD FEV1 refers to the spirometry performed within 15-30 minutes after administration of bronchodilator.",
+     "timeFrame": "Baseline (Day 1) to week 2,4,8,12,24,36,52weeks"
+    },
+    {
+     "measure": "Change from baseline in Forced vital capacity（FVC）and forced expiratory flow (FEF) at 25%-75% at week 2,4,8,12,16,24,28,36,44,52",
+     "description": "FVC is defined as the volume of air (in liters) that can be forcibly blown out after full inspiration in the upright position. FEF is the amount of air (in liters) which can be forcibly exhaled from the lungs in the first second of a forced exhalation. FEF 25-75% is defined as the mean FEF between 25% and 75% of the FVC. Spirometry is performed after a wash out period of bronchodilators according to their action duration.",
+     "timeFrame": "Baseline (Day 1) to week 2,4,8,12,16,24,28,36,44,52weeks"
+    },
+    {
+     "measure": "Change from baseline in Saint (St.) George's Respiratory Questionnaire (SGRQ) Total Score at week 52",
+     "description": "The SGRQ is a 50-item self-administered questionnaire designed to measure and quantify health status in adult participants with chronic airflow limitation and rate on electronic diary. Scores by dimension are calculated for 3 domains: symptoms, activity and impacts (psycho-social) as well as a total score. Global and domain scores range from 0 to 100, with 100 representing the worst possible health status and 0 indicating the best possible health status. Higher score indicates worse health status/heath related quality of life.",
+     "timeFrame": "Baseline (Day 1) to 52 weeks"
+    },
+    {
+     "measure": "Percentage of Participants With SGRQ Improvement >=4 Points from baseline at Week 52",
+     "description": "A responder is defined as a participant with improvement from baseline in SGRQ total score at Week 52 by \\>=4 points. Participants with improvement \\<4 points or with missing values are considered as non-responders. The percentage of participants who achieved a clinically meaningful response in SGRQ total score (reduction \\[improvement\\] by \\>=4 points)/responders are reported.",
+     "timeFrame": "Baseline (Day 1) to 52 weeks"
+    },
+    {
+     "measure": "Change from baseline in COPD assessment test (CAT) Total Score at each evaluation time point",
+     "description": "The COPD Assessment Test is a validated, short and simple patient completed questionnaire to measure the health status of patients with COPD. The CAT is an 8-item questionnaire suitable for completion by all patients diagnosed with COPD. When completing the questionnaire, subjects rate their experience on a 6-point scale, ranging from 0 (no impairment) to 5 (maximum impairment) with a scoring range of 0-40. Higher scores indicate greater disease impact.",
+     "timeFrame": "Baseline (Day 1) to week 2,4,8,12,24,36,44,52weeks"
+    },
+    {
+     "measure": "Percentage of Participants With CAT Improvement >=2 Points from baseline at Week 52",
+     "description": "A responder is defined as a participant with improvement from baseline in CAT total score at Week 52 by \\>=2 points. Participants with improvement \\<2 points or with missing values are considered as non-responders. The percentage of participants who achieved a clinically meaningful response in CAT total score (reduction \\[improvement\\] by \\>=2points)/responders are reported.",
+     "timeFrame": "Baseline (Day 1) to 52 weeks"
+    },
+    {
+     "measure": "Change from baseline in Evaluating Respiratory Symptoms (E-RS) total score at each evaluation time point",
+     "description": "The E-RS in COPD scale is a derivative instrument used to measure the effect of treatment on the severity of respiratory symptoms in stable COPD. E-RS: COPD RS-Total Score is derived based on weekly averages of daily assessed 11 respiratory symptom items contained in the 14-item EXACT questionnaire. The RS-Total score represent overall respiratory symptom severity, ranged from 0 to 40. The higher the score, more severe are the symptoms.",
+     "timeFrame": "Baseline (Day 1) to week 2,4,8,12,24,36,44,52weeks"
+    },
+    {
+     "measure": "Percentage of Participants With E-RS Improvement >=2 Points from baseline at Week 52",
+     "description": "A responder is defined as a participant with improvement from baseline in E-RS total score at Week 52 by \\>=2 points. Participants with improvement \\<2 points or with missing values are considered as non-responders. The percentage of participants who achieved a clinically meaningful response in E-RS total score (reduction \\[improvement\\] by \\>=2points)/responders are reported.",
+     "timeFrame": "Baseline (Day 1) to 52 weeks"
+    },
+    {
+     "measure": "Incidence of Adverse events (AEs)/treatment-emergent adverse events (TEAEs)",
+     "description": "An Adverse Event (AE) is defined as any untoward medical occurrence in a participant temporally associated with the use of study treatment, whether or not considered related to the study treatment. TEAEs are defined as AEs that developed or worsened in grade or became serious during TE period which is defined as the period from the time of first dose of study treatment until the last visit in the study.",
+     "timeFrame": "Baseline (Day 1) to 60 weeks"
+    },
+    {
+     "measure": "Potentially clinically significant laboratory abnormalities in hematology, biochemistry and urinalysis",
+     "description": "Any abnormal laboratory test results (hematology, biochemistry, or urinalysis) including those that worsen from baseline, and felt to be clinically significant in the medical and scientific judgment of the investigator are to be recorded.",
+     "timeFrame": "Baseline (Day 1) to 60 weeks"
+    },
+    {
+     "measure": "Trough concentration at steady-state of CM310 (Pharmacokinetic parameters）",
+     "description": "To evaluate the trough concentration at steady-state of CM310 for each dose group. Population pharmacokinetic analysis is performed.",
+     "timeFrame": "Baseline (Day 1) to 60 weeks"
+    },
+    {
+     "measure": "Total IgE(Pharmacodynamic biomarkers)",
+     "description": "Change from baseline in total IgE at each evaluation time point for each dose group.",
+     "timeFrame": "Baseline (Day 1) to 60 weeks"
+    },
+    {
+     "measure": "Fractional exhaled nitric oxide (Pharmacodynamic biomarkers)",
+     "description": "FeNO is a demonstrated biomarker of type 2 airway inflammation in respiratory diseases. This assessment is conducted prior to spirometry. Change from baseline in FeNO at each evaluation time point for each dose group is measured.",
+     "timeFrame": "Baseline (Day 1) to 60 weeks"
+    },
+    {
+     "measure": "Anti-drug antibodies(immunogenicity parameters)",
+     "description": "Incidence of anti-drug antibodies (ADAs)",
+     "timeFrame": "Baseline (Day 1) to 60 weeks"
+    },
+    {
+     "measure": "Neutralizing antibodies(immunogenicity parameters)",
+     "description": "Incidence of neutralizing antibodies (Nabs) (if applicable)",
+     "timeFrame": "Baseline (Day 1) to 60 weeks"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1. Have the ability to understand the nature of the study and voluntarily sign the informed consent form.\n2. Age ≥40 and ≤85 years old, male or female, at the time of signing the informed consent.\n3. The patient has been diagnosed with COPD for at least 1 year, and meet the following criteria at screening.\n\n   1. Moderate to severe COPD (post-bronchodilator FEV1/FVC ratio \\<0.70 and post-bronchodilator FEV1 % predicted \\>30% and ≤70%) at screening.\n   2. Modified Medical Research Council (mMRC) Dyspnea Scale grade ≥2.\n   3. Signs and symptoms (chronic productive cough) of chronic bronchitis for at least 3 months in the year up to screening and in the absence of other known causes of chronic cough.\n   4. Documented history of high exacerbation risk defined as exacerbation history of ≥2 moderate or ≥1 severe AECOPD within the year prior to screening. At least one exacerbation should have occurred while the patient was taking inhaled corticosteroid (ICS)/long acting beta agonist (LABA)/long acting muscarinic antagonist (LAMA) (or LABA/LAMA if ICS is contraindicated). Moderate acute exacerbation of COPD (AECOPD) aredefined as exacerbations that require either systemic corticosteroids (intramuscular, intravenous, or oral) and/or antibiotics. One of the two required moderate exacerbations has to require the use of systemic corticosteroids. Severe AECOPD are defined as exacerbations requiring hospitalization or observation \\>24 hours in emergency department/urgent care facility.\n   5. Background triple therapy (ICS + LABA + LAMA) for 3 months prior to screening with a stable dose of medication for ≥1 month prior to screening; Double therapy (LABA + LAMA) allowed if ICS is contraindicated.\n   6. Evidence of Type 2 inflammation: Patients with blood eosinophils ≥0.3×10\\^9 /L at Visit 1.\n4. Body mass index (BMI) ≥16 kg/m\\^2\n5. Participants (including partners) have no plans to have children and voluntarily used highly effective contraception within 3 months after the last dose of study drug from the date of signing the informed consent.\n\nExclusion Criteria:\n\n1. A current diagnosis of asthma or history of asthma according to the Global Initiative for Asthma (GINA) guidelines or other accepted guidelines（asthma alone or asthma as the primary diagnosis, including but not limited to asthma with COPD）.\n2. Subjects with significant pulmonary disease other than COPD (e.g., sarcoidosis, interstitial lung disease, primary pulmonary hypertension, bronchiectasis, Churg-Strauss Syndrome, active tuberculosis or non-tuberculous mycobacterial infection, etc.), in the opinion of the investigator.\n3. Subjects with other conditions that could lead to elevated eosinophils such as hypereosinophilic syndromes, eosinophilic granulomatosis with polyangiitis (EGPA), eosinophilic esophagitis or other disease(e.g., active parasitic infection (helminthes) which has not been treated with, or has failed to respond to standard of care therapy.)\n4. Heart failure NYHA Class IV, uncontrolled Cor pulmonale as judged by the Investigator or with evidence of right cardiac failure.\n5. Treatment with oxygen of more than 15 hours per day or hypercapnia requiring BiPAP, in the opinion of the investigator,\n6. Acute moderate or severe exacerbation of COPD (AECOPD, as defined above in Inclusion Criteria) from 4 weeks before signing consent to the time of randomization.\n7. Acute infection requiring systemic anti-infective therapy from 4 weeks before signing consent to the time of randomization.\n8. History of or planned pneumonectomy or lung volume reduction surgery for COPD. Patients who are participating in the acute phase of a pulmonary rehabilitation program, ie, who start rehabilitation \\<4 weeks prior to screening (Note: patients in the maintenance phase of a rehabilitation program could be included).\n9. Diagnosis of α-1 anti-trypsin deficiency.\n10. Anti-immunoglobulin E (IgE) therapy (omalizumab) within 130 days before consent or any other biologic therapy (including other anti-IL4R mAb, anti-IL5 mAb, anti-IL5R mAb, anti TSLP mAb, anti-IL33 mAb, anti-ST2 mAb) within 3 months or 5 half-lives before signing consent, whichever is longer.\n11. Prior autoimmune disease (eg, rheumatoid arthritis, inflammatory bowel disease, primary biliary cirrhosis, systemic lupus erythematosus, multiple sclerosis, etc) or inflammatory treatment with biologic agents/systemic immunosuppressive agents (including but not limited to methotrexate, cyclosporine, mycophenolate mofetil, tacrolimus, penicillamine, sulfasalazine, hydroxychloroquine, azathioprine, cyclophosphamide) within 8 weeks or 5 half-life periods (whichever is longer) prior to consent.\n12. Receipt of immune globulin or blood products within 30 days before consent.\n13. Patients who are treated with systemic corticosteroids (topical, ophthalmic, or intranasal corticosteroids are excluded) from 4 weeks before signing the informed consent to the date of randomization. Except for short-term (≤7 days) use of systemic glucocorticoids to prevent or treat non-autoimmune allergic diseases.\n14. Use of macrolide antibiotics (eg, azithromycin) unless stable \\>3 months prior to screening visit and maintain the treatment during the planned study period.\n15. Receipt of live or attenuated vaccine within 3 months before consent signing or during the planned study period\n16. Previous history of known or suspected immunosuppression, including a history of invasive opportunistic infection (eg, histoplasmosis, listeriosis, coccidioidomycosis, pneumocystosis, aspergillosis), even if the infection has resolved; Or the presence of unusual frequent, recurrent, or prolonged infections, per investigator's judgment.\n17. History of malignancy: subjects with basal cell carcinoma, localized squamous cell carcinoma of the skin, or carcinoma in situ of the cervix are eligible to enter the study if they have completed curative treatment for at least 12 months before signing the informed consent. Subjects with other malignancies are allowed to enter the study if they have completed curative treatment for at least 5 years before signing the informed consent.\n18. The presence of any severe and/or uncontrolled medical condition that in the judgment of the investigator would affect the evaluation of the drug, including but not limited to: severe neurological disease (eg, epilepsy, dementia, etc), history of severe mental disorder, major cardiovascular disease, diabetes mellitus poorly controlled by intensive treatment, QTcF interval prolongation（male \\>450 msec, female \\>470 msec）, or persistent arrhythmia.\n19. Positive screening serologic test for HIV or treponema pallidum during screening.\n20. Chronic hepatitis B virus or hepatitis C virus infection meets the criteria:\n\n    * HBsAg positive;\n    * If HBsAg is negative and HBcAb is positive, HBV DNA should be tested (test result ≥1000 IU/mL).\n    * If the test is positive for HCV antibody, HCV RNA is added (with a result above the upper limit of the normal range at the participating center).\n21. Subjects with abnormal liver and kidney function, such as aspartate aminotransferase or alanine aminotransferase \\>3 times the upper limit of normal, or serum creatinine\\>1.5 times the upper limit of normal.\n22. Acute myocardial infarction \\<6 months from screening visit.\n23. Stroke \\< 6 months from screening visit.\n24. Cardiac arrhythmias including paroxysmal (eg, intermittent) atrial fibrillation are excluded. Patients with persistent atrial fibrillation as defined by continuous atrial fibrillation for at least 6 months and controlled with a rate control strategy (ie, selective beta blocker, calcium channel blocker, pacemaker placement, digoxin or ablation therapy) and stable appropriate level of anticoagulation for at least 6 months may be considered for inclusion.\n25. Unstable ischemic heart disease or other relevant cardiovascular disorder such as pulmonary embolism, deep vein thrombosis within ≤6 months from screening visit that in investigator's judgment may put the patient at risk or negatively affect the study outcome.\n26. Major surgery within 8 weeks prior to consent or planned surgery requiring general anesthesia or hospitalization for \\> 1 day during the study period.\n27. Fertile women with positive pregnancy test results during screening; Pregnant or lactating women.\n28. Allergy or intolerance to components of CM310 injection or placebo or history of severe drug allergy or anaphylactic shock.\n29. Exposure to another investigative drug (small molecules as well as monoclonal antibodies) within a time period prior to consent signing that is less than 6 months. The minimum interval since exposure to any other (non-antibody) investigative study medication is 30 days prior to signing consent.\n30. History of drug abuse within 5 years before signing informed consent.\n31. Background medication treatment compliance \\< 70%\n32. Investigators and associated site personnel or others directly involved in the implementation of the protocol.\n33. The investigator considers that there are any conditions that may prevent the subject from completing the study or present a significant risk to the subject or other factors that may reduce the likelihood of enrolment.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "85 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Clinical Trials Information Group officer",
+     "role": "CONTACT",
+     "phone": "86-0311-69085587",
+     "email": "ctr-contact@cspc.cn"
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

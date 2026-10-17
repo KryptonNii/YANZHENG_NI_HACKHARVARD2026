@@ -92,6 +92,20 @@
     },
     "Levers": {
       "properties": {
+        "enrollment_rate_multiplier": {
+          "default": 1.0,
+          "maximum": 1.5,
+          "minimum": 0.5,
+          "title": "Enrollment Rate Multiplier",
+          "type": "number"
+        },
+        "added_country_count": {
+          "default": 0,
+          "maximum": 5,
+          "minimum": 0,
+          "title": "Added Country Count",
+          "type": "integer"
+        },
         "remote_monitoring_share": {
           "default": 0.0,
           "title": "Remote Monitoring Share",

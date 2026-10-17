@@ -1,0 +1,303 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT00995852",
+   "orgStudyIdInfo": {
+    "id": "09 2009"
+   },
+   "organization": {
+    "fullName": "Heidelberg University",
+    "class": "OTHER"
+   },
+   "briefTitle": "Unilateral Versus Bilateral Endoscopic Lung Volume Reduction A Comparative Case Study",
+   "officialTitle": "Unilateral vs. Bilateral IBV Placement"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2009-10",
+   "overallStatus": "UNKNOWN",
+   "lastKnownStatus": "RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2009-09"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2011-05",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2011-05",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2009-10-14",
+   "studyFirstSubmitQcDate": "2009-10-14",
+   "studyFirstPostDateStruct": {
+    "date": "2009-10-15",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2011-04-26",
+   "lastUpdatePostDateStruct": {
+    "date": "2011-04-27",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "oldNameTitle": "Prof. Felix JF Herth",
+    "oldOrganization": "Thoraxklinik Heidelberg"
+   },
+   "leadSponsor": {
+    "name": "Heidelberg University",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "Olympus Corporation of the Americas",
+     "class": "INDUSTRY"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "Patients with bilateral heterogeneous pulmonary emphysema benefit to differing degrees from unilateral ELVR with complete lobe closure in comparison with incomplete bilateral treatment.",
+   "detailedDescription": "Patient enrolment and data acquisition is to be carried out on a prospective basis. It is planned to enrol a total of 20 patients with bilateral heterogeneous pulmonary emphysema. All patients will undergo treatment at one study centre in Heidelberg. Patients will be considered for both unilateral and bilateral treatment with intrabronchial valves (IBV) on the basis of their emphysema distribution. Patients will be randomised to two treatment arms. 10 patients receive unilateral or bilateral treatment in each case."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Pulmonary Emphysema"
+   ],
+   "keywords": [
+    "Endoscopic lung volume reduction",
+    "emphysema",
+    "COPD",
+    "Patients with bilateral heterogeneous pulmonary emphysema"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "SINGLE_GROUP",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "NONE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 20,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "bilateral",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Treatment arm B - incomplete bilateral treatment of in total two lobes (contralateral).\n\nThe study will only use Intrabronchial Valves™",
+     "interventionNames": [
+      "Device: IBV Implantation"
+     ]
+    },
+    {
+     "label": "unilateral",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Treatment arm A - unilateral treatment with complete closure of the worst lobe of the lungs",
+     "interventionNames": [
+      "Device: IBV Implantation"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DEVICE",
+     "name": "IBV Implantation",
+     "description": "In severe cases of COPD even optimum treatment involving bronchodilatation with drugs, physical training and possibly oxygen therapy is unable to influence exercise capacity and the perception of dyspnoea to a sufficient extent. Given the assumption that the elastic recoil of the small airways can be improved by a reduction in lung volume and pulmonary function overall by more ergonomic breathing mechanics and diaphragm function, various endoscopic procedures for lung volume reduction are available. Here one of the most advanced techniques is the implantation of intrabronchial valves. The one-way mechanism of this valve allows air to escape from the downstream lung segment without any influx of \"new\" air during inspiration",
+     "armGroupLabels": [
+      "unilateral"
+     ],
+     "otherNames": [
+      "Spiration IBV"
+     ]
+    },
+    {
+     "type": "DEVICE",
+     "name": "IBV Implantation",
+     "description": "In severe cases of COPD even optimum treatment involving bronchodilatation with drugs, physical training and possibly oxygen therapy is unable to influence exercise capacity and the perception of dyspnoea to a sufficient extent. Given the assumption that the elastic recoil of the small airways can be improved by a reduction in lung volume and pulmonary function overall by more ergonomic breathing mechanics and diaphragm function, various endoscopic procedures for lung volume reduction are available. Here one of the most advanced techniques is the implantation of intrabronchial valves. The one-way mechanism of this valve allows air to escape from the downstream lung segment without any influx of \"new\" air during inspiration",
+     "armGroupLabels": [
+      "bilateral"
+     ],
+     "otherNames": [
+      "Spiration IBV"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Improvement in pulmonary function (FEV1) 6-minute walking test",
+     "timeFrame": "3 months"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Number of major complications(SAE)",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "Evaluation of the IBV migration rate",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "Average changes in quality of life (SGRQ)",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "Average changes in pulmonary function (FEV1, IVC, RV, TLC, RV/TLC)",
+     "timeFrame": "3 months"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* age \\> 40 inhomogeneous emphysema FEV1 between 20-40% DLCO between 20-40% 6MWT \\> 150 m\n\nExclusion Criteria:\n\n* pregnant homogeneous disease FEV1 \\< 20%",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Felix JF Herth, MD",
+     "role": "CONTACT",
+     "phone": "+49 6221 396",
+     "phoneExt": "1200",
+     "email": "Felix.Herth@thoraxklinik-heidelberg.de"
+    },
+    {
+     "name": "Ralf Eberhardt, MD",
+     "role": "CONTACT",
+     "phone": "+49 6221 396",
+     "phoneExt": "1204",
+     "email": "Ralf.Eberhardt@rthoraxklinik-heidelberg.de"
+    }
+   ],
+   "overallOfficials": [
+    {
+     "name": "Felix JF Herth, MD",
+     "affiliation": "Heidelberg University",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Thoraxklinik Heidelberg",
+     "status": "RECRUITING",
+     "city": "Heidelberg",
+     "zip": "69126",
+     "country": "Germany",
+     "contacts": [
+      {
+       "name": "Felix JF Herth, MD",
+       "role": "CONTACT",
+       "phone": "+49 6221 396",
+       "phoneExt": "1200",
+       "email": "Felix.Herth@thoraxklinik-heidelberg.de"
+      }
+     ],
+     "geoPoint": {
+      "lat": 49.40768,
+      "lon": 8.69079
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "19662969",
+     "type": "BACKGROUND",
+     "citation": "Venuta F, Rendina EA, Coloni GF. Endobronchial treatment of emphysema with one-way valves. Thorac Surg Clin. 2009 May;19(2):255-60, x. doi: 10.1016/j.thorsurg.2009.04.002."
+    },
+    {
+     "pmid": "19131539",
+     "type": "BACKGROUND",
+     "citation": "Chan KM, Martinez FJ, Chang AC. Nonmedical therapy for chronic obstructive pulmonary disease. Proc Am Thorac Soc. 2009 Jan 15;6(1):137-45. doi: 10.1513/pats.200809-114GO."
+    },
+    {
+     "pmid": "18453355",
+     "type": "BACKGROUND",
+     "citation": "Ingenito EP, Wood DE, Utz JP. Bronchoscopic lung volume reduction in severe emphysema. Proc Am Thorac Soc. 2008 May 1;5(4):454-60. doi: 10.1513/pats.200707-085ET."
+    },
+    {
+     "pmid": "22459779",
+     "type": "DERIVED",
+     "citation": "Eberhardt R, Gompelmann D, Schuhmann M, Reinhardt H, Ernst A, Heussel CP, Herth FJF. Complete unilateral vs partial bilateral endoscopic lung volume reduction in patients with bilateral lung emphysema. Chest. 2012 Oct;142(4):900-908. doi: 10.1378/chest.11-2886."
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D011656",
+     "term": "Pulmonary Emphysema"
+    },
+    {
+     "id": "D004646",
+     "term": "Emphysema"
+    },
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

@@ -1,15 +1,15 @@
 diff --git a/api/trialpilot_api/routes_designs.py b/api/trialpilot_api/routes_designs.py
 --- a/api/trialpilot_api/routes_designs.py
 +++ b/api/trialpilot_api/routes_designs.py
-@@ -107,8 +107,9 @@
-         s.flush()
+@@ -173,8 +173,9 @@
          return row
  
--    svc.audited_write(session, ident, action, "design", design.id,
--                      prev.design_hash if prev else None, h, write, reason)
-+    session.rollback()
-+    write(session)
-+    session.commit()
-     session.refresh(row)
-     return row, True
- 
+     try:
+-        svc.audited_write(session, ident, action, "design", design.id,
+-                          prev.design_hash if prev else None, h, write, reason)
++        session.rollback()
++        write(session)
++        session.commit()
+     except IntegrityError:
+         # Another request may have committed this version after the initial
+         # If-Match check. The unique (design_id, version) constraint protects the

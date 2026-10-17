@@ -175,14 +175,5 @@ def current(ctx: Ctx) -> dict[str, Any]:
 
 
 def submit(ctx: Ctx, record_id: str, username: str | None, title: str) -> dict[str, Any]:
-    c = identity.compliance()
-    user = identity.resolve_user(username)
-    st = c.workflow.approval_status("test_protocol", record_id)
-    if st["approval_id"] and st["status"] in ("pending", "approved"):
-        return {"approval_id": st["approval_id"], "status": st["status"], "created": False}
-    try:
-        req = c.workflow.create_request("test_protocol", record_id, user.username, title=title,
+    return identity.submit_for_approval("test_protocol", record_id, username, title=title,
                                         reason="OQ protocol submitted for review and approval")
-    except c.ComplianceError as exc:
-        raise TpvError(f"{exc.code}: {exc.message}") from exc
-    return {"approval_id": req.id, "status": req.status, "created": True}

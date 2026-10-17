@@ -123,6 +123,77 @@ export interface EffectDetail {
   control_units?: string[];
   control_tier?: string;
   values?: EffectValues | null;
+  expectation?: Expectation | null;
+  reconciliation?: Reconciliation | null;
+}
+
+/** P10/P50/P90 of a predicted quantity. `unit` is a MetricRange unit or "days". */
+export interface PredictedRange {
+  p10: number;
+  p50: number;
+  p90: number;
+  unit: string;
+}
+
+/** One recommended action as the planning model sees it. Quantified options carry a rank and the numbers. */
+export interface ActionOption {
+  action: string;
+  code: string;
+  label: string;
+  quantified: boolean;
+  reason?: string | null;
+  rank?: number;
+  metric?: string;
+  metric_label?: string;
+  better?: "up" | "down";
+  target_site_ids?: string[];
+  effect?: PredictedRange;
+  delay_saved_days?: PredictedRange | null;
+  cost_avoided_usd?: PredictedRange;
+  action_cost_usd?: PredictedRange;
+  net_usd?: PredictedRange;
+  lag_days?: PredictedRange;
+  warnings?: string[];
+  reasoning?: string[];
+  assumptions?: string[];
+  model_label?: string;
+}
+
+export interface AlertOptions {
+  alert_id: string;
+  ranked_by: string;
+  model_label: string;
+  computed_at_day: number;
+  baseline: { delay_days: PredictedRange | null; cost_usd: PredictedRange; description: string } | null;
+  items: ActionOption[];
+  best_net_positive: boolean;
+  note?: string;
+}
+
+/** The prediction exactly as it stood when the action was planned. */
+export interface Expectation extends ActionOption {
+  alert_id: string;
+  computed_at: string;
+  frozen: boolean;
+  rank_when_planned?: number | null;
+}
+
+export type ReconcileVerdict = "insufficient_data" | "inconclusive" | "met" | "exceeded" | "partial" | "not_met";
+
+export interface Reconciliation {
+  verdict: ReconcileVerdict;
+  explanation: string;
+  predicted: PredictedRange | null;
+  observed: (PredictedRange & { ci95: [number, number] }) | null;
+  post_weeks: number;
+  needs_replan: boolean;
+  replan_min_weeks: number;
+  metric_label: string;
+  unit: string;
+  basis: string;
+  alert_id: string;
+  model_label: string;
+  share_of_effect_in_window: number | null;
 }
 
 const enc = encodeURIComponent;
@@ -248,6 +319,8 @@ function normalizeEffect(raw: unknown, fallback?: EffectEstimate): EffectDetail 
     control_units: Array.isArray(d.control_units) ? d.control_units.filter((x): x is string => typeof x === "string") : undefined,
     control_tier: typeof d.control_tier === "string" ? d.control_tier : undefined,
     values,
+    expectation: isObj(d.expectation) ? (d.expectation as unknown as Expectation) : null,
+    reconciliation: isObj(d.reconciliation) ? (d.reconciliation as unknown as Reconciliation) : null,
   };
 }
 
@@ -272,6 +345,13 @@ export async function getHealth(trialId: string, signal?: AbortSignal): Promise<
 
 export async function listAlerts(trialId: string): Promise<Alert[]> {
   return asItems<Alert>(await request("GET", `/ops/${enc(trialId)}/alerts`, { silent: true }));
+}
+
+/** Ranked, predicted outcomes of an alert's recommended actions; null when the alert has none. */
+export async function getAlertOptions(trialId: string, alertId: string): Promise<AlertOptions | null> {
+  const body = await request("GET", `/ops/${enc(trialId)}/alerts/${enc(alertId)}`, { silent: true });
+  const options = isObj(body) ? body.options : null;
+  return isObj(options) && Array.isArray(options.items) ? (options as unknown as AlertOptions) : null;
 }
 
 export function patchAlert(trialId: string, alertId: string, status: Alert["status"], reason?: string) {

@@ -1,3 +1,4 @@
+import { useTranslation } from "@/app/i18n";
 import type { Band, CountryRow, SiteRow, WeeklyEnrollment } from "./api";
 
 /** Sum aligned site bounds, only where every constituent has that week's data. */
@@ -31,16 +32,17 @@ function segments<T>(values: (T | null)[]): { value: T; index: number }[][] {
 }
 
 export function EnrollmentChart({ series }: { series: WeeklyEnrollment | null }) {
-  if (!series) return <span className="text-xs text-ink-500">Weekly history unavailable</span>;
+  const t = useTranslation();
+  if (!series) return <span className="text-xs text-ink-500">{t("Weekly history unavailable", "每周历史数据不可用")}</span>;
   const n = series.actual_cumulative.length;
-  if (!n) return <span className="text-xs text-ink-500">No complete weeks yet</span>;
+  if (!n) return <span className="text-xs text-ink-500">{t("No complete weeks yet", "尚无完整周数据")}</span>;
   const max = Math.max(1, ...series.actual_cumulative.filter((v): v is number => v !== null), ...series.plan.flatMap((b) => b ? [b.p90] : []));
   const x = (i: number) => 6 + (n === 1 ? 84 : i / (n - 1) * 168);
   const y = (v: number) => 40 - v / max * 35;
   const last = series.actual_cumulative[n - 1];
   const b = series.plan[n - 1];
   const gaps = series.actual_cumulative.some((v) => v === null) || series.plan.some((v) => v === null);
-  const label = `${n} complete weeks; last cumulative ${last ?? "unknown"}; plan P10–P90 ${b ? `${Math.round(b.p10)}–${Math.round(b.p90)}` : "unknown"}${gaps ? "; gaps in weekly data" : ""}`;
+  const label = t(`${n} complete weeks; last cumulative ${last ?? "unknown"}; plan P10–P90 ${b ? `${Math.round(b.p10)}–${Math.round(b.p90)}` : "unknown"}${gaps ? "; gaps in weekly data" : ""}`, `${n} 个完整周；最新累计 ${last ?? "未知"}；计划 P10–P90 ${b ? `${Math.round(b.p10)}–${Math.round(b.p90)}` : "未知"}${gaps ? "；每周数据有缺失" : ""}`);
   return (
     <svg viewBox="0 0 180 54" className="h-14 w-44 shrink-0" role="img" aria-label={label} data-testid="weekly-enrollment">
       <title>{label}</title>
@@ -57,11 +59,11 @@ export function EnrollmentChart({ series }: { series: WeeklyEnrollment | null })
         const band = series.plan[i];
         return value !== null && (
         <circle key={i} cx={x(i)} cy={y(value)} r="1.7" fill="#0f766e">
-          <title>Week {i + 1} · day {7 * (i + 1)}: actual {value}; plan {band ? `${band.p10.toFixed(1)} / ${band.p50.toFixed(1)} / ${band.p90.toFixed(1)}` : "unknown"}</title>
+          <title>{t("Week", "周")} {i + 1} {t("· day", "· 天")} {7 * (i + 1)}{t(": actual", "：实际")} {value}{t("; plan", "；计划")} {band ? `${band.p10.toFixed(1)} / ${band.p50.toFixed(1)} / ${band.p90.toFixed(1)}` : t("unknown", "未知")}</title>
         </circle>
       ); })}
-      <text x="6" y="52" fontSize="8" fill="#64748b">W1</text>
-      <text x="174" y="52" textAnchor="end" fontSize="8" fill="#64748b">W{n} · {max.toFixed(0)} max</text>
+      <text x="6" y="52" fontSize="8" fill="#64748b">{t("W1", "第 1 周")}</text>
+      <text x="174" y="52" textAnchor="end" fontSize="8" fill="#64748b">{t("W", "周")}{n} · {max.toFixed(0)} {t("max", "最大值")}</text>
     </svg>
   );
 }

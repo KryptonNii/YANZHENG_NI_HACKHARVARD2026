@@ -1,0 +1,247 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT00826163",
+   "orgStudyIdInfo": {
+    "id": "BT-B-01-MG-14-5114"
+   },
+   "organization": {
+    "fullName": "Mahidol University",
+    "class": "OTHER"
+   },
+   "briefTitle": "Innate Immune Responses in Chronic Obstructive Pulmonary Disease (COPD) Patients",
+   "officialTitle": "Innate Immune Responses in Chronic Obstructive Pulmonary Disease Patients"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2013-09",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2009-01"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2009-11",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2009-12",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2008-12-16",
+   "studyFirstSubmitQcDate": "2009-01-16",
+   "studyFirstPostDateStruct": {
+    "date": "2009-01-21",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2013-09-10",
+   "lastUpdatePostDateStruct": {
+    "date": "2013-09-11",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "PRINCIPAL_INVESTIGATOR",
+    "investigatorFullName": "Kittipong Maneechotesuwan",
+    "investigatorTitle": "Professor",
+    "investigatorAffiliation": "Mahidol University"
+   },
+   "leadSponsor": {
+    "name": "Mahidol University",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "National Science and Technology Development Agency, Thailand",
+     "class": "OTHER_GOV"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": false
+  },
+  "descriptionModule": {
+   "briefSummary": "We hypothesize that ongoing and more severe airway inflammation in COPD may result from the impairment in activation of innate immune response"
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "NON_RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "NONE"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 20,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "stable COPD",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Postbronchodilator FEV1\\> or = 50% predicted",
+     "interventionNames": [
+      "Drug: Budesonide"
+     ]
+    },
+    {
+     "label": "Asthma",
+     "type": "SHAM_COMPARATOR",
+     "description": "Postbronchodilator FEV1 \\> or = 50% predicted",
+     "interventionNames": [
+      "Drug: Budesonide"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Budesonide",
+     "description": "Inhaled budesonide 400 mcg twice a day for 2 weeks",
+     "armGroupLabels": [
+      "Asthma",
+      "stable COPD"
+     ],
+     "otherNames": [
+      "Rhinocort"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Sputum IL-8, IL-17",
+     "timeFrame": "2 WEEKS"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "The expression of NF-kappa B in sputum macrophages",
+     "timeFrame": "2 WEEKS"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* clinical diagnosis of COPD or asthma\n* a ratio of prebronchodilator FEV1 to forced vital capacity (FVC) equal to or less than 0.70\n* postbronchodilator FEV1 \\> or = 50% predicted\n\nExclusion Criteria:\n\n* Exacerbation\n* systemic corticosteroids\n* DM, HIV and autoimmune disease\n* immunosuppressive therapy",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Kittipong Maneechotesuwan, MD, PhD",
+     "affiliation": "Mahidol University",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Kittipong Maneechotesuwan",
+     "city": "Bangkoknoi",
+     "state": "BKK",
+     "zip": "10700",
+     "country": "Thailand"
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D019819",
+     "term": "Budesonide"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D011282",
+     "term": "Pregnenediones"
+    },
+    {
+     "id": "D011283",
+     "term": "Pregnenes"
+    },
+    {
+     "id": "D011278",
+     "term": "Pregnanes"
+    },
+    {
+     "id": "D013256",
+     "term": "Steroids"
+    },
+    {
+     "id": "D000072473",
+     "term": "Fused-Ring Compounds"
+    },
+    {
+     "id": "D011083",
+     "term": "Polycyclic Compounds"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

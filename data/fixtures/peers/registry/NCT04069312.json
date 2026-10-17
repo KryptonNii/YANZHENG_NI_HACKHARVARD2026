@@ -1,0 +1,772 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT04069312",
+   "orgStudyIdInfo": {
+    "id": "IRB00179281"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "contract # PCS-1504-30430",
+     "type": "OTHER_GRANT",
+     "domain": "Patient-Centered Outcomes Research Institute (PCORI)"
+    }
+   ],
+   "organization": {
+    "fullName": "Johns Hopkins University",
+    "class": "OTHER"
+   },
+   "briefTitle": "Roflumilast or Azithromycin to Prevent COPD Exacerbations Trial",
+   "officialTitle": "Roflumilast or Azithromycin to Prevent COPD Exacerbations Trial",
+   "acronym": "RELIANCE"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-08",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2020-02-11",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2026-03-01",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2026-03-01",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2019-08-23",
+   "studyFirstSubmitQcDate": "2019-08-23",
+   "studyFirstPostDateStruct": {
+    "date": "2019-08-28",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-08-20",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-08-21",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Johns Hopkins University",
+    "class": "OTHER"
+   },
+   "collaborators": [
+    {
+     "name": "Patient-Centered Outcomes Research Institute",
+     "class": "OTHER"
+    },
+    {
+     "name": "University of Illinois at Chicago",
+     "class": "OTHER"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": false,
+   "isUsExport": false
+  },
+  "descriptionModule": {
+   "briefSummary": "A multi-center, randomized, 72-month, parallel- group, non-inferiority, phase III study to compare the effectiveness of roflumilast (Daliresp, 500 mcg quaque die (QD) or alternate regimen) therapy versus azithromycin (250 mg QD, 500 mg QD three times per week, or alternate regimen) to prevent hospitalization or death in a patients at high risk for COPD exacerbations.",
+   "detailedDescription": "RELIANCE is a U.S.-based pragmatic clinical trial funded by the Patient-Centered Outcomes Research Institute (PCORI) to compare long-term use of roflumilast vs. azithromycin in up to 1,250 patients. It is intended to support hospital efforts to reduce the risk of all-cause hospitalization and reduce pre-mature deaths in individuals with chronic obstructive pulmonary disease (COPD) who have been hospitalized in the prior year for a COPD exacerbation. The COPD Patient Powered Research Network (PPRN) and affiliated investigators will conduct the trial in sites in the U.S.\n\nBoth roflumilast and azithromycin have been shown to reduce the risk of COPD exacerbations compared to placebo. However, there has not been a head-to-head comparison of the two medications so the relative harms and benefits of the two medications are unknown. Eligible patients will be randomized (1:1) to receive either a prescription for roflumilast or a prescription for azithromycin, and will be followed for at least 6 and up to 72 months. Patients will be enrolled at participating clinical sites and follow up data will be collected via an online patient portal or via a call center. Baseline and outcome data will also be collected from site medical records.\n\nPragmatic, non-inferiority trial using an intention-to-treat analysis to evaluate whether daily azithromycin is non-inferior to daily roflumilast in patients at high risk of COPD exacerbations. The investigators will randomize individual patients to receive prescriptions for roflumilast or azithromycin (1:1 ratio), stratified by site and current smoking status (yes/no)."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease Severe",
+    "Chronic Bronchitis"
+   ],
+   "keywords": [
+    "Chronic Obstructive Pulmonary Disease",
+    "Chronic Bronchitis",
+    "COPD",
+    "Roflumilast",
+    "Daliresp",
+    "Azithromycin"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "interventionModelDescription": "The trial is a parallel, pragmatic non-inferiority trial with two treatment groups, roflumilast and azithromycin. Up to 1,250 participants will be randomized (1:1) to receive a prescription for one of the two treatments. Treatment assignments will be stratified by site and smoking status (former versus current) using a permuted block design with multiple block sizes.",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "NONE",
+     "maskingDescription": "Treatment assignments will be concealed prior to randomization. Once a patient is assigned to receive a treatment, the clinician, Site Coordinator and patient will not be masked. i.e., will know the treatment assignment"
+    }
+   },
+   "enrollmentInfo": {
+    "count": 1032,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Roflumilast arm",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Participants will receive prescription for Roflumilast (250 mcg/day x 4 weeks, then 500 mcg/day or alternate regimen) x 6 to 72 months",
+     "interventionNames": [
+      "Drug: Roflumilast"
+     ]
+    },
+    {
+     "label": "Azithromycin arm",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Participants will receive prescription for Azithromycin (250 mg/day, or 500 mg three times per week, or alternate regimen) x 6 to 72 months",
+     "interventionNames": [
+      "Drug: Azithromycin"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Roflumilast",
+     "description": "Prescription for Roflumilast (250 mcg/day x 4 weeks, then 500 mcg/day or alternate regimen) x 6 to 72 months",
+     "armGroupLabels": [
+      "Roflumilast arm"
+     ],
+     "otherNames": [
+      "Daliresp"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Azithromycin",
+     "description": "Prescription for Azithromycin (250 mg/day, or 500 mg three times per week, or alternate regimen) x 6 to 72 months",
+     "armGroupLabels": [
+      "Azithromycin arm"
+     ],
+     "otherNames": [
+      "Zithromax"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Time to first all-cause hospitalization or all-cause death",
+     "description": "Composite time-to-event outcome defined as time from randomization to the first occurrence of all-cause hospitalization or all-cause death.",
+     "timeFrame": "Baseline to study exit (up to 72 months)"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Time to first moderate COPD exacerbation, all-cause hospitalization, or all-cause death",
+     "description": "Composite time-to-event outcome defined as time from randomization to the first occurrence of moderate COPD exacerbation, all-cause hospitalization, or all-cause death. Moderate COPD exacerbation is defined as treatment with antibiotics or systemic corticosteroids for a respiratory exacerbation not associated with hospitalization.",
+     "timeFrame": "Baseline to study exit (up to 72 months)"
+    },
+    {
+     "measure": "Time to first moderate COPD exacerbation",
+     "description": "Time from randomization to the first moderate COPD exacerbation.",
+     "timeFrame": "Baseline to study exit (up to 72 months)"
+    },
+    {
+     "measure": "Time to first all-cause hospitalization",
+     "description": "Time from randomization to the first all-cause hospitalization.",
+     "timeFrame": "Baseline to study exit (up to 72 months)"
+    },
+    {
+     "measure": "Time to all-cause death",
+     "description": "Time from randomization to all-cause death.",
+     "timeFrame": "Baseline to study exit (up to 72 months)"
+    },
+    {
+     "measure": "Change in physical function as assessed by the Patient-Reported Outcomes Measurement Information System (PROMIS) scale",
+     "description": "Change in physical function from study registration to 6 months using the PROMIS physical function measure. Higher scores indicate better physical function. Score range 1-5 (i.e., a score of 5 is the most favorable and a score of 1 is least favorable).",
+     "timeFrame": "Measured at study registration, 3 months, and 6 months"
+    },
+    {
+     "measure": "Change in sleep disturbance as assessed by the PROMIS scale",
+     "description": "Change in sleep disturbance from study registration to 6 months using the PROMIS sleep disturbance measure. Lower scores indicate more sleep disturbance. Score range 1-5 (i.e., a score of 1 is most favorable and 5 is least favorable).",
+     "timeFrame": "Measured at study registration 3 months, and 6 months"
+    },
+    {
+     "measure": "Change in fatigue as assessed by the PROMIS scale",
+     "description": "Change in fatigue from study registration to 6 months using the PROMIS fatigue measure. Higher scores indicate greater fatigue. Score range 0-4 (i.e., a score of 0 is most favorable and 4 is least favorable).",
+     "timeFrame": "Measured at study registration 3 months, and 6 months"
+    },
+    {
+     "measure": "Change in anxiety as assessed by the PROMIS scale",
+     "description": "Change in anxiety from study registration to 6 months using the PROMIS anxiety measure. Higher scores indicate greater anxiety. Score range 1-5 (i.e., a score of 1 is most favorable and 5 is least favorable).",
+     "timeFrame": "Measured at study registration, 3 months, and 6 months"
+    },
+    {
+     "measure": "Change in depression as assessed by the PROMIS scale",
+     "description": "Change in depression from study registration to 6 months using the PROMIS depression measure. Higher scores indicate greater depression. Score range 1-5 (i.e., a score of 1 is most favorable and 5 is least favorable).",
+     "timeFrame": "Measured at study registration, 3 months, and 6 months"
+    },
+    {
+     "measure": "Rate of Difficulty hearing or ringing in ears",
+     "description": "Event rate (per person-year) reporting difficulty hearing or ringing in ears during follow-up",
+     "timeFrame": "1 week until study exit (up to 72 months)]"
+    },
+    {
+     "measure": "Rate of Diarrhea",
+     "description": "Event rate (per person-year) reporting diarrhea during follow-up",
+     "timeFrame": "1 week until study exit (up to 72 months)"
+    },
+    {
+     "measure": "Rate of Nausea",
+     "description": "Event rate (per person-year) reporting nausea during follow-up",
+     "timeFrame": "1 week until study exit (up to 72 months"
+    },
+    {
+     "measure": "Number of participants reporting thoughts of suicide or self-harm",
+     "description": "Number of participants reporting suicidal ideation during follow-up",
+     "timeFrame": "1 week until study exit (up to 72 months"
+    },
+    {
+     "measure": "Macrolide-resistant organisms in sputum",
+     "description": "The number of participants with a positive sputum test for macrolide resistant organisms in the subset of participants whose electronic health record included testing while in the study",
+     "timeFrame": "Randomization to study exit (up to 72 months)"
+    },
+    {
+     "measure": "Proportion of participants reporting treatment adherence at 1 week",
+     "description": "Proportion of participants reporting use of assigned treatment at 1 week",
+     "timeFrame": "I week"
+    },
+    {
+     "measure": "Proportion of participants reporting treatment adherence at 3 months",
+     "description": "Proportion of participants reporting use of assigned study treatment at 3 months.",
+     "timeFrame": "3 months"
+    },
+    {
+     "measure": "Proportion of Participants reporting Treatment adherence from 6 months to study exit (up to 72 months)",
+     "description": "For each participant, adherence is defined as the proportion of evaluable follow-up assessments at which the participant reports use of assigned study treatment. The outcome summarizes participant-reported adherence across follow-up from 6 months to study exit (up to 72 months) among participants with at least one evaluable medication use assessment as an event rate (per person year).",
+     "timeFrame": "6 months to study exit (up to 72 months)"
+    },
+    {
+     "measure": "Number of participants who switch to alternate study treatment",
+     "description": "Number of participants with any follow-up report of prescription for the alternative study treatment after randomization.",
+     "timeFrame": "1 week, 3 months, 6 months and every 6 months up to 72 months"
+    },
+    {
+     "measure": "Out of pocket cost for study treatment",
+     "description": "Participant-reported out-of-pocket cost (measured in U.S. dollars) for assigned study treatment.",
+     "timeFrame": "1 week, 3 months, 6 months and every 6 months up to 72 months"
+    },
+    {
+     "measure": "Change in weight (pounds)",
+     "description": "Change from baseline in participant-reported weight (measured in pounds)",
+     "timeFrame": "Measured at baseline, 3 months, and 6 months"
+    },
+    {
+     "measure": "Number of participants who discontinued assigned study treatment",
+     "description": "Number of participants meeting protocol-defined treatment discontinuation, defined as the earliest follow-up assessment at which the participant reports not taking assigned study treatment during the interval since the prior assessment, with no subsequent report of treatment use. Because medication use is collected over recall intervals rather than exact stop dates, discontinuation reflects the earliest follow-up time point consistent with persistent non-use of assigned study treatment.",
+     "timeFrame": "1 week, 3 months, 6 months and every 6 months up to 72 months"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1. Patient and treating clinician considering treatment intensification with roflumilast or azithromycin to reduce the risk of COPD exacerbations\n2. Age ≥ 40 years\n3. Current or past smoker of at least 10 pack-years\n4. Diagnosis by treating clinician of severe COPD and associated chronic bronchitis\n5. Hospitalized with a diagnosis of COPD exacerbation or respiratory complications due to Coronavirus Disease 2019 (COVID 19) in the past 12 months\n6. Current medications include inhaled Long Acting Muscarinic Antagonist (LAMA), Long-Acting Beta-Agonist (LABA) /LAMA, or Inhaled Corticosteroids (ICS) /LABA(note patients prescribed or using Short-Acting Beta-Agonist (SABA), Short-Acting Muscarinic Antagonist (SAMA), or SABA/SAMA on a scheduled basis (e.g., every 6 hours) are eligible since the patient is receiving functional controller therapy)\n7. English or Spanish speaking\n8. Willing and able to provide a contact telephone number\n\nExclusion Criteria:\n\n1. Unable or declines to provide informed consent\n2. Declines to provide social security number, health insurance claims number or Tax Payer ID (as applicable)\n3. History of intolerance to azithromycin or roflumilast that the patient or patient's treating clinician considers sufficiently serious to avoid either treatment option\n4. Current treatment with long-term (more than 30 days) roflumilast, azithromycin or ensifentrine (previous treatment with 1 or more doses of azithromycin, roflumilast or ensifentrine is not an exclusion criterion, as long as the patient and clinician are seeking treatment intensification options and would be willing to use azithromycin or roflumilast, as per randomized treatment assignment.)\n5. Known hypersensitivity to azithromycin, erythromycin, any macrolide or ketolide antibiotic\n6. History of cholestatic jaundice/hepatic dysfunction associated with prior use of azithromycin\n7. Moderate to severe liver impairment (Child-Pugh B or C)\n8. Current pregnancy\n9. Any other clinician-determined exclusion as per the clinician's clinical practice\n10. The clinicians will be provided the FDA-approved prescribing information for roflumilast and azithromycin. The prescribing information includes a list of warnings and precautions that identifies the potential for adverse effects and is intended to support clinical decision-making that takes into account the risks and benefits of roflumilast and azithromycin for each patient.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Jerry Krishnan, MD, PhD",
+     "affiliation": "University of Illinois at Chicago",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Robert Wise, MD",
+     "affiliation": "Johns Hopkins School of Medicine",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "University of Alabama",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "zip": "35233",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "University of Arizona",
+     "city": "Tucson",
+     "state": "Arizona",
+     "zip": "85734",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.22174,
+      "lon": -110.92648
+     }
+    },
+    {
+     "facility": "University of California, Davis Health",
+     "city": "Sacramento",
+     "state": "California",
+     "zip": "95817",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.58157,
+      "lon": -121.4944
+     }
+    },
+    {
+     "facility": "Northwestern",
+     "city": "Chicago",
+     "state": "Illinois",
+     "zip": "60611",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.85003,
+      "lon": -87.65005
+     }
+    },
+    {
+     "facility": "University of Illinois Chicago",
+     "city": "Chicago",
+     "state": "Illinois",
+     "zip": "60612",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.85003,
+      "lon": -87.65005
+     }
+    },
+    {
+     "facility": "NorthShore Hospital",
+     "city": "Glenview",
+     "state": "Illinois",
+     "zip": "60026",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.06975,
+      "lon": -87.78784
+     }
+    },
+    {
+     "facility": "University of Iowa",
+     "city": "Iowa City",
+     "state": "Iowa",
+     "zip": "52242",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.66113,
+      "lon": -91.53017
+     }
+    },
+    {
+     "facility": "University of Kansas",
+     "city": "Kansas City",
+     "state": "Kansas",
+     "zip": "66160",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.11417,
+      "lon": -94.62746
+     }
+    },
+    {
+     "facility": "Ochsner Medical Center",
+     "city": "New Orleans",
+     "state": "Louisiana",
+     "zip": "70121",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.95465,
+      "lon": -90.07507
+     }
+    },
+    {
+     "facility": "Johns Hopkins University",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21224",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "Baystate Health",
+     "city": "Springfield",
+     "state": "Massachusetts",
+     "zip": "01199",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.10148,
+      "lon": -72.58981
+     }
+    },
+    {
+     "facility": "University of Michigan",
+     "city": "Ann Arbor",
+     "state": "Michigan",
+     "zip": "48109",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.27756,
+      "lon": -83.74088
+     }
+    },
+    {
+     "facility": "Henry Ford Health System",
+     "city": "Detroit",
+     "state": "Michigan",
+     "zip": "48202",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.33143,
+      "lon": -83.04575
+     }
+    },
+    {
+     "facility": "University of Missouri, Kansas City",
+     "city": "Kansas City",
+     "state": "Missouri",
+     "zip": "64108",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.09973,
+      "lon": -94.57857
+     }
+    },
+    {
+     "facility": "Lenox Hill/Northern Westchester Hospital (Northwell Health)",
+     "city": "Mount Kisco",
+     "state": "New York",
+     "zip": "10549",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.20426,
+      "lon": -73.72708
+     }
+    },
+    {
+     "facility": "Mount Sinai",
+     "city": "New York",
+     "state": "New York",
+     "zip": "10029",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.71427,
+      "lon": -74.00597
+     }
+    },
+    {
+     "facility": "University of North Carolina, School of Medicine",
+     "city": "Chapel Hill",
+     "state": "North Carolina",
+     "zip": "27599",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.9132,
+      "lon": -79.05584
+     }
+    },
+    {
+     "facility": "Duke",
+     "city": "Durham",
+     "state": "North Carolina",
+     "zip": "27705",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.99403,
+      "lon": -78.89862
+     }
+    },
+    {
+     "facility": "University Hospitals Cleveland Medical Center",
+     "city": "Cleveland",
+     "state": "Ohio",
+     "zip": "44106",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.4995,
+      "lon": -81.69541
+     }
+    },
+    {
+     "facility": "Cleveland Clinic",
+     "city": "Cleveland",
+     "state": "Ohio",
+     "zip": "44195",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.4995,
+      "lon": -81.69541
+     }
+    },
+    {
+     "facility": "Ohio State University",
+     "city": "Columbus",
+     "state": "Ohio",
+     "zip": "43210",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.96118,
+      "lon": -82.99879
+     }
+    },
+    {
+     "facility": "Kaiser Permanente",
+     "city": "Portland",
+     "state": "Oregon",
+     "zip": "97227",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 45.52345,
+      "lon": -122.67621
+     }
+    },
+    {
+     "facility": "Temple University Hospital",
+     "city": "Philadelphia",
+     "state": "Pennsylvania",
+     "zip": "19140",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.95238,
+      "lon": -75.16362
+     }
+    },
+    {
+     "facility": "University of Pittsburg Medical Center",
+     "city": "Pittsburgh",
+     "state": "Pennsylvania",
+     "zip": "15213",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.44062,
+      "lon": -79.99589
+     }
+    },
+    {
+     "facility": "Baylor Scott & White (BSW) Health-North",
+     "city": "Dallas",
+     "state": "Texas",
+     "zip": "75246",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.78306,
+      "lon": -96.80667
+     }
+    },
+    {
+     "facility": "Houston Methodist Hospital",
+     "city": "Houston",
+     "state": "Texas",
+     "zip": "77030",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.76328,
+      "lon": -95.36327
+     }
+    },
+    {
+     "facility": "University of Vermont",
+     "city": "Burlington",
+     "state": "Vermont",
+     "zip": "05401",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 44.47588,
+      "lon": -73.21207
+     }
+    },
+    {
+     "facility": "Providence Health and Services",
+     "city": "Spokane",
+     "state": "Washington",
+     "zip": "99204",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.65966,
+      "lon": -117.42908
+     }
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "YES",
+   "description": "The Inter-University Consortium for Political and Social Research (ICPSR) at the University of Michigan will provide data archiving and dissemination services for RELIANCE. After entering into a Restricted-Use Data Contributor Agreement with ICPSR, the RELIANCE Data Coordinating Center (DCC) will prepare and transfer restricted-use files for the analyzable data set and supporting document to ICPSR. The data files will be prepared per Safe Harbor methods for compliance with the HIPAA Privacy Rule. IPD includes: demographic data, BMI, type of insurance, smoking history, COPD treatments; lung function measurements, comorbidities, use of study assigned treatment, responses to quality of life questions, adverse events, symptoms and information on hospitalizations and death.",
+   "infoTypes": [
+    "STUDY_PROTOCOL",
+    "SAP",
+    "ICF",
+    "ANALYTIC_CODE"
+   ],
+   "timeFrame": "The start date will be after 5/1/2027. Data and document transfer and curation is scheduled to be completed by 5/1/2027 after which PCORI (study funder) will determine the start date based on the publication status of the primary results manuscript or Final Research Report. There is no end date.",
+   "accessCriteria": "Investigators submit requests via ICPSR web-based data access request system. Requests include investigator, research staff and institution information, proposed research purpose/description, specific files needed, signed confidentiality pledges, data security plan, IRB approval or exemption for proposed research, assurance that data use is to develop/contribute to generalizable knowledge, and justification research project can be achieved using the requested data. Requests are evaluated by an independent committee. If approved, ICSPR and Investigator enter into a Restricted Data Use Agreement for Restricted Data in the Virtual Data Enclave (VDE), which describes investigator, research staff and institution obligations including data use only for described project, compliance with data security plan, access limited to persons identified in agreement, and no attempts to identify private persons are permitted. Data is made available via the VDE, a secure remote-access workspace.",
+   "url": "https://www.icpsr.umich.edu/sites/icpsr/find-data"
+  }
+ },
+ "documentSection": {
+  "largeDocumentModule": {
+   "largeDocs": [
+    {
+     "typeAbbrev": "Prot",
+     "hasProtocol": true,
+     "hasSap": false,
+     "hasIcf": false,
+     "label": "Study Protocol",
+     "date": "2026-05-06",
+     "uploadDate": "2026-07-15T16:22",
+     "filename": "Prot_001.pdf",
+     "size": 765472
+    },
+    {
+     "typeAbbrev": "SAP",
+     "hasProtocol": false,
+     "hasSap": true,
+     "hasIcf": false,
+     "label": "Statistical Analysis Plan",
+     "date": "2026-06-03",
+     "uploadDate": "2026-07-15T16:23",
+     "filename": "SAP_002.pdf",
+     "size": 342946
+    },
+    {
+     "typeAbbrev": "ICF",
+     "hasProtocol": false,
+     "hasSap": false,
+     "hasIcf": true,
+     "label": "Informed Consent Form: Central consent",
+     "date": "2023-06-23",
+     "uploadDate": "2026-07-15T16:35",
+     "filename": "ICF_003.pdf",
+     "size": 478546
+    },
+    {
+     "typeAbbrev": "ICF",
+     "hasProtocol": false,
+     "hasSap": false,
+     "hasIcf": true,
+     "label": "Informed Consent Form: P-site consent example",
+     "date": "2023-06-23",
+     "uploadDate": "2026-07-15T16:52",
+     "filename": "ICF_004.pdf",
+     "size": 529523
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029481",
+     "term": "Bronchitis, Chronic"
+    },
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D001991",
+     "term": "Bronchitis"
+    },
+    {
+     "id": "D012141",
+     "term": "Respiratory Tract Infections"
+    },
+    {
+     "id": "D007239",
+     "term": "Infections"
+    },
+    {
+     "id": "D001982",
+     "term": "Bronchial Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C424423",
+     "term": "Roflumilast"
+    },
+    {
+     "id": "D017963",
+     "term": "Azithromycin"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D004917",
+     "term": "Erythromycin"
+    },
+    {
+     "id": "D018942",
+     "term": "Macrolides"
+    },
+    {
+     "id": "D061065",
+     "term": "Polyketides"
+    },
+    {
+     "id": "D007783",
+     "term": "Lactones"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

@@ -54,6 +54,9 @@ export function useScenarioCompute(designId: string | undefined, levers: Levers,
   const currentError = currentFailure?.key === requestKey ? currentFailure.message : null;
   const ready = (atBaseline && !!baseline) || (currentState?.designKey === designKey && currentState.leverKey === key);
   const computing = active && !ready && !currentError;
+  // the current effect only needs to know whether the baseline covers it; a baseline arriving
+  // for non-default levers must not abort and resend their compute
+  const skipCurrent = atBaseline && !!baseline;
 
   useEffect(() => {
     if (!designId || !active) return;
@@ -72,7 +75,7 @@ export function useScenarioCompute(designId: string | undefined, levers: Levers,
   }, [designId, designVersion, designKey, active]);
 
   useEffect(() => {
-    if (!designId || !active || (atBaseline && baseline)) return;
+    if (!designId || !active || skipCurrent) return;
     const ctrl = new AbortController();
     setCurrentError(null);
     const timer = window.setTimeout(() => {
@@ -94,7 +97,7 @@ export function useScenarioCompute(designId: string | undefined, levers: Levers,
     };
     // `key` captures every lever value; `levers` identity changes on each render
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [designId, designVersion, designKey, key, requestKey, baseline, active, atBaseline]);
+  }, [designId, designVersion, designKey, key, requestKey, skipCurrent, active]);
 
   return { baseline, current, computing, baselineError, currentError, retry: () => setAttempt((n) => n + 1) };
 }

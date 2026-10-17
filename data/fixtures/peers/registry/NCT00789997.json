@@ -1,0 +1,955 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT00789997",
+   "orgStudyIdInfo": {
+    "id": "2007791-01H"
+   },
+   "organization": {
+    "fullName": "Ottawa Hospital Research Institute",
+    "class": "OTHER"
+   },
+   "briefTitle": "TNF-alpha Antagonists for AECOPD: A Randomized, Double-Blind, Placebo-Controlled Pilot Trial",
+   "officialTitle": "TNF-alpha Antagonists for Acute Exacerbations of COPD: A Randomized, Double-Blind, Placebo-Controlled Pilot Trial"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2013-08",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2008-11"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2011-08",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2011-10",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2008-11-12",
+   "studyFirstSubmitQcDate": "2008-11-12",
+   "studyFirstPostDateStruct": {
+    "date": "2008-11-13",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2013-06-04",
+   "resultsFirstSubmitQcDate": "2016-03-29",
+   "resultsFirstPostDateStruct": {
+    "date": "2016-04-11",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2016-03-29",
+   "lastUpdatePostDateStruct": {
+    "date": "2016-04-11",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Ottawa Hospital Research Institute",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "The purpose of this study is to determine whether treatment with antibiotics plus a TNFalpha antagonist will provide more effective treatment for acute COPD exacerbation compared to the current standard treatment of antibiotics plus prednisone.",
+   "detailedDescription": "Acute exacerbations of COPD (AECOPD)are usually treated with steroids and antibiotics. Currently this conventional therapy has significant side effects including osteoporosis, cataracts,and suppression of the immune system. Studies have suggested that up to 24% of inpatients and 27% of outpatients fail this treatment by 4 weeks. During an acute exacerbation of COPD, the inflammatory process increases. Studies have shown the TNF-alpha cytokines appears to play a major role. Etanercept is a TNF alpha inhibitor. It inactivates TNF alpha cytokines by blocking their interaction with their cellular receptors. This study will compare the treatment of acute exacerbations of COPD with: 1) Levofloxacin 750 mg daily for 10 days + prednisone 40 mg daily for 10 days, or 2) Levofloxacin 750 mg daily for 10 days + etanercept 50 mg subcutaneous given on the day of randomization and one week later. Patients randomized to group 1 (the control group) will receive placebo subcutaneous injections, and patients randomized to group 2 (the experimental group) will receive placebo prednisone capsules."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "COPD Exacerbation"
+   ],
+   "keywords": [
+    "COPD Exacerbation",
+    "Etanercept",
+    "TNF alpha",
+    "Randomized"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 81,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Etanercept",
+     "type": "EXPERIMENTAL",
+     "description": "etanercept 50 mg subcutaneous given on the day of randomization and one week later prednisone placebo po daily for 10 days Levofloxacin 750 mg po daily for 10 days.",
+     "interventionNames": [
+      "Drug: Etanercept",
+      "Drug: levofloxacin"
+     ]
+    },
+    {
+     "label": "Prednisone",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "prednisone 40 mg daily for 10 days etanercept placebo subcutaneous given on the day of randomization and one week later Levofloxacin 750 mg daily for 10 days.",
+     "interventionNames": [
+      "Drug: Prednisone",
+      "Drug: levofloxacin"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Prednisone",
+     "description": "prednisone 40 mg daily for 10 days or placebo prednisone",
+     "armGroupLabels": [
+      "Prednisone"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Etanercept",
+     "description": "etanercept 50 mg subcutaneous given on the day of randomization and one week later or placebo subcutaneous injection",
+     "armGroupLabels": [
+      "Etanercept"
+     ],
+     "otherNames": [
+      "Enbrel"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "levofloxacin",
+     "description": "Levofloxacin 750 mg daily for 10 days.",
+     "armGroupLabels": [
+      "Etanercept",
+      "Prednisone"
+     ],
+     "otherNames": [
+      "levaquin"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Change in Lung Function (Forced Expiratory Volume in 1 Second (FEV1)",
+     "description": "FEV1 was obtained using calibrated spirometers at approximately the same time of day at all visits throughout the study. The highest acceptable FEV1 and the highest FVC measurement each obtained on any of three blows (even if not from the same curve) meeting the American Thoracic Society criteria constituted the data for that test set.\n\nNot all participants had Day 14 FEV1 measures collected",
+     "timeFrame": "Day 0 to Day 14"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Number of Participants With Treatment Failure by 90 Days Assignment",
+     "description": "In the etanercept group 16/40 (40%) failed treatment compared with 12/38 (32%) in the prednisone group.",
+     "timeFrame": "Day 0 to Day 90"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\nBoth inpatients and outpatients with acute COPD exacerbation will be selected for randomization. Patients will be considered to fulfill the diagnosis of AECOPD if they meet the following 5 criteria:\n\n1. Patients must have had a previous diagnosis of chronic bronchitis, emphysema or COPD established by a physician.\n2. Patients must have evidence of airflow obstruction on presentation, defined as an forced expiratory volume at one second (FEV1) equal to or less than 70% of predicted and a FEV1 / forced vital capacity (FVC) ratio less 70%.\n3. Patients must be \\> 35 years old.\n4. Patients must have a minimum history of 10 pack years smoking.\n5. Patients must be experiencing an acute exacerbation of COPD and must meet at least two of the following three clinical criteria for acute COPD exacerbation as defined by Anthonisen:\n\n   * increased chronic baseline dyspnea,\n   * increased sputum volume or increased sputum purulence\n\nThe above complaints had to have necessitated the emergency department or physician visit.\n\nExclusion Criteria:\n\n1. Respiratory failure necessitating admission to an intensive care unit or necessitating use of mechanical invasive or non-invasive (BIPAP) mechanical ventilation.\n2. Physician diagnosed asthma.\n3. Any patient who has used oral or injectable corticosteroids during the month preceding trial entry will be excluded,except for patients who have received a single dose of oral or injectable steroids (up to the equivalent of 125 mg of methylprednisolone) in the emergency department prior to randomization. (Note that standard clinical practice in emergency departments is to treat these patients with oral or intravenous steroids on presentation to the ED. Since it will be functionally impossible to randomize patients prior to initial ED treatment we will allow randomization of patients who have been given a single dose of steroid in the ED).\n4. History of chronic lung disease other than COPD. Patients with a history of bronchiectasis, cystic fibrosis, lung cancer and interstitial lung disease.\n5. Pneumonia or congestive heart failure or suspected malignancy on chest x-ray (CXR) prior to randomization.\n6. Patients with a history of infection, or suspected current infection, with mycobacteria tuberculosis, non-tuberculous mycobacteria, or fungal infection.\n7. Patients not able to perform an FEV1 assessment.\n8. Patients with known adverse reaction or intolerance to systemic steroids or TNF-alpha antagonists.\n9. Patients with a history of multiple sclerosis or demyelinating disease (etanercept is contraindicated in these patients).\n10. Inability to provide informed consent or comply with the study protocol due to cognitive impairment, language barrier, or distance \\> 100 kilometres from the study centre.\n11. Patients with a history of HIV or other immuno-compromising diseases.\n12. Patients with a known malignancy within the past 5 years (except for squamous or basal cell carcinoma of the skin that was treated with no evidence of recurrence).\n13. Patients who have serum white blood cell count (WBC) \\< 3,000 or platelet count \\< 100,000 at time of randomization.\n14. Patients who are pregnant or nursing will be excluded. Females of child-bearing age will be required to have a negative serum or urine pregnancy test before randomization.\n15. Patients with suspected sepsis- ie. those with temperature \\> 38.5 degrees or serum WBC\\> 20 000 will be excluded.\n16. Patients who have a history or active infection with viral Hepatitis B or Hepatitis C.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "35 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Shawn Aaron, MD, MSc",
+     "affiliation": "Ottawa Hospital Research Institute",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "23161645",
+     "type": "DERIVED",
+     "citation": "Aaron SD, Vandemheen KL, Maltais F, Field SK, Sin DD, Bourbeau J, Marciniuk DD, FitzGerald JM, Nair P, Mallick R. TNFalpha antagonists for acute exacerbations of COPD: a randomised double-blind controlled trial. Thorax. 2013 Feb;68(2):142-8. doi: 10.1136/thoraxjnl-2012-202432. Epub 2012 Nov 17."
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Etanercept",
+     "description": "Etanercept + Levofloxacin + placebo prednisone capsules : Levofloxacin 750 mg daily for 10 days + etanercept 50 mg subcutaneous given on the day of randomization and one week later + placebo prednisone capsule, 1 daily for 10 days."
+    },
+    {
+     "id": "FG001",
+     "title": "Prednisone",
+     "description": "Prednisone + Levofloxacin + placebo Etanercept subcutaneous injections : Levofloxacin 750 mg daily for 10 days + prednisone 40 mg daily for 10 days + placebo subcutaneous injections given on day of randomization and one week later."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "41"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "40"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "40"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "38"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "2"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Etanercept",
+     "description": "Etanercept + Levofloxacin + placebo prednisone capsules : Levofloxacin 750 mg daily for 10 days + etanercept 50 mg subcutaneous given on the day of randomization and one week later + placebo prednisone capsule, 1 daily for 10 days."
+    },
+    {
+     "id": "BG001",
+     "title": "Prednisone",
+     "description": "Prednisone + Levofloxacin + placebo Etanercept subcutaneous injections : Levofloxacin 750 mg daily for 10 days + prednisone 40 mg daily for 10 days + placebo subcutaneous injections given on day of randomization and one week later."
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "41"
+      },
+      {
+       "groupId": "BG001",
+       "value": "40"
+      },
+      {
+       "groupId": "BG002",
+       "value": "81"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "69.0",
+           "spread": "8.6"
+          },
+          {
+           "groupId": "BG001",
+           "value": "65.1",
+           "spread": "9.7"
+          },
+          {
+           "groupId": "BG002",
+           "value": "67.1",
+           "spread": "9.3"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "13"
+          },
+          {
+           "groupId": "BG001",
+           "value": "17"
+          },
+          {
+           "groupId": "BG002",
+           "value": "30"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "28"
+          },
+          {
+           "groupId": "BG001",
+           "value": "23"
+          },
+          {
+           "groupId": "BG002",
+           "value": "51"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Change in Lung Function (Forced Expiratory Volume in 1 Second (FEV1)",
+     "description": "FEV1 was obtained using calibrated spirometers at approximately the same time of day at all visits throughout the study. The highest acceptable FEV1 and the highest FVC measurement each obtained on any of three blows (even if not from the same curve) meeting the American Thoracic Society criteria constituted the data for that test set.\n\nNot all participants had Day 14 FEV1 measures collected",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "percentage of change in FEV1",
+     "timeFrame": "Day 0 to Day 14",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Etanercept",
+       "description": "Etanercept + Levofloxacin + placebo prednisone capsules : Levofloxacin 750 mg daily for 10 days + etanercept 50 mg subcutaneous given on the day of randomization and one week later + placebo prednisone capsule, 1 daily for 10 days."
+      },
+      {
+       "id": "OG001",
+       "title": "Prednisone",
+       "description": "Prednisone + Levofloxacin + placebo Etanercept subcutaneous injections : Levofloxacin 750 mg daily for 10 days + prednisone 40 mg daily for 10 days + placebo subcutaneous injections given on day of randomization and one week later."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "39"
+        },
+        {
+         "groupId": "OG001",
+         "value": "37"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "15.2",
+           "spread": "5.7"
+          },
+          {
+           "groupId": "OG001",
+           "value": "20.1",
+           "spread": "5.0"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Number of Participants With Treatment Failure by 90 Days Assignment",
+     "description": "In the etanercept group 16/40 (40%) failed treatment compared with 12/38 (32%) in the prednisone group.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "Day 0 to Day 90",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Etanercept",
+       "description": "Etanercept + Levofloxacin + placebo prednisone capsules : Levofloxacin 750 mg daily for 10 days + etanercept 50 mg subcutaneous given on the day of randomization and one week later + placebo prednisone capsule, 1 daily for 10 days."
+      },
+      {
+       "id": "OG001",
+       "title": "Prednisone",
+       "description": "Prednisone + Levofloxacin + placebo Etanercept subcutaneous injections : Levofloxacin 750 mg daily for 10 days + prednisone 40 mg daily for 10 days + placebo subcutaneous injections given on day of randomization and one week later."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "40"
+        },
+        {
+         "groupId": "OG001",
+         "value": "38"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "16"
+          },
+          {
+           "groupId": "OG001",
+           "value": "12"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "1",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Etanercept",
+     "description": "Etanercept + Levofloxacin + placebo prednisone capsules : Levofloxacin 750 mg daily for 10 days + etanercept 50 mg subcutaneous given on the day of randomization and one week later + placebo prednisone capsule, 1 daily for 10 days.",
+     "seriousNumAffected": 4,
+     "seriousNumAtRisk": 41,
+     "otherNumAffected": 13,
+     "otherNumAtRisk": 41
+    },
+    {
+     "id": "EG001",
+     "title": "Prednisone",
+     "description": "Prednisone + Levofloxacin + placebo Etanercept subcutaneous injections : Levofloxacin 750 mg daily for 10 days + prednisone 40 mg daily for 10 days + placebo subcutaneous injections given on day of randomization and one week later.",
+     "seriousNumAffected": 7,
+     "seriousNumAtRisk": 40,
+     "otherNumAffected": 12,
+     "otherNumAtRisk": 40
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Death",
+     "organSystem": "Cardiac disorders",
+     "notes": "Cardiopulmonary Arrest",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 41
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 40
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 41
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 40
+      }
+     ]
+    },
+    {
+     "term": "Pneumothorax",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 41
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 40
+      }
+     ]
+    },
+    {
+     "term": "Lung Cancer",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 41
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 40
+      }
+     ]
+    },
+    {
+     "term": "Fall",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 41
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 40
+      }
+     ]
+    },
+    {
+     "term": "Myocardial infarction/unstable angina",
+     "organSystem": "Cardiac disorders",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 41
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 40
+      }
+     ]
+    },
+    {
+     "term": "Severe Diarrhoea",
+     "organSystem": "Gastrointestinal disorders",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 41
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 40
+      }
+     ]
+    },
+    {
+     "term": "Rectal Occlusion",
+     "organSystem": "Gastrointestinal disorders",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 41
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 40
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Pneumonia",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 41
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 40
+      }
+     ]
+    },
+    {
+     "term": "Urinary Tract Infection",
+     "organSystem": "Renal and urinary disorders",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 41
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 40
+      }
+     ]
+    },
+    {
+     "term": "Sinusitis/pharyngitis",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 3,
+       "numAffected": 3,
+       "numAtRisk": 41
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 40
+      }
+     ]
+    },
+    {
+     "term": "Osteomyelitis",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 41
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 40
+      }
+     ]
+    },
+    {
+     "term": "Leg Oedema",
+     "organSystem": "Skin and subcutaneous tissue disorders",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 41
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 40
+      }
+     ]
+    },
+    {
+     "term": "Hyperglycaemia",
+     "organSystem": "Blood and lymphatic system disorders",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 41
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 40
+      }
+     ]
+    },
+    {
+     "term": "Achilles Tendonitis",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 2,
+       "numAffected": 2,
+       "numAtRisk": 41
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 4,
+       "numAffected": 4,
+       "numAtRisk": 40
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictiveAgreement": false
+   },
+   "pointOfContact": {
+    "title": "Dr Shawn Aaron",
+    "organization": "The Ottawa Hospital Research Institute",
+    "email": "saaron@ohri.ca"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16",
+   "removedCountries": [
+    "Canada"
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D011241",
+     "term": "Prednisone"
+    },
+    {
+     "id": "D000068800",
+     "term": "Etanercept"
+    },
+    {
+     "id": "D064704",
+     "term": "Levofloxacin"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D011244",
+     "term": "Pregnadienediols"
+    },
+    {
+     "id": "D011245",
+     "term": "Pregnadienes"
+    },
+    {
+     "id": "D011278",
+     "term": "Pregnanes"
+    },
+    {
+     "id": "D013256",
+     "term": "Steroids"
+    },
+    {
+     "id": "D000072473",
+     "term": "Fused-Ring Compounds"
+    },
+    {
+     "id": "D011083",
+     "term": "Polycyclic Compounds"
+    },
+    {
+     "id": "D007141",
+     "term": "Immunoglobulin Fc Fragments"
+    },
+    {
+     "id": "D007128",
+     "term": "Immunoglobulin Fragments"
+    },
+    {
+     "id": "D010446",
+     "term": "Peptide Fragments"
+    },
+    {
+     "id": "D010455",
+     "term": "Peptides"
+    },
+    {
+     "id": "D000602",
+     "term": "Amino Acids, Peptides, and Proteins"
+    },
+    {
+     "id": "D007127",
+     "term": "Immunoglobulin Constant Regions"
+    },
+    {
+     "id": "D007136",
+     "term": "Immunoglobulins"
+    },
+    {
+     "id": "D007162",
+     "term": "Immunoproteins"
+    },
+    {
+     "id": "D001798",
+     "term": "Blood Proteins"
+    },
+    {
+     "id": "D011506",
+     "term": "Proteins"
+    },
+    {
+     "id": "D012712",
+     "term": "Serum Globulins"
+    },
+    {
+     "id": "D005916",
+     "term": "Globulins"
+    },
+    {
+     "id": "D018124",
+     "term": "Receptors, Tumor Necrosis Factor"
+    },
+    {
+     "id": "D018121",
+     "term": "Receptors, Cytokine"
+    },
+    {
+     "id": "D011971",
+     "term": "Receptors, Immunologic"
+    },
+    {
+     "id": "D011956",
+     "term": "Receptors, Cell Surface"
+    },
+    {
+     "id": "D008565",
+     "term": "Membrane Proteins"
+    },
+    {
+     "id": "D015242",
+     "term": "Ofloxacin"
+    },
+    {
+     "id": "D024841",
+     "term": "Fluoroquinolones"
+    },
+    {
+     "id": "D042462",
+     "term": "4-Quinolones"
+    },
+    {
+     "id": "D015363",
+     "term": "Quinolones"
+    },
+    {
+     "id": "D011804",
+     "term": "Quinolines"
+    },
+    {
+     "id": "D006574",
+     "term": "Heterocyclic Compounds, 2-Ring"
+    },
+    {
+     "id": "D000072471",
+     "term": "Heterocyclic Compounds, Fused-Ring"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

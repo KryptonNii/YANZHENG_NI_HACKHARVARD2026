@@ -1,0 +1,1744 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01463644",
+   "orgStudyIdInfo": {
+    "id": "RP11-3588"
+   },
+   "organization": {
+    "fullName": "McMaster University",
+    "class": "OTHER"
+   },
+   "briefTitle": "Mepolizumab in Chronic Obstructive Pulmonary Diseases (COPD) With Eosinophilic Bronchitis",
+   "officialTitle": "Mepolizumab in COPD With Eosinophilic Bronchitis: A Randomized Clinical Trial"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2024-11",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2012-01"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2015-08",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2015-09",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2011-10-28",
+   "studyFirstSubmitQcDate": "2011-11-01",
+   "studyFirstPostDateStruct": {
+    "date": "2011-11-02",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2017-06-06",
+   "resultsFirstSubmitQcDate": "2025-09-22",
+   "resultsFirstPostDateStruct": {
+    "date": "2025-09-24",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2025-09-22",
+   "lastUpdatePostDateStruct": {
+    "date": "2025-09-24",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "McMaster University",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false
+  },
+  "descriptionModule": {
+   "briefSummary": "Some patients with chronic obstructive pulmonary diseases (COPD) have large number of specific white blood cells called eosinophils in their airways. These cells are also responsible for causing episodes of worsened respiratory symptoms (exacerbations) and often cause irreversible damage to the airways . This subset of COPD patients often require oral steroids to bring down the number of eosinophils in their airways. Steroids have harmful effects on several of our body systems like bones, blood pressure, blood glucose control and can cause recurrent infections. Mepolizumab is a drug that specifically targets eosinophils reducing the number in the airway. This drug has been shown to be effective in decreasing exacerbation rates and time to exacerbation in asthma patients with eosinophils in their airways. Targeting eosinophils in COPD patients has been shown to reduce severe exacerbations. Hence it is likely that COPD patients with eosinophils in their airways will benefit similarly and have reduced rates and time to exacerbation.\n\nStudy Hypothesis:Does mepolizumab decrease sputum eosinophils in patients with fixed airflow obstruction (COPD) and eosinophilic bronchitis?",
+   "detailedDescription": "It is thus likely that a specific treatment such as anti-IL5 directed against eosinophils would be superior to the current standard treatment in decreasing sputum eosinophil counts and exacerbations and decrease structural changes (remodelling) in patients with COPD who continue to have eosinophils in their airway and whose airway disease has an eosinophil-driven component as evidenced by persistent airway eosinophilia."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Diseases",
+    "Chronic Airways Limitation",
+    "Bronchitis"
+   ],
+   "keywords": [
+    "Mepolizumab",
+    "COPD",
+    "eosinophilic bronchitis",
+    "exacerbation",
+    "anti-interleukin 5 (IL5)"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 18,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "mepolizumab",
+     "type": "ACTIVE_COMPARATOR",
+     "interventionNames": [
+      "Drug: Mepolizumab"
+     ]
+    },
+    {
+     "label": "placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "interventionNames": [
+      "Drug: placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Mepolizumab",
+     "description": "This is an anti IL-5 which is given once a month intravenously at the dose of 750 mg.",
+     "armGroupLabels": [
+      "mepolizumab"
+     ],
+     "otherNames": [
+      "SB-240563"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "placebo",
+     "description": "The placebo will consist of 100 mL normal saline solution (0.9%, 154 mmol/L sodium chloride).",
+     "armGroupLabels": [
+      "placebo"
+     ],
+     "otherNames": [
+      "Normal saline"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Percentage Decrease of Sputum Eosinophils From Baseline to End of Therapy (6 Months)",
+     "description": "The results will be expressed as absolute changes in percent sputum eosinophil counts from baseline to end of therapy (at 6 months).\n\nChange is difference in sputum eosinophils between baseline/time zero to end of therapy/6 months.\n\nA larger number represents a greater degree in the reduction of sputum eosinophils.",
+     "timeFrame": "6 months"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Proportion of Patients With a Major Exacerbation.",
+     "description": "Exacerbation: a sustained worsening of the patient's respiratory condition, from the stable state and beyond normal day-to-day variations, necessitating a change in regular medication in a patient with underlying COPD Major exacerbation will be defined as a symptomatic deterioration requiring treatment with antibiotics, oral or intravenous corticosteroids, hospitalization, or a combination of these.",
+     "timeFrame": "Baseline to 6 months"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Diagnosis: An established clinical history of COPD in accordance with the definition by the American Thoracic Society/European Respiratory Society as follows: Chronic obstructive pulmonary disease is a preventable and treatable disease state characterized by airflow limitation that is not fully reversible. The airflow limitation is usually progressive and is associated with an abnormal inflammatory response of the lungs to noxious particles or gases, primarily caused by cigarette smoking. Although COPD affects the lungs, it also produces significant systemic consequences\n* Sputum eosinophils \\> 3% at randomization and on at least one occasion in the past 2 years. If this historic data is not available, documented improvement in Forced expired volume in 1 second (FEV1) of at least 12% with a course of prednisone in the past 2 years will be used as a surrogate for the presence of airway eosinophilia\n* FEV1/Vital Capacity (VC) \\< 70% and FEV1 \\< 60% of predicted normal values calculated using NHANES III reference equations at Screening Visit\n* At least one major exacerbation requiring prednisone in the preceding 12 months. If patients are currently well controlled by optimizing their sputum cell counts (eosinophils \\< 2%), they should have documented history of exacerbations when their eosinophilia was uncontrolled.\n* A signed and dated written informed consent prior to study participation.\n* Smoking History: Current or former cigarette smokers with a history of cigarette smoking of greater than 10 pack-years \\[number of pack years = (number of cigarettes per day/20) x number of years smoked (e.g., 20 cigarettes per day for 10 years, or 10 cigarettes per day for 20 years\\]. Former smokers are defined as those who have stopped smoking for at least 6 months prior to Screening Visit\n* Male or female adults. A female is eligible to enter and participate in the study if she is either of Non-child bearing potential or is of child bearing age and has a negative pregnancy test at screening, and agrees to acceptable contraceptive methods used consistently and correctly\n\nExclusion Criteria:\n\n* Current asthma (12% reversibility to a bronchodilator)\n* Sputum eosinophils \\< 3% on fluticasone (or equivalent) of 250µg bid.\n* Inability to use salmeterol or tiotropium\n* Significant co-morbidity that prevents from participating in the study\n* Known bronchiectasis or immune deficiency disorders that would predispose the patients to recurrent infections.\n* Pregnancy or intent to become pregnant and lactating females\n* Drug or Alcohol Abuse: A known or suspected history of alcohol or drug abuse within 2 years prior to Screening Visit",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Parameswaran Nair, MD,PhD,FRCP",
+     "affiliation": "Associate Professor of Medicine,Division of Respirology, McMaster University",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Firestone Institute of Respiratory Health, St Joseph's Hospital",
+     "city": "Hamilton",
+     "state": "Ontario",
+     "zip": "L8N 4A6",
+     "country": "Canada",
+     "geoPoint": {
+      "lat": 43.25011,
+      "lon": -79.84963
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "28298405",
+     "type": "RESULT",
+     "citation": "Dasgupta A, Kjarsgaard M, Capaldi D, Radford K, Aleman F, Boylan C, Altman LC, Wight TN, Parraga G, O'Byrne PM, Nair P. A pilot randomised clinical trial of mepolizumab in COPD with eosinophilic bronchitis. Eur Respir J. 2017 Mar 15;49(3):1602486. doi: 10.1183/13993003.02486-2016. Print 2017 Mar. No abstract available."
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "UNDECIDED"
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "Eligible adult patients were enrolled by baseline post-bronchodilator FEV1/VC\\<70% and post bronchodilator FEV1 \\<60% predicted), greater than 10 pack years and sputum eosinophils greater than/equal to 3%.\n\nPatients were then randomized to either mepolizumab 750 mg every 4 weeks (Q4W) or matched placebo in a 1:1 ratio.",
+   "recruitmentDetails": "Patients who met eligibility criteria after the screening visit entered a 24 week double-blind treatment period followed by one follow-up visit.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "Mepolizumab",
+     "description": "Mepolizumab: This is an anti IL-5 which is given once a month intravenously at the dose of 750 mg."
+    },
+    {
+     "id": "FG001",
+     "title": "Placebo",
+     "description": "placebo: The placebo consisted of 100 mL normal saline solution (0.9%, 154 mmol/L sodium chloride)."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "8"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "10"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "8"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "9"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "Mepolizumab",
+     "description": "Mepolizumab: This is an anti interleukin-5 (IL-5) which is given once a month intravenously at the dose of 750 mg."
+    },
+    {
+     "id": "BG001",
+     "title": "Placebo",
+     "description": "placebo: The placebo consisted of 100 mL normal saline solution (0.9%, 154 mmol/L sodium chloride)."
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "8"
+      },
+      {
+       "groupId": "BG001",
+       "value": "10"
+      },
+      {
+       "groupId": "BG002",
+       "value": "18"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "65",
+           "spread": "6.31"
+          },
+          {
+           "groupId": "BG001",
+           "value": "67",
+           "spread": "5.89"
+          },
+          {
+           "groupId": "BG002",
+           "value": "66",
+           "spread": "5.97"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "4"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1"
+          },
+          {
+           "groupId": "BG002",
+           "value": "5"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "4"
+          },
+          {
+           "groupId": "BG001",
+           "value": "9"
+          },
+          {
+           "groupId": "BG002",
+           "value": "13"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Total cell count/g of sputum",
+     "paramType": "MEDIAN",
+     "dispersionType": "FULL_RANGE",
+     "unitOfMeasure": "cells per gram of sputum",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "4.10",
+           "lowerLimit": "0.90",
+           "upperLimit": "33.10"
+          },
+          {
+           "groupId": "BG001",
+           "value": "11.6",
+           "lowerLimit": "1.60",
+           "upperLimit": "32.50"
+          },
+          {
+           "groupId": "BG002",
+           "value": "8.20",
+           "lowerLimit": "0.9",
+           "upperLimit": "33.10"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sputum eosinophil count (%)",
+     "paramType": "MEDIAN",
+     "dispersionType": "FULL_RANGE",
+     "unitOfMeasure": "percentage of eosinophils",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "11",
+           "lowerLimit": "3.00",
+           "upperLimit": "23.30"
+          },
+          {
+           "groupId": "BG001",
+           "value": "7.35",
+           "lowerLimit": "3.70",
+           "upperLimit": "37.70"
+          },
+          {
+           "groupId": "BG002",
+           "value": "10.10",
+           "lowerLimit": "3.00",
+           "upperLimit": "37.70"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sputum neutrophil count (%)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "percentage",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "54.5",
+           "spread": "15.2"
+          },
+          {
+           "groupId": "BG001",
+           "value": "70.9",
+           "spread": "15.7"
+          },
+          {
+           "groupId": "BG002",
+           "value": "63.6",
+           "spread": "17.22"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Blood eosinophil count",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "cells/mm^3",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "0.69",
+           "spread": "0.50"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0.33",
+           "spread": "0.29"
+          },
+          {
+           "groupId": "BG002",
+           "value": "0.5",
+           "spread": "0.42"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Pre bronchodilator forced expiratory volume in 1 second (FEV1)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "forced expiratory volume in litres",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1.35",
+           "spread": "0.49"
+          },
+          {
+           "groupId": "BG001",
+           "value": "0.99",
+           "spread": "0.28"
+          },
+          {
+           "groupId": "BG002",
+           "value": "1.10",
+           "spread": "0.42"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Pre bronchodilator FEV1%",
+     "paramType": "MEDIAN",
+     "dispersionType": "FULL_RANGE",
+     "unitOfMeasure": "percentage",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "55.00",
+           "lowerLimit": "29.00",
+           "upperLimit": "69.00"
+          },
+          {
+           "groupId": "BG001",
+           "value": "29.50",
+           "lowerLimit": "27.00",
+           "upperLimit": "47.00"
+          },
+          {
+           "groupId": "BG002",
+           "value": "34.00",
+           "lowerLimit": "27.00",
+           "upperLimit": "69.00"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Post bronchodilator FEV1",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "litres",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "1.53",
+           "spread": "0.57"
+          },
+          {
+           "groupId": "BG001",
+           "value": "1.24",
+           "spread": "0.52"
+          },
+          {
+           "groupId": "BG002",
+           "value": "1.40",
+           "spread": "0.54"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Postbronchodilator FEV1%",
+     "paramType": "MEDIAN",
+     "dispersionType": "FULL_RANGE",
+     "unitOfMeasure": "percentage",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "58.50",
+           "lowerLimit": "29.00",
+           "upperLimit": "69.00"
+          },
+          {
+           "groupId": "BG001",
+           "value": "35.00",
+           "lowerLimit": "25.00",
+           "upperLimit": "67.00"
+          },
+          {
+           "groupId": "BG002",
+           "value": "45.00",
+           "lowerLimit": "25.00",
+           "upperLimit": "69.00"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Pre bronchodilator slow vital capacity (SVC)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "litres",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "2.69",
+           "spread": "0.68"
+          },
+          {
+           "groupId": "BG001",
+           "value": "2.85",
+           "spread": "0.46"
+          },
+          {
+           "groupId": "BG002",
+           "value": "2.80",
+           "spread": "0.56"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Post bronchodilator SVC",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "litres",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "2.79",
+           "spread": "0.74"
+          },
+          {
+           "groupId": "BG001",
+           "value": "3.09",
+           "spread": "0.76"
+          },
+          {
+           "groupId": "BG002",
+           "value": "3.00",
+           "spread": "0.75"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Post bronchodilator FEV1/SVC",
+     "paramType": "MEDIAN",
+     "dispersionType": "FULL_RANGE",
+     "unitOfMeasure": "percentage",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "55.11",
+           "lowerLimit": "35.88",
+           "upperLimit": "63.77"
+          },
+          {
+           "groupId": "BG001",
+           "value": "37.21",
+           "lowerLimit": "29.41",
+           "upperLimit": "51.02"
+          },
+          {
+           "groupId": "BG002",
+           "value": "44.00",
+           "lowerLimit": "29.40",
+           "upperLimit": "63.80"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Total Lung Capacity (TLC)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "litres",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "5.20",
+           "spread": "0.85"
+          },
+          {
+           "groupId": "BG001",
+           "value": "6.60",
+           "spread": "1.01"
+          },
+          {
+           "groupId": "BG002",
+           "value": "5.90",
+           "spread": "1.16"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Residual Volume (RV)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "litres",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "2.36",
+           "spread": "0.56"
+          },
+          {
+           "groupId": "BG001",
+           "value": "3.39",
+           "spread": "0.77"
+          },
+          {
+           "groupId": "BG002",
+           "value": "2.90",
+           "spread": "0.84"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Diffusion capacity (DLCO)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "ml CO/min/mmHg",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "14.92",
+           "spread": "4.67"
+          },
+          {
+           "groupId": "BG001",
+           "value": "14.39",
+           "spread": "4.54"
+          },
+          {
+           "groupId": "BG002",
+           "value": "14.60",
+           "spread": "4.47"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "COPD Assessment test (CAT) scores",
+     "description": "The CAT is a validated, short (8-item) and simple patient completed questionnaire developed for use in routine clinical practice to measure the health status of patients with COPD. The CAT has a scoring range of 0-40. Higher scores signify worsening.",
+     "populationDescription": "Scores were available in 4 and 5 participants in mepolizumab and placebo groups respectively",
+     "paramType": "MEDIAN",
+     "dispersionType": "FULL_RANGE",
+     "unitOfMeasure": "units on a scale",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "4"
+          },
+          {
+           "groupId": "BG001",
+           "value": "5"
+          },
+          {
+           "groupId": "BG002",
+           "value": "9"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "16",
+           "lowerLimit": "12",
+           "upperLimit": "24"
+          },
+          {
+           "groupId": "BG001",
+           "value": "25",
+           "lowerLimit": "15",
+           "upperLimit": "29"
+          },
+          {
+           "groupId": "BG002",
+           "value": "23",
+           "lowerLimit": "12",
+           "upperLimit": "29"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Chronic Respiratory Questionnaire (CRQ) scores",
+     "description": "The CRQ is an interviewer-administered questionnaire measuring both physical and emotional aspects of chronic respiratory disease.\n\n20 questions; numerical, 7-point modified Likert Scale with categories of dyspnea, fatigue, emotional function, mastery. Scoring is from 1 to 7.\n\nScoring: Total score and sub scores on categories; higher scores indicate better health-related quality of life. Minimum score = 20 (1 x 20), maximum score = 140 (7 x 20)",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "units on a scale",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "93.75",
+           "spread": "18.75"
+          },
+          {
+           "groupId": "BG001",
+           "value": "82.7",
+           "spread": "21.16"
+          },
+          {
+           "groupId": "BG002",
+           "value": "87.60",
+           "spread": "20.34"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sputum hyaluronan",
+     "paramType": "MEDIAN",
+     "dispersionType": "FULL_RANGE",
+     "unitOfMeasure": "ng/ml",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "466",
+           "lowerLimit": "164",
+           "upperLimit": "1050"
+          },
+          {
+           "groupId": "BG001",
+           "value": "517",
+           "lowerLimit": "162",
+           "upperLimit": "847"
+          },
+          {
+           "groupId": "BG002",
+           "value": "517",
+           "lowerLimit": "162",
+           "upperLimit": "1050"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sputum versican",
+     "paramType": "MEDIAN",
+     "dispersionType": "FULL_RANGE",
+     "unitOfMeasure": "ng/ml",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "3.74",
+           "lowerLimit": "3.18",
+           "upperLimit": "5.54"
+          },
+          {
+           "groupId": "BG001",
+           "value": "3.55",
+           "lowerLimit": "3.37",
+           "upperLimit": "4.53"
+          },
+          {
+           "groupId": "BG002",
+           "value": "3.57",
+           "lowerLimit": "3.18",
+           "upperLimit": "5.54"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Proportion of Patients With a Major Exacerbation",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "denoms": [
+        {
+         "units": "Participants",
+         "counts": [
+          {
+           "groupId": "BG000",
+           "value": "8"
+          },
+          {
+           "groupId": "BG001",
+           "value": "10"
+          },
+          {
+           "groupId": "BG002",
+           "value": "18"
+          }
+         ]
+        }
+       ],
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "4"
+          },
+          {
+           "groupId": "BG001",
+           "value": "7"
+          },
+          {
+           "groupId": "BG002",
+           "value": "11"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Percentage Decrease of Sputum Eosinophils From Baseline to End of Therapy (6 Months)",
+     "description": "The results will be expressed as absolute changes in percent sputum eosinophil counts from baseline to end of therapy (at 6 months).\n\nChange is difference in sputum eosinophils between baseline/time zero to end of therapy/6 months.\n\nA larger number represents a greater degree in the reduction of sputum eosinophils.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "percentage",
+     "timeFrame": "6 months",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Mepolizumab",
+       "description": "Mepolizumab: This is an anti IL-5 which is given once a month intravenously at the dose of 750 mg."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "placebo: The placebo consisted of 100 mL normal saline solution (0.9%, 154 mmol/L sodium chloride)."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "8"
+        },
+        {
+         "groupId": "OG001",
+         "value": "10"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "11.28",
+           "spread": "6.60"
+          },
+          {
+           "groupId": "OG001",
+           "value": "7.07",
+           "spread": "11.49"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Proportion of Patients With a Major Exacerbation.",
+     "description": "Exacerbation: a sustained worsening of the patient's respiratory condition, from the stable state and beyond normal day-to-day variations, necessitating a change in regular medication in a patient with underlying COPD Major exacerbation will be defined as a symptomatic deterioration requiring treatment with antibiotics, oral or intravenous corticosteroids, hospitalization, or a combination of these.",
+     "reportingStatus": "POSTED",
+     "paramType": "NUMBER",
+     "unitOfMeasure": "participants",
+     "timeFrame": "Baseline to 6 months",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "Mepolizumab",
+       "description": "Mepolizumab: This is an anti interleukin-5 (IL-5) which is given once a month intravenously at the dose of 750 mg."
+      },
+      {
+       "id": "OG001",
+       "title": "Placebo",
+       "description": "placebo: The placebo consisted of 100 mL normal saline solution (0.9%, 154 mmol/L sodium chloride)."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "8"
+        },
+        {
+         "groupId": "OG001",
+         "value": "10"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "4"
+          },
+          {
+           "groupId": "OG001",
+           "value": "7"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "3",
+   "timeFrame": "Adverse events (AEs), including Serious adverse events (SAEs), in the on-study period were defined as those with onset between day of the first dose of study treatment (Day 0) and last scheduled follow-up visit, 4 months following final infusion (10 months).",
+   "description": "The safety analysis set comprised all patients who received at least one dose of study treatment. Patients were classified according to the treatment they actually received.",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "Mepolizumab",
+     "description": "Mepolizumab: This is an anti IL-5 which is given once a month intravenously at the dose of 750 mg.",
+     "deathsNumAffected": 0,
+     "deathsNumAtRisk": 8,
+     "seriousNumAffected": 2,
+     "seriousNumAtRisk": 8,
+     "otherNumAffected": 4,
+     "otherNumAtRisk": 8
+    },
+    {
+     "id": "EG001",
+     "title": "Placebo",
+     "description": "placebo: The placebo consisted of 100 mL normal saline solution (0.9%, 154 mmol/L sodium chloride).",
+     "deathsNumAffected": 0,
+     "deathsNumAtRisk": 10,
+     "seriousNumAffected": 1,
+     "seriousNumAtRisk": 10,
+     "otherNumAffected": 4,
+     "otherNumAtRisk": 10
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Myocardial infarction",
+     "organSystem": "Cardiac disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 8
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 10
+      }
+     ]
+    },
+    {
+     "term": "C3 distal humeral fracture with a left trochlear fracture",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 8
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 10
+      }
+     ]
+    },
+    {
+     "term": "COPD exacerbation - hospital admission",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numEvents": 0,
+       "numAffected": 0,
+       "numAtRisk": 8
+      },
+      {
+       "groupId": "EG001",
+       "numEvents": 1,
+       "numAffected": 1,
+       "numAtRisk": 10
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Urinary tract infection",
+     "organSystem": "Renal and urinary disorders",
+     "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 8
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 10
+      }
+     ]
+    },
+    {
+     "term": "Infective bronchitis",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 8
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 4,
+       "numAtRisk": 10
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "limitationsAndCaveats": {
+    "description": "There were recruitment challenges forcing us to restrict our sample size, which reduced the study power to approximately 60%."
+   },
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictiveAgreement": false
+   },
+   "pointOfContact": {
+    "title": "Dr. Parameswaran Nair",
+    "organization": "McMaster University",
+    "email": "parames@mcmaster.ca",
+    "phone": "905-522-1155",
+    "phoneExt": "34934"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D001991",
+     "term": "Bronchitis"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D012141",
+     "term": "Respiratory Tract Infections"
+    },
+    {
+     "id": "D007239",
+     "term": "Infections"
+    },
+    {
+     "id": "D001982",
+     "term": "Bronchial Diseases"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C434107",
+     "term": "mepolizumab"
+    },
+    {
+     "id": "D000077330",
+     "term": "Saline Solution"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D000077324",
+     "term": "Crystalloid Solutions"
+    },
+    {
+     "id": "D007552",
+     "term": "Isotonic Solutions"
+    },
+    {
+     "id": "D012996",
+     "term": "Solutions"
+    },
+    {
+     "id": "D004364",
+     "term": "Pharmaceutical Preparations"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

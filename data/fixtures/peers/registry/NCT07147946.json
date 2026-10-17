@@ -1,0 +1,1764 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT07147946",
+   "orgStudyIdInfo": {
+    "id": "TQC3721-III-01"
+   },
+   "organization": {
+    "fullName": "Chia Tai Tianqing Pharmaceutical Group Co., Ltd.",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Evaluation of the Clinical Trial of Inhaled TQC3721 Suspension in Patients With Moderate-to-Severe Chronic Obstructive Pulmonary Disease",
+   "officialTitle": "Evaluation of a Multicenter, Randomized, Double-Blind, Placebo-Controlled Phase III Clinical Trial on the Efficacy and Safety of Inhaled TQC3721 Suspension in Patients With Moderate-to-Severe Chronic Obstructive Pulmonary Disease"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2025-06",
+   "overallStatus": "NOT_YET_RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2025-09",
+    "type": "ESTIMATED"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2027-03",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2027-06",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2025-08-22",
+   "studyFirstSubmitQcDate": "2025-08-22",
+   "studyFirstPostDateStruct": {
+    "date": "2025-08-29",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2025-09-03",
+   "lastUpdatePostDateStruct": {
+    "date": "2025-09-10",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Chia Tai Tianqing Pharmaceutical Group Co., Ltd.",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "To evaluate the efficacy of TQC3721 Suspension for Inhalation in patients with moderate to severe Chronic obstructive pulmonary disease (COPD)"
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 666,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "TQC3721 Suspension for Inhalation",
+     "type": "EXPERIMENTAL",
+     "description": "Inhalation of TQC3721 suspension (6mg/2ml), one unit dose twice daily for 24 weeks",
+     "interventionNames": [
+      "Drug: TQC3721 Suspension for inhalation"
+     ]
+    },
+    {
+     "label": "Placebo of TQC3721 Suspension for Inhalation",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Inhalation of TQC3721 placebo, one unit dose twice daily for 24 weeks",
+     "interventionNames": [
+      "Drug: Placebo of TQC3721 Suspension for Inhalation"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "TQC3721 Suspension for inhalation",
+     "description": "TQC3721 suspension for inhalation is a Phosphodiesterase3/4 (PDE3/4) inhibitor",
+     "armGroupLabels": [
+      "TQC3721 Suspension for Inhalation"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo of TQC3721 Suspension for Inhalation",
+     "description": "Placebo without drug substance",
+     "armGroupLabels": [
+      "Placebo of TQC3721 Suspension for Inhalation"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Mean change in the area under the curve (AUC) of Forced Expiratory Volume in 1 second (FEV1)",
+     "description": "Change from baseline in mean FEV1 AUC over 0-12 hours after 12 weeks of treatment.",
+     "timeFrame": "Baseline to 12 weeks after treatment"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Changes in peak FEV1 value",
+     "description": "Changes from baseline in peak FEV1 within 4 hours after morning dosing at Weeks 6, 12, and 24 of treatment.",
+     "timeFrame": "Baseline to 6 weeks, 12 weeks, 24 weeks after treatment"
+    },
+    {
+     "measure": "Changes in trough FEV1 values",
+     "description": "Changes from baseline in morning trough FEV1 at Weeks 6, 12, and 24 of treatment.",
+     "timeFrame": "Baseline to 6 weeks, 12 weeks, 24 weeks after treatment"
+    },
+    {
+     "measure": "Average FEV1 AUC 0-4h",
+     "description": "Change from baseline in the average FEV1 AUC 0-4h within 4 hours after morning dosing at 6, 12, and 24 weeks of treatment.",
+     "timeFrame": "Baseline to 6 weeks, 12 weeks, 24 weeks after treatment"
+    },
+    {
+     "measure": "St. George's Respiratory Questionnaire",
+     "description": "Changes in St. George's Respiratory Questionnaire (SGRQ) total scores from baseline at 6, 12, and 24 weeks of treatment.",
+     "timeFrame": "Baseline to 6 weeks, 12 weeks, 24 weeks after treatment"
+    },
+    {
+     "measure": "Chronic Obstructive Pulmonary Disease Assessment Test",
+     "description": "Self-assessment for Patients with COPD：Numbers 0 to 5 indicate the severity (with 0 being the mildest and 5 being the most severe).",
+     "timeFrame": "At 6 weeks, 12 weeks, and 24 weeks of treatment"
+    },
+    {
+     "measure": "Average FEV1 AUC (6-12h)",
+     "description": "Change from baseline in mean FEV₁ AUC (6-12 h) at Week 12 following dosing.",
+     "timeFrame": "Baseline to 12 weeks after treatment"
+    },
+    {
+     "measure": "Annual rate of acute exacerbation of COPD",
+     "description": "The annualized rate of acute exacerbation of moderate/severe COPD after 24 weeks of treatment.",
+     "timeFrame": "Baseline to 24 weeks after treatment"
+    },
+    {
+     "measure": "Time of first acute exacerbation of moderate/severe COPD",
+     "description": "The time of the first acute exacerbation of moderate/severe COPD within 24 weeks of treatment.",
+     "timeFrame": "Baseline to 24 weeks after treatment"
+    },
+    {
+     "measure": "Adverse event (AE)",
+     "description": "The number of participants with AEs, serious dverse event (SAEs), drug-related AEs, and abnormal lab results.",
+     "timeFrame": "D-28 to within 25 weeks of treatment"
+    },
+    {
+     "measure": "Assessment of respiratory symptoms in COPD",
+     "description": "Change from baseline in weekly mean Evaluating Respiratory Symptoms in COPD total score",
+     "timeFrame": "Baseline to 6 weeks, 12 weeks, 24 weeks after treatment"
+    },
+    {
+     "measure": "Transition Dyspnea Index (TDI) score",
+     "description": "Change in Transition Dyspnea Index (TDI) score relative to Baseline Dyspnea Index (BDI) score",
+     "timeFrame": "Baseline to 6 weeks, 12 weeks, 24 weeks after treatment"
+    },
+    {
+     "measure": "Chronic Obstructive Pulmonary Disease Assessment Test (CAT) score",
+     "description": "Change in Chronic Obstructive Pulmonary Disease Assessment Test (CAT) score from baseline",
+     "timeFrame": "Baseline to 6 weeks, 12 weeks, 24 weeks after treatment"
+    },
+    {
+     "measure": "Change from baseline in rescue medication use",
+     "description": "Changes from baseline in rescue medication use during treatment at Weeks 6, 12, and 24 versus the placebo group",
+     "timeFrame": "Baseline to 6 weeks, 12 weeks, 24 weeks after treatment."
+    },
+    {
+     "measure": "Interleukin-6 (IL-6), Interleukin-8 (IL-8), and C-reactive protein (CRP) at Week 12 and Week 24",
+     "description": "IL-6, IL-8, and C-reactive protein (CRP) at Week 12 and Week 24. The elevated serum C-reactive protein (CRP) levels in patients with chronic obstructive pulmonary disease (COPD) are primarily associated with pulmonary inflammatory responses.",
+     "timeFrame": "At Week 12 and Week 24"
+    },
+    {
+     "measure": "Plasma drug peak concentration",
+     "description": "Perform Pharmacokinetics (PK) analysis of TQC3721 blood drug concentration data at baseline, week 6, and week 12 to evaluate the PK characteristics of TQC3721 in COPD patients.",
+     "timeFrame": "Day 1: 0.5 hour after-dose, Week 6: 1 hour pre-dose, 0.5 hour after-dose; Week 12: 1 hour pre-dose, 0.5 hour after-dose"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n1. Sign an informed consent form before screening and fully understand the trial content, process, and potential adverse reactions.\n2. Comply with the experimental schedule and be able to use the nebulizer inhaler correctly.\n3. The age range is 40 to 80 years old (including the threshold), and both male and female participants are eligible.\n4. The subjects have no pregnancy plans and voluntarily take effective contraceptive measures for at least one month from screening to the last use of the study drug.\n5. Patients with a clear clinical history and related symptoms of COPD before screening.\n6. Capable of conducting acceptable and reproducible lung function tests.\n7. COPD clinical stability (no moderate to severe COPD acute exacerbation) within the 4 weeks prior to screening visit (V1 visit) and between V1 visit and V2 visit.\n8. Smoking history ≥ 10 pack years.\n\nExclusion Criteria:\n\n1. A history of life-threatening COPD, including admission to the intensive care unit and/or the need for intubation.\n2. COPD acute exacerbations requiring systemic hormone therapy within 3 months prior to screening visit (V1 visit) or prior to randomization visit (V2 visit).\n3. Within the first 6 months of screening, there has been at least 1 hospitalization history due to acute exacerbation of COPD or pneumonia.\n4. Treatment with antibiotics for upper and/or lower respiratory tract infections within 6 weeks prior to screening or randomization visit (V3 visit).\n5. Simultaneously suffering from other respiratory diseases.\n6. Chest computed tomography (CT) revealed clinically significant abnormalities and concluded that the abnormalities were not caused by COPD.\n7. Previous lung resection or lung reduction surgery.\n\n11.Previously received TQC3721 treatment. 12.Patients who received immunosuppressant therapy within 4 weeks prior to the screening period 13.In the investigator's assessment, patients are unable to discontinue the prohibited drugs specified in the protocol during the screening and treatment phases of the study; 14.Patients with a history of uncontrolled current diseases that the investigator judges to be clinically significant; 15.A history or current evidence of clinically significant cardiovascular or cerebrovascular diseases; 16.A history of malignant tumors (cured or uncured) in any organ or system within the past 5 years; 17.Intolerance or allergy to salbutamol or other inhaled bronchodilator therapies for COPD; 18.Patients requiring long-term oxygen therapy; 19.Female subjects who are currently pregnant, breastfeeding, or planning to become pregnant during the study period after enrollment; 20.Having participated in any clinical trial of drugs or medical devices within 4 weeks or 5 half-lives (whichever is longer) prior to the screening visit; 21.Other conditions deemed unsuitable for participation in the study by the investigator.",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "40 Years",
+   "maximumAge": "80 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Weimin Li, Doctor",
+     "role": "CONTACT",
+     "phone": "028-85423998",
+     "email": "weimin003@163.com"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Bozhou People's Hospital",
+     "city": "Bozhou",
+     "state": "Anhui",
+     "zip": "236805",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Yalin Jiang, Master",
+       "role": "CONTACT",
+       "phone": "15956792887",
+       "email": "94613793@qq.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 33.87722,
+      "lon": 115.77028
+     }
+    },
+    {
+     "facility": "Chizhou People's Hospital",
+     "city": "Chizhou",
+     "state": "Anhui",
+     "zip": "247000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Yuping Wei, Master",
+       "role": "CONTACT",
+       "phone": "15339668463",
+       "email": "weiyuping@sina.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 30.66134,
+      "lon": 117.47783
+     }
+    },
+    {
+     "facility": "Chaohu Hospital of Anhui Medical University",
+     "city": "Hefei",
+     "state": "Anhui",
+     "zip": "238000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Fanliang Meng, Master",
+       "role": "CONTACT",
+       "phone": "13966337677",
+       "email": "13966337677@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 31.86389,
+      "lon": 117.28083
+     }
+    },
+    {
+     "facility": "The First Affiliated Hospital of Chongqing Medical University",
+     "city": "Chongqing",
+     "state": "Chongqing Municipality",
+     "zip": "400010",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Li Yang",
+       "role": "CONTACT",
+       "phone": "13983769672",
+       "email": "315764964@qq.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 29.56026,
+      "lon": 106.55771
+     }
+    },
+    {
+     "facility": "Peolpe's Hospital Of Chongqing Banan District",
+     "city": "Chongqing",
+     "state": "Chongqing Municipality",
+     "zip": "400054",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Tiefeng Zhang, Doctor",
+       "role": "CONTACT",
+       "phone": "13816503538",
+       "email": "zhangtief@hotmail.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 29.56026,
+      "lon": 106.55771
+     }
+    },
+    {
+     "facility": "Chongqing University Three Gorges Hospital",
+     "city": "Chongqing",
+     "state": "Chongqing Municipality",
+     "zip": "404000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Liangping Mao, Master",
+       "role": "CONTACT",
+       "phone": "13709436633",
+       "email": "13709436633@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 29.56026,
+      "lon": 106.55771
+     }
+    },
+    {
+     "facility": "Fuling Hospital Affiliated to Chongqing University",
+     "city": "Chongqing",
+     "state": "Chongqing Municipality",
+     "zip": "408099",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Qianli Ma, Doctor",
+       "role": "CONTACT",
+       "phone": "13996030312",
+       "email": "cqmql@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 29.56026,
+      "lon": 106.55771
+     }
+    },
+    {
+     "facility": "Fujian Medical University Union Hospital",
+     "city": "Fuzhou",
+     "state": "Fujian",
+     "zip": "350000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Xiangqi Chen, Doctor",
+       "role": "CONTACT",
+       "phone": "13365910153",
+       "email": "chxqq2003@126.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 26.06139,
+      "lon": 119.30611
+     }
+    },
+    {
+     "facility": "Zhangzhou Municipal Hospital of Fujian Province",
+     "city": "Zhangzhou",
+     "state": "Fujian",
+     "zip": "363000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Li Lin, Bachelor",
+       "role": "CONTACT",
+       "phone": "13605080222",
+       "email": "linlid222@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 24.51333,
+      "lon": 117.65556
+     }
+    },
+    {
+     "facility": "The First Hospital of Lanzhou University",
+     "city": "Lanzhou",
+     "state": "Gansu",
+     "zip": "730000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Xiaoju Liu, Doctor",
+       "role": "CONTACT",
+       "phone": "13919360884",
+       "email": "Liuxiaoju835@126.co"
+      }
+     ],
+     "geoPoint": {
+      "lat": 36.05701,
+      "lon": 103.83987
+     }
+    },
+    {
+     "facility": "Gansu Provincial Hospital",
+     "city": "Lanzhou",
+     "state": "Gansu",
+     "zip": "730099",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Weidong Hu, Bachelor",
+       "role": "CONTACT",
+       "phone": "13519311855",
+       "email": "weidong-618@163.com"
+      },
+      {
+       "name": "Linxia Fan, Master",
+       "role": "CONTACT",
+       "phone": "13609311774",
+       "email": "fanlinxia6@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 36.05701,
+      "lon": 103.83987
+     }
+    },
+    {
+     "facility": "The Eighth Affiliated Hospital of Southern Medical University（The First people's Hospital of Shunde ）",
+     "city": "Foshan",
+     "state": "Guangdong",
+     "zip": "528300",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Yanhua Lv, Doctor",
+       "role": "CONTACT",
+       "phone": "18923332273",
+       "email": "lyhshunde@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 23.02677,
+      "lon": 113.13148
+     }
+    },
+    {
+     "facility": "Huizhou Central People's Hospital",
+     "city": "Huizhou",
+     "state": "Guangdong",
+     "zip": "516000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Changqing Lin, Bachelor",
+       "role": "CONTACT",
+       "phone": "13502423128",
+       "email": "hz_linchangqing@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 23.11147,
+      "lon": 114.41523
+     }
+    },
+    {
+     "facility": "Longgang District People's Hospital of Shenzhen",
+     "city": "Shenzhen",
+     "state": "Guangdong",
+     "zip": "518000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Liang Zhou, Doctor",
+       "role": "CONTACT",
+       "phone": "18938901742",
+       "email": "zhouliang1115@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 22.54554,
+      "lon": 114.0683
+     }
+    },
+    {
+     "facility": "Peking University Shenzhen Hospital",
+     "city": "Shenzhen",
+     "state": "Guangdong",
+     "zip": "518000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Ruilin Sun, Doctor",
+       "role": "CONTACT",
+       "phone": "13825167802",
+       "email": "sunruilin213@126.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 22.54554,
+      "lon": 114.0683
+     }
+    },
+    {
+     "facility": "Guizhou Provincial People's Hospital",
+     "city": "Guiyang",
+     "state": "Guizhou",
+     "zip": "550000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Xianwei Ye, Doctor",
+       "role": "CONTACT",
+       "phone": "18798619198",
+       "email": "yxw1205@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 26.58333,
+      "lon": 106.71667
+     }
+    },
+    {
+     "facility": "The First Affiliated Hospital of Hainan Medical University",
+     "city": "Haikou",
+     "state": "Hainan",
+     "zip": "570102",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Huaping Huang, Doctor",
+       "role": "CONTACT",
+       "phone": "13138997957",
+       "email": "1297034257@qq.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 20.03421,
+      "lon": 110.34651
+     }
+    },
+    {
+     "facility": "Cangzhou Hospital of Integrated TCM- WM·HEBEI",
+     "city": "Cangzhou",
+     "state": "Hebei",
+     "zip": "61013",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Lei Pan, Bachelor",
+       "role": "CONTACT",
+       "phone": "18031783607",
+       "email": "Panlei1982@126.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 38.31124,
+      "lon": 116.85334
+     }
+    },
+    {
+     "facility": "Hebei PetroChina Central Hospital",
+     "city": "Langfang",
+     "state": "Hebei",
+     "zip": "65000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Zheng Liu, Master",
+       "role": "CONTACT",
+       "phone": "186 3261 9559",
+       "email": "keaiduo68@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 39.52079,
+      "lon": 116.71471
+     }
+    },
+    {
+     "facility": "The First Hospital of Qinhuangdao",
+     "city": "Qinhuangdao",
+     "state": "Hebei",
+     "zip": "66000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Hua Qiao, Master",
+       "role": "CONTACT",
+       "phone": "13780358298",
+       "email": "qh1202@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 39.94104,
+      "lon": 119.58936
+     }
+    },
+    {
+     "facility": "Hebei Medical University Third Hospital",
+     "city": "Shijiazhuang",
+     "state": "Hebei",
+     "zip": "65799",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Yunxia Zhao, Doctor",
+       "role": "CONTACT",
+       "phone": "18533112506",
+       "email": "zhaoyunxia990303@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 38.04139,
+      "lon": 114.47861
+     }
+    },
+    {
+     "facility": "Daqing Longnan Hospital",
+     "city": "Daqing",
+     "state": "Heilongjiang",
+     "zip": "163000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Jinli Liu, Bachelor",
+       "role": "CONTACT",
+       "phone": "18845980808",
+       "email": "969089802@qq.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 46.58333,
+      "lon": 125.0
+     }
+    },
+    {
+     "facility": "The First Affiliated Hospital of Harbin Medical University",
+     "city": "Harbin",
+     "state": "Heilongjiang",
+     "zip": "150001",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Jianmin Huo, Doctor",
+       "role": "CONTACT",
+       "phone": "13804540141",
+       "email": "13804540141@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 45.75,
+      "lon": 126.65
+     }
+    },
+    {
+     "facility": "Qiqihar First Hospital",
+     "city": "Qiqihar",
+     "state": "Heilongjiang",
+     "zip": "161005",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Jian Ding, Master",
+       "role": "CONTACT",
+       "phone": "15645231111",
+       "email": "252518789@qq.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 47.33922,
+      "lon": 123.96154
+     }
+    },
+    {
+     "facility": "Jiaozuo Second People's Hospital",
+     "city": "Jiaozuo",
+     "state": "Henan",
+     "zip": "454001",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Xinju Xu, Bachelor",
+       "role": "CONTACT",
+       "phone": "13569183612",
+       "email": "13569183612@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 35.23925,
+      "lon": 113.23914
+     }
+    },
+    {
+     "facility": "Puyang Oilfield General Hospital",
+     "city": "Puyang",
+     "state": "Henan",
+     "zip": "457001",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Faming Yu, Bachelor",
+       "role": "CONTACT",
+       "phone": "13700802698",
+       "email": "mingfayu@126.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 35.75641,
+      "lon": 115.04363
+     }
+    },
+    {
+     "facility": "The First People's Hospital of Shangqiu",
+     "city": "Shangqiu",
+     "state": "Henan",
+     "zip": "476100",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Chunling Zhang, Master",
+       "role": "CONTACT",
+       "phone": "13781626918",
+       "email": "chunlingz@yeah.net"
+      }
+     ],
+     "geoPoint": {
+      "lat": 34.4143,
+      "lon": 115.65613
+     }
+    },
+    {
+     "facility": "Yichang Central People's Hospital",
+     "city": "Yichang",
+     "state": "Hubei",
+     "zip": "443003",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Fanjun Zeng, Master",
+       "role": "CONTACT",
+       "phone": "13997672619",
+       "email": "438864941@qq.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 30.71444,
+      "lon": 111.28472
+     }
+    },
+    {
+     "facility": "Hunan Provincial People's Hospital",
+     "city": "Changsha",
+     "state": "Hunan",
+     "zip": "410001",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Nian Liu, Master",
+       "role": "CONTACT",
+       "phone": "13975188303",
+       "email": "19781138@qq.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 28.19874,
+      "lon": 112.97087
+     }
+    },
+    {
+     "facility": "Xiangya Hospital of Central South University",
+     "city": "Changsha",
+     "state": "Hunan",
+     "zip": "410028",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Ruoxi He, Doctor",
+       "role": "CONTACT",
+       "phone": "18874167666",
+       "email": "heruoxi1985@yeah.net"
+      }
+     ],
+     "geoPoint": {
+      "lat": 28.19874,
+      "lon": 112.97087
+     }
+    },
+    {
+     "facility": "The Central Hospital of Yongzhou",
+     "city": "Yongzhou",
+     "state": "Hunan",
+     "zip": "425002",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Ni Zhang, Bachelor",
+       "role": "CONTACT",
+       "phone": "15200973322",
+       "email": "1335614905@qq.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 26.42389,
+      "lon": 111.61306
+     }
+    },
+    {
+     "facility": "Baotou Central Hospital",
+     "city": "Baotou",
+     "state": "Inner Mongolia",
+     "zip": "14000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Yong Yang, Master",
+       "role": "CONTACT",
+       "phone": "13015266422",
+       "email": "youngyong2023@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 40.6516,
+      "lon": 109.84389
+     }
+    },
+    {
+     "facility": "Chifeng Municipal Hospital",
+     "city": "Chifeng",
+     "state": "Inner Mongolia",
+     "zip": "24000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Xiaohua Li, Master",
+       "role": "CONTACT",
+       "phone": "18047660682",
+       "email": "lixiaohuaaa@aliyun.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 42.26833,
+      "lon": 118.96361
+     }
+    },
+    {
+     "facility": "Inner Mongolia Medical University Affiliated Hospital",
+     "city": "Hohhot",
+     "state": "Inner Mongolia",
+     "zip": "10000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Lihong Wang, Master",
+       "role": "CONTACT",
+       "phone": "13848137292",
+       "email": "1152329174@qq.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 40.81056,
+      "lon": 111.65222
+     }
+    },
+    {
+     "facility": "Nanjing Jiangning Hospital",
+     "city": "Nanjing",
+     "state": "Jiangsu",
+     "zip": "21100",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Xiuwei Zhang, Doctor",
+       "role": "CONTACT",
+       "phone": "17705191598",
+       "email": "zhangxiuweiywy@126.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 32.06167,
+      "lon": 118.77778
+     }
+    },
+    {
+     "facility": "The Fifth People's Hospital of Wuxi",
+     "city": "Wuxi",
+     "state": "Jiangsu",
+     "zip": "214001",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Feng Zhu, Doctor",
+       "role": "CONTACT",
+       "phone": "13914135026",
+       "email": "181515688@qq.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 31.56887,
+      "lon": 120.28857
+     }
+    },
+    {
+     "facility": "Jiangyin Hospital of Traditional Chinese Medicine",
+     "city": "Wuxi",
+     "state": "Jiangsu",
+     "zip": "214400",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Xiaodong Hu, Bachelor",
+       "role": "CONTACT",
+       "phone": "17768318018",
+       "email": "30223273@qq.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 31.56887,
+      "lon": 120.28857
+     }
+    },
+    {
+     "facility": "Xuzhou Central Hospital",
+     "city": "Xuzhou",
+     "state": "Jiangsu",
+     "zip": "221009",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Yanmin Wu, Master",
+       "role": "CONTACT",
+       "phone": "18952170625",
+       "email": "wymin666@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 34.20442,
+      "lon": 117.28386
+     }
+    },
+    {
+     "facility": "Subei People's Hospital of Jiangsu province",
+     "city": "Yangzhou",
+     "state": "Jiangsu",
+     "zip": "225001",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Lingfeng Min, Doctor",
+       "role": "CONTACT",
+       "phone": "18051061783",
+       "email": "minlingfeng@126.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 32.39722,
+      "lon": 119.43583
+     }
+    },
+    {
+     "facility": "Yixing People's Hospital",
+     "city": "Yixing",
+     "state": "Jiangsu",
+     "zip": "225000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Xiuqin Ma, Master",
+       "role": "CONTACT",
+       "phone": "13815117833",
+       "email": "staff799@yxph.com"
+      },
+      {
+       "name": "Jianzhong Jiang, Bachelor",
+       "role": "CONTACT",
+       "phone": "15906156662",
+       "email": "staff290@yxph.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 31.36059,
+      "lon": 119.82016
+     }
+    },
+    {
+     "facility": "Jiujiang First People's Hospital",
+     "city": "Jiujiang",
+     "state": "Jiangxi",
+     "zip": "332000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Jun Li, Bachelor",
+       "role": "CONTACT",
+       "phone": "13870267661",
+       "email": "lijun7661@126.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 29.70475,
+      "lon": 116.00206
+     }
+    },
+    {
+     "facility": "Jiangxi Provincial People's Hospital",
+     "city": "Nanchang",
+     "state": "Jiangxi",
+     "zip": "330006",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Zuke Xiao, Bachelor",
+       "role": "CONTACT",
+       "phone": "13970010036",
+       "email": "Xiaozuke@126.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 28.68396,
+      "lon": 115.85306
+     }
+    },
+    {
+     "facility": "The First Affiliated Hospital of Nanchang University",
+     "city": "Nanchang",
+     "state": "Jiangxi",
+     "zip": "330006",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Wei Zuo, Master",
+       "role": "CONTACT",
+       "phone": "15879098337",
+       "email": "11545394@qq.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 28.68396,
+      "lon": 115.85306
+     }
+    },
+    {
+     "facility": "The first hospital of Jilin University",
+     "city": "Changchun",
+     "state": "Jilin",
+     "zip": "130000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Liping Peng, Doctor",
+       "role": "CONTACT",
+       "phone": "13756661263",
+       "email": "plp640317@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 43.88,
+      "lon": 125.32278
+     }
+    },
+    {
+     "facility": "Central Hospital of Dalian University of Technology",
+     "city": "Dalian",
+     "state": "Liaoning",
+     "zip": "116000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Jian Xu, Doctor",
+       "role": "CONTACT",
+       "phone": "15509850880",
+       "email": "karlinee@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 38.91222,
+      "lon": 121.60222
+     }
+    },
+    {
+     "facility": "Shengjing Hospital of China Medical University",
+     "city": "Shenyang",
+     "state": "Liaoning",
+     "zip": "110021",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Rui Zheng, Master",
+       "role": "CONTACT",
+       "phone": "18940002266",
+       "email": "zhengr@sj-hospital.org"
+      }
+     ],
+     "geoPoint": {
+      "lat": 41.79222,
+      "lon": 123.43278
+     }
+    },
+    {
+     "facility": "Qinghai Provincial People's Hospital",
+     "city": "Xining",
+     "state": "Qinghai",
+     "zip": "810007",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Yajun Tuo, Bachelor",
+       "role": "CONTACT",
+       "phone": "13897583488",
+       "email": "1134491856@qq.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 36.62554,
+      "lon": 101.75739
+     }
+    },
+    {
+     "facility": "Xi'an International Medical Center Hospital",
+     "city": "Xi'an",
+     "state": "Shaanxi",
+     "zip": "710100",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Changgui Wu, Doctor",
+       "role": "CONTACT",
+       "phone": "13892899669",
+       "email": "wcg196211@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 34.25833,
+      "lon": 108.92861
+     }
+    },
+    {
+     "facility": "Yan'an University Xianyang Hospital",
+     "city": "Xianyang",
+     "state": "Shaanxi",
+     "zip": "712000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Jianhou Jia, Bachelor",
+       "role": "CONTACT",
+       "phone": "13892007197",
+       "email": "jjh20@126.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 34.33778,
+      "lon": 108.70261
+     }
+    },
+    {
+     "facility": "Binzhou People's Hospital",
+     "city": "Binzhou",
+     "state": "Shandong",
+     "zip": "256610",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "KaiShu Li, Doctor",
+       "role": "CONTACT",
+       "phone": "15954318626",
+       "email": "15954318626@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 37.36667,
+      "lon": 118.01667
+     }
+    },
+    {
+     "facility": "Heze Municipal Hospital",
+     "city": "Heze",
+     "state": "Shandong",
+     "zip": "274031",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Xunchao Liu, Doctor",
+       "role": "CONTACT",
+       "phone": "13184069557",
+       "email": "lxunchao@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 35.23929,
+      "lon": 115.47358
+     }
+    },
+    {
+     "facility": "Affiliated Hospital of Jining Medical University",
+     "city": "Jining",
+     "state": "Shandong",
+     "zip": "272029",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Bo Jiang, Master",
+       "role": "CONTACT",
+       "phone": "15666752870",
+       "email": "13793771252@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 35.405,
+      "lon": 116.58139
+     }
+    },
+    {
+     "facility": "Weifang NO.2 People's Hospital",
+     "city": "Weifang",
+     "state": "Shandong",
+     "zip": "261041",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Guoru Yang, Bachelor",
+       "role": "CONTACT",
+       "phone": "13963601993",
+       "email": "yangguoru@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 36.71,
+      "lon": 119.10194
+     }
+    },
+    {
+     "facility": "Yantai Yuhuangding Hospital",
+     "city": "Yantai",
+     "state": "Shandong",
+     "zip": "264099",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Shenchun Zhou, Master",
+       "role": "CONTACT",
+       "phone": "18660515179",
+       "email": "ytbqjwhx@sina.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 37.47649,
+      "lon": 121.44081
+     }
+    },
+    {
+     "facility": "Ruijin Hospital, Shanghai Jiaotong University School of Medicine",
+     "city": "Shanghai",
+     "state": "Shanghai Municipality",
+     "zip": "200023",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Ranran Dai, Doctor",
+       "role": "CONTACT",
+       "phone": "13918139360",
+       "email": "drr11154@rjh.com.cn"
+      }
+     ],
+     "geoPoint": {
+      "lat": 31.22222,
+      "lon": 121.45806
+     }
+    },
+    {
+     "facility": "Shanghai General Hospital",
+     "city": "Shanghai",
+     "state": "Shanghai Municipality",
+     "zip": "200080",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Min Zhang, Doctor",
+       "role": "CONTACT",
+       "phone": "13482345145",
+       "email": "maggie_zhangmin@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 31.22222,
+      "lon": 121.45806
+     }
+    },
+    {
+     "facility": "Baoji Central Hospital",
+     "city": "Baoji",
+     "state": "Shanxi",
+     "zip": "721008",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Kai Chen, Master",
+       "role": "CONTACT",
+       "phone": "18091698989",
+       "email": "chenkailiyajie@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 35.90348,
+      "lon": 111.38866
+     }
+    },
+    {
+     "facility": "Changzhi People's Hospital",
+     "city": "Changzhi",
+     "state": "Shanxi",
+     "zip": "46000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Xianping Zhao, Bachelor",
+       "role": "CONTACT",
+       "phone": "13453503966",
+       "email": "ZXP13453503966@126.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 36.18389,
+      "lon": 113.10528
+     }
+    },
+    {
+     "facility": "Yangquan coal Industry(Group) General Hospital",
+     "city": "Yangquan",
+     "state": "Shanxi",
+     "zip": "45000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Ruibin Guo, Bachelor",
+       "role": "CONTACT",
+       "phone": "13935324120",
+       "email": "grb8888@126.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 37.8575,
+      "lon": 113.56333
+     }
+    },
+    {
+     "facility": "The First Affiliated Hospital of Chengdu Medical College",
+     "city": "Chengdu",
+     "state": "Sichuan",
+     "zip": "610000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Na Huang, Doctor",
+       "role": "CONTACT",
+       "phone": "15928602354",
+       "email": "717308813@qq.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 30.66667,
+      "lon": 104.06667
+     }
+    },
+    {
+     "facility": "Chengdu Second People's Hospital",
+     "city": "Chengdu",
+     "state": "Sichuan",
+     "zip": "610017",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Hao Yan, Master",
+       "role": "CONTACT",
+       "phone": "18908178067",
+       "email": "haoy6666@aliyun.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 30.66667,
+      "lon": 104.06667
+     }
+    },
+    {
+     "facility": "West China Hospital of Sichuan University",
+     "city": "Chengdu",
+     "state": "Sichuan",
+     "zip": "610044",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Weimin Li, Doctor",
+       "role": "CONTACT",
+       "phone": "028-85423998",
+       "email": "weimin003@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 30.66667,
+      "lon": 104.06667
+     }
+    },
+    {
+     "facility": "Mianyang Central Hospital",
+     "city": "Mianyang",
+     "state": "Sichuan",
+     "zip": "621000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Weiguo Xu, Doctor",
+       "role": "CONTACT",
+       "phone": "13981102503",
+       "email": "xwg522630@126.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 31.46784,
+      "lon": 104.68168
+     }
+    },
+    {
+     "facility": "Mianyang Hospital of Traditional Chinese Medicine",
+     "city": "Mianyang",
+     "state": "Sichuan",
+     "zip": "621000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Ye Gao, Doctor",
+       "role": "CONTACT",
+       "phone": "13881138014",
+       "email": "gaoye1001@126.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 31.46784,
+      "lon": 104.68168
+     }
+    },
+    {
+     "facility": "Affiliated Hospital of North Sichuan Medical College",
+     "city": "Nanchong",
+     "state": "Sichuan",
+     "zip": "637000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Li JiangJiang, Doctor",
+       "role": "CONTACT",
+       "phone": "18281718585",
+       "email": "lanqilily@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 30.79508,
+      "lon": 106.08473
+     }
+    },
+    {
+     "facility": "Suining Central Hospital",
+     "city": "Suining",
+     "state": "Sichuan",
+     "zip": "629099",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Rong Qiu, Doctor",
+       "role": "CONTACT",
+       "phone": "18008258545",
+       "email": "443182163@qq.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 30.50802,
+      "lon": 105.57332
+     }
+    },
+    {
+     "facility": "Tianjin Medical University General Hospital",
+     "city": "Tianjin",
+     "state": "Tianjin Municipality",
+     "zip": "300052",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Jie Cao, Master",
+       "role": "CONTACT",
+       "phone": "13132088076",
+       "email": "tjcaojie@sina.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 39.14222,
+      "lon": 117.17667
+     }
+    },
+    {
+     "facility": "Tianjin 4th Center Hospital",
+     "city": "Tianjin",
+     "state": "Tianjin Municipality",
+     "zip": "300140",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Jingchun He, Master",
+       "role": "CONTACT",
+       "phone": "13820132084",
+       "email": "jingjunhe98@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 39.14222,
+      "lon": 117.17667
+     }
+    },
+    {
+     "facility": "The First Affiliated Hospital of Shihezi University",
+     "city": "Shihezi",
+     "state": "Xinjiang",
+     "zip": "832008",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Dong Liu, Master",
+       "role": "CONTACT",
+       "phone": "13779702431",
+       "email": "13779702431@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 44.3023,
+      "lon": 86.03694
+     }
+    },
+    {
+     "facility": "The Second Hospital of Jiaxing",
+     "city": "Jiaxing",
+     "state": "Zhejiang",
+     "zip": "314000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Weiqiang Mo, Bachelor",
+       "role": "CONTACT",
+       "phone": "13905733964",
+       "email": "mm3964@sina.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 30.7522,
+      "lon": 120.75
+     }
+    },
+    {
+     "facility": "Jinhua municipal central hospital",
+     "city": "Jinhua",
+     "state": "Zhejiang",
+     "zip": "321000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Dan Zhu, Bachelor",
+       "role": "CONTACT",
+       "phone": "13957962296",
+       "email": "zhudan4252@sina.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 29.10678,
+      "lon": 119.64421
+     }
+    },
+    {
+     "facility": "Dongyang People's Hospital",
+     "city": "Jinhua",
+     "state": "Zhejiang",
+     "zip": "322100",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Caimin Shu, Bachelor",
+       "role": "CONTACT",
+       "phone": "13566722100",
+       "email": "Dsycm2003@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 29.10678,
+      "lon": 119.64421
+     }
+    },
+    {
+     "facility": "The First Affiliated Hospital of Ningbo University",
+     "city": "Ningbo",
+     "state": "Zhejiang",
+     "zip": "315000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Chao Cao, Master",
+       "role": "CONTACT",
+       "phone": "18258796161",
+       "email": "caocdoctor@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 29.87819,
+      "lon": 121.54945
+     }
+    },
+    {
+     "facility": "Shaoxing People's Hospital",
+     "city": "Shaoxing",
+     "state": "Zhejiang",
+     "zip": "312000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Jian Sun, Doctor",
+       "role": "CONTACT",
+       "phone": "13588508420",
+       "email": "2002sunjian@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 30.00237,
+      "lon": 120.57864
+     }
+    },
+    {
+     "facility": "Taizhou Central Hospital",
+     "city": "Taizhou",
+     "state": "Zhejiang",
+     "zip": "318000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Junfei Zhu, Master",
+       "role": "CONTACT",
+       "phone": "13968600802",
+       "email": "zhujf@tzzxyy.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 28.66266,
+      "lon": 121.43312
+     }
+    },
+    {
+     "facility": "The Second Affiliated Hospital of Wenzhou Medical University",
+     "city": "Wenzhou",
+     "state": "Zhejiang",
+     "zip": "325000",
+     "country": "China",
+     "contacts": [
+      {
+       "name": "Liqin Wu, Master",
+       "role": "CONTACT",
+       "phone": "13587861043",
+       "email": "happy-qin@163.com"
+      }
+     ],
+     "geoPoint": {
+      "lat": 27.99942,
+      "lon": 120.66682
+     }
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D001239",
+     "term": "Inhalation"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D015656",
+     "term": "Respiratory Mechanics"
+    },
+    {
+     "id": "D012119",
+     "term": "Respiration"
+    },
+    {
+     "id": "D012143",
+     "term": "Respiratory Physiological Phenomena"
+    },
+    {
+     "id": "D002943",
+     "term": "Circulatory and Respiratory Physiological Phenomena"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

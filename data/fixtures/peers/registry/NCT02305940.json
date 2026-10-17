@@ -1,0 +1,406 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT02305940",
+   "orgStudyIdInfo": {
+    "id": "14IC2030"
+   },
+   "organization": {
+    "fullName": "Imperial College London",
+    "class": "OTHER"
+   },
+   "briefTitle": "Effects of Long Term Antibiotic Therapy on Exacerbation Rate in Stable COPD Patients",
+   "officialTitle": "A Phase III Double-blind, Randomised, Placebo Controlled Trial of Long Term Therapy on Exacerbation Rate in Patients With Stable COPD Using Doxycycline"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2017-04",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2014-07"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2017-07-12",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2017-07-12",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2014-11-20",
+   "studyFirstSubmitQcDate": "2014-11-28",
+   "studyFirstPostDateStruct": {
+    "date": "2014-12-03",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2017-07-24",
+   "lastUpdatePostDateStruct": {
+    "date": "2017-07-26",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Imperial College London",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true
+  },
+  "descriptionModule": {
+   "briefSummary": "This study investigates if long term use of the antibiotic doxycycline can reduce exacerbations in COPD patients. Half of the patients will receive doxycycline which the other half will receive a placebo.",
+   "detailedDescription": "Chronic Obstructive Pulmonary Disease (COPD) is a common disease which can place a considerable burden on people who suffer from it. COPD exacerbations (periods when symptoms flare up) are a major cause of hospital admission in the UK. Bacterial infections play an important role in the development of COPD and so one possible treatment for COPD is with antibiotics. However, there is little information available about the use of long term antibiotics in the treatment of this disease.\n\nTherefore, the purpose of this study is to investigate if long term use of the antibiotic Doxycycline can reduce exacerbations and improve the outlook for these patients."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease (COPD)"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "DOUBLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 222,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Doxycycline",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Doxycycline: oral dose of 100 mg once daily, for a total duration of 52 weeks.",
+     "interventionNames": [
+      "Drug: Doxycycline"
+     ]
+    },
+    {
+     "label": "Placebo",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Placebo: an oral dose of one capsule once daily, for a total duration of 52 weeks.",
+     "interventionNames": [
+      "Drug: Placebo"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Doxycycline",
+     "description": "An oral dose of 100 mg of Doxycycline once daily, for a total duration of 52 weeks.",
+     "armGroupLabels": [
+      "Doxycycline"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "An oral dose of one capsule of placebo once daily, for a total duration of 52 weeks",
+     "armGroupLabels": [
+      "Placebo"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Rate of exacerbations (per person/year) recorded from date of drug issue until date of end of treatment visit.",
+     "timeFrame": "12 months"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Lung function (spirometry) (FEV1, FVC, FEV1/FVC ratio, FEV1 as % Predicted).",
+     "timeFrame": "12 months of treatment"
+    },
+    {
+     "measure": "Total and individual component (symptoms, activity, impact) SGRQ scores will be used to measure health status.",
+     "timeFrame": "12 months of treatment"
+    },
+    {
+     "measure": "Respiratory health status across groups as measured from total number of symptoms in a day and prevalence of individual symptoms recorded on daily diary cards.",
+     "timeFrame": "12 months of treatment"
+    },
+    {
+     "measure": "Airway bacteria numbers taken from a sputum sample, provided by a subset of patients, at months 3, 6, 9, 12 after drug issue.",
+     "timeFrame": "12 months of treatment"
+    },
+    {
+     "measure": "Changes in C-reactive protein (CRP) levels from baseline.",
+     "timeFrame": "12 months of treatment"
+    },
+    {
+     "measure": "Hospital admissions. This data will be collected from Hospital Episode Statistics (HES).",
+     "timeFrame": "12 months of treatment"
+    },
+    {
+     "measure": "Time to 1st exacerbation measured by diary cards in both therapy and placebo groups.",
+     "timeFrame": "12 months of treatment"
+    },
+    {
+     "measure": "Rate of exacerbations treated with steroids and antibiotics.",
+     "timeFrame": "12 months of treatment"
+    },
+    {
+     "measure": "Adherence as measured using pill counts.",
+     "timeFrame": "12 months of treatment"
+    },
+    {
+     "measure": "Antibiotic resistance measured in the subset of patients (able to produce sputum) from sputum based on standard NHS procedures (not resistant, intermediate, severe, resistant).",
+     "timeFrame": "12 months of treatment"
+    }
+   ],
+   "otherOutcomes": [
+    {
+     "measure": "Pre-specified Exploratory Subgroup Analysis",
+     "description": "As co-morbidities for COPD are heterogeneous, exploratory analysis will be carried out to investigate whether there is an interaction with treatment- i.e. to investigate whether outcomes of treatment are either influenced by and/or restricted to patients with particular known co morbidities. The following will be looked at in this study:\n\nCardiovascular disease. This included patients receiving treatment for Ischemic Heart Disease, hypertension and heart failure.\n\nDiabetes and/or known impaired glucose intolerance Body Mass Index (BMI)",
+     "timeFrame": "12 months of treatment"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Informed consent given\n* Confirmed COPD diagnosis\n* Severity of disease: Patients with a measured FEV1\\<80% of predicted normal values.\n* At least one treated exacerbation (Patient recalls an episode of symptomatic worsening which was treated and was consistent with a COPD exacerbation) in the previous year.\n* Age: ≥ 45 years of age at screening.\n* Able to complete questionnaires for health status and symptoms and considered able to comply with the dosing regimen.\n* Patients willing to report exacerbations and attend for study visits.\n\nExclusion Criteria:\n\n* Patients with a known diagnosis of active TB or other chronic respiratory disease in the judgement of the study doctor.\n* Hepatic or renal impairment as defined as LFTs \\> 5XULN, and eGFR\\<30 ml/min/1.73m2.\n* Patients with known hypersensitivity to Tetracyclines, the IMP and/or Placebo including their excipients.\n* Patients taking ongoing antibiotic therapy for COPD or other conditions.\n* Patients with uncontrolled clinically significant hypertension\n* Female patients who are pregnant or planning on becoming pregnant during the study, or are breastfeeding.\n* Patients with uncontrolled clinically relevant bradycardia, cardiac arrhythmias or cardiac insufficiency.\n* Clinically relevant abnormal electrolyes (sodium or potassium), renal function (urea and creatinine) or liver function (ALT, AST, ALP) that could interfere with the objectives of the trial or safety of the volunteer.\n* Patient taking clinically significant contraindicated medication, as per the SmPC for Doxycycline.\n* Use of another experimental investigational medicinal product within 3 months of study enrolment. If the IMP used was as part of the NIHR WP2 study then entry to WP3 after a 6 week washout period is permissible.\n* Patients with any other condition precluding enrolment in the trial, according to the assessment of the study doctor. This will be documented at screening",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "45 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Wisia Wedzicha, MD",
+     "affiliation": "Imperial College London",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Aintree University Hospital NHS Foundation Trust",
+     "city": "Liverpool",
+     "zip": "L9 7AL",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 53.41058,
+      "lon": -2.97794
+     }
+    },
+    {
+     "facility": "St Georges University Hospitals NHS Foundation Trust",
+     "city": "London",
+     "zip": "SW17 0RE",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.50853,
+      "lon": -0.12574
+     }
+    },
+    {
+     "facility": "Royal Brompton and Harefield Hospital NHS Foundation Trust",
+     "city": "London",
+     "zip": "SW36NP",
+     "country": "United Kingdom",
+     "geoPoint": {
+      "lat": 51.50853,
+      "lon": -0.12574
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "37450935",
+     "type": "DERIVED",
+     "citation": "Allinson JP, Vlies BH, Brill SE, Law M, Burnside G, Finney LJ, Alves-Moreira L, Donaldson GC, Calverley PMA, Walker PP, Wedzicha JA. A Double-Blind, Randomized, Placebo-controlled Trial of Long-Term Doxycycline Therapy on Exacerbation Rate in Patients with Stable Chronic Obstructive Pulmonary Disease. Am J Respir Crit Care Med. 2023 Sep 1;208(5):549-558. doi: 10.1164/rccm.202212-2287OC."
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "annotationSection": {
+  "annotationModule": {
+   "unpostedAnnotation": {
+    "unpostedResponsibleParty": "Imperial College London",
+    "unpostedEvents": [
+     {
+      "type": "RELEASE",
+      "date": "2019-10-25"
+     },
+     {
+      "type": "UNRELEASE",
+      "date": "2019-11-07"
+     },
+     {
+      "type": "RELEASE",
+      "date": "2019-12-04"
+     },
+     {
+      "type": "RESET",
+      "date": "2019-12-20"
+     },
+     {
+      "type": "RELEASE",
+      "date": "2024-03-26"
+     },
+     {
+      "type": "UNRELEASE",
+      "date": "2024-03-27"
+     },
+     {
+      "type": "RELEASE",
+      "date": "2024-04-30"
+     },
+     {
+      "type": "RESET",
+      "date": "2024-09-18"
+     },
+     {
+      "type": "RELEASE",
+      "date": "2025-01-30"
+     },
+     {
+      "type": "RESET",
+      "date": "2025-02-20"
+     }
+    ]
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16",
+   "submissionTracking": {
+    "estimatedResultsFirstSubmitDate": "2019-10-25",
+    "submissionInfos": [
+     {
+      "releaseDate": "2019-10-25",
+      "unreleaseDate": "2019-11-07"
+     },
+     {
+      "releaseDate": "2019-12-04",
+      "resetDate": "2019-12-20"
+     },
+     {
+      "releaseDate": "2024-03-26",
+      "unreleaseDate": "2024-03-27"
+     },
+     {
+      "releaseDate": "2024-04-30",
+      "resetDate": "2024-09-18"
+     },
+     {
+      "releaseDate": "2025-01-30",
+      "resetDate": "2025-02-20"
+     }
+    ]
+   }
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D004318",
+     "term": "Doxycycline"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D013754",
+     "term": "Tetracyclines"
+    },
+    {
+     "id": "D009279",
+     "term": "Naphthacenes"
+    },
+    {
+     "id": "D011084",
+     "term": "Polycyclic Aromatic Hydrocarbons"
+    },
+    {
+     "id": "D006841",
+     "term": "Hydrocarbons, Aromatic"
+    },
+    {
+     "id": "D006844",
+     "term": "Hydrocarbons, Cyclic"
+    },
+    {
+     "id": "D006838",
+     "term": "Hydrocarbons"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D011083",
+     "term": "Polycyclic Compounds"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}

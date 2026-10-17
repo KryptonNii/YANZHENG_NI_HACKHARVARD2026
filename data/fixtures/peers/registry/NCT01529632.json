@@ -1,0 +1,1988 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT01529632",
+   "orgStudyIdInfo": {
+    "id": "CQVA149A2326"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2011-006050-91",
+     "type": "EUDRACT_NUMBER"
+    }
+   ],
+   "organization": {
+    "fullName": "Novartis",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Comparison of Safety and Efficacy of the Combination Product QVA149A Against the Concurrent Administration of the Individual Components, QAB149 and NVA237, in Patients With Chronic Obstructive Pulmonary Disease (COPD)",
+   "officialTitle": "A Study to Compare the Efficacy and Safety of Once Daily QVA149 Versus the Once Daily Concurrent Administration of QAB149 Plus NVA237 in Patients With Moderate to Severe Chronic Obstructive Pulmonary Disease",
+   "acronym": "BEACON"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2014-01",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2012-05"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2012-12",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2012-12",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2012-02-06",
+   "studyFirstSubmitQcDate": "2012-02-08",
+   "studyFirstPostDateStruct": {
+    "date": "2012-02-09",
+    "type": "ESTIMATED"
+   },
+   "resultsFirstSubmitDate": "2013-12-02",
+   "resultsFirstSubmitQcDate": "2014-01-16",
+   "resultsFirstPostDateStruct": {
+    "date": "2014-02-12",
+    "type": "ESTIMATED"
+   },
+   "lastUpdateSubmitDate": "2014-01-16",
+   "lastUpdatePostDateStruct": {
+    "date": "2014-02-12",
+    "type": "ESTIMATED"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "Novartis Pharmaceuticals",
+    "class": "INDUSTRY"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The study assessed the safety and efficacy of the fixed combination product QVA149 versus the component products QAB149 and NVA237, administered concurrently, in patients that have moderate to severe chronic obstructive pulmonary disease (COPD).",
+   "detailedDescription": "The study assessed the safety and efficacy of the fixed combination product QVA149 versus the component products QAB149 and NVA237, administered concurrently, in patients that have moderate to severe chronic obstructive pulmonary disease (COPD)."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease"
+   ],
+   "keywords": [
+    "chronic obstructive pulmonary disease",
+    "COPD",
+    "QVA149",
+    "QAB149",
+    "NVA237",
+    "indacaterol",
+    "glycopyrronium bromide"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 193,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "QVA149",
+     "type": "EXPERIMENTAL",
+     "description": "QVA149 plus placebo once daily for 28 days.",
+     "interventionNames": [
+      "Drug: QVA149",
+      "Drug: Placebo"
+     ]
+    },
+    {
+     "label": "QAB149 + NVA237",
+     "type": "ACTIVE_COMPARATOR",
+     "description": "Indacaterol maleate (QAB149) plus glycopyrronium bromide (NVA237) once daily for 28 days.",
+     "interventionNames": [
+      "Drug: NVA237",
+      "Drug: QAB149"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "QVA149",
+     "description": "QVA149 110/50 ug supplied as capsules in blister packs for inhalation via SDDPI, once daily",
+     "armGroupLabels": [
+      "QVA149"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "NVA237",
+     "description": "NVA237 50 ug supplied as capsules in blister packs for inhalation via SDDPI, once daily",
+     "armGroupLabels": [
+      "QAB149 + NVA237"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "QAB149",
+     "description": "QAB149 150 ug supplied as capsules in blister packs for inhalation via SDDPI , once daily",
+     "armGroupLabels": [
+      "QAB149 + NVA237"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Placebo",
+     "description": "Placebo capsules provided in blister packs for inhalation via SDDPI, once daily",
+     "armGroupLabels": [
+      "QVA149"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Trough Forced Expiratory Volume in 1 Second (FEV1) After 28 Days of Blinded Treatment",
+     "description": "Spirometry was conducted according to internationally accepted standards. Trough FEV1 is defined as the average of the 23 hour 15 minute and 23 hour 45 minute post-dose FEV1 readings measured at day 29, after 28 days of treatment. Mixed model: Trough FEV1 = treatment + baseline FEV1 + FEV1 reversibility components + baseline smoking status + baseline ICS use + country + center (country) + error. Center was included as a random effect nested within country.",
+     "timeFrame": "Day 29"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Forced Expiratory Volume in 1 Second (FEV1) Area Under the Curve (AUC) 0-4 Hours at Day 1",
+     "description": "Forced Expiratory Volume in 1 Second (FEV1) Area Under the Curve (AUC) 0-4h at Day 1 was measured via spirometry conducted according to internationally accepted standards. Measurements were made at 0, 5, 15, and 30 minutes; and 1, 2, 3 and 4 hours post-dose. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time. Mixed model used: AUC FEV1 = treatment + baseline FEV1 + FEV1 reversibility components + baseline smoking status + baseline ICS use + country + center (country) + error. Center was included as a random effect nested within country.",
+     "timeFrame": "0, 5, 15, and 30 minutes; and 1, 2, 3 and 4 hours post-dose at Day 1"
+    },
+    {
+     "measure": "Forced Expiratory Volume in 1 Second (FEV1) Area Under the Curve (AUC) 0-4 Hours at Day 28",
+     "description": "Forced Expiratory Volume in 1 Second (FEV1) Area Under the Curve (AUC) 0-4h at Day 28 was measured via spirometry conducted according to internationally accepted standards. Measurements were made at 0, 5, 15, and 30 minutes; and 1, 2, 3 and 4 hours post-dose. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time. Mixed model used: AUC FEV1 = treatment + baseline FEV1 + FEV1 reversibility components + baseline smoking status + baseline ICS use + country + center (country) + error. Center was included as a random effect nested within country.",
+     "timeFrame": "0, 5, 15, and 30 minutes; and 1, 2, 3 and 4 hours post-dose at Day 28"
+    },
+    {
+     "measure": "Peak Forced Expiratory Volume in 1 Second (FEV1) on Days 1 and 28 Post-dose",
+     "description": "Spirometry was conducted according to internationally accepted standards. Peak FEV1 is the maximum FEV1 recorded in the period between 5 minutes and 4 hours post dose. Analysis of Covariance was carried out with a mixed model that used (period) baseline, defined as the value of FEV1 measured prior to the first study drug intake in the period, as a covariate.",
+     "timeFrame": "5 min - 4 hr at Days 1 and 28"
+    },
+    {
+     "measure": "Time Course of Forced Expiratory Volume in One Second (FEV1) (Pre-dose to 4 Hours Post Dose) on Day 28",
+     "description": "Time course of Forced Expiratory Volume in 1 second (FEV1) was measured at -45 min, -15 min predose, 5 min, 30 min, 1 hr, 2hr, 3hr and 4 hr post-dose on Day 28. FEV1 is the amount of air which can be forcibly exhaled from the lungs in the first second of a forced exhalation.",
+     "timeFrame": "-45 min, -15 min predose, 5 min, 30 min, 1 hr, 2hr, 3hr and 4 hr post-dose on Day 28"
+    },
+    {
+     "measure": "Change From Baseline in the Mean Daily, (Daytime and Nighttime Combined) Number of Puffs of Rescue Medication Used Over 28 Days of Treatment",
+     "description": "The number of puffs of rescue medication taken in the previous 12 hours was recorded in the Patient Diary in the morning and evening. The total number of puffs of rescue medication per day over the whole active treatment period was calculated and divided by the total number of days with non-missing rescue data to derive the mean daily number of puffs of rescue medication taken for the patient. If the number of puffs was missing for part of the day (either morning or evening) then a half day was used in the denominator.",
+     "timeFrame": "Baseline and 28 days"
+    },
+    {
+     "measure": "Change From Baseline in Percentage of Days With 'no Daytime Symptoms' Over 28 Days of Treatment",
+     "description": "The mean total symptom scores and mean individual symptom scores for the patient were calculated for the whole study period. The mean change from baseline in the total scores and in the individual scores were summarized by treatment and were analyzed for the percentage of 'nights with no nighttime awakenings'. The symptom variables for the whole active treatment period was analyzed using the similar MIXED model as for the primary endpoint, with the baseline FEV1 term being replaced by the respective baseline symptom variables.",
+     "timeFrame": "28 days"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Male or female adults aged ≥ 40 yrs\n* Smoking history of at least 10 pack years\n* Diagnosis of COPD (moderate to severe as classified by the Global Initiative for Chronic Obstructive Lung Disease (GOLD) Guidelines, 2010)\n* Post-bronchodilator FEV1 \\< 80% and ≥ 30% of the predicted normal value and post-bronchodilator FEV1/FVC (forced vital capacity) \\< 70%\n\nExclusion Criteria:\n\n* Patients who have had a respiratory tract infection within 4 weeks prior to Visit 1\n* Patients with concomitant pulmonary disease\n* Patients with a history of asthma\n* Any patient with lung cancer or a history of lung cancer\n* Patients with a history of certain cardiovascular co-morbid conditions\n* Patients with a known history and diagnosis of alpha-1 antitrypsin deficiency\n* Patients in the active phase of a supervised pulmonary rehabilitation program\n* Patients contraindicated for inhaled anticholinergic agents and β2 agonists\n\nOther protocol-defined inclusion/exclusion criteria may apply",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "stdAges": [
+    "CHILD",
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Novartis Pharmaceuticals",
+     "affiliation": "Novartis Pharmaceuticals",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Feldbach",
+     "state": "Austria",
+     "zip": "8330",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 46.95306,
+      "lon": 15.88833
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Grieskirchen",
+     "state": "Austria",
+     "zip": "4710",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 48.23333,
+      "lon": 13.83333
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Linz",
+     "state": "Austria",
+     "zip": "4020",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 48.30639,
+      "lon": 14.28611
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Wels",
+     "state": "Austria",
+     "zip": "4600",
+     "country": "Austria",
+     "geoPoint": {
+      "lat": 48.16667,
+      "lon": 14.03333
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Aalborg",
+     "state": "Denmark",
+     "zip": "DK-9100",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 57.048,
+      "lon": 9.9187
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Hvidovre",
+     "state": "Denmark",
+     "zip": "DK-2650",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.64297,
+      "lon": 12.47708
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Aarhus",
+     "zip": "DK-8000",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 56.15674,
+      "lon": 10.21076
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Copenhagen NV",
+     "zip": "DK-2400",
+     "country": "Denmark"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Odense C",
+     "zip": "DK-5000",
+     "country": "Denmark",
+     "geoPoint": {
+      "lat": 55.40841,
+      "lon": 10.39538
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Almelo",
+     "state": "Netherlands",
+     "zip": "7609 PP",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.35667,
+      "lon": 6.6625
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Harderwijk",
+     "state": "Netherlands",
+     "zip": "3840 AC",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.34167,
+      "lon": 5.62083
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Heerlen",
+     "state": "Netherlands",
+     "zip": "6419 PC",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 50.88365,
+      "lon": 5.98154
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Eindhoven",
+     "zip": "5623 EJ",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 51.44083,
+      "lon": 5.47778
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Hengelo",
+     "zip": "7555 DL",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.26583,
+      "lon": 6.79306
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Sittard-Geleen",
+     "zip": "6162 BG",
+     "country": "Netherlands"
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Tubbergen",
+     "zip": "7651 JH",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 52.4075,
+      "lon": 6.78472
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Veldhoven",
+     "zip": "5504 DB",
+     "country": "Netherlands",
+     "geoPoint": {
+      "lat": 51.41833,
+      "lon": 5.40278
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Kløfta",
+     "zip": "2040",
+     "country": "Norway",
+     "geoPoint": {
+      "lat": 60.07407,
+      "lon": 11.13805
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Kongsvinger",
+     "zip": "2212",
+     "country": "Norway",
+     "geoPoint": {
+      "lat": 60.19049,
+      "lon": 11.99772
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Skedsmokorset",
+     "zip": "2020",
+     "country": "Norway",
+     "geoPoint": {
+      "lat": 60.00459,
+      "lon": 11.03278
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Stavanger",
+     "zip": "4005",
+     "country": "Norway",
+     "geoPoint": {
+      "lat": 58.97005,
+      "lon": 5.73332
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Trondheim",
+     "zip": "7006",
+     "country": "Norway",
+     "geoPoint": {
+      "lat": 63.43049,
+      "lon": 10.39506
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Gothenburg",
+     "zip": "412 63",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 57.70716,
+      "lon": 11.96679
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Stockholm",
+     "zip": "111 57",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 59.32938,
+      "lon": 18.06871
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Stockholm",
+     "zip": "S-171 76",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 59.32938,
+      "lon": 18.06871
+     }
+    },
+    {
+     "facility": "Novartis Investigative Site",
+     "city": "Uddevalla",
+     "zip": "451 50",
+     "country": "Sweden",
+     "geoPoint": {
+      "lat": 58.34784,
+      "lon": 11.9424
+     }
+    }
+   ]
+  }
+ },
+ "resultsSection": {
+  "participantFlowModule": {
+   "preAssignmentDetails": "Open-label, active QAB149 and NVA237 were administered during a 14-day period prior to randomization in order to stabilize patients and standardize baseline lung function. The patients were then randomized to either the fixed dose combination or free combination arms of blinded treatment in a 1:1 ratio and received study drug for 28 days.",
+   "recruitmentDetails": "193 patients were randomized, with 187 of those completing the study. A total of 6 patients discontinued from the study.",
+   "groups": [
+    {
+     "id": "FG000",
+     "title": "QVA149",
+     "description": "QVA149 plus placebo once daily for 28 days."
+    },
+    {
+     "id": "FG001",
+     "title": "QAB149 + NVA237",
+     "description": "Indacaterol (QAB149) plus glycopyrronium bromide (NVA237) once daily for 28 days."
+    }
+   ],
+   "periods": [
+    {
+     "title": "Overall Study",
+     "milestones": [
+      {
+       "type": "STARTED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "90"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "103"
+        }
+       ]
+      },
+      {
+       "type": "COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "87"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "100"
+        }
+       ]
+      },
+      {
+       "type": "NOT COMPLETED",
+       "achievements": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "3"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "3"
+        }
+       ]
+      }
+     ],
+     "dropWithdraws": [
+      {
+       "type": "Administrative problem",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "2"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Protocol Violation",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "0"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      },
+      {
+       "type": "Adverse Event",
+       "reasons": [
+        {
+         "groupId": "FG000",
+         "numSubjects": "1"
+        },
+        {
+         "groupId": "FG001",
+         "numSubjects": "1"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "baselineCharacteristicsModule": {
+   "groups": [
+    {
+     "id": "BG000",
+     "title": "QVA149",
+     "description": "QVA149 plus placebo once daily for 28 days."
+    },
+    {
+     "id": "BG001",
+     "title": "QAB149 + NVA237",
+     "description": "Indacaterol (QAB149) plus glycopyrronium bromide (NVA237) once daily for 28 days."
+    },
+    {
+     "id": "BG002",
+     "title": "Total",
+     "description": "Total of all reporting groups"
+    }
+   ],
+   "denoms": [
+    {
+     "units": "Participants",
+     "counts": [
+      {
+       "groupId": "BG000",
+       "value": "90"
+      },
+      {
+       "groupId": "BG001",
+       "value": "103"
+      },
+      {
+       "groupId": "BG002",
+       "value": "193"
+      }
+     ]
+    }
+   ],
+   "measures": [
+    {
+     "title": "Age, Continuous",
+     "paramType": "MEAN",
+     "dispersionType": "STANDARD_DEVIATION",
+     "unitOfMeasure": "years",
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "65.6",
+           "spread": "7.28"
+          },
+          {
+           "groupId": "BG001",
+           "value": "64.2",
+           "spread": "7.40"
+          },
+          {
+           "groupId": "BG002",
+           "value": "64.9",
+           "spread": "7.36"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Sex: Female, Male",
+     "paramType": "COUNT_OF_PARTICIPANTS",
+     "unitOfMeasure": "Participants",
+     "classes": [
+      {
+       "categories": [
+        {
+         "title": "Female",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "32"
+          },
+          {
+           "groupId": "BG001",
+           "value": "44"
+          },
+          {
+           "groupId": "BG002",
+           "value": "76"
+          }
+         ]
+        },
+        {
+         "title": "Male",
+         "measurements": [
+          {
+           "groupId": "BG000",
+           "value": "58"
+          },
+          {
+           "groupId": "BG001",
+           "value": "59"
+          },
+          {
+           "groupId": "BG002",
+           "value": "117"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "outcomeMeasuresModule": {
+   "outcomeMeasures": [
+    {
+     "type": "PRIMARY",
+     "title": "Trough Forced Expiratory Volume in 1 Second (FEV1) After 28 Days of Blinded Treatment",
+     "description": "Spirometry was conducted according to internationally accepted standards. Trough FEV1 is defined as the average of the 23 hour 15 minute and 23 hour 45 minute post-dose FEV1 readings measured at day 29, after 28 days of treatment. Mixed model: Trough FEV1 = treatment + baseline FEV1 + FEV1 reversibility components + baseline smoking status + baseline ICS use + country + center (country) + error. Center was included as a random effect nested within country.",
+     "populationDescription": "The Per Protocol Set includes the Full analysis Set patients with available data and without any major protocol deviations or criteria causing exclusion.\n\nPatients were analyzed according to the treatment to which they were randomized.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "Day 29",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "QVA149 plus placebo once daily for 28 days."
+      },
+      {
+       "id": "OG001",
+       "title": "QAB149 + NVA237",
+       "description": "Indacaterol (QAB149) plus glycopyrronium bromide (NVA237) once daily for 28 days."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "81"
+        },
+        {
+         "groupId": "OG001",
+         "value": "96"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.459",
+           "spread": "0.0196"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.465",
+           "spread": "0.0180"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Forced Expiratory Volume in 1 Second (FEV1) Area Under the Curve (AUC) 0-4 Hours at Day 1",
+     "description": "Forced Expiratory Volume in 1 Second (FEV1) Area Under the Curve (AUC) 0-4h at Day 1 was measured via spirometry conducted according to internationally accepted standards. Measurements were made at 0, 5, 15, and 30 minutes; and 1, 2, 3 and 4 hours post-dose. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time. Mixed model used: AUC FEV1 = treatment + baseline FEV1 + FEV1 reversibility components + baseline smoking status + baseline ICS use + country + center (country) + error. Center was included as a random effect nested within country.",
+     "populationDescription": "The Per Protocol Set includes the Full analysis Set patients with available data and without any major protocol deviations or criteria causing exclusion.\n\nPatients were analyzed according to the treatment to which they were randomized.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "0, 5, 15, and 30 minutes; and 1, 2, 3 and 4 hours post-dose at Day 1",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "QVA149 plus placebo once daily for 28 days."
+      },
+      {
+       "id": "OG001",
+       "title": "QAB149 + NVA237",
+       "description": "Indacaterol (QAB149) plus glycopyrronium bromide (NVA237) once daily for 28 days."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "83"
+        },
+        {
+         "groupId": "OG001",
+         "value": "97"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.597",
+           "spread": "0.0125"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.573",
+           "spread": "0.0114"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Forced Expiratory Volume in 1 Second (FEV1) Area Under the Curve (AUC) 0-4 Hours at Day 28",
+     "description": "Forced Expiratory Volume in 1 Second (FEV1) Area Under the Curve (AUC) 0-4h at Day 28 was measured via spirometry conducted according to internationally accepted standards. Measurements were made at 0, 5, 15, and 30 minutes; and 1, 2, 3 and 4 hours post-dose. The standardized AUC FEV1 was calculated as the sum of trapezoids divided by the length of time. Mixed model used: AUC FEV1 = treatment + baseline FEV1 + FEV1 reversibility components + baseline smoking status + baseline ICS use + country + center (country) + error. Center was included as a random effect nested within country.",
+     "populationDescription": "The Per Protocol Set includes the Full analysis Set patients with available data and without any major protocol deviations or criteria causing exclusion.\n\nPatients were analyzed according to the treatment to which they were randomized.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "0, 5, 15, and 30 minutes; and 1, 2, 3 and 4 hours post-dose at Day 28",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "QVA149 plus placebo once daily for 28 days."
+      },
+      {
+       "id": "OG001",
+       "title": "QAB149 + NVA237",
+       "description": "Indacaterol (QAB149) plus glycopyrronium bromide (NVA237) once daily for 28 days."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "80"
+        },
+        {
+         "groupId": "OG001",
+         "value": "92"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.575",
+           "spread": "0.0200"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.587",
+           "spread": "0.0184"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Peak Forced Expiratory Volume in 1 Second (FEV1) on Days 1 and 28 Post-dose",
+     "description": "Spirometry was conducted according to internationally accepted standards. Peak FEV1 is the maximum FEV1 recorded in the period between 5 minutes and 4 hours post dose. Analysis of Covariance was carried out with a mixed model that used (period) baseline, defined as the value of FEV1 measured prior to the first study drug intake in the period, as a covariate.",
+     "populationDescription": "The Per Protocol Set includes the Full analysis Set patients with available data and without any major protocol deviations or criteria causing exclusion.\n\nPatients were analyzed according to the treatment to which they were randomized.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "5 min - 4 hr at Days 1 and 28",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "QVA149 plus placebo once daily for 28 days."
+      },
+      {
+       "id": "OG001",
+       "title": "QAB149 + NVA237",
+       "description": "Indacaterol (QAB149) plus glycopyrronium bromide (NVA237) once daily for 28 days."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "83"
+        },
+        {
+         "groupId": "OG001",
+         "value": "97"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Day 1 (n=83, 97)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.668",
+           "spread": "0.0132"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.646",
+           "spread": "0.0120"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Day 28 (n= 80, 92)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.643",
+           "spread": "0.0210"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.654",
+           "spread": "0.0194"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Time Course of Forced Expiratory Volume in One Second (FEV1) (Pre-dose to 4 Hours Post Dose) on Day 28",
+     "description": "Time course of Forced Expiratory Volume in 1 second (FEV1) was measured at -45 min, -15 min predose, 5 min, 30 min, 1 hr, 2hr, 3hr and 4 hr post-dose on Day 28. FEV1 is the amount of air which can be forcibly exhaled from the lungs in the first second of a forced exhalation.",
+     "populationDescription": "The Per Protocol Set includes the Full analysis Set patients with available data and without any major protocol deviations or criteria causing exclusion. Patients were analyzed according to the treatment to which they were randomized.",
+     "reportingStatus": "POSTED",
+     "paramType": "LEAST_SQUARES_MEAN",
+     "dispersionType": "Standard Error",
+     "unitOfMeasure": "Liters",
+     "timeFrame": "-45 min, -15 min predose, 5 min, 30 min, 1 hr, 2hr, 3hr and 4 hr post-dose on Day 28",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "QVA149 plus placebo once daily for 28 days."
+      },
+      {
+       "id": "OG001",
+       "title": "QAB149 + NVA237",
+       "description": "Indacaterol (QAB149) plus glycopyrronium bromide (NVA237) once daily for 28 days."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "78"
+        },
+        {
+         "groupId": "OG001",
+         "value": "91"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "-45 min predose (n=76,90)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.452",
+           "spread": "0.0197"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.460",
+           "spread": "0.0184"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "-15 predose (n=72,87)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.449",
+           "spread": "0.0239"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.430",
+           "spread": "0.0227"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "5 min postdose (n=76,89)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.491",
+           "spread": "0.0222"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.514",
+           "spread": "0.0206"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "30 min postdose (n=76,88)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.529",
+           "spread": "0.0181"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.544",
+           "spread": "0.0166"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "1 hour postdose (n=77,90)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.584",
+           "spread": "0.0204"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.604",
+           "spread": "0.0189"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "2 hours postdose (n=77,90)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.601",
+           "spread": "0.0219"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.624",
+           "spread": "0.0203"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "3 hours postdose (n=78,91)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.576",
+           "spread": "0.0211"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.587",
+           "spread": "0.0195"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "4 hours postdose (n=77,84)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.554",
+           "spread": "0.0236"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.556",
+           "spread": "0.0228"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in the Mean Daily, (Daytime and Nighttime Combined) Number of Puffs of Rescue Medication Used Over 28 Days of Treatment",
+     "description": "The number of puffs of rescue medication taken in the previous 12 hours was recorded in the Patient Diary in the morning and evening. The total number of puffs of rescue medication per day over the whole active treatment period was calculated and divided by the total number of days with non-missing rescue data to derive the mean daily number of puffs of rescue medication taken for the patient. If the number of puffs was missing for part of the day (either morning or evening) then a half day was used in the denominator.",
+     "populationDescription": "The Per Protocol Set includes the Full analysis Set patients with available data and without any major protocol deviations or criteria causing exclusion.\n\nPatients were analyzed according to the treatment to which they were randomized.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "puffs",
+     "timeFrame": "Baseline and 28 days",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "QVA149 plus placebo once daily for 28 days."
+      },
+      {
+       "id": "OG001",
+       "title": "QAB149 + NVA237",
+       "description": "Indacaterol (QAB149) plus glycopyrronium bromide (NVA237) once daily for 28 days."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "84"
+        },
+        {
+         "groupId": "OG001",
+         "value": "95"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Baseline (day 1)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "2.24",
+           "spread": "2.437"
+          },
+          {
+           "groupId": "OG001",
+           "value": "2.04",
+           "spread": "2.585"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "28 days after treatment",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "1.85",
+           "spread": "2.283"
+          },
+          {
+           "groupId": "OG001",
+           "value": "1.70",
+           "spread": "2.338"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "SECONDARY",
+     "title": "Change From Baseline in Percentage of Days With 'no Daytime Symptoms' Over 28 Days of Treatment",
+     "description": "The mean total symptom scores and mean individual symptom scores for the patient were calculated for the whole study period. The mean change from baseline in the total scores and in the individual scores were summarized by treatment and were analyzed for the percentage of 'nights with no nighttime awakenings'. The symptom variables for the whole active treatment period was analyzed using the similar MIXED model as for the primary endpoint, with the baseline FEV1 term being replaced by the respective baseline symptom variables.",
+     "populationDescription": "The Modified per protocol set (PPS) was defined post-DBL and included all patients with available data and without any major protocol deviations or criteria or GCP finding causing exclusion. Patients were analyzed according to the treatment to which they were randomized.",
+     "reportingStatus": "POSTED",
+     "paramType": "MEAN",
+     "dispersionType": "Standard Deviation",
+     "unitOfMeasure": "percentage of days",
+     "timeFrame": "28 days",
+     "groups": [
+      {
+       "id": "OG000",
+       "title": "QVA149",
+       "description": "QVA149 plus placebo once daily for 28 days."
+      },
+      {
+       "id": "OG001",
+       "title": "QAB149 + NVA237",
+       "description": "Indacaterol (QAB149) plus glycopyrronium bromide (NVA237) once daily for 28 days."
+      }
+     ],
+     "denoms": [
+      {
+       "units": "Participants",
+       "counts": [
+        {
+         "groupId": "OG000",
+         "value": "82"
+        },
+        {
+         "groupId": "OG001",
+         "value": "93"
+        }
+       ]
+      }
+     ],
+     "classes": [
+      {
+       "title": "Baseline (day 1)",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "6.2",
+           "spread": "16.54"
+          },
+          {
+           "groupId": "OG001",
+           "value": "3.9",
+           "spread": "10.44"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "After 28 days of treatment",
+       "categories": [
+        {
+         "measurements": [
+          {
+           "groupId": "OG000",
+           "value": "9.3",
+           "spread": "23.69"
+          },
+          {
+           "groupId": "OG001",
+           "value": "6.0",
+           "spread": "15.85"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "adverseEventsModule": {
+   "frequencyThreshold": "1",
+   "timeFrame": "From day 1 to day 28 and additional 30 days follow up.",
+   "description": "Safety Set included all patients who received at least one dose of study drug whether or not they were randomized.",
+   "eventGroups": [
+    {
+     "id": "EG000",
+     "title": "QVA149",
+     "description": "QVA149 plus placebo once daily for 28 days.",
+     "seriousNumAffected": 4,
+     "seriousNumAtRisk": 90,
+     "otherNumAffected": 20,
+     "otherNumAtRisk": 90
+    },
+    {
+     "id": "EG001",
+     "title": "QAB149 + NVA237",
+     "description": "Indacaterol (QAB149) plus glycopyrronium bromide (NVA237) once daily for 28 days.",
+     "seriousNumAffected": 6,
+     "seriousNumAtRisk": 103,
+     "otherNumAffected": 12,
+     "otherNumAtRisk": 103
+    }
+   ],
+   "seriousEvents": [
+    {
+     "term": "Pericarditis",
+     "organSystem": "Cardiac disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Pneumonia",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Pyelonephritis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Bronchial carcinoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Sarcoma",
+     "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Nephrolithiasis",
+     "organSystem": "Renal and urinary disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 0,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Pneumothorax",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Aortic aneurysm",
+     "organSystem": "Vascular disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    }
+   ],
+   "otherEvents": [
+    {
+     "term": "Diarrhoea",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Oedema mouth",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Oral pain",
+     "organSystem": "Gastrointestinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Chest discomfort",
+     "organSystem": "General disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Influenza",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Nasopharyngitis",
+     "organSystem": "Infections and infestations",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 7,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 6,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Ligament injury",
+     "organSystem": "Injury, poisoning and procedural complications",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Muscle spasms",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Myalgia",
+     "organSystem": "Musculoskeletal and connective tissue disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 2,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Headache",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Neuropathy peripheral",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Somnolence",
+     "organSystem": "Nervous system disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Depression",
+     "organSystem": "Psychiatric disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Breast pain",
+     "organSystem": "Reproductive system and breast disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Chronic obstructive pulmonary disease",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 3,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Cough",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 4,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Dysphonia",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Dyspnoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 2,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Oropharyngeal pain",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 1,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Pharyngeal oedema",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    },
+    {
+     "term": "Rhinorrhoea",
+     "organSystem": "Respiratory, thoracic and mediastinal disorders",
+     "sourceVocabulary": "MedDRA",
+     "assessmentType": "SYSTEMATIC_ASSESSMENT",
+     "stats": [
+      {
+       "groupId": "EG000",
+       "numAffected": 1,
+       "numAtRisk": 90
+      },
+      {
+       "groupId": "EG001",
+       "numAffected": 0,
+       "numAtRisk": 103
+      }
+     ]
+    }
+   ]
+  },
+  "moreInfoModule": {
+   "certainAgreement": {
+    "piSponsorEmployee": false,
+    "restrictionType": "OTHER",
+    "restrictiveAgreement": true,
+    "otherDetails": "The terms and conditions of Novartis' agreements with its investigators may vary. However, Novartis does not prohibit any investigator from publishing. Any publications from a single-site are postponed until the publication of pooled data (i.e.,data from all sites) in clinical trial or disclosure of trial results in their entirety."
+   },
+   "pointOfContact": {
+    "title": "Study Director",
+    "organization": "Novartis Pharmaceuticals",
+    "phone": "862-778-8300"
+   }
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "C554862",
+     "term": "indacaterol-glycopyrronium combination"
+    },
+    {
+     "id": "D006024",
+     "term": "Glycopyrrolate"
+    },
+    {
+     "id": "C510790",
+     "term": "indacaterol"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D000644",
+     "term": "Quaternary Ammonium Compounds"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D009861",
+     "term": "Onium Compounds"
+    },
+    {
+     "id": "D011759",
+     "term": "Pyrrolidines"
+    },
+    {
+     "id": "D006573",
+     "term": "Heterocyclic Compounds, 1-Ring"
+    },
+    {
+     "id": "D006571",
+     "term": "Heterocyclic Compounds"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}

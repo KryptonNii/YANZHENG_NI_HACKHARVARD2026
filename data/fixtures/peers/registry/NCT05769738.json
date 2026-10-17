@@ -1,0 +1,387 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT05769738",
+   "orgStudyIdInfo": {
+    "id": "BIO-2022-0187"
+   },
+   "organization": {
+    "fullName": "American University of Beirut Medical Center",
+    "class": "OTHER"
+   },
+   "briefTitle": "The Addition of Inhaled Furosemide to Standard Treatment of COPD Exacerbation",
+   "officialTitle": "The Addition of Inhaled FUROsemide to Standard of Care in COPD Exacerbation: a Randomized Double Blinded Control Trial (FUROSCOPE Trial)",
+   "acronym": "FUROSCOPE"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2023-01",
+   "overallStatus": "UNKNOWN",
+   "lastKnownStatus": "NOT_YET_RECRUITING",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2023-03",
+    "type": "ESTIMATED"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2024-12",
+    "type": "ESTIMATED"
+   },
+   "completionDateStruct": {
+    "date": "2024-12",
+    "type": "ESTIMATED"
+   },
+   "studyFirstSubmitDate": "2023-02-03",
+   "studyFirstSubmitQcDate": "2023-03-03",
+   "studyFirstPostDateStruct": {
+    "date": "2023-03-15",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2023-03-03",
+   "lastUpdatePostDateStruct": {
+    "date": "2023-03-15",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "American University of Beirut Medical Center",
+    "class": "OTHER"
+   }
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": false,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "The goal of this randomized controlled trial is to determine the effect of adding inhaled furosemide to the known treatment of patient with Chronic obstructive pulmonary disease (COPD) exacerbation. It primarily aims at studying its effect on:\n\n1. Relief of dyspnea sensation\n2. Length of hospital stay\n\nParticipants will be receiving the standard therapy of COPD exacerbation plus either inhaled furosemide or inhaled saline over 3 days. They will be asked to:\n\n* Perform spirometry\n* Fill in dyspnea score\n* Do arterial blood gases (ABGs)"
+  },
+  "conditionsModule": {
+   "conditions": [
+    "Chronic Obstructive Pulmonary Disease Exacerbation",
+    "COPD Exacerbation"
+   ],
+   "keywords": [
+    "COPD",
+    "furosemide",
+    "dyspnea",
+    "inhaled furosemide"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "TREATMENT",
+    "maskingInfo": {
+     "masking": "QUADRUPLE",
+     "maskingDescription": "Both medications will be prepared by the pharmacists, the only unblinded personnel in the study, as transparent solutions in similar syringes.",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 200,
+    "type": "ESTIMATED"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "Furosemide group",
+     "type": "EXPERIMENTAL",
+     "description": "Inhaled furosemide",
+     "interventionNames": [
+      "Drug: Furosemide"
+     ]
+    },
+    {
+     "label": "Placebo group",
+     "type": "PLACEBO_COMPARATOR",
+     "description": "Inhaled saline",
+     "interventionNames": [
+      "Drug: Normal saline"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "DRUG",
+     "name": "Furosemide",
+     "description": "40mg (4ml) of furosemide to be nebulized 3 times daily for 3 days",
+     "armGroupLabels": [
+      "Furosemide group"
+     ],
+     "otherNames": [
+      "Lasix",
+      "Diuretic"
+     ]
+    },
+    {
+     "type": "DRUG",
+     "name": "Normal saline",
+     "description": "4ml of normal saline to be nebulized 3 times daily for 3 days",
+     "armGroupLabels": [
+      "Placebo group"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Change in dyspnea score from baseline as assessed by visual analogue scale (VAS)",
+     "description": "Visual analogue scale is a scale from 0 to 10, where 0 means no dyspnea at all and 10 is the worse dyspnea ever",
+     "timeFrame": "at 24 hours"
+    },
+    {
+     "measure": "Change in dyspnea score from baseline as assessed by visual analogue scale (VAS)",
+     "description": "Visual analogue scale is a scale from 0 to 10, where 0 means no dyspnea at all and 10 is the worse dyspnea ever",
+     "timeFrame": "at 72 hours"
+    },
+    {
+     "measure": "Change in length of hospital stay",
+     "timeFrame": "From admission to hospital discharge, up to 1 year"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Change in lung volumes from baseline as measured by bedside spirometer",
+     "description": "Forced expiratory volume in first second (FEV1) and forced vital capacity (FVC)",
+     "timeFrame": "On days 0, 1 and 3"
+    },
+    {
+     "measure": "Change in Arterial blood gases",
+     "timeFrame": "On days 0 and 1"
+    },
+    {
+     "measure": "Change in heart rate from baseline",
+     "timeFrame": "On days 0, 1 and 3"
+    },
+    {
+     "measure": "Change in systolic and diastolic blood pressure from baseline",
+     "timeFrame": "On days 0, 1 and 3"
+    },
+    {
+     "measure": "Change in steroid dose",
+     "timeFrame": "Through hospital stay, up till 1 year"
+    },
+    {
+     "measure": "Change in the number of patients requiring intubation or non-invasive mechanical ventilation",
+     "description": "Measured by questionnaire",
+     "timeFrame": "Through hospital stay, up till 1 year"
+    },
+    {
+     "measure": "Change in mortality",
+     "timeFrame": "Through hospital stay, up till 1 year"
+    },
+    {
+     "measure": "Number of patients with adverse events as documented by questionnaires",
+     "description": "Including: kidney injury measured by Creatinine and urine output, electrolyte disturbances (sodium and potassium levels)",
+     "timeFrame": "On days 1,2,3"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n* Age ≥ 18 years\n* Diagnosed with COPD\n* Presenting with COPD exacerbation\n* Requiring hospitalization\n\nExclusion Criteria:\n\n* Hemodynamically instability (systolic blood pressure ≤ 90mmHg, heart rate ≥ 120 or ≤ 50 Bpm)\n* Decreased level of consciousness\n* Non-invasive mechanical ventilation or intubation at the time of recruitment\n* \\>5 liters of oxygen at the time of recruitment\n* Pregnant patients\n* Other primary pulmonary disease or heart failure exacerbation",
+   "healthyVolunteers": false,
+   "sex": "ALL",
+   "minimumAge": "18 Years",
+   "stdAges": [
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "centralContacts": [
+    {
+     "name": "Nivine Abou Dargham, MD",
+     "role": "CONTACT",
+     "phone": "0096170160343",
+     "email": "na291@aub.edu.lb"
+    },
+    {
+     "name": "Hisham Bou Fakhreddine, MD",
+     "role": "CONTACT",
+     "phone": "0096171307105",
+     "email": "hb93@aub.edu.lb"
+    }
+   ],
+   "overallOfficials": [
+    {
+     "name": "Nivine Abou Dargham, MD",
+     "affiliation": "AUBMC",
+     "role": "STUDY_DIRECTOR"
+    },
+    {
+     "name": "Salah Zeineddine, MD",
+     "affiliation": "AUBMC",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    },
+    {
+     "name": "Hisham Bou Fakhreddine, MD",
+     "affiliation": "AUBMC",
+     "role": "PRINCIPAL_INVESTIGATOR"
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-10-16"
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D029424",
+     "term": "Pulmonary Disease, Chronic Obstructive"
+    },
+    {
+     "id": "D004417",
+     "term": "Dyspnea"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D008173",
+     "term": "Lung Diseases, Obstructive"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    },
+    {
+     "id": "D002908",
+     "term": "Chronic Disease"
+    },
+    {
+     "id": "D020969",
+     "term": "Disease Attributes"
+    },
+    {
+     "id": "D010335",
+     "term": "Pathologic Processes"
+    },
+    {
+     "id": "D013568",
+     "term": "Pathological Conditions, Signs and Symptoms"
+    },
+    {
+     "id": "D012120",
+     "term": "Respiration Disorders"
+    },
+    {
+     "id": "D012818",
+     "term": "Signs and Symptoms, Respiratory"
+    },
+    {
+     "id": "D012816",
+     "term": "Signs and Symptoms"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D005665",
+     "term": "Furosemide"
+    },
+    {
+     "id": "D004232",
+     "term": "Diuretics"
+    },
+    {
+     "id": "D000077330",
+     "term": "Saline Solution"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D013424",
+     "term": "Sulfanilamides"
+    },
+    {
+     "id": "D013449",
+     "term": "Sulfonamides"
+    },
+    {
+     "id": "D000577",
+     "term": "Amides"
+    },
+    {
+     "id": "D009930",
+     "term": "Organic Chemicals"
+    },
+    {
+     "id": "D000814",
+     "term": "Aniline Compounds"
+    },
+    {
+     "id": "D000588",
+     "term": "Amines"
+    },
+    {
+     "id": "D013450",
+     "term": "Sulfones"
+    },
+    {
+     "id": "D013457",
+     "term": "Sulfur Compounds"
+    },
+    {
+     "id": "D045283",
+     "term": "Natriuretic Agents"
+    },
+    {
+     "id": "D045505",
+     "term": "Physiological Effects of Drugs"
+    },
+    {
+     "id": "D020228",
+     "term": "Pharmacologic Actions"
+    },
+    {
+     "id": "D020164",
+     "term": "Chemical Actions and Uses"
+    },
+    {
+     "id": "D000077324",
+     "term": "Crystalloid Solutions"
+    },
+    {
+     "id": "D007552",
+     "term": "Isotonic Solutions"
+    },
+    {
+     "id": "D012996",
+     "term": "Solutions"
+    },
+    {
+     "id": "D004364",
+     "term": "Pharmaceutical Preparations"
+    }
+   ]
+  }
+ },
+ "hasResults": false
+}
