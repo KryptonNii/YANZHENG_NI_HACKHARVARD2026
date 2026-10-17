@@ -141,3 +141,33 @@ It is not a finished submission. Web typecheck fails, Docker was not run, there 
 `22f052f7dc4cffbf5f32c8524cd68f3fe0a506ee` on `dev`: `A1: record id rules and point the build at the real entries`.
 
 That commit contains the contract note, the id-convention test, the Makefile, CI, compose comment, licence generator, `THIRD_PARTY.md`, and these handoffs. This paragraph was added in the follow-up commit so the hash above is the integration commit, not this sentence.
+
+## Backend takeover integration — 2026-10-17 04:23 UTC
+
+The earlier observations above are retained as history. Current interface and
+backend code is `f91cdb213a76979d08e9decc98e646f67bc05b30`; frontend code is
+`e425ca25541e69b40328337aba0ef5145fcd8d91`. BACKEND_READY and FRONTEND_READY
+preceded the complete clean-clone run on
+`e5c386b1fb0b6edf362bf5d37b97cc17066dfd07`.
+
+`validation/out/clean-clone/20261017T041438Z/summary.json`: **576 passed, 0
+failed/skipped**, including 12 real Edge/API flows with no retries. All 32
+requirements pass the trace matrix, including substantive URS-014 tests.
+Thirteen preflight checks passed, including strict engine/contracts types,
+generated v5 contracts, licenses, frontend types/build and 48 frontend unit tests.
+Cold URS-009 median **147.8 ms**, seven distinct cache misses, 2,000 forecast
+draws; historical 664.1/642 ms failures and the 308.2 ms standalone miss remain.
+
+All 114 package files passed HTTP download/hash verification; final audit chain
+is intact (14 entries). Package `package/index.html` and `package_index.json`
+remain **awaiting QA approval**, with explicitly **demo** fixture signatures.
+The additional `validation/out/backend/20261017T042216Z-package-browser/` run
+verified this newly generated package in the real browser (1/1, no retries),
+including Markdown/PNG/ZIP hashes. Original signed evidence was not rewritten.
+
+Makefile frozen installs and isolated validation target, preservation of science/
+validation evidence on clean, CI integration/artifact retention and license
+checks are current. Docker remains unavailable and unverified; no deployment,
+push or hosted-CI execution is claimed. Temporary verification servers stopped;
+8007/5180 are free. See `handoffs/BACKEND_FINAL.md` for API semantics, science
+boundaries, exact hashes, full samples and remaining human QA/model limitations.
