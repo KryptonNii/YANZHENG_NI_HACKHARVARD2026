@@ -1,6 +1,6 @@
 # TrialPilot — 180-second video script
 
-Delivered: [actual WebM](assets/trialpilot-demo.webm) · [captioned local player](assets/demo-player.html) · [English WebVTT](assets/trialpilot-demo.en.vtt). **180.000 seconds**, 1440 × 900, 25 fps, VP9, silent. There is no recorded voice-over; the text below is both the caption script and an optional presenter narration.
+Delivered: [actual WebM](../README.md#demo-media) · [captioned local player](assets/demo-player.html) · [English WebVTT](assets/trialpilot-demo.en.vtt). **180.000 seconds**, 1440 × 900, 25 fps, VP9, silent. There is no recorded voice-over; the text below is both the caption script and an optional presenter narration.
 
 The recording uses actual UI actions against the real API on 8008/5181 with a fresh temporary database. Cached protocol transcription is labelled; operations and identities are fictional. Application code matches tested **e5c386b**; later changes only affect materials. See [release metadata](assets/release-data.json), [media verification](assets/media-manifest.json) and [complete runbook](DEMO_RUNBOOK.md).
 
@@ -31,7 +31,7 @@ Intervals have inclusive starts and exclusive ends, with no gaps or overlaps. Th
 
 Scientific source: [results.json](../science/out/results.json), parameter set **1249d0f0eed8**, seed **7**, **2,000 draws**, at **e5c386b**. CASPS engine/library P50 88,758.48 kg CO2e versus 71,938.8 (+23.38%); PRIMETIME 109,685.91 versus 89,360.2 (+22.75%). These exclude drug_supply. Paper arithmetic is separately +0.01%/−0.16%; old +5%/+7% engine claims are obsolete. No real-world coverage, cost accuracy or clinical savings is inferred.
 
-Validation source: [20261017T041438Z](../validation/out/clean-clone/20261017T041438Z/summary.json), exact tested commit **e5c386b1fb0b6edf362bf5d37b97cc17066dfd07**. 576 passed, zero failed/errors/skipped, 32 requirements passed. The 48 frontend unit checks and separate 1/1 final-package browser check are separate counts. 114 package file hashes/downloads verified. The report remains **awaiting QA approval**; automated signatures are demo fixtures.
+Validation source: [20261017T041438Z](evidence/clean-clone-20261017T041438Z/summary.json), exact tested commit **e5c386b1fb0b6edf362bf5d37b97cc17066dfd07**. 576 passed, zero failed/errors/skipped, 32 requirements passed. The 48 frontend unit checks and separate 1/1 final-package browser check are separate counts. 114 package file hashes/downloads verified. The report remains **awaiting QA approval**; automated signatures are demo fixtures.
 
 ## Delivery limits and live fallback
 

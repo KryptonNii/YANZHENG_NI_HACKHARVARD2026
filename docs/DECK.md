@@ -1,6 +1,6 @@
 # TrialPilot presentation
 
-Exactly 12 slides including the title. The editable PowerPoint is [trialpilot-deck.pptx](assets/trialpilot-deck.pptx); the actual app recording is [trialpilot-demo.webm](assets/trialpilot-demo.webm). Product captures use the real local API, cached registry data, synthetic operations and fictional demo identities. Final code/report scope is recorded in [EVIDENCE.md](EVIDENCE.md).
+Exactly 12 slides including the title. The editable PowerPoint is [trialpilot-deck.pptx](../README.md#demo-media); the actual app recording is [trialpilot-demo.webm](../README.md#demo-media). Product captures use the real local API, cached registry data, synthetic operations and fictional demo identities. Final code/report scope is recorded in [EVIDENCE.md](EVIDENCE.md).
 
 ## Slide 1 — TrialPilot
 
@@ -16,7 +16,7 @@ Exactly 12 slides including the title. The editable PowerPoint is [trialpilot-de
 - Monitoring and supply choices change resource needs
 - Start with workload and timing, then inspect carbon
 
-**Speaker note:** The $19.0m figure is the historical median estimated direct cost per pivotal trial: 138 trials supporting 59 FDA approvals in 2015–2016. It is not a current invoice or TrialPilot saving. ASPE's 2014 report provides additional cost-driver context. Original Regeneron sheets were not supplied. [Moore et al.](https://pmc.ncbi.nlm.nih.gov/articles/PMC6248200/), [ASPE](https://aspe.hhs.gov/sites/default/files/migrated_legacy_files//44516/rpt_erg.pdf), [claim ledger](EVIDENCE.md).
+**Speaker note:** The $19.0m figure is the historical median estimated direct cost per pivotal trial: 138 trials supporting 59 FDA approvals in 2015–2016. It is not a current invoice or TrialPilot saving. ASPE's 2014 report provides additional cost-driver context. Regeneron's *Choose Your Timeline* starter sheet cites the same Moore et al. median. [Moore et al.](https://pmc.ncbi.nlm.nih.gov/articles/PMC6248200/), [ASPE](https://aspe.hhs.gov/sites/default/files/migrated_legacy_files//44516/rpt_erg.pdf), [claim ledger](EVIDENCE.md).
 
 ## Slide 3 — Import, review, save the design
 
@@ -80,7 +80,7 @@ Exactly 12 slides including the title. The editable PowerPoint is [trialpilot-de
 - One Screen to Rule Them All: alerts and interventions
 - Software Speedrun: executed, downloadable evidence
 
-**Speaker note:** Challenge titles come from the supplied A11 brief. The original sponsor sheets remain unavailable; this mapping does not verify their exact wording or submission rules. Each workflow shown has real API browser evidence, with synthetic and draft boundaries retained. [Missing sheet evidence](EVIDENCE.md#unavailable-sheet-evidence).
+**Speaker note:** Titles match Regeneron's official starter sheets; PeerMirror also addresses *How Extra Is Your Trial?* and protocol review addresses *Trial by Design*. See the [sheet mapping](../README.md#regeneron-starter-sheets). Each workflow shown has real API browser evidence, with synthetic and draft boundaries retained. [Starter kit evidence](EVIDENCE.md#regeneron-starter-kit).
 
 ## Slide 11 — Existing tools, an inspectable prototype
 

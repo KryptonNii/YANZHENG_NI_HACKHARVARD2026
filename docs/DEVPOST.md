@@ -12,13 +12,15 @@ TrialPilot imports registry records, distinguishes facts from missing inputs, an
 
 The command center shows completed-week site/country enrollment, alerts, interventions and qualified effect estimates from **synthetic feeds**. Saved scenario approvals reject self-approval and bind reviewer/QA demonstration signatures to record hashes. Audit verification and a downloadable validation package expose the actual execution and its scope.
 
-The [180-second application recording](assets/trialpilot-demo.webm) uses the real local API, not UI mocks. Cached registry/protocol inputs, synthetic operations and fictional identities remain labelled. It is a silent recording with [English captions](assets/trialpilot-demo.en.vtt) and a [local player](assets/demo-player.html), not a human-narrated video.
+The [demo video](../README.md#demo-media) uses the real local API, not UI mocks. Cached registry/protocol inputs, synthetic operations and fictional identities remain labelled.
+
+The project connects five Regeneron starter sheets rather than building one literally: Choose Your Timeline, One Screen to Rule Them All, Software Speedrun, How Extra Is Your Trial? and Trial by Design. The [sheet-by-sheet mapping](../README.md#regeneron-starter-sheets) lists what is implemented, what is measured and what is not done.
 
 ## How we built it
 
 Shared Pydantic contracts connect a Python activity-based engine, FastAPI/SQLite and React/TypeScript. Seeded sampling exposes uncertainty and assumptions; forecasts and supply report their own actual draw counts. The carbon method follows LCCT with a separately disclosed drug-supply extension. The validation toolkit links requirements, protocols, executed checks, traceability and evidence hashes. [Architecture](../README.md), [methods](model.md), [forecast/supply](model_forecast.md).
 
-Optional live extraction uses the official Anthropic SDK and Messages API; `EXTRACT_MODEL` selects the model, with source default `claude-opus-5-5`. This is a configuration disclosure, not a verified live-provider run. The video uses a cached build-time transcription. Code and documents were assisted by OpenAI Codex. Original code/docs are MIT; data, fonts, provider services and dependencies retain separate terms. [Inventory](../THIRD_PARTY.md), [licenses and disclosure](STACK_AND_LICENSES.md).
+Optional live extraction uses the official Anthropic SDK and Messages API; `EXTRACT_MODEL` selects the model. Live extraction accuracy has not been measured. The video uses a cached build-time transcription. We built TrialPilot by orchestrating AI coding agents against shared contracts and acceptance checks: Claude Code with Claude Opus 5.5 and Sonnet 5.5 for the coding agents, Cursor, and OpenAI Codex for documentation drafts and the editable deck. Each agent's hand-off is in [`handoffs/`](../handoffs/). Original code/docs are MIT; data, fonts, provider services and dependencies retain separate terms. [Inventory](../THIRD_PARTY.md), [licenses and disclosure](STACK_AND_LICENSES.md).
 
 ## Challenges and accomplishments
 
@@ -26,7 +28,7 @@ Separating sourced facts, missing inputs and human-review candidates matters as 
 
 | Check | Result and scope |
 |---|---|
-| Complete isolated execution | **576 passed, 0 failed/errors/skipped**, **32/32 requirements passed**, exact code `e5c386b`; [summary](../validation/out/clean-clone/20261017T041438Z/summary.json) |
+| Complete isolated execution | **576 passed, 0 failed/errors/skipped**, **32/32 requirements passed**, exact code `e5c386b`; [summary](evidence/clean-clone-20261017T041438Z/summary.json) |
 | Frontend checks | Typecheck + production build passed; **48 unit tests** in preflight; **12 real-API browser tests** in executed evidence; a separate **1/1** final-package browser download check |
 | Evidence downloads | **114/114** package files downloaded and hash-verified; generation-time audit chain intact across 12 entries; final post-packaging audit 14 |
 | Cold compute | **147.8 ms median** from seven distinct seeds, `X-Cache: miss`, 2,000 forecast draws, server `X-Compute-Ms`; target <300 ms passed in this run |
@@ -34,6 +36,8 @@ Separating sourced facts, missing inputs and human-review candidates matters as 
 | CASPS | Engine/library P50 **88,758.48 kg CO2e**, **+23.38%** vs published 71,938.8; P10–P90 64,601.50–123,510.08 |
 | PRIMETIME | Engine/library P50 **109,685.91 kg CO2e**, **+22.75%** vs published 89,360.2; P10–P90 87,891.34–142,685.69 |
 | Separate paper arithmetic | **+0.01% / −0.16%**; seed 7, 2,000 draws for engine comparisons, parameter set 1249d0f0eed8; [JSON](../science/out/results.json) |
+| Command center vs withheld truth | **42/42** planted operating problems detected by their deadlines; **11/12** intervention verdicts match the simulator's withheld ground truth, including **3/3** coincidental improvements identified as coincidence. The miss is a true no-effect case reported as inconclusive. Three seeds, synthetic feeds; [evaluation.json](../data/fixtures/ops/evaluation.json), reproduced on current code |
+| PeerMirror | BOREAS against **439** cached Phase 3 COPD registry peers: 17 outcomes vs peer median 6 (84th percentile), 24 countries vs 2 (93rd), 275 sites vs 34 (93rd). Descriptive position, not a quality verdict |
 | Extraction | Historical synthetic parser recovered **7/7 visits, 50/50 procedure items** on a generated protocol; **live LLM accuracy unmeasured**, per [A4](../handoffs/A4.md) |
 | Defect experiment | **6/6 at d616645**, historical, unsigned and **not blind**; same author planted defects and wrote checks, per [A7](../handoffs/A7.md) |
 
@@ -55,11 +59,11 @@ A permitted-data pilot with a sponsor and site team should calibrate workload/fo
 
 | Field | State |
 |---|---|
-| Public repository URL | Not supplied; no push performed |
+| Public repository URL | https://github.com/KryptonNii/YANZHENG_NI_HACKHARVARD2026 (public, MIT) |
 | Deployment URL | Not established; Docker unavailable and container run unverified |
 | Video upload URL | Local 180-second WebM exists; no upload/publish performed |
-| Screenshots/deck | Actual [captures](assets/screenshots/), [12-slide PowerPoint](assets/trialpilot-deck.pptx) and [source](DECK.md) |
-| Sponsor titles/rules | Mapping from supplied A11 brief; original sheets still unavailable |
+| Screenshots/deck | Actual [captures](assets/screenshots/), [12-slide PowerPoint](../README.md#demo-media) and [source](DECK.md) |
+| Sponsor titles/rules | Checked against the official starter kit and judging criteria; [mapping](../README.md#regeneron-starter-sheets) |
 | Human QA and timing | Awaiting human approval; effort unmeasured |
 
 Keep these gaps explicit until resolved by a person with the required evidence and publishing authorization.

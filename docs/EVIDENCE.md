@@ -8,7 +8,7 @@ Reconciled October 17, 2026, America/Toronto. This ledger supports the final loc
 |---|---|---|---|
 | P1 | ASPE / ERG, 2014, [report](https://aspe.hhs.gov/sites/default/files/migrated_legacy_files//44516/rpt_erg.pdf) | Printed p. viii (PDF p. 9) and printed p. 21 (PDF p. 34): procedure 15–22%, administrative staff 11–29%, monitoring 9–14%, site retention 9–16%, central lab 4–12%. | Historical cost shares across phases. Detailed text excludes site overhead and sponsor monitoring. Not additive scenario bounds. Landing page and PDF fetched directly; PDF text inspected after browser fetch failed. |
 | P2 | Moore et al., JAMA Internal Medicine, 2018, [original paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC6248200/) | Abstract Results: $19.0m median estimated direct cost per pivotal trial, 138 trials, 59 agents approved in 2015–2016. | Historical modelled costs, not invoices or cost per drug approval. Original paper opened on PMC. |
-| P3 | FDA, [Step 3: Clinical Research](https://www.fda.gov/patients/drug-development-process/step-3-clinical-research), accessed 2026 | Phase “Length of Study”: Phase 1 several months, Phase 2 several months to 2 years, Phase 3 1–4 years. | Educational durations. Exact Regeneron-sheet wording unverified. |
+| P3 | FDA, [Step 3: Clinical Research](https://www.fda.gov/patients/drug-development-process/step-3-clinical-research), accessed 2026 | Phase “Length of Study”: Phase 1 several months, Phase 2 several months to 2 years, Phase 3 1–4 years. | Educational durations, not a Regeneron quotation. The *Choose Your Timeline* sheet instead cites Wong, Siah & Lo 2019 medians (Phase 1 1.6, Phase 2 2.9, Phase 3 3.8 years). |
 | P4 | Irena Maragkou, Clinical Trials Arena, May 28, 2025, [article](https://www.clinicaltrialsarena.com/news/mapping-out-opportunities-to-reduce-emissions-in-clinical-trials/) | Passage discussing Edward Owen's Genentech presentation gives an industry average 60–70% clinical-trial IMP waste estimate. | Conference reporting with no audit denominator/method in that passage. Browser returned 403; direct HTTP fetch succeeded and article/date inspected. |
 | S1 | Griffiths, Fox, Williamson and LCCT Group, BMJ Open, 2024, [original paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC10823997/) | Abstract: CASPS 72 t CO2e and PRIMETIME 89 t CO2e, rounded. Methods: activity × factor, 10 modules, activities beyond routine care. | Published references only. Exact comparison outputs belong to A10's generated JSON. Paper CC BY 4.0. |
 | C1 | Evinova, [Drug Development Suite](https://evinova.com/dds), accessed 2026 | Describes scenario comparisons across timeline, cost, patient experience, complexity and carbon. | Vendor capabilities, not head-to-head testing; no “first multi-metric simulator” claim. |
@@ -17,33 +17,36 @@ Reconciled October 17, 2026, America/Toronto. This ledger supports the final loc
 | C4 | Medidata, [Centralized Monitoring](https://www.medidata.com/en/clinical-trial-products/clinical-operations/rbqm/centralized-monitoring/), accessed 2026 | Describes targeted SDV, remote source review and data/risk surveillance. | Established monitoring overlap; no superiority claim. |
 | C5 | ValGenesis, [VLMS 5.0 retrospective](https://www.valgenesis.com/blog/valgenesis-vlms-5.0-next-gen-validation-lifecycle-management), updated July 17, 2026 | Identifies current iVal validation authoring, execution, traceability and risk workflows. | Vendor description; no “first AI validation platform” claim. |
 | N1 | SMI Health Systems Task Force, February 2025, [CEO/CRO letter](https://a.storyblok.com/f/109506/x/0245e71cdc/smi-ceo-cro-letter-_-february-2025.pdf) | Reporting commitment/framework context for future mapping. | TrialPilot has not demonstrated framework conformity. |
-| H1 | HackHarvard, [official event page](https://www.hhuh.io/), accessed 2026 | Regeneron sponsors “Reinvent Clinical Trials.” | Does not expose starter sheets or verify all brief-provided rules. |
+| H1 | HackHarvard, [official event page](https://www.hhuh.io/), accessed 2026 | Regeneron sponsors “Reinvent Clinical Trials.” | Event page only; the starter kit below gives the sheets and rules. |
 
-## Unavailable sheet evidence
+## Regeneron starter kit
 
-| Needed item | Treatment | Resolution owner |
+Checked on October 17, 2026 against the official starter kit: judging criteria, starter sheets and Mentor Insights 01–02.
+
+| Item | What the kit says | Use in TrialPilot |
 |---|---|---|
-| Tufts site statistics in Regeneron's sheet | Omitted from factual copy; no remembered percentages | Human supplies sheet; A10 records page, quote, year and denominator |
-| Sheet's median trial cost and phase durations | Independent P2/P3 context, explicitly not Regeneron quotations | A10 reconciles exact sheet wording |
-| Choose Your Timeline / One Screen to Rule Them All / Software Speedrun | Mapping attributed to supplied A11 brief | Human/A10 verifies official titles and sheets |
-| Submission rules and deadlines | Brief-provided planning context only | Human confirms official rules |
+| Judging criteria | Usefulness, readiness and design. Submit a GitHub repo (ideally MIT), a pitch deck, a demo video and ideally a demo link. Do not build a starter sheet literally. | Repo is public and MIT; the [sheet mapping](../README.md#regeneron-starter-sheets) ties several sheets into one workflow |
+| *Choose Your Timeline* | Cites Moore et al. 2018 ($19 million median pivotal trial) and Wong, Siah & Lo 2019 phase durations; says that with separate spreadsheets "each 'what if' takes days". | P2 is the same Moore figure, opened at source. P3 durations are FDA's, not the sheet's |
+| *One Screen to Rule Them All* | Cites Tufts CSDD: about 11% of sites never enroll a patient and 37% under-enroll. | Quoted in the README as the sheet's figure, not re-verified at Tufts |
+| *Software Speedrun, Any%* | Asks for a measured manual baseline for any effort claim and forbids declaring a system validated without human QA approval. | No effort claim is made; the package stays awaiting QA approval |
+| Mentor Insights 01–02 | Public or synthetic data only; name agent risks such as prompt injection and show mitigations; judges distinguish working prototypes from mockups. | Synthetic feeds and public registry data; mitigations listed in the README |
 
 ## Versioned measurements and build claims
 
-Code scope: **e5c386b1fb0b6edf362bf5d37b97cc17066dfd07** (clean clone, dirty=false), containing frontend **e425ca25541e69b40328337aba0ef5145fcd8d91** and backend **f91cdb2**. Documentation/media revisions occur later and do not change tested application code. Complete original output: [`validation/out/clean-clone/20261017T041438Z`](../validation/out/clean-clone/20261017T041438Z/summary.json). Original evidence is preserved locally and ignored by Git; it has not been uploaded or externally archived.
+Code scope: **e5c386b1fb0b6edf362bf5d37b97cc17066dfd07** (clean clone, dirty=false), containing frontend **e425ca25541e69b40328337aba0ef5145fcd8d91** and backend **f91cdb2**. Documentation/media revisions occur later and do not change tested application code. Complete original output: [`validation/out/clean-clone/20261017T041438Z`](evidence/clean-clone-20261017T041438Z/summary.json). Unmodified copies of the run summaries and the package's text deliverables are in [`docs/evidence/`](evidence/); screenshots, logs and the package ZIP remain local.
 
 | Claim | Recorded result | Scope / qualification |
 |---|---|---|
 | Complete execution | **576 passed; 0 failed/errors/skipped/unrun** | contracts 106, engine 105, API 233, ops 34, validation 50, science 36, real Edge E2E 12 |
 | Frontend preflight | **48/48** unit tests, typecheck/build pass | Separate from the 576 execution count; pinned pnpm 9.15.9 |
 | Requirements | **32 pass**, 0 fail/incomplete/untested | Includes substantive URS-014 module and WTT boundary checks |
-| Final-package browser check | **1/1 pass**, no skips/retries | [Supplement](../validation/out/backend/20261017T042216Z-package-browser/run-context.json); executed after package creation, separate from the 576; checks current counts, QA, Markdown/PNG/ZIP hashes |
-| Package integrity | **114/114** hashes and downloads verified; zero evidence-integrity problems | Real compliance HTTP router via ASGI TestClient; [manifest checks](../validation/out/clean-clone/20261017T041438Z/package-downloads.json) |
+| Final-package browser check | **1/1 pass**, no skips/retries | [Supplement](evidence/backend-20261017T042216Z-package-browser/run-context.json); executed after package creation, separate from the 576; checks current counts, QA, Markdown/PNG/ZIP hashes |
+| Package integrity | **114/114** hashes and downloads verified; zero evidence-integrity problems | Real compliance HTTP router via ASGI TestClient; [manifest checks](evidence/clean-clone-20261017T041438Z/package-downloads.json) |
 | Audit | Package snapshot intact at **12** entries; final audit intact at **14** | Different capture times, not a broken chain |
 | QA | **awaiting QA approval**, human_qa_approval=false | Fictional automated signatures; no human approval of report |
 | Cold performance | **147.8 ms median**, samples 143.8/142.7/148.2/143.7/147.8/150.5/151.0 | Windows AMD64, CPython 3.12.14, NCT03930732, seeds 200–206, all cache miss, 2,000 requested forecast draws, server X-Compute-Ms; <300 ms gate passed |
-| Performance variability | **308.2 ms** earlier standalone median missed the same gate | [Original observation](../validation/out/backend/20261017T041106Z-cold/benchmark.json) retained; no blanket latency guarantee |
-| Historical complete run | **507 passed / 3 failed**, **664.1 ms** cold median at 38e2073 | [Original 20261017T023042Z summary](../validation/out/clean-clone/20261017T023042Z/summary.json), not evidence for the new commit |
+| Performance variability | **308.2 ms** earlier standalone median missed the same gate | [Original observation](evidence/backend-20261017T041106Z-cold/benchmark.json) retained; no blanket latency guarantee |
+| Historical complete run | **507 passed / 3 failed**, **664.1 ms** cold median at 38e2073 | [Original 20261017T023042Z summary](evidence/clean-clone-20261017T023042Z-historical/summary.json), not evidence for the new commit |
 | Protocol parser | Historical synthetic fixture: **7/7 visits, 50/50 procedure items** | [A4](../handoffs/A4.md); live LLM accuracy unmeasured; bulk acceptance is only a review-log metric |
 | Planted defects | Historical **6/6** at d616645 | [LAST_RUN](../validation/defects/LAST_RUN.json); unsigned, not blind, not current-code GxP evidence |
 | Human effort / realized savings | **Unmeasured** | No human timing, financial savings, clinical outcomes or faster trials claimed |
@@ -66,7 +69,7 @@ Both references lie inside engine ranges. Missing hospital utilities, samples/au
 
 ## Media provenance
 
-The [recording](assets/trialpilot-demo.webm), [screenshots](assets/screenshots/) and [12-slide editable deck](assets/trialpilot-deck.pptx) use the final local application. The recording is silent with [English captions](assets/trialpilot-demo.en.vtt); no synthetic voice or human narrator is claimed. [Release metadata](assets/release-data.json) and [media manifest](assets/media-manifest.json) bind sources, hashes, actual duration and visual inspection. Cached protocol content is a build-time transcription, operating feeds are synthetic, and all signers are fictional demos.
+The [recording](../README.md#demo-media), [screenshots](assets/screenshots/) and [12-slide editable deck](../README.md#demo-media) use the final local application. The original 180-second recording is silent with [English captions](assets/trialpilot-demo.en.vtt); no synthetic voice or human narrator is claimed. [Release metadata](assets/release-data.json) and [media manifest](assets/media-manifest.json) bind sources, hashes, actual duration and visual inspection. Cached protocol content is a build-time transcription, operating feeds are synthetic, and all signers are fictional demos.
 
 ## Competitor wording
 

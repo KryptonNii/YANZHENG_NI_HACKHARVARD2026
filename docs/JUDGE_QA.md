@@ -1,6 +1,6 @@
 # Judge questions
 
-Answers refer to tested code **e5c386b**, [final execution](../validation/out/clean-clone/20261017T041438Z/summary.json) and the [claim ledger](EVIDENCE.md); no current-code result is inferred from historical runs.
+Answers refer to tested code **e5c386b**, [final execution](evidence/clean-clone-20261017T041438Z/summary.json) and the [claim ledger](EVIDENCE.md); no current-code result is inferred from historical runs.
 
 1. **Isn't this just Evinova?** Evinova already describes multi-metric design and carbon tools; our focus is an inspectable MIT implementation linking assumptions, synthetic operations and software evidence, without a uniqueness or superiority claim. [Sources](EVIDENCE.md).
 
@@ -12,7 +12,7 @@ Answers refer to tested code **e5c386b**, [final execution](../validation/out/cl
 
 5. **What's simulated?** EDC, CTMS, IRT, travel and courier feeds and demo identities are fictional; the recording uses a real API with cached registry data rather than UI mock responses.
 
-6. **Why should Regeneron care about carbon?** We lead with cost, site workload, timing and patient burden, then inspect carbon for the same hypothetical choices; original sponsor sheets remain unavailable.
+6. **Why should Regeneron care about carbon?** We lead with cost, site workload, timing and patient burden, then inspect carbon for the same hypothetical choices. Regeneron's starter sheets frame the bottleneck as cost, timeline and site performance, so carbon stays a secondary metric.
 
 7. **Do P10 and P90 mean you're right most of the time?** They are quantiles conditional on input and model assumptions, without demonstrated coverage of real outcomes.
 

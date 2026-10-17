@@ -1,0 +1,101 @@
+{
+  "note": "Automated isolated integration test. Fictional demo-user signatures; not human approvals or regulatory validation evidence.",
+  "git": {
+    "commit": "38e207387a38e4b9d6619d6194cd8279d2865416",
+    "branch": "dev",
+    "dirty": false,
+    "dirty_files": 0
+  },
+  "clone": "C:\\Users\\ol735\\AppData\\Local\\Temp\\tpv-clean-a9slhchh\\repo",
+  "output": "C:\\Users\\ol735\\Desktop\\YANZHENG_NI_HACKHARVARD2026\\validation\\out\\clean-clone\\20261017T023042Z",
+  "protocol_gate_refused_before_approval": true,
+  "self_approval_refused": true,
+  "out_of_order_refused": true,
+  "counts": {
+    "passed": 507,
+    "failed": 3,
+    "error": 0,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0,
+    "not_run": 0,
+    "total": 510
+  },
+  "failed_tests": [
+    "engine/tests/test_model.py::test_empty_library_gives_unknown_totals",
+    "engine/tests/test_uncertainty.py::test_to_range_is_ordered_and_nan_for_unknown",
+    "validation/tests/oq/test_oq_scenarios.py::test_compute_p50_latency_under_300ms"
+  ],
+  "suites": [
+    {
+      "name": "contracts",
+      "status": "ran",
+      "exit_code": 0,
+      "started_at": "2026-10-17T02:32:26Z",
+      "finished_at": "2026-10-17T02:32:29Z"
+    },
+    {
+      "name": "engine",
+      "status": "ran",
+      "exit_code": 1,
+      "started_at": "2026-10-17T02:32:29Z",
+      "finished_at": "2026-10-17T02:32:34Z"
+    },
+    {
+      "name": "api",
+      "status": "ran",
+      "exit_code": 0,
+      "started_at": "2026-10-17T02:32:34Z",
+      "finished_at": "2026-10-17T02:33:39Z"
+    },
+    {
+      "name": "api-ops",
+      "status": "ran",
+      "exit_code": 0,
+      "started_at": "2026-10-17T02:33:39Z",
+      "finished_at": "2026-10-17T02:34:23Z"
+    },
+    {
+      "name": "validation",
+      "status": "ran",
+      "exit_code": 1,
+      "started_at": "2026-10-17T02:34:23Z",
+      "finished_at": "2026-10-17T02:35:22Z"
+    },
+    {
+      "name": "science",
+      "status": "ran",
+      "exit_code": 0,
+      "started_at": "2026-10-17T02:35:22Z",
+      "finished_at": "2026-10-17T02:35:25Z"
+    },
+    {
+      "name": "e2e",
+      "status": "ran",
+      "exit_code": 0,
+      "started_at": "2026-10-17T02:35:25Z",
+      "finished_at": "2026-10-17T02:36:05Z"
+    }
+  ],
+  "trace": {
+    "pass": 30,
+    "fail": 1,
+    "incomplete": 0,
+    "not run": 0,
+    "no test": 1
+  },
+  "untested_requirements": [
+    "URS-014"
+  ],
+  "collection_errors": [],
+  "report_status": "awaiting QA approval",
+  "evidence_integrity_problems": [],
+  "package_hashes_verified": 72,
+  "audit_chain": {
+    "ok": true,
+    "first_bad_seq": null,
+    "checked": 13,
+    "head_hash": "27987044ed8b32b7e87bcf8f6a0c16b6cc3b0dfded95bc8d2b032cc385b99cea",
+    "problem": null
+  }
+}

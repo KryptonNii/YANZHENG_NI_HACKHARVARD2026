@@ -4,15 +4,18 @@
 
 TrialPilot is an MIT-licensed hackathon prototype connecting scenario planning, an operations command center and software-validation evidence.
 
-**Verified code:** clean-clone run at `e5c386b1fb0b6edf362bf5d37b97cc17066dfd07`: **576 passed, 0 failed/errors/skipped**, **32/32 requirements passed**, and **114 package files downloaded and hash-verified**. Typecheck, production build and all 48 frontend unit tests passed separately in preflight. The package remains **awaiting QA approval**; signatures are automated fictional demos, not human approval. [Full summary](validation/out/clean-clone/20261017T041438Z/summary.json) · [scope and handoff](handoffs/FRONTEND_FINAL.md). Later documentation/media commits do not change this tested code.
+**Verified code:** clean-clone run at `e5c386b1fb0b6edf362bf5d37b97cc17066dfd07`: **576 passed, 0 failed/errors/skipped**, **32/32 requirements passed**, and **114 package files downloaded and hash-verified**. Typecheck, production build and all 48 frontend unit tests passed separately in preflight. The package remains **awaiting QA approval**; signatures are automated fictional demos, not human approval. [Full summary](docs/evidence/clean-clone-20261017T041438Z/summary.json) · [scope and handoff](handoffs/FRONTEND_FINAL.md). Later documentation/media commits do not change this tested code.
 
 **Simulated feeds are synthetic.** Registry records and published reference values are sourced real data. Assumed visit schedules, operating events and UI mock results must retain their assumption, simulated or mock labels.
 
 ## Demo media
 
-[12-slide editable deck](docs/assets/trialpilot-deck.pptx) · [180-second real application recording](docs/assets/trialpilot-demo.webm) · [video player with English captions](docs/assets/demo-player.html) · [script](docs/VIDEO_SCRIPT.md)
+The demo video and slide deck are linked from the Devpost submission. Video and deck binaries are kept out of Git so a fresh clone stays small.
+<!-- Add the public video URL and deck URL here once uploaded. -->
 
-The video is a silent screen recording with a WebVTT caption track, not a narrated production. It uses the real API on an isolated temporary database; no UI mock or invented result is used. [Media manifest](docs/assets/media-manifest.json) records duration, hashes, source commits and inspection results.
+[Slide outline and speaker notes](docs/DECK.md) · [video script](docs/VIDEO_SCRIPT.md) · [English captions](docs/assets/trialpilot-demo.en.vtt) · [media manifest](docs/assets/media-manifest.json)
+
+The original 180-second recording uses the real API on an isolated temporary database; no UI mock or invented result is used. The media manifest records its duration, hashes, source commits and inspection results.
 
 ![Scenario simulator: hypothetical monitoring and supply choices](docs/assets/screenshots/06-simulator-scenario.png)
 
@@ -29,7 +32,23 @@ These historical figures explain the levers. They are context, not TrialPilot sa
 | Study duration | FDA gives Phase 1 **several months**, Phase 2 **several months to 2 years**, and Phase 3 **1–4 years**. [FDA](https://www.fda.gov/patients/drug-development-process/step-3-clinical-research) | Educational ranges, not a forecast for the imported study. |
 | Drug supply waste | Clinical Trials Arena reported an industry estimate of **60–70% clinical-trial IMP waste** on May 28, 2025. [Article](https://www.clinicaltrialsarena.com/news/mapping-out-opportunities-to-reduce-emissions-in-clinical-trials/) | Attributed conference estimate in coverage of a Genentech presentation, not a measured baseline for our trial. |
 
-**Regeneron sheet verification is pending:** the starter sheets were not supplied. Tufts site statistics and exact sheet quotations remain unverified. The independent study/FDA figures above must not be described as Regeneron quotations. See the [claim ledger](docs/EVIDENCE.md).
+The figures above come from independent studies and FDA, not from Regeneron's starter sheets. See the [claim ledger](docs/EVIDENCE.md).
+
+## Regeneron starter sheets
+
+Regeneron's judging guidance says not to build a starter sheet literally. TrialPilot connects several sheets into one decision loop: review a design, compare the consequences of a choice, act on an operating signal, then check whether the action did what was predicted. The sheets also describe the starting problem: cost, enrollment and timeline models live in separate spreadsheets, so "each 'what if' takes days" (*Choose Your Timeline*).
+
+| Starter sheet | What TrialPilot implements | Measured evidence | Not done |
+|---|---|---|---|
+| **Choose Your Timeline** (trial ops scenario simulator) | One activity model links visits and procedures to cost, site hours, patient travel, duration and carbon. Seeded Monte Carlo gives P10/P50/P90 ranges; scenarios are compared side by side, and advice uses paired per-draw differences. | Engine and API test suites; [method](docs/model.md), [forecast and supply](docs/model_forecast.md), [advice method](docs/DECISION_METHOD.md) | Program-level Phase 1→3 chain, rNPV, ranked sensitivity analysis |
+| **One Screen to Rule Them All** (control tower) | A synthetic 40-site trial with EDC, CTMS, IRT, travel and courier feeds; study → country → site view; alerts; actions ranked by predicted net value; difference-in-differences follow-up compared with the saved prediction. | **42/42** planted problems detected by their deadlines; **11/12** intervention verdicts match withheld simulator truth, including **3/3** coincidental improvements identified as coincidence. The miss is a true no-effect case reported as inconclusive. Three seeds; [evaluation.json](data/fixtures/ops/evaluation.json), reproduced on current code with `python -m trialpilot_api.ops.evaluate` | Connectors to real systems; validation on real study data |
+| **Software Speedrun, Any%** (GxP CSV) | `tpv` produces a plan, URS, risk assessment, protocols, executed evidence, trace matrix, Part 11 mapping and summary report. Self-approval and out-of-order execution are refused. | **576** passed, **32/32** requirements, **114/114** package files hash-verified at `e5c386b` ([summary](docs/evidence/clean-clone-20261017T041438Z/summary.json), [report](docs/evidence/clean-clone-20261017T041438Z/package/report.md), [trace matrix](docs/evidence/clean-clone-20261017T041438Z/package/trace_matrix.md)); historical planted defects **6/6**, not blind | Manual baseline timing for the 10× claim (the `tpv effort` stopwatch exists but has not been run); other teams' projects; human QA approval |
+| **How Extra Is Your Trial?** (protocol complexity) | PeerMirror compares a trial with cached ClinicalTrials.gov records of the same phase and condition. The schedule of activities then drives cost and burden estimates. | BOREAS against **439** Phase 3 COPD peers: **17** outcomes vs peer median **6** (84th percentile), **24** countries vs **2** (93rd), **275** sites vs **34** (93rd) | One disease and phase cohort; no link to duration or termination; schedule reconstruction accuracy against posted protocols |
+| **Trial by Design** (protocol as data) | Protocol PDF candidates carry page and verbatim quote, need human acceptance, and are saved as a versioned design. | Synthetic parser fixture: **7/7** visits, **50/50** procedure items; live LLM accuracy not measured | USDM v4 or ICH M11 export |
+
+The *One Screen to Rule Them All* sheet cites Tufts CSDD: about 11% of sites never enroll a patient and 37% under-enroll. The synthetic command center is built around that kind of early site-level signal.
+
+**Mentor guidance applied.** Only public registry data and synthetic feeds are used; no patient data. Every displayed value carries its source or an assumption label, and changes are attributable in the audit chain (ICH E6(R3) traceability). Consequential steps need a human: protocol candidates are accepted one by one, and scenario approval requires a different reviewer and QA identity. For the optional LLM extraction path, indirect prompt injection from a protocol PDF is the main risk (OWASP LLM01). The design limits it: the model returns schema-constrained candidates only and has no tools that act; each quote is checked verbatim against the page text; nothing reaches a design until a person accepts it, and the acceptance is logged. TrialPilot is a planning tool that does not create or change trial data. On a risk-based assurance scale, it therefore sits below systems that affect patient safety or data integrity.
 
 ## Architecture
 
@@ -109,11 +128,13 @@ Generated output at `e5c386b`, parameter set **1249d0f0eed8**, seed **7**, **2,0
 
 The comparison excludes the `drug_supply` extension. PRIMETIME visits cover all 1,962 rather than the 1,623 subgroup; hospital utilities and some sample/audit activity are absent, and assumed monitoring/initiation/closeout activity differs. Offsetting module differences can conceal structural gaps. Carbon reproduction does not validate cost, workload, forecast or intervention accuracy.
 
-Cold compute in this complete run: **median 147.8 ms**, seven distinct seeds 200–206, every response `X-Cache: miss`, 2,000 requested forecast draws, measured by `X-Compute-Ms`; unchanged target <300 ms passed. It is server compute timing, not browser interaction latency. Earlier standalone median **308.2 ms** missed the target; the historical `38e2073` full run recorded **664.1 ms** and failed. These records are preserved, not rewritten. [Final summary](validation/out/clean-clone/20261017T041438Z/summary.json), [earlier cold observation](validation/out/backend/20261017T041106Z-cold/benchmark.json).
+Cold compute in this complete run: **median 147.8 ms**, seven distinct seeds 200–206, every response `X-Cache: miss`, 2,000 requested forecast draws, measured by `X-Compute-Ms`; unchanged target <300 ms passed. It is server compute timing, not browser interaction latency. Earlier standalone median **308.2 ms** missed the target; the historical `38e2073` full run recorded **664.1 ms** and failed. These records are preserved, not rewritten. [Final summary](docs/evidence/clean-clone-20261017T041438Z/summary.json), [earlier cold observation](docs/evidence/backend-20261017T041106Z-cold/benchmark.json).
 
 ## Validation package
 
-[Exact tested execution](validation/out/clean-clone/20261017T041438Z/summary.json) · [package index](validation/out/clean-clone/20261017T041438Z/package/index.html) · [summary report](validation/out/clean-clone/20261017T041438Z/package/report.md) · [download/hash checks](validation/out/clean-clone/20261017T041438Z/package-downloads.json).
+[Exact tested execution](docs/evidence/clean-clone-20261017T041438Z/summary.json) · [package index](docs/evidence/clean-clone-20261017T041438Z/package/index.md) · [summary report](docs/evidence/clean-clone-20261017T041438Z/package/report.md) · [trace matrix](docs/evidence/clean-clone-20261017T041438Z/package/trace_matrix.md) · [download/hash checks](docs/evidence/clean-clone-20261017T041438Z/package-downloads.json).
+
+[`docs/evidence/`](docs/evidence/) holds an unmodified copy of the package's text deliverables and run summaries; screenshots, logs and the ZIP stay local. `tpv` regenerates the full package.
 
 The complete isolated run has **576 passed, 0 failed/errors/skipped**, **32/32 traced requirements passed**, no untested requirements and no evidence-integrity problems. All 114 package files were downloaded and hash-verified; the package audit snapshot is intact across 12 entries (14 in the final post-packaging audit). The 12-test E2E suite ran before package generation and checked the honest missing-package state; a separate 1/1 browser check then verified this final package and downloaded Markdown/PNG/ZIP hashes. Frontend preflight separately ran 48 unit tests plus typecheck/build; these are not silently added to the 576 executed-protocol count.
 
@@ -125,7 +146,9 @@ The [historical defect experiment](validation/defects/LAST_RUN.json) detected **
 
 The [current complete direct-dependency list](THIRD_PARTY.md) is maintained by A1 from manifests and installed metadata. It identifies React, React DOM, React Router, Recharts, Vite, TypeScript, Tailwind, font/mapping packages, FastAPI, Pydantic, NumPy, SQLModel, SSE, PDF tooling and development tools individually. The [stack and licence supplement](docs/STACK_AND_LICENSES.md) covers runtime, API, model and dataset disclosures and additional licence checks. The final backend license inventory check found 0 items to review; container notices still need verification when a container is built. The project's MIT licence does not relicense dependencies or data.
 
-The [Devpost draft](docs/DEVPOST.md) records measurements with their source and conditions: A4's synthetic parser recovered 7/7 visits and 50/50 procedure items, while live-LLM extraction accuracy and human validation effort remain unmeasured. The actual 180-second video and captions are linked above.
+The [Devpost draft](docs/DEVPOST.md) records measurements with their source and conditions: A4's synthetic parser recovered 7/7 visits and 50/50 procedure items, while live-LLM extraction accuracy and human validation effort remain unmeasured.
+
+**AI-assisted development.** TrialPilot was built by orchestrating AI coding agents. Module ownership, shared contracts and acceptance checks were defined first, and each agent's hand-off is in [`handoffs/`](handoffs/). Tools used: Claude Code with Claude Opus 5.5 and Claude Sonnet 5.5 for coding agents (34 of the first 80 commits carry a Claude author or co-author trailer), Cursor (7 of those commits), and OpenAI Codex for documentation drafts and the editable deck. Optional live protocol extraction calls the Anthropic Messages API; `EXTRACT_MODEL` selects the model.
 
 ## Limitations
 
