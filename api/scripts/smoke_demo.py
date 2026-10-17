@@ -4,7 +4,10 @@
 
 Stores a small design (or uses --design-id), computes with levers, saves + submits scenario B, shows
 that the author cannot approve their own scenario, signs as reviewer and QA, checks the audit chain,
-checks immutability, and downloads the CSV/PDF export. Exit code 0 = every step behaved as expected.
+checks immutability, and downloads the CSV/PDF export. Also: a claimed role that disagrees with the
+user registry is refused, a ClinicalTrials.gov import works from the cache (A4), science results are
+served (A10), and the simulated command-center feed answers with alerts and an SSE event (A6).
+Exit code 0 = every step behaved as expected.
 Demo PINs are A7's fictional demo values (override with --pins alex=1111,riley=2222,sam=3333).
 """
 
@@ -48,11 +51,44 @@ class Smoke:
         return ok
 
 
+def ops(s: Smoke, trial: str) -> None:
+    """Command center (A6): simulated feed -> health -> alerts -> first SSE event."""
+    c = s.c
+    r = c.post(f"/api/ops/{trial}/simulate", headers=AUTHOR, json={"seed": 42, "speed": 0})
+    if not s.check("ops: start simulated feed", r.status_code == 200,
+                   f"{r.json().get('data_label')}, {r.json().get('event_count')} events, "
+                   f"{r.json().get('alerts')} alerts" if r.status_code == 200 else r.text[:200]):
+        return
+    s.check("ops: plan-vs-actual health", c.get(f"/api/ops/{trial}/health").status_code == 200)
+    a = c.get(f"/api/ops/{trial}/alerts").json()
+    kinds = sorted({x.get("kind") for x in a.get("items", [])})
+    s.check("ops: alerts labelled simulated", a.get("simulated") is True and bool(a.get("items")),
+            f"{len(a.get('items', []))} alerts: {', '.join(kinds)}")
+    # The feed is paused (speed 0): the stream says "connected", then advancing the simulated
+    # clock by one day must push at least one event to the open stream.
+    t = time.perf_counter()
+    connected = first = None
+    with c.stream("GET", f"/api/ops/{trial}/stream", timeout=20) as resp:
+        for line in resp.iter_lines():
+            if connected is None and line.startswith(":"):
+                connected = line
+                adv = c.post(f"/api/ops/{trial}/clock", headers=AUTHOR, json={"advance_days": 1})
+                s.check("ops: advance simulated clock 1 day", adv.status_code == 200,
+                        adv.status_code)
+            elif line.startswith("event:"):
+                first = line[:80]
+                break
+    s.check("ops: SSE stream pushes events", first is not None and resp.status_code == 200,
+            f"{connected!r} then {first!r} after {(time.perf_counter() - t) * 1000:.0f} ms")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--base", default="http://127.0.0.1:8000")
     ap.add_argument("--design-id", help="use an existing design instead of storing the smoke design")
     ap.add_argument("--pins", default="alex.author=1111,riley.reviewer=2222,sam.qa=3333")
+    ap.add_argument("--nct", default="NCT03930732", help="cached registry id to import (A4)")
+    ap.add_argument("--trial", default="demo-40", help="simulated command-center trial (A6)")
     args = ap.parse_args()
     pins = dict(kv.split("=", 1) for kv in args.pins.split(","))
     s = Smoke(args.base)
@@ -62,6 +98,24 @@ def main() -> int:
     s.check("health", h.get("status") == "ok",
             f"offline={h.get('offline')} engine={h['engine'].get('ready')} "
             f"params={h['params'].get('count')} compliance={h['compliance'].get('audit')}")
+
+    r = c.post("/api/designs", headers={**AUTHOR, "X-Role": "qa"}, json={**DESIGN, "id": "x"})
+    s.check("claimed role must match the registry", r.status_code == 403,
+            r.json().get("error"))
+
+    if h.get("modules", {}).get("importers", {}).get("status") == "mounted":
+        t = time.perf_counter()
+        r = c.post(f"/api/import/ctgov/{args.nct}", headers=AUTHOR)
+        ok = r.status_code == 200
+        d = r.json().get("design", {}) if ok else {}
+        s.check(f"import {args.nct} (offline={h.get('offline')})", ok,
+                f"{len(d.get('sites', []))} sites, {len(d.get('visits', []))} visits, "
+                f"{(time.perf_counter() - t) * 1000:.0f} ms" if ok else r.text[:200])
+    else:
+        print("[SKIP] import: importer router not mounted")
+
+    r = c.get("/api/science/results")
+    s.check("science results served", r.status_code == 200, r.status_code)
 
     design_id = args.design_id
     if not design_id:
@@ -117,6 +171,10 @@ def main() -> int:
     r = c.get(f"/api/export/scenario/{sid}.csv")
     s.check("CSV export", r.status_code == 200 and "signature," in r.text,
             f"{len(r.text.splitlines())} rows")
+    if h.get("modules", {}).get("ops", {}).get("status") == "mounted":
+        ops(s, args.trial)
+    else:
+        print("[SKIP] command center: ops router not mounted")
     print(f"\n{'OK' if s.failures == 0 else f'{s.failures} FAILURE(S)'}")
     return 0 if s.failures == 0 else 1
 
