@@ -1,0 +1,316 @@
+# CASPS carbon footprint — line-by-line transcription of the published calculation.
+#
+# Source: Griffiths J, Fox L, Williamson PR, on behalf of the Low Carbon Clinical Trials Group.
+#   "Quantifying the carbon footprint of clinical trials: guidance development and case studies."
+#   BMJ Open 2024;14:e075755. doi:10.1136/bmjopen-2023-075755 (CC BY 4.0).
+#   Online supplemental appendix C ("CASPS carbon footprint calculations", worksheet V0.2 14 Feb 2023),
+#   file bmjopen-2023-075755supp003.pdf, retrieved via Europe PMC (PMC10823997) on 2026-10-16.
+#   The PDF is image-only; every number below was transcribed by hand from the page images (page = PDF page).
+#
+# Each line: kg CO2e = product(qty) / qty_div × factor. `reported_kg` is the value printed in the appendix.
+# `factor_key` links the paper's factor to data/params ids via science/data/factor_map.yaml (library check).
+# `correction` = what TrialPilot changes in the "corrected" variant, with the finding id (see `findings`).
+trial:
+  id: casps
+  name: CASPS
+  registry_id: ISRCTN63733470
+  title: "Cediranib in patients with alveolar soft-part sarcoma (CASPS)"
+  phase: "Phase 2"
+  patients: 47
+  sites: 12
+  countries: [GB, ES, AU]
+  duration_years: 6
+  drug_type: small_molecule
+  description: >-
+    International phase II trial of cediranib (oral IMP shipped internationally), paper CRFs, on-site visits for
+    initiation, monitoring and audit, trial-specific hospital visits and sample provision (appendix C p.3).
+
+published:
+  # Appendix C p.24 "CASPS carbon footprint summary" (kg CO2e).
+  total_kg: 71938.8
+  total_main_text_kg: 71939        # main text, Results: "72 tonnes (71 939 kgCO2e)"
+  modules:
+    setup: 349.8
+    trial_management: 23487.6      # "CTU emissions"
+    meetings_travel: 20465.3       # "Trial staff meetings and travel"
+    intervention: 1251.5           # "Treatment intervention" (IMP distribution + overage destruction, not manufacture)
+    data_collection: 558.3
+    supplies_equipment: 522.5
+    patient_assessments: 11298.4
+    samples: 1930.5
+    laboratory: 9353.6
+    closeout: 2721.3               # "Analysis and trial close out" (Figure 2 label: "Archiving")
+  figure_modules:                  # Figure 2 labels (rounded), main article
+    setup: 350
+    trial_management: 23488
+    meetings_travel: 20465
+    intervention: 1252
+    data_collection: 558
+    supplies_equipment: 523
+    patient_assessments: 11298
+    samples: 1931
+    laboratory: 9354
+    closeout: 2721
+
+findings:
+  - id: casps-f1
+    severity: large
+    lines: [lab-centrifuge-ctad, lab-centrifuge-cpt]
+    summary: "Centrifuge energy overstated ~1000x (watts treated as kilowatts)."
+    detail: >-
+      Appendix C p.20-21: "310 watts x 0.25 hours = 77.5 kWh" and "310 x 0.583 = 180.73 kWh". 310 W for 0.25 h is
+      77.5 Wh = 0.0775 kWh. The same arithmetic appears as the worked example in the guidance (appendix D p.21).
+      Corrected, the two centrifuge lines fall from 812.5 kg to 0.81 kg (-811.7 kg, -1.1% of the CASPS total).
+  - id: casps-f2
+    severity: medium
+    lines: [close-tissue-electricity, close-tissue-heating]
+    summary: "Ambient tissue storage (1 m2, 10 years) counted twice: section 9.3 (laboratory) and 10.2 (close out)."
+    detail: >-
+      9.3 includes "Ambient storage of tissue" 221 + 415 kg; 10.2 "Storage and destruction of biological samples"
+      repeats 221 + 415 kg for the same 1 m2 x 10 years in a health building. The corrected variant drops the 10.2 copy (-636 kg).
+  - id: casps-f3
+    severity: info
+    lines: [mt-monitoring-au]
+    summary: "Australia monitoring distance printed as 11074 p.km in the calculation but the result uses 15310 p.km."
+    detail: >-
+      Activity column: "Australia total p.km = 15310"; calculation: "11074 p.km x 0.20373 = 3119.1". 15310 x 0.20373 =
+      3119.1, 11074 x 0.20373 = 2256.1, so the result is consistent with the activity data; we use 15310.
+  - id: casps-f4
+    severity: info
+    lines: [mt-tmg]
+    summary: "TMG teleconference attendees printed as 18 in the calculation, 16 in the activity data; result uses 16."
+  - id: casps-f5
+    severity: info
+    lines: [mt-audit-longhaul]
+    summary: "Audit long-haul line: 29442 p.km x 0.21423 = 6307.4, printed 6303.1 (-4.3 kg, <0.1%)."
+  - id: casps-f6
+    severity: info
+    lines: [smp-ctad-cpt]
+    summary: "CTAD + CPT glass tubes: calculation shows factor 3.413 but the result (9.57) uses the glass factor 1.403 listed on p.18."
+
+lines:
+  # ---------------------------------------------------------------- 1. Trial set-up (p.3-5)
+  - {id: setup-print, module: setup, page: 3, item: "Trial documents (SIF, pharmacy file, CRF folders, PIS/C, letters): b/w printing",
+     qty: [11352, 0.005], qty_unit: kg_paper, qty_note: "11352 pages x 0.005 kg/page",
+     factor: 0.22438, factor_key: paper_printing_bw, reported_kg: 12.7}
+  - {id: setup-paper, module: setup, page: 3, item: "Trial documents: paper material",
+     qty: [11352, 0.005], qty_unit: kg_paper, factor: 0.919, factor_key: material_paper, reported_kg: 52.2}
+  - {id: setup-folders, module: setup, page: 3, item: "Folders (23 lever arch 0.5 kg + 18 ring binders 0.3 kg)",
+     qty: [16.9], qty_unit: kg_board, qty_note: "(23 x 0.5) + (18 x 0.3); binder weights are the paper's assumptions",
+     factor: 0.821, factor_key: material_board, reported_kg: 13.9}
+  - {id: setup-post-uk, module: setup, page: 4, item: "Posting documents to 6 UK sites (road)",
+     qty: [10.539289], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 2.05}
+  - {id: setup-post-au, module: setup, page: 4, item: "Posting documents to Australia (air, long-haul)",
+     qty: [197], qty_unit: tonne_km, qty_note: "0.00587 t x (17018.5 + 16544) km",
+     factor: 1.13047, factor_key: freight_air_long_haul, reported_kg: 222.7}
+  - {id: setup-post-es, module: setup, page: 4, item: "Posting documents to Spain (air, short-haul)",
+     qty: [18.07], qty_unit: tonne_km, qty_note: "0.00519 t x (1147 + 1244 + 1091) km",
+     factor: 2.55439, factor_key: freight_air_short_haul, reported_kg: 46.2}
+  - {id: setup-gp-letters, module: setup, page: 4-5, item: "GP letters, 6 per patient (road, 17.4 km default)",
+     qty: [0.000799, 17.4, 6], qty_unit: tonne_km, qty_note: "17 g x 47 patients; 17.4 km default hospital-to-GP distance",
+     factor: 0.19443, factor_key: freight_road, reported_kg: 0.016}
+
+  # ---------------------------------------------------------------- 2. CTU emissions (p.5-7)
+  - {id: ctu-energy-uk, module: trial_management, page: 5, item: "CTU office energy, UK (1 FTE x 6 years)",
+     qty: [1, 6], qty_unit: fte_year, factor: 193.28, factor_key: ctu_office_electricity_fte_year, reported_kg: 1159.7}
+  - {id: ctu-energy-au, module: trial_management, page: 5, item: "CTU office electricity, Australia (0.5 FTE x 6 years)",
+     qty: [2499.012, 0.5, 6], qty_unit: kwh, qty_note: "12 m2/FTE x 208.251 kWh/m2 (Victoria office benchmark, 90% electricity)",
+     factor: 0.98, factor_key: grid_au_vic, reported_kg: 7347}
+  - {id: ctu-energy-es, module: trial_management, page: 6, item: "CTU office energy, Spain (0.3 FTE x 6 years; UK benchmark as proxy)",
+     qty: [0.3, 6], qty_unit: fte_year, factor: 193.284, factor_key: ctu_office_electricity_fte_year, reported_kg: 347.9}
+  - {id: ctu-heat-uk, module: trial_management, page: 6, item: "CTU heating (natural gas), UK",
+     qty: [1, 6], qty_unit: fte_year, factor: 431.56, factor_key: ctu_office_heating_fte_year, reported_kg: 2589.4}
+  - {id: ctu-heat-au, module: trial_management, page: 6-7, item: "CTU heating, Australia (1 GJ/FTE-year x (51.53 + 4.0) kg/GJ)",
+     qty: [0.5, 6], qty_unit: fte_year, factor: 55.53, factor_key: ctu_office_heating_fte_year_au, reported_kg: 166.59}
+  - {id: ctu-heat-es, module: trial_management, page: 7, item: "CTU heating, Spain (UK benchmark as proxy)",
+     qty: [0.3, 6], qty_unit: fte_year, factor: 431.56, factor_key: ctu_office_heating_fte_year, reported_kg: 776.8}
+  - {id: ctu-commute-uk, module: trial_management, page: 7, item: "Trial team commuting, UK",
+     qty: [1, 6], qty_unit: fte_year, factor: 1027.8, factor_key: ctu_commuting_fte_year, reported_kg: 6166.8}
+  - {id: ctu-commute-au, module: trial_management, page: 7, item: "Trial team commuting, Australia (UK average as proxy)",
+     qty: [0.5, 6], qty_unit: fte_year, factor: 1027.8, factor_key: ctu_commuting_fte_year, reported_kg: 3083.4}
+  - {id: ctu-commute-es, module: trial_management, page: 7, item: "Trial team commuting, Spain (UK average as proxy)",
+     qty: [0.3, 6], qty_unit: fte_year, factor: 1027.8, factor_key: ctu_commuting_fte_year, reported_kg: 1850}
+
+  # ---------------------------------------------------------------- 3. Meetings and travel (p.7-10)
+  - {id: mt-feasibility-au, module: meetings_travel, page: 8, item: "Feasibility visit Melbourne-Brisbane, 2 passengers (flight)",
+     qty: [2, 2, 1375], qty_unit: passenger_km, factor: 0.20373, factor_key: flight_international, reported_kg: 1120.5}
+  - {id: mt-siv-uk, module: meetings_travel, page: 8, item: "Site initiation/pharmacy visits, UK (rail)",
+     qty: [3868.6], qty_unit: passenger_km, factor: 0.04441, factor_key: rail_national, reported_kg: 171.8}
+  - {id: mt-siv-video, module: meetings_travel, page: 8, item: "Site initiation teleconference, 4 attendees x 1 h",
+     qty: [4], qty_unit: attendee_hour, factor: 0.157, factor_key: videoconference_attendee_hour, reported_kg: 0.628}
+  - {id: mt-siv-au, module: meetings_travel, page: 8, item: "Site initiation visits, Australia (flights)",
+     qty: [9736], qty_unit: passenger_km, factor: 0.20373, factor_key: flight_international, reported_kg: 1983.5}
+  - {id: mt-siv-es, module: meetings_travel, page: 8, item: "Site initiation, Spain (all teleconference, 34 attendees)",
+     qty: [34], qty_unit: attendee_hour, factor: 0.157, factor_key: videoconference_attendee_hour, reported_kg: 5.3}
+  - {id: mt-monitoring-uk, module: meetings_travel, page: 8, item: "Monitoring visits, UK (rail)",
+     qty: [12957.4], qty_unit: passenger_km, factor: 0.04441, factor_key: rail_national, reported_kg: 575.4}
+  - {id: mt-monitoring-au, module: meetings_travel, page: 8, item: "Monitoring visits, Australia (flights)",
+     qty: [15310], qty_unit: passenger_km, qty_note: "activity data 15310 p.km; calculation text says 11074 (finding casps-f3)",
+     factor: 0.20373, factor_key: flight_international, reported_kg: 3119.1}
+  - {id: mt-monitoring-es, module: meetings_travel, page: 8, item: "Monitoring visits, Spain (short-haul flights)",
+     qty: [3280], qty_unit: passenger_km, factor: 0.17034, factor_key: flight_short_haul, reported_kg: 558.7}
+  - {id: mt-audit-longhaul, module: meetings_travel, page: 8-9, item: "Audits: long-haul flights to/from UK",
+     qty: [29442], qty_unit: passenger_km, factor: 0.21423, factor_key: flight_long_haul, reported_kg: 6303.1}
+  - {id: mt-audit-shorthaul, module: meetings_travel, page: 8-9, item: "Audits: short-haul flights",
+     qty: [13464], qty_unit: passenger_km, factor: 0.17034, factor_key: flight_short_haul, reported_kg: 2293.5}
+  - {id: mt-audit-intl, module: meetings_travel, page: 8-9, item: "Audits: international (non-UK) flights",
+     qty: [11444], qty_unit: passenger_km, factor: 0.20373, factor_key: flight_international, reported_kg: 2331.5}
+  - {id: mt-barcelona, module: meetings_travel, page: 9, item: "CTU staff visit to Spanish CTU, 2 x 2 x 1309 km (short-haul)",
+     qty: [5236], qty_unit: passenger_km, factor: 0.17034, factor_key: flight_short_haul, reported_kg: 891.9}
+  - {id: mt-labvisit, module: meetings_travel, page: 9, item: "Lab visit (rail)",
+     qty: [115.8], qty_unit: passenger_km, factor: 0.04441, factor_key: rail_national, reported_kg: 5.14}
+  - {id: mt-idmc, module: meetings_travel, page: 9, item: "IDMC/TSC teleconferences, 5 x 3 attendees",
+     qty: [5, 3], qty_unit: attendee_hour, factor: 0.157, factor_key: videoconference_attendee_hour, reported_kg: 2.4}
+  - {id: mt-tmg, module: meetings_travel, page: 9, item: "TMG teleconferences, 5 x 16 attendees",
+     qty: [5, 16], qty_unit: attendee_hour, qty_note: "activity data 16 attendees; calculation text says 18 (finding casps-f4)",
+     factor: 0.157, factor_key: videoconference_attendee_hour, reported_kg: 12.6}
+  - {id: mt-conf-bristol, module: meetings_travel, page: 9, item: "Conference, Bristol, 2 attendees (rail)",
+     qty: [785.2], qty_unit: passenger_km, factor: 0.04441, factor_key: rail_national, reported_kg: 34.9}
+  - {id: mt-conf-nottingham, module: meetings_travel, page: 9, item: "Conference, Nottingham, 1 attendee (rail)",
+     qty: [518.2], qty_unit: passenger_km, factor: 0.04441, factor_key: rail_national, reported_kg: 23}
+  - {id: mt-hotel-uk, module: meetings_travel, page: 9-10, item: "Hotel stays, UK (30 room-nights)",
+     qty: [30], qty_unit: room_night, factor: 13.9, factor_key: hotel_gb, reported_kg: 417}
+  - {id: mt-hotel-es, module: meetings_travel, page: 9-10, item: "Hotel stays, Spain (7 room-nights)",
+     qty: [7], qty_unit: room_night, factor: 18.7, factor_key: hotel_es, reported_kg: 130.9}
+  - {id: mt-hotel-au, module: meetings_travel, page: 9-10, item: "Hotel stays, Australia (3 room-nights)",
+     qty: [3], qty_unit: room_night, factor: 42.6, factor_key: hotel_au, reported_kg: 127.8}
+  - {id: mt-sustenance, module: meetings_travel, page: 10, item: "Sustenance, spend-based (GBP 503.65)",
+     qty: [503.65], qty_unit: gbp, factor: 0.708, factor_key: catering_spend_gbp, reported_kg: 356.6}
+
+  # ---------------------------------------------------------------- 4. Intervention (p.10-12) — distribution only
+  - {id: int-qp-flight, module: intervention, page: 11, item: "IMP Puerto Rico -> QP site, 0.118 t x 6697 km (air, long-haul)",
+     qty: [0.118, 6697], qty_unit: tonne_km, qty_note: "~4000 bottles x 30 g (paper's assumptions)",
+     factor: 1.13047, factor_key: freight_air_long_haul, reported_kg: 893.4}
+  - {id: int-qp-distrib, module: intervention, page: 11, item: "IMP QP site -> packaging site, 352.4 km (road)",
+     qty: [0.118, 352.4], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 8.1}
+  - {id: int-sites-uk, module: intervention, page: 11, item: "IMP to UK sites (road)",
+     qty: [7.7], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 1.5}
+  - {id: int-sites-es, module: intervention, page: 11, item: "IMP to Spanish sites (air, short-haul)",
+     qty: [13], qty_unit: tonne_km, factor: 2.55439, factor_key: freight_air_short_haul, reported_kg: 33.3}
+  - {id: int-sites-au, module: intervention, page: 11, item: "IMP to Australian sites (air, long-haul)",
+     qty: [184.6], qty_unit: tonne_km, factor: 1.13047, factor_key: freight_air_long_haul, reported_kg: 208.7}
+  - {id: int-destruction, module: intervention, page: 12, item: "Incineration of overage: 1464 bottles x 30 g",
+     qty: [1464, 0.030], qty_unit: kg_waste, factor: 2.4252, factor_key: waste_incineration, reported_kg: 106.5}
+
+  # ---------------------------------------------------------------- 5. Data collection and exchange (p.12-13)
+  - {id: data-files-print, module: data_collection, page: 12, item: "Hospital files: 33100 pages printing",
+     qty: [33100, 0.005], qty_unit: kg_paper, factor: 0.22438, factor_key: paper_printing_bw, reported_kg: 37}
+  - {id: data-files-paper, module: data_collection, page: 12, item: "Hospital files: paper material",
+     qty: [33100, 0.005], qty_unit: kg_paper, factor: 0.919, factor_key: material_paper, reported_kg: 152.1}
+  - {id: data-cds, module: data_collection, page: 12, item: "Scans copied to CD, 1 CD per patient",
+     qty: [47], qty_unit: cd, factor: 0.83, factor_key: cd_manufacture, reported_kg: 39.01}
+  - {id: data-cd-burning, module: data_collection, page: 12-13, item: "Computer time to burn CDs, 5 min x 47",
+     qty: [3.91666667], qty_unit: hour, factor: 0.18079, factor_key: desktop_computer_hour, reported_kg: 0.71}
+  - {id: data-scans-post-uk, module: data_collection, page: 13, item: "Postage of scans, UK (road)",
+     qty: [0.26115], qty_unit: tonne_km, qty_note: "activity column says 0.278671 t.km; calculation uses 0.26115",
+     factor: 0.19443, factor_key: freight_road, reported_kg: 0.05}
+  - {id: data-scans-post-au, module: data_collection, page: 13, item: "Postage of scans, Australia (air, long-haul)",
+     qty: [3.25], qty_unit: tonne_km, factor: 1.13047, factor_key: freight_air_long_haul, reported_kg: 3.7}
+  - {id: data-scans-post-es, module: data_collection, page: 13, item: "Postage of scans, Spain (air, short-haul)",
+     qty: [0.28], qty_unit: tonne_km, factor: 2.55439, factor_key: freight_air_short_haul, reported_kg: 0.72}
+  - {id: data-crf-out-uk, module: data_collection, page: 13, item: "CRF booklets to UK sites (road)",
+     qty: [4.41], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 0.86}
+  - {id: data-crf-out-au, module: data_collection, page: 13, item: "CRF booklets to Australian sites (air)",
+     qty: [102.2], qty_unit: tonne_km, factor: 1.13047, factor_key: freight_air_long_haul, reported_kg: 115.5}
+  - {id: data-crf-out-es, module: data_collection, page: 13, item: "CRF booklets to Spanish sites (air)",
+     qty: [8.58963], qty_unit: tonne_km, factor: 2.55439, factor_key: freight_air_short_haul, reported_kg: 21.9}
+  - {id: data-crf-back-uk, module: data_collection, page: 13, item: "CRFs from UK sites to CTU (road)",
+     qty: [6.37], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 1.2}
+  - {id: data-crf-back-au, module: data_collection, page: 13, item: "CRFs from Australian sites to CTU (air)",
+     qty: [132.9], qty_unit: tonne_km, factor: 1.13047, factor_key: freight_air_long_haul, reported_kg: 150.2}
+  - {id: data-crf-back-es, module: data_collection, page: 13, item: "CRFs from Spanish sites to CTU (air)",
+     qty: [13.8], qty_unit: tonne_km, factor: 2.55439, factor_key: freight_air_short_haul, reported_kg: 35.3}
+
+  # ---------------------------------------------------------------- 6. Supplies and equipment (p.14)
+  - {id: sup-office-machinery, module: supplies_equipment, page: 14, item: "Office machinery and computers bought for the trial (GBP 1350)",
+     qty: [1350], qty_unit: gbp, factor: 0.387, factor_key: office_machinery_spend_gbp, reported_kg: 522.45}
+
+  # ---------------------------------------------------------------- 7. Patient assessments (p.15-17)
+  - {id: pa-travel, module: patient_assessments, page: 15, item: "Patient travel: 880 trial-specific hospital visits x 5.8 kg (UK round trip)",
+     qty: [880], qty_unit: patient_visit, qty_note: "496 visits IMP arm + 384 placebo; UK per-visit factor applied to all sites",
+     factor: 5.8, factor_key: patient_hospital_visit_roundtrip_gb, reported_kg: 5104}
+  - {id: pa-ct, module: patient_assessments, page: 16, item: "CT scans: 47 patients x 9",
+     qty: [47, 9], qty_unit: scan, factor: 9.2, factor_key: ct_scan, reported_kg: 3891.6}
+  - {id: pa-consumables, module: patient_assessments, page: 16, item: "Consumables: 754 visits",
+     qty: [754], qty_unit: appointment, factor: 0.30, factor_key: consumables_per_appointment, reported_kg: 226.2}
+  - {id: pa-hosp-elec-uk, module: patient_assessments, page: 17, item: "Hospital electricity, UK (0.85 trial FTE-years)",
+     qty: [0.85], qty_unit: fte_year, factor: 364.9, factor_key: hospital_electricity_fte_year, reported_kg: 310.2}
+  - {id: pa-hosp-elec-es, module: patient_assessments, page: 17, item: "Hospital electricity, Spain (0.25 FTE-years)",
+     qty: [0.25], qty_unit: fte_year, factor: 364.9, factor_key: hospital_electricity_fte_year, reported_kg: 91.2}
+  - {id: pa-hosp-elec-au, module: patient_assessments, page: 17, item: "Hospital electricity, Australia (3840.8 kWh/FTE x 0.23 FTE, NSW/QLD grid)",
+     qty: [3840.8, 0.23], qty_unit: kwh, factor: 0.81, factor_key: grid_au_nsw_qld, reported_kg: 715.5}
+  - {id: pa-hosp-heat-uk, module: patient_assessments, page: 17, item: "Hospital heating, UK",
+     qty: [0.85], qty_unit: fte_year, factor: 685.7, factor_key: hospital_heating_fte_year, reported_kg: 582.8}
+  - {id: pa-hosp-heat-es, module: patient_assessments, page: 17, item: "Hospital heating, Spain",
+     qty: [0.25], qty_unit: fte_year, factor: 685.7, factor_key: hospital_heating_fte_year, reported_kg: 171.4}
+  - {id: pa-hosp-heat-au, module: patient_assessments, page: 17, item: "Hospital heating, Australia (13.83 GJ x (51.53 + 13.1) kg/GJ per FTE)",
+     qty: [0.23], qty_unit: fte_year, factor: 893.6, factor_key: hospital_heating_fte_year_au, reported_kg: 205.5}
+
+  # ---------------------------------------------------------------- 8. Samples (p.17-19)
+  - {id: smp-safety-kit, module: samples, page: 18, item: "Safety kits, average plastic 3 kg",
+     qty: [3], qty_unit: kg, factor: 3.116, factor_key: material_plastics_average, reported_kg: 9.35}
+  - {id: smp-tubes-pp, module: samples, page: 18, item: "Cryotubes + falcon tubes (PP) 13.76 kg",
+     qty: [13.76], qty_unit: kg, factor: 3.105, factor_key: material_plastics_pp, reported_kg: 42.7}
+  - {id: smp-pet, module: samples, page: 18, item: "PAXgene tubes, airbags, labels (PET) 8.91 kg",
+     qty: [8.91], qty_unit: kg, factor: 4.032, factor_key: material_plastics_pet, reported_kg: 35.9}
+  - {id: smp-ctad-cpt, module: samples, page: 18, item: "CTAD + CPT glass tubes 6.8225 kg",
+     qty: [6.8225], qty_unit: kg, qty_note: "3.6335 + 3.2 kg; result uses glass factor 1.403 (finding casps-f6)",
+     factor: 1.403, factor_key: material_glass, reported_kg: 9.57}
+  - {id: smp-jiffy, module: samples, page: 18, item: "Jiffy bags (paper and board mixed) 6 kg",
+     qty: [6], qty_unit: kg, factor: 0.881, factor_key: material_paper_board_mixed, reported_kg: 5.29}
+  - {id: smp-paper, module: samples, page: 18, item: "Paper 1.53 kg",
+     qty: [1.53], qty_unit: kg, factor: 0.919, factor_key: material_paper, reported_kg: 1.4}
+  - {id: smp-printing, module: samples, page: 18, item: "Printing 1.53 kg",
+     qty: [1.53], qty_unit: kg, factor: 0.22438, factor_key: paper_printing_bw, reported_kg: 0.34}
+  - {id: smp-dry-ice, module: samples, page: 18, item: "Dry ice 85 kg",
+     qty: [85], qty_unit: kg, factor: 1.81, factor_key: dry_ice_kg, reported_kg: 153.85}
+  - {id: smp-boxes, module: samples, page: 18, item: "Single-use sample cold storage boxes x 29",
+     qty: [29], qty_unit: box, factor: 25.2, factor_key: sample_box_single_use, reported_kg: 730.8}
+  - {id: smp-kit-to-ctu, module: samples, page: 19, item: "Sample kit materials manufacturer -> CTU (road)",
+     qty: [11.9], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 2.31}
+  - {id: smp-kit-uk, module: samples, page: 19, item: "Sample kits CTU -> UK sites (road)",
+     qty: [11.9], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 2.3}
+  - {id: smp-kit-au, module: samples, page: 19, item: "Sample kits -> Australian sites (air, long-haul)",
+     qty: [19.8528], qty_unit: tonne_km, factor: 1.13047, factor_key: freight_air_long_haul, reported_kg: 22.4}
+  - {id: smp-kit-es, module: samples, page: 19, item: "Sample kits -> Spanish sites (air, short-haul)",
+     qty: [10.2], qty_unit: tonne_km, factor: 2.55439, factor_key: freight_air_short_haul, reported_kg: 26}
+  - {id: smp-ship-uk, module: samples, page: 19, item: "Samples UK sites -> laboratory (road)",
+     qty: [32.7], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 6.4}
+  - {id: smp-ship-au, module: samples, page: 19, item: "Samples Australian sites -> laboratory (air, long-haul)",
+     qty: [663.65], qty_unit: tonne_km, factor: 1.13047, factor_key: freight_air_long_haul, reported_kg: 750.2}
+  - {id: smp-ship-es, module: samples, page: 19, item: "Samples Spanish sites -> laboratory (air, short-haul)",
+     qty: [51.486], qty_unit: tonne_km, factor: 2.55439, factor_key: freight_air_short_haul, reported_kg: 131.5}
+  - {id: smp-between-labs, module: samples, page: 19, item: "Samples between laboratories (road)",
+     qty: [0.8676], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 0.17}
+
+  # ---------------------------------------------------------------- 9. Laboratory (p.19-22)
+  - {id: lab-centrifuge-ctad, module: laboratory, page: 20, item: "Centrifuge, CTAD samples: 310 W x 0.25 h per run of 24, 313 samples",
+     qty: [77.5, 313], qty_div: 24, qty_unit: kwh, qty_note: "paper: '310 x 0.25 = 77.5 kWh' (finding casps-f1)",
+     factor: 0.273, factor_key: grid_gb_lcct, reported_kg: 275.9,
+     correction: {qty: [0.0775, 313], qty_div: 24, finding: casps-f1, reason: "310 W x 0.25 h = 0.0775 kWh"}}
+  - {id: lab-centrifuge-cpt, module: laboratory, page: 20-21, item: "Centrifuge, CPT samples: 310 W x 0.583 h per run of 24, 261 samples",
+     qty: [180.73, 261], qty_div: 24, qty_unit: kwh, qty_note: "paper: '310 x 0.583 = 180.73 kWh' (finding casps-f1)",
+     factor: 0.273, factor_key: grid_gb_lcct, reported_kg: 536.6,
+     correction: {qty: [0.18073, 261], qty_div: 24, finding: casps-f1, reason: "310 W x 0.583 h = 0.18073 kWh"}}
+  - {id: lab-fridge, module: laboratory, page: 21, item: "Fridge/-20 C freezer storage: 10 years x 1/5 of a unit",
+     qty: [10, 0.20], qty_unit: unit_year, factor: 298.9, factor_key: fridge_minus20_unit_year, reported_kg: 597.8}
+  - {id: lab-ult-freezer, module: laboratory, page: 21, item: "-80 C freezer storage: 10 years x 1/3 of a unit",
+     qty: [10], qty_div: 3, qty_unit: unit_year, factor: 2192.2, factor_key: ult_freezer_unit_year, reported_kg: 7307.3}
+  - {id: lab-tissue-electricity, module: laboratory, page: 21, item: "Ambient tissue storage, 1 m2 x 10 years, health building electricity",
+     qty: [1, 10], qty_unit: m2_year, factor: 22.1, factor_key: health_building_electricity_m2_year, reported_kg: 221}
+  - {id: lab-tissue-heating, module: laboratory, page: 22, item: "Ambient tissue storage, 1 m2 x 10 years, health building heating",
+     qty: [1, 10], qty_unit: m2_year, factor: 41.5, factor_key: health_building_heating_m2_year, reported_kg: 415}
+
+  # ---------------------------------------------------------------- 10. Close out (p.22-23)
+  - {id: close-archive-electricity, module: closeout, page: 22, item: "Archiving 4 m2 office x 10 years: electricity",
+     qty: [4, 10], qty_unit: m2_year, factor: 16.1, factor_key: office_electricity_m2_year, reported_kg: 644}
+  - {id: close-archive-heating, module: closeout, page: 22, item: "Archiving 4 m2 office x 10 years: heating",
+     qty: [4, 10], qty_unit: m2_year, factor: 35.69, factor_key: office_heating_m2_year, reported_kg: 1427.6}
+  - {id: close-electronic, module: closeout, page: 23, item: "Electronic storage ~1 GB x 10 years",
+     qty: [1, 10], qty_unit: gb_year, factor: 1.365, factor_key: data_storage_gb_year, reported_kg: 13.65}
+  - {id: close-tissue-electricity, module: closeout, page: 23, item: "Biological samples 1 m2 x 10 years: electricity (repeat of 9.3)",
+     qty: [1, 10], qty_unit: m2_year, factor: 22.1, factor_key: health_building_electricity_m2_year, reported_kg: 221,
+     correction: {exclude: true, finding: casps-f2, reason: "same storage already counted in laboratory 9.3"}}
+  - {id: close-tissue-heating, module: closeout, page: 23, item: "Biological samples 1 m2 x 10 years: heating (repeat of 9.3)",
+     qty: [1, 10], qty_unit: m2_year, factor: 41.5, factor_key: health_building_heating_m2_year, reported_kg: 415,
+     correction: {exclude: true, finding: casps-f2, reason: "same storage already counted in laboratory 9.3"}}

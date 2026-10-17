@@ -1,0 +1,395 @@
+# Emission factors — UK Government GHG Conversion Factors for Company Reporting (DESNZ).
+#
+# mid  = 2026 edition (latest; published 11 Jun 2026; "full set (for all users)" — 2026 has no condensed set)
+#        https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2026
+#        workbook ghg-conversion-factors-2026-full-set.xlsx (sha256 b5c4f2f8…0205)
+# low/high = min/max of the same cell across the 2022, 2025 and 2026 editions (vintage spread). This is the
+#        only range DESNZ lets us source; it does NOT capture vehicle/occupancy variation, so treat it as a floor
+#        on uncertainty. 2022 = ghg-conversion-factors-2022-condensed-set.xls (and the 2022 full set for WTT);
+#        2025 = ghg-conversion-factors-2025-condensed-set.xlsx.
+# Column used: total "kg CO2e" (2025/2026) / "Total kg CO2e per unit" (2022). Cell references below are Excel
+# (column letter + 1-based row) in the named sheet. Extraction script + JSON dump: docs/sources.md §DESNZ.
+#
+# Flights and air freight use the "With RF" (indirect non-CO2 effects) columns everywhere. DESNZ 2025/2026:
+# "incorporate a 70% increase in CO2 emissions" ('Business travel- air' A47); 2022: 90% (B47).
+#
+# Direct factors and well-to-tank (WTT) are separate parameters (`ef.wtt.*`). The Low Carbon Clinical Trials
+# method (Griffiths 2024) ADDS WTT to every travel and freight factor — verified to 5 decimals against
+# DESNZ 2022 (docs/sources.md §Griffiths). The engine should add `ef.wtt.*` to the direct factor to match it.
+defaults:
+  source_url: "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2026"
+  source_year: 2026
+  region: "GB"
+  version: 1
+
+parameters:
+  # ------------------------------------------------------------------ passenger travel (direct)
+  - id: ef.travel.car.average_km
+    label: "Average car, unknown fuel, per vehicle-km"
+    value_low: 0.16591
+    value_mid: 0.16591
+    value_high: 0.17067
+    unit: kg_co2e/km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Passenger vehicles', Cars (by size) / Average car / Unknown / km, cell X54"
+    rationale: "2026 X54 = 0.16591; 2025 X54 = 0.16725; 2022 Y56 = 0.17067."
+
+  - id: ef.travel.bus.passenger_km
+    label: "Average local bus, per passenger-km"
+    value_low: 0.0965
+    value_mid: 0.10151
+    value_high: 0.10385
+    unit: kg_co2e/passenger_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Business travel- land', Bus / Average local bus / passenger.km, cell D81"
+    rationale: "2026 D81 = 0.10151; 2025 D81 = 0.10385; 2022 E81 = 0.0965."
+
+  - id: ef.travel.rail.passenger_km
+    label: "National rail, per passenger-km"
+    value_low: 0.03092
+    value_mid: 0.03092
+    value_high: 0.03549
+    unit: kg_co2e/passenger_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Business travel- land', Rail / National rail / passenger.km, cell D87"
+    rationale: "2026 D87 = 0.03092 (rail factors updated, 2026 'What's new' item 2); 2025 D87 = 0.03546; 2022 E87 = 0.03549."
+
+  - id: ef.travel.taxi.passenger_km
+    label: "Regular taxi, per passenger-km"
+    value_low: 0.14861
+    value_mid: 0.14861
+    value_high: 0.14876
+    unit: kg_co2e/passenger_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Business travel- land', Taxis / Regular taxi / passenger.km, cell D71"
+    rationale: "2026 D71 = 0.14861; 2025 D71 = 0.14861; 2022 E71 = 0.14876."
+
+  - id: ef.travel.flight.domestic.passenger_km
+    label: "Flight, domestic (to/from UK), average passenger, with RF, per passenger-km"
+    value_low: 0.22928
+    value_mid: 0.22928
+    value_high: 0.24587
+    unit: kg_co2e/passenger_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Business travel- air', Flights / Domestic, to/from UK / Average passenger / With RF, cell E23"
+    rationale: "2026 E23 = 0.22928; 2025 E23 = 0.22928; 2022 F23 = 0.24587 (90% RF uplift in 2022 vs 70% from 2025)."
+
+  - id: ef.travel.flight.short_haul.passenger_km
+    label: "Flight, short-haul (to/from UK), average passenger, with RF, per passenger-km"
+    value_low: 0.12786
+    value_mid: 0.12786
+    value_high: 0.15353
+    unit: kg_co2e/passenger_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Business travel- air', Flights / Short-haul, to/from UK / Average passenger / With RF, cell E24"
+    rationale: "2026 E24 = 0.12786; 2025 E24 = 0.12786; 2022 F24 = 0.15353."
+
+  - id: ef.travel.flight.long_haul.passenger_km
+    label: "Flight, long-haul (to/from UK), average passenger, with RF, per passenger-km"
+    value_low: 0.15282
+    value_mid: 0.15282
+    value_high: 0.19309
+    unit: kg_co2e/passenger_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Business travel- air', Flights / Long-haul, to/from UK / Average passenger / With RF, cell E27"
+    rationale: "2026 E27 = 0.15282; 2025 E27 = 0.15282; 2022 F27 = 0.19309."
+
+  - id: ef.travel.flight.international.passenger_km
+    label: "Flight, international (to/from non-UK), average passenger, with RF, per passenger-km"
+    value_low: 0.14253
+    value_mid: 0.14253
+    value_high: 0.18362
+    unit: kg_co2e/passenger_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Business travel- air', Flights / International, to/from non-UK / Average passenger / With RF, cell E32"
+    rationale: "2026 E32 = 0.14253; 2025 E32 = 0.14253; 2022 F32 = 0.18362. Use for flights that neither start nor end in the UK."
+    region: "global"
+
+  # ------------------------------------------------------------------ freight (direct)
+  - id: ef.freight.air.tonne_km
+    label: "Air freight, international (to/from non-UK), with RF, per tonne-km (default when haul band unknown)"
+    value_low: 0.89939
+    value_mid: 0.89939
+    value_high: 1.0189
+    unit: kg_co2e/tonne_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Freighting goods', Freight flights / International, to/from non-UK / With RF, cell D101"
+    rationale: "2026 D101 = 0.89939; 2025 D101 = 0.89939; 2022 E101 = 1.0189. DESNZ sets international freight equal to long-haul."
+    region: "global"
+
+  - id: ef.freight.air.domestic.tonne_km
+    label: "Air freight, domestic (to/from UK), with RF, per tonne-km"
+    value_low: 4.49363
+    value_mid: 4.60397
+    value_high: 4.60397
+    unit: kg_co2e/tonne_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Freighting goods', Freight flights / Domestic, to/from UK / With RF, cell D98"
+    rationale: "2026 D98 = 4.60397; 2025 D98 = 4.60397; 2022 E98 = 4.49363."
+
+  - id: ef.freight.air.short_haul.tonne_km
+    label: "Air freight, short-haul (to/from UK), with RF, per tonne-km"
+    value_low: 1.27835
+    value_mid: 1.27835
+    value_high: 2.30229
+    unit: kg_co2e/tonne_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Freighting goods', Freight flights / Short-haul, to/from UK / With RF, cell D99"
+    rationale: "2026 D99 = 1.27835; 2025 D99 = 1.27835; 2022 E99 = 2.30229 (large methodological change between editions)."
+
+  - id: ef.freight.air.long_haul.tonne_km
+    label: "Air freight, long-haul (to/from UK), with RF, per tonne-km"
+    value_low: 0.89939
+    value_mid: 0.89939
+    value_high: 1.0189
+    unit: kg_co2e/tonne_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Freighting goods', Freight flights / Long-haul, to/from UK / With RF, cell D100"
+    rationale: "2026 D100 = 0.89939; 2025 D100 = 0.89939; 2022 E100 = 1.0189."
+
+  - id: ef.freight.van.tonne_km
+    label: "Van, average (up to 3.5 t), unknown fuel, per tonne-km (courier)"
+    value_low: 0.58421
+    value_mid: 0.6394
+    value_high: 0.6394
+    unit: kg_co2e/tonne_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Freighting goods', Vans / Average (up to 3.5 tonnes) / Unknown / tonne.km, cell T35"
+    rationale: "2026 T35 = 0.6394; 2025 T35 = 0.63823; 2022 U35 = 0.58421."
+
+  - id: ef.freight.road.tonne_km
+    label: "HGV, average (non-refrigerated, all diesel), average laden, per tonne-km"
+    value_low: 0.10163
+    value_mid: 0.10356
+    value_high: 0.10614
+    unit: kg_co2e/tonne_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Freighting goods', HGV (non-refrigerated, all diesel) / Average non-refrigerated HGVs / Average laden, cell D63"
+    rationale: >-
+      2026 D63 = 0.10356 (row renamed from 'HGV (all diesel) / All HGVs' — 2026 'What's new' item 4);
+      2025 P63 = 0.10163; 2022 Q63 = 0.10614. Note: the LCCT method's road factor (0.19443) does not match any DESNZ 2022 HGV or van row.
+
+  # ------------------------------------------------------------------ electricity (UK)
+  - id: ef.electricity.grid.gb
+    label: "UK grid electricity, generation (Scope 2), per kWh"
+    value_low: 0.13096
+    value_mid: 0.13096
+    value_high: 0.19338
+    unit: kg_co2e/kwh
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'UK electricity', Electricity generated / Electricity: UK / kWh, cell E25"
+    rationale: >-
+      2026 E25 = 0.13096 (calculation method revised in 2026, 'What's new' item 1); 2025 E26 = 0.177; 2022 F24 = 0.19338.
+      Excludes T&D losses (ef.electricity.td_losses.gb) and WTT.
+
+  - id: ef.electricity.td_losses.gb
+    label: "UK electricity transmission and distribution losses, per kWh consumed"
+    value_low: 0.01299
+    value_mid: 0.01299
+    value_high: 0.01853
+    unit: kg_co2e/kwh
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Transmission and distribution', T&D- UK electricity / kWh, cell E22"
+    rationale: "2026 E22 = 0.01299; 2025 E22 = 0.01853; 2022 F21 = 0.01769."
+
+  # ------------------------------------------------------------------ materials (primary production, per kg)
+  - id: ef.material.paper.kg
+    label: "Paper (primary material production), per kg"
+    value_low: 0.91940
+    value_mid: 1.34359
+    value_high: 1.34508
+    unit: kg_co2e/kg
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Material use', Paper and board: paper / Primary material production / tonnes, cell D87 (÷1000)"
+    rationale: "2026 D87 = 1343.59114 kg/t; 2025 D87 = 1345.0779; 2022 E87 = 919.39628 (the LCCT method's 0.919)."
+
+  - id: ef.material.board.kg
+    label: "Board / cardboard (primary material production), per kg"
+    value_low: 0.82887
+    value_mid: 1.19824
+    value_high: 1.19824
+    unit: kg_co2e/kg
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Material use', Paper and board: board / Primary material production / tonnes, cell D85 (÷1000)"
+    rationale: "2026 D85 = 1198.23866 kg/t; 2022 E85 = 828.86816 kg/t."
+
+  - id: ef.material.paper_board_mixed.kg
+    label: "Paper and board, mixed (primary material production), per kg"
+    value_low: 0.88416
+    value_mid: 1.28702
+    value_high: 1.28702
+    unit: kg_co2e/kg
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Material use', Paper and board: mixed / Primary material production / tonnes, cell D86 (÷1000)"
+    rationale: "2026 D86 = 1287.01682 kg/t; 2022 E86 = 884.16078 kg/t."
+
+  - id: ef.material.plastics_average.kg
+    label: "Plastics, average (primary material production), per kg"
+    value_low: 3.11629
+    value_mid: 3.17051
+    value_high: 3.17051
+    unit: kg_co2e/kg
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Material use', Plastics: average plastics / Primary material production / tonnes, cell D72 (÷1000)"
+    rationale: "2026 D72 = 3170.5068 kg/t; 2022 E72 = 3116.29156 kg/t."
+
+  - id: ef.material.plastics_pp.kg
+    label: "Plastics, PP incl. forming (primary material production), per kg"
+    value_low: 2.57525
+    value_mid: 2.57525
+    value_high: 3.10473
+    unit: kg_co2e/kg
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Material use', Plastics: PP (incl. forming) / Primary material production / tonnes, cell D78 (÷1000)"
+    rationale: "2026 D78 = 2575.25292 kg/t; 2022 E78 = 3104.72699 kg/t."
+
+  - id: ef.material.plastics_pet.kg
+    label: "Plastics, PET incl. forming (primary material production), per kg"
+    value_low: 3.86158
+    value_mid: 3.86158
+    value_high: 4.03239
+    unit: kg_co2e/kg
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Material use', Plastics: PET (incl. forming) / Primary material production / tonnes, cell D77 (÷1000)"
+    rationale: "2026 D77 = 3861.58251 kg/t; 2022 E77 = 4032.3925 kg/t."
+
+  - id: ef.material.glass.kg
+    label: "Glass (primary material production), per kg"
+    value_low: 1.40277
+    value_mid: 1.40277
+    value_high: 1.40277
+    unit: kg_co2e/kg
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Material use', Glass / Primary material production / tonnes, cell D40 (÷1000)"
+    rationale: "2026 D40 = 1402.76667 kg/t; identical in 2022 (E40). Point value: no sourced range."
+
+  # ------------------------------------------------------------------ hotels (identical in 2022, 2025, 2026)
+  - id: ef.hotel.room_night.gb
+    label: "Hotel stay, UK, per room-night"
+    value_low: 10.4
+    value_mid: 10.4
+    value_high: 10.4
+    unit: kg_co2e/room_night
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Hotel stay', UK / Room per night, cell D22"
+    rationale: "Same value in 2022 (E22) and 2025 (D22). Point value: no sourced range. UK (London) = 11.5 (D23)."
+
+  - id: ef.hotel.room_night.es
+    label: "Hotel stay, Spain, per room-night"
+    value_low: 7.0
+    value_mid: 7.0
+    value_high: 7.0
+    unit: kg_co2e/room_night
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Hotel stay', Spain / Room per night, cell D73"
+    rationale: "Same value in 2022 (E73) and 2025 (D73). Point value: no sourced range."
+    region: "ES"
+
+  - id: ef.hotel.room_night.au
+    label: "Hotel stay, Australia, per room-night"
+    value_low: 35.0
+    value_mid: 35.0
+    value_high: 35.0
+    unit: kg_co2e/room_night
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'Hotel stay', Australia / Room per night, cell D29"
+    rationale: "Same value in 2022 (E29) and 2025 (D29). Point value: no sourced range."
+    region: "AU"
+
+  # ------------------------------------------------------------------ well-to-tank (add to the direct factor)
+  - id: ef.wtt.travel.car.average_km
+    label: "Well-to-tank, average car, unknown fuel, per km"
+    value_low: 0.04399
+    value_mid: 0.04399
+    value_high: 0.04508
+    unit: kg_co2e/km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'WTT- pass vehs & travel- land', WTT- cars (by size) / Average car / Unknown / km, cell I50"
+    rationale: "2026 I50 = 0.04399; 2022 full set J49 = 0.04508."
+
+  - id: ef.wtt.travel.bus.passenger_km
+    label: "Well-to-tank, average local bus, per passenger-km"
+    value_low: 0.02494
+    value_mid: 0.02649
+    value_high: 0.02649
+    unit: kg_co2e/passenger_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'WTT- pass vehs & travel- land', WTT- bus / Average local bus / passenger.km, cell D78"
+    rationale: "2026 D78 = 0.02649; 2022 full set E77 = 0.02494."
+
+  - id: ef.wtt.travel.rail.passenger_km
+    label: "Well-to-tank, national rail, per passenger-km"
+    value_low: 0.00892
+    value_mid: 0.00897
+    value_high: 0.00897
+    unit: kg_co2e/passenger_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'WTT- pass vehs & travel- land', WTT- rail / National rail / passenger.km, cell D84"
+    rationale: "2026 D84 = 0.00897; 2022 full set E83 = 0.00892."
+
+  - id: ef.wtt.travel.flight.domestic.passenger_km
+    label: "Well-to-tank, domestic flight, average passenger, per passenger-km"
+    value_low: 0.02691
+    value_mid: 0.0335
+    value_high: 0.0335
+    unit: kg_co2e/passenger_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'WTT- business travel- air', WTT- flights / Domestic / Average passenger, cell E20"
+    rationale: "2026 E20 = 0.0335; 2022 full set F20 = 0.02691."
+
+  - id: ef.wtt.travel.flight.short_haul.passenger_km
+    label: "Well-to-tank, short-haul flight, average passenger, per passenger-km"
+    value_low: 0.01681
+    value_mid: 0.02286
+    value_high: 0.02286
+    unit: kg_co2e/passenger_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'WTT- business travel- air', WTT- flights / Short-haul / Average passenger, cell E21"
+    rationale: "2026 E21 = 0.02286; 2022 full set F21 = 0.01681."
+
+  - id: ef.wtt.travel.flight.long_haul.passenger_km
+    label: "Well-to-tank, long-haul flight, average passenger, per passenger-km"
+    value_low: 0.02114
+    value_mid: 0.03213
+    value_high: 0.03213
+    unit: kg_co2e/passenger_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'WTT- business travel- air', WTT- flights / Long-haul / Average passenger, cell E24"
+    rationale: "2026 E24 = 0.03213; 2022 full set F24 = 0.02114."
+
+  - id: ef.wtt.travel.flight.international.passenger_km
+    label: "Well-to-tank, international (non-UK) flight, average passenger, per passenger-km"
+    value_low: 0.02011
+    value_mid: 0.02162
+    value_high: 0.02162
+    unit: kg_co2e/passenger_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'WTT- business travel- air', WTT- flights / International, to/from non-UK / Average passenger, cell E29"
+    rationale: "2026 E29 = 0.02162; 2022 full set F29 = 0.02011."
+    region: "global"
+
+  - id: ef.wtt.freight.air.domestic.tonne_km
+    label: "Well-to-tank, domestic air freight, per tonne-km"
+    value_low: 0.49186
+    value_mid: 0.57429
+    value_high: 0.57429
+    unit: kg_co2e/tonne_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'WTT- delivery vehs & freight', WTT- freight flights / Domestic, cell D93"
+    rationale: "2026 D93 = 0.57429; 2022 full set E92 = 0.49186."
+
+  - id: ef.wtt.freight.air.short_haul.tonne_km
+    label: "Well-to-tank, short-haul air freight, per tonne-km"
+    value_low: 0.20515
+    value_mid: 0.20515
+    value_high: 0.2521
+    unit: kg_co2e/tonne_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'WTT- delivery vehs & freight', WTT- freight flights / Short-haul, cell D94"
+    rationale: "2026 D94 = 0.20515; 2022 full set E93 = 0.2521."
+
+  - id: ef.wtt.freight.air.long_haul.tonne_km
+    label: "Well-to-tank, long-haul / international air freight, per tonne-km"
+    value_low: 0.11157
+    value_mid: 0.13516
+    value_high: 0.13516
+    unit: kg_co2e/tonne_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'WTT- delivery vehs & freight', WTT- freight flights / Long-haul, cell D95 (International D96 is identical)"
+    rationale: "2026 D95 = D96 = 0.13516; 2022 full set E94 = E95 = 0.11157."
+
+  - id: ef.wtt.freight.van.tonne_km
+    label: "Well-to-tank, average van (up to 3.5 t), unknown fuel, per tonne-km"
+    value_low: 0.14908
+    value_mid: 0.15335
+    value_high: 0.15335
+    unit: kg_co2e/tonne_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'WTT- delivery vehs & freight', WTT- vans / Average (up to 3.5 tonnes) / Unknown / tonne.km, cell H30"
+    rationale: "2026 H30 = 0.15335; 2022 full set I29 = 0.14908."
+
+  - id: ef.wtt.freight.road.tonne_km
+    label: "Well-to-tank, average non-refrigerated HGV, average laden, per tonne-km"
+    value_low: 0.02359
+    value_mid: 0.02359
+    value_high: 0.02599
+    unit: kg_co2e/tonne_km
+    source_title: "DESNZ GHG conversion factors 2026, sheet 'WTT- delivery vehs & freight', WTT- HGV (non-refrigerated, all diesel) / Average non-refrigerated HGVs / Average laden, cell D58"
+    rationale: "2026 D58 = 0.02359; 2022 full set H57 ('All HGVs', average laden) = 0.02599."
+
+  # ------------------------------------------------------------------ dry ice
+  - id: ef.dry_ice.kg
+    label: "Dry ice used in frozen shipments, per kg (production + release)"
+    value_low: 1.0
+    value_mid: 1.81
+    value_high: 1.81
+    unit: kg_co2e/kg
+    source_title: "Griffiths, Fox, Williamson et al. BMJ Open 2024;14:e075755, online supplemental appendix C p.18 ('Dry ice: 1.81kg CO2e for 1 kg dry ice produced/used')"
+    source_url: "https://bmjopen.bmj.com/content/14/1/e075755"
+    source_year: 2024
+    rationale: >-
+      mid/high = 1.81 from the LCCT guidance (production and use). low = 1.0 = DESNZ 2026 'Refrigerant & other',
+      Kyoto products / Carbon dioxide / kg, cell D20 (release of the CO2 only, excludes production).

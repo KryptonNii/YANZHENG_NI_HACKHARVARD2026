@@ -1,0 +1,222 @@
+# PRIMETIME carbon footprint — line-by-line transcription of the published calculation.
+#
+# Source: Griffiths J, Fox L, Williamson PR, on behalf of the Low Carbon Clinical Trials Group.
+#   "Quantifying the carbon footprint of clinical trials: guidance development and case studies."
+#   BMJ Open 2024;14:e075755. doi:10.1136/bmjopen-2023-075755 (CC BY 4.0).
+#   Online supplemental appendix D ("PRIMETIME carbon footprint calculations", worksheet V0.2 14 Feb 2023),
+#   file bmjopen-2023-075755supp004.pdf, retrieved via Europe PMC (PMC10823997) on 2026-10-16.
+#   The PDF is image-only; every number below was transcribed by hand from the page images (page = PDF page).
+#
+# Format: see casps_ledger.yaml.
+trial:
+  id: primetime
+  name: PRIMETIME
+  registry_id: ISRCTN41579286
+  title: "PRIMETIME: postoperative avoidance of radiotherapy (biomarker-selected very-low-risk breast cancer)"
+  phase: "Phase 3"
+  patients: 1962
+  sites: 64
+  countries: [GB]
+  duration_years: 10
+  drug_type: none
+  description: >-
+    UK cohort trial of omitting radiotherapy; electronic data capture, NHS data linkage, shipment of tissue samples
+    for immunohistochemistry and long-term sample storage (appendix D p.3). 67 sites set up, 64 recruited.
+
+published:
+  # Appendix D p.23-24 "PRIMETIME carbon footprint summary" (kg CO2e).
+  total_kg: 89360.2
+  total_main_text_kg: 89360        # main text, Results: "89 tonnes (89 360 kgCO2e)"
+  modules:
+    setup: 454.2
+    trial_management: 11733.3
+    meetings_travel: 1136.2
+    intervention: 0
+    data_collection: 7572.1
+    supplies_equipment: 1741.5
+    patient_assessments: 60822.7
+    samples: 438.2
+    laboratory: 2061.4
+    closeout: 3400.6
+  figure_modules:                  # Figure 3 labels (rounded), main article; intervention not shown
+    setup: 454
+    trial_management: 11733
+    meetings_travel: 1136
+    data_collection: 7572
+    supplies_equipment: 1742
+    patient_assessments: 60823
+    samples: 438
+    laboratory: 2061
+    closeout: 3401
+
+findings:
+  - id: primetime-f1
+    severity: medium
+    lines: [mt-hotels]
+    summary: "Hotel stays: '8 x 13.9 = 250.2 kgCO2e'; 8 x 13.9 = 111.2 (250.2 = 18 x 13.9)."
+    detail: >-
+      Appendix D p.8-9 states 8 rooms (one person, one night) and 'Assumption: 8 stays (for TMG meetings)' twice, but
+      prints 250.2 kg. Recomputing from the stated activity gives 111.2 kg (-139.0 kg, -12.2% of the meetings module,
+      -0.16% of the total). The corrected variant uses 8 room-nights.
+  - id: primetime-f2
+    severity: info
+    lines: [smp-kits-to-sites]
+    summary: "Sample kits to sites: calculation text '630 x 295.88' but the printed t.km (100.77) matches the stated 301.8 km average."
+  - id: primetime-f3
+    severity: info
+    lines: [smp-tracking-paper]
+    summary: "Tracking slips: text '26.9 kg x 0.919' but the result 27.5 matches 29.89 kg (5978 pages x 5 g)."
+  - id: primetime-f4
+    severity: info
+    lines: [pa-scans]
+    summary: "Mammograms are costed with the chest X-ray factor (0.8 kg/scan) — the guidance lists no mammography factor."
+
+lines:
+  # ---------------------------------------------------------------- 1. Trial set-up (p.3-5)
+  - {id: setup-sif-print, module: setup, page: 3, item: "SIF 260 pages x 67 sites: printing",
+     qty: [17420, 0.005], qty_unit: kg_paper, factor: 0.22438, factor_key: paper_printing_bw, reported_kg: 19.5}
+  - {id: setup-sif-paper, module: setup, page: 3, item: "SIF: paper material",
+     qty: [17420, 0.005], qty_unit: kg_paper, factor: 0.919, factor_key: material_paper, reported_kg: 80}
+  - {id: setup-folders, module: setup, page: 3, item: "67 ring binders x 0.5 kg",
+     qty: [67, 0.5], qty_unit: kg_board, factor: 0.821, factor_key: material_board, reported_kg: 27.5}
+  - {id: setup-pis-print, module: setup, page: 3, item: "PIS/consent forms 48168 pages: colour printing",
+     qty: [48168, 0.005], qty_unit: kg_paper, qty_note: "6 pages x 3123 pre-screened + 15 pages x 1962 registered",
+     factor: 0.31786, factor_key: paper_printing_colour, reported_kg: 76.5}
+  - {id: setup-pis-paper, module: setup, page: 3, item: "PIS/consent forms: paper material",
+     qty: [48168, 0.005], qty_unit: kg_paper, factor: 0.919, factor_key: material_paper, reported_kg: 221.3}
+  - {id: setup-gp-print, module: setup, page: 4, item: "GP letters 3924 pages: printing",
+     qty: [3924, 0.005], qty_unit: kg_paper, factor: 0.22438, factor_key: paper_printing_bw, reported_kg: 4.4}
+  - {id: setup-gp-paper, module: setup, page: 4, item: "GP letters: paper material",
+     qty: [3924, 0.005], qty_unit: kg_paper, factor: 0.919, factor_key: material_paper, reported_kg: 18}
+  - {id: setup-sif-delivery, module: setup, page: 4, item: "SIF delivery: 0.00177 t x 301.8 km x 67 sites (road)",
+     qty: [0.00177, 301.8, 67], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 6.9}
+  - {id: setup-gp-post, module: setup, page: 5, item: "GP letter postage: 0.033 t x 17.4 km (road)",
+     qty: [0.033, 17.4], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 0.11}
+
+  # ---------------------------------------------------------------- 2. CTU emissions (p.5) — 7.1 FTE-years over 10 years
+  - {id: ctu-energy, module: trial_management, page: 5, item: "CTU office energy, 7.1 FTE-years",
+     qty: [7.1], qty_unit: fte_year, factor: 193.28, factor_key: ctu_office_electricity_fte_year, reported_kg: 1372.3}
+  - {id: ctu-heat, module: trial_management, page: 5, item: "CTU heating, 7.1 FTE-years",
+     qty: [7.1], qty_unit: fte_year, factor: 431.56, factor_key: ctu_office_heating_fte_year, reported_kg: 3064}
+  - {id: ctu-commute, module: trial_management, page: 5, item: "Trial team commuting, 7.1 FTE-years",
+     qty: [7.1], qty_unit: fte_year, factor: 1027.8, factor_key: ctu_commuting_fte_year, reported_kg: 7297}
+
+  # ---------------------------------------------------------------- 3. Meetings and travel (p.5-9) — no feasibility/monitoring/audit visits
+  - {id: mt-siv-virtual, module: meetings_travel, page: 6, item: "Virtual site initiation visits, 72 attendee-hours",
+     qty: [72], qty_unit: attendee_hour, factor: 0.157, factor_key: videoconference_attendee_hour, reported_kg: 11.3}
+  - {id: mt-siv-inperson, module: meetings_travel, page: 6, item: "1 in-person SIV, 2 x 24.1 km (rail)",
+     qty: [1, 2, 24.1], qty_unit: passenger_km, factor: 0.04441, factor_key: rail_national, reported_kg: 2.1}
+  - {id: mt-idmc, module: meetings_travel, page: 6, item: "IDMC, 31 attendee-hours (virtual)",
+     qty: [31], qty_unit: attendee_hour, factor: 0.157, factor_key: videoconference_attendee_hour, reported_kg: 4.9}
+  - {id: mt-tmg1, module: meetings_travel, page: 7, item: "TMG meeting 1, 2 x 1760.6 km (rail)",
+     qty: [2, 1760.6], qty_unit: passenger_km, factor: 0.04441, factor_key: rail_national, reported_kg: 156.4}
+  - {id: mt-tmg2, module: meetings_travel, page: 7, item: "TMG meeting 2, 2 x 1437.3 km (rail)",
+     qty: [2, 1437.3], qty_unit: passenger_km, factor: 0.04441, factor_key: rail_national, reported_kg: 127.7}
+  - {id: mt-tmg3, module: meetings_travel, page: 7, item: "TMG meeting 3, teleconference 2 h x 12",
+     qty: [2, 12], qty_unit: attendee_hour, factor: 0.157, factor_key: videoconference_attendee_hour, reported_kg: 3.77}
+  - {id: mt-tmg4, module: meetings_travel, page: 7, item: "TMG meeting 4, 2 x 1624.8 km (rail)",
+     qty: [2, 1624.8], qty_unit: passenger_km, factor: 0.04441, factor_key: rail_national, reported_kg: 144.3}
+  - {id: mt-tmg5, module: meetings_travel, page: 7, item: "TMG meeting 5, Zoom 1.5 h x 25",
+     qty: [1.5, 25], qty_unit: attendee_hour, factor: 0.157, factor_key: videoconference_attendee_hour, reported_kg: 5.89}
+  - {id: mt-tmg6, module: meetings_travel, page: 7, item: "TMG meeting 6, 1.5 h x 18",
+     qty: [1.5, 18], qty_unit: attendee_hour, factor: 0.157, factor_key: videoconference_attendee_hour, reported_kg: 4.24}
+  - {id: mt-tmg7, module: meetings_travel, page: 7, item: "TMG meeting 7, Teams 1 h x 23",
+     qty: [23], qty_unit: attendee_hour, factor: 0.157, factor_key: videoconference_attendee_hour, reported_kg: 3.6}
+  - {id: mt-tsc-2016, module: meetings_travel, page: 7, item: "TSC 2016, teleconference x 5",
+     qty: [5], qty_unit: attendee_hour, factor: 0.157, factor_key: videoconference_attendee_hour, reported_kg: 0.8}
+  - {id: mt-tsc-inperson, module: meetings_travel, page: 7, item: "TSC 2017, 2018, 2019, 2021 in person: 4 x 5 x (2 x 22.5 km) (rail)",
+     qty: [4, 225], qty_unit: passenger_km, factor: 0.04441, factor_key: rail_national, reported_kg: 40}
+  - {id: mt-other-virtual, module: meetings_travel, page: 7-8, item: "Other teleconferences: 473 attendee-hours",
+     qty: [473], qty_unit: attendee_hour,
+     qty_note: "2 virtual conferences 2 + PHE 2 + sample logistics 5 + data management 20 + LCRN 9 + team 132 + CI_TC 303",
+     factor: 0.157, factor_key: videoconference_attendee_hour, reported_kg: 74.266}
+  - {id: mt-hotels, module: meetings_travel, page: 8-9, item: "Hotel stays: 8 room-nights (TMG meetings)",
+     qty: [8], qty_unit: room_night, qty_note: "printed result 250.2 (finding primetime-f1)",
+     factor: 13.9, factor_key: hotel_gb, reported_kg: 250.2}
+  - {id: mt-lunch-veg, module: meetings_travel, page: 9, item: "Meeting lunches, 36 vegetarian (50/50 assumption of 72)",
+     qty: [36], qty_unit: meal, factor: 2.6, factor_key: meal_vegetarian, reported_kg: 93.6}
+  - {id: mt-lunch-meat, module: meetings_travel, page: 9, item: "Meeting lunches, 36 meat",
+     qty: [36], qty_unit: meal, factor: 5.92, factor_key: meal_meat, reported_kg: 213.12}
+
+  # ---------------------------------------------------------------- 4. Intervention: N/A (avoidance-of-radiotherapy trial)
+
+  # ---------------------------------------------------------------- 5. Data collection and exchange (p.12-14)
+  - {id: data-post, module: data_collection, page: 12, item: "Eligibility/registration checklists posted to CTU: 0.07 t x 301.8 km (road)",
+     qty: [0.07, 301.8], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 4.1}
+  - {id: data-sif-print, module: data_collection, page: 12, item: "Sites printing their SIF, 26397 pages",
+     qty: [26397, 0.005], qty_unit: kg_paper, factor: 0.22438, factor_key: paper_printing_bw, reported_kg: 29.6}
+  - {id: data-sif-paper, module: data_collection, page: 12, item: "Sites' SIF: paper material",
+     qty: [26397, 0.005], qty_unit: kg_paper, factor: 0.919, factor_key: material_paper, reported_kg: 121.3}
+  - {id: data-crf-print, module: data_collection, page: 12, item: "Paper CRFs at CTU, 14000 pages: printing",
+     qty: [14000, 0.005], qty_unit: kg_paper, factor: 0.22438, factor_key: paper_printing_bw, reported_kg: 15.7}
+  - {id: data-crf-paper, module: data_collection, page: 12, item: "Paper CRFs: paper material",
+     qty: [14000, 0.005], qty_unit: kg_paper, factor: 0.919, factor_key: material_paper, reported_kg: 64.3}
+  - {id: data-docs-print, module: data_collection, page: 12, item: "Site documents stored at CTU, 6300 pages: printing",
+     qty: [6300, 0.005], qty_unit: kg_paper, factor: 0.22438, factor_key: paper_printing_bw, reported_kg: 7.1}
+  - {id: data-docs-paper, module: data_collection, page: 13, item: "Site documents: paper material",
+     qty: [6300, 0.005], qty_unit: kg_paper, factor: 0.919, factor_key: material_paper, reported_kg: 29}
+  - {id: data-linkage, module: data_collection, page: 14, item: "Computer services / data linkage, spend-based (GBP 49000)",
+     qty: [49000], qty_unit: gbp, factor: 0.149, factor_key: computer_services_spend_gbp, reported_kg: 7301}
+
+  # ---------------------------------------------------------------- 6. Supplies and equipment (p.14)
+  - {id: sup-office-machinery, module: supplies_equipment, page: 14, item: "Office machinery and computers (GBP 4500)",
+     qty: [4500], qty_unit: gbp, factor: 0.387, factor_key: office_machinery_spend_gbp, reported_kg: 1741.5}
+
+  # ---------------------------------------------------------------- 7. Patient assessments (p.15-17)
+  - {id: pa-travel, module: patient_assessments, page: 15, item: "Patient travel: 1623 patients x 5 extra mammogram visits x 5.8 kg",
+     qty: [5, 1623], qty_unit: patient_visit, factor: 5.8, factor_key: patient_hospital_visit_roundtrip_gb, reported_kg: 47067}
+  - {id: pa-consumables-ki67, module: patient_assessments, page: 16, item: "Consumables: 2989 patients with Ki67 testing",
+     qty: [2989], qty_unit: appointment, factor: 0.30, factor_key: consumables_per_appointment, reported_kg: 896.7}
+  - {id: pa-consumables-reg, module: patient_assessments, page: 16, item: "Consumables: 1962 registration appointments",
+     qty: [1962], qty_unit: appointment, factor: 0.30, factor_key: consumables_per_appointment, reported_kg: 588.6}
+  - {id: pa-scans, module: patient_assessments, page: 17, item: "5 extra mammograms x 1623 (chest X-ray factor)",
+     qty: [5, 1623], qty_unit: scan, factor: 0.8, factor_key: chest_xray, reported_kg: 6492}
+  - {id: pa-hosp-elec, module: patient_assessments, page: 17, item: "Hospital electricity, 5.5 trial FTE-years (2017-2022)",
+     qty: [5.5], qty_unit: fte_year, factor: 364.9, factor_key: hospital_electricity_fte_year, reported_kg: 2007}
+  - {id: pa-hosp-heat, module: patient_assessments, page: 17, item: "Hospital heating, 5.5 FTE-years",
+     qty: [5.5], qty_unit: fte_year, factor: 685.7, factor_key: hospital_heating_fte_year, reported_kg: 3771.4}
+
+  # ---------------------------------------------------------------- 8. Samples (p.17-19)
+  - {id: smp-slide-containers, module: samples, page: 18, item: "Slide containers (PP) 30.6 kg",
+     qty: [30.6], qty_unit: kg, factor: 3.105, factor_key: material_plastics_pp, reported_kg: 95}
+  - {id: smp-paper, module: samples, page: 18, item: "Paper 39 kg: material",
+     qty: [39], qty_unit: kg, factor: 0.919, factor_key: material_paper, reported_kg: 35.8}
+  - {id: smp-printing, module: samples, page: 18, item: "Paper 39 kg: printing",
+     qty: [39], qty_unit: kg, factor: 0.22438, factor_key: paper_printing_bw, reported_kg: 8.8}
+  - {id: smp-jiffy, module: samples, page: 18, item: "Jiffy bags 243.8 kg (paper factor)",
+     qty: [243.8], qty_unit: kg, factor: 0.919, factor_key: material_paper, reported_kg: 224.1}
+  - {id: smp-tracking-print, module: samples, page: 18, item: "Tracking slips 5978 pages: printing",
+     qty: [5978, 0.005], qty_unit: kg_paper, factor: 0.22438, factor_key: paper_printing_bw, reported_kg: 6.7}
+  - {id: smp-tracking-paper, module: samples, page: 18, item: "Tracking slips: paper material (29.89 kg)",
+     qty: [29.89], qty_unit: kg_paper, qty_note: "text says 26.9 kg (finding primetime-f3)",
+     factor: 0.919, factor_key: material_paper, reported_kg: 27.5}
+  - {id: smp-envelopes, module: samples, page: 18, item: "Envelopes manufacturer -> CTU: 0.004 t x 849.6 km (road)",
+     qty: [0.004, 849.6], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 0.66}
+  - {id: smp-slide-freight, module: samples, page: 19, item: "Slide mailing containers: 0.00204 t x 6910.3 km (road)",
+     qty: [0.00204, 6910.3], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 2.7}
+  - {id: smp-kits-to-sites, module: samples, page: 19, item: "Sample kits CTU -> sites: 0.00053 t x 630 x 301.8 km (road)",
+     qty: [0.00053, 630, 301.8], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 19.6}
+  - {id: smp-ship-cambridge, module: samples, page: 19, item: "Samples -> Cambridge lab: 938 shipments x 239.5 km x 0.0000935 t",
+     qty: [0.0000935, 239.5, 938], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 4.1}
+  - {id: smp-ship-rmh, module: samples, page: 19, item: "Samples -> RMH lab: 1094 shipments x 258 km",
+     qty: [0.0000935, 258, 1094], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 5.1}
+  - {id: smp-ship-glasgow, module: samples, page: 19, item: "Samples -> Glasgow lab: 957 shipments x 467.8 km",
+     qty: [0.0000935, 467.8, 957], qty_unit: tonne_km, factor: 0.19443, factor_key: freight_road, reported_kg: 8.1}
+
+  # ---------------------------------------------------------------- 9. Laboratory (p.19-21)
+  - {id: lab-electricity, module: laboratory, page: 20, item: "Lab utilities, electricity: 3 labs x (5% FTE x 4 y + 2% x 1 y)",
+     qty: [3, 0.22], qty_unit: fte_year, factor: 1747.2, factor_key: lab_electricity_fte_year, reported_kg: 1153.2}
+  - {id: lab-heating, module: laboratory, page: 20, item: "Lab utilities, heating: same FTE",
+     qty: [3, 0.22], qty_unit: fte_year, factor: 1376, factor_key: lab_heating_fte_year, reported_kg: 908.16}
+
+  # ---------------------------------------------------------------- 10. Close out (p.21-23)
+  - {id: close-archive-electricity, module: closeout, page: 22, item: "Archiving 4 m2 office x 10 years: electricity",
+     qty: [4, 10], qty_unit: m2_year, factor: 16.1, factor_key: office_electricity_m2_year, reported_kg: 644}
+  - {id: close-archive-heating, module: closeout, page: 22, item: "Archiving 4 m2 office x 10 years: heating (36 kg/m2)",
+     qty: [4, 10], qty_unit: m2_year, factor: 36, factor_key: office_heating_m2_year, reported_kg: 1428}
+  - {id: close-electronic, module: closeout, page: 22, item: "Electronic storage ~4 GB x 10 years",
+     qty: [4, 10], qty_unit: gb_year, factor: 1.365, factor_key: data_storage_gb_year, reported_kg: 54.6}
+  - {id: close-samples-electricity, module: closeout, page: 23, item: "Biological samples 2 m2 health building x 10 years: electricity",
+     qty: [2, 10], qty_unit: m2_year, factor: 22.1, factor_key: health_building_electricity_m2_year, reported_kg: 442}
+  - {id: close-samples-heating, module: closeout, page: 23, item: "Biological samples 2 m2 x 10 years: heating",
+     qty: [2, 10], qty_unit: m2_year, factor: 41.6, factor_key: health_building_heating_m2_year, reported_kg: 832}
