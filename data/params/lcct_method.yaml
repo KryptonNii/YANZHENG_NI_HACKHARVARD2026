@@ -1,0 +1,423 @@
+# Factors from the Low Carbon Clinical Trials (LCCT) method — the published framework TrialPilot follows.
+#
+# Source: Griffiths J, Fox L, Williamson PR, on behalf of the Low Carbon Clinical Trials Group. "Quantifying the
+# carbon footprint of clinical trials: guidance development and case studies." BMJ Open 2024;14:e075755
+# (CC BY 4.0). Values copied from the worked calculations in online supplemental appendices C (CASPS) and
+# D (PRIMETIME), worksheet V0.2 14 Feb 2023; page = PDF page. The appendices cite the underlying sources
+# (Ecoinvent v2.2, GOV.UK conversion factors, SHC care-pathways calculator, product specs) in the detailed
+# guidance (appendix A). These are UK benchmarks unless stated.
+#
+# Ranges: where appendices C and D print different values for the same factor, low/high are those two values.
+# Otherwise the published point value is used (low = mid = high) — no sourced range exists, and widening it
+# would be invented precision. Where we had to choose a proxy or a composition, the entry is an assumption.
+defaults:
+  source_url: "https://bmjopen.bmj.com/content/14/1/e075755"
+  source_year: 2024
+  region: "GB"
+  version: 1
+
+parameters:
+  # ------------------------------------------------------------------ trial_management ("CTU emissions")
+  - id: ef.trial_management.office_energy_fte_year
+    label: "Coordinating-unit office energy per FTE-year (air-conditioned office benchmark)"
+    value_low: 193.28
+    value_mid: 193.28
+    value_high: 193.284
+    unit: kg_co2e/fte_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.5-6 ('Energy consumption for 1 FTE for 1 year = 193.28 kgCO2e'); appendix D p.5"
+
+  - id: ef.trial_management.office_heating_fte_year
+    label: "Coordinating-unit office heating (natural gas) per FTE-year"
+    value_low: 431.56
+    value_mid: 431.56
+    value_high: 431.56
+    unit: kg_co2e/fte_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.6 ('Heating for 1 FTE for 1 year = 431.56 kgCO2e'); appendix D p.5"
+
+  - id: ef.trial_management.commuting_fte_year
+    label: "Trial team commuting per FTE-year (UK average, used as proxy for ES/AU in CASPS)"
+    value_low: 1027.8
+    value_mid: 1027.8
+    value_high: 1027.8
+    unit: kg_co2e/fte_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.7 ('total average commuting emissions = 1027.8 kgCO2e'); appendix D p.5"
+
+  - id: rate.trial_management.fte
+    label: "Coordinating-unit staff on the trial (average FTE over the trial duration)"
+    value_low: 0.7
+    value_mid: 1.8
+    value_high: 10
+    unit: fte
+    assumption: true
+    rationale: >-
+      Observed in Griffiths 2024: PRIMETIME 7.1 FTE-years over 10 years = 0.71 FTE (64 UK sites, academic);
+      CASPS 1 + 0.3 + 0.5 = 1.8 FTE (12 sites, 3 countries). Industry sponsor/CRO teams for large Phase 3 trials
+      are larger; no public source was found, so high = 10 FTE is an explicit assumption.
+
+  # ------------------------------------------------------------------ meetings_travel
+  - id: ef.meetings.videoconference_attendee_hour
+    label: "Videoconferencing, per attendee-hour"
+    value_low: 0.157
+    value_mid: 0.157
+    value_high: 0.157
+    unit: kg_co2e/attendee_hour
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.8 ('Videoconferencing = 157 grams CO2e per hour')"
+
+  - id: ef.meetings.meal.vegetarian
+    label: "Meeting lunch or hotel dinner, vegetarian, per meal"
+    value_low: 2.6
+    value_mid: 2.6
+    value_high: 2.6
+    unit: kg_co2e/meal
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.10 ('(vegetarian) = 2.6 kgCO2e per meal per person')"
+
+  - id: ef.meetings.meal.meat
+    label: "Meeting lunch or hotel dinner, meat, per meal"
+    value_low: 5.92
+    value_mid: 5.92
+    value_high: 5.92
+    unit: kg_co2e/meal
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.10 ('(meat) = 5.92 kgCO2e per meal per person')"
+
+  # ------------------------------------------------------------------ patient_assessments
+  - id: ef.patient_assessments.hospital_visit_roundtrip.gb
+    label: "Patient travel for one hospital visit, UK, out and back (per visit)"
+    value_low: 5.8
+    value_mid: 5.8
+    value_high: 5.8
+    unit: kg_co2e/visit
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.15 ('one patient visit to hospital (UK) = 5.8 kgCO2e (this includes both the out and back journeys)')"
+    rationale: "Cross-check for the km-based patient travel formula; the LCCT appendices apply it to every trial-specific visit."
+
+  - id: ef.patient_assessments.gp_visit_roundtrip.gb
+    label: "Patient travel for one GP-surgery visit, UK, out and back (per visit)"
+    value_low: 1.12
+    value_mid: 1.12
+    value_high: 1.12
+    unit: kg_co2e/visit
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.15 ('one patient visit to GP surgery (UK) = 1.12 kgCO2e')"
+
+  - id: ef.patient_assessments.consumables_per_visit
+    label: "Consumables (gloves etc.) per trial appointment"
+    value_low: 0.30
+    value_mid: 0.30
+    value_high: 0.30
+    unit: kg_co2e/visit
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.15 ('Consumables = 0.30 kgCO2e per patient per trial appointment')"
+
+  - id: ef.procedure.ct_scan
+    label: "One CT scan"
+    value_low: 9.2
+    value_mid: 9.2
+    value_high: 9.2
+    unit: kg_co2e/procedure
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.15 ('1 CT scan = 9.2 kgCO2e')"
+
+  - id: ef.procedure.mri
+    label: "One MRI scan"
+    value_low: 24.7
+    value_mid: 24.7
+    value_high: 24.7
+    unit: kg_co2e/procedure
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.15 ('1 MRI = 24.7 kg CO2e')"
+
+  - id: ef.procedure.x_ray
+    label: "One chest X-ray"
+    value_low: 0.8
+    value_mid: 0.8
+    value_high: 0.8
+    unit: kg_co2e/procedure
+    source_title: "Griffiths et al. BMJ Open 2024, appendix D p.15 ('1 CXR = 0.8 kgCO2e/scan')"
+
+  - id: ef.procedure.mammogram
+    label: "One mammogram (chest X-ray factor used as proxy)"
+    value_low: 0.4
+    value_mid: 0.8
+    value_high: 1.6
+    unit: kg_co2e/procedure
+    assumption: true
+    rationale: >-
+      The LCCT guidance has no mammography factor; PRIMETIME applied the chest X-ray factor 0.8 kg/scan
+      (appendix D p.17). We keep that proxy as mid and set x0.5-x2 bounds as an explicit assumption.
+
+  - id: ef.procedure.blood_draw
+    label: "One trial blood draw incl. collection, phlebotomy and analysis (panel composition assumed)"
+    value_low: 0.082
+    value_mid: 0.215
+    value_high: 0.297
+    unit: kg_co2e/procedure
+    assumption: true
+    rationale: >-
+      Per-test values from Griffiths 2024 appendix C p.16 (include collection, phlebotomy and analyser power):
+      coagulation 82 g, full blood examination 116 g, urea and electrolytes 99 g, arterial gas 49 g, CRP 0.5 g.
+      Panel assumed: low = one coagulation profile; mid = FBC + U&E (0.215); high = FBC + U&E + coagulation (0.297).
+
+  - id: ef.procedure.surgery_hour
+    label: "One hour in surgery"
+    value_low: 53
+    value_mid: 53
+    value_high: 53
+    unit: kg_co2e/hour
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.16 ('1 hour in surgery = 53 kg CO2e')"
+
+  - id: ef.hospital.bed_day.general
+    label: "One low-intensity (general ward) bed day"
+    value_low: 37.9
+    value_mid: 37.9
+    value_high: 37.9
+    unit: kg_co2e/bed_day
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.16 ('1 low intensity (general ward) bed day = 37.9 kg CO2e')"
+
+  - id: ef.hospital.bed_day.icu
+    label: "One high-intensity (ICU) bed day"
+    value_low: 103
+    value_mid: 103
+    value_high: 103
+    unit: kg_co2e/bed_day
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.16 ('1 high intensity (ICU) bed day = 103 kgCO2e')"
+
+  - id: ef.site.hospital_electricity_fte_year
+    label: "Hospital electricity attributable to one trial FTE-year (UK benchmark)"
+    value_low: 364.9
+    value_mid: 364.9
+    value_high: 364.9
+    unit: kg_co2e/fte_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.16-17 ('1 FTE 1 year = 364.9 kgCO2e'); appendix D p.17"
+
+  - id: ef.site.hospital_heating_fte_year
+    label: "Hospital heating attributable to one trial FTE-year (UK benchmark)"
+    value_low: 685.7
+    value_mid: 685.7
+    value_high: 685.7
+    unit: kg_co2e/fte_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.17 ('Heating: 1 FTE, 1 year = 685.7 kgCO2e'); appendix D p.17"
+
+  # ------------------------------------------------------------------ samples / laboratory
+  - id: ef.samples.cold_box.single_use
+    label: "Single-use sample cold storage box (each)"
+    value_low: 25.2
+    value_mid: 25.2
+    value_high: 25.2
+    unit: kg_co2e/box
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.11 and p.18 ('Single use sample cold storage box = 25.2 kgCO2e per box')"
+
+  - id: ef.samples.cold_box.reusable
+    label: "Reusable sample cold storage box (per use)"
+    value_low: 2.2
+    value_mid: 2.2
+    value_high: 2.2
+    unit: kg_co2e/box
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.12 ('Reusable sample cold storage box = 2.2 kgCO2e per box')"
+
+  - id: supply.sample.dry_ice_kg_per_shipment
+    label: "Dry ice per frozen sample shipping box (default when no activity data)"
+    value_low: 1
+    value_mid: 1
+    value_high: 1
+    unit: kg/shipment
+    source_title: "Griffiths et al. BMJ Open 2024, appendix D p.10 ('In the absence of activity data, assume 1kg of dry ice is used per individual sample shipping box')"
+
+  - id: ef.laboratory.electricity_fte_year
+    label: "Laboratory electricity attributable to one lab FTE-year"
+    value_low: 1747.2
+    value_mid: 1747.2
+    value_high: 1747.2
+    unit: kg_co2e/fte_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.19 ('1747.2 kgCO2e per FTE per year'); appendix D p.19-20"
+
+  - id: ef.laboratory.heating_fte_year
+    label: "Laboratory heating attributable to one lab FTE-year"
+    value_low: 1376
+    value_mid: 1376
+    value_high: 1376
+    unit: kg_co2e/fte_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.19 ('Heating: 1376 kgCO2e per FTE per year'); appendix D p.20"
+
+  - id: ef.laboratory.ult_freezer_unit_year
+    label: "One whole -80 C ultra-low-temperature freezer, per year"
+    value_low: 2192.2
+    value_mid: 2192.2
+    value_high: 2192.2
+    unit: kg_co2e/unit_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.21 ('Storage in an ultra-low/-80 freezer: 2192.2 kgCO2e per year ... this is for a whole freezer')"
+    rationale: "Cross-check for energy.freezer.minus80.kwh_per_day x 365 x grid factor (the TrialPilot formula)."
+
+  - id: ef.laboratory.fridge_minus20_unit_year
+    label: "One whole fridge / -20 C freezer, per year"
+    value_low: 298.9
+    value_mid: 298.9
+    value_high: 298.9
+    unit: kg_co2e/unit_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.21 ('Storage in fridge/-20 freezer: 298.9 kgCO2e per year')"
+
+  # ------------------------------------------------------------------ data_collection / supplies_equipment
+  - id: ef.data_collection.storage_gb_year
+    label: "Electronic data storage and transmission, per GB-year"
+    value_low: 1.35
+    value_mid: 1.365
+    value_high: 1.365
+    unit: kg_co2e/gb_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.14 ('estimate 1.365 kg CO2e per GB per year'); p.23 text says 1.35"
+
+  - id: ef.data_collection.computer_services_per_gbp
+    label: "Computer services such as data linkage, spend-based, per GBP"
+    value_low: 0.149
+    value_mid: 0.149
+    value_high: 0.149
+    unit: kg_co2e/gbp
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.14 ('For computer services such as data linkage: GBP x 0.149 = kgCO2e')"
+
+  - id: ef.device.desktop_hour
+    label: "Desktop computer use, per hour"
+    value_low: 0.18079
+    value_mid: 0.18079
+    value_high: 0.18079
+    unit: kg_co2e/hour
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.14 ('Desktop computer = 0.18079 kg CO2e per hour')"
+
+  - id: ef.device.laptop_hour
+    label: "Laptop use, per hour"
+    value_low: 0.028719
+    value_mid: 0.028719
+    value_high: 0.028719
+    unit: kg_co2e/hour
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.14 ('Laptop = 0.028719 kg CO2e per hour')"
+
+  - id: ef.device.smartphone_hour
+    label: "Smartphone use, per hour"
+    value_low: 0.015068
+    value_mid: 0.015068
+    value_high: 0.015068
+    unit: kg_co2e/hour
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.14 ('Smartphone = 0.015068 kg CO2e per hour')"
+
+  - id: ef.device.smartphone_manufacture
+    label: "Smartphone provided to a participant: manufacture (each)"
+    value_low: 55
+    value_mid: 55
+    value_high: 55
+    unit: kg_co2e/device
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.15 ('Smartphone = 55 kgCO2e from manufacture and add 5.5 kgCO2e per year of usage')"
+
+  - id: ef.device.wearable_manufacture
+    label: "Wearable / smart watch provided to a participant: manufacture (each)"
+    value_low: 30.1
+    value_mid: 30.1
+    value_high: 30.1
+    unit: kg_co2e/device
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.15 ('Wearables/smart watch = 30.1 kg CO2e for manufacture and add 1.633 kg CO2e per year of usage')"
+
+  - id: ef.supplies.office_machinery_per_gbp
+    label: "Office machinery and computers bought for the trial, spend-based, per GBP"
+    value_low: 0.387
+    value_mid: 0.387
+    value_high: 0.387
+    unit: kg_co2e/gbp
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.14 ('GBP x 0.387 = kgCO2e')"
+
+  - id: ef.paper.printing_bw.kg
+    label: "Black-and-white printing, per kg of paper printed"
+    value_low: 0.22438
+    value_mid: 0.22438
+    value_high: 0.22438
+    unit: kg_co2e/kg
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.3 ('b/w printing: Kg of paper x 0.22438 = kgCO2e')"
+
+  - id: ef.paper.printing_colour.kg
+    label: "Colour printing, per kg of paper printed"
+    value_low: 0.31786
+    value_mid: 0.31786
+    value_high: 0.31786
+    unit: kg_co2e/kg
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.3 ('Colour printing: Kg of paper x 0.31786 = kgCO2e')"
+
+  - id: rate.paper.kg_per_page
+    label: "Paper weight per printed page"
+    value_low: 0.005
+    value_mid: 0.005
+    value_high: 0.005
+    unit: kg/page
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.3 ('[no. of page] x 0.005 = paper weight (kg)')"
+
+  - id: dist.patient.hospital_to_gp_km.gb
+    label: "Default hospital-to-patient or hospital-to-GP delivery distance when unknown"
+    value_low: 17.4
+    value_mid: 17.4
+    value_high: 17.4
+    unit: km
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.4 ('if unknown, use 17.4km as distance from hospital to patient, or hospital to GP')"
+
+  # ------------------------------------------------------------------ intervention / closeout
+  - id: ef.waste.incineration.kg
+    label: "Incineration of overage / clinical waste, per kg"
+    value_low: 2.4252
+    value_mid: 2.4252
+    value_high: 2.4252
+    unit: kg_co2e/kg
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.12 ('Kg of waste x 2.4252 = kgCO2e')"
+
+  - id: ef.building.office.electricity_m2_year
+    label: "Office space electricity, per m2-year (archiving)"
+    value_low: 16.1
+    value_mid: 16.1
+    value_high: 16.1
+    unit: kg_co2e/m2_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.22 ('Office: 16.1 kgCO2e' per 1 m2 for 1 year)"
+
+  - id: ef.building.office.heating_m2_year
+    label: "Office space heating, per m2-year (archiving)"
+    value_low: 35.69
+    value_mid: 35.69
+    value_high: 36
+    unit: kg_co2e/m2_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.22 ('Office: 35.69 kgCO2e'); appendix D p.22 prints 36"
+
+  - id: ef.building.health.electricity_m2_year
+    label: "Health-building space electricity, per m2-year (sample storage)"
+    value_low: 22.1
+    value_mid: 22.1
+    value_high: 22.1
+    unit: kg_co2e/m2_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.21-22 ('Health building = 22.1 kgCO2e/m2')"
+
+  - id: ef.building.health.heating_m2_year
+    label: "Health-building space heating, per m2-year (sample storage)"
+    value_low: 41.5
+    value_mid: 41.5
+    value_high: 41.6
+    unit: kg_co2e/m2_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.22 ('Health building: 41.5 kgCO2e'); appendix D p.22 prints 41.6"
+
+  - id: ef.building.laboratory.electricity_m2_year
+    label: "Laboratory space electricity, per m2-year"
+    value_low: 43.7
+    value_mid: 43.7
+    value_high: 43.7
+    unit: kg_co2e/m2_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.22 ('Laboratory: 43.7 kgCO2e')"
+
+  - id: ef.building.warehouse.electricity_m2_year
+    label: "Warehouse space electricity, per m2-year"
+    value_low: 7.4
+    value_mid: 7.4
+    value_high: 7.4
+    unit: kg_co2e/m2_year
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.22 ('Warehouse: 7.4 kgCO2e')"
+
+  - id: rate.closeout.archive_m2
+    label: "Archive floor space for essential trial documents"
+    value_low: 4
+    value_mid: 4
+    value_high: 4
+    unit: m2
+    assumption: true
+    rationale: "Both LCCT case studies assume 4 m2 (appendix C p.22, appendix D p.21); no measured range published."
+
+  - id: time.closeout.archive_years
+    label: "Archiving period for essential documents and samples"
+    value_low: 10
+    value_mid: 10
+    value_high: 10
+    unit: years
+    assumption: true
+    rationale: "Both LCCT case studies use 10 years of storage (appendices C and D); regulatory minima vary by jurisdiction."
