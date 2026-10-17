@@ -1,0 +1,54 @@
+# CASPS rebuilt as a TrialPilot TrialDesign (source = published_paper) for the engine check.
+# Every input is listed under `inputs` with its origin: `paper` (page cited) or `assumption` (rationale).
+# The paper reports activity totals, not a visit schedule, so the schedule is a reconstruction that preserves
+# the reported totals (visits, CT scans, samples per patient) as closely as whole visits allow.
+design:
+  id: "6f1c9a52-0d7e-4b8a-9a43-1d2c5e8b7a01"
+  source: published_paper
+  registry_id: ISRCTN63733470
+  title: "CASPS: cediranib in alveolar soft part sarcoma (published footprint, BMJ Open 2024)"
+  phase: "Phase 2"
+  conditions: ["Alveolar soft part sarcoma"]
+  enrollment_target: 47
+  duration_months: 72
+  drug_type: small_molecule
+  sites:
+    - {id: casps-gb-rmh, name: "RMH", country: GB}
+    - {id: casps-gb-christie, name: "Christie", country: GB}
+    - {id: casps-gb-bristol, name: "Bristol", city: "Bristol", country: GB}
+    - {id: casps-gb-uclh, name: "UCLH", country: GB}
+    - {id: casps-gb-newcastle, name: "Newcastle", city: "Newcastle", country: GB}
+    - {id: casps-gb-nottingham, name: "Nottingham", city: "Nottingham", country: GB}
+    - {id: casps-gb-unreported, name: "CASPS 12th site (country not reported; assumed UK)", country: GB}
+    - {id: casps-es-1, name: "CASPS Spain site 1 (name not reported)", country: ES}
+    - {id: casps-es-2, name: "CASPS Spain site 2 (name not reported)", country: ES}
+    - {id: casps-es-3, name: "CASPS Spain site 3 (name not reported)", country: ES}
+    - {id: casps-au-1, name: "CASPS Australia site 1 (name not reported)", country: AU}
+    - {id: casps-au-2, name: "CASPS Australia site 2 (name not reported)", country: AU}
+  schedule:                     # expanded into Visit objects by trialpilot_science.designs
+    visits: 19                  # weeks 0, 4, ..., 72
+    every_weeks: 4
+    procedures_all: [drug_dispensing]
+    procedures_at:
+      ct_scan: [1, 3, 5, 7, 9, 11, 13, 15, 17]                  # 9 CT scans per patient
+      blood_draw: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]       # 12 frozen research samples per patient
+    sample_procedures: {blood_draw: frozen_-80}
+  missing_fields: [visits, sites.lat, sites.lon, sites.expected_enrollment, procedures.site_minutes]
+
+inputs:
+  - {field: enrollment_target, value: "47", origin: paper, ref: "appendix C p.3; main text Results"}
+  - {field: sites, value: "12 sites: UK, Spain, Australia", origin: paper, ref: "appendix C p.3"}
+  - {field: "sites (UK names)", value: "RMH, Christie, Bristol, UCLH, Newcastle, Nottingham", origin: paper, ref: "appendix C p.4 (postage lines)"}
+  - {field: "sites (Spain)", value: "3", origin: paper, ref: "appendix C p.4: deliveries of 1147, 1244 and 1091 km"}
+  - {field: "sites (Australia)", value: "2", origin: paper, ref: "appendix C p.4: deliveries of 17018.5 and 16544 km"}
+  - {field: "12th site country", value: "UK", origin: assumption, ref: "only 11 delivery destinations are itemised; the 12th is assumed UK (sponsor country)"}
+  - {field: duration_months, value: "72", origin: paper, ref: "appendix C p.5 'Trial duration: 6 years'"}
+  - {field: "visits per patient", value: "19 (893 patient-visits vs 880 reported, +1.5%)", origin: assumption, ref: "appendix C p.15 reports 880 trial-specific visits for 47 patients (18.7 each) and 72 weeks on trial; schedule spacing assumed"}
+  - {field: "CT scans", value: "9 per patient", origin: paper, ref: "appendix C p.16 'CT scans: 47 x 9 x 9.2'"}
+  - {field: "research blood samples", value: "12 per patient, frozen", origin: assumption, ref: "appendix C p.20: 313 CTAD + 261 CPT samples = 574 (12.2 per patient); one frozen sample per visit assumed"}
+  - {field: drug_type, value: "small_molecule (oral cediranib, ~4000 bottles shipped)", origin: paper, ref: "appendix C p.11"}
+
+activity_overrides:   # trial-specific activity reported by the paper, applied in both engine runs
+  rate.trial_management.fte:
+    value: 1.8
+    ref: "appendix C p.5: trial staff FTE UK 1, Spain 0.3, Australia 0.5"

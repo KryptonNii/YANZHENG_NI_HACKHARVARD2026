@@ -1,0 +1,45 @@
+# PRIMETIME rebuilt as a TrialPilot TrialDesign (source = published_paper) for the engine check.
+# See casps_design.yaml for the format. Structural limit worth knowing: TrialDesign applies every visit to every
+# enrolled patient, but PRIMETIME's 5 extra mammogram visits apply to 1623 of 1962 patients (the no-radiotherapy
+# cohort). The engine therefore counts 9810 patient-visits where the paper counts 8115 (+20.9%); see the
+# contract proposal in handoffs/A10_CONTRACT_CHANGES.md (Visit.patient_share).
+design:
+  id: "b2e4d7c1-5a3f-4e9b-8c61-7f0a2d9e4b02"
+  source: published_paper
+  registry_id: ISRCTN41579286
+  title: "PRIMETIME: postoperative avoidance of radiotherapy (published footprint, BMJ Open 2024)"
+  phase: "Phase 3"
+  conditions: ["Breast cancer"]
+  enrollment_target: 1962
+  duration_months: 120
+  drug_type: none
+  generated_sites:
+    count: 64
+    country: GB
+    name: "PRIMETIME site {n:02d} (name not reported)"
+    id: "primetime-gb-{n:02d}"
+  schedule:
+    visits: 5
+    first_week: 312            # annual mammograms in years 6-10 (the 5 scans beyond standard of care)
+    every_weeks: 52
+    procedures_all: [mammogram]
+  missing_fields: [visits, sites.name, sites.lat, sites.lon, sites.expected_enrollment, procedures.site_minutes]
+
+inputs:
+  - {field: enrollment_target, value: "1962", origin: paper, ref: "appendix D p.3 (1962 consented and registered; 3123 pre-screened)"}
+  - {field: sites, value: "64 UK sites recruited (67 set up)", origin: paper, ref: "appendix D p.3"}
+  - {field: "site names", value: "not reported", origin: assumption, ref: "numbered placeholders"}
+  - {field: duration_months, value: "120", origin: paper, ref: "appendix D p.5 'Trial duration: 10 years'"}
+  - {field: "trial-specific visits", value: "5 mammogram visits per patient", origin: paper, ref: "appendix D p.15: 1623 patients x 5 additional mammograms"}
+  - {field: "patients with those visits", value: "1962 in the design (paper: 1623)", origin: assumption, ref: "TrialDesign cannot restrict visits to a cohort; overcount +20.9% patient-visits"}
+  - {field: "visit timing", value: "years 6-10, annual", origin: paper, ref: "main text: no-RT group has annual mammograms for 10 years vs 5 years standard of care"}
+  - {field: "registration appointments and Ki67 tissue shipments", value: "not modelled as visits", origin: assumption, ref: "paper counts no patient travel for them (appendix D p.15-16, p.19); tissue blocks come from routine surgery"}
+  - {field: drug_type, value: "none (avoidance-of-radiotherapy trial)", origin: paper, ref: "appendix D p.9 'N/A - Avoidance of radiotherapy trial'"}
+
+activity_overrides:
+  rate.trial_management.fte:
+    value: 0.71
+    ref: "appendix D p.5: 'the total FTE over the 10-year trial period was 7.1' (7.1 FTE-years / 10 years)"
+  rate.monitoring.onsite_visits_per_site_month:
+    value: 0
+    ref: "appendix D p.5: 'No feasibility visits, monitoring, audits, or conferences'"

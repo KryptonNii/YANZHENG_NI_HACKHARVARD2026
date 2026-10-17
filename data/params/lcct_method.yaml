@@ -368,9 +368,9 @@ parameters:
     label: "Office space heating, per m2-year (archiving)"
     value_low: 35.69
     value_mid: 35.69
-    value_high: 36
+    value_high: 35.69
     unit: kg_co2e/m2_year
-    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.22 ('Office: 35.69 kgCO2e'); appendix D p.22 prints 36"
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.22 ('Office: 35.69 kgCO2e'); appendix D p.22 prints it rounded as 36 (result 1428 = 35.69 x 40)"
 
   - id: ef.building.health.electricity_m2_year
     label: "Health-building space electricity, per m2-year (sample storage)"

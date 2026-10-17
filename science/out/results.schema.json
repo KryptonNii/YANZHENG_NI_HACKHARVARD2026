@@ -1,0 +1,712 @@
+{
+  "$defs": {
+    "BandTrial": {
+      "properties": {
+        "available": {
+          "title": "Available",
+          "type": "boolean"
+        },
+        "design_id": {
+          "title": "Design Id",
+          "type": "string"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "registry_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Registry Id"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "total_t": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Range"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "tonnes CO2e (unit field says kg_co2e x 1000)"
+        },
+        "within_band": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Within Band"
+        }
+      },
+      "required": [
+        "design_id",
+        "title",
+        "registry_id",
+        "available"
+      ],
+      "title": "BandTrial",
+      "type": "object"
+    },
+    "Check": {
+      "properties": {
+        "available": {
+          "title": "Available",
+          "type": "boolean"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "id": {
+          "enum": [
+            "method",
+            "corrected",
+            "library",
+            "engine_library",
+            "engine_paper_factors"
+          ],
+          "title": "Id",
+          "type": "string"
+        },
+        "line_changes": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/LineChange"
+          },
+          "title": "Line Changes",
+          "type": "array"
+        },
+        "modules": {
+          "items": {
+            "$ref": "#/$defs/ModuleRow"
+          },
+          "title": "Modules",
+          "type": "array"
+        },
+        "notes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "total": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ModuleRow"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unavailable_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unavailable Reason"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "available",
+        "total",
+        "modules"
+      ],
+      "title": "Check",
+      "type": "object"
+    },
+    "DesignInputOut": {
+      "properties": {
+        "field": {
+          "title": "Field",
+          "type": "string"
+        },
+        "origin": {
+          "enum": [
+            "paper",
+            "assumption"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "ref": {
+          "title": "Ref",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "field",
+        "value",
+        "origin",
+        "ref"
+      ],
+      "title": "DesignInputOut",
+      "type": "object"
+    },
+    "EngineInfo": {
+      "properties": {
+        "available": {
+          "title": "Available",
+          "type": "boolean"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        }
+      },
+      "required": [
+        "available"
+      ],
+      "title": "EngineInfo",
+      "type": "object"
+    },
+    "FindingOut": {
+      "properties": {
+        "detail": {
+          "title": "Detail",
+          "type": "string"
+        },
+        "effect_kg": {
+          "description": "corrected minus as-published, kg CO2e (0 for info-only findings)",
+          "title": "Effect Kg",
+          "type": "number"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "lines": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Lines",
+          "type": "array"
+        },
+        "severity": {
+          "enum": [
+            "large",
+            "medium",
+            "info"
+          ],
+          "title": "Severity",
+          "type": "string"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "severity",
+        "summary",
+        "detail",
+        "lines",
+        "effect_kg"
+      ],
+      "title": "FindingOut",
+      "type": "object"
+    },
+    "IndustryBand": {
+      "properties": {
+        "demo_trials": {
+          "items": {
+            "$ref": "#/$defs/BandTrial"
+          },
+          "title": "Demo Trials",
+          "type": "array"
+        },
+        "high_t": {
+          "title": "High T",
+          "type": "number"
+        },
+        "low_t": {
+          "title": "Low T",
+          "type": "number"
+        },
+        "note": {
+          "title": "Note",
+          "type": "string"
+        },
+        "source": {
+          "title": "Source",
+          "type": "string"
+        },
+        "trials_t": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Trials T",
+          "type": "array"
+        }
+      },
+      "required": [
+        "low_t",
+        "high_t",
+        "trials_t",
+        "source",
+        "note",
+        "demo_trials"
+      ],
+      "title": "IndustryBand",
+      "type": "object"
+    },
+    "LineChange": {
+      "properties": {
+        "item": {
+          "title": "Item",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "independent",
+            "same_source",
+            "paper_factor_kept"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "library_factor_p50": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Library Factor P50"
+        },
+        "library_kg": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Range"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "line_id": {
+          "title": "Line Id",
+          "type": "string"
+        },
+        "module": {
+          "title": "Module",
+          "type": "string"
+        },
+        "note": {
+          "title": "Note",
+          "type": "string"
+        },
+        "paper_factor": {
+          "title": "Paper Factor",
+          "type": "number"
+        },
+        "paper_kg": {
+          "title": "Paper Kg",
+          "type": "number"
+        },
+        "parameter_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Parameter Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "line_id",
+        "module",
+        "item",
+        "paper_factor",
+        "paper_kg",
+        "library_factor_p50",
+        "library_kg",
+        "parameter_ids",
+        "kind",
+        "note"
+      ],
+      "title": "LineChange",
+      "type": "object"
+    },
+    "ModuleRow": {
+      "properties": {
+        "diff_pct": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "(ours.p50 - published) / published x 100",
+          "title": "Diff Pct"
+        },
+        "explanation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Plain English; always present when status is 'gap'",
+          "title": "Explanation"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "module": {
+          "description": "\u00a76 module id, or 'total'",
+          "title": "Module",
+          "type": "string"
+        },
+        "ours": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Range"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "TrialPilot's value; P10 = P50 = P90 for the deterministic checks"
+        },
+        "published_kg": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Value printed in the paper's summary table",
+          "title": "Published Kg"
+        },
+        "published_within_range": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "published value inside [P10, P90]",
+          "title": "Published Within Range"
+        },
+        "status": {
+          "enum": [
+            "match",
+            "close",
+            "gap",
+            "not_reported",
+            "unavailable"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "module",
+        "label",
+        "published_kg",
+        "ours",
+        "diff_pct",
+        "published_within_range",
+        "status",
+        "explanation"
+      ],
+      "title": "ModuleRow",
+      "type": "object"
+    },
+    "PublishedFigures": {
+      "properties": {
+        "modules": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Modules",
+          "type": "object"
+        },
+        "total_kg": {
+          "title": "Total Kg",
+          "type": "number"
+        },
+        "total_main_text_kg": {
+          "title": "Total Main Text Kg",
+          "type": "number"
+        }
+      },
+      "required": [
+        "total_kg",
+        "total_main_text_kg",
+        "modules"
+      ],
+      "title": "PublishedFigures",
+      "type": "object"
+    },
+    "Range": {
+      "properties": {
+        "p10": {
+          "title": "P10",
+          "type": "number"
+        },
+        "p50": {
+          "title": "P50",
+          "type": "number"
+        },
+        "p90": {
+          "title": "P90",
+          "type": "number"
+        },
+        "unit": {
+          "const": "kg_co2e",
+          "default": "kg_co2e",
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "p10",
+        "p50",
+        "p90"
+      ],
+      "title": "Range",
+      "type": "object"
+    },
+    "TrialOut": {
+      "properties": {
+        "checks": {
+          "items": {
+            "$ref": "#/$defs/Check"
+          },
+          "title": "Checks",
+          "type": "array"
+        },
+        "countries": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Countries",
+          "type": "array"
+        },
+        "design_inputs": {
+          "items": {
+            "$ref": "#/$defs/DesignInputOut"
+          },
+          "title": "Design Inputs",
+          "type": "array"
+        },
+        "duration_years": {
+          "title": "Duration Years",
+          "type": "number"
+        },
+        "findings": {
+          "items": {
+            "$ref": "#/$defs/FindingOut"
+          },
+          "title": "Findings",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "patients": {
+          "title": "Patients",
+          "type": "integer"
+        },
+        "phase": {
+          "title": "Phase",
+          "type": "string"
+        },
+        "published": {
+          "$ref": "#/$defs/PublishedFigures"
+        },
+        "registry_id": {
+          "title": "Registry Id",
+          "type": "string"
+        },
+        "sites": {
+          "title": "Sites",
+          "type": "integer"
+        },
+        "source": {
+          "title": "Source",
+          "type": "string"
+        },
+        "summary": {
+          "description": "Two sentences on match quality, for the HANDOFF and the UI",
+          "items": {
+            "type": "string"
+          },
+          "title": "Summary",
+          "type": "array"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "registry_id",
+        "title",
+        "phase",
+        "patients",
+        "sites",
+        "countries",
+        "duration_years",
+        "published",
+        "source",
+        "checks",
+        "findings",
+        "design_inputs",
+        "summary"
+      ],
+      "title": "TrialOut",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "data_label": {
+      "title": "Data Label",
+      "type": "string"
+    },
+    "draws": {
+      "title": "Draws",
+      "type": "integer"
+    },
+    "engine": {
+      "$ref": "#/$defs/EngineInfo"
+    },
+    "how_to_reproduce": {
+      "title": "How To Reproduce",
+      "type": "string"
+    },
+    "industry_band": {
+      "$ref": "#/$defs/IndustryBand"
+    },
+    "paper": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Paper",
+      "type": "object"
+    },
+    "parameter_set_version": {
+      "title": "Parameter Set Version",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "seed": {
+      "title": "Seed",
+      "type": "integer"
+    },
+    "simulated": {
+      "const": false,
+      "default": false,
+      "title": "Simulated",
+      "type": "boolean"
+    },
+    "thresholds_pct": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Thresholds Pct",
+      "type": "object"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "trials": {
+      "items": {
+        "$ref": "#/$defs/TrialOut"
+      },
+      "title": "Trials",
+      "type": "array"
+    }
+  },
+  "required": [
+    "title",
+    "data_label",
+    "paper",
+    "parameter_set_version",
+    "seed",
+    "draws",
+    "thresholds_pct",
+    "engine",
+    "trials",
+    "industry_band",
+    "how_to_reproduce"
+  ],
+  "title": "ScienceResults",
+  "type": "object"
+}

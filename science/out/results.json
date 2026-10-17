@@ -1,0 +1,2775 @@
+{
+  "data_label": "Real published data (BMJ Open 2024, CC BY 4.0) transcribed by hand from the paper's appendices; not simulated.",
+  "draws": 2000,
+  "engine": {
+    "available": true,
+    "reason": null
+  },
+  "how_to_reproduce": "uv run --project science python -m science.reproduce",
+  "industry_band": {
+    "demo_trials": [],
+    "high_t": 2498.0,
+    "low_t": 1437.0,
+    "note": "Sanity band only: three industry Phase 3 trials (cardiovascular, oncology, respiratory) measured with a different, industry method that includes drug manufacture. Mackillop's oncology trial is 1632 t in the abstract and 1638 t in its Results/Table 3; Griffiths cites 1632.",
+    "source": "Mackillop N, Shah J, Collins M et al. Carbon footprint of industry-sponsored late-stage clinical trials. BMJ Open 2023;13:e072491 — as cited in Griffiths et al. 2024 (Introduction).",
+    "trials_t": [
+      2498.0,
+      1632.0,
+      1437.0
+    ]
+  },
+  "paper": {
+    "citation": "Griffiths J, Fox L, Williamson PR, on behalf of the Low Carbon Clinical Trials Group. Quantifying the carbon footprint of clinical trials: guidance development and case studies. BMJ Open 2024;14:e075755. doi:10.1136/bmjopen-2023-075755",
+    "doi": "10.1136/bmjopen-2023-075755",
+    "full_text": "https://europepmc.org/articles/PMC10823997",
+    "licence": "CC BY 4.0",
+    "url": "https://bmjopen.bmj.com/content/14/1/e075755"
+  },
+  "parameter_set_version": "6c18ee3734b7",
+  "schema_version": 1,
+  "seed": 7,
+  "simulated": false,
+  "thresholds_pct": {
+    "close": 10.0,
+    "match": 1.0
+  },
+  "title": "Science check: reproducing two published clinical-trial carbon footprints",
+  "trials": [
+    {
+      "checks": [
+        {
+          "available": true,
+          "description": "Every line of the published calculation (appendix C) recomputed as activity x factor with the paper's own numbers, then summed per module. Tests our transcription and the paper's arithmetic; no TrialPilot parameter is involved.",
+          "id": "method",
+          "line_changes": [],
+          "modules": [
+            {
+              "diff_pct": -0.03,
+              "explanation": null,
+              "label": "Trial set-up",
+              "module": "setup",
+              "ours": {
+                "p10": 349.7,
+                "p50": 349.7,
+                "p90": 349.7,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 349.8,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Trial management (CTU emissions)",
+              "module": "trial_management",
+              "ours": {
+                "p10": 23487.68,
+                "p50": 23487.68,
+                "p90": 23487.68,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 23487.6,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.02,
+              "explanation": null,
+              "label": "Meetings and travel",
+              "module": "meetings_travel",
+              "ours": {
+                "p10": 20469.49,
+                "p50": 20469.49,
+                "p90": 20469.49,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 20465.3,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.01,
+              "explanation": null,
+              "label": "Intervention (distribution only)",
+              "module": "intervention",
+              "ours": {
+                "p10": 1251.34,
+                "p50": 1251.34,
+                "p90": 1251.34,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 1251.5,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.03,
+              "explanation": null,
+              "label": "Data collection and exchange",
+              "module": "data_collection",
+              "ours": {
+                "p10": 558.45,
+                "p50": 558.45,
+                "p90": 558.45,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 558.3,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.01,
+              "explanation": null,
+              "label": "Supplies and equipment",
+              "module": "supplies_equipment",
+              "ours": {
+                "p10": 522.45,
+                "p50": 522.45,
+                "p90": 522.45,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 522.5,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Patient assessments (incl. patient travel)",
+              "module": "patient_assessments",
+              "ours": {
+                "p10": 11298.53,
+                "p50": 11298.53,
+                "p90": 11298.53,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 11298.4,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.01,
+              "explanation": null,
+              "label": "Samples",
+              "module": "samples",
+              "ours": {
+                "p10": 1930.66,
+                "p50": 1930.66,
+                "p90": 1930.66,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 1930.5,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Laboratory",
+              "module": "laboratory",
+              "ours": {
+                "p10": 9353.63,
+                "p50": 9353.63,
+                "p90": 9353.63,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 9353.6,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.0,
+              "explanation": null,
+              "label": "Close-out and archiving",
+              "module": "closeout",
+              "ours": {
+                "p10": 2721.25,
+                "p50": 2721.25,
+                "p90": 2721.25,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 2721.3,
+              "published_within_range": true,
+              "status": "match"
+            }
+          ],
+          "notes": [
+            "94 calculation lines transcribed from page images; 0 line(s) do not reproduce their printed value within 1%."
+          ],
+          "title": "Method check: the paper's own arithmetic",
+          "total": {
+            "diff_pct": 0.01,
+            "explanation": null,
+            "label": "Total",
+            "module": "total",
+            "ours": {
+              "p10": 71943.18,
+              "p50": 71943.18,
+              "p90": 71943.18,
+              "unit": "kg_co2e"
+            },
+            "published_kg": 71938.8,
+            "published_within_range": false,
+            "status": "match"
+          },
+          "unavailable_reason": null
+        },
+        {
+          "available": true,
+          "description": "Same as the method check, after fixing only the documented errors (units slip, double count, arithmetic). No factor or activity is tuned.",
+          "id": "corrected",
+          "line_changes": [],
+          "modules": [
+            {
+              "diff_pct": -0.03,
+              "explanation": null,
+              "label": "Trial set-up",
+              "module": "setup",
+              "ours": {
+                "p10": 349.7,
+                "p50": 349.7,
+                "p90": 349.7,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 349.8,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Trial management (CTU emissions)",
+              "module": "trial_management",
+              "ours": {
+                "p10": 23487.68,
+                "p50": 23487.68,
+                "p90": 23487.68,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 23487.6,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.02,
+              "explanation": null,
+              "label": "Meetings and travel",
+              "module": "meetings_travel",
+              "ours": {
+                "p10": 20469.49,
+                "p50": 20469.49,
+                "p90": 20469.49,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 20465.3,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.01,
+              "explanation": null,
+              "label": "Intervention (distribution only)",
+              "module": "intervention",
+              "ours": {
+                "p10": 1251.34,
+                "p50": 1251.34,
+                "p90": 1251.34,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 1251.5,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.03,
+              "explanation": null,
+              "label": "Data collection and exchange",
+              "module": "data_collection",
+              "ours": {
+                "p10": 558.45,
+                "p50": 558.45,
+                "p90": 558.45,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 558.3,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.01,
+              "explanation": null,
+              "label": "Supplies and equipment",
+              "module": "supplies_equipment",
+              "ours": {
+                "p10": 522.45,
+                "p50": 522.45,
+                "p90": 522.45,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 522.5,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Patient assessments (incl. patient travel)",
+              "module": "patient_assessments",
+              "ours": {
+                "p10": 11298.53,
+                "p50": 11298.53,
+                "p90": 11298.53,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 11298.4,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.01,
+              "explanation": null,
+              "label": "Samples",
+              "module": "samples",
+              "ours": {
+                "p10": 1930.66,
+                "p50": 1930.66,
+                "p90": 1930.66,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 1930.5,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": -8.68,
+              "explanation": "Centrifuge energy overstated ~1000x (watts treated as kilowatts). (casps-f1)",
+              "label": "Laboratory",
+              "module": "laboratory",
+              "ours": {
+                "p10": 8541.95,
+                "p50": 8541.95,
+                "p90": 8541.95,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 9353.6,
+              "published_within_range": false,
+              "status": "close"
+            },
+            {
+              "diff_pct": -23.37,
+              "explanation": "Ambient tissue storage (1 m2, 10 years) counted twice: section 9.3 (laboratory) and 10.2 (close out). (casps-f2)",
+              "label": "Close-out and archiving",
+              "module": "closeout",
+              "ours": {
+                "p10": 2085.25,
+                "p50": 2085.25,
+                "p90": 2085.25,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 2721.3,
+              "published_within_range": false,
+              "status": "gap"
+            }
+          ],
+          "notes": [
+            "lab-centrifuge-ctad: 310 W x 0.25 h = 0.0775 kWh (casps-f1)",
+            "lab-centrifuge-cpt: 310 W x 0.583 h = 0.18073 kWh (casps-f1)",
+            "close-tissue-electricity: same storage already counted in laboratory 9.3 (casps-f2)",
+            "close-tissue-heating: same storage already counted in laboratory 9.3 (casps-f2)"
+          ],
+          "title": "Corrected: the paper's numbers with the errors we found fixed",
+          "total": {
+            "diff_pct": -2.01,
+            "explanation": "Corrections change the total by -1,443 kg CO2e (-2.0%).",
+            "label": "Total",
+            "module": "total",
+            "ours": {
+              "p10": 70495.49,
+              "p50": 70495.49,
+              "p90": 70495.49,
+              "unit": "kg_co2e"
+            },
+            "published_kg": 71938.8,
+            "published_within_range": false,
+            "status": "close"
+          },
+          "unavailable_reason": null
+        },
+        {
+          "available": true,
+          "description": "The corrected activity data, multiplied by TrialPilot's library factors (DESNZ 2026 for travel, freight, materials, electricity and hotels, plus well-to-tank as the LCCT method does; LCCT values where no independent source exists). Each library factor is sampled triangular(low, mid, high), 2000 seeded draws, P10/P50/P90.",
+          "id": "library",
+          "line_changes": [
+            {
+              "item": "Audits: long-haul flights to/from UK",
+              "kind": "independent",
+              "library_factor_p50": 0.192894,
+              "library_kg": {
+                "p10": 5382.58,
+                "p50": 5679.2,
+                "p90": 6150.09,
+                "unit": "kg_co2e"
+              },
+              "line_id": "mt-audit-longhaul",
+              "module": "meetings_travel",
+              "note": "Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT.",
+              "paper_factor": 0.21423,
+              "paper_kg": 6307.36,
+              "parameter_ids": [
+                "ef.travel.flight.long_haul.passenger_km",
+                "ef.wtt.travel.flight.long_haul.passenger_km"
+              ]
+            },
+            {
+              "item": "Monitoring visits, Australia (flights)",
+              "kind": "independent",
+              "library_factor_p50": 0.175869,
+              "library_kg": {
+                "p10": 2541.92,
+                "p50": 2692.55,
+                "p90": 2931.26,
+                "unit": "kg_co2e"
+              },
+              "line_id": "mt-monitoring-au",
+              "module": "meetings_travel",
+              "note": "Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT.",
+              "paper_factor": 0.20373,
+              "paper_kg": 3119.11,
+              "parameter_ids": [
+                "ef.travel.flight.international.passenger_km",
+                "ef.wtt.travel.flight.international.passenger_km"
+              ]
+            },
+            {
+              "item": "Audits: international (non-UK) flights",
+              "kind": "independent",
+              "library_factor_p50": 0.175869,
+              "library_kg": {
+                "p10": 1900.05,
+                "p50": 2012.64,
+                "p90": 2191.07,
+                "unit": "kg_co2e"
+              },
+              "line_id": "mt-audit-intl",
+              "module": "meetings_travel",
+              "note": "Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT.",
+              "paper_factor": 0.20373,
+              "paper_kg": 2331.49,
+              "parameter_ids": [
+                "ef.travel.flight.international.passenger_km",
+                "ef.wtt.travel.flight.international.passenger_km"
+              ]
+            },
+            {
+              "item": "Site initiation visits, Australia (flights)",
+              "kind": "independent",
+              "library_factor_p50": 0.175869,
+              "library_kg": {
+                "p10": 1616.47,
+                "p50": 1712.26,
+                "p90": 1864.06,
+                "unit": "kg_co2e"
+              },
+              "line_id": "mt-siv-au",
+              "module": "meetings_travel",
+              "note": "Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT.",
+              "paper_factor": 0.20373,
+              "paper_kg": 1983.52,
+              "parameter_ids": [
+                "ef.travel.flight.international.passenger_km",
+                "ef.wtt.travel.flight.international.passenger_km"
+              ]
+            },
+            {
+              "item": "Audits: short-haul flights",
+              "kind": "independent",
+              "library_factor_p50": 0.156535,
+              "library_kg": {
+                "p10": 2020.03,
+                "p50": 2107.59,
+                "p90": 2239.74,
+                "unit": "kg_co2e"
+              },
+              "line_id": "mt-audit-shorthaul",
+              "module": "meetings_travel",
+              "note": "Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT.",
+              "paper_factor": 0.17034,
+              "paper_kg": 2293.46,
+              "parameter_ids": [
+                "ef.travel.flight.short_haul.passenger_km",
+                "ef.wtt.travel.flight.short_haul.passenger_km"
+              ]
+            },
+            {
+              "item": "Feasibility visit Melbourne-Brisbane, 2 passengers (flight)",
+              "kind": "independent",
+              "library_factor_p50": 0.175869,
+              "library_kg": {
+                "p10": 913.16,
+                "p50": 967.28,
+                "p90": 1053.03,
+                "unit": "kg_co2e"
+              },
+              "line_id": "mt-feasibility-au",
+              "module": "meetings_travel",
+              "note": "Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT.",
+              "paper_factor": 0.20373,
+              "paper_kg": 1120.51,
+              "parameter_ids": [
+                "ef.travel.flight.international.passenger_km",
+                "ef.wtt.travel.flight.international.passenger_km"
+              ]
+            },
+            {
+              "item": "Hotel stays, UK (30 room-nights)",
+              "kind": "independent",
+              "library_factor_p50": 10.4,
+              "library_kg": {
+                "p10": 312.0,
+                "p50": 312.0,
+                "p90": 312.0,
+                "unit": "kg_co2e"
+              },
+              "line_id": "mt-hotel-uk",
+              "module": "meetings_travel",
+              "note": "Paper 13.9 (DESNZ 2021 hotel tab, linked in the appendix); DESNZ 2022-2026: 10.4.",
+              "paper_factor": 13.9,
+              "paper_kg": 417.0,
+              "parameter_ids": [
+                "ef.hotel.room_night.gb"
+              ]
+            },
+            {
+              "item": "Hotel stays, Spain (7 room-nights)",
+              "kind": "independent",
+              "library_factor_p50": 7.0,
+              "library_kg": {
+                "p10": 49.0,
+                "p50": 49.0,
+                "p90": 49.0,
+                "unit": "kg_co2e"
+              },
+              "line_id": "mt-hotel-es",
+              "module": "meetings_travel",
+              "note": "Paper 18.7 (DESNZ 2021); DESNZ 2022-2026: 7.0.",
+              "paper_factor": 18.7,
+              "paper_kg": 130.9,
+              "parameter_ids": [
+                "ef.hotel.room_night.es"
+              ]
+            },
+            {
+              "item": "CTU staff visit to Spanish CTU, 2 x 2 x 1309 km (short-haul)",
+              "kind": "independent",
+              "library_factor_p50": 0.156535,
+              "library_kg": {
+                "p10": 785.57,
+                "p50": 819.62,
+                "p90": 871.01,
+                "unit": "kg_co2e"
+              },
+              "line_id": "mt-barcelona",
+              "module": "meetings_travel",
+              "note": "Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT.",
+              "paper_factor": 0.17034,
+              "paper_kg": 891.9,
+              "parameter_ids": [
+                "ef.travel.flight.short_haul.passenger_km",
+                "ef.wtt.travel.flight.short_haul.passenger_km"
+              ]
+            },
+            {
+              "item": "IMP Puerto Rico -> QP site, 0.118 t x 6697 km (air, long-haul)",
+              "kind": "independent",
+              "library_factor_p50": 1.061525,
+              "library_kg": {
+                "p10": 815.72,
+                "p50": 838.87,
+                "p90": 875.14,
+                "unit": "kg_co2e"
+              },
+              "line_id": "int-qp-flight",
+              "module": "intervention",
+              "note": "Paper: DESNZ 2022 long-haul freight flight with RF 1.0189 + WTT 0.11157. Library: DESNZ 2026.",
+              "paper_factor": 1.13047,
+              "paper_kg": 893.35,
+              "parameter_ids": [
+                "ef.freight.air.long_haul.tonne_km",
+                "ef.wtt.freight.air.long_haul.tonne_km"
+              ]
+            },
+            {
+              "item": "Hospital files: paper material",
+              "kind": "independent",
+              "library_factor_p50": 1.221303,
+              "library_kg": {
+                "p10": 173.41,
+                "p50": 202.13,
+                "p90": 218.78,
+                "unit": "kg_co2e"
+              },
+              "line_id": "data-files-paper",
+              "module": "data_collection",
+              "note": "Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%).",
+              "paper_factor": 0.919,
+              "paper_kg": 152.09,
+              "parameter_ids": [
+                "ef.material.paper.kg"
+              ]
+            },
+            {
+              "item": "Samples Australian sites -> laboratory (air, long-haul)",
+              "kind": "independent",
+              "library_factor_p50": 1.061525,
+              "library_kg": {
+                "p10": 685.04,
+                "p50": 704.48,
+                "p90": 734.95,
+                "unit": "kg_co2e"
+              },
+              "line_id": "smp-ship-au",
+              "module": "samples",
+              "note": "Paper: DESNZ 2022 long-haul freight flight with RF 1.0189 + WTT 0.11157. Library: DESNZ 2026.",
+              "paper_factor": 1.13047,
+              "paper_kg": 750.24,
+              "parameter_ids": [
+                "ef.freight.air.long_haul.tonne_km",
+                "ef.wtt.freight.air.long_haul.tonne_km"
+              ]
+            },
+            {
+              "item": "Monitoring visits, Spain (short-haul flights)",
+              "kind": "independent",
+              "library_factor_p50": 0.156535,
+              "library_kg": {
+                "p10": 492.1,
+                "p50": 513.44,
+                "p90": 545.63,
+                "unit": "kg_co2e"
+              },
+              "line_id": "mt-monitoring-es",
+              "module": "meetings_travel",
+              "note": "Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT.",
+              "paper_factor": 0.17034,
+              "paper_kg": 558.72,
+              "parameter_ids": [
+                "ef.travel.flight.short_haul.passenger_km",
+                "ef.wtt.travel.flight.short_haul.passenger_km"
+              ]
+            },
+            {
+              "item": "Monitoring visits, UK (rail)",
+              "kind": "independent",
+              "library_factor_p50": 0.041203,
+              "library_kg": {
+                "p10": 519.9,
+                "p50": 533.88,
+                "p90": 557.59,
+                "unit": "kg_co2e"
+              },
+              "line_id": "mt-monitoring-uk",
+              "module": "meetings_travel",
+              "note": "Paper: DESNZ 2022 national rail 0.03549 + WTT 0.00892 = 0.04441. Library: DESNZ 2026 (rail factors updated in 2026).",
+              "paper_factor": 0.04441,
+              "paper_kg": 575.44,
+              "parameter_ids": [
+                "ef.travel.rail.passenger_km",
+                "ef.wtt.travel.rail.passenger_km"
+              ]
+            },
+            {
+              "item": "Samples Spanish sites -> laboratory (air, short-haul)",
+              "kind": "independent",
+              "library_factor_p50": 1.815932,
+              "library_kg": {
+                "p10": 80.48,
+                "p50": 93.5,
+                "p90": 113.67,
+                "unit": "kg_co2e"
+              },
+              "line_id": "smp-ship-es",
+              "module": "samples",
+              "note": "Paper: DESNZ 2022 short-haul freight flight with RF 2.30229 + WTT 0.2521. DESNZ 2026 short-haul freight is 44% lower.",
+              "paper_factor": 2.55439,
+              "paper_kg": 131.52,
+              "parameter_ids": [
+                "ef.freight.air.short_haul.tonne_km",
+                "ef.wtt.freight.air.short_haul.tonne_km"
+              ]
+            }
+          ],
+          "modules": [
+            {
+              "diff_pct": -1.6,
+              "explanation": "Driven by: Trial documents: paper material: paper factor 0.919 -> library 1.2213 (+17 kg). Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%). | Posting documents to Australia (air, long-haul): paper factor 1.13047 -> library 1.06153 (-14 kg). Paper: DESNZ 2022 long-haul freight flight with RF 1.0189 + WTT 0.11157. Library: DESNZ 2026. | Posting documents to Spain (air, short-haul): paper factor 2.55439 -> library 1.81593 (-13 kg). Paper: DESNZ 2022 short-haul freight flight with RF 2.30229 + WTT 0.2521. DESNZ 2026 short-haul freight is 44% lower.",
+              "label": "Trial set-up",
+              "module": "setup",
+              "ours": {
+                "p10": 331.35,
+                "p50": 344.21,
+                "p90": 356.02,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 349.8,
+              "published_within_range": true,
+              "status": "close"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Trial management (CTU emissions)",
+              "module": "trial_management",
+              "ours": {
+                "p10": 23487.68,
+                "p50": 23487.69,
+                "p90": 23487.7,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 23487.6,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": -11.15,
+              "explanation": "Driven by: Audits: long-haul flights to/from UK: paper factor 0.21423 -> library 0.192894 (-628 kg). Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT. | Monitoring visits, Australia (flights): paper factor 0.20373 -> library 0.175869 (-427 kg). Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT. | Audits: international (non-UK) flights: paper factor 0.20373 -> library 0.175869 (-319 kg). Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT.",
+              "label": "Meetings and travel",
+              "module": "meetings_travel",
+              "ours": {
+                "p10": 17588.49,
+                "p50": 18183.21,
+                "p90": 18914.47,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 20465.3,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": -6.35,
+              "explanation": "Driven by: IMP Puerto Rico -> QP site, 0.118 t x 6697 km (air, long-haul): paper factor 1.13047 -> library 1.06153 (-54 kg). Paper: DESNZ 2022 long-haul freight flight with RF 1.0189 + WTT 0.11157. Library: DESNZ 2026. | IMP to Australian sites (air, long-haul): paper factor 1.13047 -> library 1.06153 (-13 kg). Paper: DESNZ 2022 long-haul freight flight with RF 1.0189 + WTT 0.11157. Library: DESNZ 2026. | IMP to Spanish sites (air, short-haul): paper factor 2.55439 -> library 1.81593 (-10 kg). Paper: DESNZ 2022 short-haul freight flight with RF 2.30229 + WTT 0.2521. DESNZ 2026 short-haul freight is 44% lower.",
+              "label": "Intervention (distribution only)",
+              "module": "intervention",
+              "ours": {
+                "p10": 1142.5,
+                "p50": 1172.03,
+                "p90": 1216.51,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 1251.5,
+              "published_within_range": false,
+              "status": "close"
+            },
+            {
+              "diff_pct": 3.05,
+              "explanation": "Driven by: Hospital files: paper material: paper factor 0.919 -> library 1.2213 (+50 kg). Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%). | CRFs from Spanish sites to CTU (air): paper factor 2.55439 -> library 1.81593 (-10 kg). Paper: DESNZ 2022 short-haul freight flight with RF 2.30229 + WTT 0.2521. DESNZ 2026 short-haul freight is 44% lower. | CRFs from Australian sites to CTU (air): paper factor 1.13047 -> library 1.06153 (-9 kg). Paper: DESNZ 2022 long-haul freight flight with RF 1.0189 + WTT 0.11157. Library: DESNZ 2026.",
+              "label": "Data collection and exchange",
+              "module": "data_collection",
+              "ours": {
+                "p10": 545.01,
+                "p50": 575.32,
+                "p90": 596.23,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 558.3,
+              "published_within_range": true,
+              "status": "close"
+            },
+            {
+              "diff_pct": -0.01,
+              "explanation": null,
+              "label": "Supplies and equipment",
+              "module": "supplies_equipment",
+              "ours": {
+                "p10": 522.45,
+                "p50": 522.45,
+                "p90": 522.45,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 522.5,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Patient assessments (incl. patient travel)",
+              "module": "patient_assessments",
+              "ours": {
+                "p10": 11298.53,
+                "p50": 11298.53,
+                "p90": 11298.53,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 11298.4,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": -6.12,
+              "explanation": "Driven by: Samples Australian sites -> laboratory (air, long-haul): paper factor 1.13047 -> library 1.06153 (-46 kg). Paper: DESNZ 2022 long-haul freight flight with RF 1.0189 + WTT 0.11157. Library: DESNZ 2026. | Samples Spanish sites -> laboratory (air, short-haul): paper factor 2.55439 -> library 1.81593 (-38 kg). Paper: DESNZ 2022 short-haul freight flight with RF 2.30229 + WTT 0.2521. DESNZ 2026 short-haul freight is 44% lower. | Dry ice 85 kg: paper factor 1.81 -> library 1.57651 (-20 kg).",
+              "label": "Samples",
+              "module": "samples",
+              "ours": {
+                "p10": 1774.47,
+                "p50": 1812.38,
+                "p90": 1851.62,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 1930.5,
+              "published_within_range": false,
+              "status": "close"
+            },
+            {
+              "diff_pct": -8.68,
+              "explanation": null,
+              "label": "Laboratory",
+              "module": "laboratory",
+              "ours": {
+                "p10": 8541.68,
+                "p50": 8541.93,
+                "p90": 8542.34,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 9353.6,
+              "published_within_range": false,
+              "status": "close"
+            },
+            {
+              "diff_pct": -23.37,
+              "explanation": null,
+              "label": "Close-out and archiving",
+              "module": "closeout",
+              "ours": {
+                "p10": 2085.15,
+                "p50": 2085.21,
+                "p90": 2085.24,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 2721.3,
+              "published_within_range": false,
+              "status": "gap"
+            }
+          ],
+          "notes": [
+            "8 line(s) keep the paper's factor (no library equivalent):",
+            "ctu-energy-au (grid_au_vic): library is missing ef.electricity.grid.au; paper factor kept",
+            "ctu-heat-au (ctu_office_heating_fte_year_au): no library equivalent; paper factor kept",
+            "mt-sustenance (catering_spend_gbp): no library equivalent; paper factor kept",
+            "data-cds (cd_manufacture): no library equivalent; paper factor kept",
+            "pa-travel (patient_hospital_visit_roundtrip_gb): library is missing dist.patient.roundtrip_km.gb, rate.patient.mode_share.car.gb, rate.patient.mode_share.rail.gb; paper factor kept",
+            "pa-hosp-elec-au (grid_au_nsw_qld): library is missing ef.electricity.grid.au; paper factor kept",
+            "pa-hosp-heat-au (hospital_heating_fte_year_au): no library equivalent; paper factor kept",
+            "lab-ult-freezer (ult_freezer_unit_year): library is missing energy.freezer.minus80.kwh_per_day; paper factor kept"
+          ],
+          "title": "Library check: the paper's activity data x TrialPilot's parameter library",
+          "total": {
+            "diff_pct": -5.42,
+            "explanation": "Largest factor changes: Audits: long-haul flights to/from UK: paper factor 0.21423 -> library 0.192894 (-628 kg). Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT. | Monitoring visits, Australia (flights): paper factor 0.20373 -> library 0.175869 (-427 kg). Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT. | Audits: international (non-UK) flights: paper factor 0.20373 -> library 0.175869 (-319 kg). Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT.",
+            "label": "Total",
+            "module": "total",
+            "ours": {
+              "p10": 67424.55,
+              "p50": 68038.0,
+              "p90": 68775.84,
+              "unit": "kg_co2e"
+            },
+            "published_kg": 71938.8,
+            "published_within_range": false,
+            "status": "close"
+          },
+          "unavailable_reason": null
+        },
+        {
+          "available": true,
+          "description": "The trial rebuilt as a TrialDesign (sites, visits, procedures from the paper; gaps filled with labelled assumptions) and run through the same engine the simulator uses, with the parameter library plus the trial's reported activity (e.g. coordinating-unit FTE). Tests the engine's model structure, not just its factors.",
+          "id": "engine_library",
+          "line_changes": [],
+          "modules": [
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Trial set-up",
+              "module": "setup",
+              "ours": null,
+              "published_kg": 349.8,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Trial management (CTU emissions)",
+              "module": "trial_management",
+              "ours": null,
+              "published_kg": 23487.6,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Meetings and travel",
+              "module": "meetings_travel",
+              "ours": null,
+              "published_kg": 20465.3,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": -100.0,
+              "explanation": null,
+              "label": "Intervention (distribution only)",
+              "module": "intervention",
+              "ours": {
+                "p10": 0.0,
+                "p50": 0.0,
+                "p90": 0.0,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 1251.5,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Data collection and exchange",
+              "module": "data_collection",
+              "ours": null,
+              "published_kg": 558.3,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Supplies and equipment",
+              "module": "supplies_equipment",
+              "ours": null,
+              "published_kg": 522.5,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": -64.55,
+              "explanation": null,
+              "label": "Patient assessments (incl. patient travel)",
+              "module": "patient_assessments",
+              "ours": {
+                "p10": 3966.65,
+                "p50": 4005.08,
+                "p90": 4035.18,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 11298.4,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Samples",
+              "module": "samples",
+              "ours": null,
+              "published_kg": 1930.5,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Laboratory",
+              "module": "laboratory",
+              "ours": null,
+              "published_kg": 9353.6,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Close-out and archiving",
+              "module": "closeout",
+              "ours": null,
+              "published_kg": 2721.3,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Drug supply (TrialPilot extension, not in the paper)",
+              "module": "drug_supply",
+              "ours": null,
+              "published_kg": null,
+              "published_within_range": null,
+              "status": "unavailable"
+            }
+          ],
+          "notes": [
+            "parameter_set_version e14c2f3856fb",
+            "Patient time excludes 'patients × on-site visits × round-trip km ÷ door-to-door speed, per country' [burden.patient_travel_time.v1, module patient_assessments]: missing parameter(s) `dist.patient.roundtrip_km.global`, `time.patient.travel_speed_kmh.global`. Reported as unknown, not zero; the total is understated.",
+            "Patient time excludes 'patients × (on-site visits × hours at site + home visits × hours + telehealth visits × hours)' [burden.patient_visit_time.v1, module patient_assessments]: missing parameter(s) `time.patient.visit_at_site`. Reported as unknown, not zero; the total is understated.",
+            "Site staff time excludes 'patients × Σ visits (admin minutes + Σ procedure minutes × mode factor) ÷ 60; mode factor = 1 on site, parameter for home / telehealth' [workload.patient_visits.v1, module patient_assessments]: missing parameter(s) `time.site.procedure.default`, `time.site.visit_admin`. Reported as unknown, not zero; the total is understated.",
+            "Site staff time excludes 'on-site monitoring visits × site staff hours per visit' [workload.monitoring_support.v1, module meetings_travel]: missing parameter(s) `rate.monitoring.onsite_visits_per_site_month`, `time.site.monitoring_visit_support`. Reported as unknown, not zero; the total is understated.",
+            "Site staff time excludes 'patients × queries per patient × minutes per query ÷ 60' [workload.query_handling.v1, module data_collection]: missing parameter(s) `rate.queries.per_patient`, `time.site.query_resolution`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'patients × on-site visits × round-trip km × (car share × car factor + rest × (rail share × rail factor + bus share × bus factor)), per country' [carbon.patient_travel.v1, module patient_assessments]: missing parameter(s) `rate.patient.mode_share.car.global`, `rate.patient.mode_share.rail.global`, `dist.patient.roundtrip_km.global`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'on-site monitoring visits (sites × visits/site/month × months × (1 − remote share)) × round-trip km × (car factor, or domestic flight factor above the flight threshold)' [carbon.monitoring_trips.v1, module meetings_travel]: missing parameter(s) `rate.monitoring.onsite_visits_per_site_month`, `dist.monitoring.roundtrip_km.global`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'one kickoff meeting: sites × attendees per site × round-trip km × (car, short-haul or long-haul flight factor by one-way distance)' [carbon.investigator_meeting.v1, module meetings_travel]: missing parameter(s) `rate.investigator_meeting.attendees_per_site`, `dist.investigator_meeting.roundtrip_km`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × one site-initiation round trip (car or domestic flight)' [carbon.site_initiation_trips.v1, module setup]: missing parameter(s) `dist.monitoring.roundtrip_km.global`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × set-up factor per site' [carbon.setup_per_site.v1, module setup]: missing parameter(s) `ef.setup.per_site`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × one close-out round trip (car or domestic flight)' [carbon.closeout_trips.v1, module closeout]: missing parameter(s) `dist.monitoring.roundtrip_km.global`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × archive boxes per site × retention years × factor per box-year' [carbon.archiving.v1, module closeout]: missing parameter(s) `rate.closeout.archive_boxes_per_site`, `ef.closeout.archiving_per_box_year`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'coordinating-unit FTE × trial years × factor per FTE-year' [carbon.trial_management.v1, module trial_management]: missing parameter(s) `ef.trial_management.per_fte_year`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'patients × years from first to last scheduled visit × factor per patient-year' [carbon.data_collection.v1, module data_collection]: missing parameter(s) `ef.data_collection.per_patient_year`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'patients × supplies factor per patient' [carbon.supplies.v1, module supplies_equipment]: missing parameter(s) `ef.supplies_equipment.per_patient`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'central-lab shipments (patients × samples × (1 − local lab share) ÷ samples per shipment) × kg ÷ 1000 × km × freight factor (frozen → air, ambient/refrigerated → van)' [carbon.sample_freight.v1, module samples]: missing parameter(s) `supply.sample.samples_per_shipment`, `supply.sample.shipment_weight_kg.frozen`, `dist.sample.to_central_lab_km.global`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'frozen shipments × kg dry ice per shipment × dry-ice factor' [carbon.dry_ice.v1, module samples]: missing parameter(s) `supply.sample.samples_per_shipment`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × trial share of one −80 °C freezer × kWh/day × trial days × grid factor (site country)' [carbon.freezer_storage.v1, module samples]: missing parameter(s) `energy.freezer.minus80.trial_share`, `energy.freezer.minus80.kwh_per_day`, `ef.electricity.grid.global`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'patients × samples per patient × factor per sample analysed (central or local)' [carbon.lab_analysis.v1, module laboratory]: missing parameter(s) `ef.laboratory.per_sample`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'kits made (kits needed ÷ (1 − waste share)) × factor per kit' [carbon.drug_kits.v1, module drug_supply]: missing parameter(s) `supply.kits_per_dispensing_visit`, `supply.waste_share.upfront`, `supply.shipments_per_site.upfront`, `ef.drug_kit.unit`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'kits made × kg per kit ÷ 1000 × depot→site km × van factor' [carbon.drug_shipping.v1, module drug_supply]: missing parameter(s) `supply.kits_per_dispensing_visit`, `supply.waste_share.upfront`, `supply.shipments_per_site.upfront`, `supply.kit_shipping_weight_kg`, `dist.drug.depot_to_site_km`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'patients × on-site visits × reimbursement per visit' [cost.patient_reimbursement.v1, module patient_assessments]: missing parameter(s) `cost.patient.reimbursement_visit`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'site staff hours for patient visits × hourly cost' [cost.site_staff_visits.v1, module patient_assessments]: missing parameter(s) `time.site.procedure.default`, `time.site.visit_admin`, `cost.site_staff.hour`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'on-site monitoring visits × (CRA day rate × days per visit + travel expenses)' [cost.monitoring_onsite.v1, module meetings_travel]: missing parameter(s) `rate.monitoring.onsite_visits_per_site_month`, `cost.monitoring.cra_day_rate`, `time.monitoring.onsite_visit_days`, `cost.monitoring.travel_expenses_per_trip`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'site staff hours for supporting on-site monitoring visits × hourly cost' [cost.site_staff_monitoring.v1, module meetings_travel]: missing parameter(s) `rate.monitoring.onsite_visits_per_site_month`, `time.site.monitoring_visit_support`, `cost.site_staff.hour`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'one kickoff meeting: sites × attendees per site × cost per attendee' [cost.investigator_meeting.v1, module meetings_travel]: missing parameter(s) `rate.investigator_meeting.attendees_per_site`, `cost.investigator_meeting.per_attendee`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'sites × site start-up cost per site' [cost.setup.v1, module setup]: missing parameter(s) `cost.setup.per_site`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'sites × close-out cost per site' [cost.closeout.v1, module closeout]: missing parameter(s) `cost.closeout.per_site`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'coordinating-unit FTE × trial years × cost per FTE-year' [cost.trial_management.v1, module trial_management]: missing parameter(s) `cost.trial_management.per_fte_year`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'patients × EDC + data management per patient' [cost.data_collection.v1, module data_collection]: missing parameter(s) `cost.data_collection.per_patient`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'site staff hours for data queries × hourly cost' [cost.site_staff_queries.v1, module data_collection]: missing parameter(s) `rate.queries.per_patient`, `time.site.query_resolution`, `cost.site_staff.hour`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'patients × supplies cost per patient' [cost.supplies.v1, module supplies_equipment]: missing parameter(s) `cost.supplies_equipment.per_patient`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'central-lab shipments × courier cost per shipment (by temperature)' [cost.sample_courier.v1, module samples]: missing parameter(s) `supply.sample.samples_per_shipment`, `cost.courier.shipment.frozen`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'patients × samples × ((1 − local share) × central price + local share × local price)' [cost.lab_analysis.v1, module laboratory]: missing parameter(s) `cost.lab.central_per_sample`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'kits made × cost per kit (by drug type)' [cost.drug_kits.v1, module drug_supply]: missing parameter(s) `supply.kits_per_dispensing_visit`, `supply.waste_share.upfront`, `supply.shipments_per_site.upfront`, `cost.drug.kit.default`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'depot→site shipments × cost per shipment' [cost.drug_shipments.v1, module drug_supply]: missing parameter(s) `supply.kits_per_dispensing_visit`, `supply.waste_share.upfront`, `supply.shipments_per_site.upfront`, `cost.drug.shipment`. Reported as unknown, not zero; the total is understated.",
+            "Module 'intervention' is excluded (drug manufacture is excluded in the published method); the 'drug_supply' extension estimates kits separately and is included in the totals.",
+            "Duration is the design's planned duration (no enrollment forecast supplied): a point value."
+          ],
+          "title": "Engine check: TrialPilot engine + library on the rebuilt design",
+          "total": {
+            "diff_pct": -94.43,
+            "explanation": null,
+            "label": "Total",
+            "module": "total",
+            "ours": {
+              "p10": 3966.65,
+              "p50": 4005.08,
+              "p90": 4035.18,
+              "unit": "kg_co2e"
+            },
+            "published_kg": 71938.8,
+            "published_within_range": false,
+            "status": "gap"
+          },
+          "unavailable_reason": null
+        },
+        {
+          "available": true,
+          "description": "As above, but every engine emission factor the paper reports is replaced by the paper's value (rail 0.04441, flights, air and road freight, UK grid 0.273, dry ice 1.81, CTU per-FTE). Remaining differences are structural: what the engine models vs what the paper counted.",
+          "id": "engine_paper_factors",
+          "line_changes": [],
+          "modules": [
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Trial set-up",
+              "module": "setup",
+              "ours": null,
+              "published_kg": 349.8,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": -24.01,
+              "explanation": null,
+              "label": "Trial management (CTU emissions)",
+              "module": "trial_management",
+              "ours": {
+                "p10": 17848.51,
+                "p50": 17848.51,
+                "p90": 17848.51,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 23487.6,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Meetings and travel",
+              "module": "meetings_travel",
+              "ours": null,
+              "published_kg": 20465.3,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": -100.0,
+              "explanation": null,
+              "label": "Intervention (distribution only)",
+              "module": "intervention",
+              "ours": {
+                "p10": 0.0,
+                "p50": 0.0,
+                "p90": 0.0,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 1251.5,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Data collection and exchange",
+              "module": "data_collection",
+              "ours": null,
+              "published_kg": 558.3,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Supplies and equipment",
+              "module": "supplies_equipment",
+              "ours": null,
+              "published_kg": 522.5,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": -64.55,
+              "explanation": null,
+              "label": "Patient assessments (incl. patient travel)",
+              "module": "patient_assessments",
+              "ours": {
+                "p10": 3966.65,
+                "p50": 4005.08,
+                "p90": 4035.18,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 11298.4,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Samples",
+              "module": "samples",
+              "ours": null,
+              "published_kg": 1930.5,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Laboratory",
+              "module": "laboratory",
+              "ours": null,
+              "published_kg": 9353.6,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Close-out and archiving",
+              "module": "closeout",
+              "ours": null,
+              "published_kg": 2721.3,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Drug supply (TrialPilot extension, not in the paper)",
+              "module": "drug_supply",
+              "ours": null,
+              "published_kg": null,
+              "published_within_range": null,
+              "status": "unavailable"
+            }
+          ],
+          "notes": [
+            "parameter_set_version 75edb3fc4a05",
+            "Patient time excludes 'patients × on-site visits × round-trip km ÷ door-to-door speed, per country' [burden.patient_travel_time.v1, module patient_assessments]: missing parameter(s) `dist.patient.roundtrip_km.global`, `time.patient.travel_speed_kmh.global`. Reported as unknown, not zero; the total is understated.",
+            "Patient time excludes 'patients × (on-site visits × hours at site + home visits × hours + telehealth visits × hours)' [burden.patient_visit_time.v1, module patient_assessments]: missing parameter(s) `time.patient.visit_at_site`. Reported as unknown, not zero; the total is understated.",
+            "Site staff time excludes 'patients × Σ visits (admin minutes + Σ procedure minutes × mode factor) ÷ 60; mode factor = 1 on site, parameter for home / telehealth' [workload.patient_visits.v1, module patient_assessments]: missing parameter(s) `time.site.procedure.default`, `time.site.visit_admin`. Reported as unknown, not zero; the total is understated.",
+            "Site staff time excludes 'on-site monitoring visits × site staff hours per visit' [workload.monitoring_support.v1, module meetings_travel]: missing parameter(s) `rate.monitoring.onsite_visits_per_site_month`, `time.site.monitoring_visit_support`. Reported as unknown, not zero; the total is understated.",
+            "Site staff time excludes 'patients × queries per patient × minutes per query ÷ 60' [workload.query_handling.v1, module data_collection]: missing parameter(s) `rate.queries.per_patient`, `time.site.query_resolution`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'patients × on-site visits × round-trip km × (car share × car factor + rest × (rail share × rail factor + bus share × bus factor)), per country' [carbon.patient_travel.v1, module patient_assessments]: missing parameter(s) `rate.patient.mode_share.car.global`, `rate.patient.mode_share.rail.global`, `dist.patient.roundtrip_km.global`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'on-site monitoring visits (sites × visits/site/month × months × (1 − remote share)) × round-trip km × (car factor, or domestic flight factor above the flight threshold)' [carbon.monitoring_trips.v1, module meetings_travel]: missing parameter(s) `rate.monitoring.onsite_visits_per_site_month`, `dist.monitoring.roundtrip_km.global`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'one kickoff meeting: sites × attendees per site × round-trip km × (car, short-haul or long-haul flight factor by one-way distance)' [carbon.investigator_meeting.v1, module meetings_travel]: missing parameter(s) `rate.investigator_meeting.attendees_per_site`, `dist.investigator_meeting.roundtrip_km`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × one site-initiation round trip (car or domestic flight)' [carbon.site_initiation_trips.v1, module setup]: missing parameter(s) `dist.monitoring.roundtrip_km.global`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × set-up factor per site' [carbon.setup_per_site.v1, module setup]: missing parameter(s) `ef.setup.per_site`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × one close-out round trip (car or domestic flight)' [carbon.closeout_trips.v1, module closeout]: missing parameter(s) `dist.monitoring.roundtrip_km.global`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × archive boxes per site × retention years × factor per box-year' [carbon.archiving.v1, module closeout]: missing parameter(s) `rate.closeout.archive_boxes_per_site`, `ef.closeout.archiving_per_box_year`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'patients × years from first to last scheduled visit × factor per patient-year' [carbon.data_collection.v1, module data_collection]: missing parameter(s) `ef.data_collection.per_patient_year`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'patients × supplies factor per patient' [carbon.supplies.v1, module supplies_equipment]: missing parameter(s) `ef.supplies_equipment.per_patient`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'central-lab shipments (patients × samples × (1 − local lab share) ÷ samples per shipment) × kg ÷ 1000 × km × freight factor (frozen → air, ambient/refrigerated → van)' [carbon.sample_freight.v1, module samples]: missing parameter(s) `supply.sample.samples_per_shipment`, `supply.sample.shipment_weight_kg.frozen`, `dist.sample.to_central_lab_km.global`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'frozen shipments × kg dry ice per shipment × dry-ice factor' [carbon.dry_ice.v1, module samples]: missing parameter(s) `supply.sample.samples_per_shipment`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × trial share of one −80 °C freezer × kWh/day × trial days × grid factor (site country)' [carbon.freezer_storage.v1, module samples]: missing parameter(s) `energy.freezer.minus80.trial_share`, `energy.freezer.minus80.kwh_per_day`, `ef.electricity.grid.global`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'patients × samples per patient × factor per sample analysed (central or local)' [carbon.lab_analysis.v1, module laboratory]: missing parameter(s) `ef.laboratory.per_sample`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'kits made (kits needed ÷ (1 − waste share)) × factor per kit' [carbon.drug_kits.v1, module drug_supply]: missing parameter(s) `supply.kits_per_dispensing_visit`, `supply.waste_share.upfront`, `supply.shipments_per_site.upfront`, `ef.drug_kit.unit`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'kits made × kg per kit ÷ 1000 × depot→site km × van factor' [carbon.drug_shipping.v1, module drug_supply]: missing parameter(s) `supply.kits_per_dispensing_visit`, `supply.waste_share.upfront`, `supply.shipments_per_site.upfront`, `supply.kit_shipping_weight_kg`, `dist.drug.depot_to_site_km`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'patients × on-site visits × reimbursement per visit' [cost.patient_reimbursement.v1, module patient_assessments]: missing parameter(s) `cost.patient.reimbursement_visit`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'site staff hours for patient visits × hourly cost' [cost.site_staff_visits.v1, module patient_assessments]: missing parameter(s) `time.site.procedure.default`, `time.site.visit_admin`, `cost.site_staff.hour`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'on-site monitoring visits × (CRA day rate × days per visit + travel expenses)' [cost.monitoring_onsite.v1, module meetings_travel]: missing parameter(s) `rate.monitoring.onsite_visits_per_site_month`, `cost.monitoring.cra_day_rate`, `time.monitoring.onsite_visit_days`, `cost.monitoring.travel_expenses_per_trip`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'site staff hours for supporting on-site monitoring visits × hourly cost' [cost.site_staff_monitoring.v1, module meetings_travel]: missing parameter(s) `rate.monitoring.onsite_visits_per_site_month`, `time.site.monitoring_visit_support`, `cost.site_staff.hour`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'one kickoff meeting: sites × attendees per site × cost per attendee' [cost.investigator_meeting.v1, module meetings_travel]: missing parameter(s) `rate.investigator_meeting.attendees_per_site`, `cost.investigator_meeting.per_attendee`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'sites × site start-up cost per site' [cost.setup.v1, module setup]: missing parameter(s) `cost.setup.per_site`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'sites × close-out cost per site' [cost.closeout.v1, module closeout]: missing parameter(s) `cost.closeout.per_site`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'coordinating-unit FTE × trial years × cost per FTE-year' [cost.trial_management.v1, module trial_management]: missing parameter(s) `cost.trial_management.per_fte_year`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'patients × EDC + data management per patient' [cost.data_collection.v1, module data_collection]: missing parameter(s) `cost.data_collection.per_patient`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'site staff hours for data queries × hourly cost' [cost.site_staff_queries.v1, module data_collection]: missing parameter(s) `rate.queries.per_patient`, `time.site.query_resolution`, `cost.site_staff.hour`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'patients × supplies cost per patient' [cost.supplies.v1, module supplies_equipment]: missing parameter(s) `cost.supplies_equipment.per_patient`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'central-lab shipments × courier cost per shipment (by temperature)' [cost.sample_courier.v1, module samples]: missing parameter(s) `supply.sample.samples_per_shipment`, `cost.courier.shipment.frozen`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'patients × samples × ((1 − local share) × central price + local share × local price)' [cost.lab_analysis.v1, module laboratory]: missing parameter(s) `cost.lab.central_per_sample`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'kits made × cost per kit (by drug type)' [cost.drug_kits.v1, module drug_supply]: missing parameter(s) `supply.kits_per_dispensing_visit`, `supply.waste_share.upfront`, `supply.shipments_per_site.upfront`, `cost.drug.kit.default`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'depot→site shipments × cost per shipment' [cost.drug_shipments.v1, module drug_supply]: missing parameter(s) `supply.kits_per_dispensing_visit`, `supply.waste_share.upfront`, `supply.shipments_per_site.upfront`, `cost.drug.shipment`. Reported as unknown, not zero; the total is understated.",
+            "Module 'intervention' is excluded (drug manufacture is excluded in the published method); the 'drug_supply' extension estimates kits separately and is included in the totals.",
+            "Duration is the design's planned duration (no enrollment forecast supplied): a point value."
+          ],
+          "title": "Engine check with the paper's own factors",
+          "total": {
+            "diff_pct": -69.62,
+            "explanation": null,
+            "label": "Total",
+            "module": "total",
+            "ours": {
+              "p10": 21815.16,
+              "p50": 21853.59,
+              "p90": 21883.69,
+              "unit": "kg_co2e"
+            },
+            "published_kg": 71938.8,
+            "published_within_range": false,
+            "status": "gap"
+          },
+          "unavailable_reason": null
+        }
+      ],
+      "countries": [
+        "GB",
+        "ES",
+        "AU"
+      ],
+      "design_inputs": [
+        {
+          "field": "enrollment_target",
+          "origin": "paper",
+          "ref": "appendix C p.3; main text Results",
+          "value": "47"
+        },
+        {
+          "field": "sites",
+          "origin": "paper",
+          "ref": "appendix C p.3",
+          "value": "12 sites: UK, Spain, Australia"
+        },
+        {
+          "field": "sites (UK names)",
+          "origin": "paper",
+          "ref": "appendix C p.4 (postage lines)",
+          "value": "RMH, Christie, Bristol, UCLH, Newcastle, Nottingham"
+        },
+        {
+          "field": "sites (Spain)",
+          "origin": "paper",
+          "ref": "appendix C p.4: deliveries of 1147, 1244 and 1091 km",
+          "value": "3"
+        },
+        {
+          "field": "sites (Australia)",
+          "origin": "paper",
+          "ref": "appendix C p.4: deliveries of 17018.5 and 16544 km",
+          "value": "2"
+        },
+        {
+          "field": "12th site country",
+          "origin": "assumption",
+          "ref": "only 11 delivery destinations are itemised; the 12th is assumed UK (sponsor country)",
+          "value": "UK"
+        },
+        {
+          "field": "duration_months",
+          "origin": "paper",
+          "ref": "appendix C p.5 'Trial duration: 6 years'",
+          "value": "72"
+        },
+        {
+          "field": "visits per patient",
+          "origin": "assumption",
+          "ref": "appendix C p.15 reports 880 trial-specific visits for 47 patients (18.7 each) and 72 weeks on trial; schedule spacing assumed",
+          "value": "19 (893 patient-visits vs 880 reported, +1.5%)"
+        },
+        {
+          "field": "CT scans",
+          "origin": "paper",
+          "ref": "appendix C p.16 'CT scans: 47 x 9 x 9.2'",
+          "value": "9 per patient"
+        },
+        {
+          "field": "research blood samples",
+          "origin": "assumption",
+          "ref": "appendix C p.20: 313 CTAD + 261 CPT samples = 574 (12.2 per patient); one frozen sample per visit assumed",
+          "value": "12 per patient, frozen"
+        },
+        {
+          "field": "drug_type",
+          "origin": "paper",
+          "ref": "appendix C p.11",
+          "value": "small_molecule (oral cediranib, ~4000 bottles shipped)"
+        }
+      ],
+      "duration_years": 6.0,
+      "findings": [
+        {
+          "detail": "Appendix C p.20-21: \"310 watts x 0.25 hours = 77.5 kWh\" and \"310 x 0.583 = 180.73 kWh\". 310 W for 0.25 h is 77.5 Wh = 0.0775 kWh. The same arithmetic appears as the worked example in the guidance (appendix D p.21). Corrected, the two centrifuge lines fall from 812.5 kg to 0.81 kg (-811.7 kg, -1.1% of the CASPS total).",
+          "effect_kg": -811.7,
+          "id": "casps-f1",
+          "lines": [
+            "lab-centrifuge-ctad",
+            "lab-centrifuge-cpt"
+          ],
+          "severity": "large",
+          "summary": "Centrifuge energy overstated ~1000x (watts treated as kilowatts)."
+        },
+        {
+          "detail": "9.3 includes \"Ambient storage of tissue\" 221 + 415 kg; 10.2 \"Storage and destruction of biological samples\" repeats 221 + 415 kg for the same 1 m2 x 10 years in a health building. The corrected variant drops the 10.2 copy (-636 kg).",
+          "effect_kg": -636.0,
+          "id": "casps-f2",
+          "lines": [
+            "close-tissue-electricity",
+            "close-tissue-heating"
+          ],
+          "severity": "medium",
+          "summary": "Ambient tissue storage (1 m2, 10 years) counted twice: section 9.3 (laboratory) and 10.2 (close out)."
+        },
+        {
+          "detail": "Activity column: \"Australia total p.km = 15310\"; calculation: \"11074 p.km x 0.20373 = 3119.1\". 15310 x 0.20373 = 3119.1, 11074 x 0.20373 = 2256.1, so the result is consistent with the activity data; we use 15310.",
+          "effect_kg": 0.0,
+          "id": "casps-f3",
+          "lines": [
+            "mt-monitoring-au"
+          ],
+          "severity": "info",
+          "summary": "Australia monitoring distance printed as 11074 p.km in the calculation but the result uses 15310 p.km."
+        },
+        {
+          "detail": "TMG teleconference attendees printed as 18 in the calculation, 16 in the activity data; result uses 16.",
+          "effect_kg": 0.0,
+          "id": "casps-f4",
+          "lines": [
+            "mt-tmg"
+          ],
+          "severity": "info",
+          "summary": "TMG teleconference attendees printed as 18 in the calculation, 16 in the activity data; result uses 16."
+        },
+        {
+          "detail": "Audit long-haul line: 29442 p.km x 0.21423 = 6307.4, printed 6303.1 (-4.3 kg, <0.1%).",
+          "effect_kg": 0.0,
+          "id": "casps-f5",
+          "lines": [
+            "mt-audit-longhaul"
+          ],
+          "severity": "info",
+          "summary": "Audit long-haul line: 29442 p.km x 0.21423 = 6307.4, printed 6303.1 (-4.3 kg, <0.1%)."
+        },
+        {
+          "detail": "CTAD + CPT glass tubes: calculation shows factor 3.413 but the result (9.57) uses the glass factor 1.403 listed on p.18.",
+          "effect_kg": 0.0,
+          "id": "casps-f6",
+          "lines": [
+            "smp-ctad-cpt"
+          ],
+          "severity": "info",
+          "summary": "CTAD + CPT glass tubes: calculation shows factor 3.413 but the result (9.57) uses the glass factor 1.403 listed on p.18."
+        }
+      ],
+      "id": "casps",
+      "name": "CASPS",
+      "patients": 47,
+      "phase": "Phase 2",
+      "published": {
+        "modules": {
+          "closeout": 2721.3,
+          "data_collection": 558.3,
+          "intervention": 1251.5,
+          "laboratory": 9353.6,
+          "meetings_travel": 20465.3,
+          "patient_assessments": 11298.4,
+          "samples": 1930.5,
+          "setup": 349.8,
+          "supplies_equipment": 522.5,
+          "trial_management": 23487.6
+        },
+        "total_kg": 71938.8,
+        "total_main_text_kg": 71939.0
+      },
+      "registry_id": "ISRCTN63733470",
+      "sites": 12,
+      "source": "Griffiths J, Fox L, Williamson PR, on behalf of the Low Carbon Clinical Trials Group. Quantifying the carbon footprint of clinical trials: guidance development and case studies. BMJ Open 2024;14:e075755. doi:10.1136/bmjopen-2023-075755. Online supplemental appendix C (CC BY 4.0).",
+      "summary": [
+        "CASPS: the paper's own arithmetic reproduces to +0.01% of the published 71,939 kg CO2e (71,943 kg); fixing the errors we documented moves it to 70,495 kg (-2.0%).",
+        "With TrialPilot's library factors the same activity data give 68,038 kg (P10-P90 67,425-68,776, -5.4% vs published), the difference being factor vintage (DESNZ 2026 vs 2021/2022) rather than method. The TrialPilot engine on the rebuilt design gives 4,005 kg (P10-P90 3,967-4,035, -94%)."
+      ],
+      "title": "Cediranib in patients with alveolar soft-part sarcoma (CASPS)"
+    },
+    {
+      "checks": [
+        {
+          "available": true,
+          "description": "Every line of the published calculation (appendix D) recomputed as activity x factor with the paper's own numbers, then summed per module. Tests our transcription and the paper's arithmetic; no TrialPilot parameter is involved.",
+          "id": "method",
+          "line_changes": [],
+          "modules": [
+            {
+              "diff_pct": 0.06,
+              "explanation": null,
+              "label": "Trial set-up",
+              "module": "setup",
+              "ours": {
+                "p10": 454.48,
+                "p50": 454.48,
+                "p90": 454.48,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 454.2,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Trial management (CTU emissions)",
+              "module": "trial_management",
+              "ours": {
+                "p10": 11733.74,
+                "p50": 11733.74,
+                "p90": 11733.74,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 11733.3,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": -12.24,
+              "explanation": "Hotel stays: '8 x 13.9 = 250.2 kgCO2e'; 8 x 13.9 = 111.2 (250.2 = 18 x 13.9). (primetime-f1)",
+              "label": "Meetings and travel",
+              "module": "meetings_travel",
+              "ours": {
+                "p10": 997.1,
+                "p50": 997.1,
+                "p90": 997.1,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 1136.2,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Intervention (distribution only)",
+              "module": "intervention",
+              "ours": {
+                "p10": 0.0,
+                "p50": 0.0,
+                "p90": 0.0,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 0.0,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.0,
+              "explanation": null,
+              "label": "Data collection and exchange",
+              "module": "data_collection",
+              "ours": {
+                "p10": 7572.07,
+                "p50": 7572.07,
+                "p90": 7572.07,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 7572.1,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Supplies and equipment",
+              "module": "supplies_equipment",
+              "ours": {
+                "p10": 1741.5,
+                "p50": 1741.5,
+                "p90": 1741.5,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 1741.5,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.0,
+              "explanation": null,
+              "label": "Patient assessments (incl. patient travel)",
+              "module": "patient_assessments",
+              "ours": {
+                "p10": 60822.6,
+                "p50": 60822.6,
+                "p90": 60822.6,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 60822.7,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.0,
+              "explanation": null,
+              "label": "Samples",
+              "module": "samples",
+              "ours": {
+                "p10": 438.18,
+                "p50": 438.18,
+                "p90": 438.18,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 438.2,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.0,
+              "explanation": null,
+              "label": "Laboratory",
+              "module": "laboratory",
+              "ours": {
+                "p10": 2061.31,
+                "p50": 2061.31,
+                "p90": 2061.31,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 2061.4,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.01,
+              "explanation": null,
+              "label": "Close-out and archiving",
+              "module": "closeout",
+              "ours": {
+                "p10": 3400.2,
+                "p50": 3400.2,
+                "p90": 3400.2,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 3400.6,
+              "published_within_range": false,
+              "status": "match"
+            }
+          ],
+          "notes": [
+            "62 calculation lines transcribed from page images; 1 line(s) do not reproduce their printed value within 1%."
+          ],
+          "title": "Method check: the paper's own arithmetic",
+          "total": {
+            "diff_pct": -0.16,
+            "explanation": null,
+            "label": "Total",
+            "module": "total",
+            "ours": {
+              "p10": 89221.19,
+              "p50": 89221.19,
+              "p90": 89221.19,
+              "unit": "kg_co2e"
+            },
+            "published_kg": 89360.2,
+            "published_within_range": false,
+            "status": "match"
+          },
+          "unavailable_reason": null
+        },
+        {
+          "available": true,
+          "description": "Same as the method check, after fixing only the documented errors (units slip, double count, arithmetic). No factor or activity is tuned.",
+          "id": "corrected",
+          "line_changes": [],
+          "modules": [
+            {
+              "diff_pct": 0.06,
+              "explanation": null,
+              "label": "Trial set-up",
+              "module": "setup",
+              "ours": {
+                "p10": 454.48,
+                "p50": 454.48,
+                "p90": 454.48,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 454.2,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Trial management (CTU emissions)",
+              "module": "trial_management",
+              "ours": {
+                "p10": 11733.74,
+                "p50": 11733.74,
+                "p90": 11733.74,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 11733.3,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": -12.24,
+              "explanation": "Hotel stays: '8 x 13.9 = 250.2 kgCO2e'; 8 x 13.9 = 111.2 (250.2 = 18 x 13.9). (primetime-f1)",
+              "label": "Meetings and travel",
+              "module": "meetings_travel",
+              "ours": {
+                "p10": 997.1,
+                "p50": 997.1,
+                "p90": 997.1,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 1136.2,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Intervention (distribution only)",
+              "module": "intervention",
+              "ours": {
+                "p10": 0.0,
+                "p50": 0.0,
+                "p90": 0.0,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 0.0,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.0,
+              "explanation": null,
+              "label": "Data collection and exchange",
+              "module": "data_collection",
+              "ours": {
+                "p10": 7572.07,
+                "p50": 7572.07,
+                "p90": 7572.07,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 7572.1,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Supplies and equipment",
+              "module": "supplies_equipment",
+              "ours": {
+                "p10": 1741.5,
+                "p50": 1741.5,
+                "p90": 1741.5,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 1741.5,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.0,
+              "explanation": null,
+              "label": "Patient assessments (incl. patient travel)",
+              "module": "patient_assessments",
+              "ours": {
+                "p10": 60822.6,
+                "p50": 60822.6,
+                "p90": 60822.6,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 60822.7,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.0,
+              "explanation": null,
+              "label": "Samples",
+              "module": "samples",
+              "ours": {
+                "p10": 438.18,
+                "p50": 438.18,
+                "p90": 438.18,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 438.2,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.0,
+              "explanation": null,
+              "label": "Laboratory",
+              "module": "laboratory",
+              "ours": {
+                "p10": 2061.31,
+                "p50": 2061.31,
+                "p90": 2061.31,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 2061.4,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.01,
+              "explanation": null,
+              "label": "Close-out and archiving",
+              "module": "closeout",
+              "ours": {
+                "p10": 3400.2,
+                "p50": 3400.2,
+                "p90": 3400.2,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 3400.6,
+              "published_within_range": false,
+              "status": "match"
+            }
+          ],
+          "notes": [
+            "No correction needed beyond the method check."
+          ],
+          "title": "Corrected: the paper's numbers with the errors we found fixed",
+          "total": {
+            "diff_pct": -0.16,
+            "explanation": null,
+            "label": "Total",
+            "module": "total",
+            "ours": {
+              "p10": 89221.19,
+              "p50": 89221.19,
+              "p90": 89221.19,
+              "unit": "kg_co2e"
+            },
+            "published_kg": 89360.2,
+            "published_within_range": false,
+            "status": "match"
+          },
+          "unavailable_reason": null
+        },
+        {
+          "available": true,
+          "description": "The corrected activity data, multiplied by TrialPilot's library factors (DESNZ 2026 for travel, freight, materials, electricity and hotels, plus well-to-tank as the LCCT method does; LCCT values where no independent source exists). Each library factor is sampled triangular(low, mid, high), 2000 seeded draws, P10/P50/P90.",
+          "id": "library",
+          "line_changes": [
+            {
+              "item": "Jiffy bags 243.8 kg (paper factor)",
+              "kind": "independent",
+              "library_factor_p50": 1.221303,
+              "library_kg": {
+                "p10": 255.45,
+                "p50": 297.75,
+                "p90": 322.29,
+                "unit": "kg_co2e"
+              },
+              "line_id": "smp-jiffy",
+              "module": "samples",
+              "note": "Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%).",
+              "paper_factor": 0.919,
+              "paper_kg": 224.05,
+              "parameter_ids": [
+                "ef.material.paper.kg"
+              ]
+            },
+            {
+              "item": "PIS/consent forms: paper material",
+              "kind": "independent",
+              "library_factor_p50": 1.221303,
+              "library_kg": {
+                "p10": 252.34,
+                "p50": 294.14,
+                "p90": 318.38,
+                "unit": "kg_co2e"
+              },
+              "line_id": "setup-pis-paper",
+              "module": "setup",
+              "note": "Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%).",
+              "paper_factor": 0.919,
+              "paper_kg": 221.33,
+              "parameter_ids": [
+                "ef.material.paper.kg"
+              ]
+            },
+            {
+              "item": "Sites' SIF: paper material",
+              "kind": "independent",
+              "library_factor_p50": 1.221303,
+              "library_kg": {
+                "p10": 138.29,
+                "p50": 161.19,
+                "p90": 174.48,
+                "unit": "kg_co2e"
+              },
+              "line_id": "data-sif-paper",
+              "module": "data_collection",
+              "note": "Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%).",
+              "paper_factor": 0.919,
+              "paper_kg": 121.29,
+              "parameter_ids": [
+                "ef.material.paper.kg"
+              ]
+            },
+            {
+              "item": "Hotel stays: 8 room-nights (TMG meetings)",
+              "kind": "independent",
+              "library_factor_p50": 10.4,
+              "library_kg": {
+                "p10": 83.2,
+                "p50": 83.2,
+                "p90": 83.2,
+                "unit": "kg_co2e"
+              },
+              "line_id": "mt-hotels",
+              "module": "meetings_travel",
+              "note": "Paper 13.9 (DESNZ 2021 hotel tab, linked in the appendix); DESNZ 2022-2026: 10.4.",
+              "paper_factor": 13.9,
+              "paper_kg": 111.2,
+              "parameter_ids": [
+                "ef.hotel.room_night.gb"
+              ]
+            },
+            {
+              "item": "SIF: paper material",
+              "kind": "independent",
+              "library_factor_p50": 1.221303,
+              "library_kg": {
+                "p10": 91.26,
+                "p50": 106.38,
+                "p90": 115.14,
+                "unit": "kg_co2e"
+              },
+              "line_id": "setup-sif-paper",
+              "module": "setup",
+              "note": "Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%).",
+              "paper_factor": 0.919,
+              "paper_kg": 80.04,
+              "parameter_ids": [
+                "ef.material.paper.kg"
+              ]
+            },
+            {
+              "item": "Paper CRFs: paper material",
+              "kind": "independent",
+              "library_factor_p50": 1.221303,
+              "library_kg": {
+                "p10": 73.34,
+                "p50": 85.49,
+                "p90": 92.54,
+                "unit": "kg_co2e"
+              },
+              "line_id": "data-crf-paper",
+              "module": "data_collection",
+              "note": "Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%).",
+              "paper_factor": 0.919,
+              "paper_kg": 64.33,
+              "parameter_ids": [
+                "ef.material.paper.kg"
+              ]
+            },
+            {
+              "item": "Paper 39 kg: material",
+              "kind": "independent",
+              "library_factor_p50": 1.221303,
+              "library_kg": {
+                "p10": 40.86,
+                "p50": 47.63,
+                "p90": 51.56,
+                "unit": "kg_co2e"
+              },
+              "line_id": "smp-paper",
+              "module": "samples",
+              "note": "Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%).",
+              "paper_factor": 0.919,
+              "paper_kg": 35.84,
+              "parameter_ids": [
+                "ef.material.paper.kg"
+              ]
+            },
+            {
+              "item": "Slide containers (PP) 30.6 kg",
+              "kind": "independent",
+              "library_factor_p50": 2.731511,
+              "library_kg": {
+                "p10": 79.63,
+                "p50": 83.58,
+                "p90": 90.06,
+                "unit": "kg_co2e"
+              },
+              "line_id": "smp-slide-containers",
+              "module": "samples",
+              "note": "",
+              "paper_factor": 3.105,
+              "paper_kg": 95.01,
+              "parameter_ids": [
+                "ef.material.plastics_pp.kg"
+              ]
+            },
+            {
+              "item": "TMG meeting 1, 2 x 1760.6 km (rail)",
+              "kind": "independent",
+              "library_factor_p50": 0.041203,
+              "library_kg": {
+                "p10": 141.28,
+                "p50": 145.08,
+                "p90": 151.53,
+                "unit": "kg_co2e"
+              },
+              "line_id": "mt-tmg1",
+              "module": "meetings_travel",
+              "note": "Paper: DESNZ 2022 national rail 0.03549 + WTT 0.00892 = 0.04441. Library: DESNZ 2026 (rail factors updated in 2026).",
+              "paper_factor": 0.04441,
+              "paper_kg": 156.38,
+              "parameter_ids": [
+                "ef.travel.rail.passenger_km",
+                "ef.wtt.travel.rail.passenger_km"
+              ]
+            },
+            {
+              "item": "TMG meeting 4, 2 x 1624.8 km (rail)",
+              "kind": "independent",
+              "library_factor_p50": 0.041203,
+              "library_kg": {
+                "p10": 130.39,
+                "p50": 133.89,
+                "p90": 139.84,
+                "unit": "kg_co2e"
+              },
+              "line_id": "mt-tmg4",
+              "module": "meetings_travel",
+              "note": "Paper: DESNZ 2022 national rail 0.03549 + WTT 0.00892 = 0.04441. Library: DESNZ 2026 (rail factors updated in 2026).",
+              "paper_factor": 0.04441,
+              "paper_kg": 144.31,
+              "parameter_ids": [
+                "ef.travel.rail.passenger_km",
+                "ef.wtt.travel.rail.passenger_km"
+              ]
+            },
+            {
+              "item": "Site documents: paper material",
+              "kind": "independent",
+              "library_factor_p50": 1.221303,
+              "library_kg": {
+                "p10": 33.0,
+                "p50": 38.47,
+                "p90": 41.64,
+                "unit": "kg_co2e"
+              },
+              "line_id": "data-docs-paper",
+              "module": "data_collection",
+              "note": "Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%).",
+              "paper_factor": 0.919,
+              "paper_kg": 28.95,
+              "parameter_ids": [
+                "ef.material.paper.kg"
+              ]
+            },
+            {
+              "item": "TMG meeting 2, 2 x 1437.3 km (rail)",
+              "kind": "independent",
+              "library_factor_p50": 0.041203,
+              "library_kg": {
+                "p10": 115.34,
+                "p50": 118.44,
+                "p90": 123.7,
+                "unit": "kg_co2e"
+              },
+              "line_id": "mt-tmg2",
+              "module": "meetings_travel",
+              "note": "Paper: DESNZ 2022 national rail 0.03549 + WTT 0.00892 = 0.04441. Library: DESNZ 2026 (rail factors updated in 2026).",
+              "paper_factor": 0.04441,
+              "paper_kg": 127.66,
+              "parameter_ids": [
+                "ef.travel.rail.passenger_km",
+                "ef.wtt.travel.rail.passenger_km"
+              ]
+            },
+            {
+              "item": "67 ring binders x 0.5 kg",
+              "kind": "independent",
+              "library_factor_p50": 1.092515,
+              "library_kg": {
+                "p10": 31.76,
+                "p50": 36.6,
+                "p90": 39.53,
+                "unit": "kg_co2e"
+              },
+              "line_id": "setup-folders",
+              "module": "setup",
+              "note": "Paper 0.821; DESNZ 2026 board = 1.198.",
+              "paper_factor": 0.821,
+              "paper_kg": 27.5,
+              "parameter_ids": [
+                "ef.material.board.kg"
+              ]
+            },
+            {
+              "item": "Tracking slips: paper material (29.89 kg)",
+              "kind": "independent",
+              "library_factor_p50": 1.221303,
+              "library_kg": {
+                "p10": 31.32,
+                "p50": 36.5,
+                "p90": 39.51,
+                "unit": "kg_co2e"
+              },
+              "line_id": "smp-tracking-paper",
+              "module": "samples",
+              "note": "Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%).",
+              "paper_factor": 0.919,
+              "paper_kg": 27.47,
+              "parameter_ids": [
+                "ef.material.paper.kg"
+              ]
+            },
+            {
+              "item": "Sample kits CTU -> sites: 0.00053 t x 630 x 301.8 km (road)",
+              "kind": "independent",
+              "library_factor_p50": 0.128107,
+              "library_kg": {
+                "p10": 12.77,
+                "p50": 12.91,
+                "p90": 13.06,
+                "unit": "kg_co2e"
+              },
+              "line_id": "smp-kits-to-sites",
+              "module": "samples",
+              "note": "Paper road factor 0.19443 matches no DESNZ 2022 HGV or van row; library uses the DESNZ 2026 average HGV (+WTT). A van would be ~6x higher.",
+              "paper_factor": 0.19443,
+              "paper_kg": 19.59,
+              "parameter_ids": [
+                "ef.freight.road.tonne_km",
+                "ef.wtt.freight.road.tonne_km"
+              ]
+            }
+          ],
+          "modules": [
+            {
+              "diff_pct": 24.54,
+              "explanation": "Driven by: PIS/consent forms: paper material: paper factor 0.919 -> library 1.2213 (+73 kg). Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%). | SIF: paper material: paper factor 0.919 -> library 1.2213 (+26 kg). Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%). | 67 ring binders x 0.5 kg: paper factor 0.821 -> library 1.09251 (+9 kg). Paper 0.821; DESNZ 2026 board = 1.198.",
+              "label": "Trial set-up",
+              "module": "setup",
+              "ours": {
+                "p10": 506.54,
+                "p50": 565.67,
+                "p90": 600.42,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 454.2,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Trial management (CTU emissions)",
+              "module": "trial_management",
+              "ours": {
+                "p10": 11733.75,
+                "p50": 11733.75,
+                "p90": 11733.76,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 11733.3,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": -17.7,
+              "explanation": "Driven by: Hotel stays: 8 room-nights (TMG meetings): paper factor 13.9 -> library 10.4 (-28 kg). Paper 13.9 (DESNZ 2021 hotel tab, linked in the appendix); DESNZ 2022-2026: 10.4. | TMG meeting 1, 2 x 1760.6 km (rail): paper factor 0.04441 -> library 0.041203 (-11 kg). Paper: DESNZ 2022 national rail 0.03549 + WTT 0.00892 = 0.04441. Library: DESNZ 2026 (rail factors updated in 2026). | TMG meeting 4, 2 x 1624.8 km (rail): paper factor 0.04441 -> library 0.041203 (-10 kg). Paper: DESNZ 2022 national rail 0.03549 + WTT 0.00892 = 0.04441. Library: DESNZ 2026 (rail factors updated in 2026).",
+              "label": "Meetings and travel",
+              "module": "meetings_travel",
+              "ours": {
+                "p10": 923.7,
+                "p50": 935.13,
+                "p90": 954.51,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 1136.2,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Intervention (distribution only)",
+              "module": "intervention",
+              "ours": {
+                "p10": 0.0,
+                "p50": 0.0,
+                "p90": 0.0,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 0.0,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.91,
+              "explanation": null,
+              "label": "Data collection and exchange",
+              "module": "data_collection",
+              "ours": {
+                "p10": 7600.72,
+                "p50": 7641.27,
+                "p90": 7664.77,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 7572.1,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Supplies and equipment",
+              "module": "supplies_equipment",
+              "ours": {
+                "p10": 1741.5,
+                "p50": 1741.5,
+                "p90": 1741.5,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 1741.5,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.0,
+              "explanation": null,
+              "label": "Patient assessments (incl. patient travel)",
+              "module": "patient_assessments",
+              "ours": {
+                "p10": 60822.6,
+                "p50": 60822.6,
+                "p90": 60822.6,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 60822.7,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": 16.06,
+              "explanation": "Driven by: Jiffy bags 243.8 kg (paper factor): paper factor 0.919 -> library 1.2213 (+74 kg). Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%). | Paper 39 kg: material: paper factor 0.919 -> library 1.2213 (+12 kg). Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%). | Slide containers (PP) 30.6 kg: paper factor 3.105 -> library 2.73151 (-11 kg).",
+              "label": "Samples",
+              "module": "samples",
+              "ours": {
+                "p10": 454.48,
+                "p50": 508.56,
+                "p90": 539.76,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 438.2,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": -0.0,
+              "explanation": null,
+              "label": "Laboratory",
+              "module": "laboratory",
+              "ours": {
+                "p10": 2061.31,
+                "p50": 2061.31,
+                "p90": 2061.31,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 2061.4,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": -0.06,
+              "explanation": null,
+              "label": "Close-out and archiving",
+              "module": "closeout",
+              "ours": {
+                "p10": 3398.09,
+                "p50": 3398.59,
+                "p90": 3399.41,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 3400.6,
+              "published_within_range": false,
+              "status": "match"
+            }
+          ],
+          "notes": [
+            "1 line(s) keep the paper's factor (no library equivalent):",
+            "pa-travel (patient_hospital_visit_roundtrip_gb): library is missing dist.patient.roundtrip_km.gb, rate.patient.mode_share.car.gb, rate.patient.mode_share.rail.gb; paper factor kept"
+          ],
+          "title": "Library check: the paper's activity data x TrialPilot's parameter library",
+          "total": {
+            "diff_pct": 0.06,
+            "explanation": "Largest factor changes: Jiffy bags 243.8 kg (paper factor): paper factor 0.919 -> library 1.2213 (+74 kg). Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%). | PIS/consent forms: paper material: paper factor 0.919 -> library 1.2213 (+73 kg). Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%). | Sites' SIF: paper material: paper factor 0.919 -> library 1.2213 (+40 kg). Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%).",
+            "label": "Total",
+            "module": "total",
+            "ours": {
+              "p10": 89256.6,
+              "p50": 89410.11,
+              "p90": 89499.18,
+              "unit": "kg_co2e"
+            },
+            "published_kg": 89360.2,
+            "published_within_range": true,
+            "status": "match"
+          },
+          "unavailable_reason": null
+        },
+        {
+          "available": true,
+          "description": "The trial rebuilt as a TrialDesign (sites, visits, procedures from the paper; gaps filled with labelled assumptions) and run through the same engine the simulator uses, with the parameter library plus the trial's reported activity (e.g. coordinating-unit FTE). Tests the engine's model structure, not just its factors.",
+          "id": "engine_library",
+          "line_changes": [],
+          "modules": [
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Trial set-up",
+              "module": "setup",
+              "ours": null,
+              "published_kg": 454.2,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Trial management (CTU emissions)",
+              "module": "trial_management",
+              "ours": null,
+              "published_kg": 11733.3,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Meetings and travel",
+              "module": "meetings_travel",
+              "ours": null,
+              "published_kg": 1136.2,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Intervention (distribution only)",
+              "module": "intervention",
+              "ours": {
+                "p10": 0.0,
+                "p50": 0.0,
+                "p90": 0.0,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 0.0,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Data collection and exchange",
+              "module": "data_collection",
+              "ours": null,
+              "published_kg": 7572.1,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Supplies and equipment",
+              "module": "supplies_equipment",
+              "ours": null,
+              "published_kg": 1741.5,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": -85.21,
+              "explanation": null,
+              "label": "Patient assessments (incl. patient travel)",
+              "module": "patient_assessments",
+              "ours": {
+                "p10": 6159.75,
+                "p50": 8994.6,
+                "p90": 12646.31,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 60822.7,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": -100.0,
+              "explanation": null,
+              "label": "Samples",
+              "module": "samples",
+              "ours": {
+                "p10": 0.0,
+                "p50": 0.0,
+                "p90": 0.0,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 438.2,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": -100.0,
+              "explanation": null,
+              "label": "Laboratory",
+              "module": "laboratory",
+              "ours": {
+                "p10": 0.0,
+                "p50": 0.0,
+                "p90": 0.0,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 2061.4,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Close-out and archiving",
+              "module": "closeout",
+              "ours": null,
+              "published_kg": 3400.6,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": null,
+              "label": "Drug supply (TrialPilot extension, not in the paper)",
+              "module": "drug_supply",
+              "ours": {
+                "p10": 0.0,
+                "p50": 0.0,
+                "p90": 0.0,
+                "unit": "kg_co2e"
+              },
+              "published_kg": null,
+              "published_within_range": null,
+              "status": "not_reported"
+            }
+          ],
+          "notes": [
+            "parameter_set_version ecd2d85bef80",
+            "Patient time excludes 'patients × on-site visits × round-trip km ÷ door-to-door speed, per country' [burden.patient_travel_time.v1, module patient_assessments]: missing parameter(s) `dist.patient.roundtrip_km.global`, `time.patient.travel_speed_kmh.global`. Reported as unknown, not zero; the total is understated.",
+            "Patient time excludes 'patients × (on-site visits × hours at site + home visits × hours + telehealth visits × hours)' [burden.patient_visit_time.v1, module patient_assessments]: missing parameter(s) `time.patient.visit_at_site`. Reported as unknown, not zero; the total is understated.",
+            "Site staff time excludes 'patients × Σ visits (admin minutes + Σ procedure minutes × mode factor) ÷ 60; mode factor = 1 on site, parameter for home / telehealth' [workload.patient_visits.v1, module patient_assessments]: missing parameter(s) `time.site.procedure.default`, `time.site.visit_admin`. Reported as unknown, not zero; the total is understated.",
+            "Site staff time excludes 'on-site monitoring visits × site staff hours per visit' [workload.monitoring_support.v1, module meetings_travel]: missing parameter(s) `time.site.monitoring_visit_support`. Reported as unknown, not zero; the total is understated.",
+            "Site staff time excludes 'patients × queries per patient × minutes per query ÷ 60' [workload.query_handling.v1, module data_collection]: missing parameter(s) `rate.queries.per_patient`, `time.site.query_resolution`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'patients × on-site visits × round-trip km × (car share × car factor + rest × (rail share × rail factor + bus share × bus factor)), per country' [carbon.patient_travel.v1, module patient_assessments]: missing parameter(s) `rate.patient.mode_share.car.global`, `rate.patient.mode_share.rail.global`, `dist.patient.roundtrip_km.global`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'on-site monitoring visits (sites × visits/site/month × months × (1 − remote share)) × round-trip km × (car factor, or domestic flight factor above the flight threshold)' [carbon.monitoring_trips.v1, module meetings_travel]: missing parameter(s) `dist.monitoring.roundtrip_km.global`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'one kickoff meeting: sites × attendees per site × round-trip km × (car, short-haul or long-haul flight factor by one-way distance)' [carbon.investigator_meeting.v1, module meetings_travel]: missing parameter(s) `rate.investigator_meeting.attendees_per_site`, `dist.investigator_meeting.roundtrip_km`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × one site-initiation round trip (car or domestic flight)' [carbon.site_initiation_trips.v1, module setup]: missing parameter(s) `dist.monitoring.roundtrip_km.global`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × set-up factor per site' [carbon.setup_per_site.v1, module setup]: missing parameter(s) `ef.setup.per_site`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × one close-out round trip (car or domestic flight)' [carbon.closeout_trips.v1, module closeout]: missing parameter(s) `dist.monitoring.roundtrip_km.global`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × archive boxes per site × retention years × factor per box-year' [carbon.archiving.v1, module closeout]: missing parameter(s) `rate.closeout.archive_boxes_per_site`, `ef.closeout.archiving_per_box_year`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'coordinating-unit FTE × trial years × factor per FTE-year' [carbon.trial_management.v1, module trial_management]: missing parameter(s) `ef.trial_management.per_fte_year`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'patients × years from first to last scheduled visit × factor per patient-year' [carbon.data_collection.v1, module data_collection]: missing parameter(s) `ef.data_collection.per_patient_year`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'patients × supplies factor per patient' [carbon.supplies.v1, module supplies_equipment]: missing parameter(s) `ef.supplies_equipment.per_patient`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'patients × on-site visits × reimbursement per visit' [cost.patient_reimbursement.v1, module patient_assessments]: missing parameter(s) `cost.patient.reimbursement_visit`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'site staff hours for patient visits × hourly cost' [cost.site_staff_visits.v1, module patient_assessments]: missing parameter(s) `time.site.procedure.default`, `time.site.visit_admin`, `cost.site_staff.hour`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'on-site monitoring visits × (CRA day rate × days per visit + travel expenses)' [cost.monitoring_onsite.v1, module meetings_travel]: missing parameter(s) `cost.monitoring.cra_day_rate`, `time.monitoring.onsite_visit_days`, `cost.monitoring.travel_expenses_per_trip`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'site staff hours for supporting on-site monitoring visits × hourly cost' [cost.site_staff_monitoring.v1, module meetings_travel]: missing parameter(s) `time.site.monitoring_visit_support`, `cost.site_staff.hour`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'one kickoff meeting: sites × attendees per site × cost per attendee' [cost.investigator_meeting.v1, module meetings_travel]: missing parameter(s) `rate.investigator_meeting.attendees_per_site`, `cost.investigator_meeting.per_attendee`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'sites × site start-up cost per site' [cost.setup.v1, module setup]: missing parameter(s) `cost.setup.per_site`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'sites × close-out cost per site' [cost.closeout.v1, module closeout]: missing parameter(s) `cost.closeout.per_site`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'coordinating-unit FTE × trial years × cost per FTE-year' [cost.trial_management.v1, module trial_management]: missing parameter(s) `cost.trial_management.per_fte_year`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'patients × EDC + data management per patient' [cost.data_collection.v1, module data_collection]: missing parameter(s) `cost.data_collection.per_patient`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'site staff hours for data queries × hourly cost' [cost.site_staff_queries.v1, module data_collection]: missing parameter(s) `rate.queries.per_patient`, `time.site.query_resolution`, `cost.site_staff.hour`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'patients × supplies cost per patient' [cost.supplies.v1, module supplies_equipment]: missing parameter(s) `cost.supplies_equipment.per_patient`. Reported as unknown, not zero; the total is understated.",
+            "Module 'intervention' is excluded (drug manufacture is excluded in the published method); the 'drug_supply' extension estimates kits separately and is included in the totals.",
+            "Duration is the design's planned duration (no enrollment forecast supplied): a point value.",
+            "No drug kits modelled (drug type 'none', no patients or no dispensing visits)."
+          ],
+          "title": "Engine check: TrialPilot engine + library on the rebuilt design",
+          "total": {
+            "diff_pct": -89.93,
+            "explanation": null,
+            "label": "Total",
+            "module": "total",
+            "ours": {
+              "p10": 6159.75,
+              "p50": 8994.6,
+              "p90": 12646.31,
+              "unit": "kg_co2e"
+            },
+            "published_kg": 89360.2,
+            "published_within_range": false,
+            "status": "gap"
+          },
+          "unavailable_reason": null
+        },
+        {
+          "available": true,
+          "description": "As above, but every engine emission factor the paper reports is replaced by the paper's value (rail 0.04441, flights, air and road freight, UK grid 0.273, dry ice 1.81, CTU per-FTE). Remaining differences are structural: what the engine models vs what the paper counted.",
+          "id": "engine_paper_factors",
+          "line_changes": [],
+          "modules": [
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Trial set-up",
+              "module": "setup",
+              "ours": null,
+              "published_kg": 454.2,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Trial management (CTU emissions)",
+              "module": "trial_management",
+              "ours": {
+                "p10": 11733.74,
+                "p50": 11733.74,
+                "p90": 11733.74,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 11733.3,
+              "published_within_range": false,
+              "status": "match"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Meetings and travel",
+              "module": "meetings_travel",
+              "ours": null,
+              "published_kg": 1136.2,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": 0.0,
+              "explanation": null,
+              "label": "Intervention (distribution only)",
+              "module": "intervention",
+              "ours": {
+                "p10": 0.0,
+                "p50": 0.0,
+                "p90": 0.0,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 0.0,
+              "published_within_range": true,
+              "status": "match"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Data collection and exchange",
+              "module": "data_collection",
+              "ours": null,
+              "published_kg": 7572.1,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Supplies and equipment",
+              "module": "supplies_equipment",
+              "ours": null,
+              "published_kg": 1741.5,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": -85.21,
+              "explanation": null,
+              "label": "Patient assessments (incl. patient travel)",
+              "module": "patient_assessments",
+              "ours": {
+                "p10": 6159.75,
+                "p50": 8994.6,
+                "p90": 12646.31,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 60822.7,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": -100.0,
+              "explanation": null,
+              "label": "Samples",
+              "module": "samples",
+              "ours": {
+                "p10": 0.0,
+                "p50": 0.0,
+                "p90": 0.0,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 438.2,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": -100.0,
+              "explanation": null,
+              "label": "Laboratory",
+              "module": "laboratory",
+              "ours": {
+                "p10": 0.0,
+                "p50": 0.0,
+                "p90": 0.0,
+                "unit": "kg_co2e"
+              },
+              "published_kg": 2061.4,
+              "published_within_range": false,
+              "status": "gap"
+            },
+            {
+              "diff_pct": null,
+              "explanation": "Engine returned no finite value for this module (see engine warnings). ",
+              "label": "Close-out and archiving",
+              "module": "closeout",
+              "ours": null,
+              "published_kg": 3400.6,
+              "published_within_range": null,
+              "status": "unavailable"
+            },
+            {
+              "diff_pct": null,
+              "explanation": null,
+              "label": "Drug supply (TrialPilot extension, not in the paper)",
+              "module": "drug_supply",
+              "ours": {
+                "p10": 0.0,
+                "p50": 0.0,
+                "p90": 0.0,
+                "unit": "kg_co2e"
+              },
+              "published_kg": null,
+              "published_within_range": null,
+              "status": "not_reported"
+            }
+          ],
+          "notes": [
+            "parameter_set_version e644c3b07539",
+            "Patient time excludes 'patients × on-site visits × round-trip km ÷ door-to-door speed, per country' [burden.patient_travel_time.v1, module patient_assessments]: missing parameter(s) `dist.patient.roundtrip_km.global`, `time.patient.travel_speed_kmh.global`. Reported as unknown, not zero; the total is understated.",
+            "Patient time excludes 'patients × (on-site visits × hours at site + home visits × hours + telehealth visits × hours)' [burden.patient_visit_time.v1, module patient_assessments]: missing parameter(s) `time.patient.visit_at_site`. Reported as unknown, not zero; the total is understated.",
+            "Site staff time excludes 'patients × Σ visits (admin minutes + Σ procedure minutes × mode factor) ÷ 60; mode factor = 1 on site, parameter for home / telehealth' [workload.patient_visits.v1, module patient_assessments]: missing parameter(s) `time.site.procedure.default`, `time.site.visit_admin`. Reported as unknown, not zero; the total is understated.",
+            "Site staff time excludes 'on-site monitoring visits × site staff hours per visit' [workload.monitoring_support.v1, module meetings_travel]: missing parameter(s) `time.site.monitoring_visit_support`. Reported as unknown, not zero; the total is understated.",
+            "Site staff time excludes 'patients × queries per patient × minutes per query ÷ 60' [workload.query_handling.v1, module data_collection]: missing parameter(s) `rate.queries.per_patient`, `time.site.query_resolution`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'patients × on-site visits × round-trip km × (car share × car factor + rest × (rail share × rail factor + bus share × bus factor)), per country' [carbon.patient_travel.v1, module patient_assessments]: missing parameter(s) `rate.patient.mode_share.car.global`, `rate.patient.mode_share.rail.global`, `dist.patient.roundtrip_km.global`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'on-site monitoring visits (sites × visits/site/month × months × (1 − remote share)) × round-trip km × (car factor, or domestic flight factor above the flight threshold)' [carbon.monitoring_trips.v1, module meetings_travel]: missing parameter(s) `dist.monitoring.roundtrip_km.global`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'one kickoff meeting: sites × attendees per site × round-trip km × (car, short-haul or long-haul flight factor by one-way distance)' [carbon.investigator_meeting.v1, module meetings_travel]: missing parameter(s) `rate.investigator_meeting.attendees_per_site`, `dist.investigator_meeting.roundtrip_km`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × one site-initiation round trip (car or domestic flight)' [carbon.site_initiation_trips.v1, module setup]: missing parameter(s) `dist.monitoring.roundtrip_km.global`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × set-up factor per site' [carbon.setup_per_site.v1, module setup]: missing parameter(s) `ef.setup.per_site`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × one close-out round trip (car or domestic flight)' [carbon.closeout_trips.v1, module closeout]: missing parameter(s) `dist.monitoring.roundtrip_km.global`, `dist.monitoring.flight_threshold_km`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'sites × archive boxes per site × retention years × factor per box-year' [carbon.archiving.v1, module closeout]: missing parameter(s) `rate.closeout.archive_boxes_per_site`, `ef.closeout.archiving_per_box_year`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'patients × years from first to last scheduled visit × factor per patient-year' [carbon.data_collection.v1, module data_collection]: missing parameter(s) `ef.data_collection.per_patient_year`. Reported as unknown, not zero; the total is understated.",
+            "Carbon excludes 'patients × supplies factor per patient' [carbon.supplies.v1, module supplies_equipment]: missing parameter(s) `ef.supplies_equipment.per_patient`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'patients × on-site visits × reimbursement per visit' [cost.patient_reimbursement.v1, module patient_assessments]: missing parameter(s) `cost.patient.reimbursement_visit`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'site staff hours for patient visits × hourly cost' [cost.site_staff_visits.v1, module patient_assessments]: missing parameter(s) `time.site.procedure.default`, `time.site.visit_admin`, `cost.site_staff.hour`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'on-site monitoring visits × (CRA day rate × days per visit + travel expenses)' [cost.monitoring_onsite.v1, module meetings_travel]: missing parameter(s) `cost.monitoring.cra_day_rate`, `time.monitoring.onsite_visit_days`, `cost.monitoring.travel_expenses_per_trip`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'site staff hours for supporting on-site monitoring visits × hourly cost' [cost.site_staff_monitoring.v1, module meetings_travel]: missing parameter(s) `time.site.monitoring_visit_support`, `cost.site_staff.hour`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'one kickoff meeting: sites × attendees per site × cost per attendee' [cost.investigator_meeting.v1, module meetings_travel]: missing parameter(s) `rate.investigator_meeting.attendees_per_site`, `cost.investigator_meeting.per_attendee`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'sites × site start-up cost per site' [cost.setup.v1, module setup]: missing parameter(s) `cost.setup.per_site`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'sites × close-out cost per site' [cost.closeout.v1, module closeout]: missing parameter(s) `cost.closeout.per_site`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'coordinating-unit FTE × trial years × cost per FTE-year' [cost.trial_management.v1, module trial_management]: missing parameter(s) `cost.trial_management.per_fte_year`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'patients × EDC + data management per patient' [cost.data_collection.v1, module data_collection]: missing parameter(s) `cost.data_collection.per_patient`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'site staff hours for data queries × hourly cost' [cost.site_staff_queries.v1, module data_collection]: missing parameter(s) `rate.queries.per_patient`, `time.site.query_resolution`, `cost.site_staff.hour`. Reported as unknown, not zero; the total is understated.",
+            "Cost excludes 'patients × supplies cost per patient' [cost.supplies.v1, module supplies_equipment]: missing parameter(s) `cost.supplies_equipment.per_patient`. Reported as unknown, not zero; the total is understated.",
+            "Module 'intervention' is excluded (drug manufacture is excluded in the published method); the 'drug_supply' extension estimates kits separately and is included in the totals.",
+            "Duration is the design's planned duration (no enrollment forecast supplied): a point value.",
+            "No drug kits modelled (drug type 'none', no patients or no dispensing visits)."
+          ],
+          "title": "Engine check with the paper's own factors",
+          "total": {
+            "diff_pct": -76.8,
+            "explanation": null,
+            "label": "Total",
+            "module": "total",
+            "ours": {
+              "p10": 17893.49,
+              "p50": 20728.35,
+              "p90": 24380.05,
+              "unit": "kg_co2e"
+            },
+            "published_kg": 89360.2,
+            "published_within_range": false,
+            "status": "gap"
+          },
+          "unavailable_reason": null
+        }
+      ],
+      "countries": [
+        "GB"
+      ],
+      "design_inputs": [
+        {
+          "field": "enrollment_target",
+          "origin": "paper",
+          "ref": "appendix D p.3 (1962 consented and registered; 3123 pre-screened)",
+          "value": "1962"
+        },
+        {
+          "field": "sites",
+          "origin": "paper",
+          "ref": "appendix D p.3",
+          "value": "64 UK sites recruited (67 set up)"
+        },
+        {
+          "field": "site names",
+          "origin": "assumption",
+          "ref": "numbered placeholders",
+          "value": "not reported"
+        },
+        {
+          "field": "duration_months",
+          "origin": "paper",
+          "ref": "appendix D p.5 'Trial duration: 10 years'",
+          "value": "120"
+        },
+        {
+          "field": "trial-specific visits",
+          "origin": "paper",
+          "ref": "appendix D p.15: 1623 patients x 5 additional mammograms",
+          "value": "5 mammogram visits per patient"
+        },
+        {
+          "field": "patients with those visits",
+          "origin": "assumption",
+          "ref": "TrialDesign cannot restrict visits to a cohort; overcount +20.9% patient-visits",
+          "value": "1962 in the design (paper: 1623)"
+        },
+        {
+          "field": "visit timing",
+          "origin": "paper",
+          "ref": "main text: no-RT group has annual mammograms for 10 years vs 5 years standard of care",
+          "value": "years 6-10, annual"
+        },
+        {
+          "field": "registration appointments and Ki67 tissue shipments",
+          "origin": "assumption",
+          "ref": "paper counts no patient travel for them (appendix D p.15-16, p.19); tissue blocks come from routine surgery",
+          "value": "not modelled as visits"
+        },
+        {
+          "field": "drug_type",
+          "origin": "paper",
+          "ref": "appendix D p.9 'N/A - Avoidance of radiotherapy trial'",
+          "value": "none (avoidance-of-radiotherapy trial)"
+        }
+      ],
+      "duration_years": 10.0,
+      "findings": [
+        {
+          "detail": "Appendix D p.8-9 states 8 rooms (one person, one night) and 'Assumption: 8 stays (for TMG meetings)' twice, but prints 250.2 kg. Recomputing from the stated activity gives 111.2 kg (-139.0 kg, -12.2% of the meetings module, -0.16% of the total). The corrected variant uses 8 room-nights.",
+          "effect_kg": -139.0,
+          "id": "primetime-f1",
+          "lines": [
+            "mt-hotels"
+          ],
+          "severity": "medium",
+          "summary": "Hotel stays: '8 x 13.9 = 250.2 kgCO2e'; 8 x 13.9 = 111.2 (250.2 = 18 x 13.9)."
+        },
+        {
+          "detail": "Sample kits to sites: calculation text '630 x 295.88' but the printed t.km (100.77) matches the stated 301.8 km average.",
+          "effect_kg": 0.0,
+          "id": "primetime-f2",
+          "lines": [
+            "smp-kits-to-sites"
+          ],
+          "severity": "info",
+          "summary": "Sample kits to sites: calculation text '630 x 295.88' but the printed t.km (100.77) matches the stated 301.8 km average."
+        },
+        {
+          "detail": "Tracking slips: text '26.9 kg x 0.919' but the result 27.5 matches 29.89 kg (5978 pages x 5 g).",
+          "effect_kg": 0.0,
+          "id": "primetime-f3",
+          "lines": [
+            "smp-tracking-paper"
+          ],
+          "severity": "info",
+          "summary": "Tracking slips: text '26.9 kg x 0.919' but the result 27.5 matches 29.89 kg (5978 pages x 5 g)."
+        },
+        {
+          "detail": "Mammograms are costed with the chest X-ray factor (0.8 kg/scan) — the guidance lists no mammography factor.",
+          "effect_kg": 0.0,
+          "id": "primetime-f4",
+          "lines": [
+            "pa-scans"
+          ],
+          "severity": "info",
+          "summary": "Mammograms are costed with the chest X-ray factor (0.8 kg/scan) — the guidance lists no mammography factor."
+        }
+      ],
+      "id": "primetime",
+      "name": "PRIMETIME",
+      "patients": 1962,
+      "phase": "Phase 3",
+      "published": {
+        "modules": {
+          "closeout": 3400.6,
+          "data_collection": 7572.1,
+          "intervention": 0.0,
+          "laboratory": 2061.4,
+          "meetings_travel": 1136.2,
+          "patient_assessments": 60822.7,
+          "samples": 438.2,
+          "setup": 454.2,
+          "supplies_equipment": 1741.5,
+          "trial_management": 11733.3
+        },
+        "total_kg": 89360.2,
+        "total_main_text_kg": 89360.0
+      },
+      "registry_id": "ISRCTN41579286",
+      "sites": 64,
+      "source": "Griffiths J, Fox L, Williamson PR, on behalf of the Low Carbon Clinical Trials Group. Quantifying the carbon footprint of clinical trials: guidance development and case studies. BMJ Open 2024;14:e075755. doi:10.1136/bmjopen-2023-075755. Online supplemental appendix D (CC BY 4.0).",
+      "summary": [
+        "PRIMETIME: the paper's own arithmetic reproduces to -0.16% of the published 89,360 kg CO2e (89,221 kg); fixing the errors we documented moves it to 89,221 kg (-0.2%).",
+        "With TrialPilot's library factors the same activity data give 89,410 kg (P10-P90 89,257-89,499, +0.1% vs published), the difference being factor vintage (DESNZ 2026 vs 2021/2022) rather than method. The TrialPilot engine on the rebuilt design gives 8,995 kg (P10-P90 6,160-12,646, -90%)."
+      ],
+      "title": "PRIMETIME: postoperative avoidance of radiotherapy (biomarker-selected very-low-risk breast cancer)"
+    }
+  ]
+}

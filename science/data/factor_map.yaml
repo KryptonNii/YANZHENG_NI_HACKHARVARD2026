@@ -1,0 +1,172 @@
+# How each emission factor used in the published ledgers maps to TrialPilot's parameter library
+# (data/params). Used by the library check: same activity data, our factors instead of the paper's.
+#
+#   expr   arithmetic over `vars` (+ - * / and numbers only); each var is a library parameter id.
+#   kind   "independent" - our value comes from a different/newer source than the paper (e.g. DESNZ 2026);
+#          "same_source" - the library holds the paper's own LCCT value (no independent source found), so
+#                          the library check can only differ through the range, not the mid.
+#   note   shown in the results when the line moves.
+#
+# The LCCT method adds well-to-tank (WTT) to every travel and freight factor (verified against DESNZ 2022 to
+# 5 decimals, docs/sources.md), so the library expressions add `ef.wtt.*` to the direct factor as well.
+# A key that is missing here, or whose parameters are missing from the library, keeps the paper's factor and
+# is reported as such - it is never silently zeroed.
+
+# ------------------------------------------------------------------ travel (direct + WTT, DESNZ 2026)
+rail_national:
+  kind: independent
+  expr: "f + wtt"
+  vars: {f: ef.travel.rail.passenger_km, wtt: ef.wtt.travel.rail.passenger_km}
+  note: "Paper: DESNZ 2022 national rail 0.03549 + WTT 0.00892 = 0.04441. Library: DESNZ 2026 (rail factors updated in 2026)."
+flight_short_haul:
+  kind: independent
+  expr: "f + wtt"
+  vars: {f: ef.travel.flight.short_haul.passenger_km, wtt: ef.wtt.travel.flight.short_haul.passenger_km}
+  note: "Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT."
+flight_long_haul:
+  kind: independent
+  expr: "f + wtt"
+  vars: {f: ef.travel.flight.long_haul.passenger_km, wtt: ef.wtt.travel.flight.long_haul.passenger_km}
+  note: "Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT."
+flight_international:
+  kind: independent
+  expr: "f + wtt"
+  vars: {f: ef.travel.flight.international.passenger_km, wtt: ef.wtt.travel.flight.international.passenger_km}
+  note: "Paper: DESNZ 2022 with RF (90% uplift) + WTT. Library: DESNZ 2026 with RF (70% uplift) + WTT."
+
+# ------------------------------------------------------------------ freight (direct + WTT, DESNZ 2026)
+freight_road:
+  kind: independent
+  expr: "f + wtt"
+  vars: {f: ef.freight.road.tonne_km, wtt: ef.wtt.freight.road.tonne_km}
+  note: "Paper road factor 0.19443 matches no DESNZ 2022 HGV or van row; library uses the DESNZ 2026 average HGV (+WTT). A van would be ~6x higher."
+freight_air_short_haul:
+  kind: independent
+  expr: "f + wtt"
+  vars: {f: ef.freight.air.short_haul.tonne_km, wtt: ef.wtt.freight.air.short_haul.tonne_km}
+  note: "Paper: DESNZ 2022 short-haul freight flight with RF 2.30229 + WTT 0.2521. DESNZ 2026 short-haul freight is 44% lower."
+freight_air_long_haul:
+  kind: independent
+  expr: "f + wtt"
+  vars: {f: ef.freight.air.long_haul.tonne_km, wtt: ef.wtt.freight.air.long_haul.tonne_km}
+  note: "Paper: DESNZ 2022 long-haul freight flight with RF 1.0189 + WTT 0.11157. Library: DESNZ 2026."
+
+# ------------------------------------------------------------------ hotels (DESNZ; paper used the 2021 values)
+hotel_gb:
+  kind: independent
+  expr: "f"
+  vars: {f: ef.hotel.room_night.gb}
+  note: "Paper 13.9 (DESNZ 2021 hotel tab, linked in the appendix); DESNZ 2022-2026: 10.4."
+hotel_es:
+  kind: independent
+  expr: "f"
+  vars: {f: ef.hotel.room_night.es}
+  note: "Paper 18.7 (DESNZ 2021); DESNZ 2022-2026: 7.0."
+hotel_au:
+  kind: independent
+  expr: "f"
+  vars: {f: ef.hotel.room_night.au}
+  note: "Paper 42.6 (DESNZ 2021); DESNZ 2022-2026: 35.0."
+
+# ------------------------------------------------------------------ materials (DESNZ 2026 primary production)
+material_paper:
+  kind: independent
+  expr: "f"
+  vars: {f: ef.material.paper.kg}
+  note: "Paper 0.919 = DESNZ 2022 paper (primary); DESNZ 2026 = 1.344 (+46%)."
+material_board:
+  kind: independent
+  expr: "f"
+  vars: {f: ef.material.board.kg}
+  note: "Paper 0.821; DESNZ 2026 board = 1.198."
+material_paper_board_mixed:
+  kind: independent
+  expr: "f"
+  vars: {f: ef.material.paper_board_mixed.kg}
+  note: "Paper 0.881; DESNZ 2026 mixed paper and board = 1.287."
+material_plastics_average:
+  kind: independent
+  expr: "f"
+  vars: {f: ef.material.plastics_average.kg}
+material_plastics_pp:
+  kind: independent
+  expr: "f"
+  vars: {f: ef.material.plastics_pp.kg}
+material_plastics_pet:
+  kind: independent
+  expr: "f"
+  vars: {f: ef.material.plastics_pet.kg}
+material_glass:
+  kind: independent
+  expr: "f"
+  vars: {f: ef.material.glass.kg}
+
+# ------------------------------------------------------------------ electricity
+grid_gb_lcct:
+  kind: independent
+  expr: "g + td"
+  vars: {g: ef.electricity.grid.gb, td: ef.electricity.td_losses.gb}
+  note: "Paper uses 0.273 kg/kWh (source not stated in the appendix). Library: DESNZ 2026 generation + T&D (0.144)."
+grid_au_vic:
+  kind: independent
+  expr: "g"
+  vars: {g: ef.electricity.grid.au}
+  note: "Paper: Victoria 0.98 (Clean Energy Regulator EERS 2020-21). Library: Australian national factor."
+grid_au_nsw_qld:
+  kind: independent
+  expr: "g"
+  vars: {g: ef.electricity.grid.au}
+  note: "Paper: NSW/QLD 0.81. Library: Australian national factor."
+ult_freezer_unit_year:
+  kind: independent
+  expr: "kwh_day * 365 * (g + td)"
+  vars: {kwh_day: energy.freezer.minus80.kwh_per_day, g: ef.electricity.grid.gb, td: ef.electricity.td_losses.gb}
+  note: "Paper: 2192.2 kg per freezer-year (~8,000 kWh/yr at 0.273). Library: measured -80 C freezer kWh/day x DESNZ 2026 grid."
+
+# ------------------------------------------------------------------ patient travel
+patient_hospital_visit_roundtrip_gb:
+  kind: independent
+  expr: "km * (car_share * (car + car_wtt) + (1 - car_share) * (rail_share * (rail + rail_wtt) + (1 - rail_share) * (bus + bus_wtt)))"
+  vars:
+    km: dist.patient.roundtrip_km.gb
+    car_share: rate.patient.mode_share.car.gb
+    rail_share: rate.patient.mode_share.rail.gb
+    car: ef.travel.car.average_km
+    car_wtt: ef.wtt.travel.car.average_km
+    rail: ef.travel.rail.passenger_km
+    rail_wtt: ef.wtt.travel.rail.passenger_km
+    bus: ef.travel.bus.passenger_km
+    bus_wtt: ef.wtt.travel.bus.passenger_km
+  note: "Paper: 5.8 kg per UK hospital visit (out and back). Library: round-trip km x mode split x DESNZ 2026 factors (+WTT), i.e. the engine's own formula."
+
+# ------------------------------------------------------------------ LCCT values held in the library (same source as the paper)
+paper_printing_bw: {kind: same_source, expr: "f", vars: {f: ef.paper.printing_bw.kg}}
+paper_printing_colour: {kind: same_source, expr: "f", vars: {f: ef.paper.printing_colour.kg}}
+videoconference_attendee_hour: {kind: same_source, expr: "f", vars: {f: ef.meetings.videoconference_attendee_hour}}
+meal_vegetarian: {kind: same_source, expr: "f", vars: {f: ef.meetings.meal.vegetarian}}
+meal_meat: {kind: same_source, expr: "f", vars: {f: ef.meetings.meal.meat}}
+ctu_office_electricity_fte_year: {kind: same_source, expr: "f", vars: {f: ef.trial_management.office_energy_fte_year}}
+ctu_office_heating_fte_year: {kind: same_source, expr: "f", vars: {f: ef.trial_management.office_heating_fte_year}}
+ctu_commuting_fte_year: {kind: same_source, expr: "f", vars: {f: ef.trial_management.commuting_fte_year}}
+hospital_electricity_fte_year: {kind: same_source, expr: "f", vars: {f: ef.site.hospital_electricity_fte_year}}
+hospital_heating_fte_year: {kind: same_source, expr: "f", vars: {f: ef.site.hospital_heating_fte_year}}
+lab_electricity_fte_year: {kind: same_source, expr: "f", vars: {f: ef.laboratory.electricity_fte_year}}
+lab_heating_fte_year: {kind: same_source, expr: "f", vars: {f: ef.laboratory.heating_fte_year}}
+ct_scan: {kind: same_source, expr: "f", vars: {f: ef.procedure.ct_scan}}
+chest_xray: {kind: same_source, expr: "f", vars: {f: ef.procedure.x_ray}}
+consumables_per_appointment: {kind: same_source, expr: "f", vars: {f: ef.patient_assessments.consumables_per_visit}}
+dry_ice_kg: {kind: same_source, expr: "f", vars: {f: ef.dry_ice.kg}}
+sample_box_single_use: {kind: same_source, expr: "f", vars: {f: ef.samples.cold_box.single_use}}
+fridge_minus20_unit_year: {kind: same_source, expr: "f", vars: {f: ef.laboratory.fridge_minus20_unit_year}}
+health_building_electricity_m2_year: {kind: same_source, expr: "f", vars: {f: ef.building.health.electricity_m2_year}}
+health_building_heating_m2_year: {kind: same_source, expr: "f", vars: {f: ef.building.health.heating_m2_year}}
+office_electricity_m2_year: {kind: same_source, expr: "f", vars: {f: ef.building.office.electricity_m2_year}}
+office_heating_m2_year: {kind: same_source, expr: "f", vars: {f: ef.building.office.heating_m2_year}}
+data_storage_gb_year: {kind: same_source, expr: "f", vars: {f: ef.data_collection.storage_gb_year}}
+computer_services_spend_gbp: {kind: same_source, expr: "f", vars: {f: ef.data_collection.computer_services_per_gbp}}
+office_machinery_spend_gbp: {kind: same_source, expr: "f", vars: {f: ef.supplies.office_machinery_per_gbp}}
+desktop_computer_hour: {kind: same_source, expr: "f", vars: {f: ef.device.desktop_hour}}
+waste_incineration: {kind: same_source, expr: "f", vars: {f: ef.waste.incineration.kg}}
+
+# Not in the library (paper factor kept, flagged in results): catering_spend_gbp (0.708 kg/GBP),
+# cd_manufacture (0.83 kg/CD), ctu_office_heating_fte_year_au (55.53), hospital_heating_fte_year_au (893.6).

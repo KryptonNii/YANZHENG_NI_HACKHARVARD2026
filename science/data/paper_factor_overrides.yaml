@@ -1,0 +1,40 @@
+# The paper's own emission factors, expressed as TrialPilot engine parameter ids, for the
+# "engine + paper factors" run (the method check through the engine). Only factors the engine actually uses
+# and the paper actually reports are listed; everything else stays at the library value.
+# Source: Griffiths et al. BMJ Open 2024;14:e075755, appendices C/D (pages cited).
+ef.travel.rail.passenger_km:
+  value: 0.04441
+  unit: kg_co2e/passenger_km
+  ref: "appendix C p.7 'national rail: p.km x 0.04441' (= DESNZ 2022 0.03549 + WTT 0.00892)"
+ef.travel.flight.domestic.passenger_km:
+  value: 0.27278
+  unit: kg_co2e/passenger_km
+  ref: "appendix C p.7 'Domestic (average): 0.27278'"
+ef.travel.flight.short_haul.passenger_km:
+  value: 0.17034
+  unit: kg_co2e/passenger_km
+  ref: "appendix C p.7 'Short-haul (average) to/from UK: 0.17034'"
+ef.travel.flight.long_haul.passenger_km:
+  value: 0.21423
+  unit: kg_co2e/passenger_km
+  ref: "appendix C p.8 'Long-haul (average) to/from UK: 0.21423'"
+ef.freight.air.tonne_km:
+  value: 1.13047
+  unit: kg_co2e/tonne_km
+  ref: "appendix C p.4 'Long-haul (to/from UK) = 1.13047; International (to/from non-UK) = 1.13047'"
+ef.freight.van.tonne_km:
+  value: 0.19443
+  unit: kg_co2e/tonne_km
+  ref: "appendix C p.4 'For road freight: t.km x 0.19443' (the engine's road courier factor)"
+ef.electricity.grid.gb:
+  value: 0.273
+  unit: kg_co2e/kwh
+  ref: "appendix C p.20 'multiply kWh by the electricity emission factor (0.273)'"
+ef.dry_ice.kg:
+  value: 1.81
+  unit: kg_co2e/kg
+  ref: "appendix C p.18 'Dry ice: 1.81kg CO2e for 1 kg dry ice produced/used'"
+ef.trial_management.per_fte_year:
+  value: 1652.64
+  unit: kg_co2e/fte_year
+  ref: "appendix C p.5-7: office energy 193.28 + heating 431.56 + commuting 1027.8 per FTE-year"

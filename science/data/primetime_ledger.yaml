@@ -212,8 +212,9 @@ lines:
   # ---------------------------------------------------------------- 10. Close out (p.21-23)
   - {id: close-archive-electricity, module: closeout, page: 22, item: "Archiving 4 m2 office x 10 years: electricity",
      qty: [4, 10], qty_unit: m2_year, factor: 16.1, factor_key: office_electricity_m2_year, reported_kg: 644}
-  - {id: close-archive-heating, module: closeout, page: 22, item: "Archiving 4 m2 office x 10 years: heating (36 kg/m2)",
-     qty: [4, 10], qty_unit: m2_year, factor: 36, factor_key: office_heating_m2_year, reported_kg: 1428}
+  - {id: close-archive-heating, module: closeout, page: 22, item: "Archiving 4 m2 office x 10 years: heating",
+     qty: [4, 10], qty_unit: m2_year, qty_note: "factor printed as '36'; the result 1428 = 35.69 x 40 (rounded), as in CASPS",
+     factor: 35.69, factor_key: office_heating_m2_year, reported_kg: 1428}
   - {id: close-electronic, module: closeout, page: 22, item: "Electronic storage ~4 GB x 10 years",
      qty: [4, 10], qty_unit: gb_year, factor: 1.365, factor_key: data_storage_gb_year, reported_kg: 54.6}
   - {id: close-samples-electricity, module: closeout, page: 23, item: "Biological samples 2 m2 health building x 10 years: electricity",
