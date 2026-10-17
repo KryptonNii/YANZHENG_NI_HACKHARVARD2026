@@ -65,9 +65,12 @@ _MIN_DRAWS = 100  # never fewer, even for very large trials
 # Compute budget per call, in simulated (site × week) cells + ½ × dispensing events. Keeps one call at
 # roughly 0.1–0.3 s on a laptop; larger trials run on fewer draws (never < _MIN_DRAWS) and say so.
 _WORK_BUDGET = 6_000_000
-_CHUNK_SITE_DRAWS = 16_384  # (draw, site) pairs simulated together; bounds memory to ~100 MB
+# (draw, site) pairs simulated together. Fewer, larger chunks mean fewer Python-level weekly steps;
+# the largest array is the expiry ring, shelf-life weeks × cells × 4 bytes ≈ 30 MB at 2 years.
+_CHUNK_SITE_DRAWS = 65_536
 Strategy = Literal["upfront", "on_demand"]
 BoolArray = np.ndarray[Any, np.dtype[np.bool_]]
+_NO_CELLS: IntArray = np.zeros(0, dtype=np.int64)
 
 SUPPLY_DEFAULTS: dict[str, Parameter] = {
     p.id: p
@@ -155,6 +158,7 @@ class SupplyResult:
     kits_expired: MetricRange | None = None
     kits_destroyed_at_close: MetricRange | None = None
     emergency_shipments: MetricRange | None = None
+    draws_requested: int = 0
     draws_used: int = 0
     warnings: list[str] = field(default_factory=list)
     provenance: list[ProvenanceItem] = field(default_factory=list)
@@ -175,6 +179,7 @@ class SupplyResult:
             "shipments": dump(self.shipments),
             "emergency_shipments": dump(self.emergency_shipments),
             "stockout_probability": self.stockout_probability,
+            "draws_requested": self.draws_requested,
             "draws_used": self.draws_used,
             "warnings": list(self.warnings),
             "provenance": [p.model_dump() for p in self.provenance],
@@ -182,10 +187,9 @@ class SupplyResult:
 
 
 def _count_range(x: IntArray) -> MetricRange:
-    """MetricRange for a count of shipments. The contract's unit literal has no 'count' (proposal in
-    handoffs/A3_CONTRACT_CHANGES.md), so this is built without validation and labelled honestly."""
+    """Shipment counts. Contract v4 accepts unit ``count``; this goes through normal validation."""
     p10, p50, p90 = np.percentile(x.astype(np.float64), [10.0, 50.0, 90.0])
-    return MetricRange.model_construct(p10=float(p10), p50=float(p50), p90=float(p90), unit="count")
+    return MetricRange(p10=float(p10), p50=float(p50), p90=float(p90), unit="count")
 
 
 def _kits(x: IntArray) -> MetricRange:
@@ -252,6 +256,8 @@ def _sample_patients(fd: ForecastDraws, rng: np.random.Generator) -> tuple[IntAr
     hi = fd.fixed_until[flat_fix // s]
     lo_f = np.minimum(fd.activation.ravel()[flat_fix], hi)
     t_fix = lo_f + rng.random(flat_fix.size) * (hi - lo_f)
+    if not flat_fix.size:  # flat_new is already sorted (np.repeat of a range)
+        return flat_new.astype(np.int64), t_new
 
     flat = np.concatenate([flat_new, flat_fix])
     order = np.argsort(flat, kind="stable")
@@ -277,11 +283,67 @@ class _Policy:
     planned_patients: FloatArray  # (S,) planner's expected patients per site over the trial
 
 
-def _event_groups(weeks: IntArray, n_weeks: int) -> tuple[IntArray, IntArray]:
-    """Indices sorted by week + pointer array: indices for week t are order[ptr[t]:ptr[t+1]]."""
+def _event_groups(weeks: IntArray, n_weeks: int) -> tuple[IntArray, list[int]]:
+    """Indices sorted by week + pointer list: indices for week t are order[ptr[t]:ptr[t+1]]."""
     order = np.argsort(weeks, kind="stable")
     ptr = np.searchsorted(weeks[order], np.arange(n_weeks + 1))
-    return order.astype(np.int64), ptr.astype(np.int64)
+    return order.astype(np.int64), [int(v) for v in ptr]
+
+
+@dataclass(frozen=True)
+class _Cohort:
+    """Cells of a group of patients, sorted by randomisation week: week e is cells[ptr[e]:ptr[e+1]]."""
+
+    cells: IntArray
+    ptr: list[int]
+
+
+def _cohort(cells: IntArray, weeks: IntArray, n_weeks: int) -> _Cohort:
+    """`weeks` must be sorted (the caller sorts all patients once and then only filters)."""
+    ptr: list[int] = np.searchsorted(weeks, np.arange(n_weeks + 1)).tolist()
+    return _Cohort(cells, ptr)
+
+
+def _week_cells(families: list[tuple[_Cohort, int]], t: int, n_weeks: int) -> IntArray | None:
+    """Cells with an event at week t, one entry per event (a cell repeats when it has several);
+    event = a patient of the cohort randomised at week t − shift. None when there is no event."""
+    pieces = []
+    for co, shift in families:
+        e = t - shift
+        if 0 <= e < n_weeks:
+            a, b = co.ptr[e], co.ptr[e + 1]
+            if b > a:
+                pieces.append(co.cells[a:b])
+    if not pieces:
+        return None
+    return pieces[0] if len(pieces) == 1 else np.concatenate(pieces)
+
+
+def _materialize(families: list[tuple[_Cohort, int]], horizon: int) -> list[IntArray | None]:
+    """Every family's events grouped by week, so the inventory loop indexes one array per week.
+
+    The multiset of cells at week t matches `_week_cells` (addition order does not matter:
+    dispensing and the IRT window are scatter-adds).
+    """
+    buckets: list[list[IntArray]] = [[] for _ in range(horizon)]
+    for co, shift in families:
+        ptr = co.ptr
+        for e in range(min(len(ptr) - 1, horizon)):
+            a, b = ptr[e], ptr[e + 1]
+            if b <= a:
+                continue
+            t = e + shift
+            if 0 <= t < horizon:
+                buckets[t].append(co.cells[a:b])
+    out: list[IntArray | None] = []
+    for parts in buckets:
+        if not parts:
+            out.append(None)
+        elif len(parts) == 1:
+            out.append(parts[0])
+        else:
+            out.append(np.concatenate(parts))
+    return out
 
 
 def _simulate_chunk(
@@ -289,7 +351,13 @@ def _simulate_chunk(
     p_visits: IntArray,
 ) -> dict[str, IntArray]:
     """Weekly inventory for draws [draw_lo, draw_hi) × all sites. p_* are this chunk's patients:
-    local (draw, site) column, randomisation week, dispensing visits received (dropouts < V)."""
+    local (draw, site) column sorted ascending, randomisation week, dispensing visits received
+    (dropouts < V).
+
+    Per week only a few dense passes over the cells are needed. The demand and IRT-knowledge rows are
+    built on the fly from patient cohorts sorted by randomisation week (no week × cell matrices), and
+    the reorder test reads one array, h = usable stock − trigger, kept up to date incrementally.
+    """
     s = fd.rates.shape[1]
     dc = draw_hi - draw_lo
     ds = dc * s
@@ -302,188 +370,265 @@ def _simulate_chunk(
 
     act_w = np.floor(fd.activation[gdraw, site] * WEEKS_PER_MONTH).astype(np.int64)
     close_w = np.ceil(fd.enrollment_closed_at[gdraw] * WEEKS_PER_MONTH).astype(np.int64)
-    last = int(p_week.max() + offs[-1]) if p_week.size else 0
-    horizon = max(last, int(act_w.max())) + 1
-    rows = horizon + k + 1
+    # Each draw is its own trial and ends after its own last possible dispensing week; kits still at
+    # its sites or in transit then are destroyed at close. Draws simulated in the same chunk never see
+    # each other's end week or lead time, so results do not depend on chunking or on the draw count.
+    draw_ptr = np.searchsorted(p_ds, np.arange(dc + 1) * s)
+    filled = np.flatnonzero(draw_ptr[1:] > draw_ptr[:-1])
+    last_w = np.zeros(dc, dtype=np.int64)
+    if filled.size:
+        last_w[filled] = np.maximum.reduceat(p_week, draw_ptr[filled]) + offs[-1]
+    trial_end = np.maximum(last_w, act_w.reshape(dc, s).max(axis=1)) + 1  # first week after the trial
+    horizon = int(trial_end.max())
+    ends_differ = bool(trial_end.min() < horizon)
+    end_of = np.repeat(trial_end, s)
     kits = pol.kits_per_visit[gdraw]
+    kits_vary = bool(np.any(kits != 1))
 
-    # --- dispensing events: patient (cell, randomisation week e) gets kits at b = e + offset -------
-    # Flat bin index = week · ds + cell (int32: rows · ds stays far below 2³¹).
-    base = (p_week * ds + p_ds).astype(np.int32)
-    full = p_visits >= n_vis
-    j_drop = p_visits[~full]
-    vis_drop = np.arange(int(j_drop.sum())) - np.repeat(np.cumsum(j_drop) - j_drop, j_drop)
-    base_drop = np.repeat(base[~full], j_drop)
-    off_ds = (offs * ds).astype(np.int32)
-    # The IRT knows a dispensing at week b from week max(e, b − k) — the patient is randomised and the
-    # visit is inside the k-week window — until b: a +1/−1 range starting at b − min(offset, k).
-    start_ds = (off_ds - np.minimum(offs, k) * ds).astype(np.int32)
-    b_idx = np.concatenate([(base[full, None] + off_ds[None, :]).ravel(), base_drop + off_ds[vis_drop]])
-    s_idx = np.concatenate(
-        [(base[full, None] + start_ds[None, :]).ravel(), base_drop + start_ds[vis_drop]]
-    )
-    del base, base_drop, vis_drop
+    # --- patient cohorts by randomisation week ---------------------------------------------------
+    # Patient (cell, randomisation week e, V visits received) gets kits at b = e + offs[j], j < V.
+    # The IRT knows that dispensing from week max(e, b − k) — the patient is randomised and the visit
+    # is inside the k-week window — until b, i.e. from e + shift_j with shift_j = offs[j] − min(offs[j], k).
+    # Phantom visits: a patient who will drop out after V visits is still expected (within the window)
+    # until the first visit they miss, b_miss = e + offs[V] — the IRT cannot know the future dropout.
+    wkey = p_week.astype(np.int16) if horizon < 2**15 else p_week  # int16: radix sort
+    by_week = np.argsort(wkey, kind="stable")  # stable: cells stay ascending within a week
+    e_s, c_s, v_s = p_week[by_week], p_ds[by_week], p_visits[by_week]
+    full = v_s >= n_vis  # most patients; the masks below only run over the dropouts
+    whole = _cohort(c_s[full], e_s[full], horizon)
+    c_d, e_d, v_d = c_s[~full], e_s[~full], v_s[~full]
+    dem_fam: list[tuple[_Cohort, int]] = []  # demand: kits dispensed at week t
+    plus_fam: list[tuple[_Cohort, int]] = []  # dispensings that enter the IRT window at week t
+    minus_fam: list[tuple[_Cohort, int]] = []  # phantom dispensings that leave it (dropout seen)
+    for j in range(n_vis):
+        shift = int(offs[j] - min(int(offs[j]), k))
+        dem_fam.append((whole, int(offs[j])))
+        plus_fam.append((whole, shift))
+        sel = v_d > j  # dropouts who still receive dispensing j
+        if sel.any():
+            co = _cohort(c_d[sel], e_d[sel], horizon)
+            dem_fam.append((co, int(offs[j])))
+            plus_fam.append((co, shift))
+    for jd in range(1, n_vis):
+        sel = v_d == jd
+        if not sel.any():
+            continue
+        co = _cohort(c_d[sel], e_d[sel], horizon)
+        for vv in range(jd, n_vis):
+            if offs[vv] - offs[jd] >= k:
+                break
+            plus_fam.append((co, max(0, int(offs[vv]) - k)))
+            minus_fam.append((co, int(offs[jd])))
+    del by_week, e_s, c_s, v_s, wkey, c_d, e_d, v_d
+    dem_at = _materialize(dem_fam, horizon)
+    plus_at = _materialize(plus_fam, horizon)
+    minus_at = _materialize(minus_fam, horizon)
+    del dem_fam, plus_fam, minus_fam
 
-    # Phantom visits: a patient who will drop out is still expected (within the window) until the
-    # first visit they miss — the IRT cannot know the future dropout.
-    drop = ~full
-    e_d, j_d, c_d = p_week[drop], p_visits[drop], p_ds[drop]
-    b_miss = e_d + offs[np.minimum(j_d, n_vis - 1)]
-    ph_lo: list[IntArray] = []
-    ph_hi: list[IntArray] = []
-    for m in range(n_vis):
-        v = j_d + m
-        b_v = e_d + offs[np.minimum(v, n_vis - 1)]
-        valid = (v < n_vis) & ((b_v - b_miss) < k)
-        if not valid.any():
-            break
-        ph_lo.append(np.maximum(e_d, b_v - k)[valid] * ds + c_d[valid])
-        ph_hi.append(b_miss[valid] * ds + c_d[valid])
-
-    size = rows * ds
-    plus = [s_idx, *ph_lo]
-    minus = [b_idx, *ph_hi]
-    n_plus = sum(a.size for a in plus)
-    weights = np.ones(n_plus + sum(a.size for a in minus))
-    weights[n_plus:] = -1.0
-    diff = np.bincount(np.concatenate(plus + minus), weights=weights, minlength=size)
-    known = np.cumsum(diff.reshape(rows, ds)[:horizon], axis=0).astype(np.int32)  # exact: small ints
-    dem = np.bincount(b_idx, minlength=size).reshape(rows, ds).astype(np.int32)
-    del diff, weights, plus, minus, s_idx, b_idx
-    if np.any(kits != 1):
-        dem *= kits[None, :].astype(np.int32)
-        known *= kits[None, :].astype(np.int32)
     total_dem = np.bincount(p_ds, weights=p_visits, minlength=ds).astype(np.int64) * kits
     last_dem_w = np.full(ds, -1, dtype=np.int64)
-    np.maximum.at(last_dem_w, p_ds, p_week + offs[np.maximum(p_visits, 1) - 1])
+    if p_ds.size:  # p_ds is sorted, so each cell's patients are one contiguous run
+        first = np.flatnonzero(np.r_[True, p_ds[1:] != p_ds[:-1]])
+        last_dem_w[p_ds[first]] = np.maximum.reduceat(
+            p_week + offs[np.maximum(p_visits, 1) - 1], first
+        )
 
     # --- policy -----------------------------------------------------------------------------------
     rate_week = fd.planned_rate[site] / WEEKS_PER_MONTH
     new_kits_k = rate_week * kits * float(sum(k - o for o in offs if o < k))
-    exp_new = np.rint(new_kits_k).astype(np.int32)  # expected new-patient kits, whole kits
+    exp_new = np.rint(new_kits_k).astype(np.int64)  # expected new-patient kits, whole kits
     if pol.strategy == "upfront":
         q0f = np.ceil(pol.planned_patients[site] * kits * n_vis * (1.0 + pol.overage[gdraw]))
     else:
         q0f = np.ceil(new_kits_k + pol.safety)
-    q0 = q0f.astype(np.int32)
+    q0 = q0f.astype(np.int64)
     end_w = np.maximum(close_w, last_dem_w)  # in service while act_w <= t < end_w
     lead = pol.lead_weeks[gdraw]
     shelf = pol.shelf_weeks[gdraw]
     lead_values = [int(v) for v in np.unique(lead)]
-    exp_len = int(shelf.max()) + 1
-    look = int(lead.max())
+    exp_len = int(np.max(pol.shelf_weeks)) + 1  # ring size from all draws: independent of chunking
+    look = int(np.max(lead))
     open_order, open_ptr = _event_groups(act_w, horizon)
     closing_cells = np.flatnonzero(act_w < close_w)
     close_order, close_ptr = _event_groups(close_w[closing_cells], horizon)
     ending_cells = np.flatnonzero(act_w < end_w)
     end_order, end_ptr = _event_groups(end_w[ending_cells], horizon)
 
+    # State per cell. Trigger = IRT-known need in the window + exp_part + safety_part; usable stock =
+    # stock + in transit − pen, pen = kits that expire before a resupply could arrive (only cells in
+    # `soon` have pen > 0). h = usable − trigger is updated by every change, so cells to resupply are
+    # exactly h < 0.
     in_transit: dict[int, list[tuple[IntArray, IntArray]]] = {}  # arrival week → (cells, kits)
     exp_due = np.zeros((exp_len, ds), dtype=np.int32)  # FIFO expiry thresholds, by due week
-    soon_thr = np.zeros(ds, dtype=np.int32)  # latest threshold due within the lead time
-    stock = np.zeros(ds, dtype=np.int32)
-    position = np.zeros(ds, dtype=np.int32)  # stock + in transit
-    arrived = np.zeros(ds, dtype=np.int32)  # cumulative arrivals (incl. emergency kits)
-    exp_part = np.zeros(ds, dtype=np.int32)
-    safety_part = np.zeros(ds, dtype=np.int32)
-    trig_base = np.zeros(ds, dtype=np.int32)
+    exp_mark = np.zeros((exp_len, ds), dtype=np.bool_)  # which cells have a threshold in that slot
+    soon_thr = np.zeros(ds, dtype=np.int64)  # latest threshold due within the lead time
+    soon = np.zeros(0, dtype=np.int64)  # cells with soon_thr > 0
+    pen = np.zeros(ds, dtype=np.int64)
+    h = np.zeros(ds, dtype=np.int64)
+    stock = np.zeros(ds, dtype=np.int64)
+    transit = np.zeros(ds, dtype=np.int64)
+    arrived = np.zeros(ds, dtype=np.int64)  # cumulative arrivals (incl. emergency kits)
+    exp_part = np.zeros(ds, dtype=np.int64)
+    safety_part = np.zeros(ds, dtype=np.int64)
     expired = np.zeros(ds, dtype=np.int64)
     produced = np.zeros(ds, dtype=np.int64)
     shipments = np.zeros(ds, dtype=np.int64)
     emergency = np.zeros(ds, dtype=np.int64)
-    take = np.empty(ds, dtype=np.int32)
-    unmet = np.empty(ds, dtype=np.int32)
-    trig = np.empty(ds, dtype=np.int32)
-    below = np.empty(ds, dtype=bool)
-    has_soon = np.empty(ds, dtype=bool)
-    safety = np.int32(pol.safety)
 
     def schedule_expiry(idx: IntArray, t: int) -> None:
-        exp_due[(t + shelf[idx]) % exp_len, idx] = arrived[idx]
+        slot = (t + shelf[idx]) % exp_len
+        thr = arrived[idx]
+        exp_due[slot, idx] = thr
+        # A zero threshold is invisible to the old `exp_due != 0` scan; keep that.
+        exp_mark[slot, idx] = thr != 0
+
+    def mark_soon(cells: IntArray, thr: IntArray, soon: IntArray) -> IntArray:
+        old = soon_thr[cells]
+        soon_thr[cells] = np.maximum(old, thr)
+        return np.concatenate([soon, cells[old == 0]])
+
+    # A cell marks kits due at week w as unusable from week w − (its own lead time). Entries due at w
+    # are written at week w − shelf, so when every shelf life is at least the longest lead time
+    # (`look`), one look-ahead scan at week w − look finds every cell due at w: its marks are deferred
+    # to each cell's own week, and the same cells are reused for the expiry at w (one scan per week).
+    reuse_scan = int(shelf.min()) >= look
+    scans: dict[int, IntArray] = {}
+    marks: dict[int, list[tuple[IntArray, IntArray]]] = {}  # week → (cells, thresholds) to mark
+    orders: list[tuple[IntArray, IntArray]] = []  # resupplies (cells, kits), tallied after the loop
+    first_end = int(trial_end.min()) if ends_differ else horizon
+    int_factor = float(pol.order_factor).is_integer() and pol.order_factor < 2**20
+    factor_i = int(pol.order_factor)
+    kit_at = (lambda cells: kits[cells]) if kits_vary else (lambda cells: 1)
 
     for t in range(horizon):
         # 1. arrivals: resupplies in transit, then the initial stock of sites opening this week
         for nz, q in in_transit.pop(t, ()):
             stock[nz] += q
+            transit[nz] -= q
             arrived[nz] += q
             schedule_expiry(nz, t)
         idx = open_order[open_ptr[t] : open_ptr[t + 1]]
         if idx.size:
             q = q0[idx]
             stock[idx] += q
-            position[idx] += q
             arrived[idx] += q
             produced[idx] += q
             shipments[idx] += q > 0
             schedule_expiry(idx, t)
-            exp_part[idx] = np.where(t < close_w[idx], exp_new[idx], 0)
-            safety_part[idx] = np.where(t < end_w[idx], safety, 0)
-            trig_base[idx] = exp_part[idx] + safety_part[idx]
+            ep = np.where(t < close_w[idx], exp_new[idx], 0)
+            sp = np.where(t < end_w[idx], pol.safety, 0)
+            h[idx] += q - (ep - exp_part[idx]) - (sp - safety_part[idx])
+            exp_part[idx] = ep
+            safety_part[idx] = sp
         idx = closing_cells[close_order[close_ptr[t] : close_ptr[t + 1]]]
         if idx.size:
+            h[idx] += exp_part[idx]
             exp_part[idx] = 0
-            trig_base[idx] = safety_part[idx]
         idx = ending_cells[end_order[end_ptr[t] : end_ptr[t + 1]]]
         if idx.size:
+            h[idx] += safety_part[idx]
             safety_part[idx] = 0
-            trig_base[idx] = exp_part[idx]
 
         # 2. FIFO expiry of shipments that reached the site `shelf` weeks ago
         eslot = t % exp_len
-        nz = np.flatnonzero(exp_due[eslot])
+        nz = scans.pop(t, _NO_CELLS) if reuse_scan else np.flatnonzero(exp_mark[eslot])
         if nz.size:
             thr = exp_due[eslot, nz]
             exp_due[eslot, nz] = 0
+            exp_mark[eslot, nz] = False
             x = np.maximum(thr - (arrived[nz] - stock[nz]), 0)
+            if t >= first_end:
+                x[t >= end_of[nz]] = 0  # that draw's trial is over: its leftovers are destroyed
             stock[nz] -= x
-            position[nz] -= x
+            h[nz] -= x
             expired[nz] += x
-            soon_thr[nz] = np.where(soon_thr[nz] <= thr, 0, soon_thr[nz])
-        lslot = (t + look) % exp_len
-        nz = np.flatnonzero(exp_due[lslot])
-        if nz.size:
-            soon_thr[nz] = np.maximum(soon_thr[nz], exp_due[lslot, nz])
+            st = soon_thr[nz]
+            soon_thr[nz] = np.where(st <= thr, 0, st)  # cleared cells leave `soon` in step 4
+        # A bool row scans faster than comparing the int threshold row.
+        if reuse_scan:
+            lslot = (t + look) % exp_len
+            nz = np.flatnonzero(exp_mark[lslot])
+            if nz.size:
+                scans[t + look] = nz
+                if len(lead_values) == 1:
+                    soon = mark_soon(nz, exp_due[lslot, nz], soon)
+                else:
+                    thr, lc = exp_due[lslot, nz], lead[nz]
+                    for lv in lead_values:
+                        sel = lc == lv
+                        if sel.any():
+                            marks.setdefault(t + look - lv, []).append((nz[sel], thr[sel]))
+            for nz, thr in marks.pop(t, ()):
+                soon = mark_soon(nz, thr, soon)
+        else:  # some shelf life is shorter than a lead time: scan per lead time
+            for lv in lead_values:
+                lslot = (t + lv) % exp_len
+                nz = np.flatnonzero(exp_mark[lslot])
+                if nz.size and len(lead_values) > 1:
+                    nz = nz[lead[nz] == lv]
+                if nz.size:
+                    soon = mark_soon(nz, exp_due[lslot, nz], soon)
 
         # 3. dispensing; a shortfall is a stockout served by an emergency shipment
-        d_t = dem[t]
-        np.minimum(d_t, stock, out=take)
-        stock -= take
-        position -= take
-        np.subtract(d_t, take, out=unmet)
-        nz = np.flatnonzero(unmet)
-        if nz.size:
-            u = unmet[nz]
-            produced[nz] += u
-            arrived[nz] += u  # arrive and are dispensed in the same week
-            emergency[nz] += 1
-            shipments[nz] += 1
+        cells = dem_at[t]
+        if cells is not None:
+            np.subtract.at(stock, cells, kit_at(cells))
+            short = cells[stock[cells] < 0]
+            if short.size:
+                nz = np.unique(short)
+                u = -stock[nz]
+                stock[nz] = 0
+                produced[nz] += u
+                arrived[nz] += u  # arrive and are dispensed in the same week
+                emergency[nz] += 1
+                shipments[nz] += 1
+                h[nz] += u
+        # IRT-known need: the dispensings of this week leave both stock and the window (no change
+        # in h); new patients and visits entering the window raise the trigger; phantoms leave it.
+        cells = plus_at[t]
+        if cells is not None:
+            np.subtract.at(h, cells, kit_at(cells))
+        cells = minus_at[t]
+        if cells is not None:
+            np.add.at(h, cells, kit_at(cells))
 
         # 4. resupply when usable stock + in transit < projected need (t, t+k] + safety stock
-        np.add(known[t], trig_base, out=trig)
-        np.less(position, trig, out=below)
-        np.greater(soon_thr, 0, out=has_soon)
-        below |= has_soon  # kits about to expire: check exactly below
-        cand = np.flatnonzero(below)
-        if cand.size:
-            usable = position[cand] - np.maximum(soon_thr[cand] - (arrived[cand] - stock[cand]), 0)
-            need = usable < trig[cand]
-            o = cand[need]
-            if o.size:
-                projected = known[t][o] + exp_part[o]
-                q = np.maximum(
-                    np.ceil(pol.order_factor * projected + safety_part[o] - usable[need]), 1
-                ).astype(np.int32)
-                if len(lead_values) == 1:
-                    in_transit.setdefault(t + lead_values[0], []).append((o, q))
-                else:
-                    lo_ = lead[o]
-                    for lv in lead_values:
-                        sel = lo_ == lv
-                        if sel.any():
-                            in_transit.setdefault(t + lv, []).append((o[sel], q[sel]))
-                position[o] += q
-                produced[o] += q
-                shipments[o] += 1
+        if soon.size:
+            # A cell may appear twice (cleared and marked again in one week): both entries compute
+            # the same value, so the fancy assignments below stay exact.
+            st = soon_thr[soon]
+            new_pen = np.maximum(st - (arrived[soon] - stock[soon]), 0)
+            h[soon] += pen[soon] - new_pen
+            pen[soon] = new_pen
+            soon = soon[st > 0]
+        o = np.flatnonzero(h < 0)
+        if o.size:
+            usable = stock[o] + transit[o] - pen[o]
+            sp_o = safety_part[o]
+            projected = usable - h[o] - sp_o  # IRT-known need + expected new-patient kits
+            if int_factor:  # exact in integers: identical to the float formula below
+                q = factor_i * projected + sp_o - usable
+                np.maximum(q, 1, out=q)
+            else:
+                q = np.maximum(np.ceil(pol.order_factor * projected + sp_o - usable), 1).astype(np.int64)
+            if len(lead_values) == 1:
+                in_transit.setdefault(t + lead_values[0], []).append((o, q))
+            else:
+                lo_ = lead[o]
+                for lv in lead_values:
+                    sel = lo_ == lv
+                    if sel.any():
+                        in_transit.setdefault(t + lv, []).append((o[sel], q[sel]))
+            transit[o] += q
+            h[o] += q
+            orders.append((o, q))
+
+    if orders:  # resupplies, tallied once (exact: integer sums far below 2⁵³)
+        o_all = np.concatenate([o for o, _ in orders])
+        produced += np.bincount(
+            o_all, weights=np.concatenate([q for _, q in orders]), minlength=ds
+        ).astype(np.int64)
+        shipments += np.bincount(o_all, minlength=ds)
 
     def per_draw(x: IntArray) -> IntArray:
         return np.asarray(x.reshape(dc, s).sum(axis=1), dtype=np.int64)
@@ -492,7 +637,7 @@ def _simulate_chunk(
         "needed": per_draw(total_dem),
         "produced": per_draw(produced),
         "expired": per_draw(expired),
-        "leftover": per_draw(position.astype(np.int64)),
+        "leftover": per_draw(stock + transit),
         "shipments": per_draw(shipments),
         "emergency": per_draw(emergency),
     }
@@ -505,7 +650,7 @@ def _simulate_chunk(
 
 def _no_drug_result(design: TrialDesign, strategy: Strategy) -> SupplyResult:
     zero = MetricRange(p10=0.0, p50=0.0, p90=0.0, unit="kits")
-    none = MetricRange.model_construct(p10=0.0, p50=0.0, p90=0.0, unit="count")
+    none = MetricRange(p10=0.0, p50=0.0, p90=0.0, unit="count")
     return SupplyResult(
         kits_needed=zero, kits_produced=zero, kits_wasted=zero,
         waste_share=MetricRange(p10=0.0, p50=0.0, p90=0.0, unit="percent"),
@@ -542,15 +687,23 @@ def simulate_supply(
     n_vis = len(offsets)
     patients_per_draw = fd_all.new_patients + fd_all.fixed_counts.sum(axis=1)
     planned_total = float(np.median(patients_per_draw))
-    n_draws = min(max(1, draws), fd_all.n_draws)
+    requested = max(1, draws)
+    available = fd_all.n_draws
+    n_draws = min(requested, available)
     weeks = float(np.median(fd_all.t_full + fd_all.followup_months)) * WEEKS_PER_MONTH
     per_draw_work = fd_all.rates.shape[1] * weeks + 0.5 * planned_total * n_vis
     budget_draws = int(_WORK_BUDGET // max(per_draw_work, 1.0))
     if budget_draws < n_draws:
         n_draws = max(min(_MIN_DRAWS, n_draws), budget_draws)
         warnings.append(
-            f"Large trial: drug supply simulated on {n_draws} draws (not {draws}) to stay within the "
-            "compute budget; supply ranges are noisier than the other metrics."
+            f"Drug supply simulated {n_draws} draws (requested {requested}, "
+            f"{available} forecast draws available) to stay within the compute budget; "
+            "supply ranges are noisier than the other metrics."
+        )
+    elif n_draws < requested:
+        warnings.append(
+            f"Drug supply simulated {n_draws} draws (requested {requested}, "
+            f"{available} forecast draws available)."
         )
     fd = fd_all.take(n_draws)
     d, s = fd.rates.shape
@@ -623,7 +776,8 @@ def simulate_supply(
         "waste; depot stock beyond site shipments is out of scope.",
         "Dropouts stop after a uniformly random number of dispensings; the IRT projection does not "
         "know future dropouts.",
-        f"Supply simulated on {d} forecast draws in weekly steps.",
+        f"Supply simulated {d} weekly-step draws (requested {requested}, "
+        f"{available} forecast draws available).",
     ]
     desc = (
         "Upfront: each site receives planned patients × kits per patient × (1 + overage) at "
@@ -653,6 +807,8 @@ def simulate_supply(
                 "safety_stock_kits": float(pol.safety),
                 "cover_weeks": float(pol.cover_weeks),
                 "planned_patients": round(planned_total, 1),
+                "draws_requested": float(requested),
+                "draws_available": float(available),
                 "draws": float(d),
                 "seed": float(seed),
             },
@@ -673,6 +829,7 @@ def simulate_supply(
         kits_expired=_kits(per.kits_expired),
         kits_destroyed_at_close=_kits(per.kits_destroyed_at_close),
         emergency_shipments=_count_range(per.emergency_shipments),
+        draws_requested=requested,
         draws_used=d,
         warnings=warnings,
         provenance=provenance,

@@ -264,6 +264,14 @@ def test_result_is_json_ready_and_exposes_duration_draws() -> None:
     json.dumps(fc.to_dict())
     assert fc.duration_draws is not None and fc.duration_draws.shape == (400,)
     assert np.percentile(fc.duration_draws, 50) == pytest.approx(fc.duration_months.p50)
+    assert any("400" in w and "2,000" in w for w in fc.warnings)
+
+
+def test_curve_downsampling_reports_requested_and_actual_draws() -> None:
+    fc = forecast(design(), Levers(), {}, draws=2000)
+    assert any("500" in w and "2000" in w for w in fc.warnings)
+    assert fc.provenance[0].inputs["curve_draws_requested"] == 2000
+    assert fc.provenance[0].inputs["curve_draws_used"] == 500
 
 
 def test_a2_engine_uses_the_forecast_duration(ranged_params: dict[str, Parameter]) -> None:

@@ -11,7 +11,7 @@ import time
 
 import numpy as np
 import pytest
-from trialpilot_contracts import Levers, Parameter, Procedure, Site, TrialDesign, Visit
+from trialpilot_contracts import Levers, MetricRange, Parameter, Procedure, Site, TrialDesign, Visit
 
 from trialpilot_engine.forecast import forecast, update_with_actuals
 from trialpilot_engine.supply import SupplyDraws, compare_strategies, simulate_supply
@@ -173,7 +173,8 @@ def test_missing_parameters_are_named(base: tuple[TrialDesign, object]) -> None:
     d, fc = base
     r = simulate_supply(d, ON_DEMAND, {}, fc, draws=50)  # type: ignore[arg-type]
     assert any("supply.overage_share.upfront" in w for w in r.warnings)
-    assert r.shipments.unit == "count"  # see handoffs/A3_CONTRACT_CHANGES.md
+    assert r.shipments.unit == "count"
+    MetricRange.model_validate(r.shipments.model_dump())  # contract v4, not model_construct
 
 
 def test_determinism_and_quantile_order(base: tuple[TrialDesign, object]) -> None:
@@ -218,4 +219,14 @@ def test_forecast_plus_supply_120_sites_2000_draws_under_one_second() -> None:
         r = simulate_supply(d, ON_DEMAND, {}, fc)
         timings.append(time.perf_counter() - start)
     assert r.draws_used >= 100
-    assert min(timings) < 1.0, f"forecast + supply took {min(timings):.2f} s (draws used {r.draws_used})"
+    assert r.draws_requested >= r.draws_used
+    assert any(str(r.draws_requested) in w and str(r.draws_used) in w for w in r.warnings + [
+        " ".join(item.assumptions) for item in r.provenance
+    ])
+    # The gate stays on the fastest of three calls. The handoff reports every call and the median;
+    # a pass here is not the A5 300 ms full-interface result.
+    assert min(timings) < 1.0, (
+        f"forecast + supply timings {timings} s "
+        f"(median {sorted(timings)[len(timings) // 2]:.2f} s, draws used {r.draws_used} "
+        f"of {r.draws_requested} requested)"
+    )

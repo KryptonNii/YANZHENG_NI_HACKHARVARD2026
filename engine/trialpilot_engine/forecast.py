@@ -49,7 +49,8 @@ Unit = Literal["usd", "hours", "kg_co2e", "months", "patients", "percent", "kits
 WEEKS_PER_MONTH = 52.0 / 12.0  # calendar conversion, not a model parameter
 MILESTONES = ("first_patient_in", "last_patient_in", "last_patient_last_visit", "database_lock")
 _MAX_CURVE_POINTS = 121
-_CURVE_DRAWS = 500  # the enrollment-curve bands use the first 500 draws (speed)
+_CURVE_DRAWS = 500  # the enrollment-curve bands use the first 500 draws (speed; stated in warnings)
+FULL_DRAWS = 2000  # the scenario standard (URS-009); any metric on fewer draws says so in its warnings
 _MAX_DROPOUT = 0.95  # guard: a dropout rate ≥ 1 would make the enrolment target infinite
 
 
@@ -177,6 +178,22 @@ def _stream(seed: int, *keys: str) -> np.random.Generator:
 
 def _tri_ppf(u: FloatArray, low: Any, mid: Any, high: Any) -> FloatArray:
     """Inverse CDF of Triangular(low, mid, high), elementwise; low == high gives the constant."""
+    if np.ndim(low) == 0 and np.ndim(mid) == 0 and np.ndim(high) == 0:
+        # Scalar parameters (the usual case): the same operations as below, in two buffers.
+        lo_f, mo_f, hi_f = float(low), float(mid), float(high)
+        span_f = hi_f - lo_f
+        c_f = (mo_f - lo_f) / span_f if span_f > 0 else 0.0
+        left_b: FloatArray = np.multiply(u, span_f)
+        left_b *= mo_f - lo_f
+        np.sqrt(left_b, out=left_b)
+        left_b += lo_f
+        right_b: FloatArray = np.subtract(1.0, u)
+        right_b *= span_f
+        right_b *= hi_f - mo_f
+        np.sqrt(right_b, out=right_b)
+        np.subtract(hi_f, right_b, out=right_b)
+        np.copyto(right_b, left_b, where=u < c_f)
+        return right_b
     lo = np.asarray(low, dtype=np.float64)
     mo = np.asarray(mid, dtype=np.float64)
     hi = np.asarray(high, dtype=np.float64)
@@ -294,9 +311,13 @@ class _Intensity:
     def __init__(self, starts: FloatArray, rates: FloatArray) -> None:
         order = np.argsort(starts, axis=1)  # ties are harmless: zero-length segments
         self.s = np.take_along_axis(starts, order, axis=1)
-        self.slope = np.cumsum(np.take_along_axis(rates, order, axis=1), axis=1)  # on [s_k, s_k+1)
-        self.m_at = np.zeros_like(self.s)  # M at each breakpoint
-        self.m_at[:, 1:] = np.cumsum(self.slope[:, :-1] * np.diff(self.s, axis=1), axis=1)
+        self.slope = np.take_along_axis(rates, order, axis=1)
+        np.cumsum(self.slope, axis=1, out=self.slope)  # slope on [s_k, s_k+1)
+        self.m_at = np.empty_like(self.s)  # M at each breakpoint
+        self.m_at[:, :1] = 0.0
+        seg = np.diff(self.s, axis=1)
+        seg *= self.slope[:, :-1]
+        np.cumsum(seg, axis=1, out=self.m_at[:, 1:])
         self.rows = np.arange(self.s.shape[0])
 
     def head(self, n: int) -> _Intensity:
@@ -306,12 +327,22 @@ class _Intensity:
         out.rows = self.rows[:n]
         return out
 
-    def invert(self, target: FloatArray) -> FloatArray:
-        """Per draw: the t with M(t) = target (inf if every rate is zero)."""
-        k = (self.m_at <= target[:, None]).sum(axis=1) - 1
+    def invert(self, target: FloatArray | np.floating[Any] | float) -> FloatArray:
+        """Per draw: the t with M(t) = target (inf if every rate is zero).
+
+        `target` is one value per draw. A scalar is broadcast to every draw. Generator methods
+        are typed as ``float | ndarray``; both are accepted here.
+        """
+        tgt = np.asarray(target, dtype=np.float64)
+        n_rows = int(self.s.shape[0])
+        if tgt.ndim == 0:
+            tgt = np.full(n_rows, float(tgt), dtype=np.float64)
+        elif tgt.shape != (n_rows,):
+            tgt = np.broadcast_to(tgt, (n_rows,))
+        k = (self.m_at <= tgt[:, None]).sum(axis=1) - 1
         sl = self.slope[self.rows, k]
         with np.errstate(divide="ignore", invalid="ignore"):
-            t = self.s[self.rows, k] + (target - self.m_at[self.rows, k]) / sl
+            t = self.s[self.rows, k] + (tgt - self.m_at[self.rows, k]) / sl
         return np.asarray(np.where(sl > 0, t, np.inf), dtype=np.float64)
 
     def at(self, times: FloatArray) -> FloatArray:
@@ -576,10 +607,14 @@ def _setup(
     # One column per DESIGN site, then drop excluded ones: excluding a site leaves every other
     # site's draws unchanged (common random numbers across lever scenarios).
     n_all = len(design.sites)
-    u = _stream(seed, "site.activation").random((d, n_all))[:, keep]
-    activation = _tri_ppf(u, act.value_low, act.value_mid, act.value_high)
+    u = _stream(seed, "site.activation").random((d, n_all))
+    activation = _tri_ppf(u if n_sites == n_all else u[:, keep], act.value_low, act.value_mid,
+                          act.value_high)
     g = _stream(seed, "site.rate").standard_gamma(np.broadcast_to(alpha[:, None], (d, n_all)))
-    rates = rate_mean[:, None] * weights[None, :] * g[:, keep] / alpha[:, None]
+    rates = np.multiply(rate_mean[:, None], weights[None, :])  # (rate × weight) × g / α, in place
+    rates *= g if n_sites == n_all else g[:, keep]
+    rates /= alpha[:, None]
+    del u, g
 
     inputs: dict[str, float | str] = {
         "sites_active": float(n_sites),
@@ -606,15 +641,21 @@ def _setup(
     )
 
 
+def _used_ids(candidates: Sequence[str], used: Mapping[str, object]) -> list[str]:
+    """Ids from `candidates` that were actually read. The parameter type is `list[str]` (invariant)."""
+    return [pid for pid in candidates if pid in used]
+
+
 def _provenance(st: _Setup, extra_assumptions: Sequence[str] = ()) -> list[ProvenanceItem]:
     res = st.resolver
-    enrol_ids = [
-        pid for pid in (
+    enrol_ids = _used_ids(
+        (
             "site.activation_months", "site.enrollment_rate_per_month", "forecast.plan_rate_multiplier",
             "site.enrollment_rate_shape", "patient.dropout_rate", "lever.decentralised.recruitment_uplift",
             "lever.decentralised.dropout_reduction",
-        ) if pid in res.used
-    ]
+        ),
+        res.used,
+    )
     common = [
         "Sites recruit independently with constant rates once open; no site caps; rates count "
         "randomisations (screen failures not modelled separately).",
@@ -622,7 +663,7 @@ def _provenance(st: _Setup, extra_assumptions: Sequence[str] = ()) -> list[Prove
         *extra_assumptions,
         *(f"'{pid}' not in library — built-in assumption used." for pid in res.fallbacks),
     ]
-    dur_ids = [pid for pid in ("trial.followup_months", "trial.closeout_months") if pid in res.used]
+    dur_ids = _used_ids(("trial.followup_months", "trial.closeout_months"), res.used)
     return [
         ProvenanceItem(
             formula_id="forecast.enrollment.poisson_gamma.v1",
@@ -674,6 +715,21 @@ def _check_reachable(t_full: FloatArray) -> None:
         )
 
 
+def _draw_warnings(n: int, curve_n: int) -> list[str]:
+    """Say so whenever a forecast output rests on fewer than FULL_DRAWS draws."""
+    out = []
+    if n < FULL_DRAWS:
+        out.append(
+            f"Forecast ran on {n} draws (fewer than {FULL_DRAWS:,}); its percentiles are noisier."
+        )
+    if curve_n < n:
+        out.append(
+            f"Enrollment-curve bands use the first {curve_n} of {n} draws (display only); "
+            f"milestones and duration use all {n}."
+        )
+    return out
+
+
 def _horizon_warning(t_full: FloatArray, warnings: list[str]) -> None:
     p90 = float(np.percentile(t_full, 90))
     if p90 > 120:
@@ -713,8 +769,11 @@ def forecast(
     counts = [
         _bridge_counts(m_grid[:, j], gamma_n[:c], st.n_needed[:c], crng) for j in range(len(grid))
     ]
-    warnings = st.warnings + st.resolver.warnings()
+    warnings = st.warnings + st.resolver.warnings() + _draw_warnings(st.n_draws, c)
     _horizon_warning(t_full, warnings)
+    provenance = _provenance(st)
+    provenance[0].inputs["curve_draws_requested"] = float(st.n_draws)
+    provenance[0].inputs["curve_draws_used"] = float(c)
     draws_out = ForecastDraws(
         site_ids=tuple(s.id for s in st.sites),
         activation=st.activation,
@@ -737,7 +796,7 @@ def forecast(
         enrollment_curve=_curve_rows(grid, counts),
         patients_to_randomise=metric_range(st.n_needed.astype(np.float64), "patients"),
         warnings=warnings,
-        provenance=_provenance(st),
+        provenance=provenance,
         levers=levers,
         draws=draws_out,
     )
@@ -797,7 +856,7 @@ def update_with_actuals(
     st = _setup(design, levers, params, seed, draws)
     warnings = list(st.warnings)
     t_now, obs = _parse_actuals(design, st.sites, actual_enrolment_by_site, warnings)
-    d, n_sites = st.activation.shape
+    d, n_sites = (int(v) for v in st.activation.shape)
     rng = _stream(seed, "update.arrivals")
 
     reported = np.array([s.id in obs for s in st.sites])
@@ -826,7 +885,7 @@ def update_with_actuals(
     _check_reachable(t_full)
 
     if k_obs.sum() > 0:
-        fpi = np.full(d, float(first_pos.min()))
+        fpi = np.full(d, float(np.min(first_pos)))
     else:
         unrep_fpi = _Intensity(st.activation, st.rates).invert(e1)
         next_fpi = future.invert(e1)
@@ -862,9 +921,11 @@ def update_with_actuals(
             else "."
         )
     )
-    warnings += st.resolver.warnings()
+    warnings += st.resolver.warnings() + _draw_warnings(d, d)  # the updated curve uses every draw
     _horizon_warning(t_full, warnings)
     provenance = _provenance(st, [note])
+    provenance[0].inputs["curve_draws_requested"] = float(d)
+    provenance[0].inputs["curve_draws_used"] = float(d)
     provenance.append(
         ProvenanceItem(
             formula_id="forecast.enrollment.posterior_update.v1",
@@ -878,7 +939,7 @@ def update_with_actuals(
                 "sites_reporting": float(n_rep),
                 "sites_without_data": float(n_sites - n_rep),
             },
-            parameter_ids=[p for p in ("site.enrollment_rate_shape",) if p in st.resolver.used],
+            parameter_ids=_used_ids(("site.enrollment_rate_shape",), st.resolver.used),
             assumptions=[
                 "Actuals are cumulative randomisations per site; data cut-off = latest month reported.",
                 "Site activation before the cut-off is not observed: drawn from the prior, capped at "
