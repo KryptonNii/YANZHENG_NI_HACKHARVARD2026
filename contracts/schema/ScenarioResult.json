@@ -59,18 +59,68 @@
       "type": "object"
     },
     "MetricRange": {
+      "anyOf": [
+        {
+          "properties": {
+            "p10": {
+              "type": "number"
+            },
+            "p50": {
+              "type": "number"
+            },
+            "p90": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "properties": {
+            "p10": {
+              "type": "null"
+            },
+            "p50": {
+              "type": "null"
+            },
+            "p90": {
+              "type": "null"
+            }
+          }
+        }
+      ],
+      "description": "P10/P50/P90 of a metric. All three null = unknown (a required input is missing; \u00a72 rule 2: unknown \u2260 zero).",
       "properties": {
         "p10": {
-          "title": "P10",
-          "type": "number"
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "P10"
         },
         "p50": {
-          "title": "P50",
-          "type": "number"
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "P50"
         },
         "p90": {
-          "title": "P90",
-          "type": "number"
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "P90"
         },
         "unit": {
           "enum": [

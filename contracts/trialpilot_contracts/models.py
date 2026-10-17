@@ -1,15 +1,47 @@
-# Shared contract — §5 of the brief, verbatim. Source of truth for every module.
-# Only A1 edits this file; others propose changes in handoffs/<agent>_CONTRACT_CHANGES.md.
+# Shared contract — §5 of the brief, plus the accepted changes listed in contracts/CHANGELOG.md.
+# Source of truth for every module. Only A1 edits this file; others propose changes in
+# handoffs/<agent>_CONTRACT_CHANGES.md.
 # After any edit run `uv run --project contracts python contracts/gen.py` and commit schema/ + web/src/contracts.ts.
 from __future__ import annotations
+import math
 from datetime import datetime
 from typing import Literal, Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 # ---------- Ranges & provenance ----------
+_PERCENTILES = ("p10", "p50", "p90")
+
 class MetricRange(BaseModel):
-    p10: float; p50: float; p90: float
+    """P10/P50/P90 of a metric. All three null = unknown (a required input is missing; §2 rule 2: unknown ≠ zero)."""
+    # v2 (CHANGELOG): p10/p50/p90 may be None = unknown. All three numbers, or all three None. NaN -> None.
+    model_config = ConfigDict(json_schema_extra={"anyOf": [
+        {"properties": {k: {"type": "number"} for k in _PERCENTILES}},
+        {"properties": {k: {"type": "null"} for k in _PERCENTILES}},
+    ]})
+    p10: Optional[float]  # null = unknown; then p50 and p90 are null too
+    p50: Optional[float]
+    p90: Optional[float]
     unit: Literal["usd", "hours", "kg_co2e", "months", "patients", "percent", "kits"]
+
+    @field_validator(*_PERCENTILES)
+    @classmethod
+    def _nan_is_unknown(cls, v: Optional[float]) -> Optional[float]:
+        if v is None or math.isnan(v):
+            return None
+        if math.isinf(v):
+            raise ValueError("must be a finite number, or null for unknown")
+        return v
+
+    @model_validator(mode="after")
+    def _all_or_none(self) -> MetricRange:
+        known = [getattr(self, k) is not None for k in _PERCENTILES]
+        if any(known) and not all(known):
+            raise ValueError("p10, p50 and p90 must all be numbers, or all be null (unknown)")
+        return self
+
+    @property
+    def known(self) -> bool:
+        return self.p50 is not None
 
 class ProvenanceItem(BaseModel):
     formula_id: str                 # e.g. "carbon.patient_travel.v1"

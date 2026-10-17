@@ -125,9 +125,10 @@ export type AlertImpactKey = (typeof ALERT_IMPACT_KEYS)[number];
 // ---------- Models (MASTER §5) ----------
 
 export interface MetricRange {
-  p10: number;
-  p50: number;
-  p90: number;
+  /** null = unknown; then p50 and p90 are null too */
+  p10: number | null;
+  p50: number | null;
+  p90: number | null;
   unit: MetricRangeUnit;
 }
 
