@@ -27,7 +27,9 @@ countries:
   "Puerto Rico": PR
 cities:
   AR:
-    "CABA": "Buenos Aires"            # Ciudad Autónoma de Buenos Aires
-    "Ciudad Autonoma de Buenos Aires": "Buenos Aires"
-    "Ciudad Autónoma de Buenos Aires": "Buenos Aires"
+    # Ciudad Autónoma de Buenos Aires is its own district (GeoNames AR.07), not Buenos Aires Province
+    "CABA": {name: "Buenos Aires", admin1: "07"}
+    "Ciudad Autonoma de Buenos Aires": {name: "Buenos Aires", admin1: "07"}
+    "Ciudad Autónoma de Buenos Aires": {name: "Buenos Aires", admin1: "07"}
+    "Launs Este": "Lanus"             # misspelling of Lanús Este seen in NCT04456673
 admin1: {}

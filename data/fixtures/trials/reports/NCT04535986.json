@@ -1,0 +1,64 @@
+{
+ "notes": [
+  "Enrollment 763 is the actual number enrolled (ACTUAL).",
+  "Visit schedule is NOT in the registry: filled with assumed template 'phase3_default' (7 visits over 24 treatment weeks; length basis: registry secondary outcome time frame 'Weeks 6, 12 and 24'). Placeholder: every 4 weeks for the first 12 weeks, then every 12 weeks to end of treatment, one follow-up visit. Not from a source; replace with the protocol schedule of activities. Import the protocol to replace it.",
+  "Duration 26.1 months = 2020-09-29 to 2022-12-02 (start ACTUAL, end ACTUAL).",
+  "Drug type 'small_molecule': registry intervention type DRUG with no biologic INN stem (Ensifentrine).",
+  "122 sites from the registry; 121 with registry geoPoints.",
+  "Per-site enrollment is not in the registry (expected_enrollment left empty).",
+  "1 site had no registry geoPoint and were placed from city/state/country with the offline GeoNames index (CC BY 4.0)."
+ ],
+ "field_sources": {
+  "registry_id": "protocolSection.identificationModule.nctId",
+  "title": "protocolSection.identificationModule.briefTitle (+ acronym)",
+  "phase": "protocolSection.designModule.phases",
+  "conditions": "protocolSection.conditionsModule.conditions",
+  "enrollment_target": "protocolSection.designModule.enrollmentInfo.count (ACTUAL)",
+  "visits": "assumption: data/fixtures/visit_templates.yaml#phase3_default",
+  "duration_months": "statusModule.startDateStruct -> statusModule.completionDateStruct",
+  "drug_type": "protocolSection.armsInterventionsModule.interventions (+ WHO INN stems)",
+  "sites": "protocolSection.contactsLocationsModule.locations (facility, city, country, geoPoint)"
+ },
+ "enrollment_type": "ACTUAL",
+ "drug_type_basis": "registry intervention type DRUG with no biologic INN stem (Ensifentrine)",
+ "visit_template_id": "phase3_default",
+ "geocoded_site_ids": [
+  "fa438fa3-85c4-50e2-9369-9d59ac16d803"
+ ],
+ "unresolved_site_ids": [],
+ "sponsor": "Verona Pharma, Inc., a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA",
+ "collaborators": [
+  "IQVIA Pty Ltd"
+ ],
+ "overall_status": "COMPLETED",
+ "acronym": null,
+ "dates": {
+  "start": "2020-09-29",
+  "start_type": "ACTUAL",
+  "primary_completion": "2022-09-12",
+  "primary_completion_type": "ACTUAL",
+  "completion": "2022-12-02",
+  "completion_type": "ACTUAL"
+ },
+ "documents": [
+  {
+   "label": "Study Protocol",
+   "type": "Prot",
+   "has_protocol": true,
+   "date": "2022-02-18",
+   "filename": "Prot_000.pdf",
+   "size_bytes": 9556695,
+   "url": "https://cdn.clinicaltrials.gov/large-docs/86/NCT04535986/Prot_000.pdf"
+  },
+  {
+   "label": "Statistical Analysis Plan",
+   "type": "SAP",
+   "has_protocol": false,
+   "date": "2022-11-02",
+   "filename": "SAP_001.pdf",
+   "size_bytes": 28800095,
+   "url": "https://cdn.clinicaltrials.gov/large-docs/86/NCT04535986/SAP_001.pdf"
+  }
+ ],
+ "attribution": "Source: ClinicalTrials.gov (https://clinicaltrials.gov/study/NCT04535986), U.S. National Library of Medicine. Data processed by ClinicalTrials.gov: 2026-10-16T09:00:05; fetched 2026-10-17T01:18:32Z. Modified by TrialPilot: mapped to a TrialDesign; visit schedule, per-site enrollment and missing coordinates are assumptions listed in the notes."
+}

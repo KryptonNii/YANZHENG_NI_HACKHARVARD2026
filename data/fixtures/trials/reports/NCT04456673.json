@@ -1,0 +1,74 @@
+{
+ "notes": [
+  "Enrollment 935 is the actual number enrolled (ACTUAL).",
+  "Visit schedule is NOT in the registry: filled with assumed template 'phase3_default' (12 visits over 72.3 treatment weeks; length basis: registry secondary outcome time frame 'From the first dose of study treatment (Day 1) up to the last dose of the study treatment + 98 days, up to 506 days'). Placeholder: every 4 weeks for the first 12 weeks, then every 12 weeks to end of treatment, one follow-up visit. Not from a source; replace with the protocol schedule of activities. Import the protocol to replace it.",
+  "Duration 46.7 months = 2020-07-06 to 2024-05-27 (start ACTUAL, end ACTUAL).",
+  "Drug type 'biologic': registry type DRUG, but the INN stem marks a biologic: dupilumab (-mab: monoclonal antibody) (WHO INN stem book).",
+  "334 sites from the registry; 323 with registry geoPoints.",
+  "Per-site enrollment is not in the registry (expected_enrollment left empty).",
+  "11 sites had no registry geoPoint and were placed from city/state/country with the offline GeoNames index (CC BY 4.0); 1 only to state level."
+ ],
+ "field_sources": {
+  "registry_id": "protocolSection.identificationModule.nctId",
+  "title": "protocolSection.identificationModule.briefTitle (+ acronym)",
+  "phase": "protocolSection.designModule.phases",
+  "conditions": "protocolSection.conditionsModule.conditions",
+  "enrollment_target": "protocolSection.designModule.enrollmentInfo.count (ACTUAL)",
+  "visits": "assumption: data/fixtures/visit_templates.yaml#phase3_default",
+  "duration_months": "statusModule.startDateStruct -> statusModule.completionDateStruct",
+  "drug_type": "protocolSection.armsInterventionsModule.interventions (+ WHO INN stems)",
+  "sites": "protocolSection.contactsLocationsModule.locations (facility, city, country, geoPoint)"
+ },
+ "enrollment_type": "ACTUAL",
+ "drug_type_basis": "registry type DRUG, but the INN stem marks a biologic: dupilumab (-mab: monoclonal antibody) (WHO INN stem book)",
+ "visit_template_id": "phase3_default",
+ "geocoded_site_ids": [
+  "80eb42db-272d-597f-990d-b87ff511e5d3",
+  "6402b073-27ce-566a-acce-21b30a2b4a4b",
+  "3be036a9-12d1-5d9e-a487-c8cc9fbb2ff3",
+  "99ccd079-7eac-5a32-bf3a-e760ea38fb17",
+  "5222b8c5-3817-583c-8d7c-09617530c99a",
+  "9dde7f14-799e-5e74-b2dc-f74fc5ca594b",
+  "2727a058-c816-58c8-a813-b622bcf006c1",
+  "b39ee28d-dd3c-576d-be28-48fa872364c8",
+  "057579a3-5e92-5230-97ee-4a84f4dd9140",
+  "fa4ad77b-8219-5299-86cf-8b5e13089025",
+  "ed7887bc-7af9-5319-a8d6-c82013a29a4b"
+ ],
+ "unresolved_site_ids": [],
+ "sponsor": "Sanofi",
+ "collaborators": [
+  "Regeneron Pharmaceuticals"
+ ],
+ "overall_status": "COMPLETED",
+ "acronym": "NOTUS",
+ "dates": {
+  "start": "2020-07-06",
+  "start_type": "ACTUAL",
+  "primary_completion": "2024-02-28",
+  "primary_completion_type": "ACTUAL",
+  "completion": "2024-05-27",
+  "completion_type": "ACTUAL"
+ },
+ "documents": [
+  {
+   "label": "Study Protocol",
+   "type": "Prot",
+   "has_protocol": true,
+   "date": "2023-10-28",
+   "filename": "Prot_000.pdf",
+   "size_bytes": 2106852,
+   "url": "https://cdn.clinicaltrials.gov/large-docs/73/NCT04456673/Prot_000.pdf"
+  },
+  {
+   "label": "Statistical Analysis Plan",
+   "type": "SAP",
+   "has_protocol": false,
+   "date": "2023-10-30",
+   "filename": "SAP_001.pdf",
+   "size_bytes": 1782421,
+   "url": "https://cdn.clinicaltrials.gov/large-docs/73/NCT04456673/SAP_001.pdf"
+  }
+ ],
+ "attribution": "Source: ClinicalTrials.gov (https://clinicaltrials.gov/study/NCT04456673), U.S. National Library of Medicine. Data processed by ClinicalTrials.gov: 2026-10-16T09:00:05; fetched 2026-10-17T01:18:27Z. Modified by TrialPilot: mapped to a TrialDesign; visit schedule, per-site enrollment and missing coordinates are assumptions listed in the notes."
+}

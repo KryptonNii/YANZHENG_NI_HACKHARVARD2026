@@ -17,6 +17,7 @@ unresolved. Callers must surface any non-"city" precision as an assumption.
 from __future__ import annotations
 
 import gzip
+import math
 import re
 import unicodedata
 from collections import defaultdict
@@ -84,6 +85,15 @@ def _variants(city: str) -> list[str]:
     return out
 
 
+_REGION_WORDS = re.compile(r"\s+(ken|fu|to|do|prefecture|province|state|region|oblast|voivodeship|county)$|^(province|state|region) of\s+")
+
+
+def _km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    p1, p2 = math.radians(lat1), math.radians(lat2)
+    a = math.sin((p2 - p1) / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(math.radians(lon2 - lon1) / 2) ** 2
+    return 6371.0 * 2 * math.asin(math.sqrt(a))
+
+
 class Geocoder:
     def __init__(self, geo_dir: Path | None = None) -> None:
         self.geo_dir = geo_dir or geonames_dir()
@@ -93,6 +103,7 @@ class Geocoder:
         self._countries: dict[str, str] = {}
         self._admin1: dict[tuple[str, str], str] = {}
         self._city_aliases: dict[tuple[str, str], str] = {}
+        self._city_admin1: dict[tuple[str, str], str] = {}
         self._load()
 
     def _load(self) -> None:
@@ -109,7 +120,12 @@ class Geocoder:
             self._countries[norm(name)] = iso
         for iso, mapping in (aliases.get("cities") or {}).items():
             for src, dst in mapping.items():
-                self._city_aliases[(iso, norm(src))] = norm(dst)
+                if isinstance(dst, dict):  # {name: ..., admin1: ...} pins the region as well
+                    self._city_aliases[(iso, norm(src))] = norm(dst["name"])
+                    if dst.get("admin1"):
+                        self._city_admin1[(iso, norm(src))] = str(dst["admin1"])
+                else:
+                    self._city_aliases[(iso, norm(src))] = norm(dst)
         for iso, mapping in (aliases.get("admin1") or {}).items():
             for state, a1 in mapping.items():
                 self._admin1[(iso, norm(state))] = str(a1)
@@ -130,7 +146,14 @@ class Geocoder:
         return self._countries.get(norm(country))
 
     def admin1_code(self, iso: str, state: str | None) -> str | None:
-        return self._admin1.get((iso, norm(state))) if state else None
+        if not state:
+            return None
+        s = norm(state)
+        hit = self._admin1.get((iso, s))
+        if hit is None:  # "Kagawa-ken", "Kyoto-fu", "Pomeranian Voivodeship", "Province of X"
+            s2 = _REGION_WORDS.sub("", s).strip()
+            hit = self._admin1.get((iso, s2)) if s2 and s2 != s else None
+        return hit
 
     def lookup(self, city: str | None, country: str, state: str | None = None) -> GeoResult | None:
         iso = self.country_iso(country)
@@ -138,15 +161,31 @@ class Geocoder:
             return None
         a1 = self.admin1_code(iso, state)
         if city:
-            keys = [self._city_aliases.get((iso, v), v) for v in _variants(city)]
-            for table in (self._primary, self._alternate):
-                for key in keys:
-                    cands = table.get((key, iso), [])
-                    if a1 is not None:
-                        cands = [p for p in cands if p.admin1 == a1]
-                    if cands:
+            variants = _variants(city)
+            pinned = next((self._city_admin1[(iso, v)] for v in variants if (iso, v) in self._city_admin1), None)
+            a1 = pinned or a1
+            keys = [self._city_aliases.get((iso, v), v) for v in variants]
+            # 1) city inside the stated region; 2) the city elsewhere in the country, but only if it is a
+            # major city or lies near the stated region (registries sometimes give the wrong region,
+            # e.g. "Berlin, Free Hanseatic City of Bremen"; small same-named villages far away are
+            # rejected); 3) region-level fallback below.
+            region_ref = self._largest_in_admin1.get((iso, a1)) if a1 is not None else None
+            for in_region in ((True, False) if a1 is not None else (False,)):
+                for table in (self._primary, self._alternate):
+                    for key in keys:
+                        cands = table.get((key, iso), [])
+                        if in_region:
+                            cands = [p for p in cands if p.admin1 == a1]
+                        if not cands:
+                            continue
                         best = max(cands, key=lambda p: p.population)
-                        return GeoResult(best.lat, best.lon, "city", key)
+                        if in_region or a1 is None:
+                            return GeoResult(best.lat, best.lon, "city", key)
+                        near = region_ref is not None and _km(best.lat, best.lon, region_ref.lat, region_ref.lon) <= 200
+                        if best.population >= 500_000 or near:
+                            return GeoResult(best.lat, best.lon, "city", f"{key} (outside stated region {state})")
+            if a1 is None and (a1_from_city := self.admin1_code(iso, city)) is not None:
+                a1, state = a1_from_city, city  # the "city" field holds a region name (e.g. "Gauteng")
         if a1 is not None and (iso, a1) in self._largest_in_admin1:
             p = self._largest_in_admin1[(iso, a1)]
             return GeoResult(p.lat, p.lon, "admin1", f"largest place in {iso}.{a1} ({state})")

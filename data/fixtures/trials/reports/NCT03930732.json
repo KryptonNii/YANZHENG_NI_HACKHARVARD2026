@@ -1,0 +1,93 @@
+{
+ "notes": [
+  "Enrollment 939 is the actual number enrolled (ACTUAL).",
+  "Visit schedule is NOT in the registry: filled with assumed template 'phase3_default' (11 visits over 70.1 treatment weeks; length basis: registry secondary outcome time frame 'TEAEs were collected from the time from the first administration of study treatment to the last administration of the st'). Placeholder: every 4 weeks for the first 12 weeks, then every 12 weeks to end of treatment, one follow-up visit. Not from a source; replace with the protocol schedule of activities. Import the protocol to replace it.",
+  "Duration 48.6 months = 2019-04-15 to 2023-05-02 (start ACTUAL, end ACTUAL).",
+  "Drug type 'biologic': registry type DRUG, but the INN stem marks a biologic: dupilumab (-mab: monoclonal antibody) (WHO INN stem book).",
+  "275 sites from the registry; 245 with registry geoPoints.",
+  "Per-site enrollment is not in the registry (expected_enrollment left empty).",
+  "30 sites had no registry geoPoint and were placed from city/state/country with the offline GeoNames index (CC BY 4.0); 3 only to state level."
+ ],
+ "field_sources": {
+  "registry_id": "protocolSection.identificationModule.nctId",
+  "title": "protocolSection.identificationModule.briefTitle (+ acronym)",
+  "phase": "protocolSection.designModule.phases",
+  "conditions": "protocolSection.conditionsModule.conditions",
+  "enrollment_target": "protocolSection.designModule.enrollmentInfo.count (ACTUAL)",
+  "visits": "assumption: data/fixtures/visit_templates.yaml#phase3_default",
+  "duration_months": "statusModule.startDateStruct -> statusModule.completionDateStruct",
+  "drug_type": "protocolSection.armsInterventionsModule.interventions (+ WHO INN stems)",
+  "sites": "protocolSection.contactsLocationsModule.locations (facility, city, country, geoPoint)"
+ },
+ "enrollment_type": "ACTUAL",
+ "drug_type_basis": "registry type DRUG, but the INN stem marks a biologic: dupilumab (-mab: monoclonal antibody) (WHO INN stem book)",
+ "visit_template_id": "phase3_default",
+ "geocoded_site_ids": [
+  "5796a244-afad-5ca4-b7fa-a586a05775d3",
+  "18e0f0cf-605b-5ef0-8192-3f3c03f0bea9",
+  "606189e1-100d-5959-a5fe-b5eeb079d33d",
+  "873b5e45-4810-57d4-a1ae-24e8b6cf0b9b",
+  "da2d850b-6206-52c0-a4bf-4a7f5fc76a4c",
+  "f5086521-b567-560a-9eaa-0b61df266292",
+  "8fb59cfb-8700-5bdf-a1ee-df15ab81e184",
+  "00b6b248-8751-57da-aecc-c7a21a2c3f62",
+  "80683a93-d5dc-5e74-bb04-25750039bcc9",
+  "f53d762a-bd05-519f-86cd-38461ced4d15",
+  "84e21b24-5b0f-5f23-ad6e-96ab53d1844e",
+  "5147b0c0-83cf-5719-b7d4-5eb0a8dc46a8",
+  "2849c87e-cf1c-539a-bd05-2458bfd9dbd3",
+  "378d976d-7021-591f-b207-593906787198",
+  "ce9490f7-64ed-5824-b8ec-57014f6c872b",
+  "8ff04a16-3480-57d7-ad3d-1f905eb5880b",
+  "59814b3c-3380-59fc-835d-0b052e0cccfa",
+  "0bc16320-b4e7-56a7-90e8-8cbb4e2d5da0",
+  "d9282240-2b6e-5e69-b4e0-081d58ae3f53",
+  "a2aa5673-e8c4-5b17-ad01-23b2b775934f",
+  "0e13591f-2a09-518c-95a3-b8e1764ea958",
+  "c8888163-6afa-5e8e-8092-90e650f345b7",
+  "d73853d0-1dc7-502f-966b-a90efea83ab3",
+  "15830cd0-78b0-5770-bb0e-b15ff460b60e",
+  "698d6cf9-f233-5756-bf03-5b9f3a34d6b6",
+  "3c12e1c5-3029-566e-a75d-8d0c7b8853f7",
+  "1570cc7c-8cdc-5f29-bec7-cc0de6a82869",
+  "2872a966-17bc-5264-af49-135c3ae7a24b",
+  "5eb40660-04aa-56e6-b276-5a91b3f3d546",
+  "540d5a4b-a3fa-5a0e-b238-e0c16b1fd847"
+ ],
+ "unresolved_site_ids": [],
+ "sponsor": "Sanofi",
+ "collaborators": [
+  "Regeneron Pharmaceuticals"
+ ],
+ "overall_status": "COMPLETED",
+ "acronym": "BOREAS",
+ "dates": {
+  "start": "2019-04-15",
+  "start_type": "ACTUAL",
+  "primary_completion": "2023-02-08",
+  "primary_completion_type": "ACTUAL",
+  "completion": "2023-05-02",
+  "completion_type": "ACTUAL"
+ },
+ "documents": [
+  {
+   "label": "Study Protocol",
+   "type": "Prot",
+   "has_protocol": true,
+   "date": "2018-11-07",
+   "filename": "Prot_000.pdf",
+   "size_bytes": 2507823,
+   "url": "https://cdn.clinicaltrials.gov/large-docs/32/NCT03930732/Prot_000.pdf"
+  },
+  {
+   "label": "Statistical Analysis Plan",
+   "type": "SAP",
+   "has_protocol": false,
+   "date": "2020-03-23",
+   "filename": "SAP_001.pdf",
+   "size_bytes": 1924483,
+   "url": "https://cdn.clinicaltrials.gov/large-docs/32/NCT03930732/SAP_001.pdf"
+  }
+ ],
+ "attribution": "Source: ClinicalTrials.gov (https://clinicaltrials.gov/study/NCT03930732), U.S. National Library of Medicine. Data processed by ClinicalTrials.gov: 2026-10-16T09:00:05; fetched 2026-10-17T01:18:24Z. Modified by TrialPilot: mapped to a TrialDesign; visit schedule, per-site enrollment and missing coordinates are assumptions listed in the notes."
+}

@@ -94,10 +94,27 @@ class PageInfo:
     n_images: int
     tables: list[list[list[str | None]]] = field(default_factory=list)
     landscape: bool = False
+    image_share: float = 0.0     # largest image's share of the page area
 
     @property
     def image_only(self) -> bool:
-        return len(self.text.strip()) < 80 and self.n_images > 0
+        """No usable text grid: either no text at all, or a large picture and no X-mark table."""
+        if self.n_images == 0:
+            return False
+        if len(self.text.strip()) < 80:
+            return True
+        return self.image_share >= 0.25 and _marks_in_tables(self.tables) < 3
+
+
+def _largest_image_share(page: Any) -> float:
+    area = float(page.width * page.height) or 1.0
+    best = 0.0
+    for im in page.images:
+        try:
+            best = max(best, abs(float(im["x1"]) - float(im["x0"])) * abs(float(im["bottom"]) - float(im["top"])) / area)
+        except (KeyError, TypeError, ValueError):
+            continue
+    return round(min(best, 1.0), 3)
 
 
 def pdf_page_count(pdf_bytes: bytes) -> int:
@@ -120,7 +137,7 @@ def read_pdf(pdf_bytes: bytes, max_pages: int = 600) -> list[PageInfo]:
         with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
             for i, page in enumerate(pdf.pages[:max_pages], start=1):
                 pages.append(PageInfo(i, page.extract_text() or "", len(page.images),
-                                      landscape=page.width > page.height))
+                                      landscape=page.width > page.height, image_share=_largest_image_share(page)))
     except Exception as exc:  # pdfminer raises many types for broken files
         raise ExtractionFailed(422, "unreadable_pdf", "The file could not be read as a PDF.",
                                {"cause": type(exc).__name__}) from exc
@@ -211,7 +228,9 @@ def locate_soa(pages: list[PageInfo], pdf_bytes: bytes | None = None) -> tuple[l
         _load_tables(pdf_bytes, list(range(start, min(start + MAX_SOA_PAGES, len(pages)) + 1)), pages)
     for p in pages[start: start + MAX_SOA_PAGES - 1]:
         continues = p.image_only or _marks_in_tables(p.tables) >= 3 or bool(re.search(_SOA_TITLE, p.text[:400], re.I))
-        footnotes_only = p.landscape and pages[start - 1].landscape and not p.tables
+        # SoA footnote pages: no table, several lines like "a Randomization visit is Day 1 ..."
+        footnote_lines = sum(1 for ln in p.text.splitlines() if re.match(r"^[a-z]{1,2}\s+[A-Z(]", ln))
+        footnotes_only = not p.tables and footnote_lines >= 3
         if continues or footnotes_only:
             found.append(p.number)
         else:
@@ -316,12 +335,11 @@ def parse_grid_tables(pages: list[PageInfo], soa_pages: list[int]) -> tuple[list
             visit_rows = [i for i, r in enumerate(head) if i not in time_rows
                           and sum(1 for c in r[1:] if _VISIT_WORD.search(c) or re.fullmatch(r"\d{1,3}", c)) >= 2]
 
-            def number_score(i: int) -> int:
-                r = head[i]
+            def number_score(r: list[str]) -> int:  # prefer the row that carries visit numbers
                 return (2 if re.match(r"^visits?\b", r[0], re.I) else 0) + sum(
                     1 for c in r[1:] if re.search(r"\bvisit\s+\d|^\d{1,3}\b", c, re.I))
 
-            visit_i = max(visit_rows, key=number_score) if visit_rows else None
+            visit_i = max(visit_rows, key=lambda i: number_score(head[i])) if visit_rows else None
             header_end = max(time_rows + visit_rows)
             label_rows = [i for i in range(header_end + 1) if i not in time_rows and not re.match(r"^window", rows[i][0], re.I)]
             units = {i: _TIME_ROW.match(rows[i][0]).group(2).lower() for i in time_rows}  # type: ignore[union-attr]
@@ -601,7 +619,10 @@ def extract_schedule(
         )
     soa_pages, locate_notes = locate_soa(pages, pdf_bytes)
     if not soa_pages and total > len(pages):
-        pages = read_pdf(pdf_bytes)
+        hint = next((int(m.group(_TOC_RE.groups)) for p in pages for ln in p.text.splitlines()
+                     if (m := _TOC_RE.search(ln))), None)
+        # read up to the page the table of contents points at (plus slack for front matter), else everything
+        pages = read_pdf(pdf_bytes, max_pages=hint + 2 * MAX_SOA_PAGES if hint else 600)
         soa_pages, locate_notes = locate_soa(pages, pdf_bytes)
     if not soa_pages:
         raise ExtractionFailed(422, "soa_not_found",

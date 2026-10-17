@@ -1,0 +1,71 @@
+{
+ "notes": [
+  "Enrollment 660 is the actual number enrolled (ACTUAL).",
+  "Visit schedule is NOT in the registry: filled with assumed template 'phase3_default' (18 visits over 156 treatment weeks; length basis: registry secondary outcome time frame 'Through Week 156'). Placeholder: every 4 weeks for the first 12 weeks, then every 12 weeks to end of treatment, one follow-up visit. Not from a source; replace with the protocol schedule of activities. Import the protocol to replace it.",
+  "Duration 47.6 months = 2020-06-29 to 2024-06-18 (start ACTUAL, end ACTUAL).",
+  "Drug type 'biologic': registry type DRUG, but the INN stem marks a biologic: aflibercept (-cept: receptor molecule / fusion protein) (WHO INN stem book).",
+  "138 sites from the registry; 130 with registry geoPoints.",
+  "Per-site enrollment is not in the registry (expected_enrollment left empty).",
+  "8 sites had no registry geoPoint and were placed from city/state/country with the offline GeoNames index (CC BY 4.0); 3 only to state level."
+ ],
+ "field_sources": {
+  "registry_id": "protocolSection.identificationModule.nctId",
+  "title": "protocolSection.identificationModule.briefTitle (+ acronym)",
+  "phase": "protocolSection.designModule.phases",
+  "conditions": "protocolSection.conditionsModule.conditions",
+  "enrollment_target": "protocolSection.designModule.enrollmentInfo.count (ACTUAL)",
+  "visits": "assumption: data/fixtures/visit_templates.yaml#phase3_default",
+  "duration_months": "statusModule.startDateStruct -> statusModule.completionDateStruct",
+  "drug_type": "protocolSection.armsInterventionsModule.interventions (+ WHO INN stems)",
+  "sites": "protocolSection.contactsLocationsModule.locations (facility, city, country, geoPoint)"
+ },
+ "enrollment_type": "ACTUAL",
+ "drug_type_basis": "registry type DRUG, but the INN stem marks a biologic: aflibercept (-cept: receptor molecule / fusion protein) (WHO INN stem book)",
+ "visit_template_id": "phase3_default",
+ "geocoded_site_ids": [
+  "bed64d77-b033-5acb-b9c6-6c26b1d5c722",
+  "08176572-3054-532f-a0c9-4d9857ab8571",
+  "f69c0cac-dc3b-5302-80ba-eb57e95ea8f3",
+  "44b32edd-41ae-5ea3-9bec-c995fcda15d7",
+  "8c6f6ea0-fe30-5c09-98db-91162c722c41",
+  "cad3fb4d-5fc5-505b-932c-ff17a24756a5",
+  "9c6d1b4d-07e3-506f-b6b9-8723f2ee0d86",
+  "7c9eeb16-ff64-513c-836d-60a3a4e8fefc"
+ ],
+ "unresolved_site_ids": [],
+ "sponsor": "Regeneron Pharmaceuticals",
+ "collaborators": [
+  "Bayer"
+ ],
+ "overall_status": "COMPLETED",
+ "acronym": "PHOTON",
+ "dates": {
+  "start": "2020-06-29",
+  "start_type": "ACTUAL",
+  "primary_completion": "2022-05-30",
+  "primary_completion_type": "ACTUAL",
+  "completion": "2024-06-18",
+  "completion_type": "ACTUAL"
+ },
+ "documents": [
+  {
+   "label": "Study Protocol",
+   "type": "Prot",
+   "has_protocol": true,
+   "date": "2023-02-27",
+   "filename": "Prot_000.pdf",
+   "size_bytes": 1171191,
+   "url": "https://cdn.clinicaltrials.gov/large-docs/03/NCT04429503/Prot_000.pdf"
+  },
+  {
+   "label": "Statistical Analysis Plan",
+   "type": "SAP",
+   "has_protocol": false,
+   "date": "2022-08-19",
+   "filename": "SAP_001.pdf",
+   "size_bytes": 1311702,
+   "url": "https://cdn.clinicaltrials.gov/large-docs/03/NCT04429503/SAP_001.pdf"
+  }
+ ],
+ "attribution": "Source: ClinicalTrials.gov (https://clinicaltrials.gov/study/NCT04429503), U.S. National Library of Medicine. Data processed by ClinicalTrials.gov: 2026-10-16T09:00:05; fetched 2026-10-17T01:18:29Z. Modified by TrialPilot: mapped to a TrialDesign; visit schedule, per-site enrollment and missing coordinates are assumptions listed in the notes."
+}
