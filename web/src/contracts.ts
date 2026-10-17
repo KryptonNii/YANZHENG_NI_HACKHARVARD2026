@@ -243,6 +243,10 @@ export interface ForecastView {
   milestone_dates: Record<string, MetricRange>;
   /** (month, p10, p50, p90) cumulative patients */
   enrollment_curve: [number, number, number, number][];
+  draws_requested: number | null;
+  draws_used: number | null;
+  curve_draws_used: number | null;
+  provenance: ProvenanceItem[];
 }
 
 export interface SupplyView {
@@ -255,6 +259,9 @@ export interface SupplyView {
   shipments: MetricRange;
   /** share of draws with any stockout; no zero default */
   stockout_probability: number;
+  draws_requested: number | null;
+  draws_used: number | null;
+  provenance: ProvenanceItem[];
 }
 
 export interface ScenarioResult {

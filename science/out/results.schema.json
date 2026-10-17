@@ -40,14 +40,14 @@
         "total_t": {
           "anyOf": [
             {
-              "$ref": "#/$defs/Range"
+              "$ref": "#/$defs/TonneRange"
             },
             {
               "type": "null"
             }
           ],
           "default": null,
-          "description": "tonnes CO2e (unit field says kg_co2e x 1000)"
+          "description": "tonnes CO2e; unit is t_co2e"
         },
         "within_band": {
           "anyOf": [
@@ -528,6 +528,36 @@
         "p90"
       ],
       "title": "Range",
+      "type": "object"
+    },
+    "TonneRange": {
+      "description": "Industry-band trial total. The numbers are tonnes; `unit` says so.",
+      "properties": {
+        "p10": {
+          "title": "P10",
+          "type": "number"
+        },
+        "p50": {
+          "title": "P50",
+          "type": "number"
+        },
+        "p90": {
+          "title": "P90",
+          "type": "number"
+        },
+        "unit": {
+          "const": "t_co2e",
+          "default": "t_co2e",
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "p10",
+        "p50",
+        "p90"
+      ],
+      "title": "TonneRange",
       "type": "object"
     },
     "TrialOut": {

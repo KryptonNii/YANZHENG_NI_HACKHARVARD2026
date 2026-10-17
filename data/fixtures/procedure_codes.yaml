@@ -7,6 +7,12 @@
 # the protocol, in file order — the FIRST matching code wins, so specific entries come first.
 # Labels that match nothing are kept as `other:<slug>` (never dropped, never guessed).
 #
+# `label`: default wording when a template inserts one procedure of this code.
+# `group_label`: the name of the WHOLE code, for a control that removes every assessment sharing
+# it. It must name the category. It must not be one member's printed name (not "PARC", not
+# "SGRQ", not "Spirometry (pre-BD)"). `other:<slug>` codes are one assessment each and have no
+# group_label here.
+#
 # `ships_sample` is a category default (does this activity normally produce a sample that is
 # shipped to a central/specialty lab?). It is not a number and can be overridden per protocol.
 # `sample_temp` is left empty on purpose: storage temperature must come from the protocol/lab manual.
@@ -14,123 +20,157 @@ version: 1
 codes:
   - code: informed_consent
     label: Informed consent
+    group_label: Informed consent
     param: true
     match: ['informed consent', '\bconsent\b', '\bicf\b']
   - code: eligibility_check
     label: Inclusion / exclusion criteria review
+    group_label: Eligibility criteria review
     match: ['inclusion', 'exclusion', 'eligibility']
   - code: demographics
     label: Demographics
+    group_label: Demographics
     match: ['demograph']
   - code: medical_history
     label: Medical / surgical history
+    group_label: Medical and surgical history
     match: ['medical history', 'surgical history', 'disease history']
   - code: concomitant_meds
     label: Prior and concomitant medication review
+    group_label: Prior and concomitant medications
     match: ['concomitant', 'prior (and|&) concomitant', 'prior medication']
   - code: adverse_events
     label: Adverse event review
+    group_label: Adverse event review
     match: ['adverse event', '\bsaes?\b']
   - code: randomization
     label: Randomization
+    group_label: Randomization
     match: ['randomi[sz]ation']
   - code: irt_contact
     label: IRT / IVRS / IWRS transaction
+    group_label: IRT, IVRS and IWRS contact
     match: ['\bivrs\b', '\biwrs\b', '\birt\b', 'interactive (voice|web) response']
   - code: drug_dispensing
     label: Study drug dispensing
+    group_label: Study drug dispensing
     param: true
     match: ['dispens']
   - code: imp_administration
     label: Study drug administration at site
+    group_label: On-site study drug administration
     match: ['^study drug\b', 'imp administration', 'study (drug|treatment|intervention) administration', 'injection', 'infusion', 'intravitreal', '\bdosing\b', 'administration of (study|imp)']
   - code: physical_exam
     label: Physical examination
+    group_label: Physical examination
     param: true
     match: ['physical exam']
   - code: vital_signs
     label: Vital signs
+    group_label: Vital signs
     param: true
     match: ['vital sign', 'blood pressure', 'body weight', '\bheight\b']
   - code: ecg
     label: 12-lead electrocardiogram
+    group_label: Electrocardiogram
     param: true
     match: ['electrocardiogram', '\becg\b', '\bekg\b']
   - code: echocardiogram
     label: Echocardiogram
+    group_label: Echocardiogram
     param: true
     match: ['echocardiog']
   - code: x_ray
     label: X-ray
+    group_label: X-ray
     param: true
     match: ['x-?ray', 'radiograph']
   - code: ct_scan
     label: CT scan
+    group_label: CT scan
     param: true
     match: ['\bct\b scan', 'computed tomography', '\bct\b']
   - code: mri
     label: MRI
+    group_label: MRI
     param: true
     match: ['\bmri\b', 'magnetic resonance']
   - code: mammogram
     label: Mammogram
+    group_label: Mammogram
     param: true
     match: ['mammogra']
   - code: biopsy
     label: Biopsy
+    group_label: Biopsy
     param: true
     match: ['biops']
   - code: pk_sample
     label: Pharmacokinetic blood sample
+    group_label: Pharmacokinetic samples
     param: true
     ships_sample: true
     match: ['\bpk\b', 'pharmacokinetic', 'drug concentration']
   - code: ada_sample
     label: Anti-drug antibody (immunogenicity) sample
+    group_label: Immunogenicity samples
     ships_sample: true
     match: ['anti-?[a-z]+ ?antibod', 'anti-drug antibod', '\bada\b', 'immunogenicity']
   - code: urine_sample
     label: Urine sample / urine pregnancy test
+    group_label: Urine samples and urine tests
     param: true
     match: ['urine pregnancy', '^urinalysis', '^urine', 'urine sample', '\bupcr\b']
   - code: blood_draw
     label: Safety laboratory blood draw
+    group_label: Safety laboratory blood samples
     param: true
     ships_sample: true
     match: ['hematology', 'haematology', 'biochemistry', '\bchemistry\b', 'clinical laboratory', 'safety lab', 'serology', 'hepatitis', '\bhiv\b', 'pregnancy .*(blood|serum)', 'serum pregnancy', 'fibrinogen', 'hba1c', 'lipid', 'coagulation', 'blood sample']
   - code: biomarker_sample
     label: Exploratory biomarker / genetic sample
+    group_label: Biomarker and genetic samples
     ships_sample: true
     match: ['biomarker', '\bparc\b', 'eotaxin', '\bige\b', '\brna\b', '\bdna\b', 'archival', 'exploratory', 'pharmacogen', 'serum/plasma']
   - code: sputum_sample
     label: Sputum sample
+    group_label: Sputum samples
     ships_sample: true
     match: ['sputum']
   - code: home_spirometry
     label: At-home spirometry
+    group_label: At-home spirometry
     match: ['at-?home spirometry', 'home spirometry']
   - code: spirometry
     label: Spirometry
+    group_label: Spirometry assessments
     match: ['spirometry', '\bfev1\b', 'lung function']
   - code: feno
     label: Fractional exhaled nitric oxide (FeNO)
+    group_label: Fractional exhaled nitric oxide
     match: ['\bfeno\b', 'exhaled nitric oxide']
   - code: six_minute_walk
     label: Six-minute walk test
+    group_label: Walk tests and related scores
     match: ['6-?minute walk', 'six-?minute walk', '\bbode\b']
   - code: ophthalmic_exam
     label: Ophthalmic examination
+    group_label: Ophthalmic examinations
     match: ['ophthalm', 'slit.?lamp', 'fundus exam', 'intraocular pressure', '\biop\b', 'indirect ophthalmoscopy']
   - code: visual_acuity
     label: Best-corrected visual acuity
+    group_label: Visual acuity assessments
     match: ['visual acuity', '\bbcva\b', '\betdrs\b']
   - code: retinal_imaging
     label: Retinal imaging (OCT / fundus photography / angiography)
+    group_label: Retinal imaging
     match: ['optical coherence', '\boct\b', '\bocta\b', 'fundus photo', 'fluorescein', 'angiograph', '^fa\b', '\bfp\b']
   - code: questionnaire
     label: Questionnaire / patient-reported outcome / diary review
+    group_label: Questionnaires and diaries
     param: true
     match: ['questionnaire', '\bsgrq\b', '\bvfq\b', 'eq-?5d', 'diary', '\bexact\b', '\bpro\b', 'mmrc', '\bcat\b', 'health ?care utili[sz]ation', 'quality of life', 'score']
   - code: telephone_contact
     label: Telephone / remote contact
+    group_label: Telephone and remote contact
     match: ['telephone', 'phone call', 'phone contact']

@@ -22,9 +22,18 @@ from contextlib import contextmanager
 from dataclasses import dataclass, field
 from typing import Any
 
+from pydantic import ValidationError
 from trialpilot_contracts.params import param_set_version
 
-from ._contracts import Levers, MetricRange, Parameter, ScenarioResult, TrialDesign
+from ._contracts import (
+    ForecastView,
+    Levers,
+    MetricRange,
+    Parameter,
+    ScenarioResult,
+    SupplyView,
+    TrialDesign,
+)
 from .errors import ApiError
 from .hashing import sha256_hex
 
@@ -86,6 +95,112 @@ def _not_ready(what: str) -> ApiError:
         "than placeholder numbers.",
         {"component": what, "owner": "A2/A3"},
     )
+
+
+_FORECAST_KEYS = (
+    "months_to_full_enrollment", "milestone_dates", "enrollment_curve",
+    "draws_requested", "draws_used", "curve_draws_used", "provenance",
+)
+_SUPPLY_KEYS = (
+    "kits_needed", "kits_produced", "kits_wasted", "waste_share", "shipments",
+    "stockout_probability",
+    "draws_requested", "draws_used", "provenance",
+)
+
+
+def _producer_dict(obj: Any) -> dict[str, Any] | None:
+    """Display subset source. A3's `to_dict()`; a bare dict is accepted in tests."""
+    if obj is None:
+        return None
+    to_dict = getattr(obj, "to_dict", None)
+    raw = to_dict() if callable(to_dict) else obj
+    return raw if isinstance(raw, dict) else None
+
+
+def _subset(raw: dict[str, Any], keys: tuple[str, ...]) -> dict[str, Any]:
+    return {key: raw[key] for key in keys if key in raw}
+
+
+def _fit_view(model: type[Any], data: dict[str, Any]) -> Any | None:
+    try:
+        return model.model_validate(data)
+    except ValidationError:
+        return None
+
+
+def _sampling_notes(supply: Any) -> list[str]:
+    """The producer's own statement of how many draws the supply ranges used.
+
+    Prefer A3's warning or provenance sentence. Only if those are absent, name
+    `draws_used` — the count the simulation actually ran, not the scenario's draw request.
+    """
+    if supply is None:
+        return []
+    found: list[str] = []
+    blobs: list[Any] = []
+    warnings = getattr(supply, "warnings", None)
+    if isinstance(warnings, list):
+        blobs.extend(warnings)
+    for item in getattr(supply, "provenance", []) or []:
+        assumptions = getattr(item, "assumptions", None)
+        if isinstance(assumptions, list):
+            blobs.extend(assumptions)
+    for text in blobs:
+        if isinstance(text, str) and "draw" in text.lower() and text not in found:
+            found.append(text)
+    if found:
+        return found
+    used = getattr(supply, "draws_used", None)
+    if isinstance(used, int) and used > 0:
+        return [f"Drug supply simulated on {used} forecast draws."]
+    return []
+
+
+def _with_a3_views(result: ScenarioResult, forecast: Any, supply: Any) -> ScenarioResult:
+    """Attach contract v4 forecast/supply from the producer display subset.
+
+    Extra producer keys are dropped. A value that does not validate is left null
+    and named in warnings — percentiles are never rewritten to 0, and shipment
+    counts keep the unit the producer sent (`count`, not `kits`).
+    """
+    extra: list[str] = []
+    update: dict[str, Any] = {}
+    forecast_raw = _producer_dict(forecast)
+    if forecast_raw is not None:
+        data = _subset(forecast_raw, _FORECAST_KEYS)
+        view = _fit_view(ForecastView, data)
+        if view is None and "enrollment_curve" in data:
+            view = _fit_view(ForecastView, {k: v for k, v in data.items() if k != "enrollment_curve"})
+            if view is not None:
+                extra.append(
+                    "Enrollment curve omitted: a row was not four finite numbers. "
+                    "Missing points are not shown as zero."
+                )
+        if view is None:
+            extra.append(
+                "Enrollment forecast detail omitted: it did not match the contract. "
+                "Unknown stays unreported, not zero."
+            )
+        else:
+            update["forecast"] = view
+    supply_raw = _producer_dict(supply)
+    if supply_raw is not None:
+        view = _fit_view(SupplyView, _subset(supply_raw, _SUPPLY_KEYS))
+        if view is None:
+            extra.append(
+                "Drug supply detail omitted: it did not match the contract. "
+                "Unknown stays unreported, not zero."
+            )
+        else:
+            update["supply"] = view
+    extra.extend(_sampling_notes(supply))
+    for raw in (forecast_raw, supply_raw):
+        if raw:
+            extra.extend(w for w in raw.get("warnings", []) if isinstance(w, str))
+    if not update and not extra:
+        return result
+    warnings = list(dict.fromkeys([*result.warnings, *extra]))
+    return result.model_copy(update={**update, "warnings": warnings})
 
 
 def _engine_failure(exc: Exception, what: str) -> ApiError:
@@ -271,8 +386,10 @@ class EngineAdapter:
                 result = compute(design, levers, params, **kwargs)
             except Exception as exc:
                 raise _engine_failure(exc, "compute_scenario") from exc
+        result = _with_a3_views(result, a3.kwargs.get("forecast"), a3.kwargs.get("supply"))
         if a3.warnings:
-            result = result.model_copy(update={"warnings": [*result.warnings, *a3.warnings]})
+            result = result.model_copy(update={
+                "warnings": list(dict.fromkeys([*result.warnings, *a3.warnings]))})
         self.cache.put(key, result)
         return ComputeOutcome(result, False, (time.perf_counter() - start) * 1000, queue_ms)
 

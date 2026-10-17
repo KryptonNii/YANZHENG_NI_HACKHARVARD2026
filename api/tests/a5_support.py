@@ -167,9 +167,14 @@ def audit_actions(client: TestClient, object_id: str) -> list[str]:
 
 
 def save_scenario(client: TestClient, design_id: str, headers: dict[str, str] = AUTHOR,
-                  **levers: Any) -> dict[str, Any]:
+                  design_version: int | None = None, **levers: Any) -> dict[str, Any]:
+    if design_version is None:
+        got = client.get(f"/api/designs/{design_id}")
+        assert got.status_code == 200, got.text
+        design_version = int(got.headers["x-design-version"])
     r = client.post("/api/scenarios", headers=headers, json={
-        "name": "Scenario B", "design_id": design_id, "levers": levers})
+        "name": "Scenario B", "design_id": design_id, "design_version": design_version,
+        "levers": levers})
     assert r.status_code == 201, r.text
     return dict(r.json())
 

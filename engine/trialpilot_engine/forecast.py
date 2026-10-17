@@ -284,7 +284,12 @@ class ForecastResult:
 
     def to_dict(self) -> dict[str, Any]:
         """JSON-ready view (without the raw draws)."""
+        sampling = self.provenance[0].inputs if self.provenance else {}
+        curve_used = sampling.get("curve_draws_used")
         return {
+            "draws_requested": self.draws.n_draws if self.draws is not None else None,
+            "draws_used": self.draws.n_draws if self.draws is not None else None,
+            "curve_draws_used": int(curve_used) if isinstance(curve_used, (int, float)) else None,
             "months_to_full_enrollment": self.months_to_full_enrollment.model_dump(),
             "duration_months": self.duration_months.model_dump(),
             "milestone_dates": {k: v.model_dump() for k, v in self.milestone_dates.items()},

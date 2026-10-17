@@ -105,6 +105,33 @@ def test_clean_label() -> None:
     assert clean_label("Immunogenicity sample16, 17") == "Immunogenicity sample"
 
 
+def test_group_label_is_the_code_not_one_assessment() -> None:
+    """A shared code must not be titled with one protocol row that happens to use it."""
+    vocab = default_vocabulary()
+    doc = yaml.safe_load(
+        (REAL_FIXTURES / "protocols" / "NCT03930732_soa_transcription.yaml").read_text(encoding="utf-8"))
+    members: dict[str, set[str]] = {}
+    for row in doc["rows"]:
+        label = clean_label(row["label"])
+        proc, mapped = vocab.to_procedure(label)
+        if mapped:
+            members.setdefault(proc.code, set()).add(label)
+    shared = {code: labels for code, labels in members.items() if len(labels) >= 2}
+    assert {"questionnaire", "biomarker_sample", "spirometry", "blood_draw"} <= set(shared)
+    for code, labels in shared.items():
+        group = vocab.by_code[code].group_label.casefold()
+        for label in labels:
+            assert group != label.casefold()
+            assert not group.startswith(label.casefold())
+    assert "parc" not in vocab.by_code["biomarker_sample"].group_label.casefold()
+    assert "sgrq" not in vocab.by_code["questionnaire"].group_label.casefold()
+    assert "electronic diary" not in vocab.by_code["questionnaire"].group_label.casefold()
+    assert "pre-bd" not in vocab.by_code["spirometry"].group_label.casefold()
+    catalog = vocab.catalog()
+    assert {c["code"] for c in catalog["codes"]} == set(vocab.by_code)
+    assert all(c["group_label"] for c in catalog["codes"])
+
+
 def test_vocabulary_shares_codes_with_parameter_library() -> None:
     """Codes A10 lists for time.site.procedure.<code> (data/params/NEEDED.md) exist in the vocabulary."""
     v = default_vocabulary()

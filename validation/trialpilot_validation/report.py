@@ -10,7 +10,16 @@ from __future__ import annotations
 from typing import Any
 
 from . import execute, identity, protocol, trace
-from .context import Ctx, TpvError, md_escape, read_json, sha256_text, utc_now, write_json, write_text
+from .context import (
+    Ctx,
+    TpvError,
+    md_escape,
+    read_json,
+    sha256_text,
+    utc_now,
+    write_json,
+    write_text,
+)
 
 
 def render(ctx: Ctx, tr: dict[str, Any], run: dict[str, Any] | None,

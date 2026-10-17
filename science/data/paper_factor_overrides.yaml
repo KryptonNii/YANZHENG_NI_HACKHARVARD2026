@@ -3,29 +3,53 @@
 # and the paper actually reports are listed; everything else stays at the library value.
 # Source: Griffiths et al. BMJ Open 2024;14:e075755, appendices C/D (pages cited).
 ef.travel.rail.passenger_km:
-  value: 0.04441
+  value: 0.03549
   unit: kg_co2e/passenger_km
   ref: "appendix C p.7 'national rail: p.km x 0.04441' (= DESNZ 2022 0.03549 + WTT 0.00892)"
 ef.travel.flight.domestic.passenger_km:
-  value: 0.27278
+  value: 0.24587
   unit: kg_co2e/passenger_km
   ref: "appendix C p.7 'Domestic (average): 0.27278'"
 ef.travel.flight.short_haul.passenger_km:
-  value: 0.17034
+  value: 0.15353
   unit: kg_co2e/passenger_km
   ref: "appendix C p.7 'Short-haul (average) to/from UK: 0.17034'"
 ef.travel.flight.long_haul.passenger_km:
-  value: 0.21423
+  value: 0.19309
   unit: kg_co2e/passenger_km
   ref: "appendix C p.8 'Long-haul (average) to/from UK: 0.21423'"
 ef.freight.air.tonne_km:
-  value: 1.13047
+  value: 1.0189
   unit: kg_co2e/tonne_km
   ref: "appendix C p.4 'Long-haul (to/from UK) = 1.13047; International (to/from non-UK) = 1.13047'"
 ef.freight.van.tonne_km:
   value: 0.19443
   unit: kg_co2e/tonne_km
   ref: "appendix C p.4 'For road freight: t.km x 0.19443' (the engine's road courier factor)"
+ef.wtt.travel.rail.passenger_km:
+  value: 0.00892
+  unit: kg_co2e/passenger_km
+  ref: "DESNZ 2022 full set WTT- pass vehs & travel- land E83; direct 0.03549 + WTT = paper 0.04441"
+ef.wtt.travel.flight.domestic.passenger_km:
+  value: 0.02691
+  unit: kg_co2e/passenger_km
+  ref: "DESNZ 2022 full set WTT- business travel- air F20; direct 0.24587 + WTT = paper 0.27278"
+ef.wtt.travel.flight.short_haul.passenger_km:
+  value: 0.01681
+  unit: kg_co2e/passenger_km
+  ref: "DESNZ 2022 full set WTT- business travel- air F21; direct 0.15353 + WTT = paper 0.17034"
+ef.wtt.travel.flight.long_haul.passenger_km:
+  value: 0.02114
+  unit: kg_co2e/passenger_km
+  ref: "DESNZ 2022 full set WTT- business travel- air F24; direct 0.19309 + WTT = paper 0.21423"
+ef.wtt.freight.air.long_haul.tonne_km:
+  value: 0.11157
+  unit: kg_co2e/tonne_km
+  ref: "DESNZ 2022 full set WTT- delivery vehs & freight E94; direct 1.0189 + WTT = paper 1.13047"
+ef.wtt.freight.van.tonne_km:
+  value: 0.0
+  unit: kg_co2e/tonne_km
+  ref: "Accounting boundary only: paper road freight 0.19443 is used once as its reported combined factor. Its direct/WTT split is unidentified (docs/sources.md); zero means no additional WTT, not zero upstream emissions. Only this paper-factor experiment, never the library."
 ef.electricity.grid.gb:
   value: 0.273
   unit: kg_co2e/kwh

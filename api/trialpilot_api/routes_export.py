@@ -1,8 +1,9 @@
 """/api/export/scenario/{id}.csv | .pdf — design report for one saved scenario.
 
-Contents: scenario + design identity, levers, the six metrics (P10/P50/P90), module breakdown,
-warnings and assumptions, provenance formulas, every parameter used with its source (or its
-assumption rationale), and the signature manifestation (signer, role, meaning, UTC time).
+Contents: scenario + design identity, the design's missing_fields, levers, the six metrics
+(P10/P50/P90), module breakdown, forecast and supply when the result has them, warnings and
+assumptions, provenance formulas, every parameter used with its source (or its assumption
+rationale), and the signature manifestation (signer, role, meaning, UTC time).
 The CSV is one table with a `section` column so nothing is lost when it is filtered.
 """
 
@@ -23,6 +24,7 @@ from .db import ScenarioRow, get_session, utcnow_iso
 from .deps import services
 from .engine_adapter import METRICS
 from .errors import ApiError
+from .routes_designs import load_design
 from .routes_scenarios import sync_status
 
 router = APIRouter(prefix="/api/export", tags=["export"])
@@ -44,8 +46,11 @@ def _gather(svc: Any, session: Session, scenario_id: str) -> dict[str, Any]:
                        {"scenario_id": scenario_id})
     approval: ApprovalRequest | None = sync_status(svc, session, row)
     result = ScenarioResult.model_validate_json(row.result)
-    used_ids = sorted({pid for m in result.modules for pi in m.provenance
-                       for pid in pi.parameter_ids})
+    provenance = [pi for m in result.modules for pi in m.provenance]
+    for view in (result.forecast, result.supply):
+        if view is not None:
+            provenance.extend(view.provenance)
+    used_ids = sorted({pid for pi in provenance for pid in pi.parameter_ids})
     stored = svc.params.params_for_set(row.parameter_set_version)
     notes: list[str] = []
     if stored is None:
@@ -57,12 +62,56 @@ def _gather(svc: Any, session: Session, scenario_id: str) -> dict[str, Any]:
     missing = [i for i in used_ids if i not in by_id]
     if missing:
         notes.append(f"Parameters referenced by provenance but not found: {', '.join(missing)}")
-    assumptions = sorted({a for m in result.modules for pi in m.provenance for a in pi.assumptions})
+    assumptions = sorted({a for pi in provenance for a in pi.assumptions})
+    try:
+        _, design = load_design(session, row.design_id, row.design_version)
+        missing_fields = list(design.missing_fields)
+    except ApiError as exc:
+        missing_fields = []
+        notes.append(exc.message)
     return {
         "row": row, "result": result, "levers": Levers.model_validate_json(row.levers),
         "approval": approval, "params": params, "assumptions": assumptions, "notes": notes,
-        "generated_at": utcnow_iso(),
+        "missing_fields": missing_fields, "generated_at": utcnow_iso(),
     }
+
+
+def _write_range(w: Any, section: str, key: str, metric: Any, detail: str = "") -> None:
+    w.writerow([section, key, _num(metric.p10), _num(metric.p50), _num(metric.p90),
+                metric.unit, detail])
+
+
+def _write_detail_views(w: Any, result: ScenarioResult) -> None:
+    """Forecast and supply as stored. Null percentiles stay 'unknown'; a missing view is
+    'not reported' and is not filled with zeros."""
+    for section, view in (("forecast", result.forecast), ("supply", result.supply)):
+        if view is not None:
+            for pi in view.provenance:
+                w.writerow(["provenance", f"{section}:{pi.formula_id}", "", "", "", "",
+                            f"{pi.description} | parameters: {', '.join(pi.parameter_ids)}"])
+            for key in ("draws_requested", "draws_used", "curve_draws_used"):
+                if hasattr(view, key):
+                    value = getattr(view, key)
+                    w.writerow([section, key, "", "", "", "count",
+                                "unknown" if value is None else value])
+    forecast = result.forecast
+    if forecast is None:
+        w.writerow(["forecast", "detail", "", "", "", "", "not reported"])
+    else:
+        _write_range(w, "forecast", "months_to_full_enrollment", forecast.months_to_full_enrollment)
+        for name, metric in forecast.milestone_dates.items():
+            _write_range(w, "forecast", f"milestone.{name}", metric, "months from study start")
+        for month, p10, p50, p90 in forecast.enrollment_curve:
+            w.writerow(["forecast", "enrollment_curve", _num(p10), _num(p50), _num(p90),
+                        "patients", f"month {month}"])
+    supply = result.supply
+    if supply is None:
+        w.writerow(["supply", "detail", "", "", "", "", "not reported"])
+    else:
+        for key in ("kits_needed", "kits_produced", "kits_wasted", "waste_share", "shipments"):
+            _write_range(w, "supply", key, getattr(supply, key))
+        w.writerow(["supply", "stockout_probability", "", "", "", "share",
+                    supply.stockout_probability])
 
 
 def _filename(row: ScenarioRow, ext: str) -> str:
@@ -96,6 +145,8 @@ def build_csv(data: dict[str, Any]) -> str:
     }
     for k, v in meta.items():
         w.writerow(["scenario", k, "", "", "", "", v])
+    w.writerow(["design", "missing_fields", "", "", "", "",
+                "; ".join(data["missing_fields"])])
     for k, v in data["levers"].model_dump().items():
         w.writerow(["lever", k, "", "", "", "", v])
     for m in METRICS:
@@ -109,6 +160,7 @@ def build_csv(data: dict[str, Any]) -> str:
         for pi in mod.provenance:
             w.writerow(["provenance", f"{mod.module}:{pi.formula_id}", "", "", "", "",
                         f"{pi.description} | parameters: {', '.join(pi.parameter_ids)}"])
+    _write_detail_views(w, result)
     for warning in result.warnings:
         w.writerow(["warning", "", "", "", "", "", warning])
     for a in data["assumptions"]:
@@ -155,7 +207,7 @@ def _fmt(v: float | None, unit: str) -> str:
 
 
 UNIT_TEXT = {"usd": "USD", "hours": "hours", "kg_co2e": "kg CO2e", "months": "months",
-             "percent": "%", "patients": "patients", "kits": "kits"}
+             "percent": "%", "patients": "patients", "kits": "kits", "count": "count"}
 
 
 def build_pdf(data: dict[str, Any]) -> bytes:
@@ -217,8 +269,53 @@ def build_pdf(data: dict[str, Any]) -> bytes:
                          f"{_fmt(c.p50, c.unit)} ({_fmt(c.p10, c.unit)}–{_fmt(c.p90, c.unit)})",
                          f"{_fmt(e.p50, e.unit)} ({_fmt(e.p10, e.unit)}–{_fmt(e.p90, e.unit)})"])
         story.append(table(rows, [45 * mm, 62 * mm, 63 * mm]))
-    if result.warnings or data["assumptions"] or data["notes"]:
+    story += [Spacer(1, 4 * mm), p("Forecast and supply", styles["Heading2"])]
+    for label, view in (("Forecast", result.forecast), ("Supply", result.supply)):
+        if view is not None:
+            story.append(p(f"{label} draws: requested {view.draws_requested}, "
+                           f"used {view.draws_used} (None means not reported).", small))
+            if hasattr(view, "curve_draws_used"):
+                story.append(p(f"Enrollment curve draws: {view.curve_draws_used}.", small))
+    forecast = result.forecast
+    if forecast is None:
+        story.append(p("Enrollment forecast: not reported.", small))
+    else:
+        m = forecast.months_to_full_enrollment
+        story.append(p(
+            "Months to full enrollment: "
+            f"{_fmt(m.p10, m.unit)} / {_fmt(m.p50, m.unit)} / {_fmt(m.p90, m.unit)} "
+            f"{UNIT_TEXT.get(m.unit, m.unit)} (P10 / P50 / P90).",
+            small))
+        for name, metric in forecast.milestone_dates.items():
+            story.append(p(
+                f"{name}: {_fmt(metric.p10, metric.unit)} / {_fmt(metric.p50, metric.unit)} / "
+                f"{_fmt(metric.p90, metric.unit)} {UNIT_TEXT.get(metric.unit, metric.unit)}.",
+                small))
+        story.append(p(
+            f"Enrollment curve: {len(forecast.enrollment_curve)} points "
+            "(month, P10, P50, P90 cumulative patients). Full rows are in the CSV.",
+            small))
+    supply = result.supply
+    if supply is None:
+        story.append(p("Drug supply: not reported.", small))
+    else:
+        for label, metric in (
+            ("Kits needed", supply.kits_needed), ("Kits produced", supply.kits_produced),
+            ("Kits wasted", supply.kits_wasted), ("Waste share", supply.waste_share),
+            ("Shipments", supply.shipments),
+        ):
+            story.append(p(
+                f"{label}: {_fmt(metric.p10, metric.unit)} / {_fmt(metric.p50, metric.unit)} / "
+                f"{_fmt(metric.p90, metric.unit)} {UNIT_TEXT.get(metric.unit, metric.unit)}.",
+                small))
+        story.append(p(
+            f"Stockout probability: {supply.stockout_probability} "
+            "(share of simulated draws with any site stockout).",
+            small))
+    if data["missing_fields"] or result.warnings or data["assumptions"] or data["notes"]:
         story += [Spacer(1, 4 * mm), p("Warnings and assumptions", styles["Heading2"])]
+        if data["missing_fields"]:
+            story.append(p("Design missing_fields: " + "; ".join(data["missing_fields"]), small))
         for text in [*result.warnings, *data["assumptions"], *data["notes"]]:
             story.append(p(f"• {text}", small))
     if data["params"]:

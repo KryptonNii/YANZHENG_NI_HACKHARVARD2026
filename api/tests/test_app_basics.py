@@ -3,7 +3,10 @@
 from __future__ import annotations
 
 import json
+import threading
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+from typing import Any
 
 import pytest
 from a5_support import AUTHOR, VIEWER, audit_actions, make_design
@@ -74,7 +77,8 @@ def test_design_create_get_list_and_versions(client: TestClient) -> None:
 
     changed = make_design()
     changed["enrollment_target"] = 120
-    r = client.post("/api/designs", json=changed, headers=AUTHOR)
+    etag = r.headers["etag"]
+    r = client.post("/api/designs", json=changed, headers={**AUTHOR, "If-Match": etag})
     assert r.status_code == 201 and r.headers["x-design-version"] == "2"
     assert client.get("/api/designs/design-test-1?version=1").json()["enrollment_target"] == 100
     assert client.get("/api/designs/design-test-1").json()["enrollment_target"] == 120
@@ -83,6 +87,112 @@ def test_design_create_get_list_and_versions(client: TestClient) -> None:
     assert [(d["id"], d["version"], d["site_count"]) for d in listing] == [("design-test-1", 2, 3)]
     assert len(client.get("/api/designs/design-test-1/versions").json()) == 2
     assert audit_actions(client, "design-test-1") == ["design.create", "design.update"]
+
+
+def test_design_update_requires_if_match_and_keeps_identity(client: TestClient) -> None:
+    created = client.post("/api/designs", json=make_design(), headers=AUTHOR)
+    assert created.status_code == 201
+    etag = created.headers["etag"]
+    assert etag.startswith('"') and etag.endswith('"')
+    current = client.get("/api/designs/design-test-1/versions").json()[0]["design_hash"]
+    assert etag == f'"{current}"'
+
+    changed = make_design()
+    changed["enrollment_target"] = 120
+    missing = client.post("/api/designs", json=changed, headers=AUTHOR)
+    assert missing.status_code == 409 and missing.json()["error"] == "design_changed"
+    assert missing.json()["details"]["version"] == 1
+    assert missing.headers["etag"] == etag
+    wrong = client.post("/api/designs", json=changed, headers={**AUTHOR, "If-Match": '"not-the-hash"'})
+    assert wrong.status_code == 409 and wrong.json()["error"] == "design_changed"
+    weak = client.post("/api/designs", json=changed, headers={**AUTHOR, "If-Match": f"W/{etag}"})
+    assert weak.status_code == 409
+    assert client.get("/api/designs/design-test-1").headers["x-design-version"] == "1"
+
+    renamed = make_design()
+    renamed["registry_id"] = "NCT00000000"
+    renamed["source"] = "ctgov"
+    blocked = client.post("/api/designs", json=renamed, headers={**AUTHOR, "If-Match": etag})
+    assert blocked.status_code == 422 and blocked.json()["error"] == "design_identity_immutable"
+    assert set(blocked.json()["details"]["fields"]) == {"registry_id", "source"}
+    assert client.get("/api/designs/design-test-1").headers["x-design-version"] == "1"
+
+    # identical content does not need If-Match and does not mint a version
+    again = client.post("/api/designs", json=make_design(), headers=AUTHOR)
+    assert again.status_code == 200 and again.headers["x-design-version"] == "1"
+
+    updated = client.post("/api/designs", json=changed, headers={**AUTHOR, "If-Match": etag})
+    assert updated.status_code == 201 and updated.headers["x-design-version"] == "2"
+
+
+def test_design_rejects_impossible_schedule_enrollment_and_coordinates(client: TestClient) -> None:
+    def post(design: dict) -> Any:
+        return client.post("/api/designs", json=design, headers=AUTHOR)
+
+    backwards = make_design("weeks-bad")
+    backwards["visits"] = [
+        {"number": 1, "label": "Later", "week": 10},
+        {"number": 2, "label": "Earlier", "week": 2},
+    ]
+    r = post(backwards)
+    assert r.status_code == 422 and r.json()["error"] == "weeks_not_increasing"
+    assert "weeks_not_increasing" in r.json()["details"]["codes"]
+
+    same_week = make_design("weeks-tied")
+    same_week["visits"] = [
+        {"number": 2, "label": "Second listed", "week": 4},
+        {"number": 1, "label": "First", "week": 4},
+    ]
+    assert post(same_week).status_code == 201
+
+    negative = make_design("enroll-bad")
+    negative["sites"][0]["expected_enrollment"] = -5
+    r = post(negative)
+    assert r.status_code == 422 and "negative_enrollment" in r.json()["details"]["codes"]
+
+    coords = make_design("coords-bad")
+    coords["sites"][0]["lat"] = 91
+    coords["sites"][1]["lon"] = -181
+    r = post(coords)
+    assert r.status_code == 422
+    assert set(r.json()["details"]["codes"]) == {"invalid_latitude", "invalid_longitude"}
+
+    unknown = make_design("coords-unknown")
+    unknown["sites"][0]["lat"] = None
+    unknown["sites"][0]["lon"] = None
+    unknown["sites"][0]["expected_enrollment"] = 0
+    assert post(unknown).status_code == 201
+
+
+@pytest.mark.req("URS-005", "URS-010", "URS-015")
+def test_concurrent_design_updates_report_conflict(client: TestClient, monkeypatch: pytest.MonkeyPatch) -> None:
+    from trialpilot_api.services import Services
+
+    response = client.post("/api/designs", json=make_design(), headers=AUTHOR)
+    etag = response.headers["ETag"]
+    original = Services.audited_write
+    barrier = threading.Barrier(2)
+
+    def synchronized(self: Any, session: Any, ident: Any, action: str, *args: Any, **kwargs: Any) -> Any:
+        if action == "design.update":
+            barrier.wait(timeout=10)
+        return original(self, session, ident, action, *args, **kwargs)
+
+    monkeypatch.setattr(Services, "audited_write", synchronized)
+
+    def update(target: int) -> Any:
+        body = make_design()
+        body["enrollment_target"] = target
+        return client.post("/api/designs", json=body, headers={**AUTHOR, "If-Match": etag})
+
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        replies = list(pool.map(update, [120, 140]))
+    assert sorted(reply.status_code for reply in replies) == [201, 409]
+    conflict = next(reply for reply in replies if reply.status_code == 409)
+    assert conflict.json()["error"] == "design_changed"
+    assert conflict.json()["details"]["version"] == 2
+    assert len(client.get("/api/designs/design-test-1/versions").json()) == 2
+    assert client.get("/api/audit/verify").json()["ok"] is True
 
 
 def test_design_id_generated_when_missing(client: TestClient) -> None:
@@ -188,7 +298,7 @@ def test_invalid_param_library_blocks_compute(make_client, tmp_path: Path) -> No
     c = make_client(params_dir=bad)
     assert c.get("/api/health").json()["params"]["ok"] is False
     c.post("/api/designs", json=make_design(), headers=AUTHOR)
-    r = c.post("/api/scenarios/compute", json={"design_id": "design-test-1"})
+    r = c.post("/api/scenarios/compute", json={"design_id": "design-test-1", "design_version": 1})
     assert r.status_code == 503 and r.json()["error"] == "params_invalid"
     assert r.json()["details"]["problems"]
 

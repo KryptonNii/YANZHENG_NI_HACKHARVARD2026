@@ -33,13 +33,15 @@ def _audit(client: Any, **params: Any) -> list[dict[str, Any]]:
 def test_design_create_and_update_are_audited(api: Any) -> None:
     r = api.post("/api/designs", json=_design("oq-d1"), headers=AUTHOR)
     assert r.status_code == 201, r.text
+    etag = r.headers["ETag"]
     entries = _audit(api, object_type="design", object_id="oq-d1")
     assert [e["action"] for e in entries] == ["design.create"]
     created = entries[0]
     assert created["actor"] == "alex.author" and created["role"] == "author"
     assert created["before_hash"] is None and len(created["after_hash"]) == 64
 
-    r = api.post("/api/designs", json=_design("oq-d1", title="OQ trial v2"), headers=AUTHOR)
+    r = api.post("/api/designs", json=_design("oq-d1", title="OQ trial v2"),
+                 headers={**AUTHOR, "If-Match": etag})
     assert r.status_code in (200, 201), r.text
     entries = _audit(api, object_type="design", object_id="oq-d1")
     assert [e["action"] for e in entries] == ["design.create", "design.update"]

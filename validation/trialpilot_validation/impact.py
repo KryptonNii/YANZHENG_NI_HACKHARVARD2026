@@ -13,7 +13,16 @@ from typing import Any
 import yaml
 
 from . import execute, identity, protocol
-from .context import DRAFT_STAMP, Ctx, TpvError, md_escape, sha256_text, utc_now, write_json, write_text
+from .context import (
+    DRAFT_STAMP,
+    Ctx,
+    TpvError,
+    md_escape,
+    sha256_text,
+    utc_now,
+    write_json,
+    write_text,
+)
 
 
 def load_map(ctx: Ctx) -> list[dict[str, Any]]:

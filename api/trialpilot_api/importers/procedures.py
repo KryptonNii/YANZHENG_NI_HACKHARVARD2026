@@ -7,6 +7,7 @@ import unicodedata
 from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
+from typing import Any
 
 import yaml
 
@@ -20,6 +21,7 @@ OTHER_PREFIX = "other:"
 class CodeSpec:
     code: str
     label: str
+    group_label: str
     patterns: tuple[re.Pattern[str], ...]
     ships_sample: bool = False
     in_param_library: bool = False
@@ -49,17 +51,42 @@ class Vocabulary:
         self.path = path or fixtures_dir() / "procedure_codes.yaml"
         doc = yaml.safe_load(self.path.read_text(encoding="utf-8"))
         self.version: int = int(doc.get("version", 1))
-        self.specs: list[CodeSpec] = [
-            CodeSpec(
+        self.specs: list[CodeSpec] = []
+        for c in doc["codes"]:
+            group_label = str(c.get("group_label") or "").strip()
+            if not group_label:
+                raise ValueError(f"procedure code {c.get('code')!r} needs a group_label")
+            self.specs.append(CodeSpec(
                 code=c["code"],
                 label=c["label"],
+                group_label=group_label,
                 patterns=tuple(re.compile(p, re.I) for p in c.get("match", [])),
                 ships_sample=bool(c.get("ships_sample", False)),
                 in_param_library=bool(c.get("param", False)),
-            )
-            for c in doc["codes"]
-        ]
+            ))
         self.by_code = {s.code: s for s in self.specs}
+
+    def group_label_map(self) -> dict[str, str]:
+        """code -> name of the whole code. Never one member assessment's name."""
+        return {s.code: s.group_label for s in self.specs}
+
+    def catalog(self) -> dict[str, Any]:
+        return {
+            "version": self.version,
+            "note": (
+                "group_label names every assessment that shares the code. "
+                "Do not replace it with one assessment's own name."
+            ),
+            "codes": [
+                {
+                    "code": s.code,
+                    "group_label": s.group_label,
+                    "ships_sample": s.ships_sample,
+                    "in_param_library": s.in_param_library,
+                }
+                for s in self.specs
+            ],
+        }
 
     def match(self, label: str) -> CodeSpec | None:
         text = _ascii(clean_label(label)).lower()

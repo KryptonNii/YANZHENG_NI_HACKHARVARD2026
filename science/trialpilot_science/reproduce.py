@@ -38,8 +38,8 @@ from .results import (
     FindingOut,
     IndustryBand,
     PublishedFigures,
-    Range,
     ScienceResults,
+    TonneRange,
     TrialOut,
 )
 
@@ -139,8 +139,8 @@ def _industry_band(params: Mapping[str, Parameter], engine: Any, engine_reason: 
             continue
         try:
             r = engine(design, Levers(), dict(params), seed=SEED, draws=DRAWS)
-            t = Range(p10=round(r.co2e_kg.p10 / 1000, 3), p50=round(r.co2e_kg.p50 / 1000, 3),
-                      p90=round(r.co2e_kg.p90 / 1000, 3))
+            t = TonneRange(p10=round(r.co2e_kg.p10 / 1000, 3), p50=round(r.co2e_kg.p50 / 1000, 3),
+                           p90=round(r.co2e_kg.p90 / 1000, 3))
             demo.append(BandTrial(design_id=design.id, title=design.title, registry_id=design.registry_id,
                                   available=True, total_t=t,
                                   within_band=min(INDUSTRY_TRIALS_T) <= t.p50 <= max(INDUSTRY_TRIALS_T)))
@@ -186,7 +186,10 @@ def run(seed: int = SEED, draws: int = DRAWS) -> ScienceResults:
                 "engine_paper_factors", "Engine check with the paper's own factors",
                 ("As above, but every engine emission factor the paper reports is replaced by the paper's value "
                  "(rail 0.04441, flights, air and road freight, UK grid 0.273, dry ice 1.81, CTU per-FTE). "
-                 "Remaining differences are structural: what the engine models vs what the paper counted."),
+                 "Identified combined factors are split into documented direct/WTT components so each is "
+                 "counted once. Road freight 0.19443 has an unidentified split and is used once without "
+                 "additional WTT. Factors absent from the paper retain the library values. Remaining "
+                 "differences include model structure and these unsourced activity assumptions."),
                 ledger, published, paper_params, engine, engine_reason, seed, draws, tnotes),
         }
         t = ledger.trial

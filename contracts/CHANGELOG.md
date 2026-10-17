@@ -3,6 +3,16 @@
 Decisions on `handoffs/*_CONTRACT_CHANGES.md`. Accepted changes are applied to `trialpilot_contracts/models.py`,
 regenerated (`contracts/schema/`, `web/src/contracts.ts`) and listed here. A §2 rule is never weakened.
 
+## v5 — 2026-10-17 ET — sampling and A3 provenance
+
+ForecastView and SupplyView retain nullable `draws_requested` and `draws_used`;
+ForecastView also has nullable `curve_draws_used`. Null means the producer or
+historical record did not report a count. The engine supplies actual counts;
+no sample budgets or threshold changed. Both views retain `provenance` items so
+assumptions and source parameter references survive save, record hash and export.
+The API now propagates both producers' warnings. These additions are optional
+for older producers; existing unknown MetricRange percentiles remain null.
+
 ## Recorded rules — 2026-10-16 ET — no schema change
 
 ### A4 deterministic UUIDv5 — ACCEPTED as a producer convention

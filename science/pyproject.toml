@@ -33,6 +33,7 @@ dev = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+markers = ["req(id, ...): URS requirement id(s) this test verifies (validation/requirements.yaml)"]
 
 [tool.ruff]
 line-length = 110

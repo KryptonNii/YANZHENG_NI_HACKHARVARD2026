@@ -11,7 +11,16 @@ from pathlib import Path
 from typing import Any
 
 from . import identity
-from .context import Ctx, TpvError, md_escape, read_json, sha256_file, utc_now, write_json, write_text
+from .context import (
+    Ctx,
+    TpvError,
+    md_escape,
+    read_json,
+    sha256_file,
+    utc_now,
+    write_json,
+    write_text,
+)
 from .runner import load_suite_tests, run_suite, scan_e2e
 
 MIN_TESTS = {"H": 2, "M": 1, "L": 1}

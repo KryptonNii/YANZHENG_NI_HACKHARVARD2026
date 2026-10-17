@@ -37,6 +37,15 @@ class Range(BaseModel):
     unit: Literal["kg_co2e"] = "kg_co2e"
 
 
+class TonneRange(BaseModel):
+    """Industry-band trial total. The numbers are tonnes; `unit` says so."""
+
+    p10: float
+    p50: float
+    p90: float
+    unit: Literal["t_co2e"] = "t_co2e"
+
+
 class ModuleRow(BaseModel):
     module: str = Field(description="§6 module id, or 'total'")
     label: str
@@ -119,7 +128,7 @@ class BandTrial(BaseModel):
     registry_id: str | None
     available: bool
     reason: str | None = None
-    total_t: Range | None = Field(default=None, description="tonnes CO2e (unit field says kg_co2e x 1000)")
+    total_t: TonneRange | None = Field(default=None, description="tonnes CO2e; unit is t_co2e")
     within_band: bool | None = None
 
 

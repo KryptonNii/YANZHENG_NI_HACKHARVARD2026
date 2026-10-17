@@ -22,7 +22,7 @@ jobs:
           python-version: "3.12"
       - name: Install
         working-directory: ${{ matrix.package }}
-        run: uv sync
+        run: uv sync --frozen
       - name: Ruff
         working-directory: ${{ matrix.package }}
         run: uv run ruff check .
@@ -62,3 +62,30 @@ jobs:
         run: pnpm --dir web typecheck
       - name: Vitest
         run: pnpm --dir web test
+
+  integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Browser dependencies
+        run: |
+          pnpm --dir web install --frozen-lockfile
+          cd web
+          pnpm exec playwright install --with-deps chromium
+      - name: Complete isolated validation (demo signatures; awaiting human QA)
+        run: uv run --frozen --project validation python validation/scripts/check_clean_clone.py --e2e
+      - name: Preserve results even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: isolated-validation
+          path: validation/out/clean-clone/

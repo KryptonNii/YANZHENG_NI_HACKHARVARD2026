@@ -36,6 +36,52 @@
           },
           "title": "Enrollment Curve",
           "type": "array"
+        },
+        "draws_requested": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Draws Requested"
+        },
+        "draws_used": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Draws Used"
+        },
+        "curve_draws_used": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Curve Draws Used"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/ProvenanceItem"
+          },
+          "title": "Provenance",
+          "type": "array"
         }
       },
       "required": [
@@ -290,6 +336,39 @@
           "minimum": 0,
           "title": "Stockout Probability",
           "type": "number"
+        },
+        "draws_requested": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Draws Requested"
+        },
+        "draws_used": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Draws Used"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/ProvenanceItem"
+          },
+          "title": "Provenance",
+          "type": "array"
         }
       },
       "required": [

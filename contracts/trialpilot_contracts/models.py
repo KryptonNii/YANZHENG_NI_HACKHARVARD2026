@@ -116,6 +116,10 @@ class ForecastView(BaseModel):
     months_to_full_enrollment: MetricRange       # unit months
     milestone_dates: dict[str, MetricRange] = Field(default_factory=dict)  # months from study start
     enrollment_curve: list[tuple[float, float, float, float]] = Field(default_factory=list)  # (month, p10, p50, p90) cumulative patients
+    draws_requested: Optional[int] = Field(default=None, ge=0)
+    draws_used: Optional[int] = Field(default=None, ge=0)
+    curve_draws_used: Optional[int] = Field(default=None, ge=0)
+    provenance: list[ProvenanceItem] = Field(default_factory=list)
 
 class SupplyView(BaseModel):
     """Supply display subset; extra producer fields are ignored (v4, A8)."""
@@ -125,6 +129,9 @@ class SupplyView(BaseModel):
     waste_share: MetricRange                    # unit percent
     shipments: MetricRange                      # unit count
     stockout_probability: float = Field(ge=0, le=1)  # share of draws with any stockout; no zero default
+    draws_requested: Optional[int] = Field(default=None, ge=0)
+    draws_used: Optional[int] = Field(default=None, ge=0)
+    provenance: list[ProvenanceItem] = Field(default_factory=list)
 
 class ScenarioResult(BaseModel):
     design_id: str

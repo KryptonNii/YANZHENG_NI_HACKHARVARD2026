@@ -29,20 +29,23 @@ include .env
 export
 endif
 
-.PHONY: help install dev api web test test-py test-web lint gen gen-check params seed demo validate science licenses clean
+.PHONY: help install dev api web test test-py test-web lint gen gen-check params seed demo validate validate-isolated science licenses clean
 
 help:
 	@sed -n '2,13p' Makefile | sed 's/^# //'
 
 install:
-	@for p in $(PY_PACKAGES); do echo ">> uv sync $$p"; $(UV) sync --project $$p; done
+	@for p in $(PY_PACKAGES); do echo ">> uv sync $$p"; $(UV) sync --frozen --project $$p; done
 	@echo ">> pnpm 9.15.9 install (web)"
-	$(PNPM) --dir web install
+	$(PNPM) --dir web install --frozen-lockfile
 
 dev:
-	@trap 'kill 0' INT TERM EXIT; \
+	@api_pid=""; web_pid=""; \
+	trap 'for pid in "$$api_pid" "$$web_pid"; do if [ -n "$$pid" ]; then kill "$$pid" 2>/dev/null || true; fi; done' INT TERM EXIT; \
 	$(UV) run --project api uvicorn --factory $(API_APP) --host 127.0.0.1 --port $(API_PORT) --reload --reload-dir api --reload-dir engine & \
+	api_pid=$$!; \
 	WEB_PORT=$(WEB_PORT) API_TARGET=http://localhost:$(API_PORT) $(PNPM) --dir web dev --port $(WEB_PORT) --strictPort & \
+	web_pid=$$!; \
 	wait
 
 api:
@@ -91,11 +94,17 @@ demo: seed dev
 validate:
 	cd validation && $(UV) run tpv package
 
+# Preserves the timestamped evidence and clone, uses temporary databases and 8007/5180.
+# Requires committed code, locked dependencies and an available Playwright Chromium.
+validate-isolated:
+	$(UV) run --frozen --project validation python validation/scripts/check_clean_clone.py --e2e
+
 science:
 	$(UV) run --project science python -m science.reproduce
 
 clean:
-	rm -rf validation/out science/out web/dist
+	@echo "Validation and science evidence are retained. Only build output is cleaned."
+	rm -rf web/dist
 
 licenses:
 	$(UV) run --project contracts python .github/scripts/third_party.py

@@ -6,7 +6,7 @@ import json
 
 import pytest
 
-from trialpilot_api.importers._contracts import TrialDesign
+from trialpilot_api.importers._contracts import TrialDesign, Visit
 from trialpilot_api.importers.ctgov import (
     classify_drug_type,
     fetch_study_result,
@@ -59,7 +59,19 @@ def test_visits_are_flagged_as_assumed_template() -> None:
     assert weeks == sorted(weeks) and len(set(weeks)) == len(weeks)
     assert [v.number for v in d.visits] == list(range(1, len(d.visits) + 1))
     assert any("NOT in the registry" in n for n in rep.notes)
+    assert rep.notes == [n.text for n in rep.field_notes]
+    visit = next(n for n in rep.field_notes if n.field == "visits")
+    assert visit.kind == "assumption" and visit.clears_when_present
+    assert next(n for n in rep.field_notes if n.field == "enrollment_target").kind == "fact"
     assert all(not v.can_be_remote for v in d.visits)  # decided by humans, default False
+
+
+def test_confirmed_schedule_drops_the_template_note() -> None:
+    raw = json.loads((REAL_FIXTURES / "ctgov" / f"{DEMO_NCT}.json").read_text(encoding="utf-8"))
+    confirmed = [Visit(number=1, label="Screening", week=-4), Visit(number=2, label="Baseline", week=0)]
+    rep = map_study_report(raw, visits=confirmed)
+    assert "visits" not in rep.design.missing_fields
+    assert not any(n.field == "visits" for n in rep.field_notes)
 
 
 def test_unknown_is_never_zero() -> None:

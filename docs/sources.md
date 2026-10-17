@@ -101,6 +101,17 @@ electricity factor 0.273 is not explained in the appendices; hotel factors 13.9 
 "Paper and board: paper" 919.39628 kg/t (cell E87).
 
 ### 1.4 Values taken into the library (`data/params/lcct_method.yaml`, `modules.yaml`)
+
+Reproduction boundary update (2026-10-17): the engine's paper-factor experiment
+uses the documented direct/WTT pairs above, not combined factors followed by
+another WTT term. The unidentified road-freight total 0.19443 is applied once;
+its upstream component is unknown. Its zero *additional* WTT override is confined
+to that experiment and does not assert zero upstream emissions. The library's
+separate direct/WTT values are unchanged. Engine-library totals excluding the
+drug_supply extension are now 88,758 kg for CASPS and 109,686 kg for PRIMETIME,
+approximately +23.4% and +22.7% vs published, with seed 7 and 2,000 draws.
+The old +5%/+7% comparisons used only direct terms and are retired.
+
 Per-FTE coordinating-unit factors 193.28 / 431.56 / 1027.8 kg (appendix C p.5–7: "Energy consumption for 1 FTE for 1
 year = 193.28 kgCO2e", "Heating for 1 FTE for 1 year = 431.56 kgCO2e", "total average commuting emissions = 1027.8
 kgCO2e"); videoconference "157 grams CO2e per hour" (C p.8); patient visit "one patient visit to hospital (UK) = 5.8

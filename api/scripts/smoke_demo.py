@@ -122,10 +122,16 @@ def main() -> int:
         design_id = f"smoke-{uuid.uuid4().hex[:8]}"
         r = c.post("/api/designs", headers=AUTHOR, json={**DESIGN, "id": design_id})
         s.check("store design", r.status_code == 201, r.status_code)
+        version = int(r.headers.get("x-design-version") or 0)
+    else:
+        g = c.get(f"/api/designs/{design_id}")
+        s.check("read existing design", g.status_code == 200, g.status_code)
+        version = int(g.headers.get("x-design-version") or 0)
 
     levers = {"remote_monitoring_share": 0.5, "drug_supply_strategy": "on_demand"}
     t = time.perf_counter()
-    r = c.post("/api/scenarios/compute", json={"design_id": design_id, "levers": levers})
+    r = c.post("/api/scenarios/compute", json={
+        "design_id": design_id, "design_version": version, "levers": levers})
     wall = (time.perf_counter() - t) * 1000
     if not s.check("compute", r.status_code == 200, f"{r.status_code} {r.text[:200]}"
                    if r.status_code != 200 else
@@ -137,11 +143,13 @@ def main() -> int:
                if res[m]["p50"] is None]
     print(f"       cost P50={res['cost_usd']['p50']}  co2e P50={res['co2e_kg']['p50']}  "
           f"unknown={unknown}  warnings={len(res['warnings'])}")
-    r2 = c.post("/api/scenarios/compute", json={"design_id": design_id, "levers": levers})
+    r2 = c.post("/api/scenarios/compute", json={
+        "design_id": design_id, "design_version": version, "levers": levers})
     s.check("cache hit on identical request", r2.headers.get("x-cache") == "hit")
 
-    r = c.post("/api/scenarios", headers=AUTHOR,
-               json={"name": "Scenario B (smoke)", "design_id": design_id, "levers": levers})
+    r = c.post("/api/scenarios", headers=AUTHOR, json={
+        "name": "Scenario B (smoke)", "design_id": design_id, "design_version": version,
+        "levers": levers})
     s.check("save scenario", r.status_code == 201, r.status_code)
     sid = r.json()["id"]
     r = c.post(f"/api/scenarios/{sid}/submit", headers=AUTHOR)

@@ -120,7 +120,8 @@ def build_manifest(evdir: Path, meta: dict[str, Any]) -> dict[str, Any]:
 
 
 def execute(ctx: Ctx, *, username: str | None, e2e: bool = False,
-            only: list[str] | None = None) -> dict[str, Any]:
+            only: list[str] | None = None,
+            extra_evidence: list[Path] | None = None) -> dict[str, Any]:
     c = identity.compliance()
     gate = check_gate(ctx)
     user = identity.resolve_user(username)
@@ -136,6 +137,11 @@ def execute(ctx: Ctx, *, username: str | None, e2e: bool = False,
     run_id = f"RUN-{started.replace('-', '').replace(':', '')}-{uuid.uuid4().hex[:4]}"
     evdir = ctx.out / "evidence" / run_id
     evdir.mkdir(parents=True, exist_ok=True)
+    if extra_evidence:
+        dest = fs_path(evdir / "preflight")
+        dest.mkdir(parents=True, exist_ok=True)
+        for path in extra_evidence:
+            shutil.copy2(fs_path(path), dest / path.name)
     identity.audit_event("validation.execute_start", "test_execution", run_id, user=user,
                          reason=f"executing {gate['record_id']}")
     result = run_all(ctx, evdir, e2e=e2e, only=only)

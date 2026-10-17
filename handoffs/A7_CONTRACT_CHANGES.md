@@ -1,5 +1,9 @@
 # A7 — contract change proposals (for A1)
 
+No new proposal this round (2026-10-17). The validation package marks automated signatures as demo fixtures in its own index; that is not a §5 model change.
+
+The proposals below were accepted as contract v3.
+
 Until decided, A7 keeps the §5 models exactly and returns the extra fields only in API *view*
 responses (a superset of the contract models), so nothing breaks either way.
 

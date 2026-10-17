@@ -48,7 +48,7 @@ def test_list_and_compute(client: TestClient, design_id: str) -> None:
     err, out = call(client, "list_designs")
     assert not err and [d["id"] for d in out["designs"]] == [design_id]
     err, out = call(client, "compute_scenario",
-                    {"design_id": design_id, "levers": {"remote_monitoring_share": 0.5}})
+                    {"design_id": design_id, "design_version": 1, "levers": {"remote_monitoring_share": 0.5}})
     assert not err, out
     assert set(out["metrics"]) == {"cost_usd", "site_staff_hours", "patient_travel_hours",
                                    "co2e_kg", "duration_months", "drug_waste_share"}
@@ -57,17 +57,17 @@ def test_list_and_compute(client: TestClient, design_id: str) -> None:
     assert out["cache"] == "miss" and out["levers"]["remote_monitoring_share"] == 0.5
     assert "TEST FAKE ENGINE" in out["warnings"]
     _, again = call(client, "compute_scenario",
-                    {"design_id": design_id, "levers": {"remote_monitoring_share": 0.5}})
+                    {"design_id": design_id, "design_version": 1, "levers": {"remote_monitoring_share": 0.5}})
     assert again["cache"] == "hit" and again["metrics"] == out["metrics"]
 
 
 def test_api_errors_reach_the_model(client: TestClient, design_id: str) -> None:
     err, text = call(client, "compute_scenario",
-                     {"design_id": design_id, "levers": {"remote_monitoring": 0.5}})
+                     {"design_id": design_id, "design_version": 1, "levers": {"remote_monitoring": 0.5}})
     assert err and "validation_error" in text and "remote_monitoring" in text
-    err, text = call(client, "compute_scenario", {"design_id": "nope"})
+    err, text = call(client, "compute_scenario", {"design_id": "nope", "design_version": 1})
     assert err and "design_not_found" in text
-    err, text = call(client, "explain_metric", {"metric": "happiness", "design_id": design_id})
+    err, text = call(client, "explain_metric", {"metric": "happiness", "design_id": design_id, "design_version": 1})
     assert err and "invalid_metric" in text
     err, text = call(client, "explain_metric", {"metric": "co2e_kg"})
     assert err and "scenario_id" in text
@@ -95,7 +95,7 @@ def test_explain_metric_filters_formulas_and_adds_driver_sources(
     client = make_client()
     design = client.post("/api/designs", json=make_design(),
                          headers=AUTHOR).json()
-    err, out = call(client, "explain_metric", {"metric": "co2e_kg", "design_id": design["id"]})
+    err, out = call(client, "explain_metric", {"metric": "co2e_kg", "design_id": design["id"], "design_version": 1})
     assert not err, out
     assert [f["formula_id"] for f in out["formulas"]] == ["carbon.patient_travel.v1"]
     f = out["formulas"][0]
@@ -105,7 +105,7 @@ def test_explain_metric_filters_formulas_and_adds_driver_sources(
     sourced = {d["parameter_id"]: d for d in out["drivers"]}
     assert sourced["test.cost.visit"]["source_url"] == "https://example.org/test"
     err, out = call(client, "explain_metric",
-                    {"metric": "duration_months", "design_id": design["id"]})
+                    {"metric": "duration_months", "design_id": design["id"], "design_version": 1})
     assert not err and out["formulas"] == []
     assert any("forecast" in w for w in out["warnings"])
 

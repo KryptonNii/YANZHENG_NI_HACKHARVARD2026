@@ -331,6 +331,14 @@ different path.
 
 ## 7. What this model does not claim
 
+Integration update (2026-10-17): the API's forecast view now carries
+`draws_requested`, `draws_used`, `curve_draws_used` and provenance; the supply
+view carries `draws_requested`, `draws_used` and provenance. Existing records
+without counts return null. Producer warnings and assumptions survive saving,
+the signed record hash, and exports. No numerical sampling cap was changed.
+The timing measurements above are preserved historical observations; the final
+combined-commit cold HTTP measurements are recorded in handoffs/BACKEND_FINAL.md.
+
 - Screen failures are not separate from the dropout inflation.
 - Sites have no enrollment caps and do not compete for patients.
 - Ranges are uncertainty about the average rates and policy parameters, plus the Poisson–gamma

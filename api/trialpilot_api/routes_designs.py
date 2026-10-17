@@ -1,7 +1,11 @@
 """/api/designs — store trial designs (versioned, rows immutable).
 
-POST the same id again with different content -> new version (audited); identical content -> 200,
-no new version. GET returns the plain `TrialDesign` (version + hash in headers and in the list).
+POST a new id creates version 1. POST the same id with identical content returns 200 and does
+not mint a version. POST different content for an existing id is an update: it requires
+`If-Match` equal to the current strong ETag (the design hash), and it cannot replace
+`registry_id` or `source`. A missing or different tag is 409 `design_changed` and includes
+the current version. GET returns the plain `TrialDesign` (version + hash in headers and in
+the list).
 """
 
 from __future__ import annotations
@@ -12,8 +16,9 @@ import uuid
 from pathlib import Path
 from typing import Any
 
-from fastapi import APIRouter, Body, Depends, Query, Response
+from fastapi import APIRouter, Body, Depends, Query, Request, Response
 from pydantic import BaseModel, ValidationError
+from sqlalchemy.exc import IntegrityError
 from sqlmodel import Session, col, func, select
 
 from ._contracts import TrialDesign
@@ -82,11 +87,67 @@ def _design_headers(response: Response, row: DesignRow) -> None:
     response.headers["ETag"] = f'"{row.design_hash}"'
 
 
+def _strong_etags(header: str | None) -> list[str]:
+    """Strong entity tags from an If-Match header. `*` and weak tags do not count."""
+    if not header or not header.strip():
+        return []
+    found: list[str] = []
+    for part in header.split(","):
+        token = part.strip()
+        if not token or token == "*" or token[:2].upper() == "W/":
+            continue
+        if len(token) >= 2 and token[0] == '"' and token[-1] == '"':
+            token = token[1:-1].strip()
+        if token:
+            found.append(token)
+    return found
+
+
+def _reject_identity_change(prev: DesignRow, design: TrialDesign) -> None:
+    stored = TrialDesign.model_validate_json(prev.data)
+    changed = [name for name, old, new in (
+        ("registry_id", stored.registry_id, design.registry_id),
+        ("source", stored.source, design.source),
+    ) if old != new]
+    if not changed:
+        return
+    raise ApiError(
+        422, "design_identity_immutable",
+        "registry_id and source identify where this design came from. An edit cannot replace "
+        + " or ".join(changed) + ".",
+        {
+            "design_id": design.id, "fields": changed, "version": prev.version,
+            "registry_id": stored.registry_id, "source": stored.source,
+            "sent_registry_id": design.registry_id, "sent_source": design.source,
+        },
+    )
+
+
+def _design_conflict(prev: DesignRow) -> ApiError:
+    etag = f'"{prev.design_hash}"'
+    return ApiError(
+        409, "design_changed",
+        f"Design {prev.design_id!r} is now version {prev.version}. Send If-Match with that "
+        "version's ETag to store a new version. Do not reuse a stale body with the new tag.",
+        {
+            "design_id": prev.design_id, "version": prev.version,
+            "design_hash": prev.design_hash, "etag": etag,
+        },
+        headers={"ETag": etag, "X-Design-Version": str(prev.version)},
+    )
+
+
 def store_design(
-    svc: Any, session: Session, ident: Identity, design: TrialDesign, reason: str | None = None
+    svc: Any, session: Session, ident: Identity, design: TrialDesign, reason: str | None = None,
+    if_match: list[str] | None = None,
 ) -> tuple[DesignRow, bool]:
     """Insert a new version unless the latest version has identical content. Returns
-    (row, created)."""
+    (row, created).
+
+    `if_match` is the list of strong tags the caller presented. `None` skips the check
+    (startup seeding of a design id that is not stored yet). A list, including an empty
+    one, is required to differ from the current hash.
+    """
     data = canonical_json(design)
     h = sha256_hex(data)
     prev = session.exec(
@@ -95,6 +156,10 @@ def store_design(
     ).first()
     if prev is not None and prev.design_hash == h:
         return prev, False
+    if prev is not None:
+        _reject_identity_change(prev, design)
+        if if_match is not None and prev.design_hash not in if_match:
+            raise _design_conflict(prev)
     row = DesignRow(
         design_id=design.id, version=(prev.version + 1) if prev else 1, title=design.title,
         source=design.source, registry_id=design.registry_id, design_hash=h, data=data,
@@ -107,8 +172,18 @@ def store_design(
         s.flush()
         return row
 
-    svc.audited_write(session, ident, action, "design", design.id,
-                      prev.design_hash if prev else None, h, write, reason)
+    try:
+        svc.audited_write(session, ident, action, "design", design.id,
+                          prev.design_hash if prev else None, h, write, reason)
+    except IntegrityError:
+        # Another request may have committed this version after the initial
+        # If-Match check. The unique (design_id, version) constraint protects the
+        # immutable history; expose the race as the same actionable conflict.
+        session.rollback()
+        current = latest_design_row(session, design.id)
+        if current.version >= row.version:
+            raise _design_conflict(current) from None
+        raise
     session.refresh(row)
     return row, True
 
@@ -133,6 +208,7 @@ def list_designs(
 
 @router.post("", response_model=TrialDesign, status_code=201)
 def create_design(
+    request: Request,
     response: Response,
     body: dict[str, Any] = Body(..., description="A TrialDesign; `id` is generated if omitted."),
     ident: Identity = Depends(require_editor),
@@ -150,7 +226,9 @@ def create_design(
                        f"Invalid trial design: {'.'.join(first['loc'])}: {first['msg']}",
                        {"errors": errors}) from exc
     _check_design(design)
-    row, created = store_design(svc, session, ident, design)
+    row, created = store_design(
+        svc, session, ident, design, if_match=_strong_etags(request.headers.get("if-match")),
+    )
     if not created:
         response.status_code = 200
     response.headers["Location"] = f"/api/designs/{design.id}"
@@ -159,7 +237,8 @@ def create_design(
 
 
 def _check_design(d: TrialDesign) -> None:
-    problems = []
+    problems: list[str] = []
+    codes: list[str] = []
     if not d.id.strip() or "/" in d.id:
         problems.append("id must be non-empty and contain no '/'")
     if d.enrollment_target < 0:
@@ -169,9 +248,31 @@ def _check_design(d: TrialDesign) -> None:
     for label, ids in (("site", [s.id for s in d.sites]), ("visit", [v.number for v in d.visits])):
         if len(ids) != len(set(ids)):
             problems.append(f"duplicate {label} ids/numbers")
+    weeks = [v.week for v in sorted(d.visits, key=lambda v: v.number)]
+    if weeks != sorted(weeks):
+        problems.append(
+            "Visit weeks must be non-decreasing as the visit number increases "
+            f"(got {weeks})."
+        )
+        codes.append("weeks_not_increasing")
+    for site in d.sites:
+        if site.expected_enrollment is not None and site.expected_enrollment < 0:
+            problems.append(
+                f"Site {site.id}: expected_enrollment must be >= 0 "
+                f"(got {site.expected_enrollment})."
+            )
+            codes.append("negative_enrollment")
+        if site.lat is not None and not -90.0 <= site.lat <= 90.0:
+            problems.append(f"Site {site.id}: lat must be between -90 and 90 (got {site.lat}).")
+            codes.append("invalid_latitude")
+        if site.lon is not None and not -180.0 <= site.lon <= 180.0:
+            problems.append(f"Site {site.id}: lon must be between -180 and 180 (got {site.lon}).")
+            codes.append("invalid_longitude")
     if problems:
-        raise ApiError(422, "invalid_design", "Invalid trial design: " + "; ".join(problems),
-                       {"problems": problems})
+        code = codes[0] if codes and len(codes) == len(problems) and len(set(codes)) == 1 \
+            else "invalid_design"
+        raise ApiError(422, code, "Invalid trial design: " + "; ".join(problems),
+                       {"problems": problems, "codes": codes})
 
 
 @router.get("/{design_id}", response_model=TrialDesign)

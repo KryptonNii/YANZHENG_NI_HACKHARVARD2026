@@ -95,6 +95,8 @@ class _Recorder:
             outcome = "error"
         if outcome is not None:
             t["outcome"] = outcome
+        if report.user_properties:
+            t["properties"] = dict(report.user_properties)
         if report.failed or (report.skipped and report.when == "setup"):
             text = str(report.longrepr)
             t["message"] = text[-4000:] if report.failed else text[-500:]

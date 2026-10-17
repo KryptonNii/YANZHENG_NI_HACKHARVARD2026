@@ -74,6 +74,48 @@ def test_method_check_reproduces_the_paper(results_json: dict) -> None:
         assert abs(method["total"]["diff_pct"]) < 0.5, t["id"]
 
 
+def _expected_diff_pct(published_kg: float, p50: float) -> float:
+    """Same rounding as trialpilot_science.checks._status."""
+    if published_kg == 0:
+        diff = 0.0 if abs(p50) < 0.5 else float("inf")
+    else:
+        diff = (p50 - published_kg) / published_kg * 100.0
+    return round(diff, 2)
+
+
+@pytest.mark.req("URS-014")
+@pytest.mark.parametrize("tid", ["casps", "primetime"])
+def test_each_module_percent_difference_against_published(results_json: dict, tid: str) -> None:
+    """URS-014: CASPS and PRIMETIME report each module's % difference against the published value."""
+    trial = next(t for t in results_json["trials"] if t["id"] == tid)
+    published = trial["published"]["modules"]
+    assert published
+    available = [c for c in trial["checks"] if c["available"]]
+    assert available
+    for check in available:
+        rows = {row["module"]: row for row in check["modules"]}
+        missing = sorted(set(published) - set(rows))
+        assert missing == [], (tid, check["id"], missing)
+        for module, published_kg in published.items():
+            row = rows[module]
+            assert row["published_kg"] == pytest.approx(published_kg), (tid, check["id"], module)
+            assert row["ours"] is not None, (tid, check["id"], module)
+            expected = _expected_diff_pct(float(published_kg), float(row["ours"]["p50"]))
+            assert row["diff_pct"] == pytest.approx(expected, abs=0.011), (tid, check["id"], module)
+
+
+def test_band_trial_unit_matches_tonnes(results_json: dict) -> None:
+    """BandTrial.total_t numbers are tonnes and the unit says t_co2e."""
+    band = results_json["industry_band"]
+    assert band["low_t"] == 1437 and band["high_t"] == 2498
+    reported = [t for t in band["demo_trials"] if t["total_t"] is not None]
+    assert reported
+    for trial in reported:
+        total = trial["total_t"]
+        assert total["unit"] == "t_co2e"
+        assert 1 < total["p50"] < 20_000
+
+
 def test_two_summary_sentences_per_trial(results_json: dict) -> None:
     for t in results_json["trials"]:
         assert len(t["summary"]) == 2 and all(s.endswith(".") for s in t["summary"])

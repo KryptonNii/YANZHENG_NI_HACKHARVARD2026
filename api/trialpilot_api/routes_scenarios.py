@@ -34,7 +34,7 @@ from .deps import Identity, require_editor, services
 from .engine_adapter import METRICS
 from .errors import ApiError
 from .hashing import canonical_json, sha256_hex
-from .routes_designs import load_design
+from .routes_designs import latest_design_row, load_design
 
 log = logging.getLogger("trialpilot.scenarios")
 router = APIRouter(prefix="/api/scenarios", tags=["scenarios"])
@@ -53,8 +53,15 @@ class LeversIn(Levers):
 
 class ComputeRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    design_id: str | None = Field(default=None, description="Stored design (latest version)")
-    design_version: int | None = Field(default=None, ge=1)
+    design_id: str | None = Field(
+        default=None,
+        description="Stored design. Send design_version to pin the version on screen.",
+    )
+    design_version: int | None = Field(
+        default=None, ge=1,
+        description="Required with design_id for compute, drivers and save. "
+        "Use X-Design-Version returned by GET /api/designs/{id}.",
+    )
     design: TrialDesign | None = Field(default=None, description="Inline design (not stored)")
     levers: LeversIn = Field(default_factory=LeversIn)
     seed: int | None = None
@@ -77,7 +84,10 @@ class ScenarioCreate(BaseModel):
     name: str = Field(min_length=1, max_length=200)
     description: str | None = Field(default=None, max_length=4000)
     design_id: str
-    design_version: int | None = Field(default=None, ge=1)
+    design_version: int | None = Field(
+        default=None, ge=1,
+        description="Required. The design version on screen (X-Design-Version from compute).",
+    )
     levers: LeversIn = Field(default_factory=LeversIn)
     seed: int | None = None
     draws: int | None = Field(default=None, ge=100, le=20000)
@@ -87,7 +97,10 @@ class ScenarioPatch(BaseModel):
     model_config = ConfigDict(extra="forbid")
     name: str | None = Field(default=None, min_length=1, max_length=200)
     description: str | None = Field(default=None, max_length=4000)
-    design_version: int | None = Field(default=None, ge=1)
+    design_version: int | None = Field(
+        default=None, ge=1,
+        description="Omit to keep this scenario's design version. Does not jump to the latest design.",
+    )
     levers: LeversIn | None = None
     seed: int | None = None
     draws: int | None = Field(default=None, ge=100, le=20000)
@@ -237,15 +250,36 @@ def _seed_draws(svc: Any, seed: int | None, draws: int | None) -> tuple[int, int
     return (seed if seed is not None else s.default_seed), d
 
 
-def _resolve_design(session: Session, req: ComputeRequest) -> tuple[TrialDesign, int | None]:
+def _resolve_design(
+    session: Session, req: ComputeRequest
+) -> tuple[TrialDesign, int | None, str | None]:
     if (req.design is None) == (req.design_id is None):
         raise ApiError(422, "design_required",
                        "Send exactly one of `design_id` (stored design) or `design` (inline).")
     if req.design is not None:
-        return req.design, None
+        if req.design_version is not None:
+            raise ApiError(422, "inline_design_version",
+                           "An inline design has no stored design_version.")
+        return req.design, None, None
     assert req.design_id is not None
+    if req.design_version is None:
+        latest = latest_design_row(session, req.design_id)
+        raise ApiError(422, "design_version_required",
+                       "Send design_version with design_id to compute the version on screen.",
+                       {"design_id": req.design_id, "latest_version": latest.version,
+                        "etag": f'"{latest.design_hash}"'})
     row, design = load_design(session, req.design_id, req.design_version)
-    return design, row.version
+    return design, row.version, row.design_hash
+
+
+def _missing_field_warnings(design: TrialDesign, version: int | None) -> list[str]:
+    """One warning per design field that was not in the source. These travel with the result."""
+    where = f"design v{version}" if version is not None else "inline design"
+    return [
+        f"Design field '{field}' is not from the source; a labelled assumption fills it "
+        f"({where} missing_fields)"
+        for field in design.missing_fields
+    ]
 
 
 def _with_warnings(result: ScenarioResult, extra: list[str]) -> ScenarioResult:
@@ -254,13 +288,19 @@ def _with_warnings(result: ScenarioResult, extra: list[str]) -> ScenarioResult:
 
 
 def _compute(
-    svc: Any, design: TrialDesign, levers: Levers, seed: int, draws: int, params: Any = None
+    svc: Any, design: TrialDesign, levers: Levers, seed: int, draws: int,
+    design_version: int | None,
 ) -> tuple[ScenarioResult, Any]:
     snap = _params_snapshot(svc)
-    warnings = validate_levers(design, levers)
+    lever_warnings = validate_levers(design, levers)
     plain = Levers.model_validate(levers.model_dump())
     outcome = svc.engine.compute(design, plain, snap.params, snap.version, seed, draws)
-    return _with_warnings(outcome.result, warnings), outcome
+    extra = [*lever_warnings, *_missing_field_warnings(design, design_version)]
+    # The engine already names each visit that is not remote-capable. A second summary
+    # of the same fact is the same warning twice.
+    if any("remote-capable" in w for w in outcome.result.warnings):
+        extra = [w for w in extra if "not marked can_be_remote" not in w]
+    return _with_warnings(outcome.result, extra), outcome
 
 
 def _metrics(result: ScenarioResult) -> dict[str, MetricRange]:
@@ -374,6 +414,14 @@ def _set_compute_headers(response: Response, outcome: Any, result: ScenarioResul
     response.headers["X-Parameter-Set-Version"] = result.parameter_set_version
 
 
+def _set_design_pin(response: Response, version: int | None, design_hash: str | None) -> None:
+    """The version and hash this response was computed from. Save must send the version."""
+    if version is not None:
+        response.headers["X-Design-Version"] = str(version)
+    if design_hash:
+        response.headers["ETag"] = f'"{design_hash}"'
+
+
 # ------------------------------------------------------------------------------------------
 # Stateless computation
 # ------------------------------------------------------------------------------------------
@@ -384,12 +432,17 @@ def compute(
     session: Session = Depends(get_session),
     svc: Any = Depends(services),
 ) -> ScenarioResult:
-    """`{design_id | design, levers, seed?, draws?}` -> ScenarioResult (P10/P50/P90 + provenance).
-    Headers: X-Compute-Ms, X-Cache (hit|miss), X-Parameter-Set-Version."""
-    design, _ = _resolve_design(session, req)
+    """`{design_id | design, design_version?, levers, seed?, draws?}` -> ScenarioResult.
+
+    `design_version` is required with a stored design. Headers: X-Compute-Ms,
+    X-Cache (hit|miss), X-Parameter-Set-Version,
+    and for a stored design `X-Design-Version` plus `ETag` (the design hash).
+    """
+    design, version, design_hash = _resolve_design(session, req)
     seed, draws = _seed_draws(svc, req.seed, req.draws)
-    result, outcome = _compute(svc, design, req.levers, seed, draws)
+    result, outcome = _compute(svc, design, req.levers, seed, draws, version)
     _set_compute_headers(response, outcome, result)
+    _set_design_pin(response, version, design_hash)
     return result
 
 
@@ -423,7 +476,7 @@ def drivers_unsaved(
     req: DriversRequest, session: Session = Depends(get_session), svc: Any = Depends(services)
 ) -> DriversOut:
     """Top parameters by contribution to the variance of `metric`, for an unsaved scenario."""
-    design, _ = _resolve_design(session, req)
+    design, _, _ = _resolve_design(session, req)
     seed, draws = _seed_draws(svc, req.seed, req.draws)
     snap = _params_snapshot(svc)
     return _drivers_out(svc, design, req.levers, snap.params, snap.version, req.metric, req.top,
@@ -479,10 +532,26 @@ def save_scenario(
     session: Session = Depends(get_session),
     svc: Any = Depends(services),
 ) -> ScenarioOut:
-    """Compute and save a new scenario (version 1 of a new lineage) as a draft."""
+    """Compute and save a new scenario (version 1 of a new lineage) as a draft.
+
+    `design_version` is required. The save recomputes that exact version, so the stored
+    record cannot move onto a design version newer than the one on screen.
+    """
+    if body.design_version is None:
+        latest = latest_design_row(session, body.design_id)
+        raise ApiError(
+            422, "design_version_required",
+            "Send design_version: the version on screen (the X-Design-Version header from "
+            f"compute). Saving without it would use the latest version (v{latest.version}), "
+            "which can differ from the one you reviewed.",
+            {
+                "design_id": body.design_id, "latest_version": latest.version,
+                "latest_design_hash": latest.design_hash, "etag": f'"{latest.design_hash}"',
+            },
+        )
     drow, design = load_design(session, body.design_id, body.design_version)
     seed, draws = _seed_draws(svc, body.seed, body.draws)
-    result, outcome = _compute(svc, design, body.levers, seed, draws)
+    result, outcome = _compute(svc, design, body.levers, seed, draws, drow.version)
     row = _new_row(
         svc=svc, ident=ident, name=body.name, description=body.description,
         design_id=drow.design_id, design_version=drow.version, design_hash=drow.design_hash,
@@ -493,6 +562,7 @@ def save_scenario(
                       row.record_hash, lambda s: s.add(row))
     session.refresh(row)
     _set_compute_headers(response, outcome, result)
+    _set_design_pin(response, drow.version, drow.design_hash)
     response.headers["Location"] = f"/api/scenarios/{row.id}"
     return _out(row)
 
@@ -574,7 +644,7 @@ def edit_draft(
               else Levers.model_validate_json(row.levers))
     seed, draws = _seed_draws(svc, body.seed if body.seed is not None else row.seed,
                               body.draws if body.draws is not None else row.draws)
-    result, outcome = _compute(svc, design, levers, seed, draws)
+    result, outcome = _compute(svc, design, levers, seed, draws, drow.version)
     row.name = body.name if body.name is not None else row.name
     row.description = body.description if body.description is not None else row.description
     row.design_version, row.design_hash = drow.version, drow.design_hash
@@ -598,6 +668,7 @@ def edit_draft(
                       values["record_hash"], write)
     fresh = _get_row(session, rid)
     _set_compute_headers(response, outcome, result)
+    _set_design_pin(response, drow.version, drow.design_hash)
     return _out(fresh)
 
 
@@ -618,7 +689,7 @@ def new_version(
               else Levers.model_validate_json(base.levers))
     seed, draws = _seed_draws(svc, body.seed if body.seed is not None else base.seed,
                               body.draws if body.draws is not None else base.draws)
-    result, outcome = _compute(svc, design, levers, seed, draws)
+    result, outcome = _compute(svc, design, levers, seed, draws, drow.version)
     top = session.exec(
         select(ScenarioRow.version).where(ScenarioRow.lineage_id == base.lineage_id)
         .order_by(col(ScenarioRow.version).desc())
@@ -635,6 +706,7 @@ def new_version(
                       reason=f"new version of {base.id} (v{base.version})")
     session.refresh(row)
     _set_compute_headers(response, outcome, result)
+    _set_design_pin(response, drow.version, drow.design_hash)
     response.headers["Location"] = f"/api/scenarios/{row.id}"
     return _out(row)
 

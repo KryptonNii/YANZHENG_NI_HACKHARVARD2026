@@ -73,6 +73,21 @@ def _expand(key: str) -> list[str]:
     return keys
 
 
+def test_needed_md_matches_the_engine_parameter_catalog() -> None:
+    """data/params/NEEDED.md lists PARAMETER_CATALOG in order, with the catalog unit and meaning."""
+    engine = pytest.importorskip("trialpilot_engine")
+    catalog = engine.PARAMETER_CATALOG
+    text = (paths.PARAMS_DIR / "NEEDED.md").read_text(encoding="utf-8")
+    rows = []
+    for line in text.splitlines():
+        if not line.startswith("| `"):
+            continue
+        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+        rows.append((cells[0].strip("`"), cells[1].strip("`"), cells[2]))
+    expected = [(pid, unit, meaning) for pid, (unit, meaning) in catalog.items()]
+    assert rows == expected
+
+
 def test_library_covers_the_engine_parameter_catalog() -> None:
     engine = pytest.importorskip("trialpilot_engine")
     catalog = getattr(engine, "PARAMETER_CATALOG", None)
@@ -87,3 +102,23 @@ def test_library_covers_the_engine_parameter_catalog() -> None:
 def test_ids_follow_the_schema_pattern() -> None:
     pattern = re.compile(r"^[a-z0-9_]+(\.[a-z0-9_]+)+$")
     assert [pid for pid in PARAMS if not pattern.match(pid)] == []
+
+
+@pytest.mark.req("URS-008", "URS-014")
+def test_paper_factor_overrides_count_direct_and_wtt_once() -> None:
+    """Combined 2022 factors are split, never combined factors plus another WTT."""
+    from trialpilot_science.designs import load_paper_factor_overrides
+
+    factors = load_paper_factor_overrides(paths.PAPER_FACTOR_OVERRIDES)
+    pairs = [
+        ("travel.rail.passenger_km", "travel.rail.passenger_km", 0.04441),
+        ("travel.flight.domestic.passenger_km", "travel.flight.domestic.passenger_km", 0.27278),
+        ("travel.flight.short_haul.passenger_km", "travel.flight.short_haul.passenger_km", 0.17034),
+        ("travel.flight.long_haul.passenger_km", "travel.flight.long_haul.passenger_km", 0.21423),
+        ("freight.air.tonne_km", "freight.air.long_haul.tonne_km", 1.13047),
+        ("freight.van.tonne_km", "freight.van.tonne_km", 0.19443),
+    ]
+    for direct, upstream, published_total in pairs:
+        assert factors[f"ef.{direct}"].value_mid + factors[f"ef.wtt.{upstream}"].value_mid == pytest.approx(published_total)
+    assert "split is unidentified" in factors["ef.wtt.freight.van.tonne_km"].source_title
+    assert PARAMS["ef.wtt.freight.van.tonne_km"].value_mid > 0  # only the experiment overrides it

@@ -19,7 +19,7 @@ import uuid
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 import httpx
 
@@ -364,11 +364,55 @@ def protocol_documents(raw: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 # ---------------------------------------------------------------- mapping
+NoteKind = Literal["fact", "missing", "assumption"]
+# Notes that are not about one TrialDesign field (a failed live fetch, for example).
+UNSCOPED_NOTE_FIELD = "_unscoped"
+
+
+@dataclass(frozen=True)
+class FieldNote:
+    """One import note, tied to the design field it explains.
+
+    `kind` is `fact` (what the registry states), `missing` (a field left empty) or `assumption`
+    (a labelled fill-in). `clears_when_present` is true only while `field` sits in
+    `missing_fields`: once that field is filled, the note no longer applies.
+    """
+
+    text: str
+    field: str | None
+    kind: NoteKind
+    clears_when_present: bool = False
+
+    def as_dict(self) -> dict[str, Any]:
+        return {
+            "field": self.field,
+            "kind": self.kind,
+            # Boolean A8 already reads. True only for a labelled fill-in, not for a fact or a gap.
+            "assumption": self.kind == "assumption",
+            "text": self.text,
+            "clears_when_present": self.clears_when_present,
+        }
+
+
+def note_payload(field_notes: list[FieldNote]) -> dict[str, Any]:
+    """`notes` (plain strings, old clients) plus the same notes as objects, grouped by field."""
+    rows = [n.as_dict() for n in field_notes]
+    by_field: dict[str, list[dict[str, Any]]] = {}
+    for row in rows:
+        key = row["field"] if row["field"] else UNSCOPED_NOTE_FIELD
+        by_field.setdefault(key, []).append(row)
+    return {"notes": [row["text"] for row in rows], "field_notes": rows, "notes_by_field": by_field}
+
+
 @dataclass
 class ImportReport:
     design: TrialDesign
-    notes: list[str] = field(default_factory=list)          # every assumption / modification, plain English
+    field_notes: list[FieldNote] = field(default_factory=list)
     field_sources: dict[str, str] = field(default_factory=dict)  # TrialDesign field -> registry path or rule
+
+    @property
+    def notes(self) -> list[str]:
+        return [n.text for n in self.field_notes]
     enrollment_type: str | None = None                      # "ACTUAL" | "ESTIMATED"
     drug_type_basis: str = ""
     visit_template_id: str | None = None
@@ -408,7 +452,11 @@ def map_study_report(
     status = ps.get("statusModule") or {}
     design_mod = ps.get("designModule") or {}
     sponsor_mod = ps.get("sponsorCollaboratorsModule") or {}
-    notes: list[str] = []
+    field_notes: list[FieldNote] = []
+
+    def add(text: str, note_field: str | None, kind: NoteKind, *, clears: bool = False) -> None:
+        field_notes.append(FieldNote(text, note_field, kind, clears))
+
     missing: list[str] = []
     src: dict[str, str] = {
         "registry_id": "protocolSection.identificationModule.nctId",
@@ -424,7 +472,7 @@ def map_study_report(
     src["phase"] = "protocolSection.designModule.phases"
     if phase is None:
         missing.append("phase")
-        notes.append("Phase not given in the registry.")
+        add("Phase not given in the registry.", "phase", "missing", clears=True)
 
     conditions = list((ps.get("conditionsModule") or {}).get("conditions") or [])
     src["conditions"] = "protocolSection.conditionsModule.conditions"
@@ -439,9 +487,15 @@ def map_study_report(
     enrollment_type = enr.get("type")
     src["enrollment_target"] = f"protocolSection.designModule.enrollmentInfo.count ({enrollment_type or 'type not given'})"
     if enrollment_type == "ESTIMATED":
-        notes.append(f"Enrollment {enrollment} is the sponsor's anticipated target (ESTIMATED), not an actual count.")
+        add(
+            f"Enrollment {enrollment} is the sponsor's anticipated target (ESTIMATED), not an actual count.",
+            "enrollment_target", "fact",
+        )
     elif enrollment_type == "ACTUAL":
-        notes.append(f"Enrollment {enrollment} is the actual number enrolled (ACTUAL).")
+        add(
+            f"Enrollment {enrollment} is the actual number enrolled (ACTUAL).",
+            "enrollment_target", "fact",
+        )
 
     # --- dates -> duration
     start, start_partial = parse_partial_date((status.get("startDateStruct") or {}).get("date"))
@@ -450,7 +504,10 @@ def map_study_report(
     end_field = "completionDateStruct"
     if end is None and pcd is not None:
         end, end_field = pcd, "primaryCompletionDateStruct"
-        notes.append("No study completion date; duration uses the primary completion date.")
+        add(
+            "No study completion date; duration uses the primary completion date.",
+            "duration_months", "assumption",
+        )
     dates = {
         "start": (status.get("startDateStruct") or {}).get("date"),
         "start_type": (status.get("startDateStruct") or {}).get("type"),
@@ -469,10 +526,11 @@ def map_study_report(
         visits = sched.visits
         template_id = sched.template_id
         missing.append("visits")
-        notes.append(
+        add(
             f"Visit schedule is NOT in the registry: filled with assumed template '{sched.template_id}' "
             f"({len(visits)} visits over {sched.treatment_weeks:g} treatment weeks; length basis: "
-            f"{sched.treatment_weeks_basis}). {sched.rationale} Import the protocol to replace it."
+            f"{sched.treatment_weeks_basis}). {sched.rationale} Import the protocol to replace it.",
+            "visits", "assumption", clears=True,
         )
         src["visits"] = f"assumption: data/fixtures/visit_templates.yaml#{sched.template_id}"
     else:
@@ -482,25 +540,34 @@ def map_study_report(
         duration = round((end - start).days / _DAYS_PER_MONTH, 1)
         src["duration_months"] = f"statusModule.startDateStruct -> statusModule.{end_field}"
         kinds = f"start {dates['start_type'] or '?'}, end {(status.get(end_field) or {}).get('type') or '?'}"
-        notes.append(f"Duration {duration} months = {start.isoformat()} to {end.isoformat()} ({kinds}).")
+        add(
+            f"Duration {duration} months = {start.isoformat()} to {end.isoformat()} ({kinds}).",
+            "duration_months", "fact",
+        )
         if start_partial or end_partial:
-            notes.append("A registry date gave only year/month; the 1st of the month was assumed.")
+            add(
+                "A registry date gave only year/month; the 1st of the month was assumed.",
+                "duration_months", "assumption",
+            )
     else:
         last_week = max((v.week for v in visits), default=0.0)
         duration = round(max(last_week, 1.0) / (52.1775 / 12), 1)
         missing.append("duration_months")
         src["duration_months"] = "assumption: per-patient schedule length (no usable registry dates)"
-        notes.append(
+        add(
             f"No usable start/completion dates; duration set to the per-patient schedule length "
-            f"({duration} months), which ignores the enrollment period."
+            f"({duration} months), which ignores the enrollment period.",
+            "duration_months", "assumption", clears=True,
         )
 
     # --- intervention -> drug_type
     drug_type, basis = classify_drug_type(ps.get("armsInterventionsModule") or {})
     src["drug_type"] = "protocolSection.armsInterventionsModule.interventions (+ WHO INN stems)"
-    notes.append(f"Drug type '{drug_type}': {basis}.")
     if drug_type == "unknown":
         missing.append("drug_type")
+        add(f"Drug type '{drug_type}': {basis}.", "drug_type", "missing", clears=True)
+    else:
+        add(f"Drug type '{drug_type}': {basis}.", "drug_type", "fact")
 
     # --- sites
     geocoder = geocoder or default_geocoder()
@@ -539,19 +606,31 @@ def map_study_report(
     src["sites"] = "protocolSection.contactsLocationsModule.locations (facility, city, country, geoPoint)"
     if not sites:
         missing.append("sites")
-        notes.append("The registry lists no study locations.")
+        add("The registry lists no study locations.", "sites", "missing", clears=True)
     else:
-        notes.append(f"{_n(len(sites), 'site')} from the registry; {len(sites) - len(geocoded) - len(unresolved)} with registry geoPoints.")
+        with_point = len(sites) - len(geocoded) - len(unresolved)
+        add(
+            f"{_n(len(sites), 'site')} from the registry; {with_point} with registry geoPoints.",
+            "sites", "fact",
+        )
         missing.append("sites.expected_enrollment")
-        notes.append("Per-site enrollment is not in the registry (expected_enrollment left empty).")
+        add(
+            "Per-site enrollment is not in the registry (expected_enrollment left empty).",
+            "sites.expected_enrollment", "missing", clears=True,
+        )
     if geocoded:
-        notes.append(
+        state_only = f"; {precision_admin1} only to state level" if precision_admin1 else ""
+        add(
             f"{_n(len(geocoded), 'site')} had no registry geoPoint and were placed from city/state/country with the "
-            f"offline GeoNames index (CC BY 4.0){f'; {precision_admin1} only to state level' if precision_admin1 else ''}."
+            f"offline GeoNames index (CC BY 4.0){state_only}.",
+            "sites.lat_lon", "assumption",
         )
     if unresolved:
         missing.append("sites.lat_lon")
-        notes.append(f"{_n(len(unresolved), 'site')} could not be placed (no geoPoint, city not found); lat/lon left empty.")
+        add(
+            f"{_n(len(unresolved), 'site')} could not be placed (no geoPoint, city not found); lat/lon left empty.",
+            "sites.lat_lon", "missing", clears=True,
+        )
 
     design = TrialDesign(
         id=design_id_for(nct),
@@ -577,7 +656,7 @@ def map_study_report(
     )
     return ImportReport(
         design=design,
-        notes=notes,
+        field_notes=field_notes,
         field_sources=src,
         enrollment_type=enrollment_type,
         drug_type_basis=basis,

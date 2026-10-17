@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterator
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 import pytest
@@ -30,7 +30,7 @@ def db(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Iterator[store.Store]
 
 class FakeClock:
     def __init__(self, start: datetime | None = None) -> None:
-        self.t = start or datetime(2026, 10, 17, 12, 0, 0, tzinfo=timezone.utc)
+        self.t = start or datetime(2026, 10, 17, 12, 0, 0, tzinfo=UTC)
 
     def __call__(self) -> datetime:
         return self.t

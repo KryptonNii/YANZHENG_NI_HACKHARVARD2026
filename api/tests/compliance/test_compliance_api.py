@@ -111,6 +111,20 @@ def test_users_and_roles(client: TestClient) -> None:
     assert roles["permissions"]["sign.approved"] == ["qa"]
 
 
+def test_served_output_pointer_is_used_only_when_env_is_unset(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    from trialpilot_api.compliance import config
+
+    pointer = tmp_path / "served_output.txt"
+    pointer.write_text(str(tmp_path / "stamp") + "\n", encoding="utf-8")
+    monkeypatch.setattr(config, "served_output_pointer", lambda: pointer)
+    monkeypatch.delenv("TP_VALIDATION_OUT", raising=False)
+    assert config.validation_out_dir() == tmp_path / "stamp"
+    monkeypatch.setenv("TP_VALIDATION_OUT", str(tmp_path / "env-wins"))
+    assert config.validation_out_dir() == tmp_path / "env-wins"
+
+
 def test_validation_package_missing_then_served(client: TestClient, tmp_path: Path) -> None:
     r = client.get("/api/validation/package")
     assert r.status_code == 404 and r.json()["error"] == "package_not_built"

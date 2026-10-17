@@ -184,6 +184,7 @@ def build_server(backend: Backend | None = None) -> MCPServer:
     @server.tool(annotations=READ_ONLY)
     async def compute_scenario(
         design_id: str,
+        design_version: int,
         levers: dict[str, Any] | None = None,
         seed: int = 7,
         draws: int = 2000,
@@ -196,10 +197,12 @@ def build_server(backend: Backend | None = None) -> MCPServer:
           local_lab_share 0..1, drug_supply_strategy "upfront"|"on_demand",
           removed_procedures [procedure code], excluded_site_ids [site id].
         """
-        body = {"design_id": design_id, "levers": levers or {}, "seed": seed, "draws": draws}
+        body = {"design_id": design_id, "design_version": design_version,
+                "levers": levers or {}, "seed": seed, "draws": draws}
         result, resp = await api.call("POST", "/api/scenarios/compute", json=body)
         return {
             "design_id": result["design_id"],
+            "design_version": int(resp.headers["X-Design-Version"]),
             "levers": result["levers"],
             "metrics": {m: _range(result.get(m)) for m in METRICS},
             "modules": [{"module": m["module"], "cost_usd": _range(m.get("cost_usd")),
@@ -237,6 +240,7 @@ def build_server(backend: Backend | None = None) -> MCPServer:
     async def explain_metric(
         metric: str,
         design_id: str | None = None,
+        design_version: int | None = None,
         scenario_id: str | None = None,
         levers: dict[str, Any] | None = None,
         top: int = 5,
@@ -259,7 +263,10 @@ def build_server(backend: Backend | None = None) -> MCPServer:
                 "GET", f"/api/scenarios/{scenario_id}/drivers",
                 {"params": {"metric": metric, "top": top}})
         elif design_id:
-            body = {"design_id": design_id, "levers": levers or {}, "seed": seed, "draws": draws}
+            if design_version is None:
+                raise ToolError("Pass design_version from list_designs with design_id.")
+            body = {"design_id": design_id, "design_version": design_version,
+                    "levers": levers or {}, "seed": seed, "draws": draws}
             result, _ = await api.call("POST", "/api/scenarios/compute", json=body)
             drivers_call = ("POST", "/api/scenarios/drivers",
                             {"json": {**body, "metric": metric, "top": top}})

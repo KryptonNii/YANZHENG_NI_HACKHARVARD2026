@@ -62,10 +62,13 @@ async def phase(base: str, design_id: str, n: int, conc: int, mode: str,
     seed_base = random.randrange(10**6, 10**9)  # fresh seeds: "cold" really misses every cache
     slider_base = random.random()  # fresh lever values: "slider" misses the result cache
     async with httpx.AsyncClient(base_url=base, timeout=120) as c:
+        design = await c.get(f"/api/designs/{design_id}")
+        design.raise_for_status()
+        version = int(design.headers["X-Design-Version"])
         async def one(i: int) -> None:
             nonlocal errors
             share = {"cold": 0.5, "slider": (slider_base + i / n) % 1.0, "hits": 0.5}[mode]
-            body = {"design_id": design_id, "draws": draws,
+            body = {"design_id": design_id, "design_version": version, "draws": draws,
                     "seed": (seed_base + i) if mode == "cold" else 7,
                     "levers": {"remote_monitoring_share": round(share, 6)}}
             async with sem:

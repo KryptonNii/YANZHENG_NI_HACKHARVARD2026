@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import hashlib
 import importlib
+import json
 import logging
 import threading
 import uuid
@@ -45,6 +46,29 @@ REQUIRED_MEANINGS: dict[str, list[str]] = {
 }
 
 RecordResolver = Callable[[str], "str | None"]  # record_id -> current record hash
+
+
+def _approval_from_stub_row(row: ApprovalStubRow) -> ApprovalRequest:
+    """Read a stub approval. Contract v3 requires record_hash and created_at.
+
+    Rows written before those fields were required still have both on the table columns.
+    Fill them from the columns so a missing key in the JSON body is not a 500.
+    """
+    data = json.loads(row.data)
+    if not isinstance(data, dict):
+        data = {}
+    if not data.get("record_hash"):
+        data["record_hash"] = row.record_hash
+    if not data.get("created_at"):
+        data["created_at"] = row.created_at
+    data.setdefault("id", row.id)
+    data.setdefault("record_type", row.record_type)
+    data.setdefault("record_id", row.record_id)
+    data.setdefault("author", row.author)
+    data.setdefault("status", row.status)
+    data.setdefault("title", None)
+    data.setdefault("signatures", [])
+    return ApprovalRequest.model_validate(data)
 
 
 def _as_model(model: Any, value: Any) -> Any:
@@ -192,6 +216,8 @@ class ComplianceAdapter:
             )
             return _as_model(ApprovalRequest, req)
         meanings = REQUIRED_MEANINGS.get(record_type, ["approved"])
+        # Contract v3: record_hash and created_at are required. The row columns hold the
+        # same values so an older JSON body can be read back (see _approval_from_stub_row).
         req = ApprovalRequest(
             id=str(uuid.uuid4()), record_type=record_type, record_id=record_id,  # type: ignore[arg-type]
             author=author, record_hash=record_hash, required_meanings=meanings, status="pending",
@@ -217,7 +243,7 @@ class ComplianceAdapter:
                 return None
         with Session(self.engine) as s:
             row = s.get(ApprovalStubRow, approval_id)
-        return ApprovalRequest.model_validate_json(row.data) if row else None
+        return _approval_from_stub_row(row) if row else None
 
     @staticmethod
     def signatures_of(approval: ApprovalRequest | None) -> list[Signature]:

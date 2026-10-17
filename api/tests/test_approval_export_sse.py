@@ -59,7 +59,32 @@ def test_stub_compliance_keeps_mutations_audited(make_client) -> None:  # type: 
     s = save_scenario(c, "design-test-1")
     sub = c.post(f"/api/scenarios/{s['id']}/submit", headers=AUTHOR).json()
     assert sub["status"] == "submitted" and sub["approval"]["status"] == "pending"
+    assert sub["approval"]["record_hash"] == s["record_hash"]
+    assert sub["approval"]["created_at"]
     assert audit_actions(c, s["id"]) == ["scenario.create", "scenario.submit"]
+    # A row stored by an older constructor can omit the v3 keys. The columns still have them.
+    import json
+    import sqlite3
+
+    db = svc.settings.resolved_db_path
+    con = sqlite3.connect(db)
+    try:
+        approval_id, payload, record_hash, created_at = con.execute(
+            "SELECT id, data, record_hash, created_at FROM approvals_stub"
+        ).fetchone()
+        body = json.loads(payload)
+        body.pop("record_hash", None)
+        body.pop("created_at", None)
+        con.execute("UPDATE approvals_stub SET data = ? WHERE id = ?",
+                    (json.dumps(body), approval_id))
+        con.commit()
+    finally:
+        con.close()
+    again = c.get(f"/api/scenarios/{s['id']}")
+    assert again.status_code == 200, again.text
+    approval = again.json()["approval"]
+    assert approval["record_hash"] == record_hash
+    assert approval["created_at"].startswith(created_at[:19])
     assert svc.compliance.stub_verify() == {"ok": True, "first_bad_seq": None, "checked": 3}
     assert c.get("/api/audit").status_code == 501
 
@@ -93,6 +118,10 @@ def test_export_csv_and_pdf(client: TestClient, design_id: str) -> None:
         assert section in rows, section
     assert rows.count("metric") == 6
     assert "https://example.org/test" in r.text and "ASSUMPTION: test fixture only" in r.text
+    assert "design,missing_fields,,,,,visits" in r.text
+    assert "Design field 'visits' is not from the source" in r.text
+    assert "forecast,detail,,,,,not reported" in r.text
+    assert "supply,detail,,,,,not reported" in r.text
 
     r = client.get(f"/api/export/scenario/{s['id']}.pdf")
     assert r.status_code == 200 and r.content[:5] == b"%PDF-"

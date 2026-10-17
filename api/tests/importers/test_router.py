@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from typing import Any
 
@@ -74,6 +75,49 @@ def test_network_failure_maps_to_503(client: TestClient, monkeypatch: pytest.Mon
 
 
 @pytest.mark.req("URS-001", "URS-029")
+def test_import_notes_are_tagged_by_field(client: TestClient, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("DEMO_OFFLINE", "1")
+    body = client.post(f"/api/import/ctgov/{DEMO_NCT}").json()
+    assert body["notes"] == [n["text"] for n in body["field_notes"]]
+    visits = body["notes_by_field"]["visits"]
+    assert len(visits) == 1
+    assert visits[0]["kind"] == "assumption" and visits[0]["assumption"] is True
+    assert visits[0]["clears_when_present"] is True
+    assert visits[0]["field"] == "visits" and "NOT in the registry" in visits[0]["text"]
+    enrolled = body["notes_by_field"]["enrollment_target"][0]
+    assert enrolled["kind"] == "fact" and enrolled["assumption"] is False
+    assert enrolled["clears_when_present"] is False
+    assert "actual number enrolled" in enrolled["text"]
+    per_site = body["notes_by_field"]["sites.expected_enrollment"][0]
+    assert per_site["kind"] == "missing" and per_site["assumption"] is False
+    assert per_site["clears_when_present"] is True
+    geo = next(n for n in body["field_notes"] if "GeoNames" in n["text"])
+    assert geo["field"] == "sites.lat_lon" and geo["kind"] == "assumption" and geo["assumption"] is True
+    assert geo["clears_when_present"] is False
+    ecg = next(p for v in body["design"]["visits"] for p in v["procedures"] if p["code"] == "ecg")
+    assert ecg["group_label"] == "Electrocardiogram"
+    assert "12-lead" not in ecg["group_label"]
+    questionnaire = next(p for v in body["design"]["visits"] for p in v["procedures"] if p["code"] == "questionnaire")
+    assert questionnaire["group_label"] == "Questionnaires and diaries"
+    assert body["procedure_group_labels"]["questionnaire"] == "Questionnaires and diaries"
+    assert "SGRQ" not in body["procedure_group_labels"]["questionnaire"]
+
+
+@pytest.mark.req("URS-001")
+def test_procedure_code_catalog(client: TestClient) -> None:
+    r = client.get("/api/import/procedure-codes")
+    assert r.status_code == 200
+    body = r.json()
+    codes = {c["code"]: c for c in body["codes"]}
+    assert codes["questionnaire"]["group_label"] == "Questionnaires and diaries"
+    assert codes["biomarker_sample"]["group_label"] == "Biomarker and genetic samples"
+    assert codes["spirometry"]["group_label"] == "Spirometry assessments"
+    for code, row in codes.items():
+        assert row["group_label"].strip() and "PARC" not in row["group_label"]
+        assert "pre-BD" not in row["group_label"] and code not in row["group_label"]
+
+
+@pytest.mark.req("URS-001", "URS-029")
 def test_list_cached_studies(client: TestClient) -> None:
     r = client.get("/api/import/ctgov")
     assert r.status_code == 200
@@ -113,6 +157,17 @@ def test_protocol_by_nct_offline_uses_cached_demo_extraction(client: TestClient,
     body = r.json()
     assert body["from_cache"] is True and len(body["candidates"]) == 19
     assert body["document"]["source"] == "ctgov" and body["document"]["url"].endswith("Prot_000.pdf")
+    assert body["auto_applied"] is False and body["notice"].startswith("DRAFT")
+    assert body["llm_accuracy"] == "unmeasured"
+    assert body["llm_accuracy_note"] == "Real LLM accuracy was not measured."
+    assert body["candidates"][0]["quote"] and body["candidates"][0]["source_page"]
+    labels = body["procedure_group_labels"]
+    assert labels["questionnaire"] == "Questionnaires and diaries"
+    assert "PARC" not in labels["biomarker_sample"]
+    assert "pre-BD" not in labels["spirometry"] and "post-BD" not in labels["spirometry"]
+    spirometry = next(p for c in body["candidates"] for p in c["visit"]["procedures"] if p["code"] == "spirometry")
+    assert spirometry["group_label"] == "Spirometry assessments"
+    assert spirometry["label"] in {"Spirometry (pre-BD)", "Spirometry (post-BD)"}
 
 
 @pytest.mark.req("URS-002", "URS-029")
@@ -152,6 +207,7 @@ def test_apply_replaces_visits_and_clears_missing_flag(client: TestClient, audit
     assert r.status_code == 200, r.text
     new = r.json()["design"]
     assert len(new["visits"]) == 19 and "visits" not in new["missing_fields"]
+    assert r.json()["cleared_fields"] == ["visits"]
     assert new["id"] == design["id"] and new["sites"] == design["sites"]
     last = audit_log[-1]
     assert last["action"] == "import.protocol.apply" and last["before_hash"] != last["after_hash"]
@@ -191,18 +247,93 @@ def test_only_a_person_can_confirm(client: TestClient, monkeypatch: pytest.Monke
 
 @pytest.mark.req("URS-002", "URS-015")
 def test_review_log_and_stats(client: TestClient, isolated_dirs: dict[str, Path], audit_log: list[dict[str, Any]]) -> None:
-    assert client.get("/api/import/protocol/review/stats").json()["reviews"] == 0
+    empty = client.get("/api/import/protocol/review/stats").json()
+    assert empty["reviews"] == 0 and empty["accepted_unchanged_share_status"] == "no_reviews"
+    assert empty["llm_accuracy"] == "unmeasured"
+    assert empty["llm_accuracy_note"] == "Real LLM accuracy was not measured."
+    # An old client omits bulk_accepted. That is unknown, not a claim that every row was checked.
     r = client.post("/api/import/protocol/review", json={"extraction_id": "e1", "accepted": 15, "edited": 3, "rejected": 1},
                     headers=AUTHOR)
     assert r.status_code == 200
     r = client.post("/api/import/protocol/review", json={"extraction_id": "e2", "accepted": 5, "edited": 0, "rejected": 0},
                     headers=AUTHOR)
     s = r.json()
-    assert s["reviews"] == 2 and s["accepted"] == 20 and s["accepted_unchanged_share"] == round(20 / 24, 3)
-    assert (isolated_dirs["runtime"] / "review_log.jsonl").exists()
+    assert s["reviews"] == 2 and s["accepted"] == 20
+    assert s["accepted_unchanged_share"] is None and s["accepted_unchanged_share_status"] == "unknown"
+    assert s["accuracy_unknown_reviews"] == 2 and s["bulk_accepted"] is None and s["individually_accepted"] is None
+    logged = [json.loads(ln) for ln in (isolated_dirs["runtime"] / "review_log.jsonl").read_text(encoding="utf-8").splitlines()]
+    assert all(row["bulk_accepted"] is None for row in logged)  # omitted stays null; it is not written as 0
     assert audit_log[-1]["action"] == "import.protocol.review"
     assert client.post("/api/import/protocol/review", json={"extraction_id": "e3", "accepted": -1,
                                                             "edited": 0, "rejected": 0}, headers=AUTHOR).status_code == 422
+
+
+@pytest.mark.req("URS-002")
+def test_explicit_zero_bulk_keeps_the_per_row_share(client: TestClient) -> None:
+    """bulk_accepted: 0 means the client attests that each accepted row was opened."""
+    client.post("/api/import/protocol/review", headers=AUTHOR, json={
+        "extraction_id": "e1", "accepted": 15, "edited": 3, "rejected": 1, "bulk_accepted": 0})
+    r = client.post("/api/import/protocol/review", headers=AUTHOR, json={
+        "extraction_id": "e2", "accepted": 5, "edited": 0, "rejected": 0, "bulk_accepted": 0})
+    s = r.json()
+    assert s["accepted_unchanged_share"] == round(20 / 24, 3)
+    assert s["accepted_unchanged_share_status"] == "review_log_only"
+    assert s["individually_accepted"] == 20 and s["bulk_accepted"] == 0
+    assert s["accuracy_unknown_reviews"] == 0
+    assert s["llm_accuracy"] == "unmeasured"
+
+
+@pytest.mark.req("URS-002")
+def test_bulk_accepted_is_excluded_from_the_share(client: TestClient) -> None:
+    # 10 accepted, 4 of them in one "accept all", plus 2 edits and 1 rejection.
+    # Share uses the 6 rows opened and accepted: 6 / (6 + 2 + 1).
+    r = client.post("/api/import/protocol/review", headers=AUTHOR, json={
+        "extraction_id": "e1", "accepted": 10, "edited": 2, "rejected": 1, "bulk_accepted": 4})
+    s = r.json()
+    assert s["individually_accepted"] == 6 and s["bulk_accepted"] == 4
+    assert s["accepted_unchanged_share"] == round(6 / 9, 3)
+    assert s["accepted_unchanged_share_status"] == "review_log_only"
+    # Every row bulk-accepted: there is no per-row check, so the share is not 1.
+    r = client.post("/api/import/protocol/review", headers=AUTHOR, json={
+        "extraction_id": "e2", "accepted": 19, "edited": 0, "rejected": 0, "bulk_accepted": 19})
+    s = r.json()
+    assert s["accepted"] == 29 and s["individually_accepted"] == 6 and s["bulk_accepted"] == 23
+    assert s["accepted_unchanged_share"] == round(6 / 9, 3)
+    r = client.post("/api/import/protocol/review", headers=AUTHOR, json={
+        "extraction_id": "e3", "accepted": 8, "edited": 0, "rejected": 0, "bulk_accepted": 9})
+    assert r.status_code == 422 and r.json()["error"] == "bulk_accepted_exceeds_accepted"
+
+
+@pytest.mark.req("URS-002")
+def test_bulk_only_review_is_not_an_accuracy(client: TestClient) -> None:
+    r = client.post("/api/import/protocol/review", headers=AUTHOR, json={
+        "extraction_id": "e1", "accepted": 19, "edited": 0, "rejected": 0, "bulk_accepted": 19})
+    s = r.json()
+    assert s["accepted_unchanged_share"] is None
+    assert s["accepted_unchanged_share_status"] == "no_individual_review"
+    assert s["individually_accepted"] == 0 and s["bulk_accepted"] == 19
+    assert s["llm_accuracy"] == "unmeasured"
+
+
+@pytest.mark.req("URS-002")
+def test_old_review_log_is_unknown_and_not_rewritten(client: TestClient, isolated_dirs: dict[str, Path]) -> None:
+    path = isolated_dirs["runtime"] / "review_log.jsonl"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    old = {"extraction_id": "legacy", "accepted": 19, "edited": 0, "rejected": 0, "added": 0, "unit": "visit"}
+    path.write_text(json.dumps(old) + "\n", encoding="utf-8")
+    s = client.get("/api/import/protocol/review/stats").json()
+    assert s["reviews"] == 1 and s["accepted"] == 19
+    assert s["accepted_unchanged_share"] is None and s["accepted_unchanged_share_status"] == "unknown"
+    assert s["accuracy_unknown_reviews"] == 1
+    assert s["bulk_accepted"] is None and s["individually_accepted"] is None
+    assert json.loads(path.read_text(encoding="utf-8")) == old  # no fabricated bulk_accepted
+    client.post("/api/import/protocol/review", headers=AUTHOR, json={
+        "extraction_id": "new", "accepted": 4, "edited": 1, "rejected": 0, "bulk_accepted": 0})
+    s = client.get("/api/import/protocol/review/stats").json()
+    assert s["reviews"] == 2 and s["accepted"] == 23
+    assert s["accepted_unchanged_share"] is None and s["accuracy_unknown_reviews"] == 1
+    first = json.loads(path.read_text(encoding="utf-8").splitlines()[0])
+    assert first == old
 
 
 @pytest.mark.req("URS-015")

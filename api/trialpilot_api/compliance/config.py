@@ -61,9 +61,31 @@ def default_db_path() -> Path:
     return repo_root() / "var" / "trialpilot.sqlite"
 
 
+def served_output_pointer() -> Path:
+    """File the real API reads when `TP_VALIDATION_OUT` is unset.
+
+    One line: the validation output directory that contains `package/`.
+    """
+    return repo_root() / "validation" / "out" / "served_output.txt"
+
+
 def validation_out_dir() -> Path:
+    """Where `/api/validation/package` reads `package/package_index.json`.
+
+    Precedence: process environment, then the repo `.env`, then
+    `validation/out/served_output.txt`, then `validation/out`.
+    """
     value = env("TP_VALIDATION_OUT")
-    return Path(value) if value else repo_root() / "validation" / "out"
+    if value:
+        return Path(value)
+    pointer = served_output_pointer()
+    try:
+        text = pointer.read_text(encoding="utf-8").strip()
+    except OSError:
+        text = ""
+    if text:
+        return Path(text)
+    return repo_root() / "validation" / "out"
 
 
 def pepper() -> tuple[str, bool]:

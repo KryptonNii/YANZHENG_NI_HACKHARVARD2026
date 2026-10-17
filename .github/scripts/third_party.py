@@ -27,9 +27,9 @@ FIRST_PARTY = re.compile(r"^trialpilot[-_]")
 # Licences compatible with shipping an MIT repo (permissive or weak-copyleft used unmodified as a library).
 ALLOWED = re.compile(
     r"\b(MIT|BSD|ISC|Apache|PSF|Python Software Foundation|0BSD|Unlicense|CC0|MPL|OFL|Zlib|BlueOak|HPND)",
-    re.I,
+    re.IGNORECASE,
 )
-BLOCKED = re.compile(r"\b(AGPL|GPL(?!.*(with|exception))|SSPL|BUSL|Commons Clause|CC BY-NC|proprietary)", re.I)
+BLOCKED = re.compile(r"\b(AGPL|GPL(?!.*(with|exception))|SSPL|BUSL|Commons Clause|CC BY-NC|proprietary)", re.IGNORECASE)
 
 USED_FOR: dict[str, str] = {
     "pydantic": "data models / validation (contracts)",

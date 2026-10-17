@@ -47,6 +47,9 @@ casps:
   total: >-
     Published total lies inside the engine's P10-P90. Module allocation differs (initiation trips, storage) and the engine
     lacks hospital utilities and audits while assuming industry-level monitoring, so the module rows matter more than the total.
+    Travel and freight now include direct and well-to-tank once; the former direct-only +5% result is obsolete.
+    In the paper-factor variant, identified DESNZ 2022 combined factors are split into their documented components;
+    the unidentified road factor is counted once with no extra WTT (its split remains unknown).
 primetime:
   setup: >-
     The engine counts one site-initiation round trip for each of the 64 sites [carbon.site_initiation_trips.v1]; PRIMETIME
@@ -63,7 +66,8 @@ primetime:
   patient_assessments: >-
     Two structural differences pull in opposite directions. TrialDesign applies the 5 extra mammogram visits to all 1,962
     patients, while the paper counts them for the 1,623 no-radiotherapy patients only (+21% visits; contract proposal
-    Visit.patient_share). The engine's km-based travel gives ~4.3 kg per UK visit vs the paper's 5.8 kg, and the engine does
+    Visit.patient_share). The engine uses country-specific km-based direct plus WTT travel instead of the paper's
+    5.8 kg per UK visit, and the engine does
     not model hospital utilities (5,778 kg) or consumables (1,485 kg).
   samples: >-
     Not modelled: PRIMETIME's samples are tissue blocks from routine surgery shipped for Ki67 testing (2,989 shipments),
@@ -74,5 +78,7 @@ primetime:
     The archive (4 m2 x 10 years) is applied as reported; the paper's 2 m2 of sample storage is not modelled.
   drug_supply: "No drug kits: avoidance-of-radiotherapy trial (drug_type none)."
   total: >-
-    Published total lies inside the engine's P10-P90; the closeness is partly offsetting errors (extra initiation and
-    close-out trips and supplies vs missing hospital utilities, samples and laboratory).
+    Published total lies inside the engine's P10-P90. Travel and freight include direct and well-to-tank once;
+    the former direct-only +7% result is obsolete. Extra initiation and close-out trips, supplies and excess
+    patient-visits partly offset missing hospital utilities, samples and laboratory. The paper-factor variant
+    separates documented direct/WTT components; unidentified road freight is counted once with no additional WTT.

@@ -330,17 +330,27 @@ class _Ctx:
         return self.date(t).strftime("%Y-%m-%d")
 
 
-def _backup_activation(ctx: _Ctx, site_id: str) -> float | None:
-    """A backup site is activated by an `activate_backup` intervention naming it or its country."""
+def activation_day(plan: OpsPlan, site, interventions: list[SimIntervention]) -> float | None:
+    """When a site opens to enrollment.
+
+    Planned sites use the operational activation day. A backup site opens only when an
+    ``activate_backup`` intervention names it, or names its country without naming a backup.
+    """
+    if not site.backup:
+        return None if site.activation_day is None else float(site.activation_day)
     starts = []
-    cc = ctx.country_of[site_id]
-    for iv in ctx.ivs:
+    for iv in interventions:
         if iv.code != "activate_backup":
             continue
-        named_backups = [s for s in iv.site_ids if ctx.plan.site(s).backup]
-        if site_id in iv.site_ids or (not named_backups and cc in {ctx.country_of[s] for s in iv.site_ids}):
+        named_backups = [sid for sid in iv.site_ids if plan.site(sid).backup]
+        countries = {plan.site(sid).country for sid in iv.site_ids}
+        if site.id in iv.site_ids or (not named_backups and site.country in countries):
             starts.append(iv.start_day + BACKUP_START_LAG)
     return min(starts) if starts else None
+
+
+def _backup_activation(ctx: _Ctx, site_id: str) -> float | None:
+    return activation_day(ctx.plan, ctx.plan.site(site_id), ctx.ivs)
 
 
 def _enrollment(ctx: _Ctx) -> dict[int, list[float]]:
@@ -349,14 +359,12 @@ def _enrollment(ctx: _Ctx) -> dict[int, list[float]]:
     u_enroll = {s.idx: _rng(ctx.seed, STREAM_ENROLL, s.idx).random((ctx.H, 2)) for s in plan.sites}
     start = {}
     for s in plan.sites:
-        start[s.idx] = s.activation_day if not s.backup else _backup_activation(ctx, s.id)
-        activation_day = start[s.idx]
-        if activation_day is not None:
-            activation_date = ctx.iso(activation_day)
-            ctx.emit(activation_day + 0.1, f"{s.id}:ctms:activation", "vendor_milestone", s.id, "CTMS", {
-                "vendor": "CTMS", "milestone_id": f"SITEACT-{s.id}", "milestone": "Site activation",
-                "planned_date": activation_date, "forecast_date": activation_date, "status": "complete",
-                "critical_path": False, "report_date": activation_date,
+        opened = activation_day(plan, s, ctx.ivs)
+        start[s.idx] = opened
+        if opened is not None:
+            ctx.emit(opened + 0.1, f"{s.id}:ctms:activation", "site_activated", s.id, "CTMS", {
+                "activation_date": ctx.iso(opened), "country": s.country, "region": s.region,
+                "status": "open_to_enrollment",
             })
     out: dict[int, list[float]] = {s.idx: [] for s in plan.sites}
     total = 0
@@ -812,11 +820,28 @@ def simulate(plan: OpsPlan, params: OpsParams, seed: int = 42, scenario: str = "
     _vendor(ctx)
     _finance(ctx)
     ctx.events.sort(key=lambda e: (e.t, e.key))
-    gt = ground_truth(plan, sc, seed)
+    gt = ground_truth(plan, sc, seed, interventions or [])
     return SimResult(ctx.events, sc, gt, seed, ctx.H)
 
 
-def ground_truth(plan: OpsPlan, sc: Scenario, seed: int) -> dict:
+def _json_day(day: float) -> int | float:
+    return int(day) if float(day).is_integer() else day
+
+
+def ground_truth(plan: OpsPlan, sc: Scenario, seed: int,
+                 interventions: list[SimIntervention] | None = None) -> dict:
+    ivs = list(sc.planted) + list(interventions or [])
+    activations = []
+    for s in plan.sites:
+        day = activation_day(plan, s, ivs)
+        if day is None:
+            continue
+        activations.append({
+            "site_id": s.id, "activation_day": _json_day(day), "backup": s.backup,
+            "event_type": "site_activated", "source_system": "CTMS",
+            "activation_date": (plan.epoch + timedelta(days=day)).date().isoformat(),
+            "country": s.country, "region": s.region, "status": "open_to_enrollment",
+        })
     return {
         "simulated": True,
         "note": "Ground truth of the SIMULATED feed (planted problems and scripted interventions). "
@@ -840,4 +865,5 @@ def ground_truth(plan: OpsPlan, sc: Scenario, seed: int) -> dict:
                    "lead_days": t.lead_days, "ship_policy": t.ship_policy}
             for s, t in zip(plan.sites, sc.truths, strict=True)
         },
+        "activations": activations,
     }

@@ -203,7 +203,14 @@ def get_validation_package() -> Any:
         return error_response(ComplianceError(
             404, "package_not_built",
             "No validation package has been generated yet. Run `tpv package`.",
-            {"expected_path": "validation/out/package/package_index.json"},
+            {
+                "expected_path": "validation/out/package/package_index.json",
+                "resolved_path": str(index),
+                "config": (
+                    "TP_VALIDATION_OUT, else validation/out/served_output.txt, "
+                    "else validation/out"
+                ),
+            },
         ))
     data = json.loads(index.read_text(encoding="utf-8"))
     # Approval status is live (QA may sign after the package was generated).

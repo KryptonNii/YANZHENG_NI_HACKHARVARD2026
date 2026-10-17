@@ -88,6 +88,55 @@
       ],
       "title": "MetricRange",
       "type": "object"
+    },
+    "ProvenanceItem": {
+      "properties": {
+        "formula_id": {
+          "title": "Formula Id",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "inputs": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "title": "Inputs",
+          "type": "object"
+        },
+        "parameter_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Parameter Ids",
+          "type": "array"
+        },
+        "assumptions": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "formula_id",
+        "description",
+        "inputs",
+        "parameter_ids"
+      ],
+      "title": "ProvenanceItem",
+      "type": "object"
     }
   },
   "description": "Supply display subset; extra producer fields are ignored (v4, A8).",
@@ -112,6 +161,39 @@
       "minimum": 0,
       "title": "Stockout Probability",
       "type": "number"
+    },
+    "draws_requested": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Draws Requested"
+    },
+    "draws_used": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Draws Used"
+    },
+    "provenance": {
+      "items": {
+        "$ref": "#/$defs/ProvenanceItem"
+      },
+      "title": "Provenance",
+      "type": "array"
     }
   },
   "required": [

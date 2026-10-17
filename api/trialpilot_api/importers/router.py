@@ -2,10 +2,11 @@
 
 POST /ctgov/{nct_id}            ClinicalTrials.gov study -> TrialDesign (+ notes on every assumption)
 GET  /ctgov                     studies available in the local cache (offline demo list)
+GET  /procedure-codes           generic label for each procedure code (not one member assessment)
 POST /protocol                  protocol PDF (multipart `file`, or form `nct_id`) -> candidate visits
 POST /protocol/apply            human-accepted visits + design -> updated design (never automatic)
 POST /protocol/review           log how many candidates a human accepted / edited / rejected
-GET  /protocol/review/stats     running totals of those reviews (accuracy metric)
+GET  /protocol/review/stats     running totals of those reviews (not a live-model accuracy)
 
 Errors use the shared shape {"error", "message", "details"}. Every successful import, apply and
 review writes an audit entry (A5's compliance adapter when mounted in the app, else A7's
@@ -38,18 +39,23 @@ from .ctgov import (
     TIMEOUT_S,
     USER_AGENT,
     CtgovError,
+    FieldNote,
     cached_study_ids,
     fetch_study_result,
     map_study_report,
     normalize_nct,
+    note_payload,
     protocol_documents,
 )
 from .paths import demo_offline, protocols_dir, runtime_cache_dir
+from .procedures import default_vocabulary
 from .protocol_extract import ExtractionFailed, extract_schedule, load_cached, pdf_sha256
 
 router = APIRouter(tags=["import"])
 
 MAX_UPLOAD_BYTES = 20 * 1024 * 1024
+LLM_ACCURACY = "unmeasured"
+LLM_ACCURACY_NOTE = "Real LLM accuracy was not measured."
 _ROLES = {"author", "reviewer", "qa", "admin", "viewer"}
 _AI_ACTOR_PREFIX = "ai:"  # same convention as A7 (compliance/config.py)
 _sha_locks: dict[str, threading.Lock] = {}
@@ -138,6 +144,21 @@ def _audit(audit: AuditFn, actor: tuple[str, str], action: str, object_type: str
     return None
 
 
+def _with_group_labels(node: Any) -> Any:
+    """Add each procedure's category name. The shared Procedure model does not store it; A5 drops it on save."""
+    labels = default_vocabulary().group_label_map()
+    if isinstance(node, dict):
+        code = node.get("code")
+        if isinstance(code, str) and code in labels and "label" in node:
+            node["group_label"] = labels[code]
+        for value in node.values():
+            _with_group_labels(value)
+    elif isinstance(node, list):
+        for value in node:
+            _with_group_labels(value)
+    return node
+
+
 def _lock_for(sha: str) -> threading.Lock:
     with _sha_locks_guard:
         return _sha_locks.setdefault(sha, threading.Lock())
@@ -173,6 +194,12 @@ def list_cached_studies() -> Any:
     return {"studies": items, "offline": demo_offline()}
 
 
+@router.get("/procedure-codes")
+def list_procedure_codes() -> Any:
+    """One readable name per code. A code can cover many assessments, so the name is the category."""
+    return default_vocabulary().catalog()
+
+
 @router.post("/ctgov/{nct_id}")
 def import_ctgov(
     nct_id: str,
@@ -192,19 +219,24 @@ def import_ctgov(
         k = known.get(d.registry_id or "", {})
         cached = bool(doc["has_protocol"] and k.get("filename") == doc["filename"] and load_cached(k["sha256"]))
         docs.append({**doc, "extraction_cached": cached})
-    notes = list(rep.notes)
+    field_notes = list(rep.field_notes)
     if res.stale_fallback:
-        notes.insert(0, "ClinicalTrials.gov could not be reached; the cached copy from "
-                        f"{res.meta.get('fetched_at', 'an earlier fetch')} was used.")
+        fetched = res.meta.get("fetched_at", "an earlier fetch")
+        field_notes.insert(0, FieldNote(
+            "ClinicalTrials.gov could not be reached; the cached copy from "
+            f"{fetched} was used.",
+            None, "fact",
+        ))
     if (err := _audit(audit, actor, "import.ctgov", "trial_design", d.id, None, record_hash(d),
                       f"Imported {d.registry_id} from ClinicalTrials.gov ({'cache' if res.cached else 'live'})")):
         return err
     return {
-        "design": d.model_dump(mode="json"),
+        "design": _with_group_labels(d.model_dump(mode="json")),
         "raw_cached": res.cached,
         "stale_fallback": res.stale_fallback,
         "missing_fields": d.missing_fields,
-        "notes": notes,
+        **note_payload(field_notes),
+        "procedure_group_labels": default_vocabulary().group_label_map(),
         "field_sources": rep.field_sources,
         "enrollment_type": rep.enrollment_type,
         "drug_type_basis": rep.drug_type_basis,
@@ -299,8 +331,15 @@ def import_protocol(
                       candidates_hash, f"{len(result.candidates)} candidate visits ({result.method}"
                       f"{', cached' if result.from_cache else ''}); not applied to any design")):
         return err
-    out = json.loads(result.model_dump_json())
-    out.update({"design_id": design_id, "document": document, "auto_applied": False})
+    out = _with_group_labels(json.loads(result.model_dump_json()))
+    out.update({
+        "design_id": design_id,
+        "document": document,
+        "auto_applied": False,
+        "procedure_group_labels": default_vocabulary().group_label_map(),
+        "llm_accuracy": LLM_ACCURACY,
+        "llm_accuracy_note": LLM_ACCURACY_NOTE,
+    })
     return out
 
 
@@ -323,6 +362,7 @@ def apply_visits(body: ApplyRequest, actor: tuple[str, str] = Depends(get_actor)
     if len({v.number for v in body.visits}) != len(body.visits):
         return _error(422, "duplicate_visit_numbers", "Each visit needs a unique number.")
     before = record_hash(body.design)
+    cleared_fields = [f for f in body.design.missing_fields if f == "visits"]
     new = body.design.model_copy(update={
         "visits": sorted(body.visits, key=lambda v: v.number),
         "missing_fields": [f for f in body.design.missing_fields if f != "visits"],
@@ -330,7 +370,12 @@ def apply_visits(body: ApplyRequest, actor: tuple[str, str] = Depends(get_actor)
     if (err := _audit(audit, actor, "import.protocol.apply", "trial_design", new.id, before, record_hash(new),
                       body.reason or f"Visit schedule confirmed by {actor[0]} from extraction {body.extraction_id or 'n/a'}")):
         return err
-    return {"design": new.model_dump(mode="json"), "applied_by": actor[0], "visits": len(new.visits)}
+    return {
+        "design": _with_group_labels(new.model_dump(mode="json")),
+        "applied_by": actor[0],
+        "visits": len(new.visits),
+        "cleared_fields": cleared_fields,
+    }
 
 
 class ReviewLog(BaseModel):
@@ -341,24 +386,86 @@ class ReviewLog(BaseModel):
     rejected: int = Field(ge=0)
     added: int = Field(default=0, ge=0)          # visits/procedures the human added that the extractor missed
     unit: str = "visit"                          # "visit" or "procedure"
+    # Rows accepted in one action, without opening them. Omitted means the log cannot say;
+    # it is not stored as zero.
+    bulk_accepted: int | None = Field(default=None, ge=0)
 
 
 def _review_log_path() -> Path:
     return runtime_cache_dir() / "review_log.jsonl"
 
 
+def _count(value: Any) -> int | None:
+    """A JSON integer count. Booleans and anything else are not a count."""
+    if isinstance(value, bool) or not isinstance(value, int):
+        return None
+    return value
+
+
+def _known_bulk(entry: dict[str, Any]) -> int | None:
+    """Rows this review bulk-accepted, or None when the line does not say (do not invent 0)."""
+    if "bulk_accepted" not in entry or entry["bulk_accepted"] is None:
+        return None
+    bulk = _count(entry["bulk_accepted"])
+    accepted = _count(entry.get("accepted", 0))
+    if bulk is None or accepted is None or bulk < 0 or accepted < 0 or bulk > accepted:
+        return None
+    return bulk
+
+
 def review_stats() -> dict[str, Any]:
+    """Operational counts over every line. The unchanged-accept share ignores bulk accepts.
+
+    A line with no `bulk_accepted` value (logs written before the field existed, or a client
+    that still omits it) is unknown. Those lines stay in the operational totals and are not
+    rewritten, and they make the share null rather than a guessed rate.
+    """
     tot = {"reviews": 0, "accepted": 0, "edited": 0, "rejected": 0, "added": 0}
+    unknown = 0
+    known_individual = 0
+    known_edited = 0
+    known_rejected = 0
+    known_bulk = 0
     p = _review_log_path()
     if p.exists():
         for line in p.read_text(encoding="utf-8").splitlines():
-            if line.strip():
-                r = json.loads(line)
-                tot["reviews"] += 1
-                for k in ("accepted", "edited", "rejected", "added"):
-                    tot[k] += int(r.get(k, 0))
-    judged = tot["accepted"] + tot["edited"] + tot["rejected"]
-    tot["accepted_unchanged_share"] = round(tot["accepted"] / judged, 3) if judged else None
+            if not line.strip():
+                continue
+            r = json.loads(line)
+            tot["reviews"] += 1
+            for k in ("accepted", "edited", "rejected", "added"):
+                tot[k] += int(r.get(k, 0) or 0)
+            bulk = _known_bulk(r)
+            if bulk is None:
+                unknown += 1
+                continue
+            known_bulk += bulk
+            known_individual += int(r.get("accepted", 0)) - bulk
+            known_edited += int(r.get("edited", 0) or 0)
+            known_rejected += int(r.get("rejected", 0) or 0)
+    judged = known_individual + known_edited + known_rejected
+    if tot["reviews"] == 0:
+        status, share = "no_reviews", None
+        bulk_total: int | None = 0
+        individual: int | None = 0
+    elif unknown:
+        status, share = "unknown", None
+        bulk_total, individual = None, None
+    elif judged == 0:
+        status, share = "no_individual_review", None
+        bulk_total, individual = known_bulk, known_individual
+    else:
+        status, share = "review_log_only", round(known_individual / judged, 3)
+        bulk_total, individual = known_bulk, known_individual
+    tot.update({
+        "bulk_accepted": bulk_total,
+        "individually_accepted": individual,
+        "accepted_unchanged_share": share,
+        "accepted_unchanged_share_status": status,
+        "accuracy_unknown_reviews": unknown,
+        "llm_accuracy": LLM_ACCURACY,
+        "llm_accuracy_note": LLM_ACCURACY_NOTE,
+    })
     return tot
 
 
@@ -366,7 +473,11 @@ def review_stats() -> dict[str, Any]:
 def log_review(body: ReviewLog, actor: tuple[str, str] = Depends(get_actor), audit: AuditFn = Depends(get_auditor)) -> Any:
     if (err := _require_confirmer(actor)):
         return err
-    entry ={**body.model_dump(), "actor": actor[0], "at": datetime.now(UTC).isoformat(timespec="seconds")}
+    if body.bulk_accepted is not None and body.bulk_accepted > body.accepted:
+        return _error(422, "bulk_accepted_exceeds_accepted",
+                      "bulk_accepted counts rows already included in accepted, so it cannot be larger.",
+                      {"accepted": body.accepted, "bulk_accepted": body.bulk_accepted})
+    entry = {**body.model_dump(), "actor": actor[0], "at": datetime.now(UTC).isoformat(timespec="seconds")}
     if (err := _audit(audit, actor, "import.protocol.review", "protocol_extraction", body.extraction_id, None,
                       record_hash(entry), f"accepted {body.accepted}, edited {body.edited}, rejected {body.rejected}")):
         return err

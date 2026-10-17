@@ -15,12 +15,12 @@
         "registry_id": "NCT03930732",
         "title": "BOREAS: Pivotal Study to Assess the Efficacy, Safety and Tolerability of Dupilumab in Patients With Moderate-to-severe COPD With Type 2 Inflammation",
         "total_t": {
-          "p10": 953.87,
-          "p50": 1359.692,
-          "p90": 1929.953,
-          "unit": "kg_co2e"
+          "p10": 1138.467,
+          "p50": 1637.002,
+          "p90": 2343.383,
+          "unit": "t_co2e"
         },
-        "within_band": false
+        "within_band": true
       },
       {
         "available": true,
@@ -29,10 +29,10 @@
         "registry_id": "NCT04429503",
         "title": "PHOTON: Study of a High-Dose Aflibercept in Participants With Diabetic Eye Disease",
         "total_t": {
-          "p10": 616.784,
-          "p50": 834.782,
-          "p90": 1121.449,
-          "unit": "kg_co2e"
+          "p10": 726.428,
+          "p50": 989.862,
+          "p90": 1346.377,
+          "unit": "t_co2e"
         },
         "within_band": false
       },
@@ -43,10 +43,10 @@
         "registry_id": "NCT04456673",
         "title": "NOTUS: Pivotal Study to Assess the Efficacy, Safety and Tolerability of Dupilumab in Patients With Moderate to Severe COPD With Type 2 Inflammation",
         "total_t": {
-          "p10": 1117.261,
-          "p50": 1577.823,
-          "p90": 2241.168,
-          "unit": "kg_co2e"
+          "p10": 1332.776,
+          "p50": 1908.541,
+          "p90": 2726.894,
+          "unit": "t_co2e"
         },
         "within_band": true
       },
@@ -57,10 +57,10 @@
         "registry_id": "NCT04535986",
         "title": "A Phase 3 Clinical Trial to Evaluate the Safety and Efficacy of Ensifentrine in Patients With COPD",
         "total_t": {
-          "p10": 329.83,
-          "p50": 453.033,
-          "p90": 625.551,
-          "unit": "kg_co2e"
+          "p10": 389.108,
+          "p50": 536.935,
+          "p90": 746.271,
+          "unit": "t_co2e"
         },
         "within_band": false
       }
@@ -946,14 +946,14 @@
           "line_changes": [],
           "modules": [
             {
-              "diff_pct": 240.01,
+              "diff_pct": 314.64,
               "explanation": "Allocation difference. The engine puts one site-initiation round trip per site in set-up [carbon.site_initiation_trips.v1] plus a per-site documents factor; the paper books its initiation visits (UK rail, Australian flights) under meetings and travel and keeps only printing and postage (350 kg) in set-up.",
               "label": "Trial set-up",
               "module": "setup",
               "ours": {
-                "p10": 856.48,
-                "p50": 1189.36,
-                "p90": 1616.16,
+                "p10": 1039.04,
+                "p50": 1450.41,
+                "p90": 1985.88,
                 "unit": "kg_co2e"
               },
               "published_kg": 349.8,
@@ -976,14 +976,14 @@
               "status": "gap"
             },
             {
-              "diff_pct": 108.13,
+              "diff_pct": 163.3,
               "explanation": "Monitoring intensity. The paper reports monitoring as travel distance (UK 12,957 p.km by rail, Australia 15,310, Spain 3,280) but not the number of visits; the engine uses its default on-site frequency (FDA: 4-8-week intervals for major efficacy trials; mid 0.54 visits/site/month), i.e. several hundred visits over 6 years - far more than an academic phase 2 trial. The paper's audits (10.9 t of flights) have no engine equivalent. Reported activity applied: no investigator meeting.",
               "label": "Meetings and travel",
               "module": "meetings_travel",
               "ours": {
-                "p10": 24218.55,
-                "p50": 42593.7,
-                "p90": 69563.21,
+                "p10": 30688.86,
+                "p50": 53885.11,
+                "p90": 88162.71,
                 "unit": "kg_co2e"
               },
               "published_kg": 20465.3,
@@ -1036,14 +1036,14 @@
               "status": "gap"
             },
             {
-              "diff_pct": -27.54,
+              "diff_pct": -17.72,
               "explanation": "The engine counts patient travel (km-based, per country) and per-procedure emissions (9 CT scans per patient, as reported). The paper also counts hospital utilities attributed to trial staff time (2,077 kg) and consumables (226 kg), which the engine does not model, and applies the UK 5.8 kg/visit travel factor to Australian and Spanish patients too.",
               "label": "Patient assessments (incl. patient travel)",
               "module": "patient_assessments",
               "ours": {
-                "p10": 7206.13,
-                "p50": 8187.14,
-                "p90": 9590.87,
+                "p10": 8056.82,
+                "p50": 9296.17,
+                "p90": 11070.48,
                 "unit": "kg_co2e"
               },
               "published_kg": 11298.4,
@@ -1051,14 +1051,14 @@
               "status": "gap"
             },
             {
-              "diff_pct": -1.0,
+              "diff_pct": -0.39,
               "explanation": "Reported activity applied: 574 samples in 29 boxes, one third of one -80 C freezer. The engine's samples module also holds freezer storage (the paper books storage under laboratory), so samples and laboratory must be read together.",
               "label": "Samples",
               "module": "samples",
               "ours": {
-                "p10": 1329.32,
-                "p50": 1911.22,
-                "p90": 2704.38,
+                "p10": 1340.91,
+                "p50": 1923.02,
+                "p90": 2717.54,
                 "unit": "kg_co2e"
               },
               "published_kg": 1930.5,
@@ -1081,18 +1081,18 @@
               "status": "gap"
             },
             {
-              "diff_pct": 25.58,
+              "diff_pct": 35.32,
               "explanation": "The engine adds one close-out round trip per site [carbon.closeout_trips.v1], which the paper does not count; the archive (4 m2 for 10 years, reported) is applied as reported.",
               "label": "Close-out and archiving",
               "module": "closeout",
               "ours": {
-                "p10": 2579.6,
-                "p50": 3417.32,
-                "p90": 4488.88,
+                "p10": 2793.32,
+                "p50": 3682.37,
+                "p90": 4774.22,
                 "unit": "kg_co2e"
               },
               "published_kg": 2721.3,
-              "published_within_range": true,
+              "published_within_range": false,
               "status": "gap"
             },
             {
@@ -1101,9 +1101,9 @@
               "label": "Drug supply (TrialPilot extension, not in the paper)",
               "module": "drug_supply",
               "ours": {
-                "p10": 5570.14,
-                "p50": 11874.52,
-                "p90": 21712.35,
+                "p10": 5729.77,
+                "p50": 12158.0,
+                "p90": 22158.42,
                 "unit": "kg_co2e"
               },
               "published_kg": null,
@@ -1118,37 +1118,37 @@
           ],
           "title": "Engine check: TrialPilot engine + library on the rebuilt design",
           "total": {
-            "diff_pct": 5.28,
-            "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90. Module allocation differs (initiation trips, storage) and the engine lacks hospital utilities and audits while assuming industry-level monitoring, so the module rows matter more than the total.",
+            "diff_pct": 23.38,
+            "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90. Module allocation differs (initiation trips, storage) and the engine lacks hospital utilities and audits while assuming industry-level monitoring, so the module rows matter more than the total. Travel and freight now include direct and well-to-tank once; the former direct-only +5% result is obsolete. In the paper-factor variant, identified DESNZ 2022 combined factors are split into their documented components; the unidentified road factor is counted once with no extra WTT (its split remains unknown).",
             "label": "Total",
             "module": "total",
             "ours": {
-              "p10": 56717.55,
-              "p50": 75733.89,
-              "p90": 103306.95,
+              "p10": 64601.5,
+              "p50": 88758.48,
+              "p90": 123510.08,
               "unit": "kg_co2e"
             },
             "published_kg": 71938.8,
             "published_within_range": true,
-            "status": "close"
+            "status": "gap"
           },
           "unavailable_reason": null
         },
         {
           "available": true,
-          "description": "As above, but every engine emission factor the paper reports is replaced by the paper's value (rail 0.04441, flights, air and road freight, UK grid 0.273, dry ice 1.81, CTU per-FTE). Remaining differences are structural: what the engine models vs what the paper counted.",
+          "description": "As above, but every engine emission factor the paper reports is replaced by the paper's value (rail 0.04441, flights, air and road freight, UK grid 0.273, dry ice 1.81, CTU per-FTE). Identified combined factors are split into documented direct/WTT components so each is counted once. Road freight 0.19443 has an unidentified split and is used once without additional WTT. Factors absent from the paper retain the library values. Remaining differences include model structure and these unsourced activity assumptions.",
           "id": "engine_paper_factors",
           "line_changes": [],
           "modules": [
             {
-              "diff_pct": 240.01,
+              "diff_pct": 314.64,
               "explanation": "Allocation difference. The engine puts one site-initiation round trip per site in set-up [carbon.site_initiation_trips.v1] plus a per-site documents factor; the paper books its initiation visits (UK rail, Australian flights) under meetings and travel and keeps only printing and postage (350 kg) in set-up.",
               "label": "Trial set-up",
               "module": "setup",
               "ours": {
-                "p10": 856.48,
-                "p50": 1189.36,
-                "p90": 1616.16,
+                "p10": 1039.04,
+                "p50": 1450.41,
+                "p90": 1985.88,
                 "unit": "kg_co2e"
               },
               "published_kg": 349.8,
@@ -1171,14 +1171,14 @@
               "status": "gap"
             },
             {
-              "diff_pct": 108.13,
+              "diff_pct": 163.3,
               "explanation": "Monitoring intensity. The paper reports monitoring as travel distance (UK 12,957 p.km by rail, Australia 15,310, Spain 3,280) but not the number of visits; the engine uses its default on-site frequency (FDA: 4-8-week intervals for major efficacy trials; mid 0.54 visits/site/month), i.e. several hundred visits over 6 years - far more than an academic phase 2 trial. The paper's audits (10.9 t of flights) have no engine equivalent. Reported activity applied: no investigator meeting.",
               "label": "Meetings and travel",
               "module": "meetings_travel",
               "ours": {
-                "p10": 24218.55,
-                "p50": 42593.7,
-                "p90": 69563.21,
+                "p10": 30688.86,
+                "p50": 53885.11,
+                "p90": 88162.71,
                 "unit": "kg_co2e"
               },
               "published_kg": 20465.3,
@@ -1231,14 +1231,14 @@
               "status": "gap"
             },
             {
-              "diff_pct": -27.14,
+              "diff_pct": -17.62,
               "explanation": "The engine counts patient travel (km-based, per country) and per-procedure emissions (9 CT scans per patient, as reported). The paper also counts hospital utilities attributed to trial staff time (2,077 kg) and consumables (226 kg), which the engine does not model, and applies the UK 5.8 kg/visit travel factor to Australian and Spanish patients too.",
               "label": "Patient assessments (incl. patient travel)",
               "module": "patient_assessments",
               "ours": {
-                "p10": 7238.35,
-                "p50": 8231.69,
-                "p90": 9635.67,
+                "p10": 8065.34,
+                "p50": 9307.45,
+                "p90": 11086.33,
                 "unit": "kg_co2e"
               },
               "published_kg": 11298.4,
@@ -1276,18 +1276,18 @@
               "status": "gap"
             },
             {
-              "diff_pct": 25.58,
+              "diff_pct": 35.32,
               "explanation": "The engine adds one close-out round trip per site [carbon.closeout_trips.v1], which the paper does not count; the archive (4 m2 for 10 years, reported) is applied as reported.",
               "label": "Close-out and archiving",
               "module": "closeout",
               "ours": {
-                "p10": 2579.6,
-                "p50": 3417.32,
-                "p90": 4488.88,
+                "p10": 2793.32,
+                "p50": 3682.37,
+                "p90": 4774.22,
                 "unit": "kg_co2e"
               },
               "published_kg": 2721.3,
-              "published_within_range": true,
+              "published_within_range": false,
               "status": "gap"
             },
             {
@@ -1307,25 +1307,25 @@
             }
           ],
           "notes": [
-            "parameter_set_version 2aec9947c84f",
+            "parameter_set_version 1e455fd0ebc8",
             "Module 'intervention' is excluded (drug manufacture is excluded in the published method); the 'drug_supply' extension estimates kits separately and is included in the totals.",
             "Duration is the design's planned duration (no enrollment forecast supplied): a point value."
           ],
           "title": "Engine check with the paper's own factors",
           "total": {
-            "diff_pct": 6.21,
-            "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90. Module allocation differs (initiation trips, storage) and the engine lacks hospital utilities and audits while assuming industry-level monitoring, so the module rows matter more than the total.",
+            "diff_pct": 24.13,
+            "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90. Module allocation differs (initiation trips, storage) and the engine lacks hospital utilities and audits while assuming industry-level monitoring, so the module rows matter more than the total. Travel and freight now include direct and well-to-tank once; the former direct-only +5% result is obsolete. In the paper-factor variant, identified DESNZ 2022 combined factors are split into their documented components; the unidentified road factor is counted once with no extra WTT (its split remains unknown).",
             "label": "Total",
             "module": "total",
             "ours": {
-              "p10": 57415.96,
-              "p50": 76402.69,
-              "p90": 104015.79,
+              "p10": 65196.31,
+              "p50": 89294.5,
+              "p90": 124225.66,
               "unit": "kg_co2e"
             },
             "published_kg": 71938.8,
             "published_within_range": true,
-            "status": "close"
+            "status": "gap"
           },
           "unavailable_reason": null
         }
@@ -1493,7 +1493,7 @@
       "source": "Griffiths J, Fox L, Williamson PR, on behalf of the Low Carbon Clinical Trials Group. Quantifying the carbon footprint of clinical trials: guidance development and case studies. BMJ Open 2024;14:e075755. doi:10.1136/bmjopen-2023-075755. Online supplemental appendix C (CC BY 4.0).",
       "summary": [
         "CASPS: the paper's own arithmetic reproduces to +0.01% of the published 71,939 kg CO2e (71,943 kg); fixing the errors we documented moves it to 70,495 kg (-2.0%).",
-        "With TrialPilot's library factors the same activity data give 59,893 kg (P10-P90 57,818-62,709, -16.7% vs published), driven mostly by -80 C freezer storage (-5,048 kg); CTU office electricity (-2,882 kg). The full TrialPilot engine on the rebuilt design gives 75,734 kg (P10-P90 56,718-103,307, +5%), published total inside the range, with module-level differences explained per module."
+        "With TrialPilot's library factors the same activity data give 59,893 kg (P10-P90 57,818-62,709, -16.7% vs published), driven mostly by -80 C freezer storage (-5,048 kg); CTU office electricity (-2,882 kg). The full TrialPilot engine on the rebuilt design gives 88,758 kg (P10-P90 64,602-123,510, +23%), published total inside the range, with module-level differences explained per module."
       ],
       "title": "Cediranib in patients with alveolar soft-part sarcoma (CASPS)"
     },
@@ -2335,14 +2335,14 @@
           "line_changes": [],
           "modules": [
             {
-              "diff_pct": 1142.8,
+              "diff_pct": 1412.93,
               "explanation": "The engine counts one site-initiation round trip for each of the 64 sites [carbon.site_initiation_trips.v1]; PRIMETIME ran 66 virtual initiation sessions and 1 in person (appendix D p.6). The engine has no parameter for virtual initiation yet (request filed with A2).",
               "label": "Trial set-up",
               "module": "setup",
               "ours": {
-                "p10": 3302.01,
-                "p50": 5644.82,
-                "p90": 9259.67,
+                "p10": 3904.67,
+                "p50": 6871.74,
+                "p90": 11405.82,
                 "unit": "kg_co2e"
               },
               "published_kg": 454.2,
@@ -2425,19 +2425,19 @@
               "status": "gap"
             },
             {
-              "diff_pct": -14.03,
-              "explanation": "Two structural differences pull in opposite directions. TrialDesign applies the 5 extra mammogram visits to all 1,962 patients, while the paper counts them for the 1,623 no-radiotherapy patients only (+21% visits; contract proposal Visit.patient_share). The engine's km-based travel gives ~4.3 kg per UK visit vs the paper's 5.8 kg, and the engine does not model hospital utilities (5,778 kg) or consumables (1,485 kg).",
+              "diff_pct": 4.62,
+              "explanation": "Two structural differences pull in opposite directions. TrialDesign applies the 5 extra mammogram visits to all 1,962 patients, while the paper counts them for the 1,623 no-radiotherapy patients only (+21% visits; contract proposal Visit.patient_share). The engine uses country-specific km-based direct plus WTT travel instead of the paper's 5.8 kg per UK visit, and the engine does not model hospital utilities (5,778 kg) or consumables (1,485 kg).",
               "label": "Patient assessments (incl. patient travel)",
               "module": "patient_assessments",
               "ours": {
-                "p10": 37104.12,
-                "p50": 52291.97,
-                "p90": 76267.52,
+                "p10": 44672.07,
+                "p50": 63632.86,
+                "p90": 93946.01,
                 "unit": "kg_co2e"
               },
               "published_kg": 60822.7,
               "published_within_range": true,
-              "status": "gap"
+              "status": "close"
             },
             {
               "diff_pct": -100.0,
@@ -2470,14 +2470,14 @@
               "status": "gap"
             },
             {
-              "diff_pct": 109.07,
+              "diff_pct": 144.13,
               "explanation": "The engine adds one close-out round trip per site for 64 sites [carbon.closeout_trips.v1]; the paper counts none. The archive (4 m2 x 10 years) is applied as reported; the paper's 2 m2 of sample storage is not modelled.",
               "label": "Close-out and archiving",
               "module": "closeout",
               "ours": {
-                "p10": 4489.9,
-                "p50": 7109.53,
-                "p90": 10644.92,
+                "p10": 5108.44,
+                "p50": 8301.9,
+                "p90": 12801.62,
                 "unit": "kg_co2e"
               },
               "published_kg": 3400.6,
@@ -2508,37 +2508,37 @@
           ],
           "title": "Engine check: TrialPilot engine + library on the rebuilt design",
           "total": {
-            "diff_pct": 7.23,
-            "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90; the closeness is partly offsetting errors (extra initiation and close-out trips and supplies vs missing hospital utilities, samples and laboratory).",
+            "diff_pct": 22.75,
+            "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90. Travel and freight include direct and well-to-tank once; the former direct-only +7% result is obsolete. Extra initiation and close-out trips, supplies and excess patient-visits partly offset missing hospital utilities, samples and laboratory. The paper-factor variant separates documented direct/WTT components; unidentified road freight is counted once with no additional WTT.",
             "label": "Total",
             "module": "total",
             "ours": {
-              "p10": 78130.58,
-              "p50": 95819.05,
-              "p90": 121790.45,
+              "p10": 87891.34,
+              "p50": 109685.91,
+              "p90": 142685.69,
               "unit": "kg_co2e"
             },
             "published_kg": 89360.2,
             "published_within_range": true,
-            "status": "close"
+            "status": "gap"
           },
           "unavailable_reason": null
         },
         {
           "available": true,
-          "description": "As above, but every engine emission factor the paper reports is replaced by the paper's value (rail 0.04441, flights, air and road freight, UK grid 0.273, dry ice 1.81, CTU per-FTE). Remaining differences are structural: what the engine models vs what the paper counted.",
+          "description": "As above, but every engine emission factor the paper reports is replaced by the paper's value (rail 0.04441, flights, air and road freight, UK grid 0.273, dry ice 1.81, CTU per-FTE). Identified combined factors are split into documented direct/WTT components so each is counted once. Road freight 0.19443 has an unidentified split and is used once without additional WTT. Factors absent from the paper retain the library values. Remaining differences include model structure and these unsourced activity assumptions.",
           "id": "engine_paper_factors",
           "line_changes": [],
           "modules": [
             {
-              "diff_pct": 1142.8,
+              "diff_pct": 1412.93,
               "explanation": "The engine counts one site-initiation round trip for each of the 64 sites [carbon.site_initiation_trips.v1]; PRIMETIME ran 66 virtual initiation sessions and 1 in person (appendix D p.6). The engine has no parameter for virtual initiation yet (request filed with A2).",
               "label": "Trial set-up",
               "module": "setup",
               "ours": {
-                "p10": 3302.01,
-                "p50": 5644.82,
-                "p90": 9259.67,
+                "p10": 3904.67,
+                "p50": 6871.74,
+                "p90": 11405.82,
                 "unit": "kg_co2e"
               },
               "published_kg": 454.2,
@@ -2621,19 +2621,19 @@
               "status": "gap"
             },
             {
-              "diff_pct": -13.23,
-              "explanation": "Two structural differences pull in opposite directions. TrialDesign applies the 5 extra mammogram visits to all 1,962 patients, while the paper counts them for the 1,623 no-radiotherapy patients only (+21% visits; contract proposal Visit.patient_share). The engine's km-based travel gives ~4.3 kg per UK visit vs the paper's 5.8 kg, and the engine does not model hospital utilities (5,778 kg) or consumables (1,485 kg).",
+              "diff_pct": 4.79,
+              "explanation": "Two structural differences pull in opposite directions. TrialDesign applies the 5 extra mammogram visits to all 1,962 patients, while the paper counts them for the 1,623 no-radiotherapy patients only (+21% visits; contract proposal Visit.patient_share). The engine uses country-specific km-based direct plus WTT travel instead of the paper's 5.8 kg per UK visit, and the engine does not model hospital utilities (5,778 kg) or consumables (1,485 kg).",
               "label": "Patient assessments (incl. patient travel)",
               "module": "patient_assessments",
               "ours": {
-                "p10": 37344.65,
-                "p50": 52773.15,
-                "p90": 77020.01,
+                "p10": 44724.03,
+                "p50": 63735.35,
+                "p90": 93997.52,
                 "unit": "kg_co2e"
               },
               "published_kg": 60822.7,
               "published_within_range": true,
-              "status": "gap"
+              "status": "close"
             },
             {
               "diff_pct": -100.0,
@@ -2666,14 +2666,14 @@
               "status": "gap"
             },
             {
-              "diff_pct": 109.07,
+              "diff_pct": 144.13,
               "explanation": "The engine adds one close-out round trip per site for 64 sites [carbon.closeout_trips.v1]; the paper counts none. The archive (4 m2 x 10 years) is applied as reported; the paper's 2 m2 of sample storage is not modelled.",
               "label": "Close-out and archiving",
               "module": "closeout",
               "ours": {
-                "p10": 4489.9,
-                "p50": 7109.53,
-                "p90": 10644.92,
+                "p10": 5108.44,
+                "p50": 8301.9,
+                "p90": 12801.62,
                 "unit": "kg_co2e"
               },
               "published_kg": 3400.6,
@@ -2697,26 +2697,26 @@
             }
           ],
           "notes": [
-            "parameter_set_version 7f29ad6c343d",
+            "parameter_set_version ba548743eb2c",
             "Module 'intervention' is excluded (drug manufacture is excluded in the published method); the 'drug_supply' extension estimates kits separately and is included in the totals.",
             "Duration is the design's planned duration (no enrollment forecast supplied): a point value.",
             "No drug kits modelled (drug type 'none', no patients or no dispensing visits)."
           ],
           "title": "Engine check with the paper's own factors",
           "total": {
-            "diff_pct": 7.67,
-            "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90; the closeness is partly offsetting errors (extra initiation and close-out trips and supplies vs missing hospital utilities, samples and laboratory).",
+            "diff_pct": 22.9,
+            "explanation": "Total excludes the drug_supply extension (not in the published method). Published total lies inside the engine's P10-P90. Travel and freight include direct and well-to-tank once; the former direct-only +7% result is obsolete. Extra initiation and close-out trips, supplies and excess patient-visits partly offset missing hospital utilities, samples and laboratory. The paper-factor variant separates documented direct/WTT components; unidentified road freight is counted once with no additional WTT.",
             "label": "Total",
             "module": "total",
             "ours": {
-              "p10": 78400.49,
-              "p50": 96216.28,
-              "p90": 122569.42,
+              "p10": 87987.98,
+              "p50": 109820.71,
+              "p90": 142871.23,
               "unit": "kg_co2e"
             },
             "published_kg": 89360.2,
             "published_within_range": true,
-            "status": "close"
+            "status": "gap"
           },
           "unavailable_reason": null
         }
@@ -2848,7 +2848,7 @@
       "source": "Griffiths J, Fox L, Williamson PR, on behalf of the Low Carbon Clinical Trials Group. Quantifying the carbon footprint of clinical trials: guidance development and case studies. BMJ Open 2024;14:e075755. doi:10.1136/bmjopen-2023-075755. Online supplemental appendix D (CC BY 4.0).",
       "summary": [
         "PRIMETIME: the paper's own arithmetic reproduces to -0.16% of the published 89,360 kg CO2e (89,221 kg); fixing the errors we documented moves it to 89,221 kg (-0.2%).",
-        "With TrialPilot's library factors the same activity data give 86,971 kg (P10-P90 71,699-112,015, -2.7% vs published), driven mostly by Patient travel (-2,422 kg); Jiffy bags 243.8 kg (paper factor) (+74 kg). The full TrialPilot engine on the rebuilt design gives 95,819 kg (P10-P90 78,131-121,790, +7%), published total inside the range, with module-level differences explained per module."
+        "With TrialPilot's library factors the same activity data give 86,971 kg (P10-P90 71,699-112,015, -2.7% vs published), driven mostly by Patient travel (-2,422 kg); Jiffy bags 243.8 kg (paper factor) (+74 kg). The full TrialPilot engine on the rebuilt design gives 109,686 kg (P10-P90 87,891-142,686, +23%), published total inside the range, with module-level differences explained per module."
       ],
       "title": "PRIMETIME: postoperative avoidance of radiotherapy (biomarker-selected very-low-risk breast cancer)"
     }

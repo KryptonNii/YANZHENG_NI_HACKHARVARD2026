@@ -3,6 +3,7 @@ parameter library (offline, cached ClinicalTrials.gov fixture). Black-box: only 
 
 from __future__ import annotations
 
+import json
 import math
 import statistics
 from collections.abc import Callable
@@ -38,7 +39,11 @@ def _import_design(api: Any) -> dict[str, Any]:
 
 def _compute(api: Any, design_id: str, levers: dict[str, Any] | None = None,
              seed: int = 11, draws: int = 2000) -> tuple[dict[str, Any], Any]:
-    r = api.post("/api/scenarios/compute", json={"design_id": design_id, "levers": levers or {},
+    design = api.get(f"/api/designs/{design_id}")
+    design.raise_for_status()
+    r = api.post("/api/scenarios/compute", json={"design_id": design_id,
+                                                 "design_version": int(design.headers["X-Design-Version"]),
+                                                 "levers": levers or {},
                                                  "seed": seed, "draws": draws})
     if r.status_code == 503:
         pytest.skip(f"engine not ready: {r.text[:200]}")
@@ -84,6 +89,11 @@ def test_every_metric_is_an_ordered_range_with_a_unit(api: Any) -> None:
     assert known, "no core metric could be computed for a real imported trial"
     for m in known:  # a real multi-site trial never costs/emits exactly nothing
         assert res[m]["p50"] > 0, m
+    assert res["forecast"]["draws_requested"] == res["forecast"]["draws_used"] == 2000
+    assert res["forecast"]["curve_draws_used"] == 500
+    assert res["supply"]["draws_requested"] == 500
+    assert 100 <= res["supply"]["draws_used"] <= 500
+    assert res["forecast"]["provenance"] and res["supply"]["provenance"]
 
 
 @pytest.mark.req("URS-005")
@@ -136,13 +146,14 @@ def test_levers_move_the_metrics_they_should(api: Any) -> None:
 
 
 @pytest.mark.req("URS-009")
-def test_compute_p50_latency_under_300ms(api: Any) -> None:
+def test_compute_p50_latency_under_300ms(api: Any, request: pytest.FixtureRequest) -> None:
     design = _import_design(api)
     times = []
     for seed in range(200, 207):  # distinct seeds: every call is a cache miss
         _, resp = _compute(api, design["id"], seed=seed, draws=2000)
         assert resp.headers["X-Cache"] == "miss"
         times.append(float(resp.headers["X-Compute-Ms"]))
+    request.node.user_properties.append(("cold_samples_ms", json.dumps(times)))
     assert statistics.median(times) < 300, f"median {statistics.median(times):.0f} ms: {times}"
 
 
@@ -150,6 +161,7 @@ def test_compute_p50_latency_under_300ms(api: Any) -> None:
 def test_submitted_scenario_is_immutable_and_author_cannot_approve(api: Any) -> None:
     design = _import_design(api)
     r = api.post("/api/scenarios", json={"name": "OQ scenario", "design_id": design["id"],
+                                         "design_version": 1,
                                          "levers": {"remote_monitoring_share": 0.5}},
                  headers=AUTHOR)
     if r.status_code == 503:

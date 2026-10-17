@@ -212,6 +212,7 @@ def compute_health(plan: OpsPlan, feed: Feed, params: OpsParams, upto: float, al
                 out[a.severity] += 1
         return out
 
+    weekly_enrolled = feed.weekly("enrolled", upto)
     sites_out = []
     by_country: dict[str, list] = defaultdict(list)
     for s in plan.sites:
@@ -259,7 +260,8 @@ def compute_health(plan: OpsPlan, feed: Feed, params: OpsParams, upto: float, al
                         drug_on_hand_kits=on_hand,
                         drug_need_kits=mr(need, "kits").model_dump() if need is not None else None,
                         status=("never_enrolled" if stalled and cum[i] == 0 else "stalled" if stalled
-                                else "active" if active else "not_started"))
+                                else "active" if active else "not_started"),
+                        weekly_enrollment=_weekly_enrollment(plan.site_band[i], weekly_enrolled[i]))
         sites_out.append(site_row)
         by_country[s.country].append((s, site_row))
 
@@ -276,6 +278,9 @@ def compute_health(plan: OpsPlan, feed: Feed, params: OpsParams, upto: float, al
             "stalled_sites": sum(r["status"] in ("stalled", "never_enrolled") for _, r in rows),
             "planned_to_date": {"p10": float(b[0]), "p50": float(b[1]), "p90": float(b[2]),
                                 "unit": "patients"},
+            # Same complete weeks as the sites: sum their feed counts and plan bands. No new draws.
+            "weekly_enrollment": _weekly_enrollment(
+                plan.site_band[idx].sum(axis=0), weekly_enrolled[idx].sum(axis=0)),
             "kpis": {
                 "enrollment": {"value": int(c_cum), "plan": {"p10": float(b[0]), "p50": float(b[1]),
                                                              "p90": float(b[2])},
@@ -398,6 +403,31 @@ def compute_health(plan: OpsPlan, feed: Feed, params: OpsParams, upto: float, al
                                 for pid, p in plan.forecast_params.items()},
         "baseline_scenario": plan.scenario_meta,
     }
+
+
+def _weekly_enrollment(band: np.ndarray, weekly_counts: np.ndarray) -> dict:
+    """Complete-week enrollment from the feed and an existing cumulative plan band.
+
+    ``band`` is ``[week_end, 3]`` (P10/P50/P90). For one site that is ``site_band[i]``. For a
+    country it is the sum of those site bands, the same sum already used for ``planned_to_date``.
+    ``actual_per_week`` counts ``patient_enrolled`` events in each complete week already in the feed
+    (week 0 is days [0, 7)). ``actual_cumulative`` is that count summed through the end of the week.
+    ``plan`` is the band at the same week end (index w+1). The open week is left out. A complete
+    week with no events stays 0; it is not dropped and not null. Before the first complete week
+    every list is empty.
+    """
+    n = min(len(weekly_counts), max(int(band.shape[0]) - 1, 0))
+    per_week: list[int] = []
+    cumulative: list[int] = []
+    plan_pts: list[dict[str, float]] = []
+    running = 0
+    for w in range(n):
+        running += int(weekly_counts[w])
+        per_week.append(int(weekly_counts[w]))
+        cumulative.append(running)
+        p10, p50, p90 = (float(x) for x in band[w + 1])
+        plan_pts.append({"p10": p10, "p50": p50, "p90": p90})
+    return {"unit": "patients", "actual_per_week": per_week, "actual_cumulative": cumulative, "plan": plan_pts}
 
 
 def _ui_kpis(study):

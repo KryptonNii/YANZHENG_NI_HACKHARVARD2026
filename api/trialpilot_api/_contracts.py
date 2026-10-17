@@ -10,6 +10,7 @@ from trialpilot_contracts.models import (  # explicit names for type checkers an
     AuditEntry,
     EffectEstimate,
     EventType,
+    ForecastView,
     Intervention,
     Levers,
     MetricRange,
@@ -22,6 +23,7 @@ from trialpilot_contracts.models import (  # explicit names for type checkers an
     ScenarioResult,
     Signature,
     Site,
+    SupplyView,
     TrialDesign,
     Visit,
 )
@@ -29,8 +31,8 @@ from trialpilot_contracts.models import (  # explicit names for type checkers an
 ROLES: tuple[str, ...] = ("author", "reviewer", "qa", "admin", "viewer")
 
 __all__ = [
-    "Alert", "ApprovalRequest", "AuditEntry", "EffectEstimate", "EventType", "Intervention",
-    "Levers", "MetricRange", "ModuleBreakdown", "OpsEvent", "Parameter", "Procedure",
-    "ProvenanceItem", "Role", "ROLES", "ScenarioResult", "Signature", "Site", "TrialDesign",
-    "Visit",
+    "Alert", "ApprovalRequest", "AuditEntry", "EffectEstimate", "EventType", "ForecastView",
+    "Intervention", "Levers", "MetricRange", "ModuleBreakdown", "OpsEvent", "Parameter",
+    "Procedure", "ProvenanceItem", "Role", "ROLES", "ScenarioResult", "Signature", "Site",
+    "SupplyView", "TrialDesign", "Visit",
 ]
