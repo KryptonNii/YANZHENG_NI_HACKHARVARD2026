@@ -58,7 +58,13 @@ test.beforeEach(async ({ page }) => {
 test("hero flow: import, change levers, inspect provenance, save, submit, self-approval blocked, reviewer and QA approve", async ({ page }, info) => {
   test.setTimeout(180_000);
   await importDemoTrial(page);
-  await expect(page.getByTestId("missing-assumed")).toContainText(/visits/i);
+  const missing = page.getByTestId("missing-assumed");
+  // Specs share one database. An earlier file may already have applied the cached protocol,
+  // which removes the visit-schedule assumption this flow has to show.
+  if (!(await missing.textContent())?.match(/visits/i)) {
+    await page.getByTestId("reimport-registry").click();
+  }
+  await expect(missing).toContainText(/visits/i);
   await shot(page, info, "01-import");
 
   await page.getByTestId("open-simulator").click();
