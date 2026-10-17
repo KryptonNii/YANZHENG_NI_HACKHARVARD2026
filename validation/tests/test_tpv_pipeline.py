@@ -29,6 +29,20 @@ def test_protocol_lists_tests_per_requirement_and_gaps(fx: Ctx) -> None:
     assert protocol.generate(fx)["record_id"] == meta["record_id"]
 
 
+@pytest.mark.req("URS-026", "URS-027")
+def test_suite_filters_apply_to_both_collection_and_execution(fx: Ctx) -> None:
+    excluded = fx.repo / "demo" / "tests" / "test_excluded.py"
+    excluded.write_text("import pytest\n@pytest.mark.req('URS-003')\n"
+                        "def test_must_run_in_separate_suite():\n    assert False\n", encoding="utf-8")
+    fx.config["suites"][0]["pytest_args"] = ["--ignore=tests/test_excluded.py"]
+    meta = protocol.generate(fx)
+    assert meta["gaps"] == ["URS-003"]
+    assert all("test_excluded" not in tid for ids in meta["planned"].values() for tid in ids)
+    result = execute.run_all(fx, fx.out / "filter-check", e2e=False, only=["demo"])
+    assert result["counts"]["total"] == 4 and result["counts"]["passed"] == 4
+    assert result["collection_errors"] == []
+
+
 @pytest.mark.req("URS-024")
 def test_execute_refuses_unapproved_protocol(fx: Ctx, capsys: pytest.CaptureFixture[str],
                                              monkeypatch: pytest.MonkeyPatch) -> None:
@@ -141,7 +155,7 @@ def test_trace_without_execution_shows_not_run(fx: Ctx) -> None:
 @pytest.mark.req("URS-032")
 def test_report_states_real_counts_and_waits_for_qa(fx: Ctx,
                                                     monkeypatch: pytest.MonkeyPatch) -> None:
-    from trialpilot_api.compliance import workflow
+    from trialpilot_api.compliance import ComplianceError, workflow
 
     protocol.generate(fx)
     approve_current_protocol(fx)
@@ -154,8 +168,9 @@ def test_report_states_real_counts_and_waits_for_qa(fx: Ctx,
     assert report.status(fx)["status"] == "not submitted"
     sub = report.submit(fx, "alex.author")
     assert report.status(fx)["status"] == "awaiting QA approval"
-    with pytest.raises(Exception):  # the author cannot approve their own report
+    with pytest.raises(ComplianceError) as denied:
         workflow.sign_request(sub["approval_id"], "alex.author", PINS["alex.author"], "approved")
+    assert denied.value.code == "self_approval_forbidden"
     workflow.sign_request(sub["approval_id"], "sam.qa", PINS["sam.qa"], "approved")
     st = report.status(fx)
     assert st["status"] == "approved" and st["qa_signature"]["signer"] == "sam.qa"

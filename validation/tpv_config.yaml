@@ -9,7 +9,10 @@ change_record_prefix: CR-TP
 suites:
   - {name: contracts, project: contracts, tests: tests, runner: uv}
   - {name: engine, project: engine, tests: tests, runner: uv}
-  - {name: api, project: api, tests: tests, runner: uv}
+  # A6's standalone ops conftest uses the same module name as A5's. Separate pytest
+  # processes preserve each suite's fixtures and still execute every API test.
+  - {name: api, project: api, tests: tests, runner: uv, pytest_args: ["--ignore=tests/ops"]}
+  - {name: api-ops, project: api, tests: tests/ops, runner: uv}
   - {name: validation, project: validation, tests: tests, runner: uv}
   - {name: science, project: science, tests: tests, runner: uv}
 

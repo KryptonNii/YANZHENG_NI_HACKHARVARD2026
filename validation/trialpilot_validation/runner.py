@@ -51,6 +51,7 @@ def suite_command(ctx: Ctx, suite: dict[str, Any], json_path: Path, mode: str,
     args = [suite.get("tests", "tests"), "-p", "trialpilot_validation.pytest_plugin",
             f"--tpv-prefix={suite['project']}/", "-p", "no:cacheprovider", "-q",
             "-o", "console_output_style=classic"]
+    args += [str(arg) for arg in suite.get("pytest_args", [])]
     if mode == "collect":
         args += ["--collect-only", f"--tpv-collect={json_path}"]
     else:
