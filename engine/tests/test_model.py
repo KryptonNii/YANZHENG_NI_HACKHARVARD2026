@@ -8,7 +8,6 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 
-import numpy as np
 import pytest
 from trialpilot_contracts import Levers, MetricRange, Parameter, ScenarioResult, TrialDesign
 
@@ -116,8 +115,9 @@ def test_missing_parameter_is_unknown_not_zero(
 
 def test_empty_library_gives_unknown_totals(tiny: Callable[..., TrialDesign]) -> None:
     r = compute_scenario(tiny(), Levers(), {}, draws=10)
-    assert np.isnan(r.cost_usd.p50) and np.isnan(r.co2e_kg.p50)
-    assert json.loads(r.model_dump_json())["cost_usd"]["p50"] is None  # NaN serialises as null
+    for unknown in (r.cost_usd, r.co2e_kg):  # contract v2: unknown = all three percentiles None
+        assert (unknown.p10, unknown.p50, unknown.p90) == (None, None, None)
+    assert json.loads(r.model_dump_json())["cost_usd"]["p50"] is None
     assert len([w for w in r.warnings if "missing parameter" in w]) > 20
 
 
@@ -177,6 +177,31 @@ def test_uses_a3_forecast_and_supply(tiny: Callable[..., TrialDesign], unit_para
     tm = next(m for m in r.modules if m.module == "trial_management")
     assert tm.cost_usd.p50 == pytest.approx(2 * 16 / 12 * 120000, rel=0.02)
     assert not any("planned duration" in w for w in r.warnings)
+
+
+def test_unknown_a3_ranges_give_unknown_terms_not_errors(
+    tiny: Callable[..., TrialDesign], unit_params: dict[str, Parameter]
+) -> None:
+    def unknown(unit: str) -> MetricRange:
+        return MetricRange.model_validate({"p10": None, "p50": None, "p90": None, "unit": unit})
+
+    supply = FakeSupply(kits_needed=unknown("kits"), kits_produced=unknown("kits"), kits_wasted=unknown("kits"),
+                        waste_share=unknown("percent"), shipments=unknown("kits"), stockout_probability=0.0)
+    r = compute_scenario(tiny(), Levers(), unit_params, draws=10,
+                         forecast=FakeForecast(unknown("months")), supply=supply)
+    assert r.duration_months.p50 is None and r.drug_waste_share.p50 is None
+    for name in ("drug_supply", "trial_management"):  # kit flow / duration unknown → module unknown
+        m = next(m for m in r.modules if m.module == name)
+        assert m.cost_usd.p50 is None and m.co2e_kg.p50 is None, name
+    drug = next(m for m in r.modules if m.module == "drug_supply")
+    assert drug.provenance[0].inputs["kits_produced_p50"] == "unknown"
+    assert any("forecast's duration is unknown" in w for w in r.warnings)
+    assert any("unknown kits_produced, waste_share, shipments" in w for w in r.warnings)
+    # terms that need neither stay known: totals are understated (warned), not zero and not all unknown
+    assert r.patient_travel_hours.p50 == pytest.approx(80.0)
+    assert r.cost_usd.p50 is not None and r.co2e_kg.p50 is not None
+    body = json.loads(r.model_dump_json())  # provenance inputs stay JSON numbers or strings
+    assert body["duration_months"]["p50"] is None
 
 
 def test_every_requested_parameter_is_in_the_catalog(tiny: Callable[..., TrialDesign]) -> None:

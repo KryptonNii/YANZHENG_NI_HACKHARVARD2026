@@ -40,9 +40,9 @@ def module_keys(*modules: str) -> set[str]:
 
 def test_remote_monitoring_half(tiny: Callable[..., TrialDesign], unit_params: dict[str, Parameter]) -> None:
     r = compute_scenario(tiny(), Levers(remote_monitoring_share=0.5), unit_params, draws=10)
-    # 6 monitoring visits → 3 on site (40 kg each) + 3 remote; kickoff 300 kg unchanged
+    # 6 monitoring visits → 3 on site (40 kg + 10 kg WTT each) + 3 remote; kickoff 300 + 60 kg WTT unchanged
     # cost: 3 × 1900 + 3 × 1000 × 0.5 + staff (3 × 4 h + 3 × 2 h) × 60 + kickoff 3000
-    assert module(r, "meetings_travel") == pytest.approx((5700 + 1500 + 18 * 60 + 3000, 3 * 40 + 300))
+    assert module(r, "meetings_travel") == pytest.approx((5700 + 1500 + 18 * 60 + 3000, 3 * (40 + 10) + 360))
     # staff: visits 28.333 + support 12 + remote review 6 + queries 10
     assert r.site_staff_hours.p50 == pytest.approx(1700 / 60 + 12 + 6 + 10)
 
@@ -54,7 +54,7 @@ def test_full_remote_monitoring_has_no_onsite_trips(
     prov = next(m for m in r.modules if m.module == "meetings_travel").provenance
     ids = {p.formula_id for p in prov}
     assert "carbon.monitoring_trips.v1" not in ids and "cost.monitoring_onsite.v1" not in ids
-    assert module(r, "meetings_travel")[1] == pytest.approx(300.0)  # only the kickoff meeting
+    assert module(r, "meetings_travel")[1] == pytest.approx(300.0 + 60.0)  # only the kickoff meeting (+ WTT)
 
 
 def test_home_visit(tiny: Callable[..., TrialDesign], unit_params: dict[str, Parameter]) -> None:
@@ -62,9 +62,10 @@ def test_home_visit(tiny: Callable[..., TrialDesign], unit_params: dict[str, Par
     # patient: travel 10 × 2 × 20 ÷ 30 = 13.333 h; visits 10 × (2 × 2 h + 1 × 1 h) = 50 h
     assert r.patient_travel_hours.p50 == pytest.approx(10 * 2 * 20 / 30 + 50)
     # carbon: patient km 10 × 2 × 20 × 0.1375 = 55; nurse 10 × 1 × 40 km × 0.2 = 80
+    #   WTT: patient 400 km × 0.0325 = 13; nurse 400 km × 0.05 = 20
     # staff minutes V2: 30 + 0.5 × 25 = 42.5 → (65 + 42.5 + 50) × 10 ÷ 60 = 26.25 h
     # cost: reimbursement 10 × 2 × 50 + nursing 10 × 300 + staff 26.25 × 60
-    assert module(r, "patient_assessments") == pytest.approx((1000 + 3000 + 26.25 * 60, 55 + 80))
+    assert module(r, "patient_assessments") == pytest.approx((1000 + 3000 + 26.25 * 60, 55 + 13 + 80 + 20))
     # an honest trade-off: this lever costs more than it saves
     base = compute_scenario(tiny(), Levers(), unit_params, draws=10)
     assert r.cost_usd.p50 > base.cost_usd.p50
@@ -78,7 +79,7 @@ def test_telehealth_visit(tiny: Callable[..., TrialDesign], unit_params: dict[st
     # staff V3: 30 + 0.8 × 20 = 46 min → (65 + 55 + 46) × 10 ÷ 60
     # cost: 10 × 2 × 50 + 10 × 1 × 100 + staff
     staff_visits = (65 + 55 + 46) * 10 / 60
-    assert module(r, "patient_assessments") == pytest.approx((1000 + 1000 + staff_visits * 60, 55.0))
+    assert module(r, "patient_assessments") == pytest.approx((1000 + 1000 + staff_visits * 60, 55.0 + 13.0))
 
 
 def test_telehealth_visit_with_samples_warns(
@@ -106,8 +107,9 @@ def test_local_labs(tiny: Callable[..., TrialDesign], unit_params: dict[str, Par
 
 def test_on_demand_supply(tiny: Callable[..., TrialDesign], unit_params: dict[str, Parameter]) -> None:
     r = compute_scenario(tiny(), Levers(drug_supply_strategy="on_demand"), unit_params, draws=10)
-    # waste 0.2 → made 20 ÷ 0.8 = 25: carbon 250 + 25 × 2 ÷ 1000 × 500 × 0.6 = 15; cost 25000 + 6 × 150
-    assert module(r, "drug_supply") == pytest.approx((25900.0, 265.0))
+    # waste 0.2 → made 20 ÷ 0.8 = 25: carbon 250 + 25 × 2 ÷ 1000 × 500 × 0.6 = 15
+    #   + WTT 25 tonne-km × 0.15 = 3.75; cost 25000 + 6 × 150
+    assert module(r, "drug_supply") == pytest.approx((25900.0, 268.75))
     assert r.drug_waste_share.p50 == pytest.approx(20.0)
 
 
@@ -124,9 +126,9 @@ def test_excluded_sites(tiny: Callable[..., TrialDesign], unit_params: dict[str,
     two_sites = tiny(sites=[Site(id="s1", name="A", country="Spain"), Site(id="s2", name="B", country="Spain")])
     both = compute_scenario(two_sites, Levers(), unit_params, draws=10)
     one = compute_scenario(two_sites, Levers(excluded_site_ids=["s2"]), unit_params, draws=10)
-    # monitoring trips halve (12 → 6), patients stay 10 (redistributed)
-    assert module(both, "meetings_travel")[1] == pytest.approx(12 * 40 + 2 * 2 * 1000 * 0.15)
-    assert module(one, "meetings_travel")[1] == pytest.approx(6 * 40 + 2 * 1000 * 0.15)
+    # monitoring trips halve (12 → 6), patients stay 10 (redistributed); + WTT: car 10 kg/trip, flight 0.03/km
+    assert module(both, "meetings_travel")[1] == pytest.approx(12 * (40 + 10) + 2 * 2 * 1000 * (0.15 + 0.03))
+    assert module(one, "meetings_travel")[1] == pytest.approx(6 * (40 + 10) + 2 * 1000 * (0.15 + 0.03))
     assert one.patient_travel_hours.p50 == pytest.approx(both.patient_travel_hours.p50)
     assert module(one, "setup")[0] == pytest.approx(module(both, "setup")[0] / 2)
 

@@ -62,6 +62,11 @@ UNIT_VALUES: dict[str, float] = {
     "supply.shipments_per_site.on_demand": 6, "cost.drug.kit.biologic": 1000, "cost.drug.kit.default": 200,
     "ef.drug_kit.unit": 10, "supply.kit_shipping_weight_kg": 2, "dist.drug.depot_to_site_km": 500,
     "cost.drug.shipment": 150,
+    # well-to-tank twins of the travel and freight factors
+    "ef.wtt.travel.car.average_km": 0.05, "ef.wtt.travel.bus.passenger_km": 0.02,
+    "ef.wtt.travel.rail.passenger_km": 0.01, "ef.wtt.travel.flight.domestic.passenger_km": 0.05,
+    "ef.wtt.travel.flight.short_haul.passenger_km": 0.03, "ef.wtt.travel.flight.long_haul.passenger_km": 0.04,
+    "ef.wtt.freight.van.tonne_km": 0.15, "ef.wtt.freight.air.long_haul.tonne_km": 0.5,
     # design fall-backs
     "assume.design.visits_per_patient": 4, "assume.design.patients_per_site": 10,
 }

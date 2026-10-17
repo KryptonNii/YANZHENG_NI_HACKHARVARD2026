@@ -6,6 +6,7 @@ from trialpilot_contracts import MetricRange
 
 from trialpilot_engine.uncertainty import (
     draws_from_range,
+    range_known,
     to_range,
     triangular,
     uniform_draws,
@@ -36,11 +37,12 @@ def test_triangular_point_value_is_constant() -> None:
     assert np.all(x == 4.0)
 
 
-def test_to_range_is_ordered_and_nan_for_unknown() -> None:
+def test_to_range_is_ordered_and_none_for_unknown() -> None:
     r = to_range(uniform_draws(3, "y", 1000), "usd")
+    assert r.p10 is not None and r.p50 is not None and r.p90 is not None
     assert r.p10 <= r.p50 <= r.p90
     unknown = to_range(np.array([1.0, np.nan]), "usd")
-    assert np.isnan(unknown.p50)
+    assert (unknown.p10, unknown.p50, unknown.p90) == (None, None, None)
 
 
 def test_draws_from_range_reproduces_the_quantiles() -> None:
@@ -48,6 +50,17 @@ def test_draws_from_range_reproduces_the_quantiles() -> None:
     x = draws_from_range(r, 7, "a3.forecast", 100_000)
     p10, p50, p90 = np.percentile(x, [10, 50, 90])
     assert (p10, p50, p90) == pytest.approx((20.0, 24.0, 31.0), rel=0.01)
+
+
+def test_draws_from_range_of_an_unknown_range_is_unknown_not_zero() -> None:
+    unknown = MetricRange(p10=None, p50=None, p90=None, unit="months")
+    x = draws_from_range(unknown, 7, "a3.forecast", 10)
+    assert x.shape == (10,) and np.all(np.isnan(x))  # NaN = unknown downstream; not clipped to the 0 floor
+    # a range that bypassed validation with a NaN percentile is unknown as well, not a comparison error
+    nan_inside = MetricRange.model_construct(p10=1.0, p50=float("nan"), p90=3.0, unit="kits")
+    assert np.all(np.isnan(draws_from_range(nan_inside, 7, "k", 4)))
+    assert not range_known(unknown) and not range_known(nan_inside)
+    assert range_known(MetricRange(p10=1, p50=2, p90=3, unit="kits"))
 
 
 def test_draws_from_range_rejects_unordered_ranges() -> None:

@@ -1,4 +1,8 @@
-"""Brief target: 2,000 draws for a 120-site, 900-patient, 12-visit design in < 300 ms on a laptop.
+"""A2 only: `compute_scenario` with no forecast and no supply.
+
+2,000 draws, 120 sites, 900 patients, 12 visits, under 300 ms. This does not time A3's enrollment
+forecast or drug-supply simulation, and it does not time the API. Those run before `compute_scenario`
+on a request, so a pass here is not a pass for the whole route.
 Skipped when TP_SKIP_PERF=1 (slow CI machines)."""
 
 from __future__ import annotations

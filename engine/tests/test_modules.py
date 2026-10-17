@@ -55,23 +55,25 @@ def test_site_staff_hours(baseline: ScenarioResult) -> None:
 
 
 def test_patient_assessments(baseline: ScenarioResult) -> None:
-    # carbon: km = 10 × 3 × 20 = 600; per km = 0.5 × 0.2 + 0.5 × (0.5 × 0.05 + 0.5 × 0.1) = 0.1375
+    # carbon: km = 10 × 3 × 20 = 600; per km = 0.5 × 0.2 + 0.5 × (0.5 × 0.05 + 0.5 × 0.1) = 0.1375 → 82.5
+    #   WTT per km = 0.5 × 0.05 + 0.5 × (0.5 × 0.01 + 0.5 × 0.02) = 0.0325 → 600 × 0.0325 = 19.5
     # cost: reimbursement 10 × 3 × 50 = 1500 + site staff 28.333 h × 60 = 1700
-    assert module(baseline, "patient_assessments") == pytest.approx((3200.0, 82.5))
+    assert module(baseline, "patient_assessments") == pytest.approx((3200.0, 82.5 + 19.5))
 
 
 def test_meetings_travel(baseline: ScenarioResult) -> None:
     # 6 on-site trips; global round trip 200 km, one way 100 < 300 threshold → car: 200 × 0.2 = 40 kg/trip
     # kickoff: 1 site × 2 attendees × 1000 km; one way 500 > 300 → flown, ≤ 3700 → short haul 0.15 → 300 kg
+    # WTT: car 200 × 0.05 = 10 kg/trip; kickoff 2 × 1000 × 0.03 = 60 kg
     # cost: 6 × (1000 × 1.5 + 400) = 11400; site staff 24 h × 60 = 1440; kickoff 2 × 1500 = 3000
-    assert module(baseline, "meetings_travel") == pytest.approx((15840.0, 6 * 40 + 300))
+    assert module(baseline, "meetings_travel") == pytest.approx((15840.0, 6 * (40 + 10) + 300 + 60))
 
 
 def test_setup_and_closeout(baseline: ScenarioResult) -> None:
-    # setup: initiation trip 40 kg + 100 kg per site; cost 20000 per site
-    # closeout: close-out trip 40 kg + archive 1 × 2 boxes × 25 years × 0.5 = 25 kg; cost 5000 per site
-    assert module(baseline, "setup") == pytest.approx((20000.0, 140.0))
-    assert module(baseline, "closeout") == pytest.approx((5000.0, 65.0))
+    # setup: initiation trip 40 kg + WTT 200 × 0.05 = 10 kg + 100 kg per site; cost 20000 per site
+    # closeout: close-out trip 40 + 10 kg + archive 1 × 2 boxes × 25 years × 0.5 = 25 kg; cost 5000 per site
+    assert module(baseline, "setup") == pytest.approx((20000.0, 150.0))
+    assert module(baseline, "closeout") == pytest.approx((5000.0, 75.0))
 
 
 def test_trial_management(baseline: ScenarioResult) -> None:
@@ -92,11 +94,12 @@ def test_supplies_equipment(baseline: ScenarioResult) -> None:
 def test_samples(baseline: ScenarioResult) -> None:
     # shipments (1 sample each): frozen 10, ambient 10
     # freight: frozen 10 × 5 kg ÷ 1000 × 500 km × 2.0 (air) = 50; ambient 10 × 2 ÷ 1000 × 500 × 0.6 (van) = 6
+    #   WTT: frozen 25 tonne-km × 0.5 = 12.5; ambient 10 tonne-km × 0.15 = 1.5
     # dry ice: 10 frozen × 4 kg × 0.5 = 20
     # −80 freezer: 1 site × 0.1 share × 10 kWh/day × 12 × 30.4375 days × 0.2 = 73.05
     # cost: courier 10 × 200 + 10 × 50 = 2500
     freezer = 1 * 0.1 * 10 * 12 * DAYS_PER_MONTH * 0.2
-    assert module(baseline, "samples") == pytest.approx((2500.0, 50 + 6 + 20 + freezer))
+    assert module(baseline, "samples") == pytest.approx((2500.0, 50 + 12.5 + 6 + 1.5 + 20 + freezer))
 
 
 def test_laboratory(baseline: ScenarioResult) -> None:
@@ -106,9 +109,9 @@ def test_laboratory(baseline: ScenarioResult) -> None:
 
 def test_drug_supply(baseline: ScenarioResult) -> None:
     # dispensing visits V1, V2 → kits needed 10 × 2 × 1 = 20; upfront waste 0.5 → made 40
-    # carbon: 40 × 10 + shipping 40 × 2 kg ÷ 1000 × 500 km × 0.6 = 24
+    # carbon: 40 × 10 + shipping 40 × 2 kg ÷ 1000 × 500 km × 0.6 = 24 + WTT 40 tonne-km × 0.15 = 6
     # cost: 40 × 1000 (biologic) + 1 site × 2 shipments × 150
-    assert module(baseline, "drug_supply") == pytest.approx((40300.0, 424.0))
+    assert module(baseline, "drug_supply") == pytest.approx((40300.0, 430.0))
     assert baseline.drug_waste_share.p50 == pytest.approx(50.0)
 
 
@@ -130,7 +133,8 @@ def test_country_specific_parameters_and_domestic_flights(
     # GB patient round trip 30 km: travel 10 × 3 × 30 ÷ 30 = 30 h + 60 h at site
     assert r.patient_travel_hours.p50 == pytest.approx(90.0)
     # GB CRA round trip 1000 km, one way 500 > 300 → domestic flight 1000 × 0.25 = 250 kg/trip × 6 + kickoff 300
-    assert module(r, "meetings_travel")[1] == pytest.approx(6 * 250 + 300)
+    # WTT: domestic flight 1000 × 0.05 = 50 kg/trip; kickoff 60
+    assert module(r, "meetings_travel")[1] == pytest.approx(6 * (250 + 50) + 300 + 60)
     prov = next(m for m in r.modules if m.module == "meetings_travel").provenance
     trips = next(p for p in prov if p.formula_id == "carbon.monitoring_trips.v1")
     assert "dist.monitoring.roundtrip_km.gb" in trips.parameter_ids
@@ -154,8 +158,8 @@ def test_optional_procedure_factors(tiny: Callable[..., TrialDesign], unit_param
 
     params = {**unit_params, "ef.procedure.blood_draw": make_param("ef.procedure.blood_draw", 3, 3, 3)}
     r = compute_scenario(tiny(), Levers(), params, draws=5)
-    # 10 patients × 2 blood draws × 3 kg = 60 kg on top of 82.5 kg patient travel
-    assert module(r, "patient_assessments")[1] == pytest.approx(82.5 + 60)
+    # 10 patients × 2 blood draws × 3 kg = 60 kg on top of 82.5 + 19.5 (WTT) kg patient travel
+    assert module(r, "patient_assessments")[1] == pytest.approx(82.5 + 19.5 + 60)
     prov = next(m for m in r.modules if m.module == "patient_assessments").provenance
     item = next(p for p in prov if p.formula_id == "carbon.procedures.v1")
     assert any("drug_dispensing" in a and "not modelled" in a for a in item.assumptions)

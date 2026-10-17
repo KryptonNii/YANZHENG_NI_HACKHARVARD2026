@@ -33,6 +33,7 @@ from .uncertainty import (
     FloatArray,
     Unit,
     draws_from_range,
+    range_known,
     to_range,
     variance_shares,
 )
@@ -106,11 +107,35 @@ def _total(terms: list[Term], n: int) -> FloatArray:
 
 
 def _missing_warning(t: Term) -> str:
-    what = ", ".join(f"`{m}`" for m in t.trace.missing) or "an invalid value"
+    what = (
+        "missing parameter(s) " + ", ".join(f"`{m}`" for m in t.trace.missing)
+        if t.trace.missing
+        else "an unknown input (unknown A3 forecast/supply range or an invalid value)"
+    )
     return (
         f"{METRIC_LABEL[t.metric]} excludes '{t.description}' [{t.formula_id}, module {t.module}]: "
-        f"missing parameter(s) {what}. Reported as unknown, not zero; the total is understated."
+        f"{what}. Reported as unknown, not zero; the total is understated."
     )
+
+
+def _unknown_a3_warnings(
+    forecast: ForecastLike | None, supply: SupplyLike | None, duration: FloatArray, kits_modelled: bool
+) -> list[str]:
+    """Name A3 inputs whose range is unknown (contract v2: percentiles None) instead of failing."""
+    out: list[str] = []
+    if forecast is not None and not np.all(np.isfinite(duration)):
+        out.append(
+            "The enrollment forecast's duration is unknown (P10/P50/P90 null): duration and every "
+            "duration-dependent term are unknown, not zero."
+        )
+    if supply is not None and kits_modelled:
+        unknown = [k for k in ("kits_produced", "waste_share", "shipments") if not range_known(getattr(supply, k))]
+        if unknown:
+            out.append(
+                f"The drug supply simulation returned unknown {', '.join(unknown)} (P10/P50/P90 null): "
+                "drug_supply terms that use them are unknown, not zero."
+            )
+    return out
 
 
 def _evaluate(
@@ -153,7 +178,11 @@ def _evaluate(
     flow = drug_kits(ctx)
     metrics["drug_waste_share"] = flow.waste_share * 100.0 if flow is not None else np.zeros(draws)
 
-    warnings = [*act.warnings, *(_missing_warning(t) for t in terms if not t.known)]
+    warnings = [
+        *act.warnings,
+        *_unknown_a3_warnings(forecast, supply, duration, flow is not None),
+        *(_missing_warning(t) for t in terms if not t.known),
+    ]
     warnings.append(
         "Module 'intervention' is excluded (drug manufacture is excluded in the published method); "
         "the 'drug_supply' extension estimates kits separately and is included in the totals."

@@ -21,7 +21,7 @@ import numpy as np
 
 from ._contracts import Levers, MetricRange, Parameter, Procedure, Site, TrialDesign, Visit
 from .provenance import Inputs, ParamStore, slug
-from .uncertainty import FloatArray, draws_from_range
+from .uncertainty import FloatArray, draws_from_range, range_known
 
 VisitMode = Literal["site", "home", "remote"]
 TempClass = Literal["ambient", "refrigerated", "frozen"]
@@ -148,6 +148,12 @@ class Context:
 
     def zeros(self) -> FloatArray:
         return np.zeros(self.ps.n)
+
+    @property
+    def duration_p50(self) -> float | str:
+        """Median duration for provenance inputs; "unknown" when A3's forecast range is unknown."""
+        d = self.duration_months
+        return float(np.median(d)) if np.all(np.isfinite(d)) else "unknown"
 
 
 def temp_class(p: Procedure) -> TempClass:
@@ -373,7 +379,7 @@ def monitoring_visits(ctx: Context) -> tuple[dict[str, FloatArray], dict[str, Fl
     inputs: Inputs = {
         "active_sites": act.sites,
         "remote_monitoring_share": act.remote_monitoring_share,
-        "duration_months_p50": float(np.median(ctx.duration_months)),
+        "duration_months_p50": ctx.duration_p50,
     }
     return onsite, remote, inputs
 
@@ -405,6 +411,10 @@ class KitFlow:
     source: str
 
 
+def _p50_input(r: MetricRange) -> float | str:
+    return r.p50 if range_known(r) and r.p50 is not None else "unknown"
+
+
 def drug_kits(ctx: Context) -> KitFlow | None:
     """Kits made, waste share and depot→site shipments; None when the trial has no drug."""
     act, ps = ctx.act, ctx.ps
@@ -417,10 +427,10 @@ def drug_kits(ctx: Context) -> KitFlow | None:
         if s.waste_share.unit == "percent":
             waste = waste / 100.0
         shipments = draws_from_range(s.shipments, ctx.seed, "a3.supply", ctx.n)
-        inputs: Inputs = {
-            "kits_produced_p50": s.kits_produced.p50,
-            "waste_share_p50": s.waste_share.p50,
-            "shipments_p50": s.shipments.p50,
+        inputs: Inputs = {  # an unknown A3 range gives NaN draws above, so these terms are unknown too
+            "kits_produced_p50": _p50_input(s.kits_produced),
+            "waste_share_p50": _p50_input(s.waste_share),
+            "shipments_p50": _p50_input(s.shipments),
         }
         return KitFlow(made, waste, shipments, inputs, "A3 drug supply simulation")
     needed = act.patients * act.dispensing_visits * ps.get("supply.kits_per_dispensing_visit")

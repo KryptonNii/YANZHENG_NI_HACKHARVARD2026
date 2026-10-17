@@ -6,8 +6,6 @@ Site staff time is priced at `cost.site_staff.hour` in the module where the hour
 
 from __future__ import annotations
 
-import numpy as np
-
 from . import workload
 from .levers import MONTHS_PER_YEAR, Context, drug_kits, monitoring_visits, sample_shipments
 from .provenance import Inputs, Term, Trace
@@ -103,7 +101,7 @@ def _trial_management(ctx: Context) -> list[Term]:
                * ps.get("cost.trial_management.per_fte_year"))
     return [Term("trial_management", "cost_usd", "cost.trial_management.v1",
                  "coordinating-unit FTE × trial years × cost per FTE-year",
-                 usd, {"duration_months_p50": float(np.median(ctx.duration_months))}, tr)]
+                 usd, {"duration_months_p50": ctx.duration_p50}, tr)]
 
 
 def _data_collection(ctx: Context) -> list[Term]:

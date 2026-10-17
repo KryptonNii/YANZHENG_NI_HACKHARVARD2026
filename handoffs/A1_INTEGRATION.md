@@ -138,4 +138,6 @@ It is not a finished submission. Web typecheck fails, Docker was not run, there 
 
 ## Commit
 
-Filled in after the commit that adds these integration files.
+`22f052f7dc4cffbf5f32c8524cd68f3fe0a506ee` on `dev`: `A1: record id rules and point the build at the real entries`.
+
+That commit contains the contract note, the id-convention test, the Makefile, CI, compose comment, licence generator, `THIRD_PARTY.md`, and these handoffs. This paragraph was added in the follow-up commit so the hash above is the integration commit, not this sentence.

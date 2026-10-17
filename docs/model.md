@@ -7,8 +7,9 @@ Code: `engine/trialpilot_engine/` (owner A2). Forecasting and drug-supply simula
 
 Carbon follows the Low Carbon Clinical Trials Group method (Griffiths, Fox, Williamson, *BMJ Open*
 2024, https://bmjopen.bmj.com/content/14/1/e075755): footprint = Σ activity data × emission factor,
-counting only trial-specific activity beyond routine care, reported in the paper's modules. Cost and
-site staff time reuse the same activity data with cost and time parameters.
+counting only trial-specific activity beyond routine care, reported in the paper's modules. As in the
+method, every travel and freight factor also carries its well-to-tank (WTT) emissions (§5, *Well-to-tank*).
+Cost and site staff time reuse the same activity data with cost and time parameters.
 
 **The engine contains no real-world numbers.** Every value comes from the parameter library
 (`data/params/*.yaml`, sources in [sources.md](sources.md)); the code holds formulas, calendar
@@ -63,13 +64,18 @@ own `result_p10/result_p50/result_p90/result_unit`), the `parameter_ids` it read
   (0.1, P10), (0.5, P50), (0.9, P90), outer segments extended linearly to quantiles 0 and 1, clipped at
   0. Kits produced, waste share and shipments share one uniform stream (perfectly rank-correlated).
   If the forecast object also carries a `duration_draws` array of length N, it is used directly.
+  An **unknown** A3 range (P10/P50/P90 `null`, contract v2) gives NaN draws, never zeros: duration (or
+  kits made / waste / shipments) and every term that uses it are unknown and excluded, and a warning names
+  the A3 output. An unordered known range (P10 > P50 or P50 > P90) raises `ValueError`.
 
 ## 3. Missing inputs — unknown is not zero
 
 - A parameter missing from the library yields NaN draws. Any term touching it is **unknown**: it is
   excluded from totals, its provenance says `result: unknown …` and names the missing id, and
   `ScenarioResult.warnings` says which metric excludes which term and that the total is understated.
-- A total with terms but none known is NaN (serialised as JSON `null`): shown as "unknown", never 0.
+- A total with terms but none known is **unknown**: its `MetricRange` has `p10 = p50 = p90 = None`
+  (JSON `null`, contract v2), shown as "unknown", never 0. A total with some known terms is the sum of
+  those, and the warnings say it is understated.
 - `missing_parameters(design, levers, params)` lists the ids a scenario needs that the library lacks.
 - Country-specific parameters are looked up as `<id>.<cc>` (lowercase ISO 3166 alpha-2, from country
   names such as "United Kingdom" → `gb`), else `<id>.global`; procedure minutes as
@@ -201,6 +207,51 @@ Central-lab shipments in country c, temperature t = P<sub>c</sub> × samples per
 Local-lab samples are assumed analysed close to the site (no transport modelled). −80 °C storage is
 modelled at sites for the whole trial.
 
+### Well-to-tank (WTT) of travel and freight
+
+The published method adds well-to-tank (upstream fuel production and distribution) to every travel and
+freight factor: each of its factors is a DESNZ direct factor plus the matching DESNZ WTT factor
+([sources.md](sources.md) §1.3). The engine keeps WTT as a **separate term** next to each travel or
+freight term, in the same module:
+
+> `carbon.<name>_wtt.v1` = the activity of `carbon.<name>.v1` × WTT(f) in place of every direct factor f
+
+Every travel and freight formula is linear in its factors, so `carbon.<name>.v1` + `carbon.<name>_wtt.v1`
+= activity × (f + WTT(f)), the method's factor. Mode choices (car or flight by one-way distance, short- or
+long-haul, air or van by temperature) are made once and are the same for both terms.
+
+| Direct factor f | WTT(f) |
+|---|---|
+| `ef.travel.car.average_km` | `ef.wtt.travel.car.average_km` |
+| `ef.travel.bus.passenger_km` | `ef.wtt.travel.bus.passenger_km` |
+| `ef.travel.rail.passenger_km` | `ef.wtt.travel.rail.passenger_km` |
+| `ef.travel.flight.domestic.passenger_km` | `ef.wtt.travel.flight.domestic.passenger_km` |
+| `ef.travel.flight.short_haul.passenger_km` | `ef.wtt.travel.flight.short_haul.passenger_km` |
+| `ef.travel.flight.long_haul.passenger_km` | `ef.wtt.travel.flight.long_haul.passenger_km` |
+| `ef.freight.van.tonne_km` | `ef.wtt.freight.van.tonne_km` |
+| `ef.freight.air.tonne_km` | `ef.wtt.freight.air.long_haul.tonne_km`: `ef.freight.air.tonne_km` is DESNZ's international air-freight row, which DESNZ sets equal to long-haul; the international WTT row equals the long-haul one (library note: D96 = D95) |
+
+Twins: `carbon.patient_travel_wtt.v1`, `carbon.home_nurse_travel_wtt.v1`, `carbon.monitoring_trips_wtt.v1`,
+`carbon.investigator_meeting_wtt.v1`, `carbon.site_initiation_trips_wtt.v1`, `carbon.closeout_trips_wtt.v1`,
+`carbon.sample_freight_wtt.v1`, `carbon.drug_shipping_wtt.v1` (the last in the `drug_supply` extension).
+The mapping is `carbon.WTT_FACTOR`; a test checks it covers every direct travel / freight id in the catalog.
+
+- **Missing WTT factor** → only the twin is unknown: excluded from totals, named in warnings and provenance
+  (never 0). The direct term is still counted, so the carbon total is understated by that WTT.
+- **Direct ids are direct-only.** `ef.travel.*` and `ef.freight.*` are the DESNZ direct factor
+  (tank-to-wheel / combustion; aviation with radiative forcing). The twin multiplies the same activity
+  by `ef.wtt.*` and by nothing else. Putting a factor that already includes WTT into the direct id, while
+  `ef.wtt.*` is also supplied, counts upstream fuel twice. The paper's published travel and freight
+  factors are those sums (sources.md §1.3): rail 0.04441 = 0.03549 + 0.00892, domestic flight 0.27278,
+  short-haul 0.17034, long-haul 0.21423, long-haul / international air freight 1.13047 = 1.0189 + 0.11157.
+  Pass the two parts as the two ids, or set the twin to 0. The road figure 0.19443 matches no DESNZ row
+  with or without WTT; it is not `ef.wtt.freight.van.tonne_km`.
+- **Values are the library's** (DESNZ 2026 WTT cells, 2022–2026 vintage range); the engine does not
+  rescale them toward the paper's DESNZ 2022 numbers.
+- Other factors (electricity, dry ice, per-site / per-patient / per-sample / per-kit / per-procedure)
+  are used as the library gives them. No WTT twin is added. `ef.drug_kit.unit` excludes transport;
+  kit transport is only `carbon.drug_shipping.v1` plus `carbon.drug_shipping_wtt.v1`.
+
 ### drug_supply (TrialPilot extension, beyond the published method)
 
 Without an A3 `SupplyResult`: kits needed = P × dispensing visits × `supply.kits_per_dispensing_visit`;
@@ -230,7 +281,7 @@ subtract `modules["drug_supply"]`.
 | `cost_usd` | Σ cost terms of all modules except `intervention` (includes site staff time at `cost.site_staff.hour` and drug kits) |
 | `site_staff_hours` | Σ `workload.*` terms: patient visits + monitoring support + remote review + query handling |
 | `patient_travel_hours` | Σ `burden.*` terms: travel time **plus** time spent in visits (on site, home, telehealth) — the patient time burden |
-| `co2e_kg` | Σ carbon terms of all modules except `intervention` (includes `drug_supply`) |
+| `co2e_kg` | Σ carbon terms of all modules except `intervention` (includes `drug_supply` and the WTT twins) |
 | `duration_months` | A3 forecast `duration_months` if passed, else the planned `TrialDesign.duration_months` as a point range (with a warning) |
 | `drug_waste_share` | percent of kits made that are never dispensed (A3 or `supply.waste_share.<strategy>`) |
 
@@ -317,6 +368,14 @@ the code and this page). `<cc>` = lowercase ISO 3166 alpha-2 or `global` (the `.
 | `supply.kit_shipping_weight_kg` | kg/kit | shipped weight per kit |
 | `dist.drug.depot_to_site_km` | km | depot → site, one way |
 | `cost.drug.shipment` | usd/shipment | one depot → site shipment |
+| `ef.wtt.travel.car.average_km` | kg_co2e/km | well-to-tank, average car per vehicle-km |
+| `ef.wtt.travel.bus.passenger_km` | kg_co2e/passenger_km | well-to-tank, local bus |
+| `ef.wtt.travel.rail.passenger_km` | kg_co2e/passenger_km | well-to-tank, national rail |
+| `ef.wtt.travel.flight.domestic.passenger_km` | kg_co2e/passenger_km | well-to-tank, domestic flight |
+| `ef.wtt.travel.flight.short_haul.passenger_km` | kg_co2e/passenger_km | well-to-tank, short-haul flight |
+| `ef.wtt.travel.flight.long_haul.passenger_km` | kg_co2e/passenger_km | well-to-tank, long-haul flight |
+| `ef.wtt.freight.van.tonne_km` | kg_co2e/tonne_km | well-to-tank, road courier (van) |
+| `ef.wtt.freight.air.long_haul.tonne_km` | kg_co2e/tonne_km | well-to-tank, air freight (twin of `ef.freight.air.tonne_km`) |
 | `assume.design.visits_per_patient` | visits | visits assumed when the schedule is missing |
 | `assume.design.patients_per_site` | patients/site | used to assume sites when none are listed |
 
@@ -336,23 +395,29 @@ Default levers (everything on site, upfront supply).
 | Patient travel time | round trip 20 km, speed 30 km/h | 10 × 3 visits × 20 ÷ 30 | 20 h |
 | Patient visit time | 2 h at site | 10 × 3 × 2 | 60 h → **patient time 80 h** |
 | Patient travel carbon | car share 0.5 (0.2 kg/km), rail share 0.5 of the rest (0.05), bus 0.1 | 600 km × (0.5 × 0.2 + 0.5 × (0.5 × 0.05 + 0.5 × 0.1)) | 82.5 kg |
+| … its WTT twin | WTT car 0.05, rail 0.01, bus 0.02 | 600 km × (0.5 × 0.05 + 0.5 × (0.5 × 0.01 + 0.5 × 0.02)) | 19.5 kg |
 | Site staff, visits | admin 30 min; blood draw 15, default 10 | (65 + 55 + 50) min × 10 ÷ 60 | 28.33 h |
 | Monitoring visits | 0.5 /site/month | 1 × 0.5 × 12 | 6 on-site visits |
 | Monitoring support + queries | 4 h/visit; 6 queries × 10 min | 6 × 4 + 10 × 6 × 10 ÷ 60 | 24 h + 10 h → **site staff 62.33 h** |
 | Monitoring carbon | 200 km round trip, one way 100 < 300 km threshold → car 0.2 | 6 × 200 × 0.2 | 240 kg |
 | Kickoff meeting | 2 attendees, 1000 km, one way 500 > 300 → short-haul 0.15 | 2 × 1000 × 0.15 | 300 kg |
+| … WTT twins | WTT car 0.05; WTT short-haul 0.03 | 6 × 200 × 0.05; 2 × 1000 × 0.03 | 60 kg; 60 kg |
+| Site initiation, close-out trips | 1 car trip each (as monitoring) | 200 × 0.2 (+ WTT 200 × 0.05) each | 40 + 10 kg each |
 | Monitoring cost | CRA 1000/day × 1.5 days + 400 expenses | 6 × 1900 | $11,400 |
 | Sample freight | frozen 5 kg air 2.0/t·km; ambient 2 kg van 0.6; 500 km | 10 × 0.005 × 500 × 2.0 + 10 × 0.002 × 500 × 0.6 | 50 + 6 kg |
+| … its WTT twin | WTT air 0.5, van 0.15 | 25 t·km × 0.5 + 10 t·km × 0.15 | 12.5 + 1.5 kg |
 | Dry ice, freezer | 4 kg × 0.5; 0.1 freezer × 10 kWh/day × 365.25 days × 0.2 | 10 × 4 × 0.5; 365.25 × 0.2 | 20 kg; 73.05 kg |
 | Drug kits | 2 dispensing visits, 1 kit each, upfront waste 0.5 | 20 needed ÷ (1 − 0.5) | 40 kits, waste 50 % |
 | Drug cost | $1000/kit (biologic), 2 shipments × $150 | 40 × 1000 + 300 | $40,300 |
+| Drug carbon | 10 kg/kit; 2 kg/kit by van 0.6 over 500 km (+ WTT van 0.15) | 40 × 10; 40 t·km × 0.6 (+ × 0.15) | 400 + 24 + 6 kg |
 | Trial management | 2 FTE, $120,000 and 1,000 kg per FTE-year | 2 × 1 year | $240,000; 2,000 kg |
 
-Totals for this test design: **cost $334,240, carbon 3,570.2 kg CO2e, site staff 62.33 h, patient
-time 80 h, drug waste 50 %, duration 12 months** (P10 = P50 = P90 because test parameters are points).
+Totals for this test design: **cost $334,240, carbon 3,749.7 kg CO2e (3,570.2 direct + 179.5 WTT), site
+staff 62.33 h, patient time 80 h, drug waste 50 %, duration 12 months** (P10 = P50 = P90 because test
+parameters are points).
 
 Lever effects on the same test design (checked in `engine/tests/test_levers.py`):
-- Remote monitoring 50 %: on-site trips 6 → 3, meetings_travel carbon 540 → 420 kg, site staff hours
+- Remote monitoring 50 %: on-site trips 6 → 3, meetings_travel carbon 660 → 510 kg (incl. WTT), site staff hours
   62.33 → 56.33 (3 × 4 h support replaced by 3 × 2 h remote review); patient travel unchanged.
 - V2 as a home visit: patient time 80 → 63.3 h, but cost rises (home nurse $300 vs reimbursement $50)
   — an honest trade-off; monitoring unchanged.

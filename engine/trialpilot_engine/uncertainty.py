@@ -9,6 +9,7 @@ isolate the effect of the levers instead of sampling noise.
 from __future__ import annotations
 
 import hashlib
+import math
 from collections.abc import Mapping
 from functools import lru_cache
 from typing import Literal
@@ -54,26 +55,34 @@ def parameter_draws(p: Parameter, seed: int, n: int) -> FloatArray:
 
 
 def to_range(x: FloatArray, unit: Unit) -> MetricRange:
-    """P10/P50/P90 of per-draw values. NaN anywhere (unknown input) gives a NaN range."""
+    """P10/P50/P90 of per-draw values. NaN anywhere (unknown input) gives an unknown range (all None)."""
     if x.size == 0 or not np.all(np.isfinite(x)):
-        nan = float("nan")
-        return MetricRange(p10=nan, p50=nan, p90=nan, unit=unit)
+        return MetricRange(p10=None, p50=None, p90=None, unit=unit)
     p10, p50, p90 = np.percentile(x, PERCENTILES)
     return MetricRange(p10=float(p10), p50=float(p50), p90=float(p90), unit=unit)
+
+
+def range_known(r: MetricRange) -> bool:
+    """True when all three percentiles are numbers (contract v2: unknown = None; NaN counts as unknown)."""
+    return all(q is not None and math.isfinite(q) for q in (r.p10, r.p50, r.p90))
 
 
 def draws_from_range(r: MetricRange, seed: int, key: str, n: int, floor: float = 0.0) -> FloatArray:
     """Approximate per-draw values from a P10/P50/P90 range produced elsewhere (A3 forecast/supply).
 
     Piecewise-linear quantile function through (0.1, P10), (0.5, P50), (0.9, P90); the outer
-    segments are extended linearly to quantiles 0 and 1, then clipped at `floor`.
+    segments are extended linearly to quantiles 0 and 1, then clipped at `floor`. An unknown range
+    (any percentile None or NaN) gives NaN draws: whatever uses them is unknown, never zero.
     """
-    if not (r.p10 <= r.p50 <= r.p90):
-        raise ValueError(f"range for {key!r} is not ordered: {r.p10}, {r.p50}, {r.p90}")
-    lower_tail = r.p10 - (r.p50 - r.p10) * 0.25  # slope of the P10–P50 segment over 0.1 quantile
-    upper_tail = r.p90 + (r.p90 - r.p50) * 0.25
+    p10, p50, p90 = r.p10, r.p50, r.p90
+    if p10 is None or p50 is None or p90 is None or not range_known(r):
+        return np.full(n, np.nan)
+    if not (p10 <= p50 <= p90):
+        raise ValueError(f"range for {key!r} is not ordered: {p10}, {p50}, {p90}")
+    lower_tail = p10 - (p50 - p10) * 0.25  # slope of the P10–P50 segment over 0.1 quantile
+    upper_tail = p90 + (p90 - p50) * 0.25
     u = uniform_draws(seed, key, n)
-    x = np.interp(u, [0.0, 0.1, 0.5, 0.9, 1.0], [lower_tail, r.p10, r.p50, r.p90, upper_tail])
+    x = np.interp(u, [0.0, 0.1, 0.5, 0.9, 1.0], [lower_tail, p10, p50, p90, upper_tail])
     return np.maximum(x, floor)
 
 

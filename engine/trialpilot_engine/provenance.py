@@ -145,8 +145,8 @@ class Term:
 
     def provenance(self, extra_assumptions: tuple[str, ...] = ()) -> ProvenanceItem:
         inputs: Inputs = dict(self.inputs)
-        if self.known:
-            r = to_range(self.values, METRIC_UNIT[self.metric])
+        r = to_range(self.values, METRIC_UNIT[self.metric])  # all three None unless the term is known
+        if r.p10 is not None and r.p50 is not None and r.p90 is not None:
             inputs.update(result_p10=r.p10, result_p50=r.p50, result_p90=r.p90, result_unit=r.unit)
         else:
             inputs["result"] = "unknown (missing or invalid input) - excluded from totals"
@@ -264,6 +264,18 @@ PARAMETER_CATALOG: dict[str, tuple[str, str]] = {
     "supply.kit_shipping_weight_kg": ("kg/kit", "shipped weight per kit incl. packaging"),
     "dist.drug.depot_to_site_km": ("km", "depot to site, one way"),
     "cost.drug.shipment": ("usd/shipment", "one depot to site shipment"),
+    # well-to-tank twins of the travel and freight factors (carbon.WTT_FACTOR; `carbon.<name>_wtt.v1` terms)
+    "ef.wtt.travel.car.average_km": ("kg_co2e/km", "well-to-tank, average car per vehicle-km"),
+    "ef.wtt.travel.bus.passenger_km": ("kg_co2e/passenger_km", "well-to-tank, average local bus"),
+    "ef.wtt.travel.rail.passenger_km": ("kg_co2e/passenger_km", "well-to-tank, national rail"),
+    "ef.wtt.travel.flight.domestic.passenger_km": ("kg_co2e/passenger_km", "well-to-tank, domestic flight"),
+    "ef.wtt.travel.flight.short_haul.passenger_km": ("kg_co2e/passenger_km", "well-to-tank, short-haul flight"),
+    "ef.wtt.travel.flight.long_haul.passenger_km": ("kg_co2e/passenger_km", "well-to-tank, long-haul flight"),
+    "ef.wtt.freight.van.tonne_km": ("kg_co2e/tonne_km", "well-to-tank, road courier (van)"),
+    "ef.wtt.freight.air.long_haul.tonne_km": (
+        "kg_co2e/tonne_km",
+        "well-to-tank, air freight (twin of `ef.freight.air.tonne_km`: international = long-haul)",
+    ),
     # fall-backs for incomplete designs (labelled assumptions)
     "assume.design.visits_per_patient": ("visits", "visits assumed when the design has no schedule"),
     "assume.design.patients_per_site": ("patients/site", "used to assume sites when none are listed"),
