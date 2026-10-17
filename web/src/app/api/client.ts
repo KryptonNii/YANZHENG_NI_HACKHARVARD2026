@@ -6,18 +6,22 @@
 import type { Levers, Parameter, TrialDesign } from "../contracts";
 import { identityHeaders } from "../identity";
 import {
+  asArray,
   normalizeApproval,
+  normalizeCompare,
+  normalizeDesignSummary,
   normalizeDrivers,
   normalizeExtraction,
   normalizeImport,
   normalizeSavedScenario,
   normalizeScenarioResult,
   normalizeScience,
-  asArray,
 } from "./normalize";
 import type {
   ApiErrorBody,
-  ApprovalRequest,
+  ApprovalView,
+  CompareResult,
+  DesignSummary,
   Driver,
   HealthResponse,
   ImportCtgovResponse,
@@ -132,7 +136,7 @@ export async function request<T = unknown>(method: string, path: string, opts: R
 
 const enc = encodeURIComponent;
 
-/** Every endpoint the web app calls (§5 API table). */
+/** Every endpoint the web app calls (§5 API table; envelopes as implemented by A4/A5/A7). */
 export const api = {
   health: (signal?: AbortSignal) => request<HealthResponse>("GET", "/health", { signal, silent: true }),
 
@@ -146,18 +150,22 @@ export const api = {
     return normalizeExtraction(await request("POST", "/import/protocol", { ...opts, form }));
   },
 
-  // ---- A5 designs ----
-  listDesigns: async (opts: RequestOptions = {}): Promise<TrialDesign[]> =>
-    asArray<TrialDesign>(await request("GET", "/designs", opts), "designs"),
+  // ---- A5 designs (POST with an existing id stores a new version) ----
+  listDesigns: async (opts: RequestOptions = {}): Promise<DesignSummary[]> =>
+    asArray<unknown>(await request("GET", "/designs", opts), "designs")
+      .map(normalizeDesignSummary)
+      .filter((d): d is DesignSummary => d !== null),
   getDesign: (id: string, opts: RequestOptions = {}) => request<TrialDesign>("GET", `/designs/${enc(id)}`, opts),
-  createDesign: (design: TrialDesign, opts: RequestOptions = {}) =>
-    request<TrialDesign>("POST", "/designs", { ...opts, body: design }),
-  updateDesign: (design: TrialDesign, opts: RequestOptions = {}) =>
-    request<TrialDesign>("POST", `/designs/${enc(design.id)}`, { ...opts, body: design }),
+  saveDesign: (design: TrialDesign, opts: RequestOptions = {}) => request<TrialDesign>("POST", "/designs", { ...opts, body: design }),
 
   // ---- A5 scenarios ----
   compute: async (designId: string, levers: Levers, opts: RequestOptions = {}): Promise<ScenarioResultX> =>
     normalizeScenarioResult(await request("POST", "/scenarios/compute", { ...opts, body: { design_id: designId, levers } })),
+  /** Top-5 drivers for an unsaved lever set. */
+  drivers: async (designId: string, levers: Levers, metric: string, opts: RequestOptions = {}): Promise<Driver[]> =>
+    normalizeDrivers(await request("POST", "/scenarios/drivers", { ...opts, body: { design_id: designId, levers, metric, top: 5 } })),
+  compare: async (aId: string, bId: string, opts: RequestOptions = {}): Promise<CompareResult> =>
+    normalizeCompare(await request("POST", "/scenarios/compare", { ...opts, body: { a_id: aId, b_id: bId } })),
   listScenarios: async (designId?: string, opts: RequestOptions = {}): Promise<SavedScenario[]> => {
     const q = designId ? `?design_id=${enc(designId)}` : "";
     const rows = asArray<unknown>(await request("GET", `/scenarios${q}`, opts), "scenarios");
@@ -167,22 +175,24 @@ export const api = {
     normalizeSavedScenario(await request("GET", `/scenarios/${enc(id)}`, opts)),
   saveScenario: async (req: SaveScenarioRequest, opts: RequestOptions = {}): Promise<SavedScenario> =>
     normalizeSavedScenario(await request("POST", "/scenarios", { ...opts, body: req })),
-  submitScenario: async (id: string, opts: RequestOptions = {}): Promise<ApprovalRequest> =>
-    normalizeApproval(await request("POST", `/scenarios/${enc(id)}/submit`, opts)),
-  drivers: async (scenarioId: string, metric: string, opts: RequestOptions = {}): Promise<Driver[]> =>
-    normalizeDrivers(await request("GET", `/scenarios/${enc(scenarioId)}/drivers?metric=${enc(metric)}`, opts)),
+  /** New draft version in the same lineage (the base row is never modified). */
+  newVersion: async (baseId: string, patch: { levers?: Levers; name?: string }, opts: RequestOptions = {}): Promise<SavedScenario> =>
+    normalizeSavedScenario(await request("POST", `/scenarios/${enc(baseId)}/versions`, { ...opts, body: patch })),
+  /** Freezes the draft and creates the ApprovalRequest (A7); returns the scenario with it embedded. */
+  submitScenario: async (id: string, opts: RequestOptions = {}): Promise<SavedScenario> =>
+    normalizeSavedScenario(await request("POST", `/scenarios/${enc(id)}/submit`, { ...opts, body: {} })),
   exportUrl: (scenarioId: string, format: "csv" | "pdf") => `${API_BASE}/export/scenario/${enc(scenarioId)}.${format}`,
 
   // ---- A5 parameter library ----
   params: async (opts: RequestOptions = {}): Promise<Parameter[]> =>
-    asArray<Parameter>(await request("GET", "/params", opts), "params"),
+    asArray<Parameter>(await request("GET", "/params", opts), "parameters"),
 
   // ---- A7 approvals ----
-  listApprovals: async (opts: RequestOptions = {}): Promise<ApprovalRequest[]> =>
-    asArray<unknown>(await request("GET", "/approvals", opts), "approvals").map(normalizeApproval),
-  getApproval: async (id: string, opts: RequestOptions = {}): Promise<ApprovalRequest> =>
+  listApprovals: async (opts: RequestOptions = {}): Promise<ApprovalView[]> =>
+    asArray<unknown>(await request("GET", "/approvals", opts), "items").map(normalizeApproval),
+  getApproval: async (id: string, opts: RequestOptions = {}): Promise<ApprovalView> =>
     normalizeApproval(await request("GET", `/approvals/${enc(id)}`, opts)),
-  sign: async (approvalId: string, req: SignRequest, opts: RequestOptions = {}): Promise<ApprovalRequest> => {
+  sign: async (approvalId: string, req: SignRequest, opts: RequestOptions = {}): Promise<ApprovalView> => {
     const res = await request("POST", `/approvals/${enc(approvalId)}/sign`, { ...opts, body: req });
     try {
       return normalizeApproval(res);

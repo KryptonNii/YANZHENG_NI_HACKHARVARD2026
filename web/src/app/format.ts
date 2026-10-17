@@ -1,5 +1,8 @@
 import type { MetricRange, MetricRangeUnit } from "./contracts";
 
+/** §2 rule 2: a missing value (NaN/null from the engine) is printed as "unknown", never 0. */
+export const isNum = (v: unknown): v is number => typeof v === "number" && Number.isFinite(v);
+
 const nf = (digits: number) => new Intl.NumberFormat("en-US", { maximumFractionDigits: digits, minimumFractionDigits: 0 });
 
 /** Significant-ish rounding for display: 3 significant figures, no trailing noise. */
@@ -14,6 +17,7 @@ function compact(v: number): string {
 }
 
 export function formatUsd(v: number): string {
+  if (!isNum(v)) return "unknown";
   return `${v < 0 ? "−" : ""}$${compact(Math.abs(v))}`;
 }
 
@@ -39,6 +43,7 @@ export function formatPercent(v: number): string {
 }
 
 export function formatValue(v: number, unit: MetricRangeUnit | string): string {
+  if (!isNum(v)) return "unknown";
   switch (unit) {
     case "usd":
       return formatUsd(v);
@@ -61,6 +66,7 @@ export function formatValue(v: number, unit: MetricRangeUnit | string): string {
 
 /** Big-number display: the figure and its unit separately, so the unit can be set smaller. */
 export function splitValue(v: number, unit: MetricRangeUnit | string): { num: string; unit: string } {
+  if (!isNum(v)) return { num: "unknown", unit: "" };
   switch (unit) {
     case "usd":
       return { num: formatUsd(v), unit: "" };
@@ -82,6 +88,7 @@ export function splitValue(v: number, unit: MetricRangeUnit | string): { num: st
 
 /** Number without unit suffix, for compact range text ("1.2M – 1.9M"). */
 export function formatBare(v: number, unit: MetricRangeUnit | string): string {
+  if (!isNum(v)) return "unknown";
   if (unit === "usd") return formatUsd(v);
   if (unit === "kg_co2e") return Math.abs(v) >= 1000 ? compact(v / 1000) : compact(v);
   if (unit === "months") return nf(1).format(v);
@@ -90,6 +97,7 @@ export function formatBare(v: number, unit: MetricRangeUnit | string): string {
 }
 
 export function formatRange(r: MetricRange): string {
+  if (!isNum(r.p10) || !isNum(r.p90)) return "unknown";
   // Carbon: pick the unit from the P90 so both ends share it.
   if (r.unit === "kg_co2e") {
     const tonnes = Math.abs(r.p90) >= 1000;
@@ -107,6 +115,7 @@ export function formatSignedPct(p: number): string {
 }
 
 export function formatSignedValue(v: number, unit: MetricRangeUnit | string): string {
+  if (!isNum(v)) return "unknown";
   if (unit === "percent") {
     // a difference of two percentages is in percentage points
     const pp = Math.abs(v) >= 10 ? Math.round(Math.abs(v)) : Math.round(Math.abs(v) * 10) / 10;

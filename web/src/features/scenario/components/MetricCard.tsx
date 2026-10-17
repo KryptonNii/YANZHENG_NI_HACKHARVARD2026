@@ -1,10 +1,17 @@
 import type { MetricRange } from "@/app/contracts";
 import { formatRange, formatSignedPct, formatSignedValue, formatValue, splitValue } from "@/app/format";
 import { Skeleton } from "@/app/ui";
-import { delta, type MetricDef } from "../metrics";
+import { delta, isKnownRange, type MetricDef } from "../metrics";
 
 /** Delta vs baseline with sign, arrow and words — never colour alone. */
 export function DeltaText({ current, baseline, testId }: { current: MetricRange; baseline: MetricRange; testId?: string }) {
+  if (!isKnownRange(current) || !isKnownRange(baseline)) {
+    return (
+      <span data-testid={testId} className="text-sm font-medium text-ink-500">
+        Change unknown (a value is missing)
+      </span>
+    );
+  }
   const d = delta(current, baseline);
   if (d.direction === "same") {
     return (
@@ -59,7 +66,8 @@ export function MetricCard({
   computing: boolean;
   onOpen: () => void;
 }) {
-  const big = current ? splitValue(current.p50, current.unit) : null;
+  const known = isKnownRange(current);
+  const big = current && known ? splitValue(current.p50, current.unit) : null;
   return (
     <section className="card relative flex flex-col p-4" aria-labelledby={`metric-${def.key}-label`} data-testid={`metric-${def.key}`}>
       <div className="flex items-start justify-between gap-2">
@@ -86,7 +94,7 @@ export function MetricCard({
             <span className="mt-1 block text-[11px] font-semibold uppercase tracking-wide text-ink-500">P10–P90 range</span>
             <span className="block whitespace-nowrap text-sm text-ink-700 tabular">{formatRange(current)}</span>
           </button>
-          <RangeBar current={current} baseline={baseline} />
+          <RangeBar current={current} baseline={isKnownRange(baseline) ? baseline : null} />
           <div className="mt-3 min-h-[2.5rem]">
             {baseline ? <DeltaText current={current} baseline={baseline} testId={`metric-${def.key}-delta`} /> : <Skeleton className="h-4 w-40" />}
           </div>
@@ -94,6 +102,11 @@ export function MetricCard({
             How is this calculated?
           </button>
         </>
+      ) : current && !known ? (
+        <button type="button" onClick={onOpen} className="num-button -mx-1 mt-1 px-1 text-left" data-testid={`metric-${def.key}-value`}>
+          <span className="block text-metric text-ink-500">Unknown</span>
+          <span className="mt-1 block text-sm text-ink-600">An input this metric needs is missing, so it is reported as unknown — not zero. See the warnings.</span>
+        </button>
       ) : (
         <div className="mt-2 space-y-2" aria-busy="true">
           <Skeleton className="h-9 w-32" />

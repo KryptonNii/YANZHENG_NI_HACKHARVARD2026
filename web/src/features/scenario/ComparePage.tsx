@@ -2,42 +2,38 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import type { Levers, MetricRange } from "@/app/contracts";
 import { api, isAbort } from "@/app/api/client";
-import type { SavedScenario, ScenarioResultX } from "@/app/api/types";
+import type { CompareResult, SavedScenario } from "@/app/api/types";
 import { formatRange, formatSignedPct, formatSignedValue, formatUtc, formatValue } from "@/app/format";
 import { displayName } from "@/app/identity";
 import { EmptyState, Skeleton, Spinner } from "@/app/ui";
 import { ScenarioStatusChip } from "./components/VersionsPanel";
-import { delta, METRICS, moduleLabel } from "./metrics";
+import { delta, isKnownRange, METRICS, moduleLabel } from "./metrics";
 
-interface Side {
-  scenario: SavedScenario;
-  result: ScenarioResultX | null;
-}
+const ROWS: Array<{ key: string; label: string }> = [
+  ...METRICS.map((m) => ({ key: m.key as string, label: m.label })),
+  { key: "drug_waste_share", label: "Drug waste share" },
+];
 
-function useSide(id: string | null, all: SavedScenario[]): { side: Side | null; loading: boolean } {
-  const [side, setSide] = useState<Side | null>(null);
+function useFullScenario(id: string | null): { scenario: SavedScenario | null; loading: boolean } {
+  const [scenario, setScenario] = useState<SavedScenario | null>(null);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     if (!id) {
-      setSide(null);
+      setScenario(null);
       return;
     }
     const ctrl = new AbortController();
     setLoading(true);
-    (async () => {
-      const scenario = all.find((s) => s.id === id) ?? (await api.getScenario(id, { signal: ctrl.signal, silent: true }));
-      // saved rows normally carry their result; recompute only if the API omitted it
-      const result = scenario.result ?? (await api.compute(scenario.design_id, scenario.levers, { signal: ctrl.signal, silent: true }));
-      return { scenario, result };
-    })()
-      .then((s) => setSide(s))
+    api
+      .getScenario(id, { signal: ctrl.signal })
+      .then(setScenario)
       .catch((err) => {
-        if (!isAbort(err)) setSide(null);
+        if (!isAbort(err)) setScenario(null);
       })
       .finally(() => setLoading(false));
     return () => ctrl.abort();
-  }, [id, all]);
-  return { side, loading };
+  }, [id]);
+  return { scenario, loading };
 }
 
 function leverRows(a: Levers, b: Levers): Array<{ label: string; a: string; b: string; differs: boolean }> {
@@ -55,13 +51,32 @@ function leverRows(a: Levers, b: Levers): Array<{ label: string; a: string; b: s
   return rows.map((r) => ({ ...r, differs: r.a !== r.b }));
 }
 
-function DeltaCell({ a, b }: { a: MetricRange; b: MetricRange }) {
+/** Change A → B. With a per-draw delta range (same design) the P10–P90 of the difference is shown. */
+function DeltaCell({ a, b, perDraw }: { a: MetricRange; b: MetricRange; perDraw: MetricRange | undefined }) {
+  if (perDraw && isKnownRange(perDraw)) {
+    const same = perDraw.p10 <= 0 && perDraw.p90 >= 0;
+    const better = perDraw.p50 < 0;
+    const tone = Math.abs(perDraw.p50) < 1e-9 ? "text-ink-500" : better ? "text-better-700" : "text-worse-700";
+    return (
+      <span className={tone}>
+        <span className="font-semibold">
+          {Math.abs(perDraw.p50) < 1e-9 ? "● no change" : `${better ? "▼" : "▲"} ${formatSignedValue(perDraw.p50, b.unit)} ${better ? "lower" : "higher"}`}
+        </span>
+        <span className="block text-xs text-ink-500">
+          P10–P90 of the difference: {formatSignedValue(perDraw.p10, b.unit)} to {formatSignedValue(perDraw.p90, b.unit)}
+          {same && Math.abs(perDraw.p50) >= 1e-9 ? " (range includes no change)" : ""}
+        </span>
+      </span>
+    );
+  }
+  if (!isKnownRange(a) || !isKnownRange(b)) return <span className="text-ink-500">unknown (a value is missing)</span>;
   const d = delta(b, a);
   if (d.direction === "same") return <span className="text-ink-500">● no change</span>;
   const better = d.direction === "lower";
   return (
     <span className={`font-semibold ${better ? "text-better-700" : "text-worse-700"}`}>
       {better ? "▼" : "▲"} {formatSignedValue(d.abs, b.unit)} ({formatSignedPct(d.pct)}) {better ? "lower" : "higher"}
+      <span className="block text-xs font-normal text-ink-500">difference of P50s</span>
     </span>
   );
 }
@@ -88,6 +103,8 @@ export function ComparePage() {
   const [search, setSearch] = useSearchParams();
   const [all, setAll] = useState<SavedScenario[]>([]);
   const [loadingList, setLoadingList] = useState(true);
+  const [cmp, setCmp] = useState<CompareResult | null>(null);
+  const [cmpError, setCmpError] = useState<string | null>(null);
   const aId = search.get("a");
   const bId = search.get("b");
 
@@ -101,32 +118,47 @@ export function ComparePage() {
     return () => ctrl.abort();
   }, []);
 
-  const A = useSide(aId, all);
-  const B = useSide(bId, all);
+  const A = useFullScenario(aId);
+  const B = useFullScenario(bId);
+  const a = A.scenario;
+  const b = B.scenario;
+  const sameDesign = !!a && !!b && a.design_id === b.design_id && a.design_version === b.design_version;
+
+  useEffect(() => {
+    setCmp(null);
+    setCmpError(null);
+    if (!a || !b || !sameDesign) return;
+    const ctrl = new AbortController();
+    api
+      .compare(a.id, b.id, { signal: ctrl.signal, silent: true })
+      .then(setCmp)
+      .catch((err) => {
+        if (!isAbort(err)) setCmpError(err instanceof Error ? err.message : String(err));
+      });
+    return () => ctrl.abort();
+  }, [a, b, sameDesign]);
+
   const setSide = (key: "a" | "b", id: string) => {
     const next = new URLSearchParams(search);
     next.set(key, id);
     setSearch(next, { replace: true });
   };
 
-  const levers = useMemo(() => (A.side && B.side ? leverRows(A.side.scenario.levers, B.side.scenario.levers) : []), [A.side, B.side]);
+  const levers = useMemo(() => (a?.levers && b?.levers ? leverRows(a.levers, b.levers) : []), [a, b]);
   const modules = useMemo(() => {
-    if (!A.side?.result || !B.side?.result) return [];
-    const ids = [...new Set([...A.side.result.modules, ...B.side.result.modules].map((m) => m.module))];
-    return ids.map((m) => ({
-      module: m,
-      a: A.side!.result!.modules.find((x) => x.module === m),
-      b: B.side!.result!.modules.find((x) => x.module === m),
-    }));
-  }, [A.side, B.side]);
-
-  const differentDesigns = A.side && B.side && A.side.scenario.design_id !== B.side.scenario.design_id;
+    if (!a?.result || !b?.result) return [];
+    const ids = [...new Set([...a.result.modules, ...b.result.modules].map((m) => m.module))];
+    return ids.map((m) => ({ module: m, a: a.result!.modules.find((x) => x.module === m), b: b.result!.modules.find((x) => x.module === m) }));
+  }, [a, b]);
 
   return (
     <div className="space-y-5">
       <div>
         <h1 className="text-2xl font-bold tracking-tight text-ink-900">Compare scenarios</h1>
-        <p className="mt-1 text-sm text-ink-600">Side by side, with the change from A to B. Lower is better for every metric shown.</p>
+        <p className="mt-1 text-sm text-ink-600">
+          Side by side, with the change from A to B. Lower is better for every metric. For two scenarios of the same trial design, the change is
+          computed per Monte Carlo draw, so its P10–P90 shows how certain the difference is.
+        </p>
       </div>
 
       {loadingList ? (
@@ -142,31 +174,39 @@ export function ComparePage() {
         </div>
       )}
 
-      {differentDesigns && (
+      {a && b && !sameDesign && (
         <p className="rounded-lg border border-caution-300 bg-caution-50 px-4 py-2 text-sm text-caution-900">
-          These scenarios belong to different trial designs, so differences also reflect the trials themselves.
+          These scenarios belong to different trial designs (or design versions), so the change is a plain difference of P50s and also reflects
+          the trials themselves.
         </p>
       )}
+      {cmp && cmp.warnings.length > 0 && (
+        <ul className="list-disc rounded-lg border border-caution-300 bg-caution-50 py-2 pl-8 pr-4 text-sm text-caution-900">
+          {cmp.warnings.map((w) => (
+            <li key={w}>{w}</li>
+          ))}
+        </ul>
+      )}
+      {cmpError && <p className="text-sm text-ink-600">Per-draw comparison unavailable ({cmpError}); showing the difference of P50s.</p>}
 
       {(A.loading || B.loading) && <Skeleton className="h-64 w-full" />}
 
-      {A.side && B.side && A.side.result && B.side.result && (
+      {a && b && a.result && b.result && (
         <>
           <div className="grid gap-4 md:grid-cols-2">
-            {[A.side, B.side].map((s, i) => (
-              <div key={s.scenario.id} className="card p-4">
+            {[a, b].map((s, i) => (
+              <div key={s.id} className="card p-4">
                 <p className="text-xs font-semibold uppercase tracking-wide text-ink-500">Scenario {i === 0 ? "A" : "B"}</p>
                 <div className="mt-1 flex flex-wrap items-center gap-2">
                   <p className="text-lg font-bold text-ink-900">
-                    {s.scenario.name} <span className="font-normal text-ink-500">v{s.scenario.version}</span>
+                    {s.name} <span className="font-normal text-ink-500">v{s.version}</span>
                   </p>
-                  <ScenarioStatusChip status={s.scenario.status} />
+                  <ScenarioStatusChip status={s.status} />
                 </div>
                 <p className="mt-0.5 text-xs text-ink-500">
-                  {displayName(s.scenario.author)} · {formatUtc(s.scenario.created_at)} · parameter set{" "}
-                  <code className="font-mono">{s.result?.parameter_set_version}</code>
+                  {displayName(s.author)} · {formatUtc(s.created_at)} · parameter set <code className="font-mono">{s.parameter_set_version}</code>
                 </p>
-                <Link className="link mt-2 inline-block text-sm" to={`/scenario/${encodeURIComponent(s.scenario.design_id)}?s=${encodeURIComponent(s.scenario.id)}`}>
+                <Link className="link mt-2 inline-block text-sm" to={`/scenario/${encodeURIComponent(s.design_id)}?s=${encodeURIComponent(s.id)}`}>
                   Open in simulator
                 </Link>
               </div>
@@ -174,7 +214,9 @@ export function ComparePage() {
           </div>
 
           <section className="card overflow-x-auto p-4" aria-labelledby="cmp-metrics">
-            <h2 id="cmp-metrics" className="card-title mb-2">Metrics (P50, with P10–P90)</h2>
+            <h2 id="cmp-metrics" className="card-title mb-2">
+              Metrics (P50, with P10–P90)
+            </h2>
             <table className="w-full text-sm" data-testid="compare-table">
               <thead>
                 <tr className="text-left text-xs uppercase tracking-wide text-ink-500">
@@ -185,22 +227,24 @@ export function ComparePage() {
                 </tr>
               </thead>
               <tbody>
-                {[...METRICS.map((m) => ({ key: m.key as keyof ScenarioResultX, label: m.label })), { key: "drug_waste_share" as const, label: "Drug waste share" }].map((m) => {
-                  const a = A.side!.result![m.key] as MetricRange;
-                  const b = B.side!.result![m.key] as MetricRange;
+                {ROWS.map((m) => {
+                  const ra = a.result![m.key as keyof typeof a.result] as MetricRange;
+                  const rb = b.result![m.key as keyof typeof b.result] as MetricRange;
                   return (
-                    <tr key={String(m.key)} className="border-t border-ink-100">
-                      <th scope="row" className="py-2 pr-3 text-left font-semibold text-ink-800">{m.label}</th>
+                    <tr key={m.key} className="border-t border-ink-100 align-top">
+                      <th scope="row" className="py-2 pr-3 text-left font-semibold text-ink-800">
+                        {m.label}
+                      </th>
                       <td className="py-2 pr-3 tabular">
-                        <span className="font-semibold text-ink-900">{formatValue(a.p50, a.unit)}</span>
-                        <span className="block text-xs text-ink-500">{formatRange(a)}</span>
+                        <span className="font-semibold text-ink-900">{formatValue(ra.p50, ra.unit)}</span>
+                        <span className="block text-xs text-ink-500">{formatRange(ra)}</span>
                       </td>
                       <td className="py-2 pr-3 tabular">
-                        <span className="font-semibold text-ink-900">{formatValue(b.p50, b.unit)}</span>
-                        <span className="block text-xs text-ink-500">{formatRange(b)}</span>
+                        <span className="font-semibold text-ink-900">{formatValue(rb.p50, rb.unit)}</span>
+                        <span className="block text-xs text-ink-500">{formatRange(rb)}</span>
                       </td>
                       <td className="py-2 tabular">
-                        <DeltaCell a={a} b={b} />
+                        <DeltaCell a={ra} b={rb} perDraw={cmp?.deltas[m.key]} />
                       </td>
                     </tr>
                   );
@@ -211,7 +255,9 @@ export function ComparePage() {
 
           <div className="grid gap-5 xl:grid-cols-2">
             <section className="card overflow-x-auto p-4" aria-labelledby="cmp-levers">
-              <h2 id="cmp-levers" className="card-title mb-2">Levers</h2>
+              <h2 id="cmp-levers" className="card-title mb-2">
+                Levers
+              </h2>
               <table className="w-full text-sm">
                 <thead>
                   <tr className="text-left text-xs uppercase tracking-wide text-ink-500">
@@ -225,7 +271,7 @@ export function ComparePage() {
                     <tr key={r.label} className={`border-t border-ink-100 ${r.differs ? "bg-accent-50/50" : ""}`}>
                       <th scope="row" className="py-1.5 pr-3 text-left font-medium text-ink-800">
                         {r.label}
-                        {r.differs && <span className="sr-only"> (differs)</span>}
+                        {r.differs && <span className="ml-1 text-xs font-normal text-accent-800">(differs)</span>}
                       </th>
                       <td className="py-1.5 pr-3 text-ink-700">{r.a}</td>
                       <td className="py-1.5 font-semibold text-ink-900">{r.b}</td>
@@ -236,7 +282,9 @@ export function ComparePage() {
             </section>
 
             <section className="card overflow-x-auto p-4" aria-labelledby="cmp-modules">
-              <h2 id="cmp-modules" className="card-title mb-2">Modules (P50)</h2>
+              <h2 id="cmp-modules" className="card-title mb-2">
+                Modules (difference of P50s)
+              </h2>
               <table className="w-full text-sm">
                 <thead>
                   <tr className="text-left text-xs uppercase tracking-wide text-ink-500">
@@ -246,15 +294,18 @@ export function ComparePage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {modules.map(({ module, a, b }) => {
-                    const dc = a && b ? b.cost_usd.p50 - a.cost_usd.p50 : null;
-                    const dk = a && b ? b.co2e_kg.p50 - a.co2e_kg.p50 : null;
-                    const cls = (d: number | null) => (d === null || Math.abs(d) < 1e-9 ? "text-ink-500" : d < 0 ? "text-better-700" : "text-worse-700");
+                  {modules.map(({ module, a: ma, b: mb }) => {
+                    const dc = ma && mb ? mb.cost_usd.p50 - ma.cost_usd.p50 : null;
+                    const dk = ma && mb ? mb.co2e_kg.p50 - ma.co2e_kg.p50 : null;
+                    const cls = (d: number | null) => (d === null || !Number.isFinite(d) || Math.abs(d) < 1e-9 ? "text-ink-500" : d < 0 ? "text-better-700" : "text-worse-700");
+                    const txt = (d: number | null, unit: string) => (d === null ? "—" : Number.isFinite(d) && Math.abs(d) < 1e-9 ? "no change" : formatSignedValue(d, unit));
                     return (
                       <tr key={module} className="border-t border-ink-100">
-                        <th scope="row" className="py-1.5 pr-3 text-left font-medium text-ink-800">{moduleLabel(module)}</th>
-                        <td className={`py-1.5 text-right tabular ${cls(dc)}`}>{dc === null ? "—" : Math.abs(dc) < 1e-9 ? "no change" : formatSignedValue(dc, "usd")}</td>
-                        <td className={`py-1.5 text-right tabular ${cls(dk)}`}>{dk === null ? "—" : Math.abs(dk) < 1e-9 ? "no change" : formatSignedValue(dk, "kg_co2e")}</td>
+                        <th scope="row" className="py-1.5 pr-3 text-left font-medium text-ink-800">
+                          {moduleLabel(module)}
+                        </th>
+                        <td className={`py-1.5 text-right tabular ${cls(dc)}`}>{txt(dc, "usd")}</td>
+                        <td className={`py-1.5 text-right tabular ${cls(dk)}`}>{txt(dk, "kg_co2e")}</td>
                       </tr>
                     );
                   })}

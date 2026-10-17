@@ -16,7 +16,7 @@ import { ProvenanceDrawer, type ProvenanceTarget } from "./components/Provenance
 import { SiteMap } from "./components/SiteMap";
 import { SupplyPanel } from "./components/SupplyPanel";
 import { VersionsPanel } from "./components/VersionsPanel";
-import { leversEqual, useScenarioCompute } from "./hooks/useScenarioCompute";
+import { useScenarioCompute } from "./hooks/useScenarioCompute";
 import { METRICS } from "./metrics";
 
 function describeLevers(l: Levers): string[] {
@@ -31,18 +31,25 @@ function describeLevers(l: Levers): string[] {
   return out;
 }
 
-function SaveDialog({ open, onClose, onSave, saving, defaultName }: {
+type SaveMode = "new" | "version";
+
+function SaveDialog({ open, onClose, onSave, saving, defaultName, base }: {
   open: boolean;
   onClose: () => void;
-  onSave: (name: string) => void;
+  onSave: (name: string, mode: SaveMode) => void;
   saving: boolean;
   defaultName: string;
+  /** the selected saved scenario, offered as the base for a new version */
+  base: SavedScenario | null;
 }) {
   const id = useId();
   const [name, setName] = useState(defaultName);
+  const [mode, setMode] = useState<SaveMode>("new");
   useEffect(() => {
-    if (open) setName(defaultName);
-  }, [open, defaultName]);
+    if (!open) return;
+    setMode(base ? "version" : "new");
+    setName(base ? base.name : defaultName);
+  }, [open, defaultName, base]);
   return (
     <Modal
       open={open}
@@ -54,7 +61,7 @@ function SaveDialog({ open, onClose, onSave, saving, defaultName }: {
             Cancel
           </button>
           <button type="submit" form={`${id}-form`} className="btn-primary" disabled={saving || !name.trim()} data-testid="save-confirm">
-            {saving ? "Saving…" : "Save"}
+            {saving ? "Saving…" : mode === "version" && base ? `Save as v${base.version + 1}` : "Save"}
           </button>
         </>
       }
@@ -63,14 +70,30 @@ function SaveDialog({ open, onClose, onSave, saving, defaultName }: {
         id={`${id}-form`}
         onSubmit={(e) => {
           e.preventDefault();
-          if (name.trim()) onSave(name.trim());
+          if (name.trim()) onSave(name.trim(), mode);
         }}
       >
+        {base && (
+          <fieldset className="mb-3 space-y-1.5">
+            <legend className="label mb-1">Save as</legend>
+            <label className="flex items-start gap-2 text-sm">
+              <input type="radio" name={`${id}-mode`} className="mt-0.5 accent-accent-700" checked={mode === "version"} onChange={() => setMode("version")} />
+              <span>
+                New version of <strong>{base.name}</strong> (v{base.version} → v{base.version + 1})
+                <span className="block text-xs text-ink-500">v{base.version} stays unchanged{base.status !== "draft" ? ` — it is ${base.status} and immutable` : ""}.</span>
+              </span>
+            </label>
+            <label className="flex items-start gap-2 text-sm">
+              <input type="radio" name={`${id}-mode`} className="mt-0.5 accent-accent-700" checked={mode === "new"} onChange={() => setMode("new")} data-testid="save-mode-new" />
+              <span>A new, separate scenario</span>
+            </label>
+          </fieldset>
+        )}
         <label htmlFor={id} className="label">
           Name
         </label>
-        <input id={id} className="input mt-1" value={name} onChange={(e) => setName(e.target.value)} maxLength={120} data-testid="save-name" />
-        <p className="mt-2 text-xs text-ink-500">Saved with the current levers, result and parameter-set version. Saving again with the same name creates a new version.</p>
+        <input id={id} className="input mt-1" value={name} onChange={(e) => setName(e.target.value)} maxLength={200} data-testid="save-name" />
+        <p className="mt-2 text-xs text-ink-500">Saved with the current levers, the computed result and the parameter-set version, as a draft you can submit for approval.</p>
       </form>
     </Modal>
   );
@@ -163,7 +186,6 @@ export function ScenarioPage() {
   const { baseline, current, computing } = compute;
 
   const selected = scenarios.find((s) => s.id === selectedId) ?? null;
-  const driversScenarioId = selected && leversEqual(selected.levers, levers) ? selected.id : null;
 
   const select = (id: string | null) => {
     const next = new URLSearchParams(search);
@@ -172,11 +194,14 @@ export function ScenarioPage() {
     setSearch(next, { replace: true });
   };
 
-  const save = async (name: string) => {
+  const save = async (name: string, mode: SaveMode) => {
     if (!design) return;
     setSaving(true);
     try {
-      const s = await api.saveScenario({ design_id: design.id, name, levers });
+      const s =
+        mode === "version" && selected
+          ? await api.newVersion(selected.id, { levers, name })
+          : await api.saveScenario({ design_id: design.id, name, levers });
       toast.push("success", `Saved “${s.name}” v${s.version}`);
       setSaveOpen(false);
       refreshScenarios();
@@ -327,7 +352,7 @@ export function ScenarioPage() {
               selectedId={selectedId}
               onSelect={select}
               onLoadLevers={(s) => {
-                setLevers(s.levers);
+                if (s.levers) setLevers(s.levers);
                 select(s.id);
               }}
               onRefresh={refreshScenarios}
@@ -336,11 +361,12 @@ export function ScenarioPage() {
         </div>
       </div>
 
-      <ProvenanceDrawer target={drawer} result={current} scenarioId={driversScenarioId} onClose={() => setDrawer(null)} />
+      <ProvenanceDrawer target={drawer} result={current} designId={design.id} levers={current?.levers ?? levers} onClose={() => setDrawer(null)} />
       <SaveDialog
         open={saveOpen}
         onClose={() => setSaveOpen(false)}
-        onSave={(n) => void save(n)}
+        onSave={(n, m) => void save(n, m)}
+        base={selected}
         saving={saving}
         defaultName={leverSummary.length ? `Scenario — ${leverSummary.slice(0, 2).join(", ")}` : "Baseline"}
       />

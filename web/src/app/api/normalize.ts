@@ -3,9 +3,13 @@
  * themselves are passed through unchanged; only envelopes (lists, wrappers, optional
  * extensions) are adapted. Unknown or missing values become null / [] — never invented numbers.
  */
-import type { ApprovalRequest, Levers, MetricRange, Signature, TrialDesign, Visit } from "../contracts";
+import type { ApprovalRequest, Levers, MetricRange, TrialDesign, Visit } from "../contracts";
 import type {
+  ApprovalView,
+  CompareResult,
+  DesignSummary,
   Driver,
+  SignatureView,
   ExtractionCandidate,
   ForecastDetail,
   ImportCtgovResponse,
@@ -143,22 +147,41 @@ export function normalizeScenarioResult(data: unknown): ScenarioResultX {
 }
 
 const STATUSES: ScenarioStatus[] = ["draft", "submitted", "approved", "rejected"];
+const HEADLINE = ["cost_usd", "site_staff_hours", "patient_travel_hours", "co2e_kg", "duration_months", "drug_waste_share"] as const;
+
+function metricMap(v: unknown): Record<string, MetricRange> {
+  const out: Record<string, MetricRange> = {};
+  if (isObj(v)) for (const [k, r] of Object.entries(v)) if (isObj(r) && typeof r.unit === "string") out[k] = r as unknown as MetricRange;
+  return out;
+}
 
 export function normalizeSavedScenario(data: unknown): SavedScenario {
   const d = isObj(data) ? (isObj(data.scenario) ? data.scenario : data) : {};
   const status = STATUSES.includes(d.status as ScenarioStatus) ? (d.status as ScenarioStatus) : "draft";
+  const result = isObj(d.result) ? normalizeScenarioResult(d.result) : null;
+  let metrics = metricMap(d.metrics);
+  if (!Object.keys(metrics).length && result) {
+    metrics = Object.fromEntries(HEADLINE.map((k) => [k, result[k]]));
+  }
+  const approval = isApproval(d.approval) ? normalizeApproval(d.approval) : null;
   return {
     id: String(d.id ?? ""),
-    design_id: String(d.design_id ?? ""),
-    name: str(d.name) ?? "Untitled scenario",
+    lineage_id: str(d.lineage_id) ?? String(d.id ?? ""),
     version: num(d.version) ?? 1,
-    levers: normalizeLevers(d.levers),
-    result: isObj(d.result) ? normalizeScenarioResult(d.result) : null,
-    parameter_set_version: str(d.parameter_set_version),
-    author: str(d.author) ?? "unknown",
+    parent_id: str(d.parent_id),
+    name: str(d.name) ?? "Untitled scenario",
+    design_id: String(d.design_id ?? ""),
+    design_version: num(d.design_version),
     status,
+    author: str(d.author) ?? "unknown",
     created_at: str(d.created_at),
-    approval_id: str(d.approval_id) ?? (isObj(d.approval) ? str(d.approval.id) : null),
+    parameter_set_version: str(d.parameter_set_version),
+    record_hash: str(d.record_hash),
+    metrics,
+    levers: isObj(d.levers) ? normalizeLevers(d.levers) : null,
+    result,
+    approval_id: str(d.approval_id) ?? approval?.id ?? null,
+    approval,
   };
 }
 
@@ -166,15 +189,48 @@ function isApproval(v: unknown): v is ApprovalRequest {
   return isObj(v) && typeof v.id === "string" && Array.isArray(v.required_meanings);
 }
 
-export function normalizeApproval(data: unknown): ApprovalRequest {
+export function normalizeApproval(data: unknown): ApprovalView {
   const d = isObj(data) ? data : {};
   const candidate = isApproval(d) ? d : isApproval(d.approval) ? d.approval : isApproval(d.approval_request) ? d.approval_request : null;
   if (!candidate) {
     throw new Error("Unexpected approval response shape");
   }
   return {
-    ...candidate,
-    signatures: Array.isArray(candidate.signatures) ? (candidate.signatures as Signature[]) : [],
+    ...(candidate as unknown as ApprovalView),
+    signatures: Array.isArray(candidate.signatures) ? (candidate.signatures as SignatureView[]) : [],
+  };
+}
+
+export function normalizeDesignSummary(v: unknown): DesignSummary | null {
+  if (!isObj(v) || typeof v.id !== "string") return null;
+  const sites = Array.isArray(v.sites) ? (v.sites as Array<{ country?: string }>) : null;
+  return {
+    id: v.id,
+    version: num(v.version) ?? 1,
+    title: str(v.title) ?? v.id,
+    source: str(v.source) ?? "unknown",
+    registry_id: str(v.registry_id),
+    phase: str(v.phase),
+    enrollment_target: num(v.enrollment_target) ?? 0,
+    duration_months: num(v.duration_months) ?? 0,
+    site_count: num(v.site_count) ?? sites?.length ?? 0,
+    visit_count: num(v.visit_count) ?? (Array.isArray(v.visits) ? v.visits.length : 0),
+    countries: strList(v.countries).length ? strList(v.countries) : [...new Set((sites ?? []).map((s) => s.country ?? ""))].filter(Boolean),
+    drug_type: str(v.drug_type) ?? "unknown",
+    missing_fields: strList(v.missing_fields),
+    created_at: str(v.created_at),
+  };
+}
+
+export function normalizeCompare(data: unknown): CompareResult {
+  const d = isObj(data) ? data : {};
+  return {
+    deltas: metricMap(d.deltas),
+    a_metrics: metricMap(d.a_metrics),
+    b_metrics: metricMap(d.b_metrics),
+    same_parameter_set: d.same_parameter_set !== false,
+    parameter_set_version: str(d.parameter_set_version),
+    warnings: strList(d.warnings),
   };
 }
 
@@ -187,7 +243,7 @@ export function normalizeDrivers(data: unknown): Driver[] {
     } else if (isObj(r)) {
       const id = str(r.parameter_id) ?? str(r.id) ?? str(r.parameter);
       const share = num(r.share) ?? num(r.variance_share) ?? num(r.contribution);
-      if (id && share !== null) out.push({ parameter_id: id, share });
+      if (id && share !== null) out.push({ parameter_id: id, share, label: str(r.label), unit: str(r.unit) });
     }
   }
   return out.slice(0, 5);

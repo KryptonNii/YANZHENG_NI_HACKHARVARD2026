@@ -20,6 +20,13 @@ class ResizeObserverStub {
 }
 (globalThis as unknown as { ResizeObserver: typeof ResizeObserverStub }).ResizeObserver ??= ResizeObserverStub;
 
+// jsdom has no layout, so Recharts warns that every chart is 0×0; that noise hides real warnings.
+const warn = console.warn.bind(console);
+console.warn = (...args: unknown[]) => {
+  if (typeof args[0] === "string" && args[0].includes("width(0) and height(0)")) return;
+  warn(...args);
+};
+
 // jsdom has no scrollIntoView
 if (!Element.prototype.scrollIntoView) {
   Element.prototype.scrollIntoView = function scrollIntoView() {};

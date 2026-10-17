@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import type { ApprovalRequest } from "@/app/contracts";
 import { api, isAbort } from "@/app/api/client";
-import type { SavedScenario } from "@/app/api/types";
+import type { ApprovalView, SavedScenario } from "@/app/api/types";
 import { formatUtc, formatValue } from "@/app/format";
 import { displayName } from "@/app/identity";
 import { useToast } from "@/app/toast";
 import { Badge, EmptyState, Spinner } from "@/app/ui";
+import { isKnownRange } from "../metrics";
 import { ApprovalPanel } from "./ApprovalPanel";
 
 export function ScenarioStatusChip({ status }: { status: SavedScenario["status"] }) {
@@ -40,52 +40,53 @@ export function VersionsPanel({
 }) {
   const toast = useToast();
   const [compareIds, setCompareIds] = useState<string[]>([]);
-  const [approval, setApproval] = useState<ApprovalRequest | null>(null);
-  const [approvalLoading, setApprovalLoading] = useState(false);
+  const [full, setFull] = useState<SavedScenario | null>(null);
+  const [approval, setApproval] = useState<ApprovalView | null>(null);
+  const [loadingFull, setLoadingFull] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-  const selected = scenarios.find((s) => s.id === selectedId) ?? null;
+  const summary = scenarios.find((s) => s.id === selectedId) ?? null;
+  const statusKey = summary?.status;
 
-  const loadApproval = useCallback(
-    async (s: SavedScenario, signal?: AbortSignal) => {
-      if (s.status === "draft") {
+  const loadFull = useCallback(async (id: string, signal?: AbortSignal) => {
+    setLoadingFull(true);
+    try {
+      const s = await api.getScenario(id, { signal, silent: true });
+      setFull(s);
+      if (s.approval) setApproval(s.approval);
+      else if (s.approval_id) setApproval(await api.getApproval(s.approval_id, { signal, silent: true }));
+      else setApproval(null);
+    } catch (err) {
+      if (!isAbort(err)) {
+        setFull(null);
         setApproval(null);
-        return;
       }
-      setApprovalLoading(true);
-      try {
-        if (s.approval_id) {
-          setApproval(await api.getApproval(s.approval_id, { signal, silent: true }));
-        } else {
-          const all = await api.listApprovals({ signal, silent: true });
-          const mine = all.filter((a) => a.record_type === "scenario" && a.record_id === s.id);
-          setApproval(mine[mine.length - 1] ?? null);
-        }
-      } catch (err) {
-        if (!isAbort(err)) setApproval(null);
-      } finally {
-        setApprovalLoading(false);
-      }
-    },
-    [],
-  );
+    } finally {
+      setLoadingFull(false);
+    }
+  }, []);
 
   useEffect(() => {
-    if (!selected) {
+    if (!selectedId) {
+      setFull(null);
       setApproval(null);
       return;
     }
     const ctrl = new AbortController();
-    void loadApproval(selected, ctrl.signal);
+    void loadFull(selectedId, ctrl.signal);
     return () => ctrl.abort();
-  }, [selected, loadApproval]);
+    // reload when the list reports a new status for the selected scenario
+  }, [selectedId, statusKey, loadFull]);
+
+  const selected = full ?? summary;
 
   const submit = async () => {
     if (!selected) return;
     setSubmitting(true);
     try {
-      const a = await api.submitScenario(selected.id);
-      setApproval(a);
-      toast.push("success", "Submitted for approval", `${selected.name} v${selected.version} is now locked; edits create a new version.`);
+      const s = await api.submitScenario(selected.id);
+      setFull(s);
+      setApproval(s.approval);
+      toast.push("success", "Submitted for approval", `${s.name} v${s.version} is now locked; changes create a new version.`);
       onRefresh();
     } catch {
       // toast already shown by the client
@@ -94,8 +95,16 @@ export function VersionsPanel({
     }
   };
 
-  const toggleCompare = (id: string) =>
-    setCompareIds((ids) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids.slice(-1), id]));
+  const loadLevers = async (s: SavedScenario) => {
+    try {
+      const fullRow = s.levers ? s : await api.getScenario(s.id);
+      onLoadLevers(fullRow);
+    } catch {
+      // toast shown by the client
+    }
+  };
+
+  const toggleCompare = (id: string) => setCompareIds((ids) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids.slice(-1), id]));
 
   return (
     <section className="card p-4" aria-labelledby="versions-title" data-testid="versions-panel">
@@ -117,61 +126,74 @@ export function VersionsPanel({
       ) : scenarios.length === 0 ? (
         <EmptyState title="No saved scenarios yet">Use “Save scenario” to keep this lever set as a version you can compare and submit.</EmptyState>
       ) : (
-        <div className="overflow-x-auto">
+        <div className="max-h-72 overflow-auto">
           <table className="w-full text-sm" data-testid="versions-table">
             <thead>
               <tr className="text-left text-xs uppercase tracking-wide text-ink-500">
-                <th scope="col" className="w-8 pb-1"><span className="sr-only">Compare</span></th>
+                <th scope="col" className="w-8 pb-1">
+                  <span className="sr-only">Compare</span>
+                </th>
                 <th scope="col" className="pb-1 font-semibold">Scenario</th>
                 <th scope="col" className="pb-1 font-semibold">Author</th>
                 <th scope="col" className="pb-1 text-right font-semibold">Cost P50</th>
                 <th scope="col" className="pb-1 font-semibold">Status</th>
-                <th scope="col" className="pb-1"><span className="sr-only">Actions</span></th>
+                <th scope="col" className="pb-1">
+                  <span className="sr-only">Actions</span>
+                </th>
               </tr>
             </thead>
             <tbody>
-              {scenarios.map((s) => (
-                <tr key={s.id} className={`border-t border-ink-100 ${s.id === selectedId ? "bg-accent-50/60" : ""}`}>
-                  <td className="py-1.5">
-                    <input
-                      type="checkbox"
-                      className="h-4 w-4 accent-accent-700"
-                      aria-label={`Select ${s.name} v${s.version} for comparison`}
-                      checked={compareIds.includes(s.id)}
-                      onChange={() => toggleCompare(s.id)}
-                    />
-                  </td>
-                  <td className="py-1.5">
-                    <button type="button" className="text-left font-semibold text-ink-900 hover:underline" onClick={() => onSelect(s.id)}>
-                      {s.name} <span className="font-normal text-ink-500">v{s.version}</span>
-                    </button>
-                    <span className="block text-xs text-ink-500">{formatUtc(s.created_at)}</span>
-                  </td>
-                  <td className="py-1.5 text-ink-700">{displayName(s.author)}</td>
-                  <td className="py-1.5 text-right tabular text-ink-800">{s.result ? formatValue(s.result.cost_usd.p50, "usd") : "—"}</td>
-                  <td className="py-1.5">
-                    <ScenarioStatusChip status={s.status} />
-                  </td>
-                  <td className="py-1.5 text-right">
-                    <button type="button" className="btn-ghost px-2 py-1 text-xs" onClick={() => onLoadLevers(s)}>
-                      Load levers
-                    </button>
-                  </td>
-                </tr>
-              ))}
+              {scenarios.map((s) => {
+                const cost = s.metrics.cost_usd;
+                return (
+                  <tr key={s.id} className={`border-t border-ink-100 ${s.id === selectedId ? "bg-accent-50/60" : ""}`}>
+                    <td className="py-1.5">
+                      <input
+                        type="checkbox"
+                        className="h-4 w-4 accent-accent-700"
+                        aria-label={`Select ${s.name} v${s.version} for comparison`}
+                        checked={compareIds.includes(s.id)}
+                        onChange={() => toggleCompare(s.id)}
+                      />
+                    </td>
+                    <td className="py-1.5">
+                      <button type="button" className="text-left font-semibold text-ink-900 hover:underline" onClick={() => onSelect(s.id)} aria-pressed={s.id === selectedId}>
+                        {s.name} <span className="font-normal text-ink-500">v{s.version}</span>
+                      </button>
+                      <span className="block text-xs text-ink-500">{formatUtc(s.created_at)}</span>
+                    </td>
+                    <td className="py-1.5 text-ink-700">{displayName(s.author)}</td>
+                    <td className="py-1.5 text-right tabular text-ink-800">{cost && isKnownRange(cost) ? formatValue(cost.p50, "usd") : cost ? "unknown" : "—"}</td>
+                    <td className="py-1.5">
+                      <ScenarioStatusChip status={s.status} />
+                    </td>
+                    <td className="py-1.5 text-right">
+                      <button type="button" className="btn-ghost px-2 py-1 text-xs" onClick={() => void loadLevers(s)}>
+                        Load levers
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
       )}
 
       {selected && (
-        <div className="mt-4 grid gap-3 border-t border-ink-100 pt-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]" data-testid="selected-scenario">
+        <div className="mt-4 grid gap-3 border-t border-ink-100 pt-4 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]" data-testid="selected-scenario">
           <div>
             <p className="text-sm font-semibold text-ink-900">
-              {selected.name} <span className="font-normal text-ink-500">v{selected.version}</span>
+              {selected.name} <span className="font-normal text-ink-500">v{selected.version}</span> <ScenarioStatusChip status={selected.status} />
             </p>
             <p className="mt-0.5 text-xs text-ink-500">
-              Parameter set <code className="font-mono">{selected.parameter_set_version ?? "—"}</code> · {selected.id.slice(0, 8)}
+              Parameter set <code className="font-mono">{selected.parameter_set_version ?? "—"}</code>
+              {selected.record_hash && (
+                <>
+                  {" "}
+                  · record sha256 <code className="font-mono">{selected.record_hash.slice(0, 12)}…</code>
+                </>
+              )}
             </p>
             <div className="mt-3 flex flex-wrap gap-2">
               {selected.status === "draft" && (
@@ -187,11 +209,11 @@ export function VersionsPanel({
               </a>
             </div>
             {selected.status !== "draft" && (
-              <p className="mt-2 text-xs text-ink-500">Submitted scenarios are immutable; changing levers and saving creates a new version.</p>
+              <p className="mt-2 text-xs text-ink-500">Submitted scenarios are immutable. Saving changed levers creates a new version.</p>
             )}
           </div>
           <div>
-            {approvalLoading && !approval ? (
+            {loadingFull && !approval ? (
               <Spinner label="Loading approval" />
             ) : approval ? (
               <ApprovalPanel

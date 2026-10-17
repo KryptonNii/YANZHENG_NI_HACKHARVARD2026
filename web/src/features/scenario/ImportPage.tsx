@@ -2,7 +2,7 @@ import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import type { TrialDesign, TrialDesignDrugType, Visit } from "@/app/contracts";
 import { ApiError, api, isAbort } from "@/app/api/client";
-import type { ProtocolExtractionResponse } from "@/app/api/types";
+import type { DesignSummary, ProtocolExtractionResponse } from "@/app/api/types";
 import { setLastDesignId } from "@/app/lastDesign";
 import { useToast } from "@/app/toast";
 import { Badge, Modal, SectionTitle, Spinner } from "@/app/ui";
@@ -41,7 +41,7 @@ function EditFactsDialog({ design, open, onClose, onSaved }: { design: TrialDesi
     if ((phase || null) !== design.phase) changed.add("phase");
     setSaving(true);
     try {
-      const updated = await api.updateDesign({
+      const updated = await api.saveDesign({
         ...design,
         enrollment_target: Math.round(e),
         duration_months: d,
@@ -119,7 +119,7 @@ export function ImportPage() {
   const [design, setDesign] = useState<TrialDesign | null>(null);
   const [rawCached, setRawCached] = useState(false);
   const [warnings, setWarnings] = useState<string[]>([]);
-  const [recent, setRecent] = useState<TrialDesign[]>([]);
+  const [recent, setRecent] = useState<DesignSummary[]>([]);
   const [editOpen, setEditOpen] = useState(false);
   const [extraction, setExtraction] = useState<ProtocolExtractionResponse | null>(null);
   const [extracting, setExtracting] = useState(false);
@@ -132,7 +132,7 @@ export function ImportPage() {
     const ctrl = new AbortController();
     api
       .listDesigns({ signal: ctrl.signal, silent: true })
-      .then((ds) => setRecent(ds.slice(-6).reverse()))
+      .then((ds) => setRecent(ds.slice(0, 6)))
       .catch(() => setRecent([]));
     return () => ctrl.abort();
   }, [design?.id]);
@@ -217,7 +217,7 @@ export function ImportPage() {
     if (!design) return;
     setApplying(true);
     try {
-      const updated = await api.updateDesign({ ...design, visits, missing_fields: design.missing_fields.filter((f) => f !== "visits") });
+      const updated = await api.saveDesign({ ...design, visits, missing_fields: design.missing_fields.filter((f) => f !== "visits") });
       showDesign(updated);
       setExtraction(null);
       toast.push("success", `Applied ${visits.length} visits to the design`, `${stats.accepted} accepted · ${stats.edited} edited · ${stats.rejected} rejected`);
@@ -295,7 +295,7 @@ export function ImportPage() {
                     disabled={importing !== null}
                     title={t.note}
                   >
-                    <span className="font-mono text-xs text-ink-500">{t.registryId}</span> {t.label}
+                    <span className="whitespace-nowrap font-mono text-xs text-ink-500">{t.registryId}</span> {t.label}
                   </button>
                 ))}
                 {recent
@@ -305,10 +305,20 @@ export function ImportPage() {
                       key={d.id}
                       type="button"
                       className="btn-secondary max-w-xs rounded-full py-1.5"
-                      onClick={() => showDesign(d)}
+                      onClick={() => {
+                        api
+                          .getDesign(d.id)
+                          .then((full) => {
+                            setWarnings([]);
+                            setRawCached(false);
+                            setExtraction(null);
+                            showDesign(full);
+                          })
+                          .catch(() => undefined);
+                      }}
                       title={d.title}
                     >
-                      {d.registry_id && <span className="font-mono text-xs text-ink-500">{d.registry_id}</span>}
+                      {d.registry_id && <span className="whitespace-nowrap font-mono text-xs text-ink-500">{d.registry_id}</span>}
                       <span className="truncate">{d.title}</span>
                     </button>
                   ))}

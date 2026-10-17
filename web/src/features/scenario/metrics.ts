@@ -23,6 +23,14 @@ export const METRICS: MetricDef[] = [
 
 export const METRIC_BY_KEY = Object.fromEntries(METRICS.map((m) => [m.key, m])) as Record<MetricKey, MetricDef>;
 
+/**
+ * §2 rule 2: unknown ≠ zero. The engine reports a metric it cannot compute (missing input) as
+ * NaN, which arrives as null (or a string) in JSON; such a range is shown as "Unknown".
+ */
+export function isKnownRange(r: MetricRange | null | undefined): r is MetricRange {
+  return !!r && [r.p10, r.p50, r.p90].every((v) => typeof v === "number" && Number.isFinite(v));
+}
+
 export interface Delta {
   abs: number;
   pct: number;

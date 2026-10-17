@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import type { MetricRange, Parameter, ProvenanceItem } from "@/app/contracts";
+import type { Levers, MetricRange, Parameter, ProvenanceItem } from "@/app/contracts";
 import { api, isAbort } from "@/app/api/client";
 import type { Driver, ScenarioResultX } from "@/app/api/types";
 import { formatRange, formatUtc, formatValue } from "@/app/format";
@@ -126,7 +126,7 @@ function Drivers({ drivers, library }: { drivers: Driver[]; library: Map<string,
         <li key={d.parameter_id} className="text-sm">
           <div className="flex justify-between gap-2">
             <span className="text-ink-800">
-              <span className="tabular text-ink-500">{i + 1}.</span> {library?.get(d.parameter_id)?.label ?? d.parameter_id}
+              <span className="tabular text-ink-500">{i + 1}.</span> {d.label ?? library?.get(d.parameter_id)?.label ?? d.parameter_id}
             </span>
             <span className="tabular font-semibold text-ink-900">{Math.round(d.share * 100)}%</span>
           </div>
@@ -150,13 +150,15 @@ const DRIVER_METRIC: Record<string, string> = {
 export function ProvenanceDrawer({
   target,
   result,
-  scenarioId,
+  designId,
+  levers,
   onClose,
 }: {
   target: ProvenanceTarget | null;
   result: ScenarioResultX | null;
-  /** saved scenario id, needed for the drivers endpoint */
-  scenarioId: string | null;
+  /** design + levers of the shown result, for the top-drivers ranking */
+  designId: string | null;
+  levers: Levers | null;
   onClose: () => void;
 }) {
   const lib = useParamLibrary();
@@ -179,27 +181,17 @@ export function ProvenanceDrawer({
   }, [target, result]);
 
   const [drivers, setDrivers] = useState<Driver[] | null>(null);
-  const [driversState, setDriversState] = useState<"idle" | "loading" | "error" | "unavailable">("idle");
+  const [driversState, setDriversState] = useState<"idle" | "loading" | "error">("idle");
   const metricForDrivers = view?.metric ? DRIVER_METRIC[view.metric] : undefined;
+  const leversKey = JSON.stringify(levers);
 
   useEffect(() => {
     setDrivers(null);
-    if (!metricForDrivers) return;
-    // Drivers may come inline with the result (proposed extension) or from the saved-scenario endpoint.
-    const inline = (result as (ScenarioResultX & { drivers?: Record<string, Driver[]> }) | null)?.drivers?.[metricForDrivers];
-    if (inline?.length) {
-      setDrivers(inline.slice(0, 5));
-      setDriversState("idle");
-      return;
-    }
-    if (!scenarioId) {
-      setDriversState("unavailable");
-      return;
-    }
+    if (!metricForDrivers || !designId || !levers) return;
     const ctrl = new AbortController();
     setDriversState("loading");
     api
-      .drivers(scenarioId, metricForDrivers, { signal: ctrl.signal, silent: true })
+      .drivers(designId, levers, metricForDrivers, { signal: ctrl.signal, silent: true })
       .then((d) => {
         setDrivers(d);
         setDriversState("idle");
@@ -208,7 +200,9 @@ export function ProvenanceDrawer({
         if (!isAbort(err)) setDriversState("error");
       });
     return () => ctrl.abort();
-  }, [metricForDrivers, scenarioId, result]);
+    // leversKey stands in for the levers object
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [metricForDrivers, designId, leversKey]);
 
   const paramIds = useMemo(() => [...new Set((view?.items ?? []).flatMap((i) => i.parameter_ids))], [view]);
 
@@ -269,8 +263,6 @@ export function ProvenanceDrawer({
                 <Drivers drivers={drivers} library={library} />
               ) : driversState === "loading" ? (
                 <Spinner label="Ranking parameters" />
-              ) : driversState === "unavailable" ? (
-                <p className="text-sm text-ink-500">Save this scenario to rank the top-5 parameters by contribution to variance.</p>
               ) : driversState === "error" ? (
                 <p className="text-sm text-worse-800">Could not load the top drivers.</p>
               ) : (
