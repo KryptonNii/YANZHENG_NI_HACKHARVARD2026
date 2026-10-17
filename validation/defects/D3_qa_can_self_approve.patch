@@ -1,0 +1,12 @@
+diff --git a/api/trialpilot_api/compliance/workflow.py b/api/trialpilot_api/compliance/workflow.py
+--- a/api/trialpilot_api/compliance/workflow.py
++++ b/api/trialpilot_api/compliance/workflow.py
+@@ -166,7 +166,7 @@
+     required: list[str] = json.loads(req["required_meanings"])
+     sigs = esign.list_signatures(approval_id=request_id, store=st)
+ 
+-    if meaning in SOD_MEANINGS and user.username == req["author"]:
++    if meaning in SOD_MEANINGS and user.username == req["author"] and user.role != "qa":
+         raise _deny(st, user, req, "self_approval_forbidden", 403,
+                     "Authors can't review or approve their own work.")
+     if meaning not in required:

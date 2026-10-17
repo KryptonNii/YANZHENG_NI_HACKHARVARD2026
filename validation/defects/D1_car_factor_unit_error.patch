@@ -1,0 +1,16 @@
+diff --git a/data/params/emission_factors.yaml b/data/params/emission_factors.yaml
+--- a/data/params/emission_factors.yaml
++++ b/data/params/emission_factors.yaml
+@@ -26,9 +26,9 @@
+   # ------------------------------------------------------------------ passenger travel (direct)
+   - id: ef.travel.car.average_km
+     label: "Average car, unknown fuel, per vehicle-km"
+-    value_low: 0.16591
+-    value_mid: 0.16591
+-    value_high: 0.17067
++    value_low: 165.91
++    value_mid: 165.91
++    value_high: 170.67
+     unit: kg_co2e/km
+     source_title: "DESNZ GHG conversion factors 2026, sheet 'Passenger vehicles', Cars (by size) / Average car / Unknown / km, cell X54"
+     rationale: "2026 X54 = 0.16591; 2025 X54 = 0.16725; 2022 Y56 = 0.17067."

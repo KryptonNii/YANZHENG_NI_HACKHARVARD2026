@@ -1,0 +1,14 @@
+diff --git a/validation/requirements.yaml b/validation/requirements.yaml
+--- a/validation/requirements.yaml
++++ b/validation/requirements.yaml
+@@ -297,3 +297,10 @@
+     risk_rationale: An optimistic or edited report would misstate the validation outcome.
+     gxp: true
+     gxp_rationale: Validation summary report is a GxP record.
++  - id: URS-033
++    area: audit
++    text: The audit trail can be filtered by a UTC date range.
++    risk: M
++    risk_rationale: Inspectors need to see what changed in a given period.
++    gxp: true
++    gxp_rationale: Review of the audit trail.

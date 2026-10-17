@@ -1,0 +1,12 @@
+diff --git a/api/trialpilot_api/compliance/audit.py b/api/trialpilot_api/compliance/audit.py
+--- a/api/trialpilot_api/compliance/audit.py
++++ b/api/trialpilot_api/compliance/audit.py
+@@ -236,7 +236,7 @@
+     buf = io.StringIO()
+     writer = csv.writer(buf, lineterminator="\n")
+     writer.writerow(CSV_COLUMNS)
+-    for e in entries:
++    for e in entries[:-1]:
+         d = e.model_dump()
+         d["at"] = iso_utc(e.at)
+         writer.writerow(["" if d[c] is None else d[c] for c in CSV_COLUMNS])

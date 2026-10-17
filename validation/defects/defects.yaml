@@ -12,15 +12,15 @@ defects:
       kg_co2e/km.
     expected_stages: [unit test]
     old: |2-
-              value_low: 0.16591
-              value_mid: 0.16591
-              value_high: 0.17067
-              unit: kg_co2e/km
+          value_low: 0.16591
+          value_mid: 0.16591
+          value_high: 0.17067
+          unit: kg_co2e/km
     new: |2-
-              value_low: 165.91
-              value_mid: 165.91
-              value_high: 170.67
-              unit: kg_co2e/km
+          value_low: 165.91
+          value_mid: 165.91
+          value_high: 170.67
+          unit: kg_co2e/km
   - id: D2
     type: missing audit entry
     requirement: URS-015

@@ -1,0 +1,12 @@
+diff --git a/api/trialpilot_api/settings.py b/api/trialpilot_api/settings.py
+--- a/api/trialpilot_api/settings.py
++++ b/api/trialpilot_api/settings.py
+@@ -21,7 +21,7 @@
+     )
+ 
+     demo_offline: bool = Field(
+-        default=False,
++        default=True,
+         validation_alias=AliasChoices("DEMO_OFFLINE", "TP_DEMO_OFFLINE"),
+         description="No external network calls; every external dependency uses cached fixtures.",
+     )
