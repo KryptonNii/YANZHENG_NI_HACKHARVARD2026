@@ -1,0 +1,23 @@
+# tpv configuration. Paths are relative to the repository root.
+system: TrialPilot
+protocol_id: OQ-TP-001      # test protocol id; the approval record id adds the content hash
+report_id: VSR-TP-001       # validation summary report id
+change_record_prefix: CR-TP
+
+# Test suites `tpv execute` runs. runner "uv" = `uv run --project <project> pytest <tests>` with the
+# project's own venv (each package has its own pyproject); runner "python" = this interpreter.
+suites:
+  - {name: contracts, project: contracts, tests: tests, runner: uv}
+  - {name: engine, project: engine, tests: tests, runner: uv}
+  - {name: api, project: api, tests: tests, runner: uv}
+  - {name: validation, project: validation, tests: tests, runner: uv}
+  - {name: science, project: science, tests: tests, runner: uv}
+
+# Playwright end-to-end specs (annotated `// @req URS-xxx`). Executed only with `tpv execute --e2e`.
+e2e:
+  project: web
+  specs: [web/e2e]
+
+# Environment for every test run (offline: no network during validation).
+env:
+  DEMO_OFFLINE: "1"

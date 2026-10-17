@@ -1,0 +1,57 @@
+# Change control: which requirements a changed file can affect (used by `tpv impact`).
+# Globs are repo-relative, matched with fnmatch ("**" crosses directories). A file can map to many
+# components; files matching no component are reported as "unmapped" (decide manually).
+components:
+  - id: contracts
+    paths: ["contracts/trialpilot_contracts/**", "contracts/schema/**"]
+    requirements: [URS-003, URS-004, URS-006, URS-019]
+  - id: parameter-library
+    paths: ["data/params/**"]
+    requirements: [URS-003, URS-005, URS-008, URS-014]
+  - id: engine-model
+    paths: ["engine/trialpilot_engine/**"]
+    requirements: [URS-004, URS-005, URS-006, URS-007, URS-008, URS-009]
+  - id: engine-forecast-supply
+    paths: ["engine/trialpilot_engine/forecast.py", "engine/trialpilot_engine/supply.py"]
+    requirements: [URS-004, URS-007]
+  - id: importers
+    paths: ["api/trialpilot_api/importers/**", "data/fixtures/ctgov/**", "data/fixtures/protocols/**",
+            "data/fixtures/trials/**"]
+    requirements: [URS-001, URS-002, URS-029]
+  - id: api-core
+    paths: ["api/trialpilot_api/main.py", "api/trialpilot_api/db.py", "api/trialpilot_api/routes_*.py",
+            "api/trialpilot_api/sse.py"]
+    requirements: [URS-005, URS-009, URS-010, URS-015, URS-028]
+  - id: api-settings
+    paths: ["api/trialpilot_api/settings.py", ".env.example"]
+    requirements: [URS-029, URS-030]
+  - id: operations
+    paths: ["api/trialpilot_api/ops/**", "data/fixtures/ops/**"]
+    requirements: [URS-011, URS-012, URS-013, URS-015]
+  - id: compliance-audit
+    paths: ["api/trialpilot_api/compliance/audit.py", "api/trialpilot_api/compliance/store.py",
+            "api/trialpilot_api/compliance/hashing.py"]
+    requirements: [URS-015, URS-016, URS-017, URS-028]
+  - id: compliance-esign
+    paths: ["api/trialpilot_api/compliance/esign.py", "api/trialpilot_api/compliance/roles.py",
+            "api/trialpilot_api/compliance/config.py", "api/trialpilot_api/compliance/records.py"]
+    requirements: [URS-018, URS-019, URS-020, URS-023, URS-025, URS-030]
+  - id: compliance-workflow
+    paths: ["api/trialpilot_api/compliance/workflow.py", "api/trialpilot_api/compliance/routes.py"]
+    requirements: [URS-020, URS-021, URS-022, URS-023, URS-024]
+  - id: validation-toolkit
+    paths: ["validation/trialpilot_validation/**", "validation/requirements.yaml",
+            "validation/tpv_config.yaml"]
+    requirements: [URS-024, URS-025, URS-026, URS-027, URS-031, URS-032]
+  - id: science
+    paths: ["science/**"]
+    requirements: [URS-014]
+  - id: web-scenario
+    paths: ["web/src/features/scenario/**", "web/src/app/**"]
+    requirements: [URS-004, URS-006, URS-011]
+  - id: web-command
+    paths: ["web/src/features/command/**"]
+    requirements: [URS-011, URS-012, URS-013]
+  - id: web-compliance
+    paths: ["web/src/features/compliance/**"]
+    requirements: [URS-017, URS-019, URS-020, URS-021, URS-025, URS-027]

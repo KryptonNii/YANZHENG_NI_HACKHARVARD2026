@@ -11,13 +11,12 @@ with `TP_DEMO_PINS="alex.author=1234,sam.qa=5678"`. PINs are stored as argon2id 
 
 from __future__ import annotations
 
-import os
 from dataclasses import dataclass
 
 from argon2 import PasswordHasher
 from argon2.exceptions import InvalidHashError, VerificationError, VerifyMismatchError
 
-from .config import AI_ACTOR_PREFIX, pepper
+from .config import AI_ACTOR_PREFIX, env, pepper
 from .errors import ComplianceError
 from .hashing import sha256_hex
 from .store import Store, get_store
@@ -76,7 +75,7 @@ def can(role: str, action: str) -> bool:
 
 def _configured_pins() -> dict[str, str]:
     pins = {u.username: u.default_pin for u in DEMO_USERS}
-    raw = os.environ.get("TP_DEMO_PINS", "")
+    raw = env("TP_DEMO_PINS")
     for part in raw.split(","):
         if "=" in part:
             name, pin = part.split("=", 1)

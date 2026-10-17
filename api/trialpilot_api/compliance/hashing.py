@@ -9,7 +9,7 @@ from __future__ import annotations
 import hashlib
 import json
 from collections.abc import Callable
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -21,7 +21,7 @@ _ISO_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
 
 
 def _system_now() -> datetime:
-    return datetime.now(timezone.utc)
+    return datetime.now(UTC)
 
 
 _now: Callable[[], datetime] = _system_now
@@ -41,11 +41,11 @@ def iso_utc(dt: datetime) -> str:
     """ISO 8601 UTC with microseconds and a trailing `Z`. Naive datetimes are rejected."""
     if dt.tzinfo is None:
         raise ValueError("naive datetime: compliance timestamps must be timezone-aware UTC")
-    return dt.astimezone(timezone.utc).strftime(_ISO_FORMAT)
+    return dt.astimezone(UTC).strftime(_ISO_FORMAT)
 
 
 def parse_utc(value: str) -> datetime:
-    return datetime.strptime(value, _ISO_FORMAT).replace(tzinfo=timezone.utc)
+    return datetime.strptime(value, _ISO_FORMAT).replace(tzinfo=UTC)
 
 
 def _normalize(obj: Any) -> Any:

@@ -1,0 +1,40 @@
+[project]
+name = "trialpilot-validation"
+version = "0.1.0"
+description = "tpv - TrialPilot validation toolkit (generates the GxP validation package)"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+    "markdown>=3.11.1",
+    "PyYAML>=6.0",
+    "trialpilot-api",
+    "trialpilot-contracts",
+]
+
+[project.scripts]
+tpv = "trialpilot_validation.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["trialpilot_validation"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q -p trialpilot_validation.pytest_plugin"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP"]
+
+[tool.uv.sources]
+trialpilot-api = { path = "../api", editable = true }
+trialpilot-contracts = { path = "../contracts", editable = true }
+
+[dependency-groups]
+dev = ["pytest>=8.2", "ruff>=0.6"]

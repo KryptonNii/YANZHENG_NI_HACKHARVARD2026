@@ -1,0 +1,299 @@
+# User Requirements Specification (URS) for TrialPilot — input to `tpv`.
+# Each item: id (URS-NNN), text, area, risk H/M/L + rationale (scale defined in company_sop.md §4),
+# gxp (does a failure affect a GxP record, signature or decision?) + rationale.
+# Tests reference these ids: pytest `@pytest.mark.req("URS-015")`, Playwright `// @req URS-015`.
+document: URS
+id: URS-TP
+version: 1
+system: TrialPilot
+items:
+  # ---------------- Plan: scenario simulator ----------------
+  - id: URS-001
+    area: import
+    text: >-
+      The system imports a trial from ClinicalTrials.gov by NCT ID into a TrialDesign (sites, visits,
+      enrollment, duration) and lists every field it could not obtain in missing_fields.
+    risk: M
+    risk_rationale: Wrong or silently missing design facts propagate into every planning metric.
+    gxp: false
+    gxp_rationale: Planning input; no GxP record is created from it directly.
+  - id: URS-002
+    area: import
+    text: >-
+      Protocol-PDF extraction (LLM) returns candidate visits/procedures that a human must confirm before
+      they enter a TrialDesign; nothing extracted is applied automatically.
+    risk: H
+    risk_rationale: AI extraction errors would enter the design unnoticed if applied without review.
+    gxp: true
+    gxp_rationale: AI-generated content must stay a draft until a human accepts it (human in charge).
+  - id: URS-003
+    area: parameters
+    text: >-
+      Every parameter in the library has low/mid/high values and either a source (title, URL, year) or
+      assumption=true with a written rationale; invalid parameters are rejected at load.
+    risk: H
+    risk_rationale: An unsourced or mis-entered factor (e.g. a unit error) silently biases all results.
+    gxp: false
+    gxp_rationale: Affects decision support quality, not a GxP record.
+  - id: URS-004
+    area: engine
+    text: >-
+      Every computed metric (cost, site staff hours, patient travel hours, CO2e, duration, drug waste) is
+      reported as a P10/P50/P90 range with a unit; a missing input is reported as missing, never zeroed.
+    risk: H
+    risk_rationale: Point estimates or silent zeros overstate certainty and mislead trial design decisions.
+    gxp: false
+    gxp_rationale: Decision support output.
+  - id: URS-005
+    area: engine
+    text: >-
+      A computation is reproducible: the same design, levers, parameter-set version and seed give
+      identical results.
+    risk: H
+    risk_rationale: Approved scenarios must be re-creatable; non-determinism breaks review and audit.
+    gxp: true
+    gxp_rationale: An approved scenario is a signed record; its numbers must be reproducible.
+  - id: URS-006
+    area: engine
+    text: >-
+      Each metric exposes its provenance: formula id, resolved inputs, parameter ids (with versions and
+      sources) and assumptions used.
+    risk: M
+    risk_rationale: Without provenance a reviewer cannot check a number before signing.
+    gxp: false
+    gxp_rationale: Supports review; not itself a record.
+  - id: URS-007
+    area: engine
+    text: >-
+      Design levers (remote monitoring share, home/remote visits, local labs, on-demand drug supply,
+      removed procedures, excluded sites) change the affected metrics as documented in docs/model.md.
+    risk: M
+    risk_rationale: A lever with no or wrong effect gives a false trade-off picture.
+    gxp: false
+    gxp_rationale: Decision support output.
+  - id: URS-008
+    area: engine
+    text: >-
+      Carbon follows the Low Carbon Clinical Trials Group module framework (module ids as published);
+      drug_supply is flagged as an extension beyond the published method.
+    risk: M
+    risk_rationale: Non-standard module mapping makes footprints incomparable with published ones.
+    gxp: false
+    gxp_rationale: ESG reporting metric.
+  - id: URS-009
+    area: performance
+    text: Scenario compute with 2,000 Monte Carlo draws returns in under 300 ms at P50.
+    risk: L
+    risk_rationale: Slowness hurts usability but not correctness.
+    gxp: false
+    gxp_rationale: Usability only.
+  - id: URS-010
+    area: records
+    text: >-
+      Saved scenarios are versioned; a scenario that has been submitted for approval cannot be changed
+      (an edit creates a new version).
+    risk: H
+    risk_rationale: Changing a record after submission would make signatures meaningless.
+    gxp: true
+    gxp_rationale: Integrity of signed records (ALCOA+ — original, enduring).
+  # ---------------- Run: command center ----------------
+  - id: URS-011
+    area: operations
+    text: >-
+      Simulated operational data is labelled simulated in data (simulated=true), API responses and the UI
+      ("Simulated feed" badge).
+    risk: H
+    risk_rationale: Simulated data mistaken for real trial data would be a serious misrepresentation.
+    gxp: true
+    gxp_rationale: Data provenance must be unambiguous.
+  - id: URS-012
+    area: operations
+    text: >-
+      Alerts carry a severity, a plain-English summary, estimated impact as ranges (cost, CO2e, delay,
+      site hours) and recommended actions; every alert action (acknowledge, plan, dismiss with reason) is
+      audited.
+    risk: M
+    risk_rationale: Unexplained or unranged alerts lead to wrong prioritisation.
+    gxp: false
+    gxp_rationale: Operational decision support.
+  - id: URS-013
+    area: operations
+    text: >-
+      The effect of an intervention is estimated with difference-in-differences against control sites and
+      reported with a range and a verdict (likely worked / inconclusive / likely coincidence / no effect).
+    risk: M
+    risk_rationale: Attributing coincidence to an intervention misdirects future actions.
+    gxp: false
+    gxp_rationale: Operational decision support.
+  # ---------------- Prove: science check ----------------
+  - id: URS-014
+    area: science
+    text: >-
+      The science check reproduces the published CASPS and PRIMETIME trial footprints (BMJ Open 2024) and
+      reports the % difference per module against the published values.
+    risk: M
+    risk_rationale: The carbon model's credibility rests on reproducing published results.
+    gxp: false
+    gxp_rationale: Model verification evidence.
+  # ---------------- Prove: compliance controls ----------------
+  - id: URS-015
+    area: audit
+    text: >-
+      The audit trail records every data-changing action with actor, role, UTC timestamp, action, object,
+      before/after record hash and reason.
+    risk: H
+    risk_rationale: Missing audit entries make changes untraceable (21 CFR 11.10(e)).
+    gxp: true
+    gxp_rationale: Audit trail of GxP records.
+  - id: URS-016
+    area: audit
+    text: >-
+      The audit trail is append-only: the database rejects UPDATE and DELETE on audit entries and
+      signatures, and no application code path updates or deletes them.
+    risk: H
+    risk_rationale: An editable audit trail can hide record changes.
+    gxp: true
+    gxp_rationale: Audit trail integrity.
+  - id: URS-017
+    area: audit
+    text: >-
+      The audit trail is tamper-evident: a SHA-256 hash chain links every entry and chain verification
+      reports the first altered or missing entry.
+    risk: H
+    risk_rationale: Tampering below the application (raw SQL) must still be detectable.
+    gxp: true
+    gxp_rationale: Audit trail integrity.
+  - id: URS-018
+    area: esign
+    text: >-
+      Signing requires re-authentication with the signer's PIN (stored only as a peppered argon2 hash); a
+      wrong PIN is rejected, three consecutive failures lock signing for 5 minutes, and failures and
+      lockouts are audited.
+    risk: H
+    risk_rationale: Weak signer authentication allows signatures by the wrong person (21 CFR 11.200).
+    gxp: true
+    gxp_rationale: Electronic signature controls.
+  - id: URS-019
+    area: esign
+    text: >-
+      A signature records signer, printed name, UTC date/time and meaning, is bound to the hash of the
+      exact record signed, and its manifestation is shown with the record and in exports (21 CFR 11.50).
+    risk: H
+    risk_rationale: A signature without meaning/time/record binding is not attributable.
+    gxp: true
+    gxp_rationale: Electronic signature manifestation and linking (21 CFR 11.50, 11.70).
+  - id: URS-020
+    area: esign
+    text: >-
+      If a signed record changes afterwards, its signatures are shown as invalid and the record cannot be
+      signed further without resubmission.
+    risk: H
+    risk_rationale: Signatures must not carry over to content the signer never saw.
+    gxp: true
+    gxp_rationale: Signature/record linking (21 CFR 11.70).
+  - id: URS-021
+    area: workflow
+    text: The author of a record can never review, approve or reject their own record (segregation of duties).
+    risk: H
+    risk_rationale: Self-approval defeats independent review.
+    gxp: true
+    gxp_rationale: Approval controls.
+  - id: URS-022
+    area: workflow
+    text: >-
+      Approval steps are signed in the required order for each record type (e.g. reviewed then approved),
+      one person signs at most one step, and only QA gives the final approval.
+    risk: H
+    risk_rationale: Out-of-order or single-person approvals bypass review.
+    gxp: true
+    gxp_rationale: Approval controls.
+  - id: URS-023
+    area: access
+    text: >-
+      Permissions follow the role matrix in validation/ROLES.md; a user's role comes from the user
+      registry, never from the request, and mutations without an identity are rejected.
+    risk: H
+    risk_rationale: Trusting a client-supplied role would let anyone act as QA.
+    gxp: true
+    gxp_rationale: Access control (21 CFR 11.10(d), (g)).
+  - id: URS-024
+    area: validation
+    text: >-
+      A test protocol must be approved (exact version) before tpv executes it; tpv refuses otherwise and
+      says why.
+    risk: H
+    risk_rationale: Executing unapproved protocols produces evidence nobody agreed to.
+    gxp: true
+    gxp_rationale: Validation lifecycle control.
+  - id: URS-025
+    area: validation
+    text: >-
+      AI may draft prose but never writes results, evidence, counts or signatures; AI-drafted text is
+      stamped "DRAFT — requires human review" and AI actors cannot sign.
+    risk: H
+    risk_rationale: AI-written results or signatures would be fabricated evidence.
+    gxp: true
+    gxp_rationale: Humans stay accountable for GxP decisions.
+  - id: URS-026
+    area: validation
+    text: >-
+      Test execution evidence is captured with a manifest listing the sha256 of every evidence file, UTC
+      timestamps, the executor and the git commit, and is signed "executed" by the executor.
+    risk: H
+    risk_rationale: Unhashed evidence can be altered after the fact.
+    gxp: true
+    gxp_rationale: Evidence integrity.
+  - id: URS-027
+    area: validation
+    text: >-
+      The traceability matrix links every requirement to its risk, tests, results and evidence hashes, and
+      flags requirements with no test and tests with no requirement.
+    risk: H
+    risk_rationale: Untested requirements would otherwise pass unnoticed.
+    gxp: true
+    gxp_rationale: Validation completeness.
+  - id: URS-028
+    area: records
+    text: Exports (audit trail CSV, scenario CSV) contain every row of the underlying data, none dropped.
+    risk: H
+    risk_rationale: A truncated export misrepresents the record to inspectors.
+    gxp: true
+    gxp_rationale: Accurate and complete copies of records (21 CFR 11.10(b)).
+  - id: URS-029
+    area: configuration
+    text: >-
+      With DEMO_OFFLINE=1 the system makes no external network calls, uses cached fixtures, and reports
+      offline=true on /api/health; the documented default is DEMO_OFFLINE=0.
+    risk: M
+    risk_rationale: A wrong offline setting breaks the demo or leaks calls to external services.
+    gxp: false
+    gxp_rationale: Configuration of a demo mode.
+  - id: URS-030
+    area: configuration
+    text: >-
+      Secrets (API keys, the PIN pepper) come only from the environment / .env, which is never committed;
+      .env.example lists names only.
+    risk: M
+    risk_rationale: Leaked keys or pepper compromise the system and signature controls.
+    gxp: true
+    gxp_rationale: Protects the signature credential store.
+  - id: URS-031
+    area: validation
+    text: >-
+      For a code change, change control lists the changed files, the affected requirements (via the
+      component map) and the tests to rerun, and drafts a change record that a human completes and that is
+      approved reviewer → QA.
+    risk: M
+    risk_rationale: Unassessed changes can silently break validated behaviour.
+    gxp: true
+    gxp_rationale: Change control of a validated system.
+  - id: URS-032
+    area: validation
+    text: >-
+      The validation summary report states the real counts from the signed execution (tests, requirement
+      results, deviations) and shows "awaiting QA approval" until QA signs it; QA's signature is invalidated
+      if the report changes.
+    risk: H
+    risk_rationale: An optimistic or edited report would misstate the validation outcome.
+    gxp: true
+    gxp_rationale: Validation summary report is a GxP record.

@@ -18,7 +18,7 @@ def pytest_configure(config: pytest.Config) -> None:
 @pytest.fixture()
 def db(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Iterator[store.Store]:
     monkeypatch.setenv("TP_SECRET_PEPPER", "test-pepper")
-    monkeypatch.delenv("TP_DEMO_PINS", raising=False)
+    monkeypatch.setenv("TP_DEMO_PINS", "")
     monkeypatch.setenv("TP_VALIDATION_OUT", str(tmp_path / "vout"))
     st = store.configure(tmp_path / "compliance.sqlite")
     yield st
