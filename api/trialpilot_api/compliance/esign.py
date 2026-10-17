@@ -91,6 +91,7 @@ def _row_to_signature(row: Any) -> Signature:
     return Signature(
         id=row["id"],
         signer=row["signer"],
+        signer_name=row["signer_name"],
         role=row["role"],
         meaning=row["meaning"],
         signed_at=parse_utc(row["signed_at"]),
@@ -126,7 +127,8 @@ def record_signature(
              record_type, record_id, record_hash_value, reason),
         )
         sig = Signature(
-            id=sig_id, signer=user.username, role=user.role, meaning=meaning,  # type: ignore[arg-type]
+            id=sig_id, signer=user.username, signer_name=user.display_name, role=user.role,
+            meaning=meaning,  # type: ignore[arg-type]
             signed_at=parse_utc(signed_at), record_type=record_type, record_id=record_id,
             record_hash=record_hash_value,
         )
@@ -196,7 +198,7 @@ def manifestation(sig: Signature, store: Store | None = None) -> str:
     """Human-readable signature manifestation: printed name, UTC date/time, meaning (§11.50)."""
     when = sig.signed_at.strftime("%Y-%m-%d %H:%M:%S UTC")
     return (
-        f"{display_name(sig.signer, store)} ({sig.signer}, {sig.role}) — "
+        f"{sig.signer_name} ({sig.signer}, {sig.role}) — "
         f"{sig.meaning.upper()} — {when} — {sig.record_type}/{sig.record_id} "
         f"sha256:{sig.record_hash[:12]}…"
     )
@@ -223,7 +225,6 @@ def signature_status(
 def signature_view(sig: Signature, *, current: str | None | object = ...,
                    store: Store | None = None) -> dict[str, Any]:
     data = sig.model_dump(mode="json")
-    data["signer_name"] = display_name(sig.signer, store)
     data["manifestation"] = manifestation(sig, store)
     data.update(signature_status(sig, current=current, store=store))
     return data

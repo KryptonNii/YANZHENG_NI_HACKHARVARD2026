@@ -18,7 +18,7 @@ from typing import Any
 from . import audit, esign, records, roles
 from ._contracts import APPROVAL_RECORD_TYPES, ApprovalRequest, Signature
 from .errors import ComplianceError
-from .hashing import iso_utc, now
+from .hashing import iso_utc, now, parse_utc
 from .store import Store, get_store
 
 REQUIRED_MEANINGS: dict[str, list[str]] = {
@@ -45,8 +45,11 @@ def _to_model(row: dict[str, Any], st: Store) -> ApprovalRequest:
         record_type=row["record_type"],
         record_id=row["record_id"],
         author=row["author"],
+        record_hash=row["record_hash"],
         required_meanings=json.loads(row["required_meanings"]),
         status=row["status"],
+        created_at=parse_utc(row["created_at"]),
+        title=row.get("title"),
         signatures=sigs,
     )
 
@@ -72,11 +75,8 @@ def _view_row(row: dict[str, Any], st: Store) -> dict[str, Any]:
     data = model.model_dump(mode="json")
     data["signatures"] = [esign.signature_view(s, current=current, store=st)
                           for s in model.signatures]
-    data["record_hash"] = row["record_hash"]
     data["current_record_hash"] = current
     data["record_changed"] = current is not None and current != row["record_hash"]
-    data["title"] = row.get("title")
-    data["created_at"] = row["created_at"]
     data["closed_at"] = row["closed_at"]
     data["closed_by"] = row["closed_by"]
     data["reject_reason"] = row["reject_reason"]

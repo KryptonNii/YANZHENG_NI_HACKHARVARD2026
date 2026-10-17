@@ -4,14 +4,11 @@ from __future__ import annotations
 
 import csv
 import io
-from collections.abc import Iterator
-from pathlib import Path
 from typing import Any
 
 import pytest
 
-REPO = Path(__file__).resolve().parents[3]
-AUTHOR = {"X-User": "alex.author", "X-Role": "author"}
+from .conftest import AUTHOR
 
 
 def _design(design_id: str, title: str = "OQ trial") -> dict[str, Any]:
@@ -23,27 +20,6 @@ def _design(design_id: str, title: str = "OQ trial") -> dict[str, Any]:
         "visits": [{"number": 1, "label": "Screening", "week": 0},
                    {"number": 2, "label": "Week 4", "week": 4}],
     }
-
-
-@pytest.fixture()
-def api(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Iterator[Any]:
-    main = pytest.importorskip("trialpilot_api.main")
-    settings_mod = pytest.importorskip("trialpilot_api.settings")
-    from fastapi.testclient import TestClient
-
-    monkeypatch.setenv("TP_SECRET_PEPPER", "oq-pepper")
-    monkeypatch.setenv("TP_DEMO_PINS", "")
-    monkeypatch.setenv("TP_VALIDATION_OUT", str(tmp_path / "vout"))
-    settings = settings_mod.Settings(
-        db_path=tmp_path / "oq.sqlite", params_dir=REPO / "data" / "params",
-        fixtures_dir=tmp_path / "fixtures", science_results_path=tmp_path / "results.json",
-        web_dist_dir=tmp_path / "dist", log_json=False, log_level="WARNING",
-        seed_fixture_designs=False, demo_offline=True,
-    )
-    app = main.create_app(settings)
-    with TestClient(app) as client:
-        yield client
-    app.state.db_engine.dispose()
 
 
 def _audit(client: Any, **params: Any) -> list[dict[str, Any]]:
