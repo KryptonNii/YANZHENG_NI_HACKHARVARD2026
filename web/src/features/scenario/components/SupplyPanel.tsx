@@ -57,6 +57,7 @@ export function SupplyPanel({
           <DeltaText current={result.drug_waste_share} baseline={baseline.drug_waste_share} />
         </div>
       )}
+      {s ? (
       <dl className="mt-4 grid grid-cols-2 gap-3 border-t border-ink-100 pt-3">
         <Stat label="Kits produced" value={fmtRange(s?.kits_produced ?? null)} sub={subRange(s?.kits_produced ?? null)} />
         <Stat label="Kits wasted" value={fmtRange(s?.kits_wasted ?? null)} sub={subRange(s?.kits_wasted ?? null)} />
@@ -73,7 +74,9 @@ export function SupplyPanel({
           </dd>
         </div>
       </dl>
-      {!s && <p className="mt-2 text-xs text-ink-500">Kit counts and stockout risk were not returned by the API for this scenario.</p>}
+      ) : (
+        <p className="mt-4 border-t border-ink-100 pt-3 text-xs text-ink-500">Kit counts, shipments and stockout risk were not returned by the API for this scenario.</p>
+      )}
     </section>
   );
 }

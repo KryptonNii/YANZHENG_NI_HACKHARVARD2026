@@ -116,15 +116,54 @@ on("POST", /^\/api\/import\/ctgov\/([^/]+)$/, (m) => {
     design,
     raw_cached: true,
     missing_fields: design.missing_fields,
-    warnings: [`Mock API: ClinicalTrials.gov is not contacted; ${id} returns the fictional mock trial.`],
+    notes: [
+      `Mock API: ClinicalTrials.gov is not contacted; ${id} returns the fictional mock trial.`,
+      "Visit schedule is not in the registry: filled with an assumed template (mock).",
+    ],
+    field_sources: { visits: "assumption: mock template", sites: "mock fixture" },
+    sponsor: "Fictional sponsor",
+    collaborators: [],
+    acronym: "MOCK",
+    attribution: "Mock data — not from ClinicalTrials.gov.",
+    documents: [{ label: "Study Protocol", url: null, has_protocol: true, extraction_cached: true }],
   });
 });
+
+on("GET", /^\/api\/import\/ctgov$/, () =>
+  json({
+    studies: [
+      {
+        nct_id: "NCT00000000",
+        title: "MOCK — fictional study (mock API)",
+        acronym: "MOCK",
+        phase: "Phase 3",
+        drug_type: "biologic",
+        sites: MOCK_DESIGN.sites.length,
+        sponsor: "Fictional sponsor",
+        protocol_extraction_cached: true,
+      },
+    ],
+    offline: true,
+  }),
+);
+on("POST", /^\/api\/import\/protocol\/apply$/, (_m, { body }) => {
+  const b = body as { design: TrialDesign; visits: TrialDesign["visits"] };
+  const weeks = [...b.visits].sort((x, y) => x.number - y.number).map((v) => v.week);
+  if (weeks.some((w, i) => i > 0 && w < weeks[i - 1])) return err(422, "weeks_not_increasing", "Visit weeks must increase with the visit number.");
+  return json({ design: { ...b.design, visits: b.visits, missing_fields: b.design.missing_fields.filter((f) => f !== "visits") }, visits: b.visits.length });
+});
+on("POST", /^\/api\/import\/protocol\/review$/, () => json({ reviews: 1 }));
 
 on("POST", /^\/api\/import\/protocol$/, async (_m, { form }) => {
   await delay(400);
   const file = form?.get("file");
-  if (!(file instanceof File)) return err(422, "file_required", "Attach a PDF in the “file” field.");
+  if (!(file instanceof File) && !form?.get("nct_id")) return err(400, "missing_input", "Send a protocol PDF as multipart field 'file', or a form field 'nct_id'.");
   return json({
+    extraction_id: "mock-extraction",
+    method: "mock",
+    model: null,
+    soa_pages: [12, 13],
+    from_cache: true,
     candidates: MOCK_DESIGN.visits.slice(0, 6).map((v, i) => ({
       visit: v,
       source_page: 12 + i,

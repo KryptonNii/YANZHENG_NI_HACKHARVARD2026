@@ -28,12 +28,40 @@ export interface HealthResponse {
   version?: string;
 }
 
-/** A4: POST /api/import/ctgov/{nct_id} */
+/** A4: a study document listed in the registry (e.g. the protocol PDF). */
+export interface RegistryDocument {
+  label: string | null;
+  url: string | null;
+  has_protocol: boolean;
+  extraction_cached: boolean;
+}
+
+/** A4: POST /api/import/ctgov/{nct_id} (extra fields are A4's import report). */
 export interface ImportCtgovResponse {
   design: TrialDesign;
   raw_cached: boolean;
   missing_fields: string[];
+  /** A4 calls these `notes`: what was assumed or derived, in plain English */
   warnings: string[];
+  field_sources: Record<string, string>;
+  sponsor: string | null;
+  collaborators: string[];
+  acronym: string | null;
+  overall_status: string | null;
+  attribution: string | null;
+  documents: RegistryDocument[];
+}
+
+/** A4: GET /api/import/ctgov — studies available in the local cache (work offline). */
+export interface CachedStudy {
+  nct_id: string;
+  title: string;
+  acronym: string | null;
+  phase: string | null;
+  drug_type: string | null;
+  sites: number | null;
+  sponsor: string | null;
+  protocol_extraction_cached: boolean;
 }
 
 /** A4: one candidate visit from protocol extraction (AI draft — a human confirms each row). */
@@ -46,8 +74,16 @@ export interface ExtractionCandidate {
 
 /** A4: POST /api/import/protocol */
 export interface ProtocolExtractionResponse {
+  extraction_id: string | null;
   candidates: ExtractionCandidate[];
   warnings: string[];
+  excluded_columns: string[];
+  method: string | null;
+  model: string | null;
+  soa_pages: number[];
+  page_count: number | null;
+  from_cache: boolean;
+  notice: string | null;
 }
 
 /** Proposed optional extension of ScenarioResult (handoffs/A8_CONTRACT_CHANGES.md): A3 ForecastResult. */

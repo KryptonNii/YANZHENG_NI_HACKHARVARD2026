@@ -52,9 +52,9 @@ export function VersionsPanel({
     try {
       const s = await api.getScenario(id, { signal, silent: true });
       setFull(s);
-      if (s.approval) setApproval(s.approval);
-      else if (s.approval_id) setApproval(await api.getApproval(s.approval_id, { signal, silent: true }));
-      else setApproval(null);
+      // prefer A7's approval view (signature validity + manifestation) over the embedded copy
+      const view = s.approval_id ? await api.getApproval(s.approval_id, { signal, silent: true }).catch(() => null) : null;
+      setApproval(view ?? s.approval ?? null);
     } catch (err) {
       if (!isAbort(err)) {
         setFull(null);
@@ -134,8 +134,7 @@ export function VersionsPanel({
                   <span className="sr-only">Compare</span>
                 </th>
                 <th scope="col" className="pb-1 font-semibold">Scenario</th>
-                <th scope="col" className="pb-1 font-semibold">Author</th>
-                <th scope="col" className="pb-1 text-right font-semibold">Cost P50</th>
+                <th scope="col" className="whitespace-nowrap pb-1 text-right font-semibold">Cost P50</th>
                 <th scope="col" className="pb-1 font-semibold">Status</th>
                 <th scope="col" className="pb-1">
                   <span className="sr-only">Actions</span>
@@ -160,15 +159,16 @@ export function VersionsPanel({
                       <button type="button" className="text-left font-semibold text-ink-900 hover:underline" onClick={() => onSelect(s.id)} aria-pressed={s.id === selectedId}>
                         {s.name} <span className="font-normal text-ink-500">v{s.version}</span>
                       </button>
-                      <span className="block text-xs text-ink-500">{formatUtc(s.created_at)}</span>
+                      <span className="block text-xs text-ink-500">
+                        {displayName(s.author)} · {formatUtc(s.created_at)}
+                      </span>
                     </td>
-                    <td className="py-1.5 text-ink-700">{displayName(s.author)}</td>
-                    <td className="py-1.5 text-right tabular text-ink-800">{cost && isKnownRange(cost) ? formatValue(cost.p50, "usd") : cost ? "unknown" : "—"}</td>
-                    <td className="py-1.5">
+                    <td className="whitespace-nowrap py-1.5 pl-2 text-right tabular text-ink-800">{cost && isKnownRange(cost) ? formatValue(cost.p50, "usd") : cost ? "unknown" : "—"}</td>
+                    <td className="whitespace-nowrap py-1.5 pl-2">
                       <ScenarioStatusChip status={s.status} />
                     </td>
                     <td className="py-1.5 text-right">
-                      <button type="button" className="btn-ghost px-2 py-1 text-xs" onClick={() => void loadLevers(s)}>
+                      <button type="button" className="btn-ghost whitespace-nowrap px-2 py-1 text-xs" onClick={() => void loadLevers(s)}>
                         Load levers
                       </button>
                     </td>

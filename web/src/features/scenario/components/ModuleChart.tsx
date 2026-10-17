@@ -136,8 +136,8 @@ export function ModuleChart({
                         {isExcludedByDefault(r.module) && <span className="chip border-ink-300 bg-ink-50 text-ink-600" title="Excluded from totals by default">excl.</span>}
                       </button>
                     </th>
-                    <td className="py-1 text-right tabular text-ink-800">{r.cur !== null ? formatValue(r.cur, unit) : "—"}</td>
-                    <td className={`py-1 text-right tabular ${d === null || Math.abs(d) < 1e-9 ? "text-ink-500" : d < 0 ? "text-better-700" : "text-worse-700"}`}>
+                    <td className="whitespace-nowrap py-1 pl-2 text-right tabular text-ink-800">{r.cur !== null ? formatValue(r.cur, unit) : "—"}</td>
+                    <td className={`whitespace-nowrap py-1 pl-2 text-right tabular ${d === null || Math.abs(d) < 1e-9 ? "text-ink-500" : d < 0 ? "text-better-700" : "text-worse-700"}`}>
                       {d === null ? "—" : Math.abs(d) < 1e-9 ? "no change" : `${d < 0 ? "▼" : "▲"} ${formatSignedValue(d, unit)}`}
                     </td>
                   </tr>

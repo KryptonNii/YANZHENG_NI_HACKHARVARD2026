@@ -3,11 +3,12 @@
  * Errors become ApiError with the API's plain-English message (§5 error shape); unless a call
  * passes `silent: true`, the message is also broadcast to the toast layer.
  */
-import type { Levers, Parameter, TrialDesign } from "../contracts";
+import type { Levers, Parameter, TrialDesign, Visit } from "../contracts";
 import { identityHeaders } from "../identity";
 import {
   asArray,
   normalizeApproval,
+  normalizeCachedStudies,
   normalizeCompare,
   normalizeDesignSummary,
   normalizeDrivers,
@@ -20,6 +21,7 @@ import {
 import type {
   ApiErrorBody,
   ApprovalView,
+  CachedStudy,
   CompareResult,
   DesignSummary,
   Driver,
@@ -143,12 +145,28 @@ export const api = {
   // ---- A4 importers ----
   importCtgov: async (nctId: string, opts: RequestOptions = {}): Promise<ImportCtgovResponse> =>
     normalizeImport(await request("POST", `/import/ctgov/${enc(nctId)}`, opts)),
-  importProtocol: async (file: File, designId?: string, opts: RequestOptions = {}): Promise<ProtocolExtractionResponse> => {
+  /** Studies in A4's local cache (they import offline). */
+  cachedStudies: async (opts: RequestOptions = {}): Promise<CachedStudy[]> =>
+    normalizeCachedStudies(await request("GET", "/import/ctgov", opts)),
+  /** Extract a schedule of activities from an uploaded PDF, or from the registry protocol of `nctId`. */
+  importProtocol: async (src: { file?: File; nctId?: string }, designId?: string, opts: RequestOptions = {}): Promise<ProtocolExtractionResponse> => {
     const form = new FormData();
-    form.append("file", file);
+    if (src.file) form.append("file", src.file);
+    else if (src.nctId) form.append("nct_id", src.nctId);
     if (designId) form.append("design_id", designId);
     return normalizeExtraction(await request("POST", "/import/protocol", { ...opts, form }));
   },
+  /** A4 validates the human-confirmed visits and returns the new design (A5 stores it). */
+  applyProtocol: async (design: TrialDesign, visits: Visit[], extractionId: string | null, opts: RequestOptions = {}): Promise<TrialDesign> => {
+    const res = await request<{ design?: TrialDesign }>("POST", "/import/protocol/apply", {
+      ...opts,
+      body: { design, visits, extraction_id: extractionId },
+    });
+    return res?.design ?? { ...design, visits, missing_fields: design.missing_fields.filter((f) => f !== "visits") };
+  },
+  /** Accepted / edited / rejected counts — the extraction accuracy metric. */
+  logProtocolReview: (body: { extraction_id: string; design_id?: string; accepted: number; edited: number; rejected: number }, opts: RequestOptions = {}) =>
+    request("POST", "/import/protocol/review", { ...opts, body }),
 
   // ---- A5 designs (POST with an existing id stores a new version) ----
   listDesigns: async (opts: RequestOptions = {}): Promise<DesignSummary[]> =>

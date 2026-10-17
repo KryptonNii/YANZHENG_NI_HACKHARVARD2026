@@ -99,7 +99,8 @@ export function ApprovalPanel({ approval, onChange }: { approval: ApprovalView; 
               {sig ? (
                 <span className="min-w-0">
                   <span className="font-semibold capitalize text-ink-900">{sig.meaning}</span> by{" "}
-                  <span className="font-semibold">{sig.signer_name ?? displayName(sig.signer)}</span> ({sig.role}) <Validity sig={sig} />
+                  <span className="font-semibold">{sig.signer_name ?? displayName(sig.signer)}</span>
+                  {sig.signer_name ? ` (${sig.signer}, ${sig.role})` : ""} <Validity sig={sig} />
                   <span className="block text-xs tabular text-ink-500">
                     {formatUtc(sig.signed_at)} · record sha256 <code className="font-mono">{sig.record_hash.slice(0, 12)}…</code>
                   </span>

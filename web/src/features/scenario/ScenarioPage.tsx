@@ -334,12 +334,12 @@ export function ScenarioPage() {
 
           <ModuleChart baseline={baseline} current={current} onSelectModule={(m) => setDrawer({ kind: "module", module: m })} />
 
-          <div className="grid gap-5 xl:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
+          <div className="grid items-start gap-5 xl:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
             <ForecastChart result={current} target={design.enrollment_target} />
             <SupplyPanel result={current} baseline={baseline} strategy={levers.drug_supply_strategy} onOpen={() => setDrawer({ kind: "waste" })} />
           </div>
 
-          <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
+          <div className="grid items-start gap-5 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
             <section className="card p-4" aria-labelledby="sites-title">
               <h2 id="sites-title" className="card-title mb-2">
                 Sites — click a dot to exclude or include it

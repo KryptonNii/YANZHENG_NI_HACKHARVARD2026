@@ -6,6 +6,8 @@
 import type { ApprovalRequest, Levers, MetricRange, TrialDesign, Visit } from "../contracts";
 import type {
   ApprovalView,
+  CachedStudy,
+  RegistryDocument,
   CompareResult,
   DesignSummary,
   Driver,
@@ -74,12 +76,45 @@ export function normalizeLevers(v: unknown): Levers {
 export function normalizeImport(data: unknown): ImportCtgovResponse {
   const d = isObj(data) ? data : {};
   const design = (isObj(d.design) ? d.design : d) as unknown as TrialDesign;
+  const fieldSources: Record<string, string> = {};
+  if (isObj(d.field_sources)) for (const [k, v] of Object.entries(d.field_sources)) if (typeof v === "string") fieldSources[k] = v;
+  const documents: RegistryDocument[] = Array.isArray(d.documents)
+    ? d.documents.filter(isObj).map((doc) => ({
+        label: str(doc.label),
+        url: str(doc.url),
+        has_protocol: doc.has_protocol === true,
+        extraction_cached: doc.extraction_cached === true,
+      }))
+    : [];
   return {
     design,
     raw_cached: d.raw_cached === true,
     missing_fields: strList(d.missing_fields).length ? strList(d.missing_fields) : (design.missing_fields ?? []),
-    warnings: strList(d.warnings),
+    warnings: [...strList(d.notes), ...strList(d.warnings)],
+    field_sources: fieldSources,
+    sponsor: str(d.sponsor),
+    collaborators: strList(d.collaborators),
+    acronym: str(d.acronym),
+    overall_status: str(d.overall_status),
+    attribution: str(d.attribution),
+    documents,
   };
+}
+
+export function normalizeCachedStudies(data: unknown): CachedStudy[] {
+  return asArray<unknown>(data, "studies")
+    .filter(isObj)
+    .filter((s) => typeof s.nct_id === "string")
+    .map((s) => ({
+      nct_id: s.nct_id as string,
+      title: str(s.title) ?? (s.nct_id as string),
+      acronym: str(s.acronym),
+      phase: str(s.phase),
+      drug_type: str(s.drug_type),
+      sites: num(s.sites),
+      sponsor: str(s.sponsor),
+      protocol_extraction_cached: s.protocol_extraction_cached === true,
+    }));
 }
 
 function toCandidate(item: unknown): ExtractionCandidate | null {
@@ -104,8 +139,16 @@ export function normalizeExtraction(data: unknown): ProtocolExtractionResponse {
   const d = isObj(data) ? data : {};
   const raw = Array.isArray(d.candidates) ? d.candidates : Array.isArray(d.visits) ? d.visits : [];
   return {
+    extraction_id: str(d.extraction_id),
     candidates: raw.map(toCandidate).filter((c): c is ExtractionCandidate => c !== null),
     warnings: strList(d.warnings),
+    excluded_columns: strList(d.excluded_columns),
+    method: str(d.method),
+    model: str(d.model),
+    soa_pages: Array.isArray(d.soa_pages) ? d.soa_pages.filter((n): n is number => typeof n === "number") : [],
+    page_count: num(d.page_count),
+    from_cache: d.from_cache === true,
+    notice: str(d.notice),
   };
 }
 

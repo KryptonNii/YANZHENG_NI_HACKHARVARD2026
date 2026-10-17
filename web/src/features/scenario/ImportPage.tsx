@@ -2,7 +2,7 @@ import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import type { TrialDesign, TrialDesignDrugType, Visit } from "@/app/contracts";
 import { ApiError, api, isAbort } from "@/app/api/client";
-import type { DesignSummary, ProtocolExtractionResponse } from "@/app/api/types";
+import type { CachedStudy, DesignSummary, ImportCtgovResponse, ProtocolExtractionResponse } from "@/app/api/types";
 import { setLastDesignId } from "@/app/lastDesign";
 import { useToast } from "@/app/toast";
 import { Badge, Modal, SectionTitle, Spinner } from "@/app/ui";
@@ -10,7 +10,7 @@ import { MissingAssumed } from "./components/MissingAssumed";
 import { ProtocolReview } from "./components/ProtocolReview";
 import { SiteMap } from "./components/SiteMap";
 import { TrialCard } from "./components/TrialCard";
-import { DEMO_TRIALS, nctError, normalizeNct } from "./demoTrials";
+import { DEMO_TRIALS, nctError, normalizeNct, type DemoTrial } from "./demoTrials";
 
 const MAX_PDF_BYTES = 20 * 1024 * 1024;
 
@@ -117,9 +117,9 @@ export function ImportPage() {
   const [importing, setImporting] = useState<string | null>(null);
   const [importError, setImportError] = useState<string | null>(null);
   const [design, setDesign] = useState<TrialDesign | null>(null);
-  const [rawCached, setRawCached] = useState(false);
-  const [warnings, setWarnings] = useState<string[]>([]);
+  const [info, setInfo] = useState<ImportCtgovResponse | null>(null);
   const [recent, setRecent] = useState<DesignSummary[]>([]);
+  const [cached, setCached] = useState<CachedStudy[]>([]);
   const [editOpen, setEditOpen] = useState(false);
   const [extraction, setExtraction] = useState<ProtocolExtractionResponse | null>(null);
   const [extracting, setExtracting] = useState(false);
@@ -138,14 +138,22 @@ export function ImportPage() {
   }, [design?.id]);
 
   useEffect(() => {
+    const ctrl = new AbortController();
+    api
+      .cachedStudies({ signal: ctrl.signal, silent: true })
+      .then(setCached)
+      .catch(() => setCached([]));
+    return () => ctrl.abort();
+  }, []);
+
+  useEffect(() => {
     if (!designParam || design?.id === designParam) return;
     const ctrl = new AbortController();
     api
       .getDesign(designParam, { signal: ctrl.signal })
       .then((d) => {
         setDesign(d);
-        setWarnings([]);
-        setRawCached(false);
+        setInfo(null);
       })
       .catch((err) => {
         if (!isAbort(err)) setSearch({}, { replace: true });
@@ -179,8 +187,7 @@ export function ImportPage() {
     setExtraction(null);
     try {
       const res = await api.importCtgov(id, { silent: true });
-      setRawCached(res.raw_cached);
-      setWarnings(res.warnings);
+      setInfo(res);
       showDesign({ ...res.design, missing_fields: res.missing_fields });
       toast.push("success", `Imported ${id}`, res.raw_cached ? "Served from the local cache" : undefined);
     } catch (e) {
@@ -204,7 +211,7 @@ export function ImportPage() {
     setExtracting(true);
     setExtraction(null);
     try {
-      setExtraction(await api.importProtocol(file, design?.id, { silent: true }));
+      setExtraction(await api.importProtocol({ file }, design?.id, { silent: true }));
     } catch (e) {
       setExtractError(e instanceof ApiError ? e.message : String(e));
     } finally {
@@ -213,12 +220,34 @@ export function ImportPage() {
     }
   };
 
+  const extractFromRegistry = async () => {
+    if (!design?.registry_id) return;
+    setExtractError(null);
+    setExtracting(true);
+    setExtraction(null);
+    try {
+      setExtraction(await api.importProtocol({ nctId: design.registry_id }, design.id, { silent: true }));
+    } catch (e) {
+      setExtractError(e instanceof ApiError ? e.message : String(e));
+    } finally {
+      setExtracting(false);
+    }
+  };
+
   const applyExtraction = async (visits: Visit[], stats: { accepted: number; edited: number; rejected: number }) => {
     if (!design) return;
     setApplying(true);
     try {
-      const updated = await api.saveDesign({ ...design, visits, missing_fields: design.missing_fields.filter((f) => f !== "visits") });
+      // A4 validates the confirmed schedule (weeks increasing, unique numbers) and audits it; A5 stores the new version
+      const applied = await api.applyProtocol(design, visits, extraction?.extraction_id ?? null);
+      const updated = await api.saveDesign(applied);
+      if (extraction?.extraction_id) {
+        void api
+          .logProtocolReview({ extraction_id: extraction.extraction_id, design_id: design.id, ...stats }, { silent: true })
+          .catch(() => undefined);
+      }
       showDesign(updated);
+      setInfo((i) => (i ? { ...i, missing_fields: updated.missing_fields } : i));
       setExtraction(null);
       toast.push("success", `Applied ${visits.length} visits to the design`, `${stats.accepted} accepted · ${stats.edited} edited · ${stats.rejected} rejected`);
     } catch {
@@ -229,6 +258,15 @@ export function ImportPage() {
   };
 
   const validation = touched ? nctError(nct) : null;
+  const chips: DemoTrial[] = cached.length
+    ? cached.map((c) => ({
+        registryId: c.nct_id,
+        label: [c.acronym ?? c.title.slice(0, 40), c.phase, c.sites ? `${c.sites} sites` : null].filter(Boolean).join(" · "),
+        note: [c.title, c.sponsor && `Sponsor: ${c.sponsor}`].filter(Boolean).join(" — "),
+      }))
+    : DEMO_TRIALS;
+  const warnings = info?.warnings ?? [];
+  const registryProtocol = info?.documents.find((d) => d.has_protocol) ?? null;
 
   return (
     <div className="space-y-6">
@@ -279,11 +317,11 @@ export function ImportPage() {
             )}
           </form>
 
-          {(DEMO_TRIALS.length > 0 || recent.length > 0) && (
+          {(chips.length > 0 || recent.length > 0) && (
             <div className="mt-5">
-              <p className="text-xs font-semibold uppercase tracking-wide text-ink-500">{DEMO_TRIALS.length ? "Demo trials" : "Recent trials"}</p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-ink-500">{chips.length ? "Demo trials (cached — work offline)" : "Recent trials"}</p>
               <div className="mt-2 flex flex-wrap gap-2" data-testid="demo-chips">
-                {DEMO_TRIALS.map((t) => (
+                {chips.map((t) => (
                   <button
                     key={t.registryId}
                     type="button"
@@ -299,7 +337,7 @@ export function ImportPage() {
                   </button>
                 ))}
                 {recent
-                  .filter((d) => !DEMO_TRIALS.some((t) => t.registryId === d.registry_id))
+                  .filter((d) => !chips.some((t) => t.registryId === d.registry_id))
                   .map((d) => (
                     <button
                       key={d.id}
@@ -309,8 +347,7 @@ export function ImportPage() {
                         api
                           .getDesign(d.id)
                           .then((full) => {
-                            setWarnings([]);
-                            setRawCached(false);
+                            setInfo(null);
                             setExtraction(null);
                             showDesign(full);
                           })
@@ -342,7 +379,7 @@ export function ImportPage() {
 
       {design && (
         <>
-          <TrialCard design={design} rawCached={rawCached} onEdit={() => setEditOpen(true)} />
+          <TrialCard design={design} info={info} onEdit={() => setEditOpen(true)} />
 
           <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-accent-200 bg-accent-50 px-5 py-3">
             <p className="text-sm text-accent-900">
@@ -396,6 +433,11 @@ export function ImportPage() {
             />
             Choose protocol PDF…
           </label>
+          {registryProtocol && design?.registry_id && (
+            <button type="button" className="btn-secondary" onClick={() => void extractFromRegistry()} disabled={extracting} data-testid="extract-registry">
+              Use the registry protocol{registryProtocol.extraction_cached ? " (cached extraction)" : ""}
+            </button>
+          )}
           <span className="text-xs text-ink-500">PDF up to 20 MB{design ? ` · will be applied to ${design.registry_id ?? "this design"}` : " · import the trial first to apply results"}</span>
           {extracting && <Spinner label="Extracting schedule (this can take ~30 s)" />}
         </div>
@@ -406,6 +448,29 @@ export function ImportPage() {
         )}
         {extraction && (
           <div className="mt-4">
+            <p className="mb-2 text-xs text-ink-500" data-testid="extraction-meta">
+              {[
+                extraction.method && `Method: ${extraction.method}`,
+                extraction.model && `model: ${extraction.model}`,
+                extraction.soa_pages.length
+                  ? `schedule on pages ${extraction.soa_pages[0]}–${extraction.soa_pages[extraction.soa_pages.length - 1]}${extraction.page_count ? ` of ${extraction.page_count}` : ""}`
+                  : null,
+                extraction.from_cache ? "served from cache" : null,
+              ]
+                .filter(Boolean)
+                .join(" · ")}
+            </p>
+            {extraction.notice && <p className="mb-2 text-xs text-caution-900">{extraction.notice}</p>}
+            {extraction.excluded_columns.length > 0 && (
+              <details className="mb-3 text-xs text-ink-600">
+                <summary className="cursor-pointer font-semibold">Columns the extractor left out ({extraction.excluded_columns.length})</summary>
+                <ul className="mt-1 list-disc space-y-0.5 pl-5">
+                  {extraction.excluded_columns.map((c) => (
+                    <li key={c}>{c}</li>
+                  ))}
+                </ul>
+              </details>
+            )}
             {extraction.candidates.length === 0 ? (
               <p className="text-sm text-ink-600">No schedule of activities was found in this PDF.</p>
             ) : (

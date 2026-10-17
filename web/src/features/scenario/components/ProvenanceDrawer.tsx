@@ -42,16 +42,31 @@ function FormulaCard({ item }: { item: Item }) {
           </tbody>
         </table>
       )}
-      {item.assumptions.length > 0 && (
-        <ul className="mt-2 space-y-1">
-          {item.assumptions.map((a) => (
-            <li key={a} className="flex items-start gap-2 text-xs text-ink-700">
-              <AssumptionTag /> <span className="pt-0.5">{a}</span>
-            </li>
-          ))}
-        </ul>
-      )}
+      {item.assumptions.length > 0 && <AssumptionList assumptions={item.assumptions} />}
     </li>
+  );
+}
+
+/** Many assumptions differ only by a country code; collapse beyond the first few. */
+function AssumptionList({ assumptions }: { assumptions: string[] }) {
+  const unique = [...new Set(assumptions)];
+  const [open, setOpen] = useState(false);
+  const shown = open ? unique : unique.slice(0, 3);
+  return (
+    <div className="mt-2">
+      <ul className="space-y-1">
+        {shown.map((a) => (
+          <li key={a} className="flex items-start gap-2 text-xs text-ink-700">
+            <AssumptionTag /> <span className="pt-0.5">{a}</span>
+          </li>
+        ))}
+      </ul>
+      {unique.length > 3 && (
+        <button type="button" className="link mt-1 text-xs" onClick={() => setOpen((o) => !o)} aria-expanded={open}>
+          {open ? "Show fewer assumptions" : `Show all ${unique.length} assumptions`}
+        </button>
+      )}
+    </div>
   );
 }
 
