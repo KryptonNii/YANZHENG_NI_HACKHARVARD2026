@@ -1,0 +1,99 @@
+# Simple per-module carbon factors used by the engine (A2) for modules it does not model activity by activity, plus
+# the fallbacks it uses when a design lacks a schedule or site list. Where possible the bounds are the two published
+# LCCT case studies (Griffiths et al. BMJ Open 2024, appendices C/D): CASPS (Phase 2, 47 patients, 12 sites, 6 years)
+# and PRIMETIME (Phase 3, 1962 patients, 64-67 sites, 10 years). Two data points do not make a distribution, so these
+# are marked assumptions with the derivation in `rationale`. Convention: see costs.yaml.
+defaults:
+  region: "global"
+  version: 1
+  source_url: "https://bmjopen.bmj.com/content/14/1/e075755"
+  source_year: 2024
+
+parameters:
+  - id: ef.trial_management.per_fte_year
+    label: "Coordinating-unit emissions per FTE-year (office energy + heating + commuting, UK benchmark)"
+    value_low: 1652.64
+    value_mid: 1652.64
+    value_high: 1652.64
+    unit: kg_co2e/fte_year
+    region: "GB"
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.5-7: 193.28 (office energy) + 431.56 (heating) + 1027.8 (commuting) kgCO2e per FTE-year"
+    rationale: "Sum of the three LCCT per-FTE factors (lcct_method.yaml). CASPS applied the UK commuting figure to Spain and Australia too."
+
+  - id: ef.setup.per_site
+    label: "Trial set-up per site: documents, folders, postage (excl. initiation-visit travel)"
+    value_low: 6.8
+    value_mid: 14
+    value_high: 29.2
+    unit: kg_co2e/site
+    assumption: true
+    source_title: "Griffiths et al. BMJ Open 2024: set-up module CASPS 349.8 kg / 12 sites; PRIMETIME 454.2 kg / 67 sites set up"
+    rationale: "low = 6.8 (PRIMETIME, UK, road post); high = 29.2 (CASPS, incl. air post to Spain and Australia); mid = geometric mean (our choice)."
+
+  - id: ef.data_collection.per_patient_year
+    label: "Data collection and exchange per patient-year"
+    value_low: 0.386
+    value_mid: 0.87
+    value_high: 1.98
+    unit: kg_co2e/patient_year
+    assumption: true
+    source_title: "Griffiths et al. BMJ Open 2024: data module CASPS 558.3 kg / (47 x 6 y); PRIMETIME 7572.1 kg / (1962 x 10 y)"
+    rationale: "low = 0.386 (PRIMETIME: EDC + data linkage, spend-based); high = 1.98 (CASPS: paper CRFs flown to/from Australia); mid = geometric mean (our choice)."
+
+  - id: ef.supplies_equipment.per_patient
+    label: "Trial-specific supplies and equipment per patient"
+    value_low: 0.89
+    value_mid: 3.1
+    value_high: 11.1
+    unit: kg_co2e/patient
+    assumption: true
+    source_title: "Griffiths et al. BMJ Open 2024: supplies module CASPS 522.5 kg / 47 patients; PRIMETIME 1741.5 kg / 1962 patients"
+    rationale: "Both are spend-based office machinery bought for the trial, so this scales poorly with patients; mid = geometric mean (our choice)."
+
+  - id: ef.laboratory.per_sample
+    label: "Laboratory analysis per sample (consumables, analyser power, lab utilities)"
+    value_low: 0.082
+    value_mid: 0.116
+    value_high: 0.69
+    unit: kg_co2e/sample
+    assumption: true
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.16 (blood tests incl. analysis: coagulation 82 g, full blood examination 116 g); appendix D p.20 (PRIMETIME lab utilities 2061.4 kg / 2989 IHC samples)"
+    rationale: "low/mid = per-test LCCT factors (routine assays); high = 0.69 derived for PRIMETIME immunohistochemistry. Freezer storage is separate (energy.freezer.*)."
+
+  - id: ef.closeout.archiving_per_box_year
+    label: "Archive storage per box-year (office space electricity + heating)"
+    value_low: 2.6
+    value_mid: 5.2
+    value_high: 10.4
+    unit: kg_co2e/box_year
+    assumption: true
+    source_title: "Griffiths et al. BMJ Open 2024, appendix C p.22: office space 16.1 (electricity) + 35.69 (heating) kgCO2e per m2-year"
+    rationale: "51.79 kg per m2-year x an assumed 0.05-0.2 m2 of floor space per archive box (mid 0.1). The area per box is our assumption."
+
+  - id: rate.closeout.archive_boxes_per_site
+    label: "Archive boxes per site"
+    value_low: 0.6
+    value_mid: 2
+    value_high: 5
+    unit: boxes/site
+    assumption: true
+    source_title: "Griffiths et al. BMJ Open 2024: both case studies assume 4 m2 of archive for the whole trial (12 and 64 sites)"
+    rationale: "At the assumed 0.1 m2 per box, 4 m2 = 40 boxes: 3.3 per site (CASPS) and 0.6 per site (PRIMETIME). mid is our assumption."
+
+  - id: assume.design.visits_per_patient
+    label: "Visits per patient assumed when a design has no visit schedule"
+    value_low: 5
+    value_mid: 12
+    value_high: 20
+    unit: visits
+    assumption: true
+    rationale: "Fallback only (flagged in results). Published case studies: CASPS 18.7 trial-specific visits per patient, PRIMETIME 5 (Griffiths 2024)."
+
+  - id: assume.design.patients_per_site
+    label: "Patients per site assumed when a design lists no sites"
+    value_low: 4
+    value_mid: 15
+    value_high: 31
+    unit: patients/site
+    assumption: true
+    rationale: "Fallback only (flagged in results). CASPS 47/12 = 3.9; PRIMETIME 1962/64 = 30.7 (Griffiths 2024)."

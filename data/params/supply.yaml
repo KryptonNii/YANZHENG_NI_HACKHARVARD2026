@@ -1,0 +1,207 @@
+# Drug supply (A3 simulation + A2 drug_supply extension module) and sample logistics.
+# Quotes: docs/sources.md §Supply. Convention: see costs.yaml header.
+defaults:
+  region: "global"
+  version: 1
+
+parameters:
+  # ------------------------------------------------------------------ waste and overage
+  - id: supply.waste_share.upfront
+    label: "Share of manufactured kits never dispensed, upfront site stocking (industry-reported)"
+    value_low: 0.30
+    value_mid: 0.60
+    value_high: 0.70
+    unit: share
+    source_title: "Maragkou I. Mapping out opportunities to reduce emissions in clinical trials. Clinical Trials Arena, 28 May 2025: '...across the industry, on average, 60-70% of clinical trial IMP is wasted.' (reporting E. Owen, Genentech/Roche, CTO West Coast)"
+    source_url: "https://www.clinicaltrialsarena.com/news/mapping-out-opportunities-to-reduce-emissions-in-clinical-trials/"
+    source_year: 2025
+    rationale: >-
+      INDUSTRY-REPORTED, not peer-reviewed: trade-press report of a conference talk, no primary data. mid = ZS white paper
+      'Rethinking waste management in clinical supply chains' (2025) Fig. 2: 'industry wastage is ~60% (Range from 30% to
+      70%)', which also sets low; high = top of CT Arena and ZS. IQVIA (2024) reports 'a median waste level of 50% for IMP
+      kits'. Mackillop et al. BMJ Open 2023 confirm the effect without a number.
+
+  - id: supply.waste_share.on_demand
+    label: "Share of manufactured kits never dispensed, on-demand (IRT-driven) resupply"
+    value_low: 0.15
+    value_mid: 0.32
+    value_high: 0.44
+    unit: share
+    source_title: "Carter K et al. Forced randomization: the what, why, and how. BMC Med Res Methodol 2024;24:234 (PMC11459895): overage '~47-52% higher than the ideal' with the Low re-supply strategy"
+    source_url: "https://doi.org/10.1186/s12874-024-02340-0"
+    source_year: 2024
+    rationale: >-
+      Derived, assuming all overage is eventually wasted: waste = overage / (1 + overage). mid = 0.47-0.52 overage ->
+      0.32-0.34 (simulation, 80 centres, 500 patients, one kit per patient); high = N-SIDE case study 2023 'overage of the
+      trial fell below 80%' -> 0.44. low = 0.15 is an assumption (well-forecast trials).
+
+  - id: supply.overage_share.upfront
+    label: "Overage planned at upfront stocking, as a fraction of the ideal quantity"
+    value_low: 0.5
+    value_mid: 1.5
+    value_high: 3.0
+    unit: share
+    source_title: "ZS. Rethinking waste management in clinical supply chains (white paper, 2025), p.2: 'most clinical supply chain teams routinely plan for 150% to 200% overage'"
+    source_url: "https://www.zs.com/content/dam/pdfs/whitepaper-rethinking-waste-management-in-clinical-supply-chains.pdf"
+    source_year: 2025
+    rationale: "high = N-SIDE case study 2023 'expected to reach an overage of around 300%'; low = Carter et al. 2024 simulation Low strategy (~0.5). Vendor sources."
+
+  - id: supply.kits_per_dispensing_visit
+    label: "Kits dispensed per patient per dispensing visit"
+    value_low: 1
+    value_mid: 1
+    value_high: 2
+    unit: kits/visit
+    source_title: "Carter K et al. BMC Med Res Methodol 2024 (PMC11459895), Methods: ideal supply 'n / 2 kits of each drug type A and B per treatment group' (one kit per patient)"
+    source_url: "https://doi.org/10.1186/s12874-024-02340-0"
+    source_year: 2024
+    rationale: "high = 2 is an assumption (multi-strength or combination kits). No empirical survey found."
+
+  - id: supply.shelf_life_months
+    label: "Remaining shelf life of IMP kits usable in the trial"
+    value_low: 9
+    value_mid: 18
+    value_high: 24
+    unit: months
+    source_title: "N-SIDE. The hard balance between a short shelf life and low drug waste (case study, 2023): 12 months initially, extended to 15 and 18, maximum 24; 9 months remaining at start of recruitment"
+    source_url: "https://cms.n-side.com/files/uploads/2025/08/N-SIDE_CaseStudy_short_shelf_life.pdf"
+    source_year: 2023
+    rationale: "Single vendor case study. Marketed biologics are labelled 24-42 months (adalimumab products; Yiu et al. Ther Adv Gastroenterol 2025)."
+
+  - id: supply.on_demand.cover_weeks
+    label: "On-demand resupply covers the next k weeks of projected need"
+    value_low: 2
+    value_mid: 4
+    value_high: 8
+    unit: weeks
+    assumption: true
+    rationale: "No source found for a typical cover period; Carter et al. 2024 simulate weekly stock checks with trigger 1-2 kits. Assumption."
+
+  - id: supply.stockout_warning_threshold
+    label: "Warn when the probability of any site stockout exceeds this"
+    value_low: 0.05
+    value_mid: 0.05
+    value_high: 0.05
+    unit: share
+    assumption: true
+    rationale: "Product policy threshold (not a measured quantity): warn above 5% of simulated draws with a stockout."
+
+  - id: supply.shipments_per_site.upfront
+    label: "Depot-to-site drug shipments per site over the trial, upfront stocking"
+    value_low: 1
+    value_mid: 2
+    value_high: 4
+    unit: shipments/site
+    assumption: true
+    rationale: "Initial stocking plus occasional top-up; no source found."
+
+  - id: supply.shipments_per_site.on_demand
+    label: "Depot-to-site drug shipments per site over the trial, on-demand resupply"
+    value_low: 4
+    value_mid: 10
+    value_high: 24
+    unit: shipments/site
+    assumption: true
+    rationale: "More, smaller shipments triggered by stock levels; no source found. A3's simulation replaces this when available."
+
+  - id: supply.kit_shipping_weight_kg
+    label: "Shipped weight per kit incl. packaging"
+    value_low: 0.1
+    value_mid: 0.5
+    value_high: 2
+    unit: kg/kit
+    assumption: true
+    rationale: "CASPS assumed 30 g per oral IMP bottle (Griffiths 2024 appendix C p.11, product only); cold-chain biologic kits ship in insulated boxes. Wide assumption."
+
+  - id: dist.drug.depot_to_site_km
+    label: "Drug depot to site, one way"
+    value_low: 50
+    value_mid: 400
+    value_high: 2000
+    unit: km
+    assumption: true
+    rationale: "No source; CASPS shows 352 km QP site to packaging site plus national/international legs (appendix C p.11). Wide assumption."
+
+  - id: ef.drug_kit.unit
+    label: "EXTENSION: manufacture + packaging (+ cold storage) per kit, excl. transport"
+    value_low: 0.5
+    value_mid: 3
+    value_high: 10
+    unit: kg_co2e/kit
+    assumption: true
+    rationale: >-
+      Outside the published LCCT method (manufacture excluded). Context: Mackillop et al. BMJ Open 2023 report 'IP and
+      placebo' of 391.5 t (DAPA-HF), 33 t (ADRIATIC) and 24 t (asthma), i.e. about 83, 49 and 12 kg per randomised patient
+      (derived with their per-patient totals 527, 2452 and 718 kg). Spread over an assumed 5-25 kits per patient this is
+      ~0.5-17 kg/kit; the range is an explicit assumption.
+
+  # ------------------------------------------------------------------ samples
+  - id: supply.sample.samples_per_shipment
+    label: "Samples batched per shipment"
+    value_low: 1
+    value_mid: 5
+    value_high: 20
+    unit: samples/shipment
+    assumption: true
+    rationale: >-
+      Bounds from the two published case studies (Griffiths 2024): PRIMETIME 2989 tissue samples in 2989 shipments (1);
+      CASPS 574 frozen samples in 29 cold boxes (~20). mid is our assumption.
+
+  - id: supply.sample.shipment_weight_kg.ambient
+    label: "Shipped weight of one ambient sample shipment incl. packaging"
+    value_low: 0.05
+    value_mid: 0.1
+    value_high: 0.5
+    unit: kg/shipment
+    source_title: "Griffiths et al. BMJ Open 2024, appendix D p.19: PRIMETIME sample shipments 0.0000935 t each (slide mailers)"
+    source_url: "https://bmjopen.bmj.com/content/14/1/e075755"
+    source_year: 2024
+    rationale: "mid ~ 0.0935 kg (PRIMETIME); bounds are assumptions (tubes vs boxed shipments)."
+
+  - id: supply.sample.shipment_weight_kg.refrigerated
+    label: "Shipped weight of one refrigerated sample shipment incl. packaging"
+    value_low: 1
+    value_mid: 3
+    value_high: 6
+    unit: kg/shipment
+    assumption: true
+    rationale: "No source; insulated shipper with gel packs. Assumption."
+
+  - id: supply.sample.shipment_weight_kg.frozen
+    label: "Shipped weight of one frozen sample shipment incl. dry ice and packaging"
+    value_low: 2
+    value_mid: 5
+    value_high: 10
+    unit: kg/shipment
+    assumption: true
+    rationale: "CASPS used 85 kg dry ice for 29 boxes (~2.9 kg/box, Griffiths 2024 appendix C p.18) plus box and samples; LCCT default 1 kg dry ice per box when unknown. Assumption."
+
+  - id: dist.sample.to_central_lab_km.gb
+    label: "UK site to central lab, one way"
+    value_low: 239.5
+    value_mid: 319.4
+    value_high: 467.8
+    unit: km/shipment
+    source_title: "Griffiths et al. BMJ Open 2024, appendix D p.19: average site distance to Cambridge lab 239.5 km (938 shipments), RMH 258 km (1094), Glasgow 467.8 km (957)"
+    source_url: "https://bmjopen.bmj.com/content/14/1/e075755"
+    source_year: 2024
+    region: "GB"
+    rationale: "mid = shipment-weighted average (938 x 239.5 + 1094 x 258 + 957 x 467.8) / 2989 = 319.4 km; low/high = the three labs' averages."
+
+  - id: dist.sample.to_central_lab_km.global
+    label: "Site to central lab, one way (any country)"
+    value_low: 100
+    value_mid: 500
+    value_high: 2000
+    unit: km/shipment
+    assumption: true
+    rationale: "Fallback; national central labs are hundreds of km away, regional hubs further. Wide assumption anchored on the UK values."
+
+  - id: energy.freezer.minus80.trial_share
+    label: "Share of one -80 C freezer occupied by the trial's samples, per site"
+    value_low: 0.02
+    value_mid: 0.1
+    value_high: 0.33
+    unit: share
+    assumption: true
+    rationale: "CASPS assumed 1/3 of one freezer for the whole trial (Griffiths 2024 appendix C p.21); per-site share is our assumption."

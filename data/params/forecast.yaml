@@ -1,0 +1,61 @@
+# Recruitment and timeline forecast parameters (A3). Quotes: docs/sources.md §Forecast.
+# Convention: see costs.yaml header.
+defaults:
+  region: "global"
+  version: 1
+
+parameters:
+  - id: site.enrollment_rate_per_month
+    label: "Recruitment rate per active site (participants per centre per month)"
+    value_low: 0.43
+    value_mid: 0.92
+    value_high: 2.79
+    unit: patients/site/month
+    source_title: "Walters SJ et al. Recruitment and retention of participants in RCTs: a review of trials funded and published by the UK HTA Programme. BMJ Open 2017;7:e015276 (PMC5372123): 'median recruitment rate ... 0.92 (IQR 0.43-2.79)'"
+    source_url: "https://doi.org/10.1136/bmjopen-2016-015276"
+    source_year: 2017
+    rationale: "UK publicly funded trials 2004-2016 (151 RCTs). Industry multinational rates may differ; low/high = IQR."
+
+  - id: site.enrollment_rate_shape
+    label: "Gamma shape of between-site recruitment-rate heterogeneity"
+    value_low: 0.8
+    value_mid: 1.5
+    value_high: 3
+    unit: dimensionless
+    assumption: true
+    rationale: >-
+      No source opened. For context, the Walters IQR (0.43-2.79 around a 0.92 median) is very dispersed, which implies a
+      small shape (high between-site variance). Wide assumption; A3 may estimate it from the IQR instead.
+
+  - id: site.activation_months
+    label: "Time from protocol delivery to site activation"
+    value_low: 3.7
+    value_mid: 5.6
+    value_high: 8.1
+    unit: months
+    source_title: "Goyal A et al. Assessment of North American clinical research site performance during the start-up of large cardiovascular trials. JAMA Netw Open 2021 (PMC9435961): 'Median time to activation was 171 days (IQR, 114-246 days)'"
+    source_url: "https://doi.org/10.1001/jamanetworkopen.2021.17963"
+    source_year: 2021
+    rationale: "Converted at 30.44 days/month. First enrolment followed a further median 66 days. North American cardiovascular trials only."
+
+  - id: patient.dropout_rate
+    label: "Share of randomised participants without primary-outcome data (1 - retention)"
+    value_low: 0.03
+    value_mid: 0.11
+    value_high: 0.21
+    unit: share
+    source_title: "Walters SJ et al. BMJ Open 2017;7:e015276 (PMC5372123): 'the median retention rate ... was estimated at 89% (IQR 79-97%)'"
+    source_url: "https://doi.org/10.1136/bmjopen-2016-015276"
+    source_year: 2017
+    rationale: "Derived as 1 - retention. Retention is defined by primary-outcome availability, not treatment discontinuation."
+
+  - id: trial.closeout_months
+    label: "Last patient last visit to database lock"
+    value_low: 0.9
+    value_mid: 1.2
+    value_high: 1.8
+    unit: months
+    source_title: "Tufts CSDD Impact Report Vol 20 No 1 (Jan/Feb 2018), 2017 eClinical Landscape Study: LPLV to database lock mean 36.3 days (sponsors 38.7, CROs 27.7); 'Always' group 53.8 days"
+    source_url: "https://www.veeva.com/wp-content/uploads/2018/03/Tufts-Impact-Report-2017-eClinical-Landscape-Study.pdf"
+    source_year: 2018
+    rationale: "Converted at 30.44 days/month. Excludes site close-out visits, drug reconciliation and report writing."

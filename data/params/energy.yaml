@@ -1,0 +1,21 @@
+# Equipment energy. Quotes: docs/sources.md §Freezer.
+defaults:
+  region: "global"
+  version: 1
+
+parameters:
+  - id: energy.freezer.minus80.kwh_per_day
+    label: "One upright -80 C ultra-low-temperature freezer, energy per day"
+    value_low: 4.71
+    value_mid: 9.7
+    value_high: 20
+    unit: kwh/day
+    source_title: "Roadmap for low-carbon ultra-low temperature storage in biobanking. J Transl Med 2024 (PMC11308585): 'a power consumption of 9.7 kWh per day has been set'; older units 'sometimes consuming as much as 20 kWh per day'"
+    source_url: "https://doi.org/10.1186/s12967-024-05383-5"
+    source_year: 2024
+    rationale: >-
+      mid = lifetime-average use phase of a metered modern 570 L unit (12-year ageing); high = older units (same paper;
+      a 2025 Foods review gives 16-25 kWh/day for conventional uprights). low = best of 77 ENERGY STAR-certified ULT
+      freezers (Haier DW-86L730BP, 4.71 kWh/day at -80 C; certified models median 8.72, max 13.19). Lab test values;
+      installed fleets include older units. Cross-check: the LCCT method's 2192.2 kg per freezer-year at 0.273 kg/kWh
+      implies ~22 kWh/day.

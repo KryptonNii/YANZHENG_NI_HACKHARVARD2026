@@ -1,0 +1,308 @@
+# Patient travel, monitoring and meeting distances. Quotes: docs/sources.md §Travel. Convention: see costs.yaml.
+# Countries: gb and us are sourced; es and au are partly sourced; `.global` is the engine's fallback and is an explicit
+# assumption ("Where country-specific information was unavailable, UK data was used as a surrogate" is the practice in
+# published trial footprints, e.g. BMJ Open 2024, PMC11487931 — our global ranges are wider than the UK's on purpose).
+defaults:
+  version: 1
+
+parameters:
+  # ------------------------------------------------------------------ round-trip distance per visit
+  - id: dist.patient.roundtrip_km.gb
+    label: "Patient home to site round trip, England/UK"
+    value_low: 16.8
+    value_mid: 19.1
+    value_high: 61.2
+    unit: km/visit
+    region: "GB"
+    source_title: "Impact of virtual clinics on streamlining NHS outpatient waiting lists and carbon emissions. Foot Ankle Orthop 2024 (PMC11653461): 'Average distance: 5.94 miles ... Round trip distance ... 11.89 miles'"
+    source_url: "https://doi.org/10.1177/24730114241305603"
+    source_year: 2024
+    rationale: >-
+      mid = 11.89 mi = 19.1 km (one NHS clinic). low = DfT National Travel Survey 2025 (NTS0403), 'Personal business'
+      (includes 'medical consultations or treatment') 5.222 mi one-way = 16.8 km round trip. high = virtual joint school
+      saved 'on average, 38 miles' per patient (Ann R Coll Surg Engl 2026, PMC13321172) = 61.2 km. Trial sites (teaching
+      hospitals) probably sit in the upper half. The LCCT method's 5.8 kg per UK hospital visit is the cross-check.
+
+  - id: dist.patient.roundtrip_km.us
+    label: "Patient home to site round trip, United States"
+    value_low: 23.9
+    value_mid: 41.5
+    value_high: 83.0
+    unit: km/visit
+    region: "US"
+    source_title: "FHWA 2022 National Household Travel Survey public-use trip file, WHYTO=11 'Health care visit' (n=684), weighted: mean 12.901 mi, median 7.44 mi one-way"
+    source_url: "https://nhts.ornl.gov/"
+    source_year: 2025
+    rationale: >-
+      mid = mean x 2 = 41.5 km; low = median x 2 = 23.9 km (our weighting reproduces the published 12.6 mi all-trip mean).
+      high = cancer-trial participants at UCSF, median one-way 25.8 mi (The Oncologist 2018, PMC6263122) = 83.0 km.
+
+  - id: dist.patient.roundtrip_km.es
+    label: "Patient home to site round trip, Spain"
+    value_low: 8
+    value_mid: 13
+    value_high: 40
+    unit: km/visit
+    region: "ES"
+    source_title: "Impact on the reduction of CO2 emissions due to the use of telemedicine. Sci Rep 2022 (PMC9307763): Carbon Trust estimate 'approximately 13 km for a round trip' to a doctor's surgery"
+    source_url: "https://doi.org/10.1038/s41598-022-16864-2"
+    source_year: 2022
+    rationale: "Consultant estimate for urban private-insurance members, doctor's surgery not trial site. low/high are assumptions (high allows for specialist centres)."
+
+  - id: dist.patient.roundtrip_km.au
+    label: "Patient home to site round trip, Australia"
+    value_low: 20
+    value_mid: 50
+    value_high: 100
+    unit: km/visit
+    region: "AU"
+    assumption: true
+    rationale: >-
+      Kinghorn Cancer Centre, Sydney (Intern Med J 2023, abstract): '27% lived within 10 km, 29% lived between 10 and 50
+      km and 44% lived further than 50 km' bounds the median round trip to 20-100 km; mid is our assumption.
+
+  - id: dist.patient.roundtrip_km.global
+    label: "Patient home to site round trip, fallback for countries without data"
+    value_low: 16.8
+    value_mid: 30
+    value_high: 83
+    unit: km/visit
+    region: "global"
+    assumption: true
+    rationale: "Spans the UK NTS low (16.8 km) and the US cancer-trial median (83 km); mid is our assumption."
+
+  # ------------------------------------------------------------------ mode split (share of km by car; rail share of public transport km)
+  - id: rate.patient.mode_share.car.gb
+    label: "Share of patient travel by car, England"
+    value_low: 0.64
+    value_mid: 0.80
+    value_high: 0.85
+    unit: share
+    region: "GB"
+    source_title: "DfT National Travel Survey NTS0409 (2025), 'Personal business': car/van driver + passenger 309.146 of 386.311 miles per person per year"
+    source_url: "https://www.gov.uk/government/statistical-data-sets/nts04-purpose-of-trips"
+    source_year: 2026
+    rationale: "mid = share of distance (0.800); low = share of trips (0.641); high = share of motorised distance (0.848). The engine multiplies by km, so distance shares apply."
+
+  - id: rate.patient.mode_share.car.us
+    label: "Share of patient travel by car, United States"
+    value_low: 0.92
+    value_mid: 0.98
+    value_high: 0.98
+    unit: share
+    region: "US"
+    source_title: "FHWA 2022 NHTS public-use trip file, WHYTO=11 'Health care visit', weighted: car 92.29% of trips, 97.68% of person-miles"
+    source_url: "https://nhts.ornl.gov/"
+    source_year: 2025
+
+  - id: rate.patient.mode_share.car.es
+    label: "Share of patient travel by car, Spain"
+    value_low: 0.50
+    value_mid: 0.65
+    value_high: 0.80
+    unit: share
+    region: "ES"
+    assumption: true
+    rationale: "Carbon Trust/Sanitas modelling assumptions (Sci Rep 2022, PMC9307763): 50% car in Madrid/Barcelona/Valencia, 80% elsewhere; mid is our midpoint (no population weighting given)."
+
+  - id: rate.patient.mode_share.car.au
+    label: "Share of patient travel by car, Australia"
+    value_low: 0.70
+    value_mid: 0.85
+    value_high: 0.95
+    unit: share
+    region: "AU"
+    assumption: true
+    rationale: "No Australian medical-trip mode data found (NSW Household Travel Survey document blocked). Assumption between the UK and US values."
+
+  - id: rate.patient.mode_share.car.global
+    label: "Share of patient travel by car, fallback"
+    value_low: 0.5
+    value_mid: 0.8
+    value_high: 0.98
+    unit: share
+    region: "global"
+    assumption: true
+    rationale: "Spans the Spanish urban assumption (0.5) and the US measurement (0.98); mid = UK distance share."
+
+  - id: rate.patient.mode_share.rail.gb
+    label: "Rail share of patient public-transport km, England"
+    value_low: 0.20
+    value_mid: 0.66
+    value_high: 0.68
+    unit: share
+    region: "GB"
+    source_title: "DfT NTS0409 (2025), 'Personal business': surface rail 30.645 of (rail + bus) miles per person per year"
+    source_url: "https://www.gov.uk/government/statistical-data-sets/nts04-purpose-of-trips"
+    source_year: 2026
+    rationale: "mid = surface rail by distance (0.657); high = incl. London Underground (0.683); low = surface rail by trips (0.195)."
+
+  - id: rate.patient.mode_share.rail.us
+    label: "Rail share of patient public-transport km, United States"
+    value_low: 0.03
+    value_mid: 0.10
+    value_high: 0.10
+    unit: share
+    region: "US"
+    source_title: "FHWA 2022 NHTS public-use trip file, WHYTO=11: rail 0.17% vs bus 1.49% of person-miles"
+    source_url: "https://nhts.ornl.gov/"
+    source_year: 2025
+    rationale: "mid = by miles (0.102); low = by trips (0.033). Very few rail records."
+
+  - id: rate.patient.mode_share.rail.es
+    label: "Rail share of patient public-transport km, Spain"
+    value_low: 0.47
+    value_mid: 0.51
+    value_high: 0.55
+    unit: share
+    region: "ES"
+    assumption: true
+    rationale: "Carbon Trust/Sanitas modelling assumptions (Sci Rep 2022): 26/(21+26) large provinces, 8/(9+8) elsewhere; mid is our midpoint."
+
+  - id: rate.patient.mode_share.rail.au
+    label: "Rail share of patient public-transport km, Australia"
+    value_low: 0.2
+    value_mid: 0.4
+    value_high: 0.6
+    unit: share
+    region: "AU"
+    assumption: true
+    rationale: "No source found. Wide assumption."
+
+  - id: rate.patient.mode_share.rail.global
+    label: "Rail share of patient public-transport km, fallback"
+    value_low: 0.1
+    value_mid: 0.4
+    value_high: 0.7
+    unit: share
+    region: "global"
+    assumption: true
+    rationale: "Spans the US (0.10) and UK (0.68) distance shares; mid is our assumption."
+
+  # ------------------------------------------------------------------ door-to-door speed
+  - id: time.patient.travel_speed_kmh.gb
+    label: "Patient door-to-door travel speed, England"
+    value_low: 24.3
+    value_mid: 24.4
+    value_high: 25.6
+    unit: km/hour
+    region: "GB"
+    source_title: "DfT NTS0403 (2025), 'Personal business': 5.222 mi in 20.70 min (incl. waiting) = 24.4 km/h; 2024: 24.3; 2019: 25.6"
+    source_url: "https://www.gov.uk/government/statistical-data-sets/nts04-purpose-of-trips"
+    source_year: 2026
+    rationale: "Short trips; longer hospital trips are faster (the joint-school study implies ~59 km/h), so patient hours may be overstated for distant patients."
+
+  - id: time.patient.travel_speed_kmh.us
+    label: "Patient door-to-door travel speed, United States"
+    value_low: 43.4
+    value_mid: 44.0
+    value_high: 65.7
+    unit: km/hour
+    region: "US"
+    source_title: "FHWA 2022 NHTS public-use trip file, WHYTO=11: weighted miles / weighted minutes = 27.33 mph = 44.0 km/h"
+    source_url: "https://nhts.ornl.gov/"
+    source_year: 2025
+    rationale: "low = WHYTRP90 'Medical/Dental' 43.4 km/h; high = Minnesota cancer centre, 34 mi round trip in a median 50 min (The Oncologist 2024, PMC11067814), ratio of medians."
+
+  - id: time.patient.travel_speed_kmh.global
+    label: "Patient door-to-door travel speed, fallback"
+    value_low: 20
+    value_mid: 30
+    value_high: 60
+    unit: km/hour
+    region: "global"
+    assumption: true
+    rationale: "Spans the UK (24 km/h, short urban trips) and US (44-66 km/h) values; mid is our assumption."
+
+  # ------------------------------------------------------------------ time at site
+  - id: time.patient.visit_at_site
+    label: "Patient time at the site per visit (waiting + procedures)"
+    value_low: 1.0
+    value_mid: 1.4
+    value_high: 2.0
+    unit: hours/visit
+    region: "global"
+    source_title: "Opportunity costs of ambulatory medical care in the United States. Am J Manag Care 2015 (PMC8085714): 'Average total time per visit was 121 minutes ... 37 minutes ... of travel time and 84 minutes ... of clinic time'"
+    source_url: "https://pubmed.ncbi.nlm.nih.gov/26295356/"
+    source_year: 2015
+    rationale: >-
+      mid = 84 min. low = NHTS 2022 median dwell time at health-care destinations, 61 min; high = cancer-centre median clinic
+      time 119 min (The Oncologist 2024). Labs + clinician + infusion days: 217 min. All US sources.
+
+  # ------------------------------------------------------------------ monitoring, meetings, home nursing
+  - id: dist.monitoring.roundtrip_km.global
+    label: "CRA base to site round trip, same country (fallback)"
+    value_low: 200
+    value_mid: 500
+    value_high: 1000
+    unit: km/trip
+    region: "global"
+    assumption: true
+    rationale: >-
+      Mackillop et al. BMJ Open 2023 (supplementary methodology) modelled 'F2F - 500 km round trip distance by car
+      transportation per visit' - itself an assumption. Bounds are ours.
+
+  - id: dist.monitoring.roundtrip_km.gb
+    label: "CRA base to site round trip, UK"
+    value_low: 50
+    value_mid: 300
+    value_high: 1000
+    unit: km/trip
+    region: "GB"
+    assumption: true
+    rationale: >-
+      Griffiths 2024 appendix D p.4: average PRIMETIME site distance from the CTU 301.8 km one way; CASPS UK sites
+      24-507 km from the CTU (appendix C p.4). Round trip per visit depends on routing; mid is our assumption.
+
+  - id: dist.monitoring.flight_threshold_km
+    label: "One-way distance above which a monitoring trip is flown"
+    value_low: 400
+    value_mid: 600
+    value_high: 1000
+    unit: km
+    region: "global"
+    assumption: true
+    rationale: "No source. CASPS monitored all UK sites (up to 507 km) by rail and flew to Spain and Australia (Griffiths 2024 appendix C p.7-8)."
+
+  - id: dist.flight.short_haul_max_km
+    label: "One-way distance up to which a flight is short-haul"
+    value_low: 3000
+    value_mid: 3700
+    value_high: 4500
+    unit: km
+    region: "global"
+    assumption: true
+    rationale: >-
+      DESNZ 2026 assigns haul by destination country, not distance ('Haul definition' sheet: Spain, Germany, Turkey,
+      Egypt, Morocco and Iceland are short-haul; USA, Canada and Australia long-haul). A km threshold is our
+      approximation of that list.
+
+  - id: rate.investigator_meeting.attendees_per_site
+    label: "Investigator (kick-off) meeting attendees per site"
+    value_low: 1
+    value_mid: 2
+    value_high: 3
+    unit: people/site
+    region: "global"
+    assumption: true
+    rationale: "No source found (PI and coordinator typical). Set to 0 per trial when meetings are virtual."
+
+  - id: dist.investigator_meeting.roundtrip_km
+    label: "Investigator meeting round trip per attendee"
+    value_low: 200
+    value_mid: 1500
+    value_high: 10000
+    unit: km/attendee
+    region: "global"
+    assumption: true
+    rationale: "No source. National meetings ~hundreds of km; international meetings ~thousands. Wide assumption."
+
+  - id: dist.home_nurse.roundtrip_km
+    label: "Home nurse round trip by car per home visit"
+    value_low: 10
+    value_mid: 30
+    value_high: 80
+    unit: km/visit
+    region: "global"
+    assumption: true
+    rationale: "No source found for research nursing; patient round-trip distances (16.8-83 km above) used as a guide."

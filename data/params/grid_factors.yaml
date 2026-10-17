@@ -1,0 +1,91 @@
+# Grid electricity emission factors outside the UK (UK: emission_factors.yaml, DESNZ). Quotes: docs/sources.md §Grid.
+#
+# Basis rule: the UK factor (DESNZ scope 2) counts direct combustion emissions. So the MID here is the official
+# national DIRECT factor where one exists (ES REE, AU NGA, US eGRID, DE UBA). Ember's figures (CC BY 4.0) are
+# LIFECYCLE (upstream methane, supply chain) and are used for bounds, or as the mid where no direct official figure
+# was opened (FR, global) — those entries say so. Per-kWh-generated vs per-kWh-consumed differences (a few %) are noted.
+defaults:
+  version: 1
+
+parameters:
+  - id: ef.electricity.grid.es
+    label: "Spain grid electricity, per kWh (direct, national)"
+    value_low: 0.0861
+    value_mid: 0.1084
+    value_high: 0.1535
+    unit: kg_co2e/kwh
+    region: "ES"
+    source_title: "Red Electrica (REE) REData API, 'Emisiones y factor de emision de CO2 en generacion no renovables', 2025 national: 0.10842 tCO2eq/MWh"
+    source_url: "https://apidatos.ree.es/es/datos/generacion/no-renovables-detalle-emisiones-CO2?start_date=2024-01-01T00:00&end_date=2025-12-31T23:59&time_trunc=year"
+    source_year: 2025
+    rationale: >-
+      low = REE 2025 peninsular system 0.0861; high = Ember yearly electricity data 2025, Spain, 153.459 gCO2e/kWh
+      (lifecycle). MITECO's 2025 supplier residual mix (0.258, market-based) is a different basis and not used.
+
+  - id: ef.electricity.grid.au
+    label: "Australia grid electricity, per kWh (scope 2, national, location-based)"
+    value_low: 0.518
+    value_mid: 0.59
+    value_high: 0.69
+    unit: kg_co2e/kwh
+    region: "AU"
+    source_title: "DCCEEW. Australian National Greenhouse Accounts Factors 2026, Table 1 (location-based), National: scope 2 0.59, scope 3 0.10 kg CO2-e/kWh"
+    source_url: "https://www.dcceew.gov.au/climate-change/publications/national-greenhouse-accounts-factors-2026"
+    source_year: 2026
+    rationale: >-
+      Per kWh consumed (financial year to June). high = scope 2 + scope 3 (0.69, adds upstream and T&D losses);
+      low = Ember 2025 Australia 517.956 g per kWh generated. States range 0.21 (SA, Tas) to 0.74 (Vic) in the same
+      table; CASPS used Victoria 0.98 and NSW/QLD 0.81 (older Clean Energy Regulator data).
+
+  - id: ef.electricity.grid.us
+    label: "United States grid electricity, per kWh (eGRID total output emission rate)"
+    value_low: 0.3497
+    value_mid: 0.3497
+    value_high: 0.3929
+    unit: kg_co2e/kwh
+    region: "US"
+    source_title: "US EPA eGRID2023 Summary Tables (rev. 2, 12 Jun 2025), Table 1, U.S. total output emission rate CO2e 770.884 lb/MWh"
+    source_url: "https://www.epa.gov/egrid/summary-data"
+    source_year: 2025
+    rationale: >-
+      770.884 lb/MWh x 0.45359237 / 1000 = 0.3497 kg/kWh generated; with eGRID's 4.2% grid gross loss it is 0.365 per kWh
+      delivered. high = Ember 2023 USA 392.9 g (lifecycle). Subregions vary widely.
+
+  - id: ef.electricity.grid.de
+    label: "Germany grid electricity, per kWh consumed (CO2)"
+    value_low: 0.334
+    value_mid: 0.344
+    value_high: 0.379
+    unit: kg_co2e/kwh
+    region: "DE"
+    source_title: "Umweltbundesamt. Strom- und Waermeversorgung in Zahlen: 2025 average 344 g CO2 per kWh of electricity consumed (2024: 353, 2023: 379)"
+    source_url: "https://www.umweltbundesamt.de/themen/klima-energie/energieversorgung/strom-waermeversorgung-in-zahlen"
+    source_year: 2025
+    rationale: "low = Ember 2025 Germany 334.117 g (lifecycle, generated); high = UBA 2023 (379). UBA counts CO2 only and excludes emissions embodied in imports."
+
+  - id: ef.electricity.grid.fr
+    label: "France grid electricity, per kWh (lifecycle - no direct official factor opened)"
+    value_low: 0.0403
+    value_mid: 0.0412
+    value_high: 0.0519
+    unit: kg_co2e/kwh
+    region: "FR"
+    source_title: "Ember. Yearly electricity data (release 2026, data to 2025), France 2025 total generation: 41.224 gCO2e/kWh"
+    source_url: "https://ember-energy.org/data/yearly-electricity-data/"
+    source_year: 2026
+    rationale: >-
+      Lifecycle basis (Ember methodology: 'These figures aim to include full lifecycle emissions'), unlike the other
+      mids. low = Ember 2024 (40.337 g); high = ADEME Base Empreinte 'Electricite - 2024 - mix moyen - consommation'
+      0.0519 kgCO2e/kWh (smoothed 2021-2024).
+
+  - id: ef.electricity.grid.global
+    label: "World average grid electricity, per kWh (lifecycle; fallback for countries without a factor)"
+    value_low: 0.460
+    value_mid: 0.460
+    value_high: 0.486
+    unit: kg_co2e/kwh
+    region: "global"
+    source_title: "Ember. Yearly electricity data (release 2026), World total generation: 2025 460.087, 2024 473.046, 2023 485.622 gCO2e/kWh"
+    source_url: "https://ember-energy.org/data/yearly-electricity-data/"
+    source_year: 2026
+    rationale: "Lifecycle basis, partly Ember estimates for countries with missing data. IEA factors are not open. Licence CC BY 4.0."

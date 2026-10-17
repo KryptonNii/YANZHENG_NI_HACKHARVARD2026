@@ -1,0 +1,322 @@
+# Site staff time, monitoring and patient time parameters. Quotes and page references: docs/sources.md §Site time.
+# Convention: see costs.yaml header (assumption=false => mid sourced/derived; assumed bounds stated in rationale).
+#
+# Main source for staff minutes: NIHR national costing tariff 2025-26 v1.1 ("Values within this tariff solely define
+# the relevant labour time required by research staff"), as appended to a Cardiff and Vale UHB board paper.
+# Imaging/ECG/biopsy minutes come from procedure-duration studies (scanner or operator time, not coordinator time).
+defaults:
+  region: "global"
+  version: 1
+
+parameters:
+  # ------------------------------------------------------------------ monitoring
+  - id: rate.monitoring.onsite_visits_per_site_month
+    label: "On-site monitoring visits per site per month (fully on-site monitoring)"
+    value_low: 0.22
+    value_mid: 0.54
+    value_high: 1.09
+    unit: visits/site/month
+    source_title: "US FDA. Oversight of Clinical Investigations - A Risk-Based Approach to Monitoring (Guidance for Industry), Aug 2013, p.3: 'on-site monitoring visits at approximately 4- to 8-week intervals'"
+    source_url: "https://www.fda.gov/media/116754/download"
+    source_year: 2013
+    rationale: >-
+      mid = 8-week interval (30.44/56 = 0.54), high = 4-week (30.44/28 = 1.09). low = 0.22 derived from Mackillop et al.
+      BMJ Open 2023 supplementary Table 2a (DAPA-HF: 3,743 face-to-face visits / 432 sites / 39 months). Their asthma
+      trial gives 0.31 (2,400 / 300 / 26).
+
+  - id: time.monitoring.onsite_visit_days
+    label: "CRA days per on-site monitoring visit (incl. travel and report)"
+    value_low: 1.0
+    value_mid: 2.0
+    value_high: 3.6
+    unit: days/visit
+    assumption: true
+    rationale: >-
+      Bounds sourced, mid assumed. low = 1 day (NIHR tariff NIHR_GPC_017 'based on a full working day'); high = 3.6 =
+      28.61 CRA hours per routine on-site visit / 8 (Fu et al. J Med Internet Res 2023;25:e42175, Table 2).
+
+  - id: time.monitoring.remote_visit_days
+    label: "CRA days per remote monitoring visit"
+    value_low: 0.5
+    value_mid: 1.0
+    value_high: 3.1
+    unit: days/visit
+    assumption: true
+    rationale: >-
+      high = 24.65 CRA hours per hybrid-model visit / 8 (Fu et al. 2023, Table 2); mid = one working day (NIHR tariff
+      treats remote like on-site); low = half day assumption (no travel).
+
+  - id: time.site.monitoring_visit_support
+    label: "Site staff hours supporting one on-site monitoring visit"
+    value_low: 7.5
+    value_mid: 15
+    value_high: 19
+    unit: hours/visit
+    source_title: "NIHR national costing tariff 2025-26 v1.1, NIHR_GPC_017 'Monitoring fee for both onsite and remote monitoring': Nurse 450 + Admin 450 minutes; NIHR_GPC_047 pharmacy presence 240 min"
+    source_url: "https://cavuhb.nhs.wales/files/board-and-committees/finance-performance-2026-27/3-2c-appendix-a-nihr-national-costing-template-tarrifs-pdf-1-pdf/"
+    source_year: 2025
+    rationale: "mid = 900 min = 15 h; low = one staff member's working day (450 min); high = mid + pharmacy 240 min. Costing guideline, not a time-and-motion measurement."
+
+  - id: time.site.remote_monitoring_review
+    label: "Site staff hours per remote monitoring visit"
+    value_low: 4
+    value_mid: 7.5
+    value_high: 15
+    unit: hours/visit
+    source_title: "NIHR national costing tariff 2025-26 v1.1, NIHR_GPC_017: 'Staff time allocated as standard is based on a full working day for both onsite and remote monitoring'"
+    source_url: "https://cavuhb.nhs.wales/files/board-and-committees/finance-performance-2026-27/3-2c-appendix-a-nihr-national-costing-template-tarrifs-pdf-1-pdf/"
+    source_year: 2025
+    rationale: >-
+      high = same 900 min as on-site (tariff makes no distinction); mid = one working day (450 min); low = 4 h of
+      videoconference per virtual visit (Mackillop et al. 2023 supplementary methodology - a modelling assumption).
+
+  # ------------------------------------------------------------------ patient-visit admin and queries
+  - id: time.site.visit_admin
+    label: "Site minutes per patient visit for CRF/eCRF completion and data transfer"
+    value_low: 30
+    value_mid: 60
+    value_high: 75
+    unit: minutes/visit
+    source_title: "NIHR national costing tariff 2025-26 v1.1, NIHR_PRC_026 'CRF/eCRF completion including data transfer and query resolution': Clinical 15 + Nurse 60 min per visit"
+    source_url: "https://cavuhb.nhs.wales/files/board-and-committees/finance-performance-2026-27/3-2c-appendix-a-nihr-national-costing-template-tarrifs-pdf-1-pdf/"
+    source_year: 2025
+    rationale: >-
+      mid = nurse 60; high = nurse + clinician 75. The tariff line includes query resolution, which the engine also
+      counts separately (rate.queries.per_patient) - mid excludes the clinician part to limit double counting.
+      low = 30 is an assumption (simple visits).
+
+  - id: rate.queries.per_patient
+    label: "Data queries raised per patient (whole trial)"
+    value_low: 2
+    value_mid: 25
+    value_high: 470
+    unit: queries/patient
+    source_title: "Khan JS et al. Electronic versus traditional data collection: a multicenter RCT. Can J Pain 2019 (PMC8730625); Blau S et al. Operational metrics for the ELAINE 2 study. JCO Clin Cancer Inform 2023 (PMC10569766)"
+    source_url: "https://doi.org/10.1080/24740527.2019.1587584"
+    source_year: 2019
+    rationale: >-
+      low ~ 1.88-4.92 per patient (Khan, small academic RCT); mid = 25 (Khan's pilot used for sample size); high = 472.97
+      per enrolled patient (ELAINE 2, industry oncology). Depends ~100x on trial type: override per trial when known.
+
+  - id: time.site.query_resolution
+    label: "Site minutes to resolve one data query"
+    value_low: 5
+    value_mid: 10
+    value_high: 20
+    unit: minutes/query
+    source_title: "PPD (Thermo Fisher). Leveraging the Preclarus Technology Portfolio... case study, 2023: 'each query needing an estimated five minutes of hands-on time to resolve' (excludes research time)"
+    source_url: "https://www.ppd.com/wp-content/uploads/2023/06/Preclarus_Case-Study.pdf"
+    source_year: 2023
+    assumption: true
+    rationale: "Only low is sourced (vendor estimate, hands-on only). mid and high are assumptions adding investigation time."
+
+  # ------------------------------------------------------------------ minutes per procedure (time.site.procedure.<code>)
+  - id: time.site.procedure.blood_draw
+    label: "Site minutes: blood draw (collection)"
+    value_low: 6
+    value_mid: 15
+    value_high: 35
+    unit: minutes/procedure
+    source_title: "NIHR tariff 2025-26 v1.1 NIHR_PRC_004 'Blood or other biological sample - collection only' Nurse 15; NIHR_PRC_005 processing Nurse 20"
+    source_url: "https://cavuhb.nhs.wales/files/board-and-committees/finance-performance-2026-27/3-2c-appendix-a-nihr-national-costing-template-tarrifs-pdf-1-pdf/"
+    source_year: 2025
+    rationale: "high = collection + processing (35); low = measured venipuncture median 6.1 min (Berthelot et al. JACEP Open 2022, PMC9292471, Table 2)."
+
+  - id: time.site.procedure.pk_sample
+    label: "Site minutes: PK sample (collection + processing)"
+    value_low: 15
+    value_mid: 35
+    value_high: 65
+    unit: minutes/procedure
+    source_title: "NIHR tariff 2025-26 v1.1 NIHR_PRC_004 (collection 15), NIHR_PRC_005 (processing 20), NIHR_PRC_006 (specimen dispatch 30)"
+    source_url: "https://cavuhb.nhs.wales/files/board-and-committees/finance-performance-2026-27/3-2c-appendix-a-nihr-national-costing-template-tarrifs-pdf-1-pdf/"
+    source_year: 2025
+    rationale: "Derived: no PK-specific tariff line. low = collection; mid = collection + processing; high = + dispatch per timepoint."
+
+  - id: time.site.procedure.ecg
+    label: "Site minutes: 12-lead ECG"
+    value_low: 3.8
+    value_mid: 4.6
+    value_high: 8
+    unit: minutes/procedure
+    source_title: "Berthelot S et al. Time-driven activity-based costing in the ED. JACEP Open 2022 (PMC9292471), Table 2: 'ECG 8 82 4.6 (3.8; 6.1)'"
+    source_url: "https://doi.org/10.1002/emp2.12778"
+    source_year: 2022
+    rationale: "mid = measured median, low = p25, high = expert estimate. Research triplicate ECGs and investigator review take longer."
+
+  - id: time.site.procedure.vital_signs
+    label: "Site minutes: vital signs"
+    value_low: 10
+    value_mid: 20
+    value_high: 20
+    unit: minutes/procedure
+    source_title: "NIHR tariff 2025-26 v1.1 NIHR_PRC_007 (temperature, blood pressure, pulse, respiration): Clinical 10 + Nurse 10"
+    source_url: "https://cavuhb.nhs.wales/files/board-and-committees/finance-performance-2026-27/3-2c-appendix-a-nihr-national-costing-template-tarrifs-pdf-1-pdf/"
+    source_year: 2025
+    rationale: "low = nurse only (10, = NIHR_PRC_010 blood pressure only)."
+
+  - id: time.site.procedure.physical_exam
+    label: "Site minutes: physical examination"
+    value_low: 30
+    value_mid: 50
+    value_high: 55
+    unit: minutes/procedure
+    source_title: "NIHR tariff 2025-26 v1.1 NIHR_PRC_011: Clinical 30 + Nurse 20 (fundoscopy +5 min clinical)"
+    source_url: "https://cavuhb.nhs.wales/files/board-and-committees/finance-performance-2026-27/3-2c-appendix-a-nihr-national-costing-template-tarrifs-pdf-1-pdf/"
+    source_year: 2025
+
+  - id: time.site.procedure.questionnaire
+    label: "Site minutes: questionnaire"
+    value_low: 30
+    value_mid: 30
+    value_high: 60
+    unit: minutes/procedure
+    source_title: "NIHR tariff 2025-26 v1.1 NIHR_PRC_017 'Subject Questionnaire' Nurse 30; NIHR_PRC_018 'Review Questionnaire' Nurse 30"
+    source_url: "https://cavuhb.nhs.wales/files/board-and-committees/finance-performance-2026-27/3-2c-appendix-a-nihr-national-costing-template-tarrifs-pdf-1-pdf/"
+    source_year: 2025
+
+  - id: time.site.procedure.informed_consent
+    label: "Site minutes: informed consent (total staff)"
+    value_low: 30
+    value_mid: 105
+    value_high: 135
+    unit: minutes/procedure
+    source_title: "NIHR tariff 2025-26 v1.1 NIHR_PRC_001: Clinical 60 + Nurse 60; nurse guidance 30/45/60 min by complexity, +15 min where needed"
+    source_url: "https://cavuhb.nhs.wales/files/board-and-committees/finance-performance-2026-27/3-2c-appendix-a-nihr-national-costing-template-tarrifs-pdf-1-pdf/"
+    source_year: 2025
+    rationale: "Derived: low = nurse, simple (30); mid = nurse medium 45 + clinical 60; high = nurse complex 60 + clinical 60 + 15."
+
+  - id: time.site.procedure.drug_dispensing
+    label: "Site (pharmacy) minutes per kit dispensed"
+    value_low: 70
+    value_mid: 121
+    value_high: 171
+    unit: minutes/procedure
+    source_title: "NIHR tariff 2025-26 v1.1: NIHR_PRC_033 standard dispensing 70; NIHR_PRC_034 aseptic 120; NIHR_PRC_037 IVR/IWR 16; NIHR_PRC_039 drug accountability 35"
+    source_url: "https://cavuhb.nhs.wales/files/board-and-committees/finance-performance-2026-27/3-2c-appendix-a-nihr-national-costing-template-tarrifs-pdf-1-pdf/"
+    source_year: 2025
+    rationale: "Derived: mid = 70 + 16 + 35; high = 120 + 16 + 35. A costing guideline that looks generous next to measured times."
+
+  - id: time.site.procedure.urine_sample
+    label: "Site minutes: urine sample (collection + processing)"
+    value_low: 10
+    value_mid: 20
+    value_high: 20
+    unit: minutes/procedure
+    source_title: "NIHR tariff 2025-26 v1.1 NIHR_PRC_012 collection Nurse 10 + NIHR_PRC_013 processing Nurse 10"
+    source_url: "https://cavuhb.nhs.wales/files/board-and-committees/finance-performance-2026-27/3-2c-appendix-a-nihr-national-costing-template-tarrifs-pdf-1-pdf/"
+    source_year: 2025
+
+  - id: time.site.procedure.mri
+    label: "Site minutes: MRI (scanner/room time)"
+    value_low: 25
+    value_mid: 30
+    value_high: 45
+    unit: minutes/procedure
+    source_title: "Colarieti A et al. Contrast-enhanced mammography versus breast MRI: cost-effectiveness. Radiol Med 2025 (PMC12872687): 'typically 25-45 min'; DCE-MRI average 30 min"
+    source_url: "https://doi.org/10.1007/s11547-025-02122-8"
+    source_year: 2025
+    rationale: "Radiographer/scanner time, not research staff; research image anonymisation adds 30 min (NIHR_PRC_061)."
+
+  - id: time.site.procedure.ct_scan
+    label: "Site minutes: CT scan (imaging time)"
+    value_low: 2.2
+    value_mid: 4.5
+    value_high: 15
+    unit: minutes/procedure
+    source_title: "Berthelot S et al. JACEP Open 2022 (PMC9292471), Table 2: CT abdomen with IV contrast, expert 15, measured median 4.5; head without contrast 2.2"
+    source_url: "https://doi.org/10.1002/emp2.12778"
+    source_year: 2022
+    rationale: "Imaging time only, excludes preparation and transport; add 30 min NIHR image anonymisation for research use."
+
+  - id: time.site.procedure.x_ray
+    label: "Site minutes: X-ray (room time)"
+    value_low: 3.1
+    value_mid: 5.1
+    value_high: 7.1
+    unit: minutes/procedure
+    source_title: "Berthelot S et al. JACEP Open 2022 (PMC9292471), Table 2: chest X-ray room time median 5.1 (IQR 3.1; 7.1)"
+    source_url: "https://doi.org/10.1002/emp2.12778"
+    source_year: 2022
+
+  - id: time.site.procedure.mammogram
+    label: "Site minutes: mammogram (contrast-enhanced mammography as proxy)"
+    value_low: 5
+    value_mid: 10
+    value_high: 20
+    unit: minutes/procedure
+    source_title: "Colarieti A et al. Radiol Med 2025 (PMC12872687): 'CEM required approximately 10 min per case'"
+    source_url: "https://doi.org/10.1007/s11547-025-02122-8"
+    source_year: 2025
+    rationale: "Proxy (contrast-enhanced, longer than standard 2D mammography); low/high (x0.5 / x2) are assumptions."
+
+  - id: time.site.procedure.echocardiogram
+    label: "Site minutes: echocardiogram (sonographer scan time)"
+    value_low: 13.0
+    value_mid: 14.3
+    value_high: 18.0
+    unit: minutes/procedure
+    source_title: "Sakamoto A, Kagiyama N et al. AI-Echo RCT. J Am Heart Assoc 2026 (PMC12909003): 13.0 vs 14.3 min; Hollitt KJ et al. Echo Res Pract 2025 (PMC12168272): standard protocol 18.0 min"
+    source_url: "https://doi.org/10.1161/JAHA.125.045637"
+    source_year: 2026
+
+  - id: time.site.procedure.biopsy
+    label: "Site minutes: image-guided biopsy (procedure time)"
+    value_low: 18
+    value_mid: 20.7
+    value_high: 36.7
+    unit: minutes/procedure
+    source_title: "Aytac A et al. Acta Radiol Open 2025 (PMC12743816): CT-guided lung core biopsy 20.7 +/- 7.4, median 18 min; Li P et al. Korean J Radiol 2025 (PMC12055272): MRI-guided 36.7 min"
+    source_url: "https://doi.org/10.1177/20584601251412850"
+    source_year: 2025
+    rationale: "Interventional-radiology time for lung biopsy; research tissue processing adds 60 min (NIHR_PRC_063)."
+
+  - id: time.site.procedure.default
+    label: "Site minutes: any procedure without its own parameter"
+    value_low: 5
+    value_mid: 20
+    value_high: 60
+    unit: minutes/procedure
+    assumption: true
+    rationale: "Fallback for codes without a parameter (eligibility review, AE review, medical history...). Spans the sourced per-procedure values above."
+
+  - id: rate.site.minutes_factor.home_visit
+    label: "Share of a visit's site staff minutes still incurred when it moves to home nursing"
+    value_low: 0.3
+    value_mid: 0.5
+    value_high: 0.8
+    unit: share
+    assumption: true
+    rationale: "No source found. Scheduling, data entry, sample receipt and investigator review remain at the site; procedures move to the nurse."
+
+  - id: rate.site.minutes_factor.remote_visit
+    label: "Share of a visit's site staff minutes still incurred when it becomes a telehealth visit"
+    value_low: 0.4
+    value_mid: 0.6
+    value_high: 0.9
+    unit: share
+    assumption: true
+    rationale: "No source found. Telehealth keeps the clinician and data-entry time; physical procedures are dropped or moved."
+
+  # ------------------------------------------------------------------ patient time for decentralised visits
+  - id: time.patient.home_visit
+    label: "Patient hours per home-nursing visit"
+    value_low: 0.5
+    value_mid: 0.75
+    value_high: 2
+    unit: hours/visit
+    source_title: "CMS Transmittal 13488, HH PPS CY2026, Table 5: average skilled-nursing visit 44.8 minutes"
+    source_url: "https://www.cms.gov/files/document/R13488CP.pdf"
+    source_year: 2025
+    rationale: "mid = 44.8 min; low/high are assumptions (research visits with sampling and questionnaires can be longer)."
+
+  - id: time.patient.remote_visit
+    label: "Patient hours per telehealth visit"
+    value_low: 0.33
+    value_mid: 0.5
+    value_high: 1
+    unit: hours/visit
+    source_title: "CMS 2026 PFS RVU file descriptors: 99213 'Office o/p est low 20 min', 99214 'Office o/p est mod 30 min'"
+    source_url: "https://www.cms.gov/medicare/payment/fee-schedules/physician/pfs-relative-value-files/rvu26d"
+    source_year: 2026
+    rationale: "low = 20 min, mid = 30 min (CPT time descriptors); high = 1 h assumption (log-in, questionnaires)."

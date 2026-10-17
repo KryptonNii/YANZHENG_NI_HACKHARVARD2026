@@ -1,0 +1,277 @@
+# Cost parameters (USD). Full quotes, table/page references and the arithmetic: docs/sources.md §Costs.
+#
+# Convention (whole library): `assumption: false` means the MID value is copied from an opened source or derived by
+# stated arithmetic from sourced numbers; any bound that is our assumption is said so in `rationale`.
+# `assumption: true` means the mid itself is ours — the range is deliberately wide.
+# Money years differ by source and are NOT inflation-adjusted; each rationale states the year and any FX rate
+# (Federal Reserve G.5A annual averages: EUR 2019 1.1194 USD; EUR 2023 1.0817 USD; NOK 2023 10.5659 per USD).
+#
+# Note: the ASPE 2014 report (Sertkaya et al., ERG for HHS/ASPE) was opened but publishes only per-study totals,
+# no per-unit costs (docs/sources.md §ASPE), so it informs no parameter below directly.
+defaults:
+  region: "global"
+  version: 1
+
+parameters:
+  # ------------------------------------------------------------------ monitoring
+  - id: cost.monitoring.cra_day_rate
+    label: "Fully loaded CRA / on-site monitoring day (sponsor or CRO cost)"
+    value_low: 603
+    value_mid: 1205
+    value_high: 2839
+    unit: usd/day
+    source_title: "Nevens H et al. Budgeting of non-commercial clinical trials: development of a budget tool by a public funding agency. Trials 2019 (PMC6907219), Additional file 1, Tables S1-S2"
+    source_url: "https://media.springernature.com/original/springer-static/esm/art%3A10.1186%2Fs13063-019-3900-8/MediaObjects/13063_2019_3900_MOESM1_ESM.docx"
+    source_year: 2019
+    rationale: >-
+      low = CRA EUR 67.28/h incl. margin and overhead x 8 h = EUR 538 = USD 603; mid = EUR 150,696 / 140 on-site
+      visits = EUR 1,076 = USD 1,205 per visit (12-16 h of monitor effort). high = Oslo University Hospital CTU price
+      examples 2023, Example III: NOK 120,000 / 4 visits = USD 2,839. European academic rates — no public US CRO day
+      rate was found, so US commercial monitoring is probably at or above the high value.
+
+  - id: cost.monitoring.travel_expenses_per_trip
+    label: "Travel and subsistence for one on-site monitoring trip (excluding airfare)"
+    value_low: 73
+    value_mid: 333
+    value_high: 742
+    unit: usd/trip
+    source_title: "GSA FY2027 CONUS per diem (91 FR 57616, 10 Sep 2026): lodging USD 113 + M&IE USD 68; IRS 2026 business mileage 76 cents/mile"
+    source_url: "https://www.federalregister.gov/documents/full_text/text/2026/09/10/2026-18439.txt"
+    source_year: 2026
+    rationale: >-
+      mid = one night (113 + 68) + 200 miles x 0.76 = USD 333; high = two nights + 500 miles = USD 742 (the nights and
+      miles are assumptions). low = KCE fixed transport fee EUR 65 per on-site visit = USD 73 (Nevens 2019, Table S2).
+      Airfare could not be sourced (BTS/DOT pages blocked) — flown trips are under-costed.
+
+  # ------------------------------------------------------------------ site staff
+  - id: cost.site_staff.hour
+    label: "Site research staff hour (registered nurse), loaded with benefits"
+    value_low: 58.5
+    value_mid: 73.9
+    value_high: 100
+    unit: usd/hour
+    source_title: "BLS OEWS May 2025, Registered Nurses (29-1141) hourly wage: mean 48.76, p25 38.62, p90 66.09; BLS ECEC June 2026 Table 4: wages = 66.0% of compensation for registered nurse occupations"
+    source_url: "https://www.bls.gov/oes/tables.htm"
+    source_year: 2025
+    rationale: >-
+      Loaded = wage / 0.660: mid 48.76 -> 73.88; low p25 38.62 -> 58.52; high p90 66.09 -> 100.14. Excludes
+      institutional overhead (e.g. LSU 35%). Cross-check: institutional CRC/research nurse billing USD 55-100/h
+      (Seattle Children's 2025, LSU 2022). No SOC code exists for research coordinators.
+
+  - id: cost.trial_management.per_fte_year
+    label: "Coordinating-unit / sponsor trial staff, loaded cost per FTE-year"
+    value_low: 100000
+    value_mid: 177000
+    value_high: 250000
+    unit: usd/fte_year
+    assumption: true
+    rationale: >-
+      No direct source. Mid derived from BLS OEWS May 2025 mean hourly wage for Medical Scientists (19-1042) USD 56.18
+      x 2,080 h / 0.660 wage share (BLS ECEC, as for nurses) = USD 177k; bounds are a wide assumption covering
+      academic CTU staff (lower) and CRO/sponsor project teams (higher).
+
+  # ------------------------------------------------------------------ decentralised visits
+  - id: cost.home_nurse.visit
+    label: "One home-nursing visit"
+    value_low: 177
+    value_mid: 304
+    value_high: 834
+    unit: usd/visit
+    source_title: "CMS Transmittal 13488 (CR 14304), HH PPS CY2026, Table 3: Skilled Nursing per-visit payment USD 176.96; LUPA add-on factor for skilled nursing 1.7200"
+    source_url: "https://www.cms.gov/files/document/R13488CP.pdf"
+    source_year: 2025
+    rationale: >-
+      low = Medicare CY2026 skilled-nursing per-visit payment 176.96 (average 44.8 min); mid = 176.96 x 1.7200 (CMS
+      first-visit add-on) = 304, used as a proxy for a longer research visit with sample handling; high = 2 h x USD 417
+      (University of Utah sponsor-billed research-nurse effort, UUSOP-13, 2026) — the 2 h is an assumption.
+      Commercial DCT home-nursing vendor prices were not found.
+
+  - id: cost.telehealth.visit
+    label: "One telehealth visit (established-patient E/M visit)"
+    value_low: 57.45
+    value_mid: 95.19
+    value_high: 135.61
+    unit: usd/visit
+    source_title: "CMS 2026 National Physician Fee Schedule Relative Value File, October release (RVU26D), CPT 99213/99214, conversion factor 33.4009"
+    source_url: "https://www.cms.gov/medicare/payment/fee-schedules/physician/pfs-relative-value-files/rvu26d"
+    source_year: 2026
+    rationale: >-
+      low = 99213 facility (1.72 RVU x 33.4009); mid = 99213 non-facility (2.85 x 33.4009); high = 99214 non-facility
+      (4.06 x 33.4009). Medicare rates; excludes DCT platform fees and investigator time beyond the visit.
+
+  - id: cost.patient.reimbursement_visit
+    label: "Patient travel reimbursement per on-site visit"
+    value_low: 15
+    value_mid: 38
+    value_high: 220
+    unit: usd/visit
+    source_title: "IRS standard mileage rates, 2026 (Jul-Dec) business rate 76 cents/mile; University of Utah UUSOP-13 (2026): 'Participant Travel Reimbursement: Current IRS business mileage rate'"
+    source_url: "https://www.irs.gov/tax-professionals/standard-mileage-rates"
+    source_year: 2026
+    rationale: >-
+      low = 20 mi x 0.76; mid = 50 mi x 0.76; high = 200 mi x 0.76 + one GSA M&IE day (USD 68). The round-trip miles
+      are assumptions. Stipends for time are not included (no open source found).
+
+  # ------------------------------------------------------------------ samples and labs
+  - id: cost.courier.shipment.ambient
+    label: "One ambient sample shipment (shipper + courier)"
+    value_low: 26
+    value_mid: 111
+    value_high: 1168
+    unit: usd/shipment
+    source_title: "ECHO Lab Core Ballpark Budget v2 (Nov 2025) Table 6; Rush University ACTG Budget Processing Cost List (Jan 2023)"
+    source_url: "https://echochildren.org/wp-content/uploads/2025/11/Ballpark-Budget-for-ECHO-Lab-Core-Shipping_v2.pdf"
+    source_year: 2025
+    rationale: >-
+      low = FedEx 2-Day local ambient incl. indirect costs USD 26.25 (ECHO); mid = Rush ambient shipper (industry)
+      67.62 + FedEx 2-Day national ambient 43.75 = 111; high = 67.62 + a USD 1,100 premium-courier quote (Clinical
+      Research News, 24 Jan 2022). Biorepository rates, not negotiated central-lab contracts.
+
+  - id: cost.courier.shipment.refrigerated
+    label: "One refrigerated (2-8 C) sample shipment"
+    value_low: 159
+    value_mid: 204
+    value_high: 1261
+    unit: usd/shipment
+    source_title: "Rush University ACTG Budget Processing Cost List (Jan 2023): refrigerated shipper USD 133.91 / 160.69; ECHO Lab Core Table 6 (2025)"
+    source_url: "https://www.rushu.rush.edu/sites/default/files/2024-03/rspsl-price-list-0123.pdf"
+    source_year: 2023
+    rationale: >-
+      low = 133.91 + 25 (FedEx national unit cost); mid = 160.69 + 43.75; high = 160.69 + USD 1,100 premium courier.
+      No public 2-8 C courier rate found: the ambient courier rate is used, so mid probably understates.
+
+  - id: cost.courier.shipment.frozen
+    label: "One frozen (dry ice) sample shipment"
+    value_low: 265
+    value_mid: 362
+    value_high: 1322
+    unit: usd/shipment
+    source_title: "Rush University ACTG Budget Processing Cost List (Jan 2023): dry ice shipper real-time USD 185.07 / 222.08; ECHO Lab Core Table 6 (2025): FedEx 2-Day national dry ice USD 80 / 140"
+    source_url: "https://www.rushu.rush.edu/sites/default/files/2024-03/rspsl-price-list-0123.pdf"
+    source_year: 2023
+    rationale: "low = 185.07 + 80; mid = 222.08 + 140; high = 222.08 + USD 1,100 premium courier (single 2022 quote)."
+
+  - id: cost.lab.local_harmonisation_per_site
+    label: "Setting up / harmonising a local lab at one site (one-time)"
+    value_low: 1013
+    value_mid: 2025
+    value_high: 4050
+    unit: usd/site
+    source_title: "University of Utah UUSOP-13 Clinical Research Institutional Fee Schedule (1 Jul 2026): 'Laboratory Setup: $2,025 one-time'"
+    source_url: "https://qualitycompliance.research.utah.edu/sop-library/uu-sop-13.php"
+    source_year: 2026
+    rationale: "Single institutional fee used as proxy; low (x0.5) and high (x2) are assumptions. Sponsor-side harmonisation cost not found."
+
+  - id: cost.lab.central_per_sample
+    label: "Central lab analysis, per sample"
+    value_low: 30
+    value_mid: 120
+    value_high: 400
+    unit: usd/sample
+    assumption: true
+    rationale: "No open per-sample price found (ASPE 2014 gives only per-study central-lab totals: Phase 3 mean USD 849,180). Wide assumption."
+
+  - id: cost.lab.local_per_sample
+    label: "Local lab analysis, per sample"
+    value_low: 15
+    value_mid: 60
+    value_high: 250
+    unit: usd/sample
+    assumption: true
+    rationale: "No open per-sample price found. Wide assumption, set below central-lab cost (no shipping, routine assays)."
+
+  # ------------------------------------------------------------------ drug supply
+  - id: cost.drug.kit.biologic
+    label: "One biologic patient kit (one administered dose; market price as proxy)"
+    value_low: 1138
+    value_mid: 6285
+    value_high: 12451
+    unit: usd/kit
+    source_title: "CMS Medicare Part B payment allowance limits, Oct-Dec 2026 (ASP file): Q5103 infliximab-dyyb 28.456/10 mg; J3380 vedolizumab 20.949/mg; J9271 pembrolizumab 62.253/mg; doses from FDA labels"
+    source_url: "https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files"
+    source_year: 2026
+    rationale: >-
+      low = infliximab-dyyb 5 mg/kg at an assumed 80 kg = 400 mg; mid = vedolizumab 300 mg; high = pembrolizumab
+      200 mg. Acquisition prices of marketed biologics (right for comparators); a sponsor's own IMP cost of goods is not
+      public. Packaging, blinding and depot distribution are extra.
+
+  - id: cost.drug.kit.small_molecule
+    label: "One small-molecule patient kit"
+    value_low: 60
+    value_mid: 226
+    value_high: 450
+    unit: usd/kit
+    source_title: "Nevens et al. Trials 2019 Additional file 1 Table S2 (IMP handling EUR 130,000 + storage/distribution EUR 20,000 for 400 patients x 7 visits); CMS NADAC 2026 (ELIQUIS 5 mg USD 5.52114/tablet, 23 Sep 2026)"
+    source_url: "https://data.medicaid.gov/dataset/fbb83258-11c7-47f5-8b18-5f8e79f7e704"
+    source_year: 2026
+    rationale: >-
+      low = KCE handling EUR 53.57 per patient-visit = USD 60; mid = 30 branded tablets (USD 165.63) + 60 handling;
+      high = 2 x mid. The 30-tablet kit and the high value are assumptions. Generic comparators cost cents per tablet.
+
+  - id: cost.drug.kit.default
+    label: "One patient kit when the drug type is unknown"
+    value_low: 60
+    value_mid: 1138
+    value_high: 12451
+    unit: usd/kit
+    assumption: true
+    rationale: "Spans the small-molecule low and the biologic high above; mid = biologic low. Used only when drug_type is unknown."
+
+  - id: cost.drug.shipment
+    label: "One depot-to-site drug shipment (temperature-controlled)"
+    value_low: 159
+    value_mid: 204
+    value_high: 1261
+    unit: usd/shipment
+    assumption: true
+    rationale: "Proxy: the refrigerated specimen-shipment costs above (Rush 2023 + ECHO 2025 + premium courier). No public clinical-supply shipment price found."
+
+  # ------------------------------------------------------------------ meetings, setup, closeout, data, supplies
+  - id: cost.investigator_meeting.per_attendee
+    label: "Investigator meeting, per attendee (travel + venue)"
+    value_low: 196
+    value_mid: 1000
+    value_high: 2500
+    unit: usd/attendee
+    assumption: true
+    rationale: >-
+      Only low is sourced: KCE 'Investigators meeting, at study start and end' EUR 3,500 / 20 sites = EUR 175 = USD 196
+      (Nevens 2019). Mid (2 GSA nights USD 362 + unsourced airfare and venue) and high are assumptions.
+
+  - id: cost.setup.per_site
+    label: "Site start-up (contracts, ethics, initiation), per site"
+    value_low: 5000
+    value_mid: 15000
+    value_high: 40000
+    unit: usd/site
+    assumption: true
+    rationale: "No open per-site start-up price found (ASPE reports only per-study site recruitment totals: Phase 3 mean USD 395,182). Wide assumption."
+
+  - id: cost.closeout.per_site
+    label: "Site close-out, per site"
+    value_low: 1000
+    value_mid: 3000
+    value_high: 8000
+    unit: usd/site
+    assumption: true
+    rationale: "No open source found. Wide assumption (one close-out visit plus document archiving)."
+
+  - id: cost.data_collection.per_patient
+    label: "EDC and data management, per patient"
+    value_low: 500
+    value_mid: 2000
+    value_high: 6000
+    unit: usd/patient
+    assumption: true
+    rationale: >-
+      No open per-patient figure. Context only: Moore et al. BMJ Open 2020 (PMC7295430) estimate a median USD 41,413
+      total cost per patient in pivotal trials, of which data management is a minor share. Wide assumption.
+
+  - id: cost.supplies_equipment.per_patient
+    label: "Trial-specific supplies and equipment, per patient"
+    value_low: 100
+    value_mid: 500
+    value_high: 2000
+    unit: usd/patient
+    assumption: true
+    rationale: "No open source found. Wide assumption."
