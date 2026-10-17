@@ -3,7 +3,7 @@
 Decisions on `handoffs/*_CONTRACT_CHANGES.md`. Accepted changes are applied to `trialpilot_contracts/models.py`,
 regenerated (`contracts/schema/`, `web/src/contracts.ts`) and listed here. A §2 rule is never weakened.
 
-## v3 — 2026-10-16 21:50 ET — ACCEPTED (stricter than proposed): signature / approval fields (A7 proposals 1–3)
+## v3 — 2026-10-16 21:44 ET — ACCEPTED (stricter than proposed): signature / approval fields (A7 proposals 1–3)
 **Change.**
 - `Signature.signer_name: str` — **required** (A7 proposed `Optional[str] = None`).
 - `ApprovalRequest.record_hash: str` — required, as proposed.
@@ -32,7 +32,7 @@ where these models are built (signatures table stores `display_name`; approvals 
 **Tests.** valid fixtures updated; new invalid fixtures `Signature.missing_printed_name`,
 `ApprovalRequest.missing_record_hash`, `ApprovalRequest.missing_created_at`: 81 passed.
 
-## v2 — 2026-10-16 21:40 ET — ACCEPTED: `MetricRange` can be unknown (A2 proposal 1, option b)
+## v2 — 2026-10-16 21:33 ET — ACCEPTED: `MetricRange` can be unknown (A2 proposal 1, option b)
 **Change.** `MetricRange.p10 / p50 / p90`: `float` → `Optional[float]` (TS `number | null`). Still required keys.
 - All three numbers **or** all three `null` (= unknown). Partly known is rejected by pydantic *and* by the JSON Schema (`anyOf`).
 - `NaN` is normalised to `null`; `±inf` is rejected ("must be a finite number, or null for unknown").
