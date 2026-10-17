@@ -1,2 +1,7 @@
-{"id": "ap1", "record_type": "scenario", "record_id": "s1", "author": "alice", "required_meanings": ["reviewed", "approved"],
- "status": "pending", "signatures": []}
+{"id": "ap1", "record_type": "scenario", "record_id": "s1", "author": "alice",
+ "record_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "required_meanings": ["reviewed", "approved"], "status": "pending", "created_at": "2026-10-16T21:00:00Z",
+ "title": "Scenario B (test fixture)",
+ "signatures": [{"id": "sig1", "signer": "quinn", "role": "qa", "signer_name": "Quinn QA (test fixture)", "meaning": "reviewed",
+                 "signed_at": "2026-10-16T21:05:00Z", "record_type": "scenario", "record_id": "s1",
+                 "record_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}]}

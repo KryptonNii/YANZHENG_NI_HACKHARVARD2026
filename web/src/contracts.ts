@@ -321,6 +321,8 @@ export interface Signature {
   id: string;
   signer: string;
   role: Role;
+  /** v3: printed name of the signer, 21 CFR 11.50(a)(1) */
+  signer_name: string;
   meaning: SignatureMeaning;
   signed_at: string;
   record_type: string;
@@ -333,8 +335,14 @@ export interface ApprovalRequest {
   record_type: ApprovalRequestRecordType;
   record_id: string;
   author: string;
+  /** v3: sha256 of the exact record version submitted; signatures bind to it */
+  record_hash: string;
   /** e.g. ["reviewed", "approved"] */
   required_meanings: string[];
   status: ApprovalRequestStatus;
+  /** v3: UTC time the request was submitted */
+  created_at: string;
+  /** v3: human-readable label for the approvals queue */
+  title: string | null;
   signatures: Signature[];
 }

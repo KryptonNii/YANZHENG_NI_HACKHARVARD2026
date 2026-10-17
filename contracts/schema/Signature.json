@@ -20,6 +20,10 @@
       "title": "Role",
       "type": "string"
     },
+    "signer_name": {
+      "title": "Signer Name",
+      "type": "string"
+    },
     "meaning": {
       "enum": [
         "authored",
@@ -53,6 +57,7 @@
     "id",
     "signer",
     "role",
+    "signer_name",
     "meaning",
     "signed_at",
     "record_type",

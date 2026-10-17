@@ -179,6 +179,7 @@ class AuditEntry(BaseModel):
 
 class Signature(BaseModel):
     id: str; signer: str; role: Role
+    signer_name: str                       # v3: printed name of the signer, 21 CFR 11.50(a)(1)
     meaning: Literal["authored", "reviewed", "approved", "executed", "verified"]
     signed_at: datetime
     record_type: str; record_id: str; record_hash: str
@@ -186,6 +187,9 @@ class Signature(BaseModel):
 class ApprovalRequest(BaseModel):
     id: str; record_type: Literal["scenario", "test_protocol", "validation_report", "change_record"]
     record_id: str; author: str
+    record_hash: str                       # v3: sha256 of the exact record version submitted; signatures bind to it
     required_meanings: list[str]           # e.g. ["reviewed", "approved"]
     status: Literal["pending", "approved", "rejected"]
+    created_at: datetime                   # v3: UTC time the request was submitted
+    title: Optional[str] = None            # v3: human-readable label for the approvals queue
     signatures: list[Signature] = []
