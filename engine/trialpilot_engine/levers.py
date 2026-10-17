@@ -33,7 +33,7 @@ DAYS_PER_MONTH = 365.25 / 12
 MONTHS_PER_YEAR = 12.0
 
 # Procedure codes that mean "investigational product handed out / given at this visit".
-DISPENSING_MARKERS = ("dispens", "drug_admin", "ip_admin", "dosing", "infusion")
+DISPENSING_MARKERS = ("dispens", "imp_admin", "drug_admin", "ip_admin", "dosing", "infusion")
 
 
 class EngineInputError(ValueError):
@@ -315,7 +315,10 @@ def _visits(
             f"Visits {without_procedures} list no procedures: only visit admin time is counted for them."
         )
     if unknown_temp:
-        notes.append(f"{unknown_temp} sample procedures have no temperature: shipped as ambient.")
+        warnings.append(
+            f"{unknown_temp} sample-shipping procedures (per patient) have no storage temperature: shipped "
+            "as ambient (understates frozen shipping and dry ice if they are frozen)."
+        )
     return planned, notes
 
 

@@ -190,6 +190,7 @@ PARAMETER_CATALOG: dict[str, tuple[str, str]] = {
     "cost.home_nurse.visit": ("usd/visit", "one home-nursing visit"),
     "dist.home_nurse.roundtrip_km": ("km/visit", "home nurse round trip by car per home visit"),
     "cost.telehealth.visit": ("usd/visit", "one telehealth visit"),
+    "ef.procedure.<code>": ("kg_co2e/procedure", "optional per-procedure factor (e.g. imaging energy)"),
     # site staff time
     "time.site.visit_admin": ("minutes/visit", "scheduling + documentation per patient visit"),
     "time.site.procedure.<code>": ("minutes/procedure", "site staff minutes per procedure"),

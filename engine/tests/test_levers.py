@@ -201,3 +201,21 @@ def test_every_module_is_reported_in_contract_order(
 ) -> None:
     r = compute_scenario(tiny(), Levers(), unit_params, draws=5)
     assert tuple(m.module for m in r.modules) == ALL_MODULES
+
+
+def test_a4_vocabulary_dispensing_and_temperature(
+    tiny: Callable[..., TrialDesign], unit_params: dict[str, Parameter]
+) -> None:
+    from trialpilot_contracts import Procedure, Visit
+
+    visits = [
+        Visit(number=1, label="Day 1", week=0, procedures=[Procedure(code="imp_administration", label="Infusion")]),
+        Visit(number=2, label="Week 4", week=4, procedures=[
+            Procedure(code="imp_administration", label="Infusion"),
+            Procedure(code="pk_sample", label="PK", ships_sample=True),  # temperature not stated
+        ]),
+    ]
+    r = compute_scenario(tiny(visits=visits), Levers(), unit_params, draws=5)
+    # 2 administration visits × 10 patients × 1 kit = 20 needed; upfront waste 0.5 → 40 made × $1000 + 2 × $150
+    assert module(r, "drug_supply")[0] == pytest.approx(40300.0)
+    assert any("no storage temperature" in w for w in r.warnings)

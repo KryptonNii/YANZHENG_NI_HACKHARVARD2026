@@ -16,7 +16,7 @@ from .levers import (
     monitoring_visits,
     sample_shipments,
 )
-from .provenance import Inputs, ParamStore, Term, Trace
+from .provenance import Inputs, ParamStore, Term, Trace, slug
 from .uncertainty import FloatArray
 
 KG_PER_TONNE = 1000.0
@@ -97,7 +97,36 @@ def _patient_assessments(ctx: Context) -> list[Term]:
             "patients × home visits × nurse round-trip km × car factor",
             kg, {"patients": act.patients, "home_visits_per_patient": act.visits_in("home")}, tr,
         ))
+    out.extend(_procedures(ctx))
     return out
+
+
+def _procedures(ctx: Context) -> list[Term]:
+    """Optional per-procedure factors `ef.procedure.<code>` (e.g. imaging energy). Procedures whose code
+    has no factor in the library are named as not modelled; there is no `.default` for this one."""
+    act, ps = ctx.act, ctx.ps
+    if not act.patients:
+        return []
+    counted: dict[str, int] = {}
+    unmodelled: set[str] = set()
+    with ps.track() as tr:
+        per_patient = ctx.zeros()
+        for v in act.visits:
+            for p in v.procedures:
+                code = slug(p.code)
+                if ps.has(f"ef.procedure.{code}"):
+                    per_patient = per_patient + ps.get(f"ef.procedure.{code}")
+                    counted[code] = counted.get(code, 0) + 1
+                else:
+                    unmodelled.add(code)
+    if not counted:
+        return []
+    note = (f"No `ef.procedure.<code>` factor for: {', '.join(sorted(unmodelled))}; their procedure "
+            "emissions are not modelled.",) if unmodelled else ()
+    inputs: Inputs = {"patients": act.patients, **{f"per_patient.{c}": float(n) for c, n in counted.items()}}
+    return [Term("patient_assessments", "co2e_kg", "carbon.procedures.v1",
+                 "patients × Σ procedures that have a per-procedure factor `ef.procedure.<code>`",
+                 act.patients * per_patient, inputs, tr, note)]
 
 
 def _meetings_travel(ctx: Context) -> list[Term]:

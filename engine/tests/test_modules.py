@@ -147,3 +147,15 @@ def test_provenance_lists_formula_parameters_and_fallbacks(baseline: ScenarioRes
         for p in m.provenance:
             assert p.formula_id and p.description
             assert p.formula_id.split(".")[0] in {"cost", "carbon", "workload", "burden"}
+
+
+def test_optional_procedure_factors(tiny: Callable[..., TrialDesign], unit_params: dict[str, Parameter]) -> None:
+    from conftest import make_param
+
+    params = {**unit_params, "ef.procedure.blood_draw": make_param("ef.procedure.blood_draw", 3, 3, 3)}
+    r = compute_scenario(tiny(), Levers(), params, draws=5)
+    # 10 patients × 2 blood draws × 3 kg = 60 kg on top of 82.5 kg patient travel
+    assert module(r, "patient_assessments")[1] == pytest.approx(82.5 + 60)
+    prov = next(m for m in r.modules if m.module == "patient_assessments").provenance
+    item = next(p for p in prov if p.formula_id == "carbon.procedures.v1")
+    assert any("drug_dispensing" in a and "not modelled" in a for a in item.assumptions)

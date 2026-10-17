@@ -83,7 +83,7 @@ own `result_p10/result_p50/result_p90/result_unit`), the `parameter_ids` it read
     (`.global` parameters); a warning says so.
   - **Site expected enrollment missing** → patients split equally (or missing sites get the mean of the
     known ones); noted in provenance.
-  - **Sample temperature missing** → shipped as ambient; noted in provenance.
+  - **Sample temperature missing** → shipped as ambient; warning (understates frozen shipping if they are frozen).
   - **No dispensing procedure** in a drug trial → every visit assumed to dispense kits; warning.
 - Lever problems: shares outside 0–1, all sites excluded, or `draws < 1` raise `EngineInputError`
   (`code` = `invalid_levers` / `invalid_design` / `invalid_request`; the API maps it to HTTP 422).
@@ -100,8 +100,8 @@ V<sub>site</sub>, V<sub>home</sub>, V<sub>remote</sub> = visits per patient by m
   (no dropout in the engine; A3 handles dropout in the forecast).
 - **Sample events** per patient: one per procedure with `ships_sample`, by temperature class
   (`frozen_-20`/`frozen_-80` → frozen; `refrigerated`; `ambient` or unstated → ambient).
-- **Dispensing visits**: visits with a procedure whose code contains `dispens`, `drug_admin`,
-  `ip_admin`, `dosing` or `infusion`.
+- **Dispensing visits**: visits with a procedure whose code contains `dispens`, `imp_admin`,
+  `drug_admin`, `ip_admin`, `dosing` or `infusion` (A4 vocabulary: `drug_dispensing`, `imp_administration`).
 
 | Lever | Effect on activity (only this) | Moves |
 |---|---|---|
@@ -128,6 +128,7 @@ Units: USD, kg CO2e, hours; km are round trips unless stated "one way". `share` 
 | `burden.patient_visit_time.v1` | P × (V<sub>site</sub> × `time.patient.visit_at_site` + V<sub>home</sub> × `time.patient.home_visit` + V<sub>remote</sub> × `time.patient.remote_visit`) |
 | `carbon.patient_travel.v1` | Σ<sub>c</sub> P<sub>c</sub> × V<sub>site</sub> × km<sub>c</sub> × [car × `ef.travel.car.average_km` + (1 − car) × (rail × `ef.travel.rail.passenger_km` + (1 − rail) × `ef.travel.bus.passenger_km`)], car = `rate.patient.mode_share.car.<cc>`, rail = `rate.patient.mode_share.rail.<cc>` (share of the non-car km) |
 | `carbon.home_nurse_travel.v1` | P × V<sub>home</sub> × `dist.home_nurse.roundtrip_km` × `ef.travel.car.average_km` |
+| `carbon.procedures.v1` | P × Σ<sub>visits</sub> Σ procedures with a factor `ef.procedure.<code>` (optional: codes without a factor are listed as not modelled; no `.default`) |
 | `workload.patient_visits.v1` | P × Σ<sub>visits</sub> [`time.site.visit_admin` + f<sub>mode</sub> × Σ procedure minutes] ÷ 60; procedure minutes = `Procedure.site_minutes` from the design if given, else `time.site.procedure.<code>`; f = 1 on site, `rate.site.minutes_factor.home_visit`, `rate.site.minutes_factor.remote_visit` |
 | `cost.patient_reimbursement.v1` | P × V<sub>site</sub> × `cost.patient.reimbursement_visit` |
 | `cost.home_nursing.v1` | P × V<sub>home</sub> × `cost.home_nurse.visit` |
@@ -256,6 +257,7 @@ the code and this page). `<cc>` = lowercase ISO 3166 alpha-2 or `global` (the `.
 | `cost.home_nurse.visit` | usd/visit | one home-nursing visit |
 | `dist.home_nurse.roundtrip_km` | km/visit | home nurse round trip by car |
 | `cost.telehealth.visit` | usd/visit | one telehealth visit |
+| `ef.procedure.<code>` | kg_co2e/procedure | optional per-procedure factor (e.g. imaging energy) |
 | `time.site.visit_admin` | minutes/visit | scheduling + documentation per patient visit |
 | `time.site.procedure.<code>` | minutes/procedure | site staff minutes per procedure |
 | `rate.site.minutes_factor.home_visit` | share | procedure minutes still on site staff for a home visit |
@@ -363,7 +365,8 @@ Lever effects on the same test design (checked in `engine/tests/test_levers.py`)
 - CRA trips stay within the site's country (distance per country, not from geocoded bases); flights for
   CRA trips use the domestic factor.
 - Monitoring frequency and −80 °C storage apply over the whole trial duration.
-- Local-lab sample transport, telehealth energy and procedure-level energy (e.g. MRI) are not modelled.
+- Local-lab sample transport and telehealth energy are not modelled; procedure-level emissions only
+  for codes that have an `ef.procedure.<code>` factor.
 - Investigational product manufacture is excluded (published method); the `drug_supply` extension
   estimates kits and their shipping with wide, flagged ranges.
 
