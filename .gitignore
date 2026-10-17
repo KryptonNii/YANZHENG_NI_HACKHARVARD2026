@@ -26,7 +26,12 @@ pnpm-debug.log*
 !.env.example
 *.sqlite
 *.sqlite3
+*.sqlite-wal
+*.sqlite-shm
 *.db
+*.db-wal
+*.db-shm
+var/
 
 # --- Generated outputs ---
 validation/out/
@@ -35,6 +40,17 @@ science/out/*
 !science/out/results.schema.json
 playwright-report/
 test-results/
+.build/
+
+# --- Recordings & slide decks (keep locally, do not push) ---
+*.webm
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.m4v
+*.ppt
+*.pptx
 
 # --- OS / editors ---
 .DS_Store
