@@ -67,8 +67,9 @@ Space variables: `DEMO_OFFLINE=0`, `TP_DATA_DIR=/app/var` (writable by uid 1000)
 saved designs, scenarios and approvals to the seeded state. CPU basic sleeps after 48 hours without
 visits; an external cron pings `/api/health` every 10 minutes.
 
-The earlier Render free instance (512 MB) restarted when a live import of a 47,000-patient trial
-ran the drug-supply simulation; the supply simulation now caps patients per chunk.
+An earlier Render free instance (512 MB) restarted when a live import of a 47,000-patient trial
+ran the drug-supply simulation; the supply simulation now caps patients per chunk. That Render
+service is suspended; the Hugging Face Space is the only hosted demo.
 
 ## Without Docker (fallback)
 

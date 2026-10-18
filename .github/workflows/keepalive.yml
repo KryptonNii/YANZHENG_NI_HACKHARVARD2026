@@ -1,8 +1,8 @@
 name: keep demo awake
 
-# Render's free plan spins the public demo down after 15 minutes without traffic, and waking it
-# takes about a minute. This pings the health endpoint every 10 minutes as a backup to an external
-# cron service. GitHub can delay scheduled runs, so it is not relied on alone.
+# The Hugging Face Space (free CPU basic hardware) sleeps after 48 hours without visits, and waking
+# it restarts the container with fresh demo data. This pings the health endpoint every 10 minutes as a
+# backup to an external cron service. GitHub can delay scheduled runs, so it is not relied on alone.
 on:
   schedule:
     - cron: "*/10 * * * *"
@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Ping /api/health
         run: |
-          url=https://yanzhengni-hackharvard2026.onrender.com/api/health
+          url=https://surround1ngkni-trialpilot.hf.space/api/health
           for attempt in 1 2 3; do
             code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 90 "$url" || true)
             echo "attempt $attempt: HTTP $code"

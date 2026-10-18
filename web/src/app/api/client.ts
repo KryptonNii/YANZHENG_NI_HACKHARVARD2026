@@ -130,9 +130,9 @@ async function parseError(res: Response): Promise<ApiError> {
 }
 
 /**
- * Render's free plan sleeps the public demo after 15 idle minutes and restarts it on every deploy;
- * until the API is back, Render's proxy answers 502/503/504 with its own non-JSON page. Requests
- * that change nothing on the server wait for /api/health and are sent once more.
+ * The hosted demo restarts on every deploy and after sleeping; until the API is back, the host's
+ * proxy answers 502/503/504 with its own non-JSON page. Requests that change nothing on the server
+ * wait for /api/health and are sent once more.
  */
 const WAKE_TIMEOUT_MS = 90_000;
 const WAKE_POLL_MS = 3_000;
