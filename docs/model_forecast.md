@@ -60,6 +60,28 @@ moved home or remote. The recruitment mean is multiplied by \(1 + u_{\text{rate}
 using `lever.decentralised.recruitment_uplift`. Both levers default to 0: moving visits does
 nothing until someone enters a sourced uplift. That assumption is written on the result.
 
+#### What `patient.dropout_rate` means and where it is used
+
+**Definition.** The share of randomised participants *without primary-outcome data*: 1 − retention. The library value 0.03 / 0.11 / 0.21 comes from Walters et al. 2017, where the median retention across trials was 89% (IQR 79–97%). Retention there is defined by primary-outcome availability. It is not treatment discontinuation, and the parameter's rationale says so. Without a library value, the built-in placeholder is 0.05 / 0.15 / 0.25.
+
+**Where it is used.**
+
+| Part of the model | Use of \(d\) |
+|---|---|
+| Patients to randomise and recruitment time | None: \(n = \text{target}\) |
+| Supply simulation | Each randomised patient is a dropout with probability \(d\). A dropout receives a uniformly random 1 to \(V\) of the \(V\) scheduled dispensings, then no more kits. The IRT projection does not know who will drop out |
+| Cost, site time, patient travel and carbon (activity model) | None: every randomised patient attends every scheduled visit |
+
+**Not modelled: stopping treatment while staying in follow-up.** Under intention-to-treat, many participants discontinue study drug but keep attending visits, so their primary outcome is still collected. They count as *retained* in \(d\). In reality they stop receiving kits; in the model they keep receiving them until the last visit.
+
+**Direction of the bias.**
+
+- **Drug demand is overstated, not understated.** The model stops dispensing only for participants who leave the study (\(d\)). Participants who stop treatment but stay keep getting kits. Kits needed, kits produced, and the drug-supply cost and carbon that follow from them are therefore upper-side estimates.
+- **Visit-driven activity is also overstated.** The activity model ignores \(d\) entirely, so procedures, site time, patient travel and their carbon assume full follow-up for everyone randomised.
+- **The timing assumption cuts both ways.** Dropout timing is uniform over the dispensing schedule. Trials where most dropouts happen early would use fewer kits than modelled; late-heavy dropout would use slightly more.
+
+A protocol-specific treatment-discontinuation rate would need its own parameter, applied to dispensing only. That is future work, as is applying \(d\) to visit-driven activity. The second change would also move the published-method science comparison.
+
 Cumulative intensity \(M(t) = \sum_i \lambda_i (t - a_i)^+\) is piecewise linear. By the
 time-change theorem the \(k\)-th randomisation is at \(M^{-1}(\Gamma_k)\) with
 \(\Gamma_k \sim \mathrm{Gamma}(k, 1)\). The code inverts \(M\) exactly (no time grid, no
