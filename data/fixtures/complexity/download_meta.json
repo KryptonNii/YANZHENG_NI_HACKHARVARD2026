@@ -1,0 +1,13 @@
+{
+  "query": "AREA[LeadSponsorClass]INDUSTRY AND AREA[StudyType]INTERVENTIONAL AND (AREA[Phase]PHASE2 OR AREA[Phase]PHASE3) AND AREA[StartDate]RANGE[2010-01-01,2024-12-31]",
+  "fields": "NCTId,Phase,StartDate,OverallStatus,LeadSponsorName,CollaboratorName,EnrollmentCount,PrimaryOutcomeMeasure,SecondaryOutcomeMeasure,OtherOutcomeMeasure,EligibilityCriteria,LocationCountry,ConditionMeshTerm,ConditionAncestorTerm",
+  "endpoint": "https://clinicaltrials.gov/api/v2/studies",
+  "api_version": "2.0.5",
+  "data_timestamp": "2026-10-16T09:00:05",
+  "data_timestamp_at_end": "2026-10-16T09:00:05",
+  "fetched_at": "2026-10-18T00:09:50+00:00",
+  "total_count": 32621,
+  "pages": 33,
+  "studies": 32621,
+  "unique_nct": 32621
+}

@@ -1,0 +1,3347 @@
+{
+  "generated_by": "python -m trialpilot_api.benchmark.trend analyze",
+  "source": {
+    "query": "AREA[LeadSponsorClass]INDUSTRY AND AREA[StudyType]INTERVENTIONAL AND (AREA[Phase]PHASE2 OR AREA[Phase]PHASE3) AND AREA[StartDate]RANGE[2010-01-01,2024-12-31]",
+    "fields": "NCTId,Phase,StartDate,OverallStatus,LeadSponsorName,CollaboratorName,EnrollmentCount,PrimaryOutcomeMeasure,SecondaryOutcomeMeasure,OtherOutcomeMeasure,EligibilityCriteria,LocationCountry,ConditionMeshTerm,ConditionAncestorTerm",
+    "endpoint": "https://clinicaltrials.gov/api/v2/studies",
+    "api_version": "2.0.5",
+    "data_timestamp": "2026-10-16T09:00:05",
+    "data_timestamp_at_end": "2026-10-16T09:00:05",
+    "fetched_at": "2026-10-18T00:09:50+00:00",
+    "total_count": 32621,
+    "pages": 33,
+    "studies": 32621,
+    "unique_nct": 32621
+  },
+  "definitions": {
+    "groups": {
+      "industry": "Industry-led trials with no Regeneron lead or collaborator.",
+      "sponsor_led": "Lead sponsor name contains 'Regeneron'.",
+      "sponsor_collaborator": "Regeneron listed as collaborator, partner leads (for example Sanofi-led dupilumab trials).",
+      "large_sponsor_peers": "Context subset of industry: lead sponsors with >= 200 analysed trials (raw names)."
+    },
+    "dimensions": {
+      "outcomes": "Registered primary + secondary + other outcome measures.",
+      "countries": "Distinct countries among registered locations.",
+      "sites": "Registered location entries.",
+      "eligibility": "Non-empty criteria lines (same rule as PeerMirror); excluded from the composite because abridged 'key criteria' postings undercount."
+    },
+    "expected": "Mean over the trial's MeSH disease categories of the industry median for the same phase and category (>= 20 reference trials); otherwise the industry median for the phase.",
+    "ratio": "observed / expected; 1.0 = as expected for phase and disease area.",
+    "composite": "Geometric mean of the outcomes, countries and sites ratios.",
+    "periods": "3-year blocks by registered start date; 'all' pools 2010-2024.",
+    "phases": "Phase 2, Phase 2/3 and Phase 3, each with its own expectation; Phase 1/2 records matched by the query are excluded."
+  },
+  "results": {
+    "sponsor": "Regeneron",
+    "blocks": [
+      "2010-2012",
+      "2013-2015",
+      "2016-2018",
+      "2019-2021",
+      "2022-2024"
+    ],
+    "phases": [
+      "PHASE2",
+      "PHASE2/PHASE3",
+      "PHASE3"
+    ],
+    "large_sponsor_peers": [
+      "AbbVie",
+      "Amgen",
+      "AstraZeneca",
+      "Bayer",
+      "Boehringer Ingelheim",
+      "Bristol-Myers Squibb",
+      "Eli Lilly and Company",
+      "Gilead Sciences",
+      "GlaxoSmithKline",
+      "Hoffmann-La Roche",
+      "Janssen Research & Development, LLC",
+      "Jiangsu HengRui Medicine Co., Ltd.",
+      "Merck Sharp & Dohme LLC",
+      "Novartis Pharmaceuticals",
+      "Novo Nordisk A/S",
+      "Pfizer",
+      "Sanofi",
+      "Takeda"
+    ],
+    "trials_in_window": 27969,
+    "trials_by_group": {
+      "industry": 27725,
+      "sponsor_led": 142,
+      "sponsor_collaborator": 102,
+      "large_sponsor_peers": 7746
+    },
+    "phase_area_cells_used": 274,
+    "fallback_ratios": 18,
+    "eligibility_abridged_share": [
+      {
+        "group": "industry",
+        "period": "2010-2012",
+        "n": 5760,
+        "share": 0.0785
+      },
+      {
+        "group": "industry",
+        "period": "2013-2015",
+        "n": 5434,
+        "share": 0.0773
+      },
+      {
+        "group": "industry",
+        "period": "2016-2018",
+        "n": 5157,
+        "share": 0.1061
+      },
+      {
+        "group": "industry",
+        "period": "2019-2021",
+        "n": 5789,
+        "share": 0.0998
+      },
+      {
+        "group": "industry",
+        "period": "2022-2024",
+        "n": 5585,
+        "share": 0.1096
+      },
+      {
+        "group": "industry",
+        "period": "all",
+        "n": 27725,
+        "share": 0.0941
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2010-2012",
+        "n": 2013,
+        "share": 0.1307
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2013-2015",
+        "n": 1711,
+        "share": 0.1239
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2016-2018",
+        "n": 1341,
+        "share": 0.17
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2019-2021",
+        "n": 1457,
+        "share": 0.1386
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2022-2024",
+        "n": 1224,
+        "share": 0.1438
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "all",
+        "n": 7746,
+        "share": 0.1396
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2010-2012",
+        "n": 23,
+        "share": 0.0
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2013-2015",
+        "n": 24,
+        "share": 0.0
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2016-2018",
+        "n": 20,
+        "share": 0.0
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2019-2021",
+        "n": 21,
+        "share": 0.0476
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2022-2024",
+        "n": 14,
+        "share": 0.0714
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "all",
+        "n": 102,
+        "share": 0.0196
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2010-2012",
+        "n": 12,
+        "share": 0.25
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2013-2015",
+        "n": 18,
+        "share": 0.5556
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2016-2018",
+        "n": 31,
+        "share": 0.9355
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2019-2021",
+        "n": 41,
+        "share": 0.9268
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2022-2024",
+        "n": 40,
+        "share": 1.0
+      },
+      {
+        "group": "sponsor_led",
+        "period": "all",
+        "n": 142,
+        "share": 0.8451
+      }
+    ],
+    "series": [
+      {
+        "group": "industry",
+        "period": "2010-2012",
+        "metric": "composite",
+        "n": 5287,
+        "median_ratio": 0.9133,
+        "ci95": [
+          0.8885,
+          0.941
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2010-2012",
+        "metric": "outcomes",
+        "n": 5752,
+        "median_ratio": 0.8,
+        "ci95": [
+          0.75,
+          0.8333
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2010-2012",
+        "metric": "countries",
+        "n": 5294,
+        "median_ratio": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2010-2012",
+        "metric": "sites",
+        "n": 5294,
+        "median_ratio": 0.9286,
+        "ci95": [
+          0.8667,
+          1.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2010-2012",
+        "metric": "eligibility",
+        "n": 5748,
+        "median_ratio": 0.8649,
+        "ci95": [
+          0.8421,
+          0.8858
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2010-2012",
+        "metric": "eligibility_full_only",
+        "n": 5296,
+        "median_ratio": 0.8889,
+        "ci95": [
+          0.8622,
+          0.9143
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2013-2015",
+        "metric": "composite",
+        "n": 4970,
+        "median_ratio": 0.913,
+        "ci95": [
+          0.8821,
+          0.9403
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2013-2015",
+        "metric": "outcomes",
+        "n": 5434,
+        "median_ratio": 0.875,
+        "ci95": [
+          0.8571,
+          0.9231
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2013-2015",
+        "metric": "countries",
+        "n": 4970,
+        "median_ratio": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2013-2015",
+        "metric": "sites",
+        "n": 4970,
+        "median_ratio": 0.9157,
+        "ci95": [
+          0.8571,
+          0.9769
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2013-2015",
+        "metric": "eligibility",
+        "n": 5411,
+        "median_ratio": 0.9286,
+        "ci95": [
+          0.9032,
+          0.9444
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2013-2015",
+        "metric": "eligibility_full_only",
+        "n": 4992,
+        "median_ratio": 0.9444,
+        "ci95": [
+          0.9268,
+          0.9769
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2016-2018",
+        "metric": "composite",
+        "n": 4907,
+        "median_ratio": 1.0323,
+        "ci95": [
+          1.0,
+          1.0778
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2016-2018",
+        "metric": "outcomes",
+        "n": 5157,
+        "median_ratio": 1.0,
+        "ci95": [
+          1.0,
+          1.0714
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2016-2018",
+        "metric": "countries",
+        "n": 4907,
+        "median_ratio": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2016-2018",
+        "metric": "sites",
+        "n": 4907,
+        "median_ratio": 1.0411,
+        "ci95": [
+          1.0,
+          1.1092
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2016-2018",
+        "metric": "eligibility",
+        "n": 5135,
+        "median_ratio": 1.0411,
+        "ci95": [
+          1.0,
+          1.0588
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2016-2018",
+        "metric": "eligibility_full_only",
+        "n": 4588,
+        "median_ratio": 1.1,
+        "ci95": [
+          1.0625,
+          1.1207
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2019-2021",
+        "metric": "composite",
+        "n": 5546,
+        "median_ratio": 1.1006,
+        "ci95": [
+          1.0627,
+          1.1342
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2019-2021",
+        "metric": "outcomes",
+        "n": 5789,
+        "median_ratio": 1.1429,
+        "ci95": [
+          1.125,
+          1.1429
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2019-2021",
+        "metric": "countries",
+        "n": 5546,
+        "median_ratio": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2019-2021",
+        "metric": "sites",
+        "n": 5546,
+        "median_ratio": 1.1,
+        "ci95": [
+          1.0237,
+          1.1636
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2019-2021",
+        "metric": "eligibility",
+        "n": 5789,
+        "median_ratio": 1.0625,
+        "ci95": [
+          1.0526,
+          1.0952
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2019-2021",
+        "metric": "eligibility_full_only",
+        "n": 5211,
+        "median_ratio": 1.1111,
+        "ci95": [
+          1.0862,
+          1.1351
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2022-2024",
+        "metric": "composite",
+        "n": 5281,
+        "median_ratio": 0.9756,
+        "ci95": [
+          0.941,
+          1.0128
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2022-2024",
+        "metric": "outcomes",
+        "n": 5585,
+        "median_ratio": 1.1429,
+        "ci95": [
+          1.125,
+          1.1429
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2022-2024",
+        "metric": "countries",
+        "n": 5281,
+        "median_ratio": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2022-2024",
+        "metric": "sites",
+        "n": 5281,
+        "median_ratio": 0.9286,
+        "ci95": [
+          0.875,
+          1.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2022-2024",
+        "metric": "eligibility",
+        "n": 5583,
+        "median_ratio": 1.0769,
+        "ci95": [
+          1.0556,
+          1.1053
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "2022-2024",
+        "metric": "eligibility_full_only",
+        "n": 4971,
+        "median_ratio": 1.125,
+        "ci95": [
+          1.1053,
+          1.1579
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "all",
+        "metric": "composite",
+        "n": 25991,
+        "median_ratio": 0.9839,
+        "ci95": [
+          0.9658,
+          1.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "all",
+        "metric": "outcomes",
+        "n": 27717,
+        "median_ratio": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "all",
+        "metric": "countries",
+        "n": 25998,
+        "median_ratio": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "all",
+        "metric": "sites",
+        "n": 25998,
+        "median_ratio": 1.0,
+        "ci95": [
+          0.963,
+          1.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "all",
+        "metric": "eligibility",
+        "n": 27666,
+        "median_ratio": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "industry",
+        "period": "all",
+        "metric": "eligibility_full_only",
+        "n": 25058,
+        "median_ratio": 1.0345,
+        "ci95": [
+          1.0127,
+          1.0526
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2010-2012",
+        "metric": "composite",
+        "n": 1838,
+        "median_ratio": 1.5594,
+        "ci95": [
+          1.4619,
+          1.6377
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2010-2012",
+        "metric": "outcomes",
+        "n": 2013,
+        "median_ratio": 1.125,
+        "ci95": [
+          1.0769,
+          1.1429
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2010-2012",
+        "metric": "countries",
+        "n": 1838,
+        "median_ratio": 2.0,
+        "ci95": [
+          2.0,
+          2.25
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2010-2012",
+        "metric": "sites",
+        "n": 1838,
+        "median_ratio": 1.6743,
+        "ci95": [
+          1.5375,
+          1.8
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2010-2012",
+        "metric": "eligibility",
+        "n": 2008,
+        "median_ratio": 0.8098,
+        "ci95": [
+          0.7742,
+          0.8334
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2010-2012",
+        "metric": "eligibility_full_only",
+        "n": 1745,
+        "median_ratio": 0.8312,
+        "ci95": [
+          0.7959,
+          0.8608
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2013-2015",
+        "metric": "composite",
+        "n": 1495,
+        "median_ratio": 1.728,
+        "ci95": [
+          1.6243,
+          1.8434
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2013-2015",
+        "metric": "outcomes",
+        "n": 1711,
+        "median_ratio": 1.25,
+        "ci95": [
+          1.1765,
+          1.3333
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2013-2015",
+        "metric": "countries",
+        "n": 1495,
+        "median_ratio": 2.6154,
+        "ci95": [
+          2.28,
+          2.8571
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2013-2015",
+        "metric": "sites",
+        "n": 1495,
+        "median_ratio": 1.9029,
+        "ci95": [
+          1.746,
+          2.0822
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2013-2015",
+        "metric": "eligibility",
+        "n": 1689,
+        "median_ratio": 0.8636,
+        "ci95": [
+          0.8235,
+          0.8889
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2013-2015",
+        "metric": "eligibility_full_only",
+        "n": 1478,
+        "median_ratio": 0.8824,
+        "ci95": [
+          0.8571,
+          0.9259
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2016-2018",
+        "metric": "composite",
+        "n": 1268,
+        "median_ratio": 2.0896,
+        "ci95": [
+          1.9642,
+          2.2451
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2016-2018",
+        "metric": "outcomes",
+        "n": 1341,
+        "median_ratio": 1.5172,
+        "ci95": [
+          1.4667,
+          1.625
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2016-2018",
+        "metric": "countries",
+        "n": 1268,
+        "median_ratio": 3.0,
+        "ci95": [
+          2.6667,
+          3.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2016-2018",
+        "metric": "sites",
+        "n": 1268,
+        "median_ratio": 2.224,
+        "ci95": [
+          2.0409,
+          2.3489
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2016-2018",
+        "metric": "eligibility",
+        "n": 1321,
+        "median_ratio": 0.9474,
+        "ci95": [
+          0.9153,
+          1.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2016-2018",
+        "metric": "eligibility_full_only",
+        "n": 1093,
+        "median_ratio": 1.0323,
+        "ci95": [
+          0.973,
+          1.0866
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2019-2021",
+        "metric": "composite",
+        "n": 1418,
+        "median_ratio": 2.4101,
+        "ci95": [
+          2.2971,
+          2.5106
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2019-2021",
+        "metric": "outcomes",
+        "n": 1457,
+        "median_ratio": 1.5652,
+        "ci95": [
+          1.5,
+          1.625
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2019-2021",
+        "metric": "countries",
+        "n": 1418,
+        "median_ratio": 3.3333,
+        "ci95": [
+          3.0501,
+          3.6667
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2019-2021",
+        "metric": "sites",
+        "n": 1418,
+        "median_ratio": 2.5597,
+        "ci95": [
+          2.3765,
+          2.7618
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2019-2021",
+        "metric": "eligibility",
+        "n": 1457,
+        "median_ratio": 1.0,
+        "ci95": [
+          0.973,
+          1.0556
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2019-2021",
+        "metric": "eligibility_full_only",
+        "n": 1255,
+        "median_ratio": 1.0556,
+        "ci95": [
+          1.0,
+          1.1053
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2022-2024",
+        "metric": "composite",
+        "n": 1196,
+        "median_ratio": 2.6328,
+        "ci95": [
+          2.4676,
+          2.7977
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2022-2024",
+        "metric": "outcomes",
+        "n": 1224,
+        "median_ratio": 1.5,
+        "ci95": [
+          1.4317,
+          1.5714
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2022-2024",
+        "metric": "countries",
+        "n": 1196,
+        "median_ratio": 4.0,
+        "ci95": [
+          3.6795,
+          4.3077
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2022-2024",
+        "metric": "sites",
+        "n": 1196,
+        "median_ratio": 3.1304,
+        "ci95": [
+          2.8667,
+          3.4
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2022-2024",
+        "metric": "eligibility",
+        "n": 1223,
+        "median_ratio": 0.9697,
+        "ci95": [
+          0.9375,
+          1.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2022-2024",
+        "metric": "eligibility_full_only",
+        "n": 1047,
+        "median_ratio": 1.0,
+        "ci95": [
+          0.96,
+          1.0556
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "all",
+        "metric": "composite",
+        "n": 7215,
+        "median_ratio": 1.9765,
+        "ci95": [
+          1.9242,
+          2.0341
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "all",
+        "metric": "outcomes",
+        "n": 7746,
+        "median_ratio": 1.375,
+        "ci95": [
+          1.3333,
+          1.375
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "all",
+        "metric": "countries",
+        "n": 7215,
+        "median_ratio": 3.0,
+        "ci95": [
+          2.8571,
+          3.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "all",
+        "metric": "sites",
+        "n": 7215,
+        "median_ratio": 2.1818,
+        "ci95": [
+          2.125,
+          2.2581
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "all",
+        "metric": "eligibility",
+        "n": 7698,
+        "median_ratio": 0.9048,
+        "ci95": [
+          0.8889,
+          0.9277
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "all",
+        "metric": "eligibility_full_only",
+        "n": 6618,
+        "median_ratio": 0.9444,
+        "ci95": [
+          0.9333,
+          0.9706
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2010-2012",
+        "metric": "composite",
+        "n": 12,
+        "median_ratio": 2.0387,
+        "ci95": [
+          1.0923,
+          2.7664
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2010-2012",
+        "metric": "outcomes",
+        "n": 12,
+        "median_ratio": 1.9441,
+        "ci95": [
+          0.7913,
+          3.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2010-2012",
+        "metric": "countries",
+        "n": 12,
+        "median_ratio": 2.125,
+        "ci95": [
+          2.0,
+          3.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2010-2012",
+        "metric": "sites",
+        "n": 12,
+        "median_ratio": 2.062,
+        "ci95": [
+          1.6077,
+          2.775
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2010-2012",
+        "metric": "eligibility",
+        "n": 12,
+        "median_ratio": 0.7254,
+        "ci95": [
+          0.5928,
+          0.9238
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2010-2012",
+        "metric": "eligibility_full_only",
+        "n": 9,
+        "median_ratio": 0.7333,
+        "ci95": [
+          0.5333,
+          0.9333
+        ],
+        "few_trials": true
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2013-2015",
+        "metric": "composite",
+        "n": 17,
+        "median_ratio": 2.3904,
+        "ci95": [
+          1.7299,
+          3.5516
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2013-2015",
+        "metric": "outcomes",
+        "n": 18,
+        "median_ratio": 2.2163,
+        "ci95": [
+          1.5031,
+          2.7115
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2013-2015",
+        "metric": "countries",
+        "n": 17,
+        "median_ratio": 2.2,
+        "ci95": [
+          1.5,
+          4.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2013-2015",
+        "metric": "sites",
+        "n": 17,
+        "median_ratio": 2.8186,
+        "ci95": [
+          2.0,
+          4.3
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2013-2015",
+        "metric": "eligibility",
+        "n": 18,
+        "median_ratio": 0.8787,
+        "ci95": [
+          0.7639,
+          0.9757
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2013-2015",
+        "metric": "eligibility_full_only",
+        "n": 8,
+        "median_ratio": 0.9016,
+        "ci95": [
+          0.6667,
+          1.0625
+        ],
+        "few_trials": true
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2016-2018",
+        "metric": "composite",
+        "n": 31,
+        "median_ratio": 2.5713,
+        "ci95": [
+          1.9846,
+          3.4394
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2016-2018",
+        "metric": "outcomes",
+        "n": 31,
+        "median_ratio": 2.0,
+        "ci95": [
+          1.7778,
+          2.3077
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2016-2018",
+        "metric": "countries",
+        "n": 31,
+        "median_ratio": 2.8889,
+        "ci95": [
+          1.5,
+          4.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2016-2018",
+        "metric": "sites",
+        "n": 31,
+        "median_ratio": 2.6422,
+        "ci95": [
+          1.7895,
+          4.5152
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2016-2018",
+        "metric": "eligibility",
+        "n": 31,
+        "median_ratio": 0.9333,
+        "ci95": [
+          0.75,
+          1.125
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2016-2018",
+        "metric": "eligibility_full_only",
+        "n": 2,
+        "median_ratio": 2.3438,
+        "ci95": [
+          2.3125,
+          2.375
+        ],
+        "few_trials": true
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2019-2021",
+        "metric": "composite",
+        "n": 38,
+        "median_ratio": 1.9784,
+        "ci95": [
+          1.6318,
+          2.653
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2019-2021",
+        "metric": "outcomes",
+        "n": 41,
+        "median_ratio": 2.3704,
+        "ci95": [
+          1.75,
+          2.8571
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2019-2021",
+        "metric": "countries",
+        "n": 38,
+        "median_ratio": 2.0,
+        "ci95": [
+          1.1667,
+          3.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2019-2021",
+        "metric": "sites",
+        "n": 38,
+        "median_ratio": 1.8329,
+        "ci95": [
+          1.0,
+          3.009
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2019-2021",
+        "metric": "eligibility",
+        "n": 41,
+        "median_ratio": 0.78,
+        "ci95": [
+          0.7568,
+          0.8667
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2019-2021",
+        "metric": "eligibility_full_only",
+        "n": 3,
+        "median_ratio": 2.9333,
+        "ci95": [
+          1.7826,
+          2.9756
+        ],
+        "few_trials": true
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2022-2024",
+        "metric": "composite",
+        "n": 39,
+        "median_ratio": 2.6668,
+        "ci95": [
+          2.002,
+          3.0041
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2022-2024",
+        "metric": "outcomes",
+        "n": 40,
+        "median_ratio": 2.9131,
+        "ci95": [
+          2.3571,
+          3.3077
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2022-2024",
+        "metric": "countries",
+        "n": 39,
+        "median_ratio": 2.52,
+        "ci95": [
+          2.0,
+          4.2
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2022-2024",
+        "metric": "sites",
+        "n": 39,
+        "median_ratio": 2.6591,
+        "ci95": [
+          1.4545,
+          3.6422
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2022-2024",
+        "metric": "eligibility",
+        "n": 40,
+        "median_ratio": 0.775,
+        "ci95": [
+          0.6667,
+          0.9071
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "all",
+        "metric": "composite",
+        "n": 137,
+        "median_ratio": 2.3904,
+        "ci95": [
+          2.0026,
+          2.6948
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "all",
+        "metric": "outcomes",
+        "n": 142,
+        "median_ratio": 2.3519,
+        "ci95": [
+          2.1033,
+          2.6726
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "all",
+        "metric": "countries",
+        "n": 137,
+        "median_ratio": 2.4444,
+        "ci95": [
+          2.0,
+          2.8889
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "all",
+        "metric": "sites",
+        "n": 137,
+        "median_ratio": 2.4769,
+        "ci95": [
+          2.0,
+          2.811
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "all",
+        "metric": "eligibility",
+        "n": 142,
+        "median_ratio": 0.8264,
+        "ci95": [
+          0.7727,
+          0.8824
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "all",
+        "metric": "eligibility_full_only",
+        "n": 22,
+        "median_ratio": 0.9143,
+        "ci95": [
+          0.7952,
+          1.2941
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2010-2012",
+        "metric": "composite",
+        "n": 23,
+        "median_ratio": 1.8745,
+        "ci95": [
+          1.522,
+          3.6329
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2010-2012",
+        "metric": "outcomes",
+        "n": 23,
+        "median_ratio": 1.5,
+        "ci95": [
+          0.913,
+          2.875
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2010-2012",
+        "metric": "countries",
+        "n": 23,
+        "median_ratio": 4.125,
+        "ci95": [
+          1.0,
+          7.5
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2010-2012",
+        "metric": "sites",
+        "n": 23,
+        "median_ratio": 2.5765,
+        "ci95": [
+          1.1667,
+          4.75
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2010-2012",
+        "metric": "eligibility",
+        "n": 23,
+        "median_ratio": 0.75,
+        "ci95": [
+          0.5333,
+          1.0625
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2010-2012",
+        "metric": "eligibility_full_only",
+        "n": 23,
+        "median_ratio": 0.75,
+        "ci95": [
+          0.5333,
+          1.0556
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2013-2015",
+        "metric": "composite",
+        "n": 23,
+        "median_ratio": 2.3977,
+        "ci95": [
+          1.0106,
+          3.3078
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2013-2015",
+        "metric": "outcomes",
+        "n": 24,
+        "median_ratio": 1.6985,
+        "ci95": [
+          1.0385,
+          2.875
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2013-2015",
+        "metric": "countries",
+        "n": 23,
+        "median_ratio": 3.75,
+        "ci95": [
+          1.0,
+          5.3333
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2013-2015",
+        "metric": "sites",
+        "n": 23,
+        "median_ratio": 2.2338,
+        "ci95": [
+          1.5833,
+          3.8
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2013-2015",
+        "metric": "eligibility",
+        "n": 24,
+        "median_ratio": 0.6444,
+        "ci95": [
+          0.5874,
+          0.8333
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2013-2015",
+        "metric": "eligibility_full_only",
+        "n": 24,
+        "median_ratio": 0.6444,
+        "ci95": [
+          0.5874,
+          0.8333
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2016-2018",
+        "metric": "composite",
+        "n": 20,
+        "median_ratio": 2.8275,
+        "ci95": [
+          1.8268,
+          3.791
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2016-2018",
+        "metric": "outcomes",
+        "n": 20,
+        "median_ratio": 2.3125,
+        "ci95": [
+          1.4522,
+          2.9667
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2016-2018",
+        "metric": "countries",
+        "n": 20,
+        "median_ratio": 5.4667,
+        "ci95": [
+          3.0958,
+          9.3333
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2016-2018",
+        "metric": "sites",
+        "n": 20,
+        "median_ratio": 2.1634,
+        "ci95": [
+          1.5557,
+          3.046
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2016-2018",
+        "metric": "eligibility",
+        "n": 20,
+        "median_ratio": 1.113,
+        "ci95": [
+          0.9565,
+          1.293
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2016-2018",
+        "metric": "eligibility_full_only",
+        "n": 20,
+        "median_ratio": 1.113,
+        "ci95": [
+          0.9384,
+          1.293
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2019-2021",
+        "metric": "composite",
+        "n": 21,
+        "median_ratio": 3.4418,
+        "ci95": [
+          2.264,
+          4.9411
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2019-2021",
+        "metric": "outcomes",
+        "n": 21,
+        "median_ratio": 2.0,
+        "ci95": [
+          1.7647,
+          2.625
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2019-2021",
+        "metric": "countries",
+        "n": 21,
+        "median_ratio": 7.0,
+        "ci95": [
+          2.6667,
+          10.5
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2019-2021",
+        "metric": "sites",
+        "n": 21,
+        "median_ratio": 3.1538,
+        "ci95": [
+          1.9381,
+          4.8649
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2019-2021",
+        "metric": "eligibility",
+        "n": 21,
+        "median_ratio": 1.375,
+        "ci95": [
+          1.0,
+          1.65
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2019-2021",
+        "metric": "eligibility_full_only",
+        "n": 20,
+        "median_ratio": 1.375,
+        "ci95": [
+          1.1176,
+          1.6842
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2022-2024",
+        "metric": "composite",
+        "n": 14,
+        "median_ratio": 2.5889,
+        "ci95": [
+          2.2169,
+          5.2469
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2022-2024",
+        "metric": "outcomes",
+        "n": 14,
+        "median_ratio": 1.6607,
+        "ci95": [
+          1.5,
+          2.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2022-2024",
+        "metric": "countries",
+        "n": 14,
+        "median_ratio": 5.6667,
+        "ci95": [
+          3.0,
+          10.0455
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2022-2024",
+        "metric": "sites",
+        "n": 14,
+        "median_ratio": 2.8833,
+        "ci95": [
+          1.6579,
+          7.0794
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2022-2024",
+        "metric": "eligibility",
+        "n": 14,
+        "median_ratio": 1.0551,
+        "ci95": [
+          0.8225,
+          1.1667
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2022-2024",
+        "metric": "eligibility_full_only",
+        "n": 13,
+        "median_ratio": 1.0625,
+        "ci95": [
+          0.8936,
+          1.1667
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "all",
+        "metric": "composite",
+        "n": 101,
+        "median_ratio": 2.51,
+        "ci95": [
+          2.2188,
+          3.0483
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "all",
+        "metric": "outcomes",
+        "n": 102,
+        "median_ratio": 1.875,
+        "ci95": [
+          1.6471,
+          2.1875
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "all",
+        "metric": "countries",
+        "n": 101,
+        "median_ratio": 4.5,
+        "ci95": [
+          3.75,
+          5.6667
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "all",
+        "metric": "sites",
+        "n": 101,
+        "median_ratio": 2.4935,
+        "ci95": [
+          2.1316,
+          3.4667
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "all",
+        "metric": "eligibility",
+        "n": 102,
+        "median_ratio": 1.0,
+        "ci95": [
+          0.8101,
+          1.0646
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "all",
+        "metric": "eligibility_full_only",
+        "n": 100,
+        "median_ratio": 1.0,
+        "ci95": [
+          0.833,
+          1.0823
+        ],
+        "few_trials": false
+      }
+    ],
+    "relative_to_industry": [
+      {
+        "group": "large_sponsor_peers",
+        "period": "2010-2012",
+        "metric": "composite",
+        "n": 1838,
+        "n_industry": 5287,
+        "relative_to_industry": 1.7073,
+        "ci95": [
+          1.5929,
+          1.8087
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2010-2012",
+        "metric": "outcomes",
+        "n": 2013,
+        "n_industry": 5752,
+        "relative_to_industry": 1.4062,
+        "ci95": [
+          1.3333,
+          1.5
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2010-2012",
+        "metric": "countries",
+        "n": 1838,
+        "n_industry": 5294,
+        "relative_to_industry": 2.0,
+        "ci95": [
+          2.0,
+          2.25
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2010-2012",
+        "metric": "sites",
+        "n": 1838,
+        "n_industry": 5294,
+        "relative_to_industry": 1.8031,
+        "ci95": [
+          1.6053,
+          1.9926
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2010-2012",
+        "metric": "eligibility",
+        "n": 2008,
+        "n_industry": 5748,
+        "relative_to_industry": 0.9364,
+        "ci95": [
+          0.8845,
+          0.9722
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2010-2012",
+        "metric": "eligibility_full_only",
+        "n": 1745,
+        "n_industry": 5296,
+        "relative_to_industry": 0.9351,
+        "ci95": [
+          0.8899,
+          0.9825
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2013-2015",
+        "metric": "composite",
+        "n": 1495,
+        "n_industry": 4970,
+        "relative_to_industry": 1.8926,
+        "ci95": [
+          1.7609,
+          2.0526
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2013-2015",
+        "metric": "outcomes",
+        "n": 1711,
+        "n_industry": 5434,
+        "relative_to_industry": 1.4286,
+        "ci95": [
+          1.3309,
+          1.5238
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2013-2015",
+        "metric": "countries",
+        "n": 1495,
+        "n_industry": 4970,
+        "relative_to_industry": 2.6154,
+        "ci95": [
+          2.2856,
+          2.8571
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2013-2015",
+        "metric": "sites",
+        "n": 1495,
+        "n_industry": 4970,
+        "relative_to_industry": 2.0782,
+        "ci95": [
+          1.8638,
+          2.3213
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2013-2015",
+        "metric": "eligibility",
+        "n": 1689,
+        "n_industry": 5411,
+        "relative_to_industry": 0.9301,
+        "ci95": [
+          0.8823,
+          0.9705
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2013-2015",
+        "metric": "eligibility_full_only",
+        "n": 1478,
+        "n_industry": 4992,
+        "relative_to_industry": 0.9343,
+        "ci95": [
+          0.8931,
+          0.9808
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2016-2018",
+        "metric": "composite",
+        "n": 1268,
+        "n_industry": 4907,
+        "relative_to_industry": 2.0243,
+        "ci95": [
+          1.8704,
+          2.1773
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2016-2018",
+        "metric": "outcomes",
+        "n": 1341,
+        "n_industry": 5157,
+        "relative_to_industry": 1.5172,
+        "ci95": [
+          1.4062,
+          1.625
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2016-2018",
+        "metric": "countries",
+        "n": 1268,
+        "n_industry": 4907,
+        "relative_to_industry": 3.0,
+        "ci95": [
+          2.7141,
+          3.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2016-2018",
+        "metric": "sites",
+        "n": 1268,
+        "n_industry": 4907,
+        "relative_to_industry": 2.1362,
+        "ci95": [
+          1.9107,
+          2.3194
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2016-2018",
+        "metric": "eligibility",
+        "n": 1321,
+        "n_industry": 5135,
+        "relative_to_industry": 0.91,
+        "ci95": [
+          0.8747,
+          0.9762
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2016-2018",
+        "metric": "eligibility_full_only",
+        "n": 1093,
+        "n_industry": 4588,
+        "relative_to_industry": 0.9384,
+        "ci95": [
+          0.8845,
+          0.9989
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2019-2021",
+        "metric": "composite",
+        "n": 1418,
+        "n_industry": 5546,
+        "relative_to_industry": 2.1898,
+        "ci95": [
+          2.0588,
+          2.3146
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2019-2021",
+        "metric": "outcomes",
+        "n": 1457,
+        "n_industry": 5789,
+        "relative_to_industry": 1.3696,
+        "ci95": [
+          1.3125,
+          1.4223
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2019-2021",
+        "metric": "countries",
+        "n": 1418,
+        "n_industry": 5546,
+        "relative_to_industry": 3.3333,
+        "ci95": [
+          3.0501,
+          3.6667
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2019-2021",
+        "metric": "sites",
+        "n": 1418,
+        "n_industry": 5546,
+        "relative_to_industry": 2.327,
+        "ci95": [
+          2.1367,
+          2.5897
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2019-2021",
+        "metric": "eligibility",
+        "n": 1457,
+        "n_industry": 5789,
+        "relative_to_industry": 0.9412,
+        "ci95": [
+          0.913,
+          0.9952
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2019-2021",
+        "metric": "eligibility_full_only",
+        "n": 1255,
+        "n_industry": 5211,
+        "relative_to_industry": 0.95,
+        "ci95": [
+          0.9005,
+          0.997
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2022-2024",
+        "metric": "composite",
+        "n": 1196,
+        "n_industry": 5281,
+        "relative_to_industry": 2.6987,
+        "ci95": [
+          2.5077,
+          2.9005
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2022-2024",
+        "metric": "outcomes",
+        "n": 1224,
+        "n_industry": 5585,
+        "relative_to_industry": 1.3125,
+        "ci95": [
+          1.2527,
+          1.3968
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2022-2024",
+        "metric": "countries",
+        "n": 1196,
+        "n_industry": 5281,
+        "relative_to_industry": 4.0,
+        "ci95": [
+          3.709,
+          4.3077
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2022-2024",
+        "metric": "sites",
+        "n": 1196,
+        "n_industry": 5281,
+        "relative_to_industry": 3.3712,
+        "ci95": [
+          2.9856,
+          3.7402
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2022-2024",
+        "metric": "eligibility",
+        "n": 1223,
+        "n_industry": 5583,
+        "relative_to_industry": 0.9004,
+        "ci95": [
+          0.8545,
+          0.9444
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "2022-2024",
+        "metric": "eligibility_full_only",
+        "n": 1047,
+        "n_industry": 4971,
+        "relative_to_industry": 0.8889,
+        "ci95": [
+          0.8467,
+          0.9418
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "all",
+        "metric": "composite",
+        "n": 7215,
+        "n_industry": 25991,
+        "relative_to_industry": 2.0089,
+        "ci95": [
+          1.9444,
+          2.0748
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "all",
+        "metric": "outcomes",
+        "n": 7746,
+        "n_industry": 27717,
+        "relative_to_industry": 1.375,
+        "ci95": [
+          1.3333,
+          1.375
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "all",
+        "metric": "countries",
+        "n": 7215,
+        "n_industry": 25998,
+        "relative_to_industry": 3.0,
+        "ci95": [
+          2.8571,
+          3.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "all",
+        "metric": "sites",
+        "n": 7215,
+        "n_industry": 25998,
+        "relative_to_industry": 2.1818,
+        "ci95": [
+          2.125,
+          2.2993
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "all",
+        "metric": "eligibility",
+        "n": 7698,
+        "n_industry": 27666,
+        "relative_to_industry": 0.9048,
+        "ci95": [
+          0.8889,
+          0.9286
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "large_sponsor_peers",
+        "period": "all",
+        "metric": "eligibility_full_only",
+        "n": 6618,
+        "n_industry": 25058,
+        "relative_to_industry": 0.913,
+        "ci95": [
+          0.8949,
+          0.9444
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2010-2012",
+        "metric": "composite",
+        "n": 12,
+        "n_industry": 5287,
+        "relative_to_industry": 2.2322,
+        "ci95": [
+          1.1921,
+          3.0411
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2010-2012",
+        "metric": "outcomes",
+        "n": 12,
+        "n_industry": 5752,
+        "relative_to_industry": 2.4301,
+        "ci95": [
+          0.9891,
+          3.875
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2010-2012",
+        "metric": "countries",
+        "n": 12,
+        "n_industry": 5294,
+        "relative_to_industry": 2.125,
+        "ci95": [
+          2.0,
+          3.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2010-2012",
+        "metric": "sites",
+        "n": 12,
+        "n_industry": 5294,
+        "relative_to_industry": 2.2206,
+        "ci95": [
+          1.7068,
+          3.0274
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2010-2012",
+        "metric": "eligibility",
+        "n": 12,
+        "n_industry": 5748,
+        "relative_to_industry": 0.8387,
+        "ci95": [
+          0.6774,
+          1.0732
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2010-2012",
+        "metric": "eligibility_full_only",
+        "n": 9,
+        "n_industry": 5296,
+        "relative_to_industry": 0.825,
+        "ci95": [
+          0.607,
+          1.0501
+        ],
+        "few_trials": true
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2013-2015",
+        "metric": "composite",
+        "n": 17,
+        "n_industry": 4970,
+        "relative_to_industry": 2.6181,
+        "ci95": [
+          1.902,
+          3.9344
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2013-2015",
+        "metric": "outcomes",
+        "n": 18,
+        "n_industry": 5434,
+        "relative_to_industry": 2.533,
+        "ci95": [
+          1.741,
+          3.033
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2013-2015",
+        "metric": "countries",
+        "n": 17,
+        "n_industry": 4970,
+        "relative_to_industry": 2.2,
+        "ci95": [
+          1.5,
+          4.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2013-2015",
+        "metric": "sites",
+        "n": 17,
+        "n_industry": 4970,
+        "relative_to_industry": 3.0783,
+        "ci95": [
+          2.1995,
+          4.7551
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2013-2015",
+        "metric": "eligibility",
+        "n": 18,
+        "n_industry": 5411,
+        "relative_to_industry": 0.9463,
+        "ci95": [
+          0.8264,
+          1.0625
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2013-2015",
+        "metric": "eligibility_full_only",
+        "n": 8,
+        "n_industry": 4992,
+        "relative_to_industry": 0.9546,
+        "ci95": [
+          0.7083,
+          1.125
+        ],
+        "few_trials": true
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2016-2018",
+        "metric": "composite",
+        "n": 31,
+        "n_industry": 4907,
+        "relative_to_industry": 2.4909,
+        "ci95": [
+          1.8771,
+          3.3662
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2016-2018",
+        "metric": "outcomes",
+        "n": 31,
+        "n_industry": 5157,
+        "relative_to_industry": 2.0,
+        "ci95": [
+          1.7143,
+          2.3077
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2016-2018",
+        "metric": "countries",
+        "n": 31,
+        "n_industry": 4907,
+        "relative_to_industry": 2.8889,
+        "ci95": [
+          1.5,
+          4.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2016-2018",
+        "metric": "sites",
+        "n": 31,
+        "n_industry": 4907,
+        "relative_to_industry": 2.5379,
+        "ci95": [
+          1.6842,
+          4.5641
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2016-2018",
+        "metric": "eligibility",
+        "n": 31,
+        "n_industry": 5135,
+        "relative_to_industry": 0.8965,
+        "ci95": [
+          0.7125,
+          1.0809
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2016-2018",
+        "metric": "eligibility_full_only",
+        "n": 2,
+        "n_industry": 4588,
+        "relative_to_industry": 2.1307,
+        "ci95": [
+          2.0812,
+          2.2167
+        ],
+        "few_trials": true
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2019-2021",
+        "metric": "composite",
+        "n": 38,
+        "n_industry": 5546,
+        "relative_to_industry": 1.7975,
+        "ci95": [
+          1.5318,
+          2.4399
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2019-2021",
+        "metric": "outcomes",
+        "n": 41,
+        "n_industry": 5789,
+        "relative_to_industry": 2.0741,
+        "ci95": [
+          1.5312,
+          2.5397
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2019-2021",
+        "metric": "countries",
+        "n": 38,
+        "n_industry": 5546,
+        "relative_to_industry": 2.0,
+        "ci95": [
+          1.3333,
+          3.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2019-2021",
+        "metric": "sites",
+        "n": 38,
+        "n_industry": 5546,
+        "relative_to_industry": 1.6663,
+        "ci95": [
+          0.9333,
+          2.6859
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2019-2021",
+        "metric": "eligibility",
+        "n": 41,
+        "n_industry": 5789,
+        "relative_to_industry": 0.7341,
+        "ci95": [
+          0.7043,
+          0.81
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2019-2021",
+        "metric": "eligibility_full_only",
+        "n": 3,
+        "n_industry": 5211,
+        "relative_to_industry": 2.64,
+        "ci95": [
+          1.5845,
+          2.7169
+        ],
+        "few_trials": true
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2022-2024",
+        "metric": "composite",
+        "n": 39,
+        "n_industry": 5281,
+        "relative_to_industry": 2.7335,
+        "ci95": [
+          2.0821,
+          3.1105
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2022-2024",
+        "metric": "outcomes",
+        "n": 40,
+        "n_industry": 5585,
+        "relative_to_industry": 2.549,
+        "ci95": [
+          2.0952,
+          2.8942
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2022-2024",
+        "metric": "countries",
+        "n": 39,
+        "n_industry": 5281,
+        "relative_to_industry": 2.52,
+        "ci95": [
+          2.0,
+          4.2
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2022-2024",
+        "metric": "sites",
+        "n": 39,
+        "n_industry": 5281,
+        "relative_to_industry": 2.8636,
+        "ci95": [
+          1.5584,
+          3.9983
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "2022-2024",
+        "metric": "eligibility",
+        "n": 40,
+        "n_industry": 5583,
+        "relative_to_industry": 0.7197,
+        "ci95": [
+          0.6131,
+          0.8408
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "all",
+        "metric": "composite",
+        "n": 137,
+        "n_industry": 25991,
+        "relative_to_industry": 2.4296,
+        "ci95": [
+          2.0774,
+          2.7509
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "all",
+        "metric": "outcomes",
+        "n": 142,
+        "n_industry": 27717,
+        "relative_to_industry": 2.3519,
+        "ci95": [
+          2.125,
+          2.6922
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "all",
+        "metric": "countries",
+        "n": 137,
+        "n_industry": 25998,
+        "relative_to_industry": 2.4444,
+        "ci95": [
+          2.0,
+          2.8889
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "all",
+        "metric": "sites",
+        "n": 137,
+        "n_industry": 25998,
+        "relative_to_industry": 2.4769,
+        "ci95": [
+          2.0,
+          2.8583
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "all",
+        "metric": "eligibility",
+        "n": 142,
+        "n_industry": 27666,
+        "relative_to_industry": 0.8264,
+        "ci95": [
+          0.7694,
+          0.8835
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_led",
+        "period": "all",
+        "metric": "eligibility_full_only",
+        "n": 22,
+        "n_industry": 25058,
+        "relative_to_industry": 0.8838,
+        "ci95": [
+          0.7055,
+          1.2633
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2010-2012",
+        "metric": "composite",
+        "n": 23,
+        "n_industry": 5287,
+        "relative_to_industry": 2.0523,
+        "ci95": [
+          1.6438,
+          4.748
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2010-2012",
+        "metric": "outcomes",
+        "n": 23,
+        "n_industry": 5752,
+        "relative_to_industry": 1.875,
+        "ci95": [
+          1.2,
+          3.7375
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2010-2012",
+        "metric": "countries",
+        "n": 23,
+        "n_industry": 5294,
+        "relative_to_industry": 4.125,
+        "ci95": [
+          1.3333,
+          9.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2010-2012",
+        "metric": "sites",
+        "n": 23,
+        "n_industry": 5294,
+        "relative_to_industry": 2.7747,
+        "ci95": [
+          1.3522,
+          5.3262
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2010-2012",
+        "metric": "eligibility",
+        "n": 23,
+        "n_industry": 5748,
+        "relative_to_industry": 0.8672,
+        "ci95": [
+          0.6044,
+          1.2298
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2010-2012",
+        "metric": "eligibility_full_only",
+        "n": 23,
+        "n_industry": 5296,
+        "relative_to_industry": 0.8438,
+        "ci95": [
+          0.5359,
+          1.1963
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2013-2015",
+        "metric": "composite",
+        "n": 23,
+        "n_industry": 4970,
+        "relative_to_industry": 2.6261,
+        "ci95": [
+          1.1162,
+          3.5633
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2013-2015",
+        "metric": "outcomes",
+        "n": 24,
+        "n_industry": 5434,
+        "relative_to_industry": 1.9412,
+        "ci95": [
+          1.1868,
+          3.1757
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2013-2015",
+        "metric": "countries",
+        "n": 23,
+        "n_industry": 4970,
+        "relative_to_industry": 3.75,
+        "ci95": [
+          1.0,
+          4.75
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2013-2015",
+        "metric": "sites",
+        "n": 23,
+        "n_industry": 4970,
+        "relative_to_industry": 2.4395,
+        "ci95": [
+          1.6846,
+          4.1222
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2013-2015",
+        "metric": "eligibility",
+        "n": 24,
+        "n_industry": 5411,
+        "relative_to_industry": 0.694,
+        "ci95": [
+          0.63,
+          0.8889
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2013-2015",
+        "metric": "eligibility_full_only",
+        "n": 24,
+        "n_industry": 4992,
+        "relative_to_industry": 0.6823,
+        "ci95": [
+          0.6175,
+          0.8562
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2016-2018",
+        "metric": "composite",
+        "n": 20,
+        "n_industry": 4907,
+        "relative_to_industry": 2.739,
+        "ci95": [
+          1.7529,
+          3.6991
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2016-2018",
+        "metric": "outcomes",
+        "n": 20,
+        "n_industry": 5157,
+        "relative_to_industry": 2.3125,
+        "ci95": [
+          1.3915,
+          2.9667
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2016-2018",
+        "metric": "countries",
+        "n": 20,
+        "n_industry": 4907,
+        "relative_to_industry": 5.4667,
+        "ci95": [
+          3.25,
+          9.3333
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2016-2018",
+        "metric": "sites",
+        "n": 20,
+        "n_industry": 4907,
+        "relative_to_industry": 2.078,
+        "ci95": [
+          1.4974,
+          3.046
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2016-2018",
+        "metric": "eligibility",
+        "n": 20,
+        "n_industry": 5135,
+        "relative_to_industry": 1.069,
+        "ci95": [
+          0.911,
+          1.2624
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2016-2018",
+        "metric": "eligibility_full_only",
+        "n": 20,
+        "n_industry": 4588,
+        "relative_to_industry": 1.0118,
+        "ci95": [
+          0.8609,
+          1.1793
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2019-2021",
+        "metric": "composite",
+        "n": 21,
+        "n_industry": 5546,
+        "relative_to_industry": 3.1271,
+        "ci95": [
+          2.0238,
+          4.5601
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2019-2021",
+        "metric": "outcomes",
+        "n": 21,
+        "n_industry": 5789,
+        "relative_to_industry": 1.75,
+        "ci95": [
+          1.5441,
+          2.2969
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2019-2021",
+        "metric": "countries",
+        "n": 21,
+        "n_industry": 5546,
+        "relative_to_industry": 7.0,
+        "ci95": [
+          2.6667,
+          10.5
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2019-2021",
+        "metric": "sites",
+        "n": 21,
+        "n_industry": 5546,
+        "relative_to_industry": 2.8671,
+        "ci95": [
+          1.7378,
+          4.6369
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2019-2021",
+        "metric": "eligibility",
+        "n": 21,
+        "n_industry": 5789,
+        "relative_to_industry": 1.2941,
+        "ci95": [
+          0.9412,
+          1.5632
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2019-2021",
+        "metric": "eligibility_full_only",
+        "n": 20,
+        "n_industry": 5211,
+        "relative_to_industry": 1.2375,
+        "ci95": [
+          0.9962,
+          1.5004
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2022-2024",
+        "metric": "composite",
+        "n": 14,
+        "n_industry": 5281,
+        "relative_to_industry": 2.6536,
+        "ci95": [
+          2.2169,
+          5.0064
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2022-2024",
+        "metric": "outcomes",
+        "n": 14,
+        "n_industry": 5585,
+        "relative_to_industry": 1.4531,
+        "ci95": [
+          1.3125,
+          1.75
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2022-2024",
+        "metric": "countries",
+        "n": 14,
+        "n_industry": 5281,
+        "relative_to_industry": 5.6667,
+        "ci95": [
+          2.6875,
+          13.0
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2022-2024",
+        "metric": "sites",
+        "n": 14,
+        "n_industry": 5281,
+        "relative_to_industry": 3.1051,
+        "ci95": [
+          1.8421,
+          7.4181
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2022-2024",
+        "metric": "eligibility",
+        "n": 14,
+        "n_industry": 5583,
+        "relative_to_industry": 0.9797,
+        "ci95": [
+          0.7304,
+          1.0938
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "2022-2024",
+        "metric": "eligibility_full_only",
+        "n": 13,
+        "n_industry": 4971,
+        "relative_to_industry": 0.9444,
+        "ci95": [
+          0.7771,
+          1.0439
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "all",
+        "metric": "composite",
+        "n": 101,
+        "n_industry": 25991,
+        "relative_to_industry": 2.5511,
+        "ci95": [
+          2.2551,
+          3.1194
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "all",
+        "metric": "outcomes",
+        "n": 102,
+        "n_industry": 27717,
+        "relative_to_industry": 1.875,
+        "ci95": [
+          1.6604,
+          2.1964
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "all",
+        "metric": "countries",
+        "n": 101,
+        "n_industry": 25998,
+        "relative_to_industry": 4.5,
+        "ci95": [
+          3.7479,
+          5.6667
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "all",
+        "metric": "sites",
+        "n": 101,
+        "n_industry": 25998,
+        "relative_to_industry": 2.4935,
+        "ci95": [
+          2.1316,
+          3.4534
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "all",
+        "metric": "eligibility",
+        "n": 102,
+        "n_industry": 27666,
+        "relative_to_industry": 1.0,
+        "ci95": [
+          0.7964,
+          1.0646
+        ],
+        "few_trials": false
+      },
+      {
+        "group": "sponsor_collaborator",
+        "period": "all",
+        "metric": "eligibility_full_only",
+        "n": 100,
+        "n_industry": 25058,
+        "relative_to_industry": 0.9667,
+        "ci95": [
+          0.7909,
+          1.0439
+        ],
+        "few_trials": false
+      }
+    ],
+    "bootstrap": {
+      "resamples": 2000,
+      "seed": 7,
+      "interval": "percentile 95%"
+    }
+  },
+  "caveats": [
+    "Registry fields are sponsor-reported and incomplete; counts are proxies for protocol complexity, not the protocol itself.",
+    "A ratio above 1 is a question for the design team, not a quality judgment; complexity can be scientifically justified.",
+    "Phase and MeSH category do not capture indication severity, endpoint type or regional strategy; residual case-mix differences remain.",
+    "Blocks with fewer than 10 trials are flagged; read their intervals, not points."
+  ]
+}
