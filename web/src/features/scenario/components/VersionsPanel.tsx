@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import { api, isAbort } from "@/app/api/client";
 import type { ApprovalView, SavedScenario } from "@/app/api/types";
 import { formatUtc, formatValue } from "@/app/format";
-import { displayName } from "@/app/identity";
+import { displayName, useIdentity } from "@/app/identity";
 import { localizeCopy } from "@/app/localize";
 import { useToast } from "@/app/toast";
-import { Badge, EmptyState, Spinner } from "@/app/ui";
+import { Badge, EmptyState, Modal, Spinner } from "@/app/ui";
 import { isKnownRange } from "../metrics";
 import { ApprovalPanel } from "./ApprovalPanel";
 
@@ -32,6 +32,7 @@ export function VersionsPanel({
   selectedId,
   onSelect,
   onLoadLevers,
+  onDelete,
   onRefresh,
 }: {
   scenarios: SavedScenario[];
@@ -39,15 +40,19 @@ export function VersionsPanel({
   selectedId: string | null;
   onSelect: (id: string | null) => void;
   onLoadLevers: (s: SavedScenario) => void;
+  onDelete: (id: string) => void;
   onRefresh: () => void;
 }) {
   useTranslation();
   const toast = useToast();
+  const identity = useIdentity();
   const [compareIds, setCompareIds] = useState<string[]>([]);
   const [full, setFull] = useState<SavedScenario | null>(null);
   const [approval, setApproval] = useState<ApprovalView | null>(null);
   const [loadingFull, setLoadingFull] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [deleteTarget, setDeleteTarget] = useState<SavedScenario | null>(null);
+  const [deleting, setDeleting] = useState(false);
   const summary = scenarios.find((s) => s.id === selectedId) ?? null;
   const statusKey = summary?.status;
 
@@ -55,17 +60,18 @@ export function VersionsPanel({
     setLoadingFull(true);
     try {
       const s = await api.getScenario(id, { signal, silent: true });
+      if (signal?.aborted) return;
       setFull(s);
       // prefer A7's approval view (signature validity + manifestation) over the embedded copy
       const view = s.approval_id ? await api.getApproval(s.approval_id, { signal, silent: true }).catch(() => null) : null;
-      setApproval(view ?? s.approval ?? null);
+      if (!signal?.aborted) setApproval(view ?? s.approval ?? null);
     } catch (err) {
-      if (!isAbort(err)) {
+      if (!signal?.aborted && !isAbort(err)) {
         setFull(null);
         setApproval(null);
       }
     } finally {
-      setLoadingFull(false);
+      if (!signal?.aborted) setLoadingFull(false);
     }
   }, []);
 
@@ -81,7 +87,36 @@ export function VersionsPanel({
     // reload when the list reports a new status for the selected scenario
   }, [selectedId, statusKey, loadFull]);
 
-  const selected = full ?? summary;
+  const selected = full?.id === selectedId ? full : summary;
+
+  useEffect(() => {
+    const existing = new Set(scenarios.map((s) => s.id));
+    setCompareIds((ids) => ids.filter((id) => existing.has(id)));
+  }, [scenarios]);
+
+  const canDelete = (s: SavedScenario) => identity.role !== "viewer" && (identity.user === s.author || identity.role === "admin");
+  const closeDelete = () => { if (!deleting) setDeleteTarget(null); };
+  const remove = async () => {
+    if (!deleteTarget || deleting || !canDelete(deleteTarget)) return;
+    setDeleting(true);
+    try {
+      await api.deleteScenario(deleteTarget.id);
+      setCompareIds((ids) => ids.filter((id) => id !== deleteTarget.id));
+      if (selectedId === deleteTarget.id) {
+        setFull(null);
+        setApproval(null);
+        onSelect(null);
+      }
+      onDelete(deleteTarget.id);
+      setDeleteTarget(null);
+      toast.push("success", t("Scenario deleted", "方案已删除"));
+      onRefresh();
+    } catch {
+      // The client shows the error; keep the dialog open for retry.
+    } finally {
+      setDeleting(false);
+    }
+  };
 
   const submit = async () => {
     if (!selected) return;
@@ -111,7 +146,7 @@ export function VersionsPanel({
   const toggleCompare = (id: string) => setCompareIds((ids) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids.slice(-1), id]));
 
   return (
-    <section className="card p-4" aria-labelledby="versions-title" data-testid="versions-panel">
+    <section className="card min-w-0 p-4" aria-labelledby="versions-title" data-testid="versions-panel">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <h2 id="versions-title" className="card-title">
           {t("Scenario versions", "方案版本")}
@@ -131,16 +166,16 @@ export function VersionsPanel({
         <EmptyState title={t("No saved scenarios", "暂无已保存方案")} />
       ) : (
         <div className="max-h-72 overflow-auto">
-          <table className="w-full text-sm" data-testid="versions-table">
+          <table className="w-full table-fixed text-sm" data-testid="versions-table">
             <thead>
               <tr className="text-left text-xs uppercase tracking-wide text-ink-500">
                 <th scope="col" className="w-8 pb-1">
                   <span className="sr-only">{t("Compare", "比较")}</span>
                 </th>
                 <th scope="col" className="pb-1 font-semibold">{t("Scenario", "方案")}</th>
-                <th scope="col" className="whitespace-nowrap pb-1 text-right font-semibold">{t("Cost P50", "费用 P50")}</th>
-                <th scope="col" className="pb-1 font-semibold">{t("Status", "状态")}</th>
-                <th scope="col" className="pb-1">
+                <th scope="col" className="w-24 whitespace-nowrap pb-1 text-right font-semibold">{t("Cost P50", "费用 P50")}</th>
+                <th scope="col" className="w-28 pb-1 font-semibold">{t("Status", "状态")}</th>
+                <th scope="col" className="w-24 pb-1">
                   <span className="sr-only">{t("Actions", "操作")}</span>
                 </th>
               </tr>
@@ -159,7 +194,7 @@ export function VersionsPanel({
                         onChange={() => toggleCompare(s.id)}
                       />
                     </td>
-                    <td className="py-1.5">
+                    <td className="break-words py-1.5">
                       <button type="button" className="text-left font-semibold text-ink-900 hover:underline" onClick={() => onSelect(s.id)} aria-pressed={s.id === selectedId}>
                         {localizeCopy(s.name)} <span className="font-normal text-ink-500">v{s.version}</span>
                       </button>
@@ -172,9 +207,19 @@ export function VersionsPanel({
                     <td className="whitespace-nowrap py-1.5 pl-2">
                       <ScenarioStatusChip status={s.status} />
                     </td>
-                    <td className="py-1.5 text-right">
+                    <td className="whitespace-nowrap py-1.5 text-right">
                       <button type="button" className="btn-ghost whitespace-nowrap px-2 py-1 text-xs" onClick={() => void loadLevers(s)}>
                         {t("Load", "加载")}
+                      </button>
+                      <button
+                        type="button"
+                        className="btn-ghost whitespace-nowrap px-2 py-1 text-xs text-worse-700"
+                        aria-label={t(`Delete ${s.name} v${s.version}`, `删除 ${localizeCopy(s.name)} v${s.version}`)}
+                        title={canDelete(s) ? t("Delete this version", "删除此版本") : t("Only the author or an administrator can delete this version", "仅作者或管理员可删除此版本")}
+                        disabled={!canDelete(s) || deleting}
+                        onClick={() => setDeleteTarget(s)}
+                      >
+                        {t("Delete", "删除")}
                       </button>
                     </td>
                   </tr>
@@ -236,6 +281,20 @@ export function VersionsPanel({
           </div>
         </div>
       )}
+      <Modal
+        open={deleteTarget !== null}
+        title={t("Delete scenario version?", "删除方案版本？")}
+        onClose={closeDelete}
+        footer={<>
+          <button type="button" className="btn-secondary" onClick={closeDelete} disabled={deleting}>{t("Cancel", "取消")}</button>
+          <button type="button" className="btn-danger" onClick={() => void remove()} disabled={deleting || !deleteTarget || !canDelete(deleteTarget)}>
+            {deleting ? t("Deleting…", "删除中…") : t("Delete", "删除")}
+          </button>
+        </>}
+      >
+        <p className="break-words text-sm font-semibold text-ink-900">{deleteTarget && `${localizeCopy(deleteTarget.name)} v${deleteTarget.version}`}</p>
+        <p className="mt-2 text-sm text-ink-600">{t("Remove this version from the list. Approval and audit records are retained.", "从列表移除此版本，保留审批与审计记录。")}</p>
+      </Modal>
     </section>
   );
 }

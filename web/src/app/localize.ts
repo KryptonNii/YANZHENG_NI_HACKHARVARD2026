@@ -20,6 +20,8 @@ const EXACT: Record<string, string> = {
   "The viewer role cannot change data.": "查看者角色不能修改数据。",
   "Send the demo identity headers X-User and X-Role with every change.": "每次修改都需要发送演示身份请求头 X-User 和 X-Role。",
   "Only the author can edit a draft scenario.": "只有作者可以编辑草稿方案。",
+  "Only the author or an administrator can delete a scenario.": "仅作者或管理员可删除方案。",
+  "Only the author or an admin can delete a scenario.": "仅作者或管理员可删除方案。",
   "Only the author can submit a scenario for approval.": "只有作者可以提交方案审批。",
   "This scenario was submitted meanwhile.": "此方案在此期间已被提交。",
   "record_id is required.": "必须提供 record_id。",

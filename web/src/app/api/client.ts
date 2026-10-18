@@ -257,6 +257,8 @@ export const api = {
   },
   getScenario: async (id: string, opts: RequestOptions = {}): Promise<SavedScenario> =>
     normalizeSavedScenario(await request("GET", `/scenarios/${enc(id)}`, opts)),
+  deleteScenario: (id: string, opts: RequestOptions = {}): Promise<void> =>
+    request<void>("DELETE", `/scenarios/${enc(id)}`, opts),
   saveScenario: async (req: SaveScenarioRequest, opts: RequestOptions = {}): Promise<SavedScenario> =>
     normalizeSavedScenario(await request("POST", "/scenarios", { ...opts, body: req })),
   /** New draft version in the same lineage (the base row is never modified). */

@@ -19,6 +19,7 @@ from typing import Any, Literal
 from fastapi import APIRouter, Body, Depends, Query, Response
 from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy import update
+from sqlalchemy.dialects.sqlite import insert
 from sqlmodel import Session, col, select
 
 from ._contracts import (
@@ -29,7 +30,7 @@ from ._contracts import (
     ScenarioResult,
     TrialDesign,
 )
-from .db import DesignRow, ScenarioRow, get_session, utcnow_iso
+from .db import DesignRow, ScenarioDeletionRow, ScenarioRow, get_session, utcnow_iso
 from .deps import Identity, require_editor, services
 from .engine_adapter import METRICS
 from .errors import ApiError
@@ -328,7 +329,7 @@ def scenario_hash(row: ScenarioRow) -> str:
 
 def _get_row(session: Session, scenario_id: str) -> ScenarioRow:
     row = session.get(ScenarioRow, scenario_id)
-    if row is None:
+    if row is None or session.get(ScenarioDeletionRow, scenario_id) is not None:
         raise ApiError(404, "scenario_not_found", f"No saved scenario with id {scenario_id!r}.",
                        {"scenario_id": scenario_id})
     return row
@@ -597,7 +598,9 @@ def list_scenarios(
     session: Session = Depends(get_session),
     svc: Any = Depends(services),
 ) -> list[ScenarioSummary]:
-    q = select(ScenarioRow)
+    q = select(ScenarioRow).where(
+        ~col(ScenarioRow.id).in_(select(ScenarioDeletionRow.scenario_id))
+    )
     if design_id:
         q = q.where(ScenarioRow.design_id == design_id)
     if lineage_id:
@@ -633,10 +636,44 @@ def scenario_versions(
     row = _get_row(session, scenario_id)
     rows = list(session.exec(
         select(ScenarioRow).where(ScenarioRow.lineage_id == row.lineage_id)
+        .where(~col(ScenarioRow.id).in_(select(ScenarioDeletionRow.scenario_id)))
         .order_by(col(ScenarioRow.version))
     ).all())
     _sync_submitted(svc, session, rows)
     return [_summary(r) for r in rows]
+
+
+@router.delete("/{scenario_id}", status_code=204, response_class=Response)
+def delete_scenario(
+    scenario_id: str,
+    ident: Identity = Depends(require_editor),
+    session: Session = Depends(get_session),
+    svc: Any = Depends(services),
+) -> Response:
+    """Remove one version from active use, retaining its immutable record and approvals."""
+    row = session.get(ScenarioRow, scenario_id)
+    if row is None:
+        raise ApiError(404, "scenario_not_found", f"No saved scenario with id {scenario_id!r}.",
+                       {"scenario_id": scenario_id})
+    if ident.user != row.author and ident.role != "admin":
+        raise ApiError(403, "not_author", "Only the author or an admin can delete a scenario.",
+                       {"author": row.author})
+    if session.get(ScenarioDeletionRow, scenario_id) is not None:
+        return Response(status_code=204)
+    record_hash = row.record_hash
+    removed_at = utcnow_iso()
+
+    def write(s: Session) -> None:
+        # The primary key also makes simultaneous delete requests safe to retry.
+        s.execute(insert(ScenarioDeletionRow).values(
+            scenario_id=scenario_id, deleted_at=removed_at, deleted_by=ident.user
+        ).on_conflict_do_nothing(index_elements=["scenario_id"]))
+
+    svc.audited_write(
+        session, ident, "scenario.delete", "scenario", scenario_id, record_hash, record_hash,
+        write, reason="Removed from active scenarios; record and approval history retained.",
+    )
+    return Response(status_code=204)
 
 
 @router.patch("/{scenario_id}", response_model=ScenarioOut)

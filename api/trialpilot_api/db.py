@@ -5,6 +5,7 @@ Tables (JSON payloads are stored as canonical JSON text; timestamps as ISO 8601 
     schema_version   applied schema versions (simple `create_all` + version table "migrations")
     designs          TrialDesign JSON, one immutable row per (design_id, version)
     scenarios        saved scenarios, one row per version; immutable once submitted (triggers)
+    scenario_deletions  removal markers; scenario content and approvals remain available to audit
     params           parameter library rows, immutable per (id, version) (triggers)
     param_sets       parameter_set_version -> member (id, version) list, so old results stay explainable
     ops_events, alerts, interventions, effects   storage offered to A6 (see ops_repo.py)
@@ -85,6 +86,15 @@ class ScenarioRow(SQLModel, table=True):
     created_at: str
     submitted_at: str | None = None
     decided_at: str | None = None
+
+
+class ScenarioDeletionRow(SQLModel, table=True):
+    """A removed version stays intact for its lineage, exports, signatures and audit trail."""
+
+    __tablename__ = "scenario_deletions"
+    scenario_id: str = Field(primary_key=True)
+    deleted_at: str
+    deleted_by: str
 
 
 class ParamRow(SQLModel, table=True):
@@ -213,7 +223,7 @@ TRIGGERS = [
     BEFORE DELETE ON scenarios WHEN OLD.status <> 'draft'
     BEGIN SELECT RAISE(ABORT, 'scenario_immutable: submitted scenarios cannot be deleted'); END""",
 ]
-for _table in ("designs", "params", "param_sets", "audit_stub"):
+for _table in ("designs", "scenario_deletions", "params", "param_sets", "audit_stub"):
     TRIGGERS += [
         f"""CREATE TRIGGER IF NOT EXISTS {_table}_no_update BEFORE UPDATE ON {_table}
         BEGIN SELECT RAISE(ABORT, '{_table} rows are immutable: UPDATE is forbidden'); END""",

@@ -26,6 +26,7 @@ interface Store {
   designs: StoredDesign[];
   designHistory: StoredDesign[];
   scenarios: Row[];
+  deletedScenarioIds?: string[];
   approvals: ApprovalRequest[];
 }
 
@@ -33,6 +34,7 @@ const fresh = (): Store => ({
   designs: [{ design: structuredClone(MOCK_DESIGN), version: 1, hash: "mock-hash-1" }],
   designHistory: [],
   scenarios: [],
+  deletedScenarioIds: [],
   approvals: [],
 });
 
@@ -82,6 +84,7 @@ const on = (method: string, pattern: RegExp, h: Handler) => routes.push([method,
 const actor = (h: Headers) => ({ user: h.get("X-User") ?? "", role: h.get("X-Role") ?? "viewer" });
 const HEADLINE = ["cost_usd", "site_staff_hours", "patient_travel_hours", "co2e_kg", "duration_months", "drug_waste_share"] as const;
 const metricsOf = (r: ScenarioResultX) => Object.fromEntries(HEADLINE.map((k) => [k, r[k]]));
+const activeScenario = (s: Row) => !store.deletedScenarioIds?.includes(s.id);
 
 function approvalView(a: ApprovalRequest) {
   const next = a.status === "pending" ? (a.required_meanings.find((x) => !a.signatures.some((s) => s.meaning === x)) ?? null) : null;
@@ -267,8 +270,8 @@ on("POST", /^\/api\/scenarios\/drivers$/, async (_m, { body }) => {
 });
 on("POST", /^\/api\/scenarios\/compare$/, (_m, { body }) => {
   const { a_id, b_id } = body as { a_id: string; b_id: string };
-  const a = store.scenarios.find((s) => s.id === a_id);
-  const b = store.scenarios.find((s) => s.id === b_id);
+  const a = store.scenarios.find((s) => s.id === a_id && activeScenario(s));
+  const b = store.scenarios.find((s) => s.id === b_id && activeScenario(s));
   if (!a || !b) return err(404, "scenario_not_found", "No saved scenario with this id.");
   if (a.design_id !== b.design_id || a.design_version !== b.design_version) return err(422, "compare_needs_same_design", "Per-draw comparison needs both scenarios on the same trial design version.");
   // mock "per draw" deltas: P50 difference with a band — illustrative only
@@ -286,15 +289,28 @@ on("POST", /^\/api\/scenarios\/compare$/, (_m, { body }) => {
 
 on("GET", /^\/api\/scenarios$/, (_m, { url }) => {
   const designId = url.searchParams.get("design_id");
-  const rows = (designId ? store.scenarios.filter((s) => s.design_id === designId) : store.scenarios).slice().reverse();
+  const rows = store.scenarios.filter((s) => activeScenario(s) && (!designId || s.design_id === designId)).slice().reverse();
   return json(rows.map(summary));
 });
 on("GET", /^\/api\/scenarios\/([^/]+)\/drivers$/, (_m, { url }) =>
   json({ metric: url.searchParams.get("metric") ?? "co2e_kg", parameter_set_version: "mock-1", drivers: mockDrivers(url.searchParams.get("metric") ?? "co2e_kg"), warnings: [] }),
 );
 on("GET", /^\/api\/scenarios\/([^/]+)$/, (m) => {
-  const s = store.scenarios.find((x) => x.id === decodeURIComponent(m[1]));
+  const s = store.scenarios.find((x) => x.id === decodeURIComponent(m[1]) && activeScenario(x));
   return s ? json(full(s)) : err(404, "scenario_not_found", "No saved scenario with this id.");
+});
+on("DELETE", /^\/api\/scenarios\/([^/]+)$/, (m, { headers }) => {
+  const denied = requireEditor(headers);
+  if (denied) return denied;
+  const s = store.scenarios.find((x) => x.id === decodeURIComponent(m[1]));
+  if (!s) return err(404, "scenario_not_found", "No saved scenario with this id.");
+  const me = actor(headers);
+  if (me.user !== s.author && me.role !== "admin") return err(403, "not_author", "Only the author or an administrator can delete a scenario.");
+  if (activeScenario(s)) {
+    (store.deletedScenarioIds ??= []).push(s.id);
+    persist();
+  }
+  return new Response(null, { status: 204 });
 });
 
 function newRow(design: TrialDesign, name: string, levers: Levers, author: string, designVersion: number, lineage?: Row): Row {
@@ -335,7 +351,7 @@ on("POST", /^\/api\/scenarios$/, (_m, { body, headers }) => {
 on("POST", /^\/api\/scenarios\/([^/]+)\/versions$/, (m, { body, headers }) => {
   const denied = requireEditor(headers);
   if (denied) return denied;
-  const base = store.scenarios.find((x) => x.id === decodeURIComponent(m[1]));
+  const base = store.scenarios.find((x) => x.id === decodeURIComponent(m[1]) && activeScenario(x));
   if (!base) return err(404, "scenario_not_found", "No saved scenario with this id.");
   const patch = (body ?? {}) as { levers?: Levers; name?: string; design_version?: number };
   const d = designOr404(base.design_id, patch.design_version ?? base.design_version ?? undefined);
@@ -348,7 +364,7 @@ on("POST", /^\/api\/scenarios\/([^/]+)\/versions$/, (m, { body, headers }) => {
 on("POST", /^\/api\/scenarios\/([^/]+)\/submit$/, (m, { headers }) => {
   const denied = requireEditor(headers);
   if (denied) return denied;
-  const s = store.scenarios.find((x) => x.id === decodeURIComponent(m[1]));
+  const s = store.scenarios.find((x) => x.id === decodeURIComponent(m[1]) && activeScenario(x));
   if (!s) return err(404, "scenario_not_found", "No saved scenario with this id.");
   if (s.status !== "draft") return err(409, "already_submitted", `This scenario is already ${s.status}; it cannot be submitted again.`);
   if (actor(headers).user !== s.author) return err(403, "not_author", "Only the author can submit a scenario for approval.");

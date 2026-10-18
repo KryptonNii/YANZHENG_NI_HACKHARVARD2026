@@ -31,6 +31,25 @@ async function submittedApprovalId(): Promise<string> {
   return submitted.approval_id as string;
 }
 
+describe("mock scenario deletion", () => {
+  it("removes active access while preserving approval history and lineage numbering", async () => {
+    const base = await api.saveScenario({ design_id: MOCK_DESIGN.id, design_version: 1, name: "A", levers: DEFAULT_LEVERS });
+    const v2 = await api.newVersion(base.id, { name: "A2" });
+    const submitted = await api.submitScenario(v2.id);
+    const approvalId = submitted.approval_id as string;
+    const before = await api.getApproval(approvalId);
+    setIdentity("riley.reviewer");
+    await expect(api.deleteScenario(v2.id, { silent: true })).rejects.toMatchObject({ status: 403, code: "not_author" });
+    setIdentity("alex.author");
+    await api.deleteScenario(v2.id);
+    await api.deleteScenario(v2.id);
+    await expect(api.getScenario(v2.id, { silent: true })).rejects.toMatchObject({ status: 404 });
+    expect((await api.listScenarios()).map((s) => s.id)).toEqual([base.id]);
+    expect(await api.getApproval(approvalId)).toEqual(before);
+    expect((await api.newVersion(base.id, { name: "A3" })).version).toBe(3);
+  });
+});
+
 describe("mock approvals", () => {
   it("lets one person sign only one step of a request (duplicate_signer)", async () => {
     const id = await submittedApprovalId();

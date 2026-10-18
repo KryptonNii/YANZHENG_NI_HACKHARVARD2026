@@ -273,7 +273,7 @@ export function ScenarioPage() {
         </div>
       </div>
 
-      <div className="grid items-start gap-6 lg:grid-cols-[320px_minmax(0,1fr)]">
+      <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[320px_minmax(0,1fr)]">
         <div className="lg:sticky lg:top-[7.5rem] lg:max-h-[calc(100vh-8.5rem)] lg:overflow-y-auto">
           <LeversPanel design={design} levers={levers} onChange={setLevers} />
         </div>
@@ -354,8 +354,8 @@ export function ScenarioPage() {
             <SupplyPanel result={current} baseline={baseline} strategy={levers.drug_supply_strategy} onOpen={() => setDrawer({ kind: "waste" })} />
           </div>
 
-          <div className="grid items-start gap-5 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
-            <section className="card p-4" aria-labelledby="sites-title">
+          <div className="grid grid-cols-1 items-start gap-5 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
+            <section className="card min-w-0 p-4" aria-labelledby="sites-title">
               <h2 id="sites-title" className="card-title mb-2">{tr("Site network", "研究中心布局")}</h2>
               <SiteMap sites={design.sites} excluded={levers.excluded_site_ids} onToggle={toggleSite} height={300} />
             </section>
@@ -368,6 +368,7 @@ export function ScenarioPage() {
                 if (s.levers) setLevers(s.levers);
                 select(s.id);
               }}
+              onDelete={(id) => setScenarios((rows) => rows.filter((s) => s.id !== id))}
               onRefresh={refreshScenarios}
             />
           </div>
