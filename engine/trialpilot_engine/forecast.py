@@ -10,7 +10,10 @@ recruitment in multicentre trials", Stat Med 2007;26(27):4958–75, doi:10.1002/
 * cumulative intensity M(t) = Σᵢ λᵢ · (t − aᵢ)⁺ is piecewise linear, and by the time-change theorem
   the k-th randomisation happens at M⁻¹(Γₖ) with Γₖ ~ Gamma(k, 1). We invert M exactly, vectorised
   over draws × sites, so there is no time grid and no per-patient loop;
-* patients to randomise n = ⌈target / (1 − dropout)⌉; duration = last patient in + follow-up
+* patients to randomise n = enrollment target: a registry enrollment count is participants enrolled
+  (actual) or to be enrolled (anticipated), not completers, so dropout never adds patients. Dropouts
+  stop attending later visits, which shortens their dispensing in the supply model;
+* duration = last patient in + follow-up
   (last scheduled visit) + closeout (last patient last visit → database lock).
 
 Every number comes from the parameter library. An id missing from the library falls back to a
@@ -52,7 +55,7 @@ MILESTONES = ("first_patient_in", "last_patient_in", "last_patient_last_visit", 
 _MAX_CURVE_POINTS = 121
 _CURVE_DRAWS = 500  # the enrollment-curve bands use the first 500 draws (speed; stated in warnings)
 FULL_DRAWS = 2000  # the scenario standard (URS-009); any metric on fewer draws says so in its warnings
-_MAX_DROPOUT = 0.95  # guard: a dropout rate ≥ 1 would make the enrolment target infinite
+_MAX_DROPOUT = 0.95  # guard: a dropout rate ≥ 1 would leave nobody at the last visit
 
 
 class ForecastError(ValueError):
@@ -267,7 +270,7 @@ class ForecastResult:
     milestone_dates: dict[str, MetricRange]  # months from study start, keys = MILESTONES
     enrollment_curve: list[tuple[float, float, float, float]]  # (month, p10, p50, p90) cumulative
     # --- A3 extensions (additive; not part of the shared contract) ---
-    patients_to_randomise: MetricRange | None = None  # target inflated for dropout
+    patients_to_randomise: MetricRange | None = None  # = enrollment target (randomised)
     warnings: list[str] = field(default_factory=list)
     provenance: list[ProvenanceItem] = field(default_factory=list)
     levers: Levers = field(default_factory=Levers)
@@ -579,12 +582,15 @@ def _setup(
         )
     dropout = np.clip(draw_parameter(drop_p, seed, d) * (1.0 - dred), 0.0, _MAX_DROPOUT)
     target = design.enrollment_target
-    n_needed = np.ceil(target / (1.0 - dropout) - 1e-9).astype(np.int64)
+    # A registry enrollment count already counts every randomised participant, dropouts included,
+    # so it is the number to randomise. Dropout only shortens follow-up (see supply).
+    n_needed = np.full(d, target, dtype=np.int64)
     assumptions.append(
-        "Enrollment target treated as patients needed to complete; randomisations inflated by "
-        "1/(1 − dropout). Set patient.dropout_rate to 0 if the target already includes dropouts."
+        "Enrollment target treated as patients to randomise (registry enrollment counts enrolled "
+        "participants, not completers); dropout does not add patients. Dropouts stop attending "
+        "later visits."
     )
-    n_mid = math.ceil(target / (1.0 - min(drop_p.value_mid, _MAX_DROPOUT)) - 1e-9)
+    n_mid = target
 
     # Mean recruitment rate: explicit library value > rate implied by the registered plan > fallback.
     plan_rate: float | None = None
@@ -709,7 +715,7 @@ def _provenance(st: _Setup, extra_assumptions: Sequence[str] = ()) -> list[Prove
                 "Each open site randomises as a Poisson process with rate λᵢ ~ Gamma(shape α, "
                 "mean = rate × site weight), opening at aᵢ ~ Triangular(site.activation_months). "
                 "The n-th patient arrives at M⁻¹(Gamma(n, 1)), M(t) = Σ λᵢ·(t − aᵢ)⁺, with "
-                "n = ⌈target / (1 − dropout)⌉ (Anisimov & Fedorov 2007)."
+                "n = the enrollment target, patients randomised (Anisimov & Fedorov 2007)."
             ),
             inputs=dict(st.inputs),
             parameter_ids=enrol_ids,

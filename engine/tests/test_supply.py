@@ -80,6 +80,19 @@ def test_dispensed_kits_match_the_schedule() -> None:
     assert np.all(pd.kits_needed == 50 * 13)
 
 
+def test_dropout_only_shortens_dispensing() -> None:
+    # Same 50 randomised patients either way; dropouts stop collecting kits before the last visit.
+    d = design(n_sites=5, target=50)
+    kept = with_params(patient__dropout_rate=0.0, supply__kits_per_dispensing_visit=1.0)
+    lost = with_params(patient__dropout_rate=0.3, supply__kits_per_dispensing_visit=1.0)
+    fc_kept, fc_lost = forecast(d, Levers(), kept, draws=50), forecast(d, Levers(), lost, draws=50)
+    assert fc_lost.patients_to_randomise == fc_kept.patients_to_randomise
+    needed_kept = per(simulate_supply(d, ON_DEMAND, kept, fc_kept, draws=50)).kits_needed
+    needed_lost = per(simulate_supply(d, ON_DEMAND, lost, fc_lost, draws=50)).kits_needed
+    assert np.all(needed_kept == 50 * 13)
+    assert np.all(needed_lost <= needed_kept) and np.mean(needed_lost) < 50 * 13
+
+
 def test_kits_per_visit_scales_demand(base: tuple[TrialDesign, object]) -> None:
     d, fc = base
     one = per(simulate_supply(d, ON_DEMAND, {}, fc, draws=100))  # type: ignore[arg-type]

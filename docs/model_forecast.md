@@ -42,12 +42,18 @@ site-month, chosen in this order:
    (default 0.75 / 1.0 / 1.25, no optimism bias).
 3. **Otherwise the built-in rate** 0.1 / 0.5 / 1.5 patients per site-month, with a warning.
 
-Patients to randomise, so that the enrollment *target* is patients who finish:
+Patients to randomise equal the enrollment target. A ClinicalTrials.gov enrollment count is the
+number of participants enrolled (actual) or to be enrolled (anticipated), dropouts included, so
+dropout never adds patients: \(n = \text{target}\). Dropout only shortens follow-up. Each dropout stops
+attending visits early, which the supply model uses to stop dispensing:
 
 \[
-n = \left\lceil \frac{\text{target}}{1 - d} \right\rceil, \qquad
 d = \mathrm{clip}\big(\texttt{patient.dropout\_rate}\cdot(1 - u_{\text{drop}}),\, 0,\, 0.95\big)
 \]
+
+Until October 17, 2026 the forecast inflated the target to \(\lceil \text{target} / (1 - d) \rceil\),
+which counted dropouts twice for registry-imported trials (BOREAS: 1,058 randomised at P50 instead of
+the registered 939).
 
 \(u_{\text{drop}}\) is `lever.decentralised.dropout_reduction` times the share of on-study visits
 moved home or remote. The recruitment mean is multiplied by \(1 + u_{\text{rate}}\) the same way,
@@ -339,7 +345,7 @@ the signed record hash, and exports. No numerical sampling cap was changed.
 The timing measurements above are preserved historical observations; the final
 combined-commit cold HTTP measurements are recorded in handoffs/BACKEND_FINAL.md.
 
-- Screen failures are not separate from the dropout inflation.
+- Screen failures are not modelled: rates count randomisations only.
 - Sites have no enrollment caps and do not compete for patients.
 - Ranges are uncertainty about the average rates and policy parameters, plus the Poisson–gamma
   recruitment noise. They are not a between-patient residual on top of that.

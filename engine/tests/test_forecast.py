@@ -119,12 +119,15 @@ def test_quantiles_ordered_and_curve_monotone() -> None:
     assert p50 == sorted(p50) and p50[0] == 0 and p50[-1] == 500
 
 
-def test_dropout_inflates_patients_to_randomise() -> None:
+def test_dropout_never_adds_patients_to_randomise() -> None:
+    # A registry enrollment count already includes dropouts: 500 enrolled means 500 randomised.
     fc = forecast(design(), Levers(), params(patient__dropout_rate=p("patient.dropout_rate", 0.2)))
     assert fc.patients_to_randomise is not None
-    assert fc.patients_to_randomise.p50 == 625  # ⌈500 / (1 − 0.2)⌉
+    assert (fc.patients_to_randomise.p10, fc.patients_to_randomise.p50,
+            fc.patients_to_randomise.p90) == (500, 500, 500)
     base = forecast(design(), Levers(), params())
-    assert fc.months_to_full_enrollment.p50 > base.months_to_full_enrollment.p50
+    assert fc.months_to_full_enrollment == base.months_to_full_enrollment
+    assert fc.duration_months == base.duration_months
 
 
 def test_determinism_by_seed() -> None:
@@ -138,10 +141,12 @@ def test_determinism_by_seed() -> None:
 # ---------------------------------------------------------------- levers
 
 
+# "plan" and "fallback" use the built-in 15% dropout; they were re-recorded on 2026-10-17 when the
+# enrollment target stopped being inflated by 1/(1 - dropout). "library" has no dropout and is unchanged.
 @pytest.mark.parametrize(("source", "original_lock_p50"), [
     ("library", 34.983371497279855),
-    ("plan", 35.96140015060051),
-    ("fallback", 39.10079011584257),
+    ("plan", 35.90544723567917),
+    ("fallback", 36.534390853877),
 ])
 def test_default_design_levers_preserve_forecast(source: str, original_lock_p50: float) -> None:
     d = design(duration=0 if source == "fallback" else 36)
