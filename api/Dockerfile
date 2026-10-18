@@ -14,6 +14,8 @@ RUN corepack enable && corepack prepare pnpm@9.15.9 --activate
 COPY web/package.json web/pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile
 COPY web/ ./
+# The command center bundles two fixtures from outside web/ (src/features/command/lockStory.ts).
+COPY data/fixtures/ops/lock_recovery_evidence.json data/fixtures/ops/lock_recovery_story.json /src/data/fixtures/ops/
 # `vite build` only (the type check runs in CI, `pnpm build` = tsc -b && vite build).
 RUN pnpm exec vite build
 
