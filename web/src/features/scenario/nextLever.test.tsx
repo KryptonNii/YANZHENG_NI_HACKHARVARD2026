@@ -14,9 +14,10 @@ import { ScenarioPage } from "./ScenarioPage";
 const samplingNote = "Advice estimates use seed 7 and 200 draws with common random numbers; the formal scenario uses 2000 draws.";
 const samplingLine = "Ranking uses seed 7 and 200 draws. The formal scenario results use their own draw count (2,000), so they can differ.";
 const stressLabel = "Enrollment 30% slower than your current selection";
+const stressDisplay = "Enrollment −30%";
 const stressReason = "Pressure scenario under an assumed slower enrollment rate. It is an assumption, not a recommendation.";
 const removalNote = (code: string) =>
-  `Not clinical approval: removing ${code} still requires manual protocol review of safety, eligibility and treatment needs.`;
+  `Protocol review required: ${code}`;
 const range = (p50: number, unit: "usd" | "hours" | "months") => ({ p10: p50 - 2, p50, p90: p50 + 3, unit });
 const metrics = (cost: number, hours: number, months = 0) =>
   ({ cost_usd: range(cost, "usd"), site_staff_hours: range(hours, "hours"), duration_months: range(months, "months") });
@@ -112,6 +113,7 @@ describe("NextLever", () => {
     const preview = vi.fn();
     const fetcher = mockFetch(data);
     render(<NextLever {...props} currentLevers={current} onPreview={preview} />);
+    await userEvent.click(await screen.findByText(/^Protected procedures/));
     const blocked = await screen.findByRole("list", { name: "Blocked procedures" });
     expect(blocked).toHaveTextContent("primary_scan: Supports a primary endpoint");
     expect(blocked).toHaveTextContent("unknown_test: Endpoint linkage is unknown");
@@ -122,10 +124,11 @@ describe("NextLever", () => {
       "Remove ecg", "On-demand drug supply", "50% remote monitoring",
     ]);
     expect(items[0]).toHaveTextContent(removalNote("ecg"));
-    expect(items[0]).toHaveTextContent("Preview changes: remove procedure ecg.");
+    expect(items[0]).toHaveTextContent("remove procedure ecg");
     expect(items[1]).not.toHaveTextContent("Not clinical approval");
+    await userEvent.click(screen.getByText(/^Other options/));
     expect(screen.getByRole("list", { name: "Rejected changes" })).toHaveTextContent(removalNote("photo"));
-    await userEvent.click(within(items[0]).getByRole("button", { name: "Preview this change" }));
+    await userEvent.click(within(items[0]).getByRole("button", { name: "Preview" }));
     expect(preview).toHaveBeenCalledWith({ removed_procedures: ["diary", "ecg"] });
     const query = queryOf(fetcher.mock.calls[0][0]);
     expect(query.get("design_id")).toBe("design-1");
@@ -152,23 +155,24 @@ describe("NextLever", () => {
   it("shows slower enrollment only as an assumption stress test, without preview or saving wording", async () => {
     mockFetch();
     render(<NextLever {...props} onPreview={vi.fn()} />);
+    await userEvent.click(await screen.findByText("Stress test", { exact: true }));
     const stress = await screen.findByRole("list", { name: "Stress scenarios" });
-    expect(screen.getByRole("heading", { name: "Stress test (assumption)" })).toBeVisible();
+    expect(screen.getByText("Stress test", { exact: true })).toBeVisible();
     const item = within(stress).getByRole("listitem");
-    expect(within(item).getByRole("heading")).toHaveTextContent(stressLabel);
-    expect(within(item).getByText("assumption")).toBeVisible();
+    expect(within(item).getByRole("heading")).toHaveTextContent(stressDisplay);
+    expect(within(item).getByText("Planning parameter")).toBeVisible();
     expect(item).toHaveTextContent(stressReason);
-    expect(item).toHaveTextContent("Assumed enrollment rate: 70% of plan.");
-    const table = within(item).getByRole("table", { name: `${stressLabel}: changes from current scenario` });
+    expect(item).toHaveTextContent("Enrollment rate: 70% of plan");
+    const table = within(item).getByRole("table", { name: `${stressDisplay}: changes from current scenario` });
     const cost = within(table).getByRole("row", { name: /Cost \(USD\)/ });
     expect(within(cost).getAllByRole("cell").map((cell) => cell.textContent)).toEqual(["+1,498", "+1,500", "+1,503"]);
-    expect(item).toHaveTextContent("Modeled stockout probability: 4%.");
+    expect(item).toHaveTextContent("Forecast stockout risk: 4%");
     expect(within(item).queryByRole("button")).not.toBeInTheDocument();
     expect(item.textContent).not.toMatch(/sav(e|ing)|reduc/i);
     const ranked = screen.getByRole("list", { name: "Recommended levers" });
-    expect(ranked).not.toHaveTextContent(stressLabel);
+    expect(ranked).not.toHaveTextContent(stressDisplay);
     expect(ranked.contains(stress)).toBe(false);
-    expect(screen.getAllByRole("button", { name: "Preview this change" })).toHaveLength(3);
+    expect(screen.getAllByRole("button", { name: "Preview" })).toHaveLength(3);
   });
 
   it("shows an unestimated stress scenario as Not estimated rather than zero", async () => {
@@ -177,11 +181,12 @@ describe("NextLever", () => {
       reason: "The forecast has no database-lock date for this assumption, so its change is not estimated." };
     mockFetch(data);
     render(<NextLever {...props} />);
+    await userEvent.click(await screen.findByText("Stress test", { exact: true }));
     const item = within(await screen.findByRole("list", { name: "Stress scenarios" })).getByRole("listitem");
-    expect(item).toHaveTextContent("Changes from current scenario: Not estimated.");
-    expect(item).toHaveTextContent("Modeled stockout probability: Not estimated.");
+    expect(item).toHaveTextContent("Forecast unavailable");
+    expect(item).toHaveTextContent("Forecast stockout risk: Not estimated");
     expect(within(item).queryByRole("table")).not.toBeInTheDocument();
-    expect(within(item).getByText("assumption")).toBeVisible();
+    expect(within(item).getByText("Planning parameter")).toBeVisible();
   });
 
   it("describes added countries as assumptions, not registry sites", async () => {
@@ -190,16 +195,17 @@ describe("NextLever", () => {
     mockFetch(data);
     render(<NextLever {...props} />);
     const list = await screen.findByRole("list", { name: "Recommended levers" });
-    expect(list).toHaveTextContent("Preview changes: 2 assumed added countries (assumptions, not registry sites).");
+    expect(list).toHaveTextContent("2 planned added countries");
   });
 
   it("states the ranking baseline, seed and draws separately from the formal scenario draws", async () => {
     mockFetch();
     render(<NextLever {...props} />);
-    expect(await screen.findByText(samplingLine)).toBeVisible();
+    await userEvent.click(await screen.findByText("Method & constraints"));
+    expect(screen.getByText(samplingLine)).toBeVisible();
     expect(screen.getByText(samplingNote)).toBeVisible();
-    expect(screen.getByText(/Ranked relative to your current scenario \(the baseline\)/))
-      .toHaveTextContent("by median cost change, then site staff hours");
+    expect(screen.getByText(/One additional change per candidate/))
+      .toHaveTextContent("ranked by median cost change, then site staff hours");
   });
 
   it("names the formal scenario draw count from the response rather than a fixed 2,000", async () => {
@@ -207,7 +213,8 @@ describe("NextLever", () => {
     data.scenario_draws = 5000;
     mockFetch(data);
     render(<NextLever {...props} />);
-    expect(await screen.findByText(/own draw count \(5,000\), so they can differ/)).toBeVisible();
+    await userEvent.click(await screen.findByText("Method & constraints"));
+    expect(screen.getByText(/own draw count \(5,000\), so they can differ/)).toBeVisible();
     expect(screen.queryByText(/\(2,000\)/)).not.toBeInTheDocument();
   });
 
@@ -221,10 +228,10 @@ describe("NextLever", () => {
     ]);
     const cost = within(items[0]).getByRole("row", { name: /Cost \(USD\)/ });
     expect(within(cost).getAllByRole("cell").map((cell) => cell.textContent)).toEqual(["-2,002", "-2,000", "-1,997"]);
-    expect(items[0]).toHaveTextContent("Preview changes: on-demand drug supply.");
+    expect(items[0]).toHaveTextContent("on-demand drug supply");
     expect(items[0]).not.toHaveTextContent("drug_supply_strategy");
     expect(within(items[0]).getAllByRole("columnheader").map((cell) => cell.textContent)).toEqual([
-      "Metric change", "P10", "P50", "P90",
+      "Forecast change", "P10", "P50", "P90",
     ]);
   });
 
@@ -246,18 +253,19 @@ describe("NextLever", () => {
     const list = await screen.findByRole("list", { name: "Recommended levers" });
     expect(within(list).getAllByRole("listitem")).toHaveLength(1);
     expect(list).toHaveTextContent("Keep prior choices and add visit 4");
-    await userEvent.click(screen.getByRole("button", { name: "Preview this change" }));
+    await userEvent.click(screen.getByRole("button", { name: "Preview" }));
     expect(preview).toHaveBeenCalledWith({ home_visit_numbers: [1, 2, 4] });
   });
 
   it("explains sampling, model constraints and estimated stockout risk", async () => {
     mockFetch();
     render(<NextLever {...props} />);
-    expect(await screen.findByText(samplingLine)).toBeVisible();
+    await userEvent.click(await screen.findByText("Method & constraints"));
+    expect(screen.getByText(samplingLine)).toBeVisible();
     expect(screen.getByText(/Maximum duration P50 increase/)).toHaveTextContent("0 months");
     expect(screen.getByText(/Maximum duration P50 increase/)).toHaveTextContent("5%");
     expect(screen.getByText(/do not establish clinical safety/)).toBeVisible();
-    expect(screen.getAllByText("Modeled stockout probability: 2.5%.")).toHaveLength(3);
+    expect(screen.getAllByText("Forecast stockout risk: 2.5%")).toHaveLength(3);
     expect(screen.getByText(/negative values are reductions/)).toHaveTextContent("your current scenario");
   });
 
@@ -269,7 +277,7 @@ describe("NextLever", () => {
     render(<NextLever {...props} />);
     const table = await screen.findByRole("table", { name: "On-demand drug supply: changes from current scenario" });
     expect(within(table).getAllByText("Not estimated")).toHaveLength(3);
-    expect(screen.getByText("Modeled stockout probability: Not estimated.")).toBeVisible();
+    expect(screen.getByText("Forecast stockout risk: Not estimated")).toBeVisible();
   });
 
   it("shows why no change qualifies, including missing evidence, without a preview action", async () => {
@@ -286,13 +294,14 @@ describe("NextLever", () => {
     data.stress_scenarios = [];
     mockFetch(data);
     render(<NextLever {...props} onPreview={vi.fn()} />);
-    expect(await screen.findByText(/No recommendation meets the model constraints/)).toBeVisible();
+    expect(await screen.findByText("No eligible recommendations.")).toBeVisible();
+    await userEvent.click(screen.getByText(/^Other options/));
     expect(screen.getByRole("list", { name: "Rejected changes" })).toHaveTextContent("reviewed visit schedule is required");
     expect(screen.getByRole("list", { name: "Rejected changes" })).toHaveTextContent("No median cost improvement");
     expect(screen.getByRole("list", { name: "Rejected changes" })).toHaveTextContent("stockout probability exceeds");
     expect(screen.queryByRole("list", { name: "Recommended levers" })).not.toBeInTheDocument();
     expect(screen.queryByRole("list", { name: "Stress scenarios" })).not.toBeInTheDocument();
-    expect(screen.queryByRole("button", { name: "Preview this change" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Preview" })).not.toBeInTheDocument();
   });
 
   it("clears displayed advice immediately and debounces changes to the complete current levers", async () => {
@@ -348,7 +357,7 @@ describe("NextLever", () => {
     expect(queryOf(fetcher.mock.calls[1][0]).get("design_version")).toBe("2");
     view.rerender(<NextLever {...props} designVersion={3} />);
     expect(screen.queryByRole("list", { name: "Recommended levers" })).not.toBeInTheDocument();
-    expect(screen.getByRole("status")).toHaveTextContent("Comparing");
+    expect(screen.getByRole("status")).toHaveTextContent("Calculating");
   });
 
   it("accepts identical levers despite object-key and selection order differences", async () => {
@@ -378,7 +387,8 @@ describe("NextLever", () => {
     render(<NextLever {...props} />);
     expect(await screen.findByRole("alert")).toHaveTextContent("The comparison engine is unavailable.");
     await userEvent.click(screen.getByRole("button", { name: "Retry advice" }));
-    expect(await screen.findByText(samplingNote)).toBeVisible();
+    await userEvent.click(await screen.findByText("Method & constraints"));
+    expect(screen.getByText(samplingNote)).toBeVisible();
     expect(fetcher.mock.calls[0][0]).toBe(fetcher.mock.calls[1][0]);
   });
 
@@ -394,7 +404,7 @@ describe("NextLever", () => {
   it("does not fetch without a valid saved version", () => {
     const fetcher = mockFetch();
     render(<NextLever {...props} designVersion={0} />);
-    expect(screen.getByRole("alert")).toHaveTextContent("design_version_required");
+    expect(screen.getByRole("alert")).toHaveTextContent("Save a design version");
     expect(fetcher).not.toHaveBeenCalled();
   });
 
@@ -423,10 +433,10 @@ describe("NextLever", () => {
     fireEvent.change(screen.getByTestId("lever-local-labs"), { target: { value: "30" } });
     const procedure = screen.getByTestId("procedure-questionnaire");
     await userEvent.click(within(procedure).getByRole("checkbox"));
-    await screen.findByRole("button", { name: "Preview this change" });
+    await screen.findByRole("button", { name: "Preview" });
     const previous = compute.mock.calls.at(-1)![1];
     expect(previous).toMatchObject({ drug_supply_strategy: "on_demand", local_lab_share: 0.3, removed_procedures: ["questionnaire"] });
-    await userEvent.click(screen.getByRole("button", { name: "Preview this change" }));
+    await userEvent.click(screen.getByRole("button", { name: "Preview" }));
     await waitFor(() => expect(compute.mock.calls.at(-1)![1]).toEqual({ ...previous, remote_monitoring_share: 0.5 }));
     expect(screen.getByRole("radio", { name: "On-demand resupply" })).toHaveAttribute("aria-checked", "true");
     expect(screen.getByTestId("lever-local-labs")).toHaveValue("30");

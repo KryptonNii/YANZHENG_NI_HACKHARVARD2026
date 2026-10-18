@@ -24,6 +24,39 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
+describe("live source refresh", () => {
+  it.each([undefined, false, true])("refreshes registry data only when requested (%s)", async (refresh) => {
+    const fetchSpy = vi.spyOn(window, "fetch").mockImplementation(async () => jsonResponse({ design: MOCK_DESIGN }));
+    await api.importCtgov("NCT01234567", { refresh, silent: true });
+    expect(fetchSpy.mock.calls[0][0]).toBe(`/api/import/ctgov/NCT01234567${refresh ? "?refresh=true" : ""}`);
+    expect(fetchSpy.mock.calls[0][1]?.method).toBe("POST");
+  });
+
+  it.each([undefined, false, true])("passes protocol refresh in the form only when requested (%s)", async (refresh) => {
+    const fetchSpy = vi.spyOn(window, "fetch").mockImplementation(async () => jsonResponse({ candidates: [] }));
+    await api.importProtocol({ nctId: "NCT01234567", refresh }, "design-1", { silent: true });
+    const [url, init] = fetchSpy.mock.calls[0] as [string, RequestInit];
+    expect(url).toBe("/api/import/protocol");
+    expect(init.body).toBeInstanceOf(FormData);
+    const form = init.body as FormData;
+    expect(form.get("nct_id")).toBe("NCT01234567");
+    expect(form.get("design_id")).toBe("design-1");
+    expect(form.get("refresh")).toBe(refresh ? "true" : null);
+  });
+
+  it("refreshes an uploaded protocol without replacing the file or setting a multipart boundary", async () => {
+    const fetchSpy = vi.spyOn(window, "fetch").mockImplementation(async () => jsonResponse({ candidates: [] }));
+    const file = new File(["protocol"], "trial.pdf", { type: "application/pdf" });
+    await api.importProtocol({ file, refresh: true });
+    const init = fetchSpy.mock.calls[0][1] as RequestInit;
+    const form = init.body as FormData;
+    expect(form.get("file")).toBe(file);
+    expect(form.get("nct_id")).toBeNull();
+    expect(form.get("refresh")).toBe("true");
+    expect((init.headers as Record<string, string>)["Content-Type"]).toBeUndefined();
+  });
+});
+
 describe("errors the client raises itself", () => {
   it("toasts a protocol apply reply without a design once, and not for silent calls", async () => {
     vi.spyOn(window, "fetch").mockImplementation(async () => jsonResponse({ applied_by: "x" }));

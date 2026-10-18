@@ -5,7 +5,7 @@
 #   docker build -f api/Dockerfile -t trialpilot .         (the ignore file is api/Dockerfile.dockerignore)
 #   docker run --rm -p 127.0.0.1:8000:8000 -v tp-data:/data trialpilot
 #
-# Runs offline by default (DEMO_OFFLINE=1: cached fixtures only). SQLite lives in /data (volume).
+# Runs live by default; DEMO_OFFLINE=1 explicitly selects cached fixtures. SQLite lives in /data.
 
 # ---------------------------------------------------------------- 1. web (React + Vite) build
 FROM node:20-bookworm-slim AS web
@@ -48,7 +48,7 @@ USER tp
 
 ENV TP_REPO_ROOT=/app \
     TP_DATA_DIR=/data \
-    DEMO_OFFLINE=1 \
+    DEMO_OFFLINE=0 \
     TP_LOG_JSON=1 \
     PATH="/app/api/.venv/bin:${PATH}"
 VOLUME ["/data"]

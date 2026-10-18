@@ -10,7 +10,7 @@ export function DeltaText({ current, baseline, testId }: { current: MetricRange;
   if (!isKnownRange(current) || !isKnownRange(baseline)) {
     return (
       <span data-testid={testId} className="text-sm font-medium text-ink-500">
-        {t("Change unknown (a value is missing)", "变化未知（缺少数值）")}
+        {t("Change unavailable", "暂无变化数据")}
       </span>
     );
   }
@@ -18,7 +18,7 @@ export function DeltaText({ current, baseline, testId }: { current: MetricRange;
   if (d.direction === "same") {
     return (
       <span data-testid={testId} className="inline-flex items-center gap-1 text-sm font-semibold text-ink-500">
-        <span aria-hidden>●</span> {t("No change vs baseline", "与基线相比无变化")}
+        <span aria-hidden>●</span> {t("No change vs baseline", "较基线无变化")}
       </span>
     );
   }
@@ -31,7 +31,7 @@ export function DeltaText({ current, baseline, testId }: { current: MetricRange;
       <span aria-hidden>{better ? "▼" : "▲"}</span>
       <span>{formatSignedPct(d.pct)}</span>
       <span className="font-medium">
-        ({formatSignedValue(d.abs, current.unit)}) {better ? t("lower", "降低") : t("higher", "升高")} {t("than baseline", "（相对于基线）")}
+        ({formatSignedValue(d.abs, current.unit)}) {better ? t("lower", "降低") : t("higher", "升高")}
       </span>
     </span>
   );
@@ -103,13 +103,13 @@ export function MetricCard({
             {baseline ? <DeltaText current={current} baseline={baseline} testId={`metric-${def.key}-delta`} /> : <Skeleton className="h-4 w-40" />}
           </div>
           <button type="button" onClick={onOpen} className="link mt-auto self-start pt-1 text-xs">
-            {t("How is this calculated?", "如何计算？")}
+            {t("Calculation details", "测算明细")}
           </button>
         </>
       ) : current && !known ? (
         <button type="button" onClick={onOpen} className="num-button -mx-1 mt-1 px-1 text-left" data-testid={`metric-${def.key}-value`}>
           <span className="block text-metric text-ink-500">{t("Unknown", "未知")}</span>
-          <span className="mt-1 block text-sm text-ink-600">{t("An input this metric needs is missing, so it is reported as unknown — not zero. See the warnings.", "缺少此指标所需的输入，因此结果标记为未知，而非零。请查看警告。")}</span>
+          <span className="mt-1 block text-sm text-ink-600">{t("Input required", "待补充输入")}</span>
         </button>
       ) : (
         <div className="mt-2 space-y-2" aria-busy="true">

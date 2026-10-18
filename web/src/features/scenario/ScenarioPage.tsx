@@ -83,18 +83,17 @@ function SaveDialog({ open, onClose, onSave, saving, ready, defaultName, base }:
             <label className="flex items-start gap-2 text-sm">
               <input type="radio" name={`${id}-mode`} className="mt-0.5 accent-accent-700" checked={mode === "version"} onChange={() => setMode("version")} />
               <span>{tr("New version of ", "新版本：")}<strong>{localizeCopy(base.name)}</strong> (v{base.version} → v{base.version + 1})
-                <span className="block text-xs text-ink-500">v{base.version}{tr(" stays unchanged", "保持不变")}{base.status !== "draft" ? tr(` — it is ${base.status} and immutable`, ` — 当前状态为${humanize(base.status)}，不可修改`) : ""}.</span>
               </span>
             </label>
             <label className="flex items-start gap-2 text-sm">
               <input type="radio" name={`${id}-mode`} className="mt-0.5 accent-accent-700" checked={mode === "new"} onChange={() => setMode("new")} data-testid="save-mode-new" />
-              <span>{tr("A new, separate scenario", "独立的新方案")}</span>
+              <span>{tr("New scenario", "新方案")}</span>
             </label>
           </fieldset>
         )}
         <label htmlFor={id} className="label">{tr("Name", "名称")}</label>
         <input id={id} className="input mt-1" value={name} onChange={(e) => setName(e.target.value)} maxLength={200} data-testid="save-name" />
-        <p className="mt-2 text-xs text-ink-500">{tr("Saved with the current levers, the computed result and the parameter-set version, against the design version on this page, as a draft you can submit for approval.", "将当前调整选项、计算结果和参数集版本连同本页设计版本保存为草稿，随后可提交审批。")}</p>
+        <p className="mt-2 text-xs text-ink-500">{tr("Save current settings and forecast as a draft.", "将当前参数与测算结果保存为草稿。")}</p>
       </form>
     </Modal>
   );
@@ -103,9 +102,10 @@ function SaveDialog({ open, onClose, onSave, saving, ready, defaultName, base }:
 function TrialHeader({ design, version }: { design: TrialDesign; version: number | null }) {
   const tr = useTranslation();
   const countries = new Set(design.sites.map((s) => s.country)).size;
+  const shortTitle = /^([A-Z][A-Z0-9-]{2,24})\s*:/.exec(design.title)?.[1] ?? design.title;
   return (
     <div className="min-w-0">
-      <p className="text-xs font-semibold uppercase tracking-wide text-ink-500">{tr("Scenario simulator", "方案模拟器")}{design.registry_id && (
+      <p className="text-xs font-semibold uppercase tracking-wide text-ink-500">{tr("Scenario analysis", "方案分析")}{design.registry_id && (
           <>
             {" · "}
             {design.registry_id.startsWith("NCT") ? (
@@ -119,7 +119,7 @@ function TrialHeader({ design, version }: { design: TrialDesign; version: number
         )}
       </p>
       <h1 className="mt-0.5 truncate text-2xl font-bold tracking-tight text-ink-900" title={design.title}>
-        {design.title}
+        {shortTitle}
       </h1>
       <div className="mt-1.5 flex flex-wrap gap-1.5 text-xs">
         {design.phase && <Badge>{design.phase}</Badge>}
@@ -280,9 +280,9 @@ export function ScenarioPage() {
 
         <div className="min-w-0 space-y-5">
           <div className="flex flex-wrap items-center gap-2 text-sm" aria-live="polite">
-            <span className="font-semibold text-ink-700">{tr("Current vs baseline:", "当前方案与基线：")}</span>
+            <span className="font-semibold text-ink-700">{tr("Impact forecast · vs baseline", "影响测算 · 相对基线")}</span>
             {leverSummary.length === 0 ? (
-              <span className="text-ink-500">{tr("baseline design (no levers changed)", "基线设计（尚未调整选项）")}</span>
+              <span className="text-ink-500">{tr("Baseline", "基线方案")}</span>
             ) : (
               leverSummary.map((t) => (
                 <Badge key={t} tone="accent">
@@ -329,14 +329,14 @@ export function ScenarioPage() {
           {(warnings.length > 0 || design.missing_fields.length > 0) && (
             <details className="rounded-xl border border-caution-200 bg-caution-50/70 px-4 py-2.5 text-sm" data-testid="assumption-notes">
               <summary className="cursor-pointer font-semibold text-caution-900">
-                {design.missing_fields.length > 0 && tr(`${design.missing_fields.length} missing input${design.missing_fields.length > 1 ? "s" : ""} filled with labelled assumptions`, `${design.missing_fields.length} 项缺失输入使用已标注的假设填补`)}
+                {design.missing_fields.length > 0 && tr(`${design.missing_fields.length} inputs to confirm`, `${design.missing_fields.length} 项输入待确认`)}
                 {design.missing_fields.length > 0 && warnings.length > 0 && " · "}
-                {warnings.length > 0 && tr(`${warnings.length} engine warning${warnings.length > 1 ? "s" : ""}`, `${warnings.length} 条引擎警告`)}
+                {warnings.length > 0 && tr(`${warnings.length} calculation notes`, `${warnings.length} 项测算提示`)}
               </summary>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-caution-900">
                 {design.missing_fields.map((f) => (
                   <li key={`m-${f}`}>
-                    <strong>{humanize(f)}</strong>{tr(": not available from the source; an assumption is used.", "：来源中未提供，使用假设值。")}{" "}
+                    <strong>{humanize(f)}</strong>{tr(": planning value; source confirmation required.", "：使用规划值，待来源确认。")}{" "}
                     <Link className="link" to={`/?design=${encodeURIComponent(design.id)}#missing`}>{tr("Review", "查看")}</Link>
                   </li>
                 ))}
@@ -356,7 +356,7 @@ export function ScenarioPage() {
 
           <div className="grid items-start gap-5 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
             <section className="card p-4" aria-labelledby="sites-title">
-              <h2 id="sites-title" className="card-title mb-2">{tr("Sites — click a dot to exclude or include it", "研究中心 — 点击圆点排除或纳入")}</h2>
+              <h2 id="sites-title" className="card-title mb-2">{tr("Site network", "研究中心布局")}</h2>
               <SiteMap sites={design.sites} excluded={levers.excluded_site_ids} onToggle={toggleSite} height={300} />
             </section>
             <VersionsPanel

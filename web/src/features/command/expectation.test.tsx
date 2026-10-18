@@ -85,7 +85,7 @@ describe("action options in the plan dialog", () => {
     await user.click(screen.getByRole("button", { name: /plan intervention/i }));
 
     const table = await screen.findByTestId("action-options");
-    expect(within(table).getByText(/a prediction, not an observed result/i)).toBeInTheDocument();
+    expect(within(table).getByText(/Model forecast · ranked by net value/i)).toBeInTheDocument();
     expect(within(table).getByTestId("option-baseline")).toHaveTextContent(/do nothing/i);
     const first = within(table).getByTestId("option-supply_on_demand");
     expect(first).toHaveTextContent("#1");

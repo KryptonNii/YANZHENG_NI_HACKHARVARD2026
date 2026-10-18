@@ -182,7 +182,7 @@ function ModuleTable({ rows }: { rows: ScienceModuleRow[] }) {
           {m.explanation && (
             <tr>
               <td colSpan={3} className="pb-2 text-xs leading-snug text-ink-600">
-                {localizeCopy(m.explanation)}
+                <details><summary className="cursor-pointer">{tr("Basis", "依据")}</summary><p className="mt-1">{localizeCopy(m.explanation)}</p></details>
               </td>
             </tr>
           )}
@@ -222,7 +222,7 @@ function TotalStrip({ row }: { row: ScienceModuleRow }) {
         </div>
       </dl>
       {inside && <p className="mt-2 text-sm text-ink-700">{inside}</p>}
-      {row.explanation && <p className="mt-2 text-sm text-ink-700">{localizeCopy(row.explanation)}</p>}
+      {row.explanation && <details className="mt-2 text-sm text-ink-700"><summary className="cursor-pointer">{tr("Basis", "依据")}</summary><p className="mt-1">{localizeCopy(row.explanation)}</p></details>}
     </div>
   );
 }
@@ -292,11 +292,10 @@ function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: s
       </div>
 
       {trial.summary.length > 0 && (
-        <div className="mt-3 space-y-2 text-sm leading-relaxed text-ink-800">
-          {trial.summary.map((s) => (
-            <p key={s}>{localizeCopy(s)}</p>
-          ))}
-        </div>
+        <details className="mt-3 text-sm text-ink-600">
+          <summary className="cursor-pointer">{tr("Study summary", "研究概况")}</summary>
+          <div className="mt-2 space-y-2">{trial.summary.map((s) => <p key={s}>{localizeCopy(s)}</p>)}</div>
+        </details>
       )}
 
       {trial.checks.length > 1 && (
@@ -318,7 +317,7 @@ function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: s
       {check && (
         <div className="mt-3" data-testid="science-check">
           <h3 className="text-sm font-semibold text-ink-900">{localizeCopy(check.title)}</h3>
-          {check.description && <p className="mt-1 text-sm text-ink-600">{localizeCopy(check.description)}</p>}
+          {check.description && <details className="mt-1 text-sm text-ink-600"><summary className="cursor-pointer">{tr("Method", "计算方法")}</summary><p className="mt-1">{localizeCopy(check.description)}</p></details>}
           {!check.available ? (
             <p className="mt-3 text-sm text-ink-700" role="status">{tr("This check is unavailable. ", "此项检验不可用。")}{check.unavailable_reason ? localizeCopy(check.unavailable_reason) : tr("The reproduction did not produce it.", "复现过程未生成此结果。")}
             </p>
@@ -331,11 +330,10 @@ function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: s
                 </div>
               )}
               {check.notes.length > 0 && (
-                <ul className="mt-3 list-disc space-y-1 pl-5 text-xs text-ink-600">
-                  {check.notes.map((n) => (
-                    <li key={n}>{localizeCopy(n)}</li>
-                  ))}
-                </ul>
+                <details className="mt-3 text-xs text-ink-600">
+                  <summary className="cursor-pointer">{tr("Calculation notes", "计算说明")}</summary>
+                  <ul className="mt-2 list-disc space-y-1 pl-5">{check.notes.map((n) => <li key={n}>{localizeCopy(n)}</li>)}</ul>
+                </details>
               )}
               {check.line_changes.length > 0 && (
                 <details className="mt-3">
@@ -368,7 +366,7 @@ function TrialResultCard({ trial, paperUrl }: { trial: ScienceTrial; paperUrl: s
 
       {assumptions.length > 0 && (
         <details className="mt-4">
-          <summary className="cursor-pointer text-sm font-semibold text-ink-800">{tr("Assumptions used to rebuild the trial (", "重建试验使用的假设（")}{assumptions.length})
+          <summary className="cursor-pointer text-sm font-semibold text-ink-800">{tr("Design inputs to confirm (", "待确认设计参数（")}{assumptions.length})
           </summary>
           <ul className="mt-2 space-y-1 text-xs text-ink-600">
             {assumptions.map((a) => (
@@ -407,12 +405,16 @@ function IndustryBand({ band }: { band: ScienceIndustryBand }) {
         {band.low_t !== null && band.high_t !== null
           ? `${formatTonnes(band.low_t)} – ${formatTonnes(band.high_t)} CO₂e`
           : tr("Band not reported", "未报告区间")}
-        {band.trials_t.length > 0 ? tr(` (published trials ${band.trials_t.map((t) => formatTonnes(t)).join(", ")})`, `（已发表试验 ${band.trials_t.map((t) => formatTonnes(t)).join("、")}）`) : ""}{tr(". Sanity check only — a different method, and it includes drug manufacture.", "。仅用于合理性检验：其方法不同，且包含药物制造。")}</p>
-      {band.note && <p className="mt-2 text-sm text-ink-600">{localizeCopy(band.note)}</p>}
+        {band.trials_t.length > 0 ? tr(` (published trials ${band.trials_t.map((t) => formatTonnes(t)).join(", ")})`, `（已发表试验 ${band.trials_t.map((t) => formatTonnes(t)).join("、")}）`) : ""}</p>
+      <details className="mt-2 text-xs text-ink-500">
+        <summary className="cursor-pointer">{tr("Comparison basis", "比较口径")}</summary>
+        <p className="mt-1">{tr("Reference band uses a different method and includes drug manufacture.", "参考区间采用不同方法，包含药物制造。")}</p>
+        {band.note && <p className="mt-1">{localizeCopy(band.note)}</p>}
       {fileUnits.length > 0 && (
-        <p className="mt-2 text-xs text-ink-500" data-testid="science-band-unit">{tr("Demo trial totals are shown in tonnes. The results file labels them ", "演示试验的总量以吨显示。结果文件中的单位标注为")}{fileUnits.join(", ")}{tr(". These numbers are not rescaled.", "。数值未进行换算。")}{fileUnits.includes("kg_co2e") ? tr(" The file still says kg_co2e; the figures are displayed as stored.", " 文件仍标注为 kg_co2e；此处按存储值显示。") : ""}
+        <p className="mt-2" data-testid="science-band-unit">{tr("Displayed unit: t · source unit: ", "显示单位：吨 · 源单位：")}{fileUnits.join(", ")}{fileUnits.includes("kg_co2e") ? tr(" · unit conflict; stored figures unchanged", " · 单位冲突，按原数值展示") : ""}
         </p>
       )}
+      </details>
       {band.demo_trials.length > 0 && (
         <table className="mt-4 w-full text-sm">
           <caption className="sr-only">{tr("Demo trials against the industry carbon band", "演示试验与行业碳排放区间比较")}</caption>
@@ -478,26 +480,29 @@ export function SciencePage() {
     <div className="space-y-5">
       <div className="max-w-3xl">
         <h1 className="text-2xl font-bold tracking-tight text-ink-900">{tr("Science check", "科学验证")}</h1>
-        <p className="mt-1 text-sm text-ink-600">{tr("Can our engine reproduce published trial carbon footprints? We rerun two trials measured with the Low Carbon Clinical Trials Group method (CASPS and PRIMETIME,", "我们的引擎能否复现已发表的试验碳足迹？我们使用低碳临床试验小组的方法重新计算两个试验（CASPS 和 PRIMETIME，")}{" "}
+        <p className="mt-1 text-sm text-ink-600">{tr("CASPS and PRIMETIME carbon estimates against published results · ", "CASPS 与 PRIMETIME 碳排放估算对照 · ")}
           <a className="link" href={paperUrl} target="_blank" rel="noreferrer">
             BMJ Open 2024
-          </a>{tr(") and report the gaps honestly — parameters are not tuned to hit the published number.", "），如实报告差异，不为匹配发表值而调整参数。")}</p>
-        <p className="mt-2 text-xs text-ink-500">{tr("Match means within ", "“一致”表示差异在")}{matchPct}{tr("%. Close means within ", "% 以内；“接近”表示差异在")}{closePct}{tr("%. Anything larger is a gap, and each gap has an explanation. Drug supply is a TrialPilot extension and is not in the published total.", "% 以内；更大的差异均标为“偏差”并提供解释。药物供应是 TrialPilot 扩展项，不计入论文发表的总量。")}</p>
+          </a></p>
+        <p className="mt-2 text-xs text-ink-500">{tr("Match ≤ ", "一致 ≤ ")}{matchPct}{tr("% · close ≤ ", "% · 接近 ≤ ")}{closePct}{tr("% · gap above this", "% · 其余为偏差")}</p>
         <div className="mt-2 flex flex-wrap items-center gap-2">
-          {data?.simulated ? <SimulatedBadge /> : data?.data_label ? <Badge tone="neutral">{tr("Published data — not simulated", "已发表数据，非模拟数据")}</Badge> : null}
+          {data?.simulated ? <SimulatedBadge /> : data?.data_label ? <Badge tone="neutral">{tr("Published data", "已发表数据")}</Badge> : null}
           {data?.engine && (
             <Badge tone={data.engine.available ? "better" : "caution"}>
               {data.engine.available ? tr("Engine check available", "引擎检验可用") : tr("Engine check unavailable", "引擎检验不可用")}
             </Badge>
           )}
         </div>
-        {data?.data_label && !data.simulated && <p className="mt-2 text-xs text-ink-500">{localizeCopy(data.data_label)}</p>}
         {(data?.parameter_set_version || data?.draws) && (
-          <p className="mt-1 text-xs text-ink-500">
+          <details className="mt-2 text-xs text-ink-500">
+            <summary className="cursor-pointer">{tr("Run details", "运行详情")}</summary>
+            <p className="mt-1">{tr("Drug supply excluded from published total.", "药物供应不计入论文总量。")}</p>
+            <p className="mt-1">
             {data.parameter_set_version ? tr(`Parameter set ${data.parameter_set_version}`, `参数集 ${data.parameter_set_version}`) : ""}
             {data.seed !== null && data.draws !== null ? tr(` · seed ${data.seed}, ${data.draws.toLocaleString("en-US")} draws`, ` · 随机种子 ${data.seed}，${data.draws.toLocaleString("en-US")} 次抽样`) : ""}
             {data.how_to_reproduce ? tr(` · reproduce with ${data.how_to_reproduce}`, ` · 复现命令 ${data.how_to_reproduce}`) : ""}
-          </p>
+            </p>
+          </details>
         )}
       </div>
       {loading ? (
@@ -506,9 +511,7 @@ export function SciencePage() {
           <Skeleton className="h-96" />
         </div>
       ) : notReady ? (
-        <EmptyState title={tr("Reproduction results are not available yet", "复现结果暂不可用")}>{tr("The science module writes ", "科学模块写入")}<code className="font-mono">science/out/results.json</code>{tr(" (run", "（运行")}{" "}
-          <code className="font-mono">python -m science.reproduce</code>{tr("); the API serves it at ", "）；API 通过以下端点提供结果：")}<code className="font-mono">/api/science/results</code>.
-        </EmptyState>
+        <EmptyState title={tr("Validation results unavailable", "验证结果暂不可用")} />
       ) : error ? (
         <ErrorPanel title={tr("Could not load the science results", "无法加载科学验证结果")} message={error.message} onRetry={() => setReload((r) => r + 1)} />
       ) : data && data.trials.length > 0 ? (

@@ -24,9 +24,9 @@ function ParamTable({ params }: { params: Parameter[] }) {
       <div className="mb-3 flex flex-wrap items-center gap-3">
         <input type="search" className="input max-w-sm" placeholder={tr("Search parameters or sources", "搜索参数或来源")} aria-label={tr("Search parameters", "搜索参数")} value={q} onChange={(e) => setQ(e.target.value)} />
         <label className="flex items-center gap-2 text-sm text-ink-700">
-          <input type="checkbox" className="h-4 w-4 accent-accent-700" checked={onlyAssumptions} onChange={(e) => setOnlyAssumptions(e.target.checked)} />{tr("Only assumptions", "仅显示假设")}</label>
+          <input type="checkbox" className="h-4 w-4 accent-accent-700" checked={onlyAssumptions} onChange={(e) => setOnlyAssumptions(e.target.checked)} />{tr("To confirm", "待确认")}</label>
         <span className="text-sm text-ink-500">
-          {params.length}{tr(" parameters · ", "个参数 ·")}{params.length - assumed}{tr(" sourced · ", "个有来源 ·")}{assumed}{tr(" labelled assumptions", "个已标注假设")}</span>
+          {params.length}{tr(" parameters · ", " 个参数 · ")}{params.length - assumed}{tr(" sourced · ", " 个有来源 · ")}{assumed}{tr(" to confirm", " 个待确认")}</span>
       </div>
       <div className="overflow-x-auto rounded-lg border border-ink-200">
         <table className="w-full text-sm" data-testid="param-table">
@@ -80,26 +80,25 @@ export function AboutPage() {
     <div className="space-y-6">
       <div className="max-w-3xl">
         <h1 className="text-2xl font-bold tracking-tight text-ink-900">{tr("Method & sources", "方法与来源")}</h1>
-        <p className="mt-2 text-ink-700">{tr("TrialPilot estimates what a clinical-trial design costs in money, site staff time, patient travel time, calendar time and carbon — and how those change when you move design levers. It is a planning aid, not a budget: every number is a range with its working shown.", "TrialPilot 估算临床试验设计所需的资金、研究中心人力、患者出行时间、日历时间和碳排放，并展示调整设计后的变化。它用于辅助规划而非制定预算：每个数值均以区间呈现，并附计算过程。")}</p>
+        <p className="mt-2 text-ink-700">{tr("Planning estimates for cost, workload, patient travel, timeline and carbon.", "成本、工作量、患者出行、周期与碳排放的规划估算。")}</p>
       </div>
 
       <div className="grid gap-5 lg:grid-cols-3">
         <section className="card p-5">
           <h2 className="card-title">{tr("Activity × factor", "活动量 × 因子")}</h2>
-          <p className="mt-2 text-sm text-ink-700">{tr("Each trial-specific activity (visits, monitoring trips, sample shipments, kits) is counted from the design, then multiplied by cost, staff-minute and emission factors from the parameter library. Carbon follows the Low Carbon Clinical Trials Group 10-module framework (", "根据设计统计各项试验活动（访视、监查差旅、样本运输、试剂盒），再乘以参数库中的成本、人力分钟数和排放因子。碳排放遵循低碳临床试验小组的十模块框架（")}<a className="link" href={PAPER_URL} target="_blank" rel="noreferrer">Griffiths, Fox, Williamson, BMJ Open 2024</a>).
+          <p className="mt-2 text-sm text-ink-700">{tr("Design activities × cost, staff-time and emission factors. Carbon method: ", "设计活动量 × 成本、工时及排放因子。碳排放方法：")}<a className="link" href={PAPER_URL} target="_blank" rel="noreferrer">BMJ Open 2024</a>.
           </p>
         </section>
         <section className="card p-5">
-          <h2 className="card-title">{tr("Uncertainty", "不确定性")}</h2>
-          <p className="mt-2 text-sm text-ink-700">{tr("Every parameter has a low, mid and high value. The engine samples each from a triangular distribution (2,000 seeded Monte Carlo draws) and reports P10, P50 and P90. The provenance drawer ranks the five parameters that drive most of the variance.", "每个参数均有低、中、高三个值。引擎从三角分布中抽样（使用固定随机种子进行 2,000 次蒙特卡洛抽样），并报告 P10、P50 和 P90。来源详情面板列出对方差贡献最大的五个参数。")}</p>
+          <h2 className="card-title">{tr("Estimate ranges", "估算区间")}</h2>
+          <p className="mt-2 text-sm text-ink-700">{tr("2,000 Monte Carlo draws from triangular parameter ranges. Results: P10 / P50 / P90.", "参数采用三角分布，进行 2,000 次蒙特卡洛抽样。结果以 P10 / P50 / P90 呈现。")}</p>
         </section>
         <section className="card p-5">
-          <h2 className="card-title">{tr("Honesty rules", "透明性原则")}</h2>
+          <h2 className="card-title">{tr("Data controls", "数据管理")}</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-ink-700">
-            <li>{tr("Every parameter has a source (URL and year) or is labelled an assumption with a rationale.", "每个参数都注明来源（链接和年份），或标注为假设并说明依据。")}</li>
-            <li>{tr("Missing inputs are reported as missing and filled with labelled assumptions, never silently zeroed.", "缺失输入会明确标注，并使用已标注的假设值填补，不会默认为零。")}</li>
-            <li>{tr("Simulated operational data is labelled “Simulated feed”.", "模拟运营数据标注为“模拟数据”。")}</li>
-            <li>{tr("AI-extracted protocol data is a draft until a person accepts it.", "AI 提取的试验方案数据在人工接受前均为草稿。")}</li>
+            <li>{tr("Sources and parameter rationale are recorded.", "记录参数来源与依据。")}</li>
+            <li>{tr("Missing values require confirmation.", "缺失值标为待确认。")}</li>
+            <li>{tr("Protocol extraction requires review.", "方案提取结果须审核。")}</li>
           </ul>
         </section>
       </div>

@@ -15,9 +15,9 @@ describe("database-lock recovery replay", () => {
   it("shows the slip, then actionable interventions, then two judgments matching withheld ground truth", async () => {
     const user = userEvent.setup();
     render(<LockRecoveryStory />);
-    const sequence = within(screen.getByRole("list", { name: "Demo sequence" })).getAllByRole("listitem");
+    const sequence = within(screen.getByRole("list", { name: "Replay steps" })).getAllByRole("listitem");
     expect(sequence.map((item) => item.textContent)).toEqual([
-      "1.See lock slip beyond the plan band", "2.Run the two interventions", "3.Compare the two judgments",
+      "1.Lock risk", "2.Interventions", "3.Effect review",
     ]);
     expect(sequence[0]).toHaveAttribute("aria-current", "step");
     expect(screen.getByTestId("story-lock-forecast")).toHaveTextContent(lockDate(answer.slipped_p50));
@@ -26,7 +26,7 @@ describe("database-lock recovery replay", () => {
     expect(screen.queryByTestId("story-verdict")).not.toBeInTheDocument();
     expect(screen.getByTestId("story-forecast-note")).toHaveTextContent("scenario assumptions");
 
-    await user.click(screen.getByRole("button", { name: "Review two interventions" }));
+    await user.click(screen.getByRole("button", { name: "Review interventions" }));
     expect(sequence[1]).toHaveAttribute("aria-current", "step");
     expect(screen.getByRole("button", { name: "Read follow-up evidence" })).toBeDisabled();
     for (const action of lockStory.actions) {
@@ -60,7 +60,7 @@ describe("database-lock recovery replay", () => {
   it("does not recover lock when only the coincidental SMS intervention is executed", async () => {
     const user = userEvent.setup();
     render(<LockRecoveryStory />);
-    await user.click(screen.getByRole("button", { name: "Review two interventions" }));
+    await user.click(screen.getByRole("button", { name: "Review interventions" }));
     await user.click(screen.getByRole("button", { name: "Run SMS programme" }));
     await user.click(screen.getByRole("button", { name: "Read follow-up evidence" }));
     const sms = screen.getByTestId(`story-intervention-${answer.coincidence_intervention_id}`);
@@ -81,16 +81,16 @@ describe("database-lock recovery replay", () => {
   it("recovers with training alone after evidence, and resets without leaking judgments", async () => {
     const user = userEvent.setup();
     render(<LockRecoveryStory />);
-    await user.click(screen.getByRole("button", { name: "Review two interventions" }));
+    await user.click(screen.getByRole("button", { name: "Review interventions" }));
     await user.click(screen.getByRole("button", { name: "Run eCRF training" }));
     expect(screen.getByTestId("story-lock-forecast")).toHaveTextContent(lockDate(answer.slipped_p50));
     await user.click(screen.getByRole("button", { name: "Read follow-up evidence" }));
     expect(screen.getByTestId("story-lock-forecast")).toHaveTextContent(lockDate(answer.recovered_p50));
-    await user.click(screen.getByRole("button", { name: "Replay from the start" }));
+    await user.click(screen.getByRole("button", { name: "Reset" }));
     expect(screen.getByTestId("story-lock-forecast")).toHaveTextContent(lockDate(answer.slipped_p50));
     expect(screen.queryByTestId("story-verdict")).not.toBeInTheDocument();
     expect(screen.queryByTestId("story-comparison")).not.toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Review two interventions" }));
+    await user.click(screen.getByRole("button", { name: "Review interventions" }));
     expect(screen.getByRole("button", { name: "Run eCRF training" })).toBeEnabled();
     expect(screen.getByRole("button", { name: "Read follow-up evidence" })).toBeDisabled();
   });
@@ -149,7 +149,7 @@ describe("database-lock recovery replay", () => {
     training.follow_up = training.early;
     try {
       render(<LockRecoveryStory />);
-      await user.click(screen.getByRole("button", { name: "Review two interventions" }));
+      await user.click(screen.getByRole("button", { name: "Review interventions" }));
       await user.click(screen.getByRole("button", { name: "Run eCRF training" }));
       await user.click(screen.getByRole("button", { name: "Read follow-up evidence" }));
       expect(screen.getByTestId("story-verdict")).toHaveTextContent("Inconclusive");

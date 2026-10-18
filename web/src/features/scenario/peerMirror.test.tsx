@@ -62,15 +62,16 @@ describe("PeerMirror", () => {
     const row = await screen.findByTestId("peer-primary_outcomes");
     expect(fetcher).toHaveBeenCalledWith("/api/designs/saved-design/peers?version=1", expect.objectContaining({ method: "GET" }));
     expect(within(row).getAllByRole("cell")[0]).toHaveTextContent("1");
-    expect(row).toHaveTextContent("insufficient_peers · no percentile");
-    expect(within(row).getByRole("cell", { name: "2 of 2 cached peers" })).toBeInTheDocument();
-    expect(within(row).getByText(data.rows[0].question).closest("details")).toBeNull();
+    expect(row).toHaveTextContent("Insufficient sample");
+    expect(within(row).getByRole("cell", { name: "2 / 2" })).toBeInTheDocument();
+    expect(within(row).queryByText(data.rows[0].question)).not.toBeInTheDocument();
+    await userEvent.click(within(row).getByText("Source & method"));
     expect(row).toHaveTextContent("cohort_n: 2; available_n: 2; phase: PHASE3; condition_group: copd");
     expect(row).toHaveTextContent("NCT03930732.json");
     expect(row).toHaveTextContent("NCT04456673.json, NCT04535986.json");
-    expect(screen.queryByText(/Within-cache percentile/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Percentile/)).not.toBeInTheDocument();
     expect(screen.getByText(/splitlines\(\)/)).toBeInTheDocument();
-    expect(screen.getByText(/Reported enrollment: 939 \(ACTUAL\)/)).toHaveTextContent("planned target is not reported");
+    expect(screen.getByText("Actual enrollment: 939")).toBeInTheDocument();
   });
 
   it("shows a neutral percentile only for a sufficient cohort", async () => {
@@ -79,10 +80,11 @@ describe("PeerMirror", () => {
     Object.assign(data.rows[0], { cohort_n: 5, available_n: 5, status: "ok", percentile: 50 });
     mockFetch(data);
     render(<PeerMirror designId="saved-design" designVersion={1} />);
-    expect(await screen.findByText("Within-cache percentile: 50")).toBeInTheDocument();
-    expect(screen.getByText("Same as cached peer median")).toBeInTheDocument();
+    expect(await screen.findByText("Percentile 50")).toBeInTheDocument();
+    expect(screen.getByText("Same as median")).toBeInTheDocument();
     expect(screen.getByTestId("peer-mirror").textContent).not.toMatch(/sponsor ranking|leaderboard|best sponsor|worst sponsor|better percentile|worse percentile/i);
-    expect(screen.getByText(/What might explain these differences\?/)).toHaveTextContent("Complexity can have scientific reasons");
+    await userEvent.click(screen.getByText("Source & methodology"));
+    expect(screen.getByText(/Descriptive benchmark/)).toHaveTextContent("complexity can have scientific reasons");
   });
 
   it.each([
@@ -96,8 +98,8 @@ describe("PeerMirror", () => {
     mockFetch(data);
     render(<PeerMirror designId="saved-design" designVersion={1} />);
     const row = await screen.findByTestId("peer-primary_outcomes");
-    expect(row).toHaveTextContent("insufficient_peers · no percentile");
-    expect(screen.queryByText(/Within-cache percentile/)).not.toBeInTheDocument();
+    expect(row).toHaveTextContent("Insufficient sample");
+    expect(screen.queryByText(/Percentile/)).not.toBeInTheDocument();
   });
 
   it("preserves a calculated zero percentile and zero P50 differences", async () => {
@@ -106,7 +108,7 @@ describe("PeerMirror", () => {
     Object.assign(data.rows[0], { cohort_n: 5, available_n: 5, status: "ok", percentile: 0 });
     mockFetch(data);
     render(<PeerMirror designId="saved-design" designVersion={1} />);
-    expect(await screen.findByText("Within-cache percentile: 0")).toBeInTheDocument();
+    expect(await screen.findByText("Percentile 0")).toBeInTheDocument();
     expect(screen.getByTestId("cost_usd-p50-difference")).toHaveTextContent(/^0$/);
     expect(screen.getByTestId("site_staff_hours-p50-difference")).toHaveTextContent(/^0$/);
   });
@@ -130,7 +132,8 @@ describe("PeerMirror", () => {
       expect.objectContaining({ method: "GET" }),
     ));
     await waitFor(() => expect(screen.getByTestId("cost_usd-delta")).toHaveTextContent("-32"));
-    expect(screen.getByRole("heading", { name: "What are the estimated P50 changes in cost and site staff time?" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Procedure impact forecast" })).toBeInTheDocument();
+    await userEvent.click(screen.getByText("Forecast detail"));
     expect(screen.getByTestId("cost_usd-p50-difference")).toHaveTextContent(/^-32$/);
     expect(screen.getByTestId("site_staff_hours-p50-difference")).toHaveTextContent(/^-5$/);
     for (const [testId, values] of [
@@ -168,6 +171,7 @@ describe("PeerMirror", () => {
     mockFetch(data);
     render(<PeerMirror designId="saved-design" designVersion={1} />);
     await screen.findByTestId("peer-costs");
+    await userEvent.click(screen.getByText("Forecast detail"));
     expect(screen.getByTestId("cost_usd-p50-difference")).toHaveTextContent("Not calculated");
     expect(screen.getByTestId("site_staff_hours-p50-difference")).toHaveTextContent("Not calculated");
     expect(within(screen.getByTestId("cost_usd-delta")).getAllByRole("cell")[1]).toHaveTextContent("Not calculated");
@@ -239,7 +243,7 @@ describe("PeerMirror", () => {
   it("does not fetch or retain results for an invalid version", () => {
     const fetcher = mockFetch();
     render(<PeerMirror designId="saved-design" designVersion={0} />);
-    expect(screen.getByRole("alert")).toHaveTextContent("design_version_required");
+    expect(screen.getByRole("alert")).toHaveTextContent("Save a design version");
     expect(fetcher).not.toHaveBeenCalled();
   });
 });

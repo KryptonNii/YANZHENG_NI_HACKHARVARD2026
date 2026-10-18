@@ -83,7 +83,7 @@ function AssumptionList({ assumptions }: { assumptions: string[] }) {
       </ul>
       {unique.length > 3 && (
         <button type="button" className="link mt-1 text-xs" onClick={() => setOpen((o) => !o)} aria-expanded={open}>
-          {open ? t("Show fewer assumptions", "收起假设") : t(`Show all ${unique.length} assumptions`, `显示全部 ${unique.length} 项假设`)}
+          {open ? t("Collapse", "收起") : t(`All ${unique.length} planning inputs`, `全部 ${unique.length} 项规划输入`)}
         </button>
       )}
     </div>
@@ -96,7 +96,7 @@ function ParameterRow({ id, param }: { id: string; param: Parameter | undefined 
     return (
       <li className="rounded-lg border border-caution-300 bg-caution-50 p-3 text-sm" data-testid="provenance-param">
         <code className="font-mono text-xs">{id}</code>
-        <p className="mt-1 text-caution-900">{t("Not found in the parameter library — reported as missing, not zero.", "参数库中未找到 — 标记为缺失，而非零。")}</p>
+        <p className="mt-1 text-caution-900">{t("Parameter missing", "参数待补充")}</p>
       </li>
     );
   }
@@ -253,7 +253,7 @@ export function ProvenanceDrawer({
     <Drawer
       open={target !== null && view !== null}
       onClose={onClose}
-      title={view ? t(`How we calculate: ${view.title}`, `计算方式：${target?.kind === "metric" ? metricLabel(target.key) : view.title}`) : ""}
+      title={view ? t(`Calculation: ${view.title}`, `测算明细：${target?.kind === "metric" ? metricLabel(target.key) : view.title}`) : ""}
       subtitle={
         view?.range ? (
           <span className="tabular">
@@ -273,10 +273,10 @@ export function ProvenanceDrawer({
           <section>
             <h3 className="card-title mb-2">{t("Formula", "公式")}{t(view.items.length === 1 ? "" : "s", "")}</h3>
             {!view.matched && view.items.length > 0 && (
-              <p className="mb-2 text-xs text-ink-500">{t("No formula is tagged specifically for this metric; showing every formula in this result.", "没有专门标注用于此指标的公式；现显示此结果中的全部公式。")}</p>
+              <p className="mb-2 text-xs text-ink-500">{t("No metric-specific formula; all result formulas shown.", "暂无指标专属公式，展示全部结果公式。")}</p>
             )}
             {view.items.length === 0 ? (
-              <p className="text-sm text-ink-500">{t("The API returned no provenance for this number.", "API 未返回此数值的计算来源。")}</p>
+              <p className="text-sm text-ink-500">{t("Calculation source unavailable", "暂无计算来源")}</p>
             ) : (
               <ul className="space-y-2">
                 {view.items.map((it, i) => (
@@ -301,7 +301,7 @@ export function ProvenanceDrawer({
 
           {view.metric && (
             <section>
-              <h3 className="card-title mb-2">{t("What drives the uncertainty", "不确定性的主要来源")}</h3>
+              <h3 className="card-title mb-2">{t("Sensitivity drivers", "敏感性因素")}</h3>
               {drivers && drivers.length > 0 ? (
                 <Drivers drivers={drivers} library={library} />
               ) : driversState === "loading" ? (
@@ -316,7 +316,7 @@ export function ProvenanceDrawer({
 
           {result.warnings.length > 0 && (
             <section>
-              <h3 className="card-title mb-2">{t("Warnings & filled-in assumptions", "警告与补全假设")}</h3>
+              <h3 className="card-title mb-2">{t("Items to confirm", "待确认事项")}</h3>
               <ul className="list-disc space-y-1 pl-5 text-sm text-ink-700">
                 {result.warnings.map((w) => (
                   <li key={w}>{w}</li>

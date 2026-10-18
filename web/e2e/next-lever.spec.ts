@@ -46,7 +46,7 @@ test("cached BOREAS: reviewed evidence, constrained advice and current-scenario 
   await page.getByTestId("extract-registry").click();
   const review = page.getByTestId("protocol-review");
   await expect(review).toBeVisible({ timeout: 60_000 });
-  await review.getByRole("button", { name: "Accept all remaining" }).click();
+  await review.getByRole("button", { name: "Accept remaining" }).click();
   await page.getByTestId("apply-extraction").click();
   await expect(review).toBeHidden({ timeout: 60_000 });
   const baselineResponse = page.waitForResponse((r) => r.url().endsWith("/api/scenarios/compute") && r.ok());
@@ -64,10 +64,10 @@ test("cached BOREAS: reviewed evidence, constrained advice and current-scenario 
   const design = await designResponse.json() as TrialDesign;
   expect(design.registry_id).toBe("NCT03930732");
 
-  const nextLever = page.getByRole("region", { name: "Which lever could reduce cost next?" });
+  const nextLever = page.getByRole("region", { name: "Optimization recommendations" });
   await expect(nextLever).toBeVisible();
   expect(await page.getByTestId("peer-mirror").evaluate((node) =>
-    node.nextElementSibling?.querySelector("h2")?.textContent)).toBe("Which lever could reduce cost next?");
+    node.nextElementSibling?.querySelector("h2")?.textContent)).toBe("Optimization recommendations");
   const top = advice.recommendations[0];
   const blockedCodes = new Set(advice.blocked.map((item) => item.code));
   const rolesByCode = new Map<string, Set<string>>();
@@ -105,7 +105,7 @@ test("cached BOREAS: reviewed evidence, constrained advice and current-scenario 
     expect(stress.tag).toBe("assumption");
     expect(recommendedIds.has(stress.id)).toBe(false);
   }
-  if (advice.stress_scenarios.length) await expect(nextLever).toContainText("Stress test (assumption)");
+  if (advice.stress_scenarios.length) await expect(nextLever).toContainText("Stress test");
   if (top) await expect(nextLever.getByRole("list", { name: "Recommended levers" })
     .getByRole("listitem").first().getByRole("heading")).toHaveText(top.label);
 
@@ -114,7 +114,7 @@ test("cached BOREAS: reviewed evidence, constrained advice and current-scenario 
   await expect(lock).toContainText(formatMonths(baselineLock));
   const notes = page.getByTestId("assumption-notes");
   await notes.locator("summary").click();
-  const missingNotes = await notes.getByRole("listitem").filter({ hasText: "not available from the source" }).allTextContents();
+  const missingNotes = await notes.getByRole("listitem").filter({ hasText: "planning value; source confirmation required" }).allTextContents();
   expect(missingNotes.length).toBeGreaterThan(0);
 
   const slowerResponse = page.waitForResponse((r) => r.url().endsWith("/api/scenarios/compute") && r.ok()
@@ -126,7 +126,7 @@ test("cached BOREAS: reviewed evidence, constrained advice and current-scenario 
   await expect(lock).toContainText(formatMonths(slowerLock));
   await expect(page.getByTestId("lever-enrollment-rate")).toHaveValue("70");
   for (const note of missingNotes) await expect(notes).toContainText(note);
-  await expect(nextLever.getByText("Comparing existing levers…", { exact: true })).toBeHidden();
+  await expect(nextLever.getByText("Calculating recommendations…", { exact: true })).toBeHidden();
   await info.attach("70-percent-enrollment", { body: await page.screenshot({ fullPage: true }), contentType: "image/png" });
 
   const countryResponse = page.waitForResponse((r) => r.url().endsWith("/api/scenarios/compute") && r.ok()
@@ -146,7 +146,7 @@ test("cached BOREAS: reviewed evidence, constrained advice and current-scenario 
   const currentAdvice = await (await currentAdviceResponse).json() as Advice;
   expect(currentAdvice.current_levers.added_country_count).toBe(1);
   expect(currentAdvice.current_levers.enrollment_rate_multiplier).toBe(0.7);
-  await expect(nextLever.getByText("Comparing existing levers…", { exact: true })).toBeHidden();
+  await expect(nextLever.getByText("Calculating recommendations…", { exact: true })).toBeHidden();
   await info.attach("current-scenario-advice", { body: await nextLever.screenshot(), contentType: "image/png" });
   const currentTop = currentAdvice.recommendations[0];
   if (currentTop) {
@@ -154,7 +154,7 @@ test("cached BOREAS: reviewed evidence, constrained advice and current-scenario 
       && Object.entries(currentTop.levers).every(([key, value]) =>
         JSON.stringify(r.request().postDataJSON().levers[key]) === JSON.stringify(value)));
     await nextLever.getByRole("list", { name: "Recommended levers" }).getByRole("listitem").first()
-      .getByRole("button", { name: "Preview this change" }).click();
+      .getByRole("button", { name: "Preview" }).click();
     const preview = await (await computedPreview).json() as ScenarioResultX;
     expect(preview.levers.enrollment_rate_multiplier).toBe(0.7);
     if (!("added_country_count" in currentTop.levers)) expect(preview.levers.added_country_count).toBe(1);
@@ -163,7 +163,7 @@ test("cached BOREAS: reviewed evidence, constrained advice and current-scenario 
     expect(currentAdvice.rejected.length).toBeGreaterThan(0);
     await expect(nextLever).toContainText(currentAdvice.rejected[0].reason);
   }
-  await expect(nextLever.getByText("Comparing existing levers…", { exact: true })).toBeHidden();
+  await expect(nextLever.getByText("Calculating recommendations…", { exact: true })).toBeHidden();
   await info.attach("assumed-country-and-advice", { body: await page.screenshot({ fullPage: true }), contentType: "image/png" });
   const evidence = {
     registry_id: design.registry_id, design_id: designId, design_version: advice.design_version,

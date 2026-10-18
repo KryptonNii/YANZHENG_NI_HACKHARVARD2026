@@ -239,7 +239,7 @@ describe("validation package", () => {
 
   it("shows the draft stamp and flags an untested requirement", async () => {
     render(<ValidationPage />);
-    expect((await screen.findAllByText("DRAFT — requires human review")).length).toBeGreaterThan(0);
+    expect((await screen.findAllByText("Pending review")).length).toBeGreaterThan(0);
     expect(screen.getByTestId("untested-requirements")).toHaveTextContent("URS-003");
     expect(screen.getByTestId("trace-URS-003")).toHaveTextContent("no test");
     expect(screen.getByTestId("defect-summary")).toHaveTextContent("Detected 4 of 6");
@@ -271,7 +271,7 @@ describe("validation package", () => {
     vi.stubGlobal("fetch", vi.fn(async (input: RequestInfo | URL) => String(input).endsWith("evidence_manifest.json") ? json({ files: [{ path: "browser/attachments/trace.zip", sha256: "abc", bytes: 42 }] }) : json(pkg)));
     render(<ValidationPage />);
     expect(await screen.findByTestId("execution-summary")).toHaveTextContent("failed 3");
-    expect(screen.getByText(/Historical experiment/)).toBeInTheDocument();
+    expect(screen.getByText(/Historical run/)).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Download Validation plan Markdown" })).toHaveAttribute("href", "/api/validation/package/files/plan.md");
     await userEvent.click(screen.getByText(/Evidence files and attachments/));
     expect(await screen.findByRole("link", { name: "browser/attachments/trace.zip" })).toHaveAttribute("href", "/api/validation/package/files/evidence/RUN-1/browser/attachments/trace.zip");

@@ -23,10 +23,10 @@ afterEach(() => {
 });
 
 describe("demo identity switcher", () => {
-  it("is labelled as demo identities and sends X-User / X-Role on every request", async () => {
+  it("labels the role selector and sends X-User / X-Role on every request", async () => {
     const fetchSpy = vi.spyOn(window, "fetch").mockResolvedValue(jsonResponse({ ok: true }));
     render(<IdentitySwitcher />);
-    expect(screen.getByLabelText(/demo\s*identities/i)).toBeInTheDocument();
+    expect(screen.getByLabelText("Role")).toBeInTheDocument();
 
     await userEvent.selectOptions(screen.getByTestId("identity-switcher"), "sam.qa");
     expect(getIdentity().user).toBe("sam.qa");

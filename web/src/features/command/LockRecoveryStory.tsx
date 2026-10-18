@@ -1,7 +1,7 @@
 import { displayText } from "./displayText";
 import { useTranslation } from "@/app/i18n";
 import { useReducer } from "react";
-import { Badge } from "@/app/ui";
+import { Badge, SimulatedBadge } from "@/app/ui";
 import {
   daysBetween, initialReplay, lockDate, lockEvidence, lockStory,
   replayEffect, replayForecast, replayReducer, type ReplayEffect,
@@ -21,16 +21,15 @@ export function LockRecoveryStory() {
     <section className="card overflow-hidden" aria-labelledby="lock-story-title" data-testid="lock-recovery-story" data-simulated={lockStory.simulated}>
       <header className="flex flex-wrap items-start justify-between gap-3 border-b border-ink-200 bg-ink-50 p-4">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-accent-700">{t("Guided simulated replay ·", "引导式模拟演示 ·")} {lockEvidence.site_count} {t("sites · seed", "个中心 · 随机种子")} {lockEvidence.seed}</p>
+          <div className="flex items-center gap-2 text-xs font-semibold text-accent-700">{t("Scenario replay", "情景回放")}<SimulatedBadge /></div>
           <h2 id="lock-story-title" className="mt-1 text-xl font-semibold text-ink-900">{displayText(lockStory.title)}</h2>
-          <p className="mt-1 max-w-3xl text-sm text-ink-600">{t("A slipping lock date. Two actions. Check which improvement holds up against controls.", "锁库日期正在推迟。实施两项行动，并对照比较哪项改善经得起验证。")}</p>
         </div>
-        {state.stage !== "risk" && <button type="button" className="btn-secondary" onClick={() => dispatch({ type: "reset" })}>{t("Replay from the start", "从头重新演示")}</button>}
+        {state.stage !== "risk" && <button type="button" className="btn-secondary" onClick={() => dispatch({ type: "reset" })}>{t("Reset", "重置")}</button>}
       </header>
 
       <div className="space-y-4 p-4">
-        <ol className="grid gap-2 text-sm sm:grid-cols-3" aria-label={t("Demo sequence", "演示步骤")}>
-          {[t("See lock slip beyond the plan band", "查看锁库日期超出计划范围"), t("Run the two interventions", "实施两项干预"), t("Compare the two judgments", "比较两项效果判断")].map((label, index) => (
+        <ol className="grid gap-2 text-sm sm:grid-cols-3" aria-label={t("Replay steps", "回放步骤")}>
+          {[t("Lock risk", "锁库风险"), t("Interventions", "干预措施"), t("Effect review", "效果评估")].map((label, index) => (
             <li key={label} aria-current={step === index ? "step" : undefined} className={`rounded-lg border px-3 py-2 ${step === index ? "border-accent-300 bg-accent-50 font-semibold text-accent-900" : "border-ink-200 text-ink-600"}`}>
               <span className="mr-2 tabular">{index + 1}.</span>{label}
             </li>
@@ -56,19 +55,21 @@ export function LockRecoveryStory() {
           <div className="space-y-3 text-sm leading-relaxed text-ink-700">
             <h3 className="font-semibold text-ink-900">{t("Why lock is slipping", "锁库推迟的原因")}</h3>
             <p>{displayText(lockStory.risk)}</p>
-            <p className="rounded-lg bg-ink-50 p-3 text-xs" data-testid="story-forecast-note">{displayText(lockStory.forecast_note)}</p>
-            <p className="text-xs text-ink-500">{t("Replay actions reveal recorded evidence at the original intervention dates. This rehearsal has its own steps; it does not advance the operations feed clock.", "演示行动会展示原始干预日期记录的证据。本次演练使用独立步骤，不会推进运营数据流时钟。")}</p>
+            <details className="text-xs text-ink-500">
+              <summary className="cursor-pointer font-semibold">{t("Forecast basis", "预测依据")}</summary>
+              <p className="mt-2" data-testid="story-forecast-note">{displayText(lockStory.forecast_note)}</p>
+              <p className="mt-2">{lockEvidence.site_count} {t("sites · seed", "个中心 · 随机种子")} {lockEvidence.seed}</p>
+            </details>
           </div>
         </div>
 
         {state.stage === "risk" ? (
-          <button type="button" className="btn-primary" onClick={() => dispatch({ type: "review" })}>{t("Review two interventions", "查看两项干预")}</button>
+          <button type="button" className="btn-primary" onClick={() => dispatch({ type: "review" })}>{t("Review interventions", "查看干预")}</button>
         ) : (
           <section aria-labelledby="story-actions-title">
             <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
               <div>
-                <h3 id="story-actions-title" className="font-semibold text-ink-900">{complete ? t("Two improvements, different judgments", "两项改善，不同判断") : t("Choose an action, then inspect follow-up", "选择行动，然后查看随访结果")}</h3>
-                <p className="mt-1 text-xs text-ink-600">{t("A falling metric alone is not enough. Compare treated sites with matched controls.", "仅凭指标下降不足以判断效果。请比较干预中心与匹配对照中心。")}</p>
+                <h3 id="story-actions-title" className="font-semibold text-ink-900">{complete ? t("Effect review", "效果评估") : t("Interventions", "干预措施")}</h3>
               </div>
               <button type="button" className="btn-primary" disabled={!pending} onClick={() => dispatch({ type: "observe" })}>{t("Read follow-up evidence", "查看随访证据")}</button>
             </div>
@@ -88,7 +89,6 @@ export function LockRecoveryStory() {
                     </div>
                     <p className="mt-2 text-xs text-ink-600">{t("Owner:", "负责人：")} {displayText(action.owner)} · {item.intervention.target_site_ids.length} {t("target sites", "个目标中心")}</p>
                     <p className="mt-2 text-sm text-ink-800">{displayText(action.task)}</p>
-                    <p className="mt-2 text-xs text-ink-600">{displayText(action.hypothesis)}</p>
                     {!started && <button type="button" className="btn-secondary mt-3" onClick={() => dispatch({ type: "start", id: action.id })}>{displayText(action.button_label)}</button>}
                     {effect && <ReplayJudgment effect={effect} />}
                     {observed && supportedResult && <p className="mt-3 text-sm text-ink-800">{displayText(action.result)}</p>}
@@ -96,7 +96,7 @@ export function LockRecoveryStory() {
                 );
               })}
             </div>
-            {complete && recovered && <p role="status" className="mt-3 rounded-lg bg-accent-50 p-3 text-sm text-accent-900">{t("Under this scenario's cleaning assumption, the evidence for eCRF training supports bringing lock back into range. Check each judgment against its controls before assigning credit.", "根据此情景的数据清理假设，eCRF 培训证据支持将锁库日期恢复到计划范围。归因之前，请对照相应对照组验证每项判断。")}</p>}
+            {complete && recovered && <p role="status" className="mt-3 rounded-lg bg-accent-50 p-3 text-sm text-accent-900">{t("Scenario forecast: lock is back within plan.", "情景预测：锁库已恢复至计划范围。")}</p>}
           </section>
         )}
       </div>

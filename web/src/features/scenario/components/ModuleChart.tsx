@@ -70,7 +70,7 @@ export function ModuleChart({
     <section className="card p-4" aria-labelledby="module-chart-title" data-testid="module-chart">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
         <h2 id="module-chart-title" className="card-title">
-          {t("Breakdown by module (P50)", "按模块细分（P50）")}
+          {t("Module breakdown · P50", "模块构成 · P50")}
         </h2>
         <Segmented
           label={t("Breakdown basis", "细分依据")}

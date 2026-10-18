@@ -67,7 +67,6 @@ export function AuditPage() {
       <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">{t("Audit trail", "审计记录")}</h1>
-          <p className="mt-1 text-sm text-ink-500">{t("Append-only hash chain. Every row is the record of one change.", "仅允许追加的哈希链。每一行记录一次更改。")}</p>
         </div>
         <div className="flex gap-2">
           <a className="btn-secondary" href={`/api/audit/export.csv${exportQuery.size ? `?${exportQuery}` : ""}`} download>{t("Export CSV", "导出 CSV")}</a>

@@ -33,11 +33,8 @@ export function ForecastChart({ result, target }: { result: ScenarioResultX | nu
         <h2 id="forecast-title" className="card-title">
           {t("Enrollment forecast", "入组预测")}
         </h2>
-        <span className="text-xs text-ink-500">{t("Cumulative patients · P10–P90 band, P50 line · target", "累计受试者 · P10–P90 区间、P50 曲线 · 目标")} {target.toLocaleString("en-US")}</span>
+        <span className="text-xs text-ink-500">{t("Target", "目标")} {target.toLocaleString("en-US")} · P50 / P10–P90</span>
       </div>
-      {result.forecast && <p className="mb-2 text-xs text-ink-500" data-testid="forecast-sampling">
-        {t("Forecast draws:", "预测抽样次数：")} {result.forecast.draws_used ?? t("unknown", "未知")} {t("of", "共")} {result.forecast.draws_requested ?? t("unknown", "未知")} {t("requested. Curve draws:", "次请求。曲线抽样次数：")} {result.forecast.curve_draws_used ?? t("unknown", "未知")}.
-      </p>}
       {hasCurve ? (
         <div className="h-48" role="img" aria-label={t(`Enrollment forecast. Time to full enrollment ${result.forecast?.months_to_full_enrollment ? formatRange(result.forecast.months_to_full_enrollment) : "not reported"}.`, `入组预测。完成入组所需时间：${result.forecast?.months_to_full_enrollment ? formatRange(result.forecast.months_to_full_enrollment) : "未报告"}。`)}>
           <ResponsiveContainer width="100%" height="100%">
@@ -68,9 +65,7 @@ export function ForecastChart({ result, target }: { result: ScenarioResultX | nu
             <span className="tabular">{formatRange(result.duration_months)}</span>.
           </p>
           <p className="mt-1 text-xs text-ink-500">
-            {result.forecast
-              ? t("The compute response included a forecast, but no enrollment curve. Nothing is drawn from the duration alone.", "计算结果包含预测，但没有入组曲线。仅凭持续时间不会绘制曲线。")
-              : t("This compute response has no enrollment forecast. The duration above is the only timeline figure. No curve is estimated.", "此次计算结果没有入组预测。上方持续时间是唯一的时间指标，未估算曲线。")}
+            {t("Enrollment curve unavailable", "暂无入组曲线")}
           </p>
         </div>
       )}
@@ -86,6 +81,11 @@ export function ForecastChart({ result, target }: { result: ScenarioResultX | nu
           ))}
         </dl>
       )}
+      {result.forecast && <details className="mt-3 text-xs text-ink-500">
+        <summary>{t("Forecast method", "预测口径")}</summary>
+        <p className="mt-1">{t("Cumulative patients. P50 line and P10–P90 range.", "累计入组人数，展示 P50 曲线与 P10–P90 区间。")}</p>
+        <p data-testid="forecast-sampling">{t("Forecast draws:", "预测抽样次数：")} {result.forecast.draws_used ?? t("unknown", "未知")} / {result.forecast.draws_requested ?? t("unknown", "未知")} · {t("Curve draws:", "曲线抽样次数：")} {result.forecast.curve_draws_used ?? t("unknown", "未知")}</p>
+      </details>}
     </section>
   );
 }

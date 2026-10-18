@@ -114,21 +114,21 @@ export function VersionsPanel({
     <section className="card p-4" aria-labelledby="versions-title" data-testid="versions-panel">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <h2 id="versions-title" className="card-title">
-          {t("Saved scenarios & approval", "已保存方案与审批")}
+          {t("Scenario versions", "方案版本")}
         </h2>
         {compareIds.length === 2 ? (
           <Link className="btn-secondary py-1.5" to={`/compare?a=${encodeURIComponent(compareIds[0])}&b=${encodeURIComponent(compareIds[1])}`} data-testid="compare-selected">
-            {t("Compare selected (2)", "比较所选方案（2）")}
+            {t("Compare (2)", "对比（2）")}
           </Link>
         ) : (
-          <span className="text-xs text-ink-500">{t("Tick two scenarios to compare them", "勾选两个方案进行比较")}</span>
+          <span className="text-xs text-ink-500">{t("Compare", "对比")} {compareIds.length}/2</span>
         )}
       </div>
 
       {loading && scenarios.length === 0 ? (
         <Spinner label={t("Loading saved scenarios", "正在加载已保存方案")} />
       ) : scenarios.length === 0 ? (
-        <EmptyState title={t("No saved scenarios yet", "暂无已保存方案")}>{t("Use “Save scenario” to keep this lever set as a version you can compare and submit.", "使用“保存方案”将当前调整项保存为可比较和提交的版本。")}</EmptyState>
+        <EmptyState title={t("No saved scenarios", "暂无已保存方案")} />
       ) : (
         <div className="max-h-72 overflow-auto">
           <table className="w-full text-sm" data-testid="versions-table">
@@ -174,7 +174,7 @@ export function VersionsPanel({
                     </td>
                     <td className="py-1.5 text-right">
                       <button type="button" className="btn-ghost whitespace-nowrap px-2 py-1 text-xs" onClick={() => void loadLevers(s)}>
-                        {t("Load levers", "加载调整项")}
+                        {t("Load", "加载")}
                       </button>
                     </td>
                   </tr>
@@ -191,7 +191,7 @@ export function VersionsPanel({
             <p className="text-sm font-semibold text-ink-900">
               {localizeCopy(selected.name)} <span className="font-normal text-ink-500">v{selected.version}</span> <ScenarioStatusChip status={selected.status} />
             </p>
-            <p className="mt-0.5 text-xs text-ink-500">
+            <details className="mt-1 text-xs text-ink-500"><summary>{t("Version details", "版本信息")}</summary><p className="mt-1">
               {t("Parameter set", "参数集")} <code className="font-mono">{selected.parameter_set_version ?? "—"}</code>
               {selected.record_hash && (
                 <>
@@ -199,7 +199,7 @@ export function VersionsPanel({
                   {t("· record sha256", "· 记录 SHA256")} <code className="font-mono">{selected.record_hash.slice(0, 12)}…</code>
                 </>
               )}
-            </p>
+            </p></details>
             <div className="mt-3 flex flex-wrap gap-2">
               {selected.status === "draft" && (
                 <button type="button" className="btn-primary" onClick={() => void submit()} disabled={submitting} data-testid="submit-approval">
@@ -214,7 +214,7 @@ export function VersionsPanel({
               </a>
             </div>
             {selected.status !== "draft" && (
-              <p className="mt-2 text-xs text-ink-500">{t("Submitted scenarios are immutable. Saving changed levers creates a new version.", "已提交的方案不可修改。保存更改后的调整项将创建新版本。")}</p>
+              <p className="mt-2 text-xs text-ink-500">{t("Locked version", "版本已锁定")}</p>
             )}
           </div>
           <div>
@@ -229,7 +229,7 @@ export function VersionsPanel({
                 }}
               />
             ) : selected.status === "draft" ? (
-              <p className="rounded-lg bg-ink-50 px-3 py-2 text-sm text-ink-600">{t("Not submitted yet. Submitting locks this version and starts review → approval.", "尚未提交。提交后将锁定此版本，并启动审核 → 批准流程。")}</p>
+              <p className="rounded-lg bg-ink-50 px-3 py-2 text-sm text-ink-600">{t("Pending submission", "待提交审批")}</p>
             ) : (
               <p className="rounded-lg bg-ink-50 px-3 py-2 text-sm text-ink-600">{t("No approval request found for this scenario.", "未找到此方案的审批请求。")}</p>
             )}

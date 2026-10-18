@@ -1,6 +1,6 @@
 import { useTranslation } from "@/app/i18n";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import type { TrialDesign, TrialDesignDrugType, Visit } from "@/app/contracts";
 import { ApiError, api, isAbort } from "@/app/api/client";
 import type { CachedStudy, DesignRecord, DesignSummary, ImportCtgovResponse, ProtocolExtractionResponse, ProtocolReviewStats } from "@/app/api/types";
@@ -127,7 +127,6 @@ function EditFactsDialog({
           <input id={`${id}-p`} className="input mt-1" value={phase} placeholder={tr("e.g. PHASE3", "例如 PHASE3")} onChange={(e) => setPhase(e.target.value)} />
         </div>
       </div>
-      <p className="mt-3 text-xs text-ink-500">{tr("Edits are saved as a new design version and recorded in the audit trail. The save is refused if someone else stored a version after this one was loaded.", "修改将保存为新的设计版本并记录在审计追踪中。如果其他人在此版本加载后保存了新版本，本次保存将被拒绝。")}</p>
       {conflict && (
         <p role="alert" className="mt-3 rounded-lg border border-worse-200 bg-worse-50 px-3 py-2 text-sm text-worse-900" data-testid="design-conflict">
           {conflict}
@@ -158,6 +157,8 @@ export function ImportPage() {
   const [conflict, setConflict] = useState<string | null>(null);
   const [info, setInfo] = useState<ImportCtgovResponse | null>(null);
   const health = useHealth();
+  // Only an explicitly offline API should serve cached imports and extractions.
+  const liveSources = health.kind !== "ok" || !health.offline;
   const [recent, setRecent] = useState<DesignSummary[]>([]);
   const [cached, setCached] = useState<CachedStudy[]>([]);
   const [editOpen, setEditOpen] = useState(false);
@@ -240,7 +241,7 @@ export function ImportPage() {
     setConflict(null);
     setExtraction(null);
     try {
-      const res = await api.importCtgov(id, { silent: true });
+      const res = await api.importCtgov(id, { silent: true, refresh: liveSources });
       const imported = { ...res.design, missing_fields: res.missing_fields.length ? res.missing_fields : res.design.missing_fields };
       let record: DesignRecord;
       let kept = false;
@@ -258,7 +259,7 @@ export function ImportPage() {
       toast.push(
         "success",
         kept ? tr(`Opened saved ${id}`, `已打开已保存的 ${id}`) : tr(`Imported ${id}`, `已导入 ${id}`),
-        kept ? tr(`Design v${record.version} is already stored`, `设计 v${record.version} 已保存`) : res.raw_cached ? tr("Served from the local cache and saved", "已从本地缓存读取并保存") : tr("Saved for the simulator", "已保存，可用于模拟器"),
+        tr(`Design v${record.version}`, `设计 v${record.version}`),
       );
     } catch (e) {
       setImportError(e instanceof Error ? e.message : String(e));
@@ -273,7 +274,7 @@ export function ImportPage() {
     setExtracting(true);
     setExtraction(null);
     try {
-      setExtraction(await api.importProtocol(src, design?.id, { silent: true }));
+      setExtraction(await api.importProtocol({ ...src, refresh: liveSources }, design?.id, { silent: true }));
     } catch (e) {
       setExtractError(e instanceof Error ? e.message : String(e));
     } finally {
@@ -364,10 +365,9 @@ export function ImportPage() {
 
   return (
     <div className="space-y-6">
-      <section className="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+      <section>
         <div className="pt-2">
-          <h1 className="text-3xl font-bold tracking-tight text-ink-900">{tr("Plan a trial you can defend", "规划有据可依的临床试验")}</h1>
-          <p className="mt-2 max-w-xl text-base text-ink-600">{tr("Import a real trial, flip design levers and see cost, site staff time, patient travel, timeline and carbon move — each as a P10–P90 range with its formula and sources.", "导入真实试验，调整设计选项，查看成本、研究中心人力、患者出行、时间线和碳排放的变化，每项均展示 P10–P90 区间、计算公式与来源。")}</p>
+          <h1 className="text-3xl font-bold tracking-tight text-ink-900">{tr("Trial workspace", "试验管理")}</h1>
 
           <form
             className="mt-6"
@@ -397,7 +397,7 @@ export function ImportPage() {
               </button>
             </div>
             <p id={`${inputId}-help`} className={`mt-1.5 text-sm ${validation ? "font-medium text-worse-700" : "text-ink-500"}`} role={validation ? "alert" : undefined}>
-              {validation ?? tr("NCT followed by 8 digits. Registry data is real; anything missing is flagged and filled with a labelled assumption.", "NCT 后接 8 位数字。使用真实注册数据；缺失项会明确标注，并以已标注的假设值填补。")}
+              {validation ?? tr("NCT + 8 digits", "NCT + 8 位数字")}
             </p>
             {importError && (
               <p role="alert" className="mt-2 rounded-lg border border-worse-200 bg-worse-50 px-3 py-2 text-sm text-worse-900" data-testid="import-error">
@@ -408,7 +408,7 @@ export function ImportPage() {
 
           {(chips.length > 0 || recent.length > 0) && (
             <div className="mt-5">
-              <p className="text-xs font-semibold uppercase tracking-wide text-ink-500">{chips.length ? tr("Demo trials (cached — work offline)", "演示试验（已缓存，可离线使用）") : tr("Recent trials", "最近的试验")}</p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-ink-500">{chips.length ? tr("Trial library", "试验库") : tr("Recent trials", "最近试验")}</p>
               <div className="mt-2 flex flex-wrap gap-2" data-testid={chips.length ? "demo-chips" : "recent-trials"}>
                 {chips.map((t) => (
                   <button
@@ -454,33 +454,21 @@ export function ImportPage() {
               </div>
             </div>
           )}
-          {importing && <Spinner className="mt-4" label={tr(`Fetching ${importing} from ClinicalTrials.gov (or the cache)`, `正在从 ClinicalTrials.gov 或缓存获取 ${importing}`)} />}
+          {importing && <Spinner className="mt-4" label={tr(`Importing ${importing}…`, `正在导入 ${importing}…`)} />}
         </div>
 
-        <aside className="card self-start p-5" aria-labelledby="how-title">
-          <h2 id="how-title" className="card-title">{tr("How it works", "使用流程")}</h2>
-          <ol className="mt-3 space-y-3 text-sm text-ink-700">
-            <li><strong className="text-ink-900">{tr("1. Import.", "1. 导入。")}</strong>{tr(" Sites, enrollment, phase and dates come from the registry. The visit schedule comes from the protocol (AI-extracted, you confirm every row) or a labelled template.", "研究中心、入组人数、分期和日期来自注册平台。访视计划来自试验方案（由 AI 提取，需逐行确认）或明确标注的模板。")}</li>
-            <li><strong className="text-ink-900">{tr("2. Simulate.", "2. 模拟。")}</strong>{tr(" Remote monitoring, home or telehealth visits, local labs, on-demand drug supply, fewer procedures or sites.", "调整远程监查、居家或远程医疗访视、本地实验室、按需药物供应，或减少检查项目与研究中心。")}</li>
-            <li><strong className="text-ink-900">{tr("3. Defend.", "3. 论证。")}</strong>{tr(" Click any number for its formula, parameters and sources. Save, compare and send for e-signed approval.", "点击任意数值查看公式、参数和来源。保存、比较方案，并提交电子签名审批。")}</li>
-          </ol>
-        </aside>
       </section>
 
       {design && (
         <>
           <TrialCard design={design} info={info} onEdit={() => setEditOpen(true)} />
-          {designVersion != null && (
-            <p className="text-sm text-ink-600" data-testid="import-design-version">{tr("Saved as ", "已保存为")}<strong>{tr("design v", "设计 v")}{designVersion}</strong>{tr(". The simulator computes and saves against this version.", "。模拟器将基于此版本计算和保存。")}</p>
-          )}
-          {keptStored && (
-            <div className="rounded-xl border border-ink-200 bg-ink-50 px-5 py-3 text-sm text-ink-800" data-testid="stored-design-banner">
-              <p>{tr("This trial was already saved", "该试验已保存")}{designVersion != null ? tr(` as design v${designVersion}`, `为设计 v${designVersion}`) : ""}{tr(". That copy is shown, including a protocol schedule if one was confirmed. The registry response is not written over it.", "。当前显示已保存的副本，包括已确认的方案访视计划。注册平台的响应不会覆盖它。")}</p>
-              {registryDiffers && designEtag && (
-                <button type="button" className="btn-secondary mt-2" onClick={() => void reimportRegistry()} disabled={importing !== null} data-testid="reimport-registry">{tr("Re-import from registry", "从注册平台重新导入")}</button>
-              )}
-            </div>
-          )}
+          <div className="flex flex-wrap items-center gap-3 text-sm text-ink-600">
+            {designVersion != null && <p data-testid="import-design-version"><strong>{tr("design v", "设计 v")}{designVersion}</strong></p>}
+            {keptStored && <span data-testid="stored-design-banner">{tr("Saved", "已保存")}</span>}
+            {keptStored && registryDiffers && designEtag && (
+              <button type="button" className="btn-secondary py-1 text-xs" onClick={() => void reimportRegistry()} disabled={importing !== null} data-testid="reimport-registry">{tr("Re-import registry", "重新导入")}</button>
+            )}
+          </div>
           {conflict && (
             <p role="alert" className="rounded-lg border border-worse-200 bg-worse-50 px-3 py-2 text-sm text-worse-900" data-testid="design-conflict">
               {conflict}
@@ -489,23 +477,24 @@ export function ImportPage() {
 
           <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-accent-200 bg-accent-50 px-5 py-3">
             <p className="text-sm text-accent-900">
-              <strong>{design.visits.length}{tr(" visits", "次访视")}</strong>{tr(" and ", "和")}<strong>{design.sites.length}{tr(" sites", "个研究中心")}</strong>{tr(" ready.", "已就绪。")}{design.missing_fields.length > 0 && tr(` ${design.missing_fields.length} input(s) use labelled assumptions.`, ` ${design.missing_fields.length} 项输入使用已标注的假设。`)}
+              <strong>{design.visits.length}{tr(" visits", " 次访视")}</strong>{" · "}<strong>{design.sites.length}{tr(" sites", " 个研究中心")}</strong>{assumedTotal > 0 && tr(` · ${assumedTotal} pending inputs`, ` · ${assumedTotal} 项待确认`)}
             </p>
-            <button type="button" className="btn-primary px-5" onClick={() => navigate(`/scenario/${encodeURIComponent(design.id)}`)} data-testid="open-simulator">{tr("Open scenario simulator & peer comparison →", "打开方案模拟器与同类试验比较 →")}</button>
+            <button type="button" className="btn-primary px-5" onClick={() => navigate(`/scenario/${encodeURIComponent(design.id)}`)} data-testid="open-simulator">{tr("Scenario analysis →", "方案分析 →")}</button>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
-            <section className="card p-5" id="missing" aria-labelledby="missing-title">
-              <SectionTitle aside={<Badge tone="caution"><span data-testid="missing-count">{assumedTotal}</span></Badge>}>
-                <span id="missing-title">{tr("Missing & assumed", "缺失项与假设")}</span>
-              </SectionTitle>
+            <details className="card self-start p-5" id="missing" aria-labelledby="missing-title">
+              <summary className="cursor-pointer font-semibold text-ink-900">
+                <span id="missing-title" className="mr-2">{tr("Pending inputs", "待确认项目")}</span>
+                <Badge tone="caution"><span data-testid="missing-count">{assumedTotal}</span></Badge>
+              </summary>
               <MissingAssumed
                 missing={design.missing_fields}
                 notes={notes}
                 onEdit={() => setEditOpen(true)}
                 onProtocol={() => protocolRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
               />
-            </section>
+            </details>
             <section className="card p-5" aria-labelledby="map-title">
               <SectionTitle>
                 <span id="map-title">{tr("Sites", "研究中心")}</span>
@@ -518,9 +507,8 @@ export function ImportPage() {
 
       <section ref={protocolRef} className="card p-5" aria-labelledby="protocol-title" id="protocol">
         <SectionTitle>
-          <span id="protocol-title">{tr("Protocol PDF → schedule of activities", "试验方案 PDF → 活动计划")}</span>
+          <span id="protocol-title">{tr("Visit schedule", "访视计划")}</span>
         </SectionTitle>
-        <p className="max-w-3xl text-sm text-ink-600">{tr("Upload the trial protocol to extract visits and procedures. Extraction is done by an AI model and returned as candidates with the page number and a short quote; nothing is applied until you accept rows and press “Apply to design”.", "上传试验方案以提取访视和检查项目。AI 模型将返回附带页码和简短引文的候选项；只有在您接受相应行并点击“应用到设计”后才会生效。")}</p>
         <div className="mt-3 flex flex-wrap items-center gap-3">
           <label className="btn-secondary cursor-pointer">
             <input
@@ -530,13 +518,13 @@ export function ImportPage() {
               className="sr-only"
               onChange={(e) => void onFile(e.target.files?.[0])}
               data-testid="protocol-file"
-            />{tr("Choose protocol PDF…", "选择试验方案 PDF…")}</label>
+            />{tr("Upload protocol", "上传方案")}</label>
           {design?.registry_id && (registryProtocol || design.registry_id.startsWith("NCT")) && (
-            <button type="button" className="btn-secondary" onClick={() => void extractFromRegistry()} disabled={extracting} data-testid="extract-registry">{tr("Use the registry protocol", "使用注册平台中的试验方案")}{registryProtocol?.extraction_cached ? tr(" (cached extraction)", "（已缓存的提取结果）") : ""}
+            <button type="button" className="btn-secondary" onClick={() => void extractFromRegistry()} disabled={extracting} data-testid="extract-registry">{tr("Extract registry protocol", "提取注册方案")}
             </button>
           )}
-          <span className="text-xs text-ink-500">{tr("PDF up to 20 MB", "PDF 最大 20 MB")}{design ? tr(` · will be applied to ${design.registry_id ?? "this design"}`, ` · 将应用到 ${design.registry_id ?? "此设计"}`) : tr(" · import the trial first to apply results", " · 请先导入试验以应用结果")}</span>
-          {extracting && <Spinner label={tr("Extracting schedule (this can take ~30 s)", "正在提取计划（约需 30 秒）")} />}
+          <span className="text-xs text-ink-500">PDF ≤ 20 MB</span>
+          {extracting && <Spinner label={tr("Extracting…", "提取中…")} />}
         </div>
         {extractError && (
           <p role="alert" className="mt-3 rounded-lg border border-worse-200 bg-worse-50 px-3 py-2 text-sm text-worse-900">
@@ -545,29 +533,32 @@ export function ImportPage() {
         )}
         {extraction && (
           <div className="mt-4">
-            <p className="mb-2 text-xs text-ink-500" data-testid="extraction-meta">
-              {[
-                extraction.method && tr(`Method: ${extraction.method}`, `方法：${extraction.method}`),
-                extraction.model && tr(`model: ${extraction.model}`, `模型：${extraction.model}`),
-                extraction.soa_pages.length
-                  ? tr(`schedule on pages ${extraction.soa_pages[0]}–${extraction.soa_pages[extraction.soa_pages.length - 1]}${extraction.page_count ? ` of ${extraction.page_count}` : ""}`, `计划位于第 ${extraction.soa_pages[0]}–${extraction.soa_pages[extraction.soa_pages.length - 1]} 页${extraction.page_count ? `，共 ${extraction.page_count} 页` : ""}`)
-                  : null,
-                extraction.from_cache ? tr("served from cache", "来自缓存") : null,
-              ]
-                .filter(Boolean)
-                .join(" · ")}
-            </p>
-            {extraction.notice && <p className="mb-2 text-xs text-caution-900">{extraction.notice}</p>}
-            {extraction.excluded_columns.length > 0 && (
-              <details className="mb-3 text-xs text-ink-600">
-                <summary className="cursor-pointer font-semibold">{tr("Columns the extractor left out (", "提取时排除的列（")}{extraction.excluded_columns.length})</summary>
-                <ul className="mt-1 list-disc space-y-0.5 pl-5">
-                  {extraction.excluded_columns.map((c) => (
-                    <li key={c}>{c}</li>
-                  ))}
-                </ul>
-              </details>
-            )}
+            <details className="mb-3 text-xs text-ink-500">
+              <summary className="cursor-pointer font-semibold">{tr("Extraction details", "提取详情")}</summary>
+              <p className="mt-2" data-testid="extraction-meta">
+                {[
+                  extraction.method && tr(`Method: ${extraction.method}`, `方法：${extraction.method}`),
+                  extraction.model && tr(`model: ${extraction.model}`, `模型：${extraction.model}`),
+                  extraction.soa_pages.length
+                    ? tr(`schedule on pages ${extraction.soa_pages[0]}–${extraction.soa_pages[extraction.soa_pages.length - 1]}${extraction.page_count ? ` of ${extraction.page_count}` : ""}`, `计划位于第 ${extraction.soa_pages[0]}–${extraction.soa_pages[extraction.soa_pages.length - 1]} 页${extraction.page_count ? `，共 ${extraction.page_count} 页` : ""}`)
+                    : null,
+                  extraction.from_cache ? tr("served from cache", "来自缓存") : null,
+                ]
+                  .filter(Boolean)
+                  .join(" · ")}
+              </p>
+              {extraction.notice && <p className="mt-2 text-caution-900">{extraction.notice}</p>}
+              {extraction.excluded_columns.length > 0 && (
+                <details className="mt-2 text-ink-600">
+                  <summary className="cursor-pointer font-semibold">{tr("Excluded columns", "排除列")} ({extraction.excluded_columns.length})</summary>
+                  <ul className="mt-1 list-disc space-y-0.5 pl-5">
+                    {extraction.excluded_columns.map((c) => (
+                      <li key={c}>{c}</li>
+                    ))}
+                  </ul>
+                </details>
+              )}
+            </details>
             {extraction.candidates.length === 0 ? (
               <p className="text-sm text-ink-600">{tr("No schedule of activities was found in this PDF.", "此 PDF 中未找到活动计划。")}</p>
             ) : (
@@ -592,10 +583,6 @@ export function ImportPage() {
           onClose={() => setEditOpen(false)}
           onSaved={adoptSaved}
         />
-      )}
-      {!design && recent.length === 0 && (
-        <p className="text-center text-sm text-ink-500">{tr("New here? Read ", "首次使用？了解")}<Link className="link" to="/about">{tr("how TrialPilot calculates", "TrialPilot 的计算方法")}</Link>.
-        </p>
       )}
     </div>
   );

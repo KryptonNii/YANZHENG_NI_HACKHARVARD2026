@@ -107,7 +107,7 @@ export function AlertsPanel({
                 }}
               >
                 <label className="label text-xs" htmlFor={`dismiss-${alert.id}`}>
-                  {t("Reason for dismissing (audited)", "解除原因（将记录审计）")}
+                  {t("Dismissal reason", "解除原因")}
                 </label>
                 <textarea id={`dismiss-${alert.id}`} className="input mt-1" required value={reason} onChange={(e) => setReason(e.target.value)} rows={2} />
                 <div className="flex gap-2">
@@ -247,7 +247,7 @@ function PlanDialog({
           </div>
           <p className="text-xs text-ink-500">
             {t("Owner", "负责人")} {owner}
-            {alert.site_id ? t(` · site ${alert.site_id}`, ` · 中心 ${alert.site_id}`) : ""}{t(". The metric is taken from the alert. This is written to the audit trail.", "。指标取自警报，操作将写入审计记录。")}
+            {alert.site_id ? t(` · site ${alert.site_id}`, ` · 中心 ${alert.site_id}`) : ""}
           </p>
         </form>
       )}
@@ -264,8 +264,8 @@ function OptionsTable({ predicted, selected, onPick }: { predicted: AlertOptions
       <h3 className="text-xs font-semibold text-ink-800">{t("Predicted outcome of each action", "各行动的预测结果")}</h3>
       <p className="mt-1 text-[11px] leading-snug text-ink-500">
         {t(
-          "Planning model with assumed parameters: a prediction, not an observed result. Ranked by net value (cost avoided minus the action's cost). It is saved when you plan the action and checked against the observed effect later.",
-          "使用假设参数的规划模型：这是预测，不是观测结果。按净价值（避免的成本减去行动成本）排序。规划行动时会保存该预测，之后与实际观测效果对照。",
+          "Model forecast · ranked by net value",
+          "模型预测 · 按净价值排序",
         )}
       </p>
       {base && (

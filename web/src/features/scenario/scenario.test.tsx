@@ -93,7 +93,7 @@ describe("scenario simulator", () => {
     await waitFor(() => expect(screen.getByTestId("metric-cost_usd-value").textContent).not.toBe(before), { timeout: 4000 });
     const deltaText = screen.getByTestId("metric-cost_usd-delta").textContent ?? "";
     expect(deltaText).toMatch(/[−+]\d/); // a sign, not only a colour
-    expect(deltaText).toMatch(/lower than baseline|higher than baseline/);
+    expect(deltaText).toMatch(/lower|higher/);
   });
 
   it("debounces rapid lever changes into one recompute", async () => {
@@ -136,7 +136,7 @@ describe("scenario simulator", () => {
     const link = within(drawer).getByRole("link", { name: "Example cost survey" });
     expect(link).toHaveAttribute("href", "https://example.org/cost-survey");
     expect(within(drawer).getByText(/\(2024\)/)).toBeInTheDocument();
-    expect(within(drawer).getAllByText("Assumption").length).toBeGreaterThan(0);
+    expect(within(drawer).getAllByText("To confirm").length).toBeGreaterThan(0);
     expect(within(drawer).getAllByText(/Rationale:/).length).toBeGreaterThan(0);
 
     await waitFor(() => expect(within(drawer).getByTestId("provenance-drivers")).toBeInTheDocument());
@@ -192,6 +192,34 @@ describe("scenario simulator", () => {
 });
 
 describe("import page", () => {
+  it.each([false, true])("uses live refresh unless the API is explicitly offline (offline=%s)", async (offline) => {
+    vi.spyOn(api, "health").mockResolvedValue({ status: "ok", offline });
+    const registry = vi.spyOn(api, "importCtgov");
+    const protocol = vi.spyOn(api, "importProtocol");
+    try {
+      renderAt("/");
+      await screen.findByTestId("demo-chips");
+      expect(screen.getByText("Trial library")).toBeInTheDocument();
+      await userEvent.type(screen.getByTestId("nct-input"), "NCT01234567");
+      await userEvent.click(screen.getByTestId("nct-submit"));
+      await screen.findByTestId("trial-card", {}, { timeout: 4000 });
+      expect(registry).toHaveBeenCalledWith("NCT01234567", { silent: true, refresh: !offline });
+      expect(screen.getByTestId("extract-registry")).toHaveTextContent("Extract registry protocol");
+      if (!offline) expect(screen.getByTestId("extract-registry")).not.toHaveTextContent("cached extraction");
+
+      await userEvent.click(screen.getByTestId("extract-registry"));
+      await screen.findByTestId("protocol-review", {}, { timeout: 4000 });
+      expect(protocol).toHaveBeenLastCalledWith({ nctId: MOCK_DESIGN.registry_id, refresh: !offline }, DESIGN, { silent: true });
+
+      const file = new File(["protocol"], "trial.pdf", { type: "application/pdf" });
+      await userEvent.upload(screen.getByTestId("protocol-file"), file);
+      await waitFor(() => expect(protocol).toHaveBeenLastCalledWith({ file, refresh: !offline }, DESIGN, { silent: true }));
+      await screen.findByTestId("protocol-review", {}, { timeout: 4000 });
+    } finally {
+      vi.restoreAllMocks();
+    }
+  });
+
   it("validates the NCT id inline and shows the trial card with the missing & assumed list after import", async () => {
     renderAt("/");
     await userEvent.type(screen.getByTestId("nct-input"), "NCT123");
@@ -204,7 +232,7 @@ describe("import page", () => {
     const card = await screen.findByTestId("trial-card", {}, { timeout: 4000 });
     expect(card).toHaveTextContent("MOCK — Fictional");
     expect(screen.getByTestId("missing-assumed")).toHaveTextContent(/Visits/);
-    expect(screen.getByTestId("missing-assumed")).toHaveTextContent(/assumed/i);
+    expect(screen.getByTestId("missing-assumed")).toHaveTextContent(/to confirm/i);
     expect(screen.getByTestId("missing-assumed")).toHaveTextContent(/actual number enrolled/i);
     expect(screen.getByTestId("missing-count")).toHaveTextContent("1");
     expect(screen.getByTestId("import-design-version")).toHaveTextContent("design v1");
@@ -298,9 +326,9 @@ describe("import page", () => {
     await userEvent.click(within(review).getByRole("button", { name: "Edit visit 1" }));
     await userEvent.clear(within(review).getByLabelText("Visit 1 week"));
     expect(within(review).getByRole("button", { name: "Done" })).toBeDisabled();
-    expect(review).toHaveTextContent("An empty week is not saved as 0.");
+    expect(review).toHaveTextContent("Enter a valid week.");
 
-    await userEvent.click(within(review).getByRole("button", { name: "Accept all remaining" }));
+    await userEvent.click(within(review).getByRole("button", { name: "Accept remaining" }));
     await userEvent.click(screen.getByTestId("apply-extraction"));
     await waitFor(() => expect(screen.queryByTestId("protocol-review")).not.toBeInTheDocument(), { timeout: 4000 });
     await waitFor(() => expect(log).toHaveBeenCalled());
@@ -412,7 +440,7 @@ describe("procedure endpoint roles", () => {
     ]);
     render(<ProtocolReview candidates={[original]} warnings={[]} canApply applying={false} onApply={apply} />);
     expect(screen.getByText("Supports primary outcome")).toBeInTheDocument();
-    expect(screen.getByText("Unknown")).toBeInTheDocument();
+    expect(screen.getByText("To confirm")).toBeInTheDocument();
     await userEvent.click(screen.getByRole("button", { name: "Edit visit 1" }));
     await userEvent.selectOptions(screen.getByLabelText("Visit 1 SGRQ endpoint role"), "supports_secondary");
     expect(screen.getByLabelText("Visit 1 SGRQ endpoint note")).toHaveValue("");
@@ -443,10 +471,10 @@ describe("procedure endpoint roles", () => {
     // Deliberately simulate pre-field persisted JSON; the API supplies defaults, old mocks do not.
     const legacy = { code: "ecg", label: "ECG", site_minutes: 20, ships_sample: false, sample_temp: null } as Procedure;
     render(<ProtocolReview candidates={[candidate([legacy])]} warnings={[]} canApply applying={false} onApply={apply} />);
-    expect(screen.getByText("Unknown")).toBeInTheDocument();
+    expect(screen.getByText("To confirm")).toBeInTheDocument();
     expect(screen.getByText("Unmatched")).toBeInTheDocument();
     expect(screen.queryByText(/optional|non.core/i)).not.toBeInTheDocument();
-    await userEvent.click(screen.getByRole("button", { name: "Accept all remaining" }));
+    await userEvent.click(screen.getByRole("button", { name: "Accept remaining" }));
     await userEvent.click(screen.getByTestId("apply-extraction"));
     expect(apply.mock.calls[0][0][0].procedures[0]).toEqual(legacy);
     expect(apply.mock.calls[0][1]).toEqual({ accepted: 1, edited: 0, rejected: 0, bulk_accepted: 1 });
@@ -501,7 +529,7 @@ describe("procedure endpoint roles", () => {
     expect(row).toHaveTextContent("Primary score: Supports primary outcome");
     expect(row).toHaveTextContent("Secondary score: Supports secondary outcome");
     expect(row).toHaveTextContent("Diary: Not linked to a registry outcome");
-    expect(row).toHaveTextContent("Unreviewed score: Unknown");
+    expect(row).toHaveTextContent("Unreviewed score: To confirm");
     expect(within(row).queryByRole("status")).not.toBeInTheDocument();
     expect(within(row).getByRole("checkbox")).not.toBeChecked();
     await userEvent.click(within(row).getByRole("checkbox"));
@@ -522,7 +550,7 @@ describe("procedure endpoint roles", () => {
     renderAt(`/scenario/${DESIGN}`);
     await waitForCards();
     const row = screen.getByTestId("procedure-questionnaire");
-    expect(row).toHaveTextContent("Patient questionnaire: Unknown");
+    expect(row).toHaveTextContent("Patient questionnaire: To confirm");
     const beforeHours = screen.getByTestId("metric-site_staff_hours-value").textContent;
     const expected = mockCompute(MOCK_DESIGN, { ...DEFAULT_LEVERS, removed_procedures: ["questionnaire"] });
     await userEvent.click(within(row).getByRole("checkbox"));
@@ -548,8 +576,7 @@ describe("pinned design version and missing forecast", () => {
   it("explains a missing forecast instead of drawing a curve from duration", () => {
     const result = { ...mockCompute(MOCK_DESIGN, DEFAULT_LEVERS), forecast: null, supply: null };
     render(<ForecastChart result={result} target={MOCK_DESIGN.enrollment_target} />);
-    expect(screen.getByTestId("forecast-missing")).toHaveTextContent(/no enrollment forecast/i);
-    expect(screen.getByTestId("forecast-missing")).toHaveTextContent(/No curve is estimated/);
+    expect(screen.getByTestId("forecast-missing")).toHaveTextContent("Enrollment curve unavailable");
     expect(screen.queryByRole("img")).not.toBeInTheDocument();
   });
 
@@ -560,6 +587,6 @@ describe("pinned design version and missing forecast", () => {
     const drawer = await screen.findByTestId("provenance-drawer");
     expect(within(drawer).getByTestId("wtt-label")).toHaveTextContent("Well-to-tank");
     expect(drawer).toHaveTextContent(/unknown — mock library has no ef\.wtt factor/i);
-    expect(drawer).toHaveTextContent("Not found in the parameter library");
+    expect(drawer).toHaveTextContent("Parameter missing");
   });
 });

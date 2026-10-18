@@ -178,17 +178,18 @@ export const api = {
   health: (signal?: AbortSignal) => request<HealthResponse>("GET", "/health", { signal, silent: true }),
 
   // ---- A4 importers ----
-  importCtgov: async (nctId: string, opts: RequestOptions = {}): Promise<ImportCtgovResponse> =>
-    normalizeImport(await request("POST", `/import/ctgov/${enc(nctId)}`, opts)),
+  importCtgov: async (nctId: string, { refresh, ...opts }: RequestOptions & { refresh?: boolean } = {}): Promise<ImportCtgovResponse> =>
+    normalizeImport(await request("POST", `/import/ctgov/${enc(nctId)}${refresh ? "?refresh=true" : ""}`, opts)),
   /** Studies in A4's local cache (they import offline). */
   cachedStudies: async (opts: RequestOptions = {}): Promise<CachedStudy[]> =>
     normalizeCachedStudies(await request("GET", "/import/ctgov", opts)),
   /** Extract a schedule of activities from an uploaded PDF, or from the registry protocol of `nctId`. */
-  importProtocol: async (src: { file?: File; nctId?: string }, designId?: string, opts: RequestOptions = {}): Promise<ProtocolExtractionResponse> => {
+  importProtocol: async (src: { file?: File; nctId?: string; refresh?: boolean }, designId?: string, opts: RequestOptions = {}): Promise<ProtocolExtractionResponse> => {
     const form = new FormData();
     if (src.file) form.append("file", src.file);
     else if (src.nctId) form.append("nct_id", src.nctId);
     if (designId) form.append("design_id", designId);
+    if (src.refresh) form.append("refresh", "true");
     return normalizeExtraction(await request("POST", "/import/protocol", { ...opts, form }));
   },
   /** A4 validates the human-confirmed visits and returns the new design (A5 stores it). */

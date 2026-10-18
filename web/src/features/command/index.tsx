@@ -169,17 +169,17 @@ export default function CommandPage() {
           <p className="mt-1 text-sm text-ink-500" data-testid="sim-clock">
             {clock ? (
               <>
-                {t("Simulated clock", "模拟时钟")} {formatUtc(clock.now)} {t("· day", "· 天")} {Math.round(clock.clock_day)}
+                {formatUtc(clock.now)} {t("· day", "· 天")} {Math.round(clock.clock_day)}
                 {clock.scenario ? ` · ${clock.scenario}` : ""}
               </>
             ) : (
-              t("Simulated clock not started", "模拟时钟尚未启动")
+              t("Not started", "未启动")
             )}
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <button type="button" className="btn-secondary" data-testid="start-simulation" disabled={busy !== null} onClick={() => void start()}>
-            {busy === "start" ? t("Starting…", "正在启动…") : running ? t("Restart simulation", "重新启动模拟") : t("Start simulation", "启动模拟")}
+            {busy === "start" ? t("Starting…", "启动中…") : running ? t("Restart", "重新运行") : t("Start", "运行")}
           </button>
           <button type="button" className="btn-secondary" data-testid="advance-1-week" disabled={!running || busy !== null} onClick={() => void advance(7)}>
             {t("Advance 1 week", "推进 1 周")}
@@ -193,24 +193,23 @@ export default function CommandPage() {
       {trialId === DEMO_TRIAL_ID && <LockRecoveryStory key={trialId} />}
 
       {message && (
-        <ErrorPanel title={t("The command center couldn't complete that", "指挥中心未能完成此操作")} message={message} onRetry={() => void refresh()} />
+        <ErrorPanel title={t("Operation failed", "操作失败")} message={message} onRetry={() => void refresh()} />
       )}
 
-      {phase === "loading" && <Spinner label={t("Loading the simulated feed", "正在加载模拟数据流")} />}
+      {phase === "loading" && <Spinner label={t("Loading operations", "加载运营数据")} />}
 
       {phase === "idle" && (
         <EmptyState
-          title={t("The simulated feed is not running", "模拟数据流尚未运行")}
+          title={t("No operations data", "暂无运营数据")}
           action={
             trialId !== DEMO_TRIAL_ID ? (
               <Link className="btn-secondary" to={`/command/${DEMO_TRIAL_ID}`}>
-                {t("Open the 40-site demo", "打开 40 个中心的演示")}
+                {t("Open sample study", "打开示例研究")}
               </Link>
             ) : undefined
           }
         >
-          {t("Start the simulation to stream a labelled feed from EDC, CTMS, IRT, travel, courier, finance and vendor systems.", "启动模拟，接收来自 EDC、CTMS、IRT、差旅、快递、财务及供应商系统的标记数据流。")}
-          {trialId !== DEMO_TRIAL_ID && t(" This trial id has no stored design yet — the 40-site demo does.", " 此试验 ID 尚无已保存的设计，40 个中心的演示已提供设计。")}
+          {trialId !== DEMO_TRIAL_ID && t("Save a study design to continue.", "请先保存研究设计。")}
         </EmptyState>
       )}
 

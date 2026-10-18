@@ -90,6 +90,13 @@ flowchart LR
 
 ## Quick start
 
+On Windows, double-click `sysup.cmd` to start the API and web app in live mode at
+[http://127.0.0.1:5181](http://127.0.0.1:5181). It uses the prepared local dependencies,
+loads `.env`, disables offline/mock mode and sample-design seeding, and defaults to Claude
+Sonnet 5.5 for protocol extraction. Each launch forcibly stops any processes listening
+on API **8008** and web **5181**, including healthy services, then starts fresh.
+See [live setup and logs](docs/LIVE_RUNBOOK.md).
+
 The verified local route uses API **8008**, UI **5181**, cached records and an independent OS temporary database. Follow the complete [PowerShell setup and walkthrough](docs/DEMO_RUNBOOK.md). Dependencies must already be prepared; the recorded run used locked pnpm **9.15.9** and Edge. Initial installation can require a network.
 
 ```powershell

@@ -7,13 +7,13 @@ const screenshotStyle = "header.sticky { position: static !important; }";
 
 test("plays the lock story and renders the two ground-truth judgments side by side", async ({ page }, info) => {
   await page.goto("/command/demo-40");
-  await expect(page.getByTestId("simulated-badge")).toHaveText("Simulated feed");
+  await expect(page.getByTestId("simulated-badge")).toHaveText("Simulated");
   const story = page.getByTestId("lock-recovery-story");
   await expect(story).toHaveAttribute("data-simulated", "true");
   await expect(story.getByTestId("story-lock-shift")).toContainText("21 days beyond");
   await expect(story.getByTestId("story-comparison")).toHaveCount(0);
   await story.screenshot({ path: info.outputPath("01-lock-slip.png"), style: screenshotStyle });
-  await story.getByRole("button", { name: "Review two interventions" }).click();
+  await story.getByRole("button", { name: "Review interventions" }).click();
   await expect(story.getByRole("button", { name: "Read follow-up evidence" })).toBeDisabled();
   await story.getByRole("button", { name: "Run eCRF training" }).click();
   await story.getByRole("button", { name: "Run SMS programme" }).click();
@@ -39,14 +39,14 @@ test("keeps the SMS-only result delayed and the replay usable on a narrow screen
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/command/demo-40");
   const story = page.getByTestId("lock-recovery-story");
-  await story.getByRole("button", { name: "Review two interventions" }).click();
+  await story.getByRole("button", { name: "Review interventions" }).click();
   await story.getByRole("button", { name: "Run SMS programme" }).click();
   await story.getByRole("button", { name: "Read follow-up evidence" }).click();
   await expect(story.getByTestId("story-lock-forecast")).toContainText("14 Dec 2028");
   await expect(story.getByTestId("story-intervention-I4")).toContainText("Likely coincidence");
   expect(await story.evaluate((element) => element.scrollWidth <= element.clientWidth)).toBe(true);
   await story.screenshot({ path: info.outputPath("03-sms-only-mobile.png"), style: screenshotStyle });
-  await story.getByRole("button", { name: "Replay from the start" }).click();
+  await story.getByRole("button", { name: "Reset" }).click();
   await expect(story.getByTestId("story-verdict")).toHaveCount(0);
-  await expect(story.getByRole("button", { name: "Review two interventions" })).toBeVisible();
+  await expect(story.getByRole("button", { name: "Review interventions" })).toBeVisible();
 });

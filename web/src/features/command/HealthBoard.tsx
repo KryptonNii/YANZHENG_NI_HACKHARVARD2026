@@ -55,7 +55,7 @@ export function HealthBoard({ health, onOpenProvenance }: { health: HealthSnapsh
               {caption && <p className="mt-1 text-xs leading-snug text-ink-500">{caption}</p>}
               {prov && (
                 <button type="button" className="mt-2 self-start text-xs font-semibold text-accent-700 hover:underline" onClick={() => onOpenProvenance(prov, displayText(kpi.label))}>
-                  {t("Why this number", "查看数值依据")}
+                  {t("Basis", "依据")}
                 </button>
               )}
             </li>
@@ -95,8 +95,11 @@ export function Drilldown({ health }: { health: HealthSnapshot }) {
       <header className="flex flex-wrap items-center justify-between gap-2 border-b border-ink-200 px-4 py-3">
         <div>
           <h2 className="card-title">{t("Study → country → site", "研究 → 国家 → 中心")}</h2>
-          <p className="mt-1 text-xs text-ink-500">{t("Complete weeks: teal actual cumulative, dashed plan P50, shaded P10–P90. Current totals include the open week, which is excluded from the curve.", "完整周数据：蓝绿色表示实际累计值，虚线表示计划 P50，阴影表示 P10–P90。当前总数包含未结束的一周，曲线不包含该周。")}</p>
-          {level === "countries" && <p className="mt-1 text-xs text-ink-500">{t("Country curves sum all site observations and plan bounds by week; summed bounds are not country forecast quantiles. Missing site data stays unknown.", "国家曲线按周汇总各中心的观测值和计划上下限；汇总上下限不代表国家预测分位数。缺失的中心数据仍标记为未知。")}</p>}
+          <details className="mt-1 text-xs text-ink-500">
+            <summary className="cursor-pointer">{t("Chart basis", "图表口径")}</summary>
+            <p className="mt-1">{t("Complete weeks: actual, plan P50 and P10–P90. Current totals include the open week.", "曲线展示完整周的实际累计值、计划 P50 与 P10–P90；当前总数包含未结束周。")}</p>
+            {level === "countries" && <p className="mt-1">{t("Country bounds sum site plans; they are not country forecast quantiles. Missing data remains unknown.", "国家上下限为中心计划之和，非国家预测分位数；缺失数据标为未知。")}</p>}
+          </details>
         </div>
         <div className="flex items-center gap-2">
           {country && (

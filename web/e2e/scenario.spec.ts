@@ -146,12 +146,12 @@ test("protocol extraction: candidates show page and quote, nothing applies until
   }
   await expect(list).toContainText(/Visit schedule is NOT/i);
   await expect(list).toContainText(/actual number enrolled/i);
-  await expect(page.getByTestId("missing-count")).toHaveText(String(await list.locator("span", { hasText: /^assumed$/i }).count()));
+  await expect(page.getByTestId("missing-count")).toHaveText(String(await list.locator("span", { hasText: /^to confirm$/i }).count()));
 
   await registry.click();
   const review = page.getByTestId("protocol-review");
   await expect(review).toBeVisible({ timeout: 60_000 });
-  await expect(review).toContainText("AI draft");
+  await expect(review).toContainText("Pending review");
   await expect(review.getByText(/p\. \d+/).first()).toBeVisible();
   await expect(page.getByTestId("apply-extraction")).toBeDisabled();
   await shot(page, info, "07-protocol-review");
@@ -159,11 +159,11 @@ test("protocol extraction: candidates show page and quote, nothing applies until
   await review.getByRole("button", { name: /Edit visit/ }).first().click();
   await review.locator("input[aria-label$='week']").first().fill("");
   await expect(review.getByRole("button", { name: "Done" })).toBeDisabled();
-  await expect(review).toContainText("An empty week is not saved as 0.");
+  await expect(review).toContainText("Enter a valid week.");
   await shot(page, info, "11-protocol-empty-week");
 
   const logged = page.waitForRequest((req) => req.method() === "POST" && req.url().includes("/api/import/protocol/review"));
-  await review.getByRole("button", { name: "Accept all remaining" }).click();
+  await review.getByRole("button", { name: "Accept remaining" }).click();
   await expect(page.getByTestId("apply-extraction")).toBeEnabled();
   await page.getByTestId("apply-extraction").click();
   const body = (await logged).postDataJSON() as { bulk_accepted?: number };
@@ -171,7 +171,7 @@ test("protocol extraction: candidates show page and quote, nothing applies until
   await expect(page.getByTestId("protocol-review")).toBeHidden({ timeout: 60_000 });
   await expect(list).not.toContainText(/Visit schedule is NOT/i);
   await expect(list).toContainText(/actual number enrolled/i);
-  await expect(page.getByTestId("missing-count")).toHaveText(String(await list.locator("span", { hasText: /^assumed$/i }).count()));
+  await expect(page.getByTestId("missing-count")).toHaveText(String(await list.locator("span", { hasText: /^to confirm$/i }).count()));
   await shot(page, info, "12-protocol-applied");
   const version = await page.getByTestId("import-design-version").innerText();
   const stored = await page.request.get(`/api/designs/${new URL(page.url()).searchParams.get("design")}`);
@@ -212,7 +212,7 @@ test("import validates the ClinicalTrials.gov id before calling the API", async 
 test("offline mode is visible in the header", async ({ page }) => {
   test.skip(MOCK, "the mock API does not run in offline mode");
   await page.goto("/");
-  await expect(page.getByTestId("status-badges")).toContainText("Offline mode");
+  await expect(page.getByTestId("status-badges")).toContainText("Offline");
 });
 
 async function importNct(page: Page, nct: string) {

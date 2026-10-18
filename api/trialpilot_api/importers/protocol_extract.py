@@ -435,6 +435,11 @@ def _schema(vocab: Vocabulary) -> dict[str, Any]:
 
 SYSTEM_PROMPT = """You extract the Schedule of Activities (SoA) from a clinical trial protocol.
 Report only what the provided pages show; never add visits or procedures from general knowledge.
+Extract the COMPLETE main schedule, not a sample or summary. Include EVERY numbered visit column
+and EVERY procedure marked in each column, including repeated procedures at later visits.
+Never abbreviate, omit intermediate visits, use placeholders, or return only a subset to save space.
+The output budget supports the full schedule. Before finishing, check that all main-schedule visit
+columns and their marked procedure rows are represented; describe unreadable source cells in warnings.
 For every visit column give its visit number, label, nominal week relative to Day 1 / randomization (week 0;
 convert days with week = (day - 1) / 7), and the window if one is printed (otherwise start = end = week).
 Columns that are not on-site visits (home dosing, phone calls, daily diary periods) must have is_site_visit = false.
@@ -632,6 +637,7 @@ def extract_schedule(
     image_pages = [n for n in soa_pages if pages[n - 1].image_only]
     method: Literal["table_parser", "llm_text", "llm_vision"]
     model: str | None = None
+    llm_provenance: dict[str, Any] = {}
 
     cols, grid_warn = parse_grid_tables(pages, soa_pages)
     grid_ok = sum(1 for c in cols if c.marks) >= 2
@@ -669,6 +675,11 @@ def extract_schedule(
             raw = list(out.get("visits") or [])
             warnings += [f"Model note: {w}" for w in out.get("warnings") or []]
             model = str(out.get("_model") or extract_model())
+            llm_provenance = {
+                "provider_request_id": out.get("_request_id"),
+                "llm_elapsed_ms": out.get("_elapsed_ms"),
+                "usage": out.get("_usage", {}),
+            }
             method = "llm_vision" if image_pages else "llm_text"
 
     candidates, v_warn, excluded = build_candidates(raw, pages, soa_pages, vocab, quote_kind)
@@ -687,7 +698,8 @@ def extract_schedule(
         excluded_columns=excluded,
         warnings=warnings + v_warn,
         vocabulary_version=vocab.version,
-        provenance={"pipeline": "pdfplumber text/tables -> SoA locator -> " + method + " -> validation"},
+        provenance={"pipeline": "pdfplumber text/tables -> SoA locator -> " + method + " -> validation",
+                    **llm_provenance},
     )
     if write_cache:
         save_cached(res)

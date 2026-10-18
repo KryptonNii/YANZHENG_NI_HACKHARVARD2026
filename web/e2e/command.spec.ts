@@ -16,7 +16,7 @@ test.describe("command center", () => {
     await page.getByTestId("identity-switcher").selectOption("alex.author");
     await page.getByTestId("start-simulation").click();
     await expect(page.getByTestId("advance-1-week")).toBeEnabled({ timeout: 90_000 });
-    await expect(page.getByTestId("simulated-badge")).toContainText("Simulated feed");
+    await expect(page.getByTestId("simulated-badge")).toContainText("Simulated");
     const clock = page.getByTestId("sim-clock");
     const before = (await clock.textContent()) ?? "";
     await page.getByTestId("advance-1-week").click();

@@ -7,7 +7,7 @@ when they import cleanly; until then those paths answer `501 not_ready`.
 ```bash
 uv sync --project api
 uv run --project api python -m trialpilot_api.seed                 # DB + parameter library + fixture designs
-uv run --project api uvicorn trialpilot_api.main:app --port 8000 --reload
+uv run --project api uvicorn trialpilot_api.main:app --env-file .env --port 8000 --reload
 uv run --project api pytest api/tests -q --ignore=api/tests/compliance --ignore=api/tests/importers
 ```
 

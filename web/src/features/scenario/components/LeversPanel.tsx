@@ -45,7 +45,7 @@ function Group({ title, hint, children, changed }: { title: string; hint?: strin
         </p>
         {changed && <span className="chip border-accent-300 bg-accent-50 text-accent-800">{t("changed", "已更改")}</span>}
       </div>
-      {hint && <p className="-mt-1 mb-2 text-xs text-ink-500">{hint}</p>}
+      {hint && <details className="mb-2 text-xs text-ink-500"><summary>{t("Details", "说明")}</summary><p className="mt-1">{hint}</p></details>}
       {children}
     </fieldset>
   );
@@ -67,7 +67,7 @@ function ShareSlider({ label, value, onChange, describe, testId, min = 0, max = 
   return (
     <div>
       <div className="flex items-baseline justify-between">
-        <label htmlFor={id} className="label">
+        <label htmlFor={id} className="sr-only">
           {label}
         </label>
         <output htmlFor={id} className="text-lg font-bold tabular text-ink-900">
@@ -86,7 +86,6 @@ function ShareSlider({ label, value, onChange, describe, testId, min = 0, max = 
         onChange={(e) => onChange(Number(e.target.value) / 100)}
         className="mt-2"
       />
-      <p className="mt-1 text-xs text-ink-500">{describe(pct)}</p>
     </div>
   );
 }
@@ -131,14 +130,14 @@ export function LeversPanel({ design, levers, onChange }: { design: TrialDesign;
   return (
     <div className="card overflow-hidden" data-testid="levers-panel">
       <div className="flex items-center justify-between border-b border-ink-200 bg-ink-50/60 px-4 py-3">
-        <h2 className="text-base font-semibold text-ink-900">{t("Design levers", "设计调整项")}</h2>
+        <h2 className="text-base font-semibold text-ink-900">{t("Scenario settings", "方案参数")}</h2>
         <button
           type="button"
           className="btn-ghost px-2 py-1 text-xs"
           onClick={() => onChange({ ...DEFAULT_LEVERS })}
           disabled={leversEqual(levers, DEFAULT_LEVERS)}
         >
-          {t("Reset to baseline", "重置为基线")}
+          {t("Reset", "重置")}
         </button>
       </div>
 
@@ -155,8 +154,8 @@ export function LeversPanel({ design, levers, onChange }: { design: TrialDesign;
         />
       </Group>
 
-      <Group title={t("Add assumed countries", "添加假设国家")} changed={addedCountries > 0}>
-        <label htmlFor={countriesId} className="label">{t("Add assumed countries", "添加假设国家")}</label>
+      <Group title={t("Added countries · planned", "新增国家 · 规划")} changed={addedCountries > 0}>
+        <label htmlFor={countriesId} className="sr-only">{t("Added countries · planned", "新增国家 · 规划")}</label>
         <input
           id={countriesId}
           type="number"
@@ -168,10 +167,7 @@ export function LeversPanel({ design, levers, onChange }: { design: TrialDesign;
           onChange={(e) => set({ added_country_count: Math.max(0, Math.min(5, Math.round(Number(e.target.value)))) })}
           className="input mt-1 w-20 tabular"
         />
-        <p className="mt-1 text-xs text-ink-500">
-          {addedCountries === 0 ? t("No extra countries", "未添加国家") : t(`${addedCountries} assumed ${addedCountries === 1 ? "country" : "countries"} added`, `已添加 ${addedCountries} 个假设国家`)}
-        </p>
-        {addedCountries > 0 && <p className="mt-1 text-xs text-ink-500">{t("Added countries are assumptions, not registry sites. Each adds one assumed site, weighted by the median positive expected enrollment of active sites, or the default patients per site when unavailable.", "新增国家为假设，不属于注册记录中的研究中心。每个国家增加一个假设研究中心，按活跃中心的正值预期入组人数中位数赋权；若无可用数据，则采用每中心默认人数。")}</p>}
+        {addedCountries > 0 && <details className="mt-1 text-xs text-ink-500"><summary>{t("Planning basis", "规划口径")}</summary><p>{t("Added countries are planning inputs. Each adds one modeled site, weighted by active-site median enrollment or the default patients per site.", "新增国家为规划输入，每国增加一个测算中心，按活跃中心的预期入组人数中位数或每中心默认人数赋权。")}</p></details>}
       </Group>
 
       <Group title={t("Remote monitoring", "远程监查")} changed={levers.remote_monitoring_share > 0}>
@@ -185,12 +181,12 @@ export function LeversPanel({ design, levers, onChange }: { design: TrialDesign;
       </Group>
 
       <Group
-        title={t("Visits: on site, home nurse or telehealth", "访视：现场、上门护理或远程医疗")}
+        title={t("Visit setting", "访视方式")}
         hint={t("Moving a visit removes patient travel for it and adds home-nurse or telehealth cost.", "更改访视地点可减少受试者出行，同时增加上门护理或远程医疗费用。")}
         changed={visitsChanged}
       >
         {design.visits.length === 0 ? (
-          <p className="text-sm text-ink-500">{t("No visit schedule in this design yet. Import a protocol to add one.", "此设计暂无访视计划。导入试验方案即可添加。")}</p>
+          <p className="text-sm text-ink-500">{t("No visit schedule", "暂无访视计划")}</p>
         ) : (
           <ul className="max-h-72 space-y-1.5 overflow-y-auto pr-1" data-testid="visit-levers">
             {design.visits.map((v) => {
@@ -205,7 +201,7 @@ export function LeversPanel({ design, levers, onChange }: { design: TrialDesign;
                       {t("Week", "周次")} {v.week}
                       {!v.can_be_remote && mode !== "site" && (
                         <span className="ml-1 font-semibold text-caution-800" title={t("The design does not mark this visit as remote-eligible; confirm clinically", "设计未将此访视标记为可远程开展；请进行临床确认")}>
-                          {t("· not marked remote-eligible", "· 未标记为可远程开展")}
+                          {t("· eligibility to confirm", "· 可行性待确认")}
                         </span>
                       )}
                     </p>
@@ -248,16 +244,16 @@ export function LeversPanel({ design, levers, onChange }: { design: TrialDesign;
             { value: "on_demand", label: t("On-demand resupply", "按需补货") },
           ]}
         />
-        <p className="mt-1.5 text-xs text-ink-500">
+        <details className="mt-1.5 text-xs text-ink-500"><summary>{t("Supply terms", "供应口径")}</summary><p>
           {levers.drug_supply_strategy === "upfront"
             ? t("Each site stocked for its expected patients at activation.", "各研究中心启用时，按预期受试者人数备货。")
             : t("Sites resupplied when stock runs low: less waste, more shipments, stockout risk reported.", "库存不足时补货：减少浪费、增加运输次数，并报告缺货风险。")}
-        </p>
+        </p></details>
       </Group>
 
       <Group
         title={t("Remove procedures", "移除检查项目")}
-        hint={t("One row per procedure code. Checking Remove removes every assessment listed, on every visit where that code appears. Endpoint roles can be corrected during protocol review.", "每行对应一个检查项目代码。勾选移除后，将删除所有访视中具有该代码的全部评估。终点关联可在试验方案审核时更正。")}
+        hint={t("Removal applies to every visit using the selected code. Confirm endpoint linkage during protocol review.", "移除应用于使用该代码的全部访视；终点关联可在方案审核时确认。")}
         changed={levers.removed_procedures.length > 0}
       >
         {procedures.length === 0 ? (
@@ -287,21 +283,25 @@ export function LeversPanel({ design, levers, onChange }: { design: TrialDesign;
                       <span className="block">{t(`at ${p.visits} visit${p.visits === 1 ? "" : "s"}`, `涉及 ${p.visits} 次访视`)}</span>
                     </span>
                   </label>
-                  <ul className="ml-7 space-y-1 pb-2 text-xs text-ink-600">
+                  {removed && [...(endpointLinks.get(p.code)?.values() ?? [])].some((link) => link.role === "supports_primary") && <p role="status" className="ml-7 text-xs font-medium text-caution-800">{t("Primary outcome linked · review required", "关联主要结局 · 待审核")}</p>}
+                  <details className="ml-7 pb-2 text-xs text-ink-600">
+                    <summary>{t("Endpoint linkage", "终点关联")}</summary>
+                    <ul className="mt-1 space-y-1">
                     {[...(endpointLinks.get(p.code)?.entries() ?? [])].map(([key, link]) => (
                       <li key={key}>
                         <span className="font-medium">{link.label}: {ENDPOINT_ROLES[link.role]}</span>
                         <span className="block text-ink-500">{LINK_BASES[link.basis]} {t("· Visits", "· 访视")} {link.visits.join(", ")}</span>
                         {link.note && <p>{link.note}</p>}
                         {removed && link.role === "supports_primary" && (
-                          <p role="status" className="font-medium text-caution-800">{t("This procedure is tied to a primary outcome.", "此检查项目与主要结局关联。")}</p>
+                          <p className="font-medium text-caution-800">{t("This procedure is tied to a primary outcome.", "此检查项目与主要结局关联。")}</p>
                         )}
                         {removed && link.role === "not_linked" && (
                           <p role="status" className="text-caution-800">{t("No primary or secondary outcome in the registry record matches this procedure.", "注册记录中没有与此检查项目匹配的主要或次要结局。")}</p>
                         )}
                       </li>
                     ))}
-                  </ul>
+                    </ul>
+                  </details>
                 </li>
               );
             })}
@@ -311,14 +311,13 @@ export function LeversPanel({ design, levers, onChange }: { design: TrialDesign;
 
       <Group
         title={t(`Sites (${design.sites.length - levers.excluded_site_ids.length} of ${design.sites.length} included)`, `研究中心（已纳入 ${design.sites.length - levers.excluded_site_ids.length} / ${design.sites.length}）`)}
-        hint={t("Untick to exclude a site, or click its dot on the map.", "取消勾选可排除研究中心，也可点击地图上的对应圆点。")}
         changed={levers.excluded_site_ids.length > 0}
       >
         {design.sites.length > 8 && (
           <input
             type="search"
             className="input mb-2 py-1.5"
-            placeholder={t("Filter sites by name, city or country", "按名称、城市或国家筛选研究中心")}
+            placeholder={t("Search sites", "搜索研究中心")}
             aria-label={t("Filter sites", "筛选研究中心")}
             value={siteFilter}
             onChange={(e) => setSiteFilter(e.target.value)}

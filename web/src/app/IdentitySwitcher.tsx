@@ -8,9 +8,7 @@ export function IdentitySwitcher() {
   return (
     <div className="flex items-center gap-2">
       <label htmlFor="identity-switcher" className="text-right text-[11px] font-semibold uppercase leading-tight tracking-wide text-ink-500">
-        {t("Demo", "演示")}
-        <br />
-        {t("identities", "身份")}
+        {t("Role", "工作角色")}
       </label>
       <select
         id="identity-switcher"
@@ -18,7 +16,7 @@ export function IdentitySwitcher() {
         value={me.user}
         onChange={(e) => setIdentity(e.target.value)}
         className="rounded-lg border border-ink-300 bg-white py-1.5 pl-2.5 pr-8 text-sm font-semibold text-ink-900 focus:border-accent-600 focus:outline-none focus:ring-2 focus:ring-accent-600/30"
-        title={t("Demo identities — the API receives X-User / X-Role headers. Signing still asks for a PIN.", "演示身份：API 接收 X-User / X-Role 请求头，签署时仍需输入 PIN 码。")}
+        title={t("Test roles · PIN required for signing", "测试角色 · 签署需 PIN")}
       >
         {DEMO_IDENTITIES.map((i) => (
           <option key={i.user} value={i.user}>

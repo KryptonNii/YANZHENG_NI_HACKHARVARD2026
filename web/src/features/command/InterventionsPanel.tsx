@@ -26,7 +26,7 @@ export function InterventionsPanel({ trialId, interventions, effects, onChanged 
     <section className="card p-4" data-testid="intervention-list" aria-label={t("Interventions", "干预")}>
       <h2 className="card-title mb-3">{t("Interventions", "干预")}</h2>
       {error && <p role="alert" className="mb-3 text-sm text-worse-900">{localizeCopy(error)}</p>}
-      {interventions.length === 0 && <p className="text-sm text-ink-500">{t("No interventions yet. Plan one from an alert.", "暂无干预。请从警报中规划干预。")}</p>}
+      {interventions.length === 0 && <p className="text-sm text-ink-500">{t("No interventions", "暂无干预")}</p>}
       <ul className="space-y-4">
         {interventions.map((iv) => {
           const effect = byId.get(iv.id);
@@ -45,7 +45,7 @@ export function InterventionsPanel({ trialId, interventions, effects, onChanged 
               {effect && verdict ? (
                 <EffectCard effect={effect} />
               ) : (
-                <p className="mt-2 text-xs text-ink-500">{t("Effect is estimated after the intervention has started and the clock moves forward.", "启动干预并推进时钟后，将估计干预效果。")}</p>
+                <p className="mt-2 text-xs text-ink-500">{t("Awaiting follow-up", "待随访评估")}</p>
               )}
             </li>
           );
@@ -78,7 +78,10 @@ function EffectCard({ effect }: { effect: EffectDetail }) {
       <p className="mt-1 text-xs tabular text-ink-600">
         {t("Treated change", "干预组变化")} {formatSigned(est.treated_change)} {t("· control change", "· 对照组变化")} {formatSigned(est.control_change)}
       </p>
-      <p className="mt-2 text-sm leading-relaxed text-ink-800">{displayText(est.explanation)}</p>
+      <details className="mt-2 text-xs leading-relaxed text-ink-600">
+        <summary className="cursor-pointer font-semibold">{t("Assessment basis", "评估依据")}</summary>
+        <p className="mt-2">{displayText(est.explanation)}</p>
+      </details>
       {chart && (
         <div className="mt-3 h-36" role="img" aria-label={t("Before and after, treated sites and control sites", "干预前后，干预中心与对照中心")}>
           <ResponsiveContainer width="100%" height="100%">
@@ -149,8 +152,11 @@ function PredictionCard({ effect }: { effect: EffectDetail }) {
             {t("observed", "观测")} {observed ? `${formatSigned(observed.p50)} (${t("95% interval", "95% 区间")} ${formatSigned(observed.ci95[0])} – ${formatSigned(observed.ci95[1])})` : "—"}
             {rec.post_weeks > 0 ? ` · ${t(`${rec.post_weeks} weeks observed`, `已观测 ${rec.post_weeks} 周`)}` : ""}
           </p>
-          <p className="mt-1 leading-relaxed">{displayText(rec.explanation)}</p>
-          <p className="mt-1 text-[11px] text-ink-500">{displayText(rec.basis)} {displayText(rec.model_label)}</p>
+          <details className="mt-1 leading-relaxed">
+            <summary className="cursor-pointer">{t("Assessment basis", "评估依据")}</summary>
+            <p className="mt-1">{displayText(rec.explanation)}</p>
+            <p className="mt-1 text-[11px] text-ink-500">{displayText(rec.basis)} {displayText(rec.model_label)}</p>
+          </details>
         </div>
       )}
     </div>

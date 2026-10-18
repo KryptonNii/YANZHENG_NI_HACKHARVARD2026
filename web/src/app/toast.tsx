@@ -39,6 +39,12 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   const tr = useTranslation();
   const [toasts, setToasts] = useState<Toast[]>([]);
   const nextId = useRef(1);
+  const timers = useRef(new Set<number>());
+
+  useEffect(() => () => {
+    timers.current.forEach((timer) => window.clearTimeout(timer));
+    timers.current.clear();
+  }, []);
 
   const dismiss = useCallback((id: number) => setToasts((t) => t.filter((x) => x.id !== id)), []);
 
@@ -50,7 +56,11 @@ export function ToastProvider({ children }: { children: ReactNode }) {
         if (t.some((x) => x.title === title && x.message === message)) return t;
         return [...t.slice(-3), { id, kind, title, message }];
       });
-      window.setTimeout(() => dismiss(id), kind === "error" ? 8000 : 4000);
+      const timer = window.setTimeout(() => {
+        timers.current.delete(timer);
+        dismiss(id);
+      }, kind === "error" ? 8000 : 4000);
+      timers.current.add(timer);
     },
     [dismiss],
   );

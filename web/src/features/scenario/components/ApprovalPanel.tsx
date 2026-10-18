@@ -6,7 +6,6 @@ import type { ApprovalView, SignatureView } from "@/app/api/types";
 import { formatUtc } from "@/app/format";
 import { displayName, roleName, useIdentity } from "@/app/identity";
 import { localizeCopy } from "@/app/localize";
-import { MOCK_API } from "@/app/health";
 import { Badge } from "@/app/ui";
 import { signErrorMessage } from "@/features/compliance/errors";
 
@@ -77,7 +76,7 @@ export function ApprovalPanel({ approval, onChange }: { approval: ApprovalView; 
         {t("Author", "作者")} {approval.author_name ?? displayName(approval.author)} {t("· required:", "· 需要：")} {approval.required_meanings.map(meaningLabel).join(" → ")}
       </p>
       {approval.record_changed && (
-        <p className="mt-2 rounded-md bg-worse-50 px-2 py-1 text-xs font-medium text-worse-900">{t("The record changed after it was submitted; existing signatures no longer match it.", "记录在提交后发生了更改；已有签名不再与记录匹配。")}</p>
+        <p className="mt-2 rounded-md bg-worse-50 px-2 py-1 text-xs font-medium text-worse-900">{t("Record changed · signatures invalid", "记录已更改 · 原签名失效")}</p>
       )}
 
       <ul className="mt-3 space-y-2" data-testid="signature-list">
@@ -93,12 +92,11 @@ export function ApprovalPanel({ approval, onChange }: { approval: ApprovalView; 
                   <span className="font-semibold capitalize text-ink-900">{meaningLabel(sig.meaning)}</span> {t("by", "签署人")}{" "}
                   <span className="font-semibold">{sig.signer_name ?? displayName(sig.signer)}</span>
                   {sig.signer_name ? ` (${sig.signer}, ${roleName(sig.role)})` : ""} <Validity sig={sig} />
-                  <span className="block text-xs tabular text-ink-500">
-                    {formatUtc(sig.signed_at)} {t("· record sha256", "· 记录 SHA256")} <code className="font-mono">{sig.record_hash.slice(0, 12)}…</code>
-                  </span>
+                  <span className="block text-xs tabular text-ink-500">{formatUtc(sig.signed_at)}</span>
+                  <details className="text-xs text-ink-500"><summary>{t("Signature record", "签名记录")}</summary><code className="break-all font-mono">SHA256 {sig.record_hash}</code></details>
                 </span>
               ) : (
-                <span className="capitalize text-ink-500">{meaningLabel(m)} {t("— awaiting signature", "— 等待签名")}</span>
+                <span className="capitalize text-ink-500">{meaningLabel(m)} {t("· Pending", "· 待签署")}</span>
               )}
             </li>
           );
@@ -118,12 +116,12 @@ export function ApprovalPanel({ approval, onChange }: { approval: ApprovalView; 
             {t("Sign as", "签署身份")} <strong>{me.name}</strong> ({roleName(me.role)}) {t("with meaning", "签署含义")} <strong className="capitalize">{meaningLabel(next)}</strong>
           </p>
           <p className="mt-1 text-xs text-ink-500">
-            {t("By signing, I confirm that I have", "签署即确认我已对该方案完成")} {meaningLabel(next)} {t("this scenario. The signature is bound to the exact record hash and recorded in the audit trail.", "操作。签名与记录的精确哈希值绑定，并记入审计记录。")}
+            {t("Signing confirms this action and records a signature against this version.", "签署即确认完成上述操作，并对当前版本留存签名记录。")}
           </p>
           <div className="mt-2 flex items-end gap-2">
             <div className="flex-1">
               <label htmlFor={pinId} className="label text-xs">
-                {t("Re-enter your PIN", "重新输入 PIN 码")}
+                {t("PIN", "PIN 码")}
               </label>
               <input
                 id={pinId}
@@ -141,7 +139,6 @@ export function ApprovalPanel({ approval, onChange }: { approval: ApprovalView; 
               {busy ? t("Signing…", "签署中…") : t(`Sign: ${next}`, `签署：${meaningLabel(next)}`)}
             </button>
           </div>
-          {MOCK_API && <p className="mt-1 text-[11px] text-ink-500">{t("Mock API demo PINs: Alex 1111 · Riley 2222 · Sam 3333.", "模拟 API 演示 PIN：Alex 1111 · Riley 2222 · Sam 3333。")}</p>}
           {error && (
             <p role="alert" className="mt-2 rounded-md border border-worse-200 bg-worse-50 px-3 py-2 text-sm font-medium text-worse-900" data-testid="sign-error">
               {localizeCopy(error)}

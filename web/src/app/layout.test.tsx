@@ -16,7 +16,7 @@ beforeEach(() => {
 
 function commandHref(): string | null {
   render(<ToastProvider><MemoryRouter initialEntries={["/"]}><AppRoutes /></MemoryRouter></ToastProvider>);
-  return screen.getByRole("link", { name: "Command center" }).getAttribute("href");
+  return screen.getByRole("link", { name: "Operations" }).getAttribute("href");
 }
 
 it("links the command center to the 40-site demo trial when no design was opened yet", () => {

@@ -56,7 +56,7 @@ export function ApprovalsPage() {
       <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">{t("Approvals", "审批")}</h1>
-          <p className="mt-1 text-sm text-ink-500">{t("Signing as", "签署人")} {me.name} ({roleName(me.role)}{t("). An author cannot approve their own record.", "）。作者不能批准自己的记录。")}</p>
+          <p className="mt-1 text-sm text-ink-500">{t("Signing as", "签署人")} {me.name} ({roleName(me.role)})</p>
         </div>
         <div role="tablist" aria-label={t("Approval status", "审批状态")} className="inline-flex rounded-lg border border-ink-300 bg-ink-100 p-0.5">
           {STATUSES.map((id) => (
@@ -90,7 +90,7 @@ export function ApprovalsPage() {
             </div>
             <p className="mt-2 text-xs text-ink-500">{t("Required:", "要求：")} {item.required_meanings.map(displayText).join(" → ")}</p>
             {item.record_changed && (
-              <p className="mt-2 text-sm font-medium text-worse-800">{t("The record changed after submission. Signatures bound to the old hash are no longer valid.", "记录在提交后已更改。绑定旧哈希值的签名已失效。")}</p>
+              <p className="mt-2 text-sm font-medium text-worse-800">{t("Record changed; prior signatures are invalid.", "记录已更改，原签名失效。")}</p>
             )}
             <ul className="mt-3 space-y-2">
               {item.signatures.length === 0 && <li className="text-sm text-ink-500">{t("No signatures yet.", "暂无签名。")}</li>}
@@ -98,8 +98,11 @@ export function ApprovalsPage() {
                 <li key={sig.id} className="text-sm">
                   <span className="font-semibold capitalize">{displayText(sig.meaning)}</span> · <Validity sig={sig} />
                   <span className="mt-0.5 block text-xs text-ink-600">{sig.manifestation ?? `${displayName(sig.signer)} · ${formatUtc(sig.signed_at)}`}</span>
-                  <span className="mt-1 block text-xs text-ink-600">{sig.signer_name ?? sig.signer} · {sig.signer} · {displayText(sig.role)} · {displayText(sig.meaning).toUpperCase()} · {formatUtc(sig.signed_at)}</span>
-                  <span className="mt-1 block break-all font-mono text-[11px] text-ink-500">{t("Record sha256", "记录 sha256")} {sig.record_hash}</span>
+                  <details className="mt-1 text-xs text-ink-500">
+                    <summary className="cursor-pointer">{t("Signature details", "签名详情")}</summary>
+                    <p className="mt-1">{sig.signer_name ?? sig.signer} · {sig.signer} · {displayText(sig.role)} · {displayText(sig.meaning).toUpperCase()} · {formatUtc(sig.signed_at)}</p>
+                    <p className="mt-1 break-all font-mono text-[11px]">{t("Record sha256", "记录 sha256")} {sig.record_hash}</p>
+                  </details>
                 </li>
               ))}
             </ul>
@@ -230,7 +233,6 @@ function SignDialog({ approval, onClose, onSigned }: { approval: ApprovalView | 
             <select id="sign-meaning" className="input mt-1" value={meaning} onChange={() => undefined}>
               <option value={meaning}>{displayText(meaning)}</option>
             </select>
-            <p className="mt-1 text-xs text-ink-500">{t("Only the next meaning in order can be signed.", "只能按顺序签署下一个含义。")}</p>
           </div>
           <p className="text-sm text-ink-800">{t(`By signing, I confirm that I have ${meaning} this ${approval.record_type.replaceAll("_", " ")}.`, `签署即确认我已对该${displayText(approval.record_type)}完成${displayText(meaning)}。`)}</p>
           <p className="text-sm">{t("Signing as", "签署人")} {me.name} ({me.user}, {roleName(me.role)})</p>

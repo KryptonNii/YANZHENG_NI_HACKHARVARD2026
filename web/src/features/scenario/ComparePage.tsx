@@ -44,7 +44,7 @@ export function leverRows(a: Levers, b: Levers): Array<{ label: string; a: strin
   const list = (xs: Array<number | string>) => (xs.length ? xs.join(", ") : tr("none", "无"));
   const rows = [
     { label: tr("Enrollment speed", "入组速度"), a: pct(a.enrollment_rate_multiplier), b: pct(b.enrollment_rate_multiplier) },
-    { label: tr("Added assumed countries", "新增假设国家"), a: String(a.added_country_count), b: String(b.added_country_count) },
+    { label: tr("Added countries · planned", "新增国家 · 规划"), a: String(a.added_country_count), b: String(b.added_country_count) },
     { label: tr("Remote monitoring", "远程监查"), a: pct(a.remote_monitoring_share), b: pct(b.remote_monitoring_share) },
     { label: tr("Home-nurse visits", "居家护理访视"), a: list(a.home_visit_numbers.map((n) => `V${n}`)), b: list(b.home_visit_numbers.map((n) => `V${n}`)) },
     { label: tr("Telehealth visits", "远程医疗访视"), a: list(a.remote_visit_numbers.map((n) => `V${n}`)), b: list(b.remote_visit_numbers.map((n) => `V${n}`)) },
@@ -74,7 +74,7 @@ function DeltaCell({ a, b, perDraw }: { a: MetricRange; b: MetricRange; perDraw:
       </span>
     );
   }
-  if (!isKnownRange(a) || !isKnownRange(b)) return <span className="text-ink-500">{tr("unknown (a value is missing)", "未知（缺少数值）")}</span>;
+  if (!isKnownRange(a) || !isKnownRange(b)) return <span className="text-ink-500">{tr("Unavailable", "暂无数据")}</span>;
   const d = delta(b, a);
   if (d.direction === "same") return <span className="text-ink-500">{tr("● no change", "● 无变化")}</span>;
   const better = d.direction === "lower";
@@ -92,7 +92,7 @@ function Picker({ label, value, options, onChange, testId }: { label: string; va
     <label className="block">
       <span className="label">{label}</span>
       <select className="input mt-1" value={value ?? ""} onChange={(e) => onChange(e.target.value)} data-testid={testId}>
-        <option value="" disabled>{tr("Choose a saved scenario…", "选择已保存的方案…")}</option>
+        <option value="" disabled>{tr("Select scenario", "选择方案")}</option>
         {options.map((s) => (
           <option key={s.id} value={s.id}>
             {localizeCopy(s.name)} v{s.version}{tr(" — design v", "— 设计 v")}{s.design_version ?? "?"} — {displayName(s.author)} ({tr(s.status, humanize(s.status))})
@@ -161,14 +161,14 @@ export function ComparePage() {
   return (
     <div className="space-y-5">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight text-ink-900">{tr("Compare scenarios", "比较方案")}</h1>
-        <p className="mt-1 text-sm text-ink-600">{tr("Side by side, with the change from A to B. Lower is better for every metric. For two scenarios of the same trial design, the change is computed per Monte Carlo draw, so its P10–P90 shows how certain the difference is.", "并排比较方案，显示从 A 到 B 的变化。所有指标均为越低越好。对于同一试验设计的两个方案，逐次蒙特卡洛抽样计算变化，其 P10–P90 区间反映差值的不确定性。")}</p>
+        <h1 className="text-2xl font-bold tracking-tight text-ink-900">{tr("Scenario comparison", "方案对比")}</h1>
+        <details className="mt-2 text-sm text-ink-600"><summary>{tr("Comparison method", "对比口径")}</summary><p className="mt-1">{tr("Forecast changes from A to B. Lower values are better. For the same design version, P10–P90 is calculated per Monte Carlo draw.", "显示 A 至 B 的预测变化，数值越低越好。同一设计版本逐次抽样计算 P10–P90 差值区间。")}</p></details>
       </div>
 
       {loadingList ? (
         <Spinner label={tr("Loading saved scenarios", "正在加载已保存方案")} />
       ) : all.length < 2 ? (
-        <EmptyState title={tr("Save at least two scenarios to compare", "请至少保存两个方案以进行比较")} action={<Link to="/" className="btn-secondary">{tr("Import a trial", "导入试验")}</Link>}>{tr("In the simulator, set levers and press “Save scenario”. Saved versions appear here.", "在模拟器中调整选项并点击“保存方案”。已保存版本将显示在此处。")}</EmptyState>
+        <EmptyState title={tr("Two saved scenarios required", "需保存至少两个方案")} action={<Link to="/" className="btn-secondary">{tr("Import a trial", "导入试验")}</Link>} />
       ) : (
         <div className="card grid gap-4 p-4 md:grid-cols-2">
           <Picker label={tr("Scenario A (reference)", "方案 A（参考）")} value={aId} options={all} onChange={(id) => setSide("a", id)} testId="compare-a" />
@@ -177,16 +177,16 @@ export function ComparePage() {
       )}
 
       {a && b && !sameDesign && (
-        <p className="rounded-lg border border-caution-300 bg-caution-50 px-4 py-2 text-sm text-caution-900">{tr("These scenarios are not on the same design version", "这些方案基于不同的设计版本")}{a.design_version != null || b.design_version != null ? tr(` (design v${a.design_version ?? "?"} and design v${b.design_version ?? "?"})`, `（设计 v${a.design_version ?? "?"} 和设计 v${b.design_version ?? "?"}）`) : ""}{tr(". Per-draw comparison stays off, because the difference would mix the design change with the levers.", "。逐次抽样比较已禁用，以避免混合设计变更和选项调整造成的影响。")}</p>
+        <p className="rounded-lg border border-caution-300 bg-caution-50 px-4 py-2 text-sm text-caution-900">{tr("Different design versions", "设计版本不同")}{a.design_version != null || b.design_version != null ? tr(` (v${a.design_version ?? "?"} / v${b.design_version ?? "?"})`, `（v${a.design_version ?? "?"} / v${b.design_version ?? "?"}）`) : ""}{tr(" · P50 comparison only", " · 仅对比 P50")}</p>
       )}
       {cmp && cmp.warnings.length > 0 && (
-        <ul className="list-disc rounded-lg border border-caution-300 bg-caution-50 py-2 pl-8 pr-4 text-sm text-caution-900">
+        <details className="rounded-lg border border-caution-300 bg-caution-50 px-4 py-2 text-sm text-caution-900"><summary>{tr("Items to confirm", "待确认事项")} ({cmp.warnings.length})</summary><ul className="mt-2 list-disc pl-4">
           {cmp.warnings.map((w) => (
             <li key={w}>{w}</li>
           ))}
-        </ul>
+        </ul></details>
       )}
-      {cmpError && <p className="text-sm text-ink-600">{tr("Per-draw comparison unavailable (", "逐次抽样比较不可用（")}{cmpError}{tr("); showing the difference of P50s.", "）；当前显示 P50 的差值。")}</p>}
+      {cmpError && <p className="text-sm text-ink-600">{tr("Range comparison unavailable; P50 only:", "区间对比不可用，仅显示 P50：")} {cmpError}</p>}
 
       {(A.loading || B.loading) && <Skeleton className="h-64 w-full" />}
 
@@ -203,15 +203,15 @@ export function ComparePage() {
                   <ScenarioStatusChip status={s.status} />
                 </div>
                 <p className="mt-0.5 text-xs text-ink-500">
-                  {displayName(s.author)} · {formatUtc(s.created_at)}{tr(" · parameter set ", "· 参数集")}<code className="font-mono">{s.parameter_set_version}</code>
+                  {displayName(s.author)} · {formatUtc(s.created_at)}
                 </p>
-                <Link className="link mt-2 inline-block text-sm" to={`/scenario/${encodeURIComponent(s.design_id)}?s=${encodeURIComponent(s.id)}`}>{tr("Open in simulator", "在模拟器中打开")}</Link>
+                <Link className="link mt-2 inline-block text-sm" to={`/scenario/${encodeURIComponent(s.design_id)}?s=${encodeURIComponent(s.id)}`}>{tr("Open analysis", "查看分析")}</Link>
               </div>
             ))}
           </div>
 
           <section className="card overflow-x-auto p-4" aria-labelledby="cmp-metrics">
-            <h2 id="cmp-metrics" className="card-title mb-2">{tr("Metrics (P50, with P10–P90)", "指标（P50 及 P10–P90）")}</h2>
+            <h2 id="cmp-metrics" className="card-title mb-2">{tr("Forecast metrics · P50", "预测指标 · P50")}</h2>
             <table className="w-full text-sm" data-testid="compare-table">
               <thead>
                 <tr className="text-left text-xs uppercase tracking-wide text-ink-500">
@@ -250,7 +250,7 @@ export function ComparePage() {
 
           <div className="grid gap-5 xl:grid-cols-2">
             <section className="card overflow-x-auto p-4" aria-labelledby="cmp-levers">
-              <h2 id="cmp-levers" className="card-title mb-2">{tr("Levers", "调整选项")}</h2>
+              <h2 id="cmp-levers" className="card-title mb-2">{tr("Scenario settings", "方案参数")}</h2>
               <table className="w-full text-sm">
                 <thead>
                   <tr className="text-left text-xs uppercase tracking-wide text-ink-500">
@@ -275,7 +275,7 @@ export function ComparePage() {
             </section>
 
             <section className="card overflow-x-auto p-4" aria-labelledby="cmp-modules">
-              <h2 id="cmp-modules" className="card-title mb-2">{tr("Modules (difference of P50s)", "模块（P50 的差值）")}</h2>
+              <h2 id="cmp-modules" className="card-title mb-2">{tr("Module changes · P50", "模块变化 · P50")}</h2>
               <table className="w-full text-sm">
                 <thead>
                   <tr className="text-left text-xs uppercase tracking-wide text-ink-500">

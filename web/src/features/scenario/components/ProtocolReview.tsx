@@ -30,7 +30,7 @@ export const ENDPOINT_ROLES: Record<Procedure["endpoint_role"], string> = {
   get supports_primary() { return t("Supports primary outcome", "支持主要结局"); },
   get supports_secondary() { return t("Supports secondary outcome", "支持次要结局"); },
   get not_linked() { return t("Not linked to a registry outcome", "未关联注册记录中的结局"); },
-  get unknown() { return t("Unknown", "未知"); },
+  get unknown() { return t("To confirm", "待确认"); },
 };
 
 export const LINK_BASES: Record<Procedure["link_basis"], string> = {
@@ -117,9 +117,9 @@ export function ProtocolReview({
     <div data-testid="protocol-review">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2">
-          <DraftStamp>{t("AI draft — confirm each row", "AI 草稿 — 请逐行确认")}</DraftStamp>
+          <DraftStamp>{t("Pending review", "待审核")}</DraftStamp>
           <span className="text-sm text-ink-600">
-            {candidates.length} {t("candidate visit", "个候选访视")}{t(candidates.length === 1 ? "" : "s", "")} · {counts.accepted + counts.edited} {t("accepted ·", "已接受 ·")} {counts.rejected} {t("rejected ·", "已拒绝 ·")}{" "}
+            {candidates.length} {t("visit", "次访视")}{t(candidates.length === 1 ? "" : "s", "")} · {counts.accepted + counts.edited} {t("accepted ·", "已接受 ·")} {counts.rejected} {t("rejected ·", "已拒绝 ·")}{" "}
             {counts.pending} {t("to review", "待审核")}
           </span>
         </div>
@@ -130,7 +130,7 @@ export function ProtocolReview({
             onClick={acceptRemaining}
             disabled={counts.pending === 0}
           >
-            {t("Accept all remaining", "接受全部剩余项")}
+            {t("Accept remaining", "接受剩余项")}
           </button>
           <button
             type="button"
@@ -145,18 +145,18 @@ export function ProtocolReview({
         </div>
       </div>
       {warnings.length > 0 && (
-        <ul className="mb-3 list-disc rounded-lg bg-caution-50 py-2 pl-8 pr-3 text-sm text-caution-900">
-          {warnings.map((w) => (
-            <li key={w}>{w}</li>
-          ))}
-        </ul>
+        <details className="mb-3 rounded-lg bg-caution-50 px-3 py-2 text-sm text-caution-900">
+          <summary className="cursor-pointer font-semibold">{t("Review notes", "审核事项")} ({warnings.length})</summary>
+          <ul className="mt-2 list-disc pl-5">
+            {warnings.map((w) => (
+              <li key={w}>{w}</li>
+            ))}
+          </ul>
+        </details>
       )}
       {counts.pending > 0 && counts.accepted + counts.edited > 0 && (
-        <p className="mb-2 text-xs text-ink-500">{t("Rows still “to review” are not applied.", "仍为“待审核”的行不会被应用。")}</p>
+        <p className="mb-2 text-xs text-ink-500">{t("Only accepted visits will be applied.", "仅应用已接受访视。")}</p>
       )}
-      <p className="mb-2 text-xs text-ink-500">
-        {t("Endpoint roles describe registry links. Unknown means the link has not been established. Edit a visit to correct a role or add a note. Procedure removal remains a separate design lever.", "终点角色描述与注册记录的关联。“未知”表示尚未建立关联。编辑访视可更正角色或添加备注。移除检查项目仍是独立的设计调整项。")}
-      </p>
       <div className="overflow-x-auto rounded-lg border border-ink-200">
         <table className="w-full text-sm">
           <thead className="bg-ink-50 text-left text-xs uppercase tracking-wide text-ink-500">
@@ -164,7 +164,7 @@ export function ProtocolReview({
               <th scope="col" className="px-3 py-2 font-semibold">{t("Visit", "访视")}</th>
               <th scope="col" className="px-3 py-2 font-semibold">{t("Week", "周次")}</th>
               <th scope="col" className="px-3 py-2 font-semibold">{t("Procedures", "检查项目")}</th>
-              <th scope="col" className="px-3 py-2 font-semibold">{t("Source (page · quote)", "来源（页码 · 引文）")}</th>
+              <th scope="col" className="px-3 py-2 font-semibold">{t("Source", "来源")}</th>
               <th scope="col" className="px-3 py-2 font-semibold">{t("Status", "状态")}</th>
               <th scope="col" className="px-3 py-2"><span className="sr-only">{t("Actions", "操作")}</span></th>
             </tr>
@@ -200,7 +200,7 @@ export function ProtocolReview({
                     r.visit.week
                   )}
                   {r.editing && !weekValid(r.weekDraft) && (
-                    <span className="mt-1 block text-xs font-medium text-worse-700">{t("Enter a week. An empty week is not saved as 0.", "请输入周次。空白周次不会保存为 0。")}</span>
+                    <span className="mt-1 block text-xs font-medium text-worse-700">{t("Enter a valid week.", "请输入有效周次。")}</span>
                   )}
                 </td>
                 <td className="px-3 py-2">
@@ -242,20 +242,26 @@ export function ProtocolReview({
                         ) : (
                           <>
                             <span className="mt-1 block text-xs">{ENDPOINT_ROLES[p.endpoint_role ?? "unknown"]}</span>
-                            {p.endpoint_note && <p className="mt-1 text-xs">{p.endpoint_note}</p>}
+                            <details className="mt-1 text-xs text-ink-500">
+                              <summary className="cursor-pointer">{t("Link details", "关联详情")}</summary>
+                              {p.endpoint_note && <p className="mt-1">{p.endpoint_note}</p>}
+                              <span className="mt-1 block">{LINK_BASES[p.link_basis ?? "unmatched"]}</span>
+                            </details>
                           </>
                         )}
-                        <span className="mt-1 block text-xs text-ink-500">{LINK_BASES[p.link_basis ?? "unmatched"]}</span>
                       </div>
                     ))}
                     {r.visit.procedures.length === 0 && <span className="text-xs text-ink-400">{t("none", "无")}</span>}
                   </div>
                 </td>
                 <td className="max-w-sm px-3 py-2 text-xs text-ink-600">
-                  {r.candidate.source_page !== null && <span className="font-semibold text-ink-800">{t("p.", "页码")} {r.candidate.source_page}</span>}
-                  {r.candidate.quote && <q className="ml-1 italic">{r.candidate.quote}</q>}
-                  {r.candidate.source_page === null && !r.candidate.quote && <span className="text-caution-800">{t("No source quote — check manually", "无来源引文 — 请人工核查")}</span>}
-                  {r.candidate.confidence !== null && <span className="ml-1 text-ink-400">{t("· confidence", "· 置信度")} {Math.round(r.candidate.confidence * 100)}%</span>}
+                  {r.candidate.source_page !== null || r.candidate.quote ? (
+                    <details>
+                      <summary className="cursor-pointer font-semibold text-ink-800">{r.candidate.source_page !== null ? `${t("p.", "第")} ${r.candidate.source_page}${t("", " 页")}` : t("Source details", "来源详情")}</summary>
+                      {r.candidate.quote && <q className="mt-1 block italic">{r.candidate.quote}</q>}
+                      {r.candidate.confidence !== null && <span className="mt-1 block text-ink-400">{t("Confidence", "置信度")} {Math.round(r.candidate.confidence * 100)}%</span>}
+                    </details>
+                  ) : <span className="text-caution-800">{t("Source to confirm", "来源待确认")}</span>}
                 </td>
                 <td className="px-3 py-2">
                   <span className={`chip ${STATUS_CHIP[r.status].cls}`}>{STATUS_CHIP[r.status].text}</span>

@@ -35,12 +35,12 @@ it("switches the existing page without losing input and keeps Chinese across nav
   expect(localStorage.getItem("tp.language")).toBe("zh");
   expect(screen.getByRole("heading", { level: 1 }).textContent).toMatch(/[\u4e00-\u9fff]/);
 
-  await user.click(screen.getByRole("link", { name: "关于" }));
+  await user.click(screen.getByRole("link", { name: "方法与参数" }));
   expect(await screen.findByRole("heading", { level: 1 })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: "Switch to English" })).toBeInTheDocument();
   await user.click(screen.getByRole("button", { name: "Switch to English" }));
   expect(document.documentElement.lang).toBe("en");
-  expect(screen.getByRole("link", { name: "About" })).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: "Methods" })).toBeInTheDocument();
 });
 
 it("keeps computed values and avoids recomputing a scenario when switching languages", async () => {

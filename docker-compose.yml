@@ -4,7 +4,7 @@
 # One image (api/Dockerfile) serves FastAPI under /api and the built web app at /.
 # The image command is the Dockerfile CMD: python -m trialpilot_api.seed, then
 # uvicorn trialpilot_api.main:app . `make dev` uses the equivalent factory create_app.
-# Ports are bound to 127.0.0.1 only. Runs offline by default. Set DEMO_OFFLINE=0 in .env for live imports.
+# Ports are bound to 127.0.0.1 only. Uses live imports by default; DEMO_OFFLINE=1 opts into cached fixtures.
 name: trialpilot
 
 services:
@@ -19,7 +19,7 @@ services:
       - path: .env
         required: false
     environment:
-      DEMO_OFFLINE: ${DEMO_OFFLINE:-1}
+      DEMO_OFFLINE: ${DEMO_OFFLINE:-0}
       TP_DATA_DIR: /data
     volumes:
       - tp-data:/data
