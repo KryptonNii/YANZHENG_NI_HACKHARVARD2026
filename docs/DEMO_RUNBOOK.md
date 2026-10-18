@@ -1,6 +1,6 @@
 # TrialPilot — demo runbook
 
-Verified code: **e5c386b1fb0b6edf362bf5d37b97cc17066dfd07**. Complete run: **576 passed / 0 failed**, 32/32 requirements passed; report **awaiting QA approval**. [Summary](evidence/clean-clone-20261017T041438Z/summary.json). The [180-second recording](../README.md#demo-media) uses the actual local application and this package, with a fresh temporary database. Its subtitle track is available in the [player](assets/demo-player.html); no voice-over is included.
+Verified code: **8fca2d71cde979909c7a8535d43dc95b4f6c94c0**. Complete run: **819 passed / 0 failed**, 32/32 requirements passed; report **awaiting QA approval**. [Summary](evidence/clean-clone-20261018T061014Z/summary.json). The [180-second recording](../README.md#demo-media) was made earlier on `e5c386b` (576 passed, [summary](evidence/clean-clone-20261017T041438Z/summary.json)) and uses the actual local application and that package, with a fresh temporary database. Its subtitle track is available in the [player](assets/demo-player.html); no voice-over is included.
 
 ## Isolated setup on Windows
 

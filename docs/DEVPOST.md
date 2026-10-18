@@ -1,6 +1,6 @@
 # TrialPilot — Devpost draft
 
-**DRAFT — requires human review.** Prepared against tested code `e5c386b1fb0b6edf362bf5d37b97cc17066dfd07`. This file has not been submitted or published.
+**DRAFT — requires human review.** Prepared against tested code `8fca2d71cde979909c7a8535d43dc95b4f6c94c0`. This file has not been submitted or published.
 
 ## Inspiration
 
@@ -30,10 +30,10 @@ Separating sourced facts, missing inputs and human-review candidates matters as 
 
 | Check | Result and scope |
 |---|---|
-| Complete isolated execution | **576 passed, 0 failed/errors/skipped**, **32/32 requirements passed**, exact code `e5c386b`; [summary](evidence/clean-clone-20261017T041438Z/summary.json) |
-| Frontend checks | Typecheck + production build passed; **48 unit tests** in preflight; **12 real-API browser tests** in executed evidence; a separate **1/1** final-package browser download check |
-| Evidence downloads | **114/114** package files downloaded and hash-verified; generation-time audit chain intact across 12 entries; final post-packaging audit 14 |
-| Cold compute | **147.8 ms median** from seven distinct seeds, `X-Cache: miss`, 2,000 forecast draws, server `X-Compute-Ms`; target <300 ms passed in this run |
+| Complete isolated execution | **819 passed, 0 failed/errors/skipped**, **32/32 requirements passed**, exact code `8fca2d7`; [summary](evidence/clean-clone-20261018T061014Z/summary.json) |
+| Frontend checks | Typecheck + production build passed; **155 unit tests** in preflight; **13 real-API browser tests** in executed evidence |
+| Evidence downloads | **115/115** package files downloaded and hash-verified; audit chain intact across 14 entries |
+| Cold compute | **143.3 ms median** from seven distinct seeds, `X-Cache: miss`, 2,000 forecast draws, server `X-Compute-Ms`; target <300 ms passed in this run |
 | Earlier performance | Standalone **308.2 ms** missed the target; historical full run at `38e2073` had **664.1 ms**; preserved, not replaced by a pass |
 | CASPS | Engine/library P50 **88,758.48 kg CO2e**, **+23.38%** vs published 71,938.8; P10–P90 64,601.50–123,510.08 |
 | PRIMETIME | Engine/library P50 **109,685.91 kg CO2e**, **+22.75%** vs published 89,360.2; P10–P90 87,891.34–142,685.69 |
@@ -60,14 +60,14 @@ Evinova, SHC/iLCCT, Medidata and ValGenesis already cover related design, carbon
 1. **Per-scenario assumption overrides.** A team should be able to replace a library value for one scenario, labelled, versioned and shown in provenance. The first candidate is its own investigational-product cost of goods in place of the biologic kit's market-price proxy, which drives about 40% of BOREAS cost variance.
 2. **A permitted-data pilot** with a sponsor and site team: calibrate workload and forecast estimates, then measure interval coverage, live extraction quality and review effort against prospective criteria.
 3. **Missing planning levers:** enrollment target, site count and activation speed, then programme-level probability of success and rNPV.
-4. **Production readiness:** identity and security, authorized connectors, independent QA, Docker and deployment verification, and potential SMI reporting mapping.
+4. **Production readiness:** identity and security, authorized connectors, independent QA, production deployment with persistent storage, and potential SMI reporting mapping.
 
 ## Submission gaps
 
 | Field | State |
 |---|---|
 | Public repository URL | https://github.com/KryptonNii/YANZHENG_NI_HACKHARVARD2026 (public, MIT) |
-| Deployment URL | Not established; Docker unavailable and container run unverified |
+| Deployment URL | https://surround1ngkni-trialpilot.hf.space (Docker image on a Hugging Face Space; live registry import; storage resets on restart) |
 | Video upload URL | Local 180-second WebM exists; no upload/publish performed |
 | Screenshots/deck | Actual [captures](assets/screenshots/), [12-slide PowerPoint](../README.md#demo-media) and [source](DECK.md) |
 | Sponsor titles/rules | Checked against the official starter kit and judging criteria; [mapping](../README.md#regeneron-starter-sheets) |

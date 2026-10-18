@@ -1,0 +1,236 @@
+{
+  "note": "Automated isolated integration test. Fictional demo-user signatures; not human approvals or regulatory validation evidence.",
+  "signature_class": "demo",
+  "human_qa_approval": false,
+  "git": {
+    "commit": "8fca2d71cde979909c7a8535d43dc95b4f6c94c0",
+    "branch": "main",
+    "dirty": false,
+    "dirty_files": 0
+  },
+  "clone": "C:\\Users\\ol735\\AppData\\Local\\Temp\\tpv-clean-a7_sz7eg\\repo",
+  "output": "C:\\Users\\ol735\\Desktop\\YANZHENG_NI_HACKHARVARD2026\\validation\\out\\clean-clone\\20261018T061014Z",
+  "commit_scope": {
+    "head": "8fca2d71cde979909c7a8535d43dc95b4f6c94c0",
+    "included_in_this_run": "HEAD only. Uncommitted work from other modules was not cloned.",
+    "a2_null_assertions_in_head": true,
+    "a3_supply_chunk_in_head": "_CHUNK_SITE_DRAWS = 65_536",
+    "a3_chunk_65536_in_head": true,
+    "a10_urs014_tag_in_head": true,
+    "a8_package_manager_in_head": true,
+    "pnpm_workspace_file_in_head": false,
+    "uncommitted_watched_paths": []
+  },
+  "protocol_gate_refused_before_approval": true,
+  "self_approval_refused": true,
+  "out_of_order_refused": true,
+  "counts": {
+    "passed": 819,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0,
+    "not_run": 0,
+    "total": 819
+  },
+  "build_checks": [
+    {
+      "name": "ruff-contracts",
+      "exit_code": 0,
+      "log": "ruff-contracts.log",
+      "sha256": "693762f9331ec443d8c84db1d1b880b088390bdb24313ca31d375a4c65b30092"
+    },
+    {
+      "name": "ruff-engine",
+      "exit_code": 0,
+      "log": "ruff-engine.log",
+      "sha256": "eac44b04b750b58e580304d80e5a531fa4cc672e0f27abca8e4cb1bad6baab83"
+    },
+    {
+      "name": "ruff-api",
+      "exit_code": 0,
+      "log": "ruff-api.log",
+      "sha256": "47079967cb3801d2e86f0e0a68f8e200bbd110812c548e066209c0dfd4bb266e"
+    },
+    {
+      "name": "ruff-science",
+      "exit_code": 0,
+      "log": "ruff-science.log",
+      "sha256": "3c8e9d564c63a4fca7902ea11a78b4fa99085b471c2d5e25ecbc799521930b3f"
+    },
+    {
+      "name": "ruff-validation",
+      "exit_code": 0,
+      "log": "ruff-validation.log",
+      "sha256": "3ca2ff62f8bbe81774fe89bebce2259de041e79a29684b2b9be3bf1809300317"
+    },
+    {
+      "name": "mypy-contracts",
+      "exit_code": 0,
+      "log": "mypy-contracts.log",
+      "sha256": "c24fd67cf6f1a78b533a483ecd67d1e4c4278eb41911dabecf26e32dbcaee437"
+    },
+    {
+      "name": "mypy-engine",
+      "exit_code": 0,
+      "log": "mypy-engine.log",
+      "sha256": "ce7b17dd1d6279f470edfa336d0450208813619611eacf747caded62a519732a"
+    },
+    {
+      "name": "generated-contracts",
+      "exit_code": 0,
+      "log": "generated-contracts.log",
+      "sha256": "8c7d159a488a67dae94e0387dd415473f2d544aa1bf480c5a9fee030da36310d"
+    },
+    {
+      "name": "parameter-library",
+      "exit_code": 0,
+      "log": "parameter-library.log",
+      "sha256": "5af08f5f85fd551c99b161b00a128703d346c40c0b41d500e776bdbcb7d8301d"
+    },
+    {
+      "name": "licences",
+      "exit_code": 0,
+      "log": "licences.log",
+      "sha256": "90ccaccdbebe959bafeca83a2edce96fe5a5c609bbe663c8671cd7da0414f10e"
+    },
+    {
+      "name": "web-typecheck",
+      "exit_code": 0,
+      "log": "web-typecheck.log",
+      "sha256": "c1c3041c274948124d90c4930296e0f5ac1632a1f98b8bb940db53f28f3af859"
+    },
+    {
+      "name": "web-test",
+      "exit_code": 0,
+      "log": "web-test.log",
+      "sha256": "122390098c8b9bb335cf343dbe9bfb36c373998a60b871afdd094d8a09b792d7"
+    },
+    {
+      "name": "web-build",
+      "exit_code": 0,
+      "log": "web-build.log",
+      "sha256": "e82165ea6a1158b1e9fe73773d1df81c0917d728f9901a0bff20f63aea85725a"
+    }
+  ],
+  "failed_tests": [],
+  "urs009": {
+    "requirement_p50_ms": 300,
+    "draws": 2000,
+    "seeds": [
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206
+    ],
+    "cache": "miss",
+    "header": "X-Compute-Ms",
+    "path": "cold",
+    "path_note": "Each of the seven seeds is distinct, so every call is a compute-cache miss. Forecast, supply and the engine run. This is not the slider hot path.",
+    "source_encodes_cold_path": true,
+    "outcome": "passed",
+    "median_ms": 143.3,
+    "samples_ms": [
+      143.3,
+      143.0,
+      143.6,
+      138.1,
+      140.9,
+      150.9,
+      151.7
+    ]
+  },
+  "preserved_historical_run": {
+    "path": "validation/out/clean-clone/20261017T023042Z",
+    "commit": "38e207387a38e4b9d6619d6194cd8279d2865416",
+    "counts": {
+      "passed": 507,
+      "failed": 3,
+      "total": 510
+    },
+    "urs009_full_run_median_ms": 664.1,
+    "note": "Not overwritten, deleted, or rewritten as a pass. Its standalone retry is not a result of this run."
+  },
+  "suites": [
+    {
+      "name": "contracts",
+      "status": "ran",
+      "exit_code": 0,
+      "started_at": "2026-10-18T06:13:05Z",
+      "finished_at": "2026-10-18T06:13:10Z"
+    },
+    {
+      "name": "engine",
+      "status": "ran",
+      "exit_code": 0,
+      "started_at": "2026-10-18T06:13:10Z",
+      "finished_at": "2026-10-18T06:13:14Z"
+    },
+    {
+      "name": "api",
+      "status": "ran",
+      "exit_code": 0,
+      "started_at": "2026-10-18T06:13:14Z",
+      "finished_at": "2026-10-18T06:14:15Z"
+    },
+    {
+      "name": "api-ops",
+      "status": "ran",
+      "exit_code": 0,
+      "started_at": "2026-10-18T06:14:15Z",
+      "finished_at": "2026-10-18T06:15:12Z"
+    },
+    {
+      "name": "validation",
+      "status": "ran",
+      "exit_code": 0,
+      "started_at": "2026-10-18T06:15:12Z",
+      "finished_at": "2026-10-18T06:16:01Z"
+    },
+    {
+      "name": "science",
+      "status": "ran",
+      "exit_code": 0,
+      "started_at": "2026-10-18T06:16:01Z",
+      "finished_at": "2026-10-18T06:16:06Z"
+    },
+    {
+      "name": "e2e",
+      "status": "ran",
+      "exit_code": 0,
+      "started_at": "2026-10-18T06:16:06Z",
+      "finished_at": "2026-10-18T06:17:40Z"
+    }
+  ],
+  "trace": {
+    "pass": 32,
+    "fail": 0,
+    "incomplete": 0,
+    "not run": 0,
+    "no test": 0
+  },
+  "untested_requirements": [],
+  "collection_errors": [],
+  "report_status": "awaiting QA approval",
+  "evidence_integrity_problems": [],
+  "package_hashes_verified": 115,
+  "package_downloads_verified": 115,
+  "labeled_package_index_sha256": "549ad9582e376834cd87d9f57d86609835d8f0ac90710845b2052471924f0323",
+  "audit_chain": {
+    "ok": true,
+    "first_bad_seq": null,
+    "checked": 14,
+    "head_hash": "f8e64e278fccecc456b32784eab23cb29e7d990d8a055a759bd97fad020fd8ec",
+    "problem": null
+  },
+  "python": "3.15.0 (main, Oct 14 2026, 01:12:50) [MSC v.1951 64 bit (AMD64)]",
+  "web_installer": {
+    "executable": "C:\\Users\\ol735\\AppData\\Roaming\\npm\\pnpm.CMD",
+    "version": "9.15.9",
+    "release_age_override": false
+  }
+}

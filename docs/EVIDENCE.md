@@ -33,18 +33,18 @@ Checked on October 17, 2026 against the official starter kit: judging criteria, 
 
 ## Versioned measurements and build claims
 
-Code scope: **e5c386b1fb0b6edf362bf5d37b97cc17066dfd07** (clean clone, dirty=false), containing frontend **e425ca25541e69b40328337aba0ef5145fcd8d91** and backend **f91cdb2**. Documentation/media revisions occur later and do not change tested application code. Complete original output: [`validation/out/clean-clone/20261017T041438Z`](evidence/clean-clone-20261017T041438Z/summary.json). Unmodified copies of the run summaries and the package's text deliverables are in [`docs/evidence/`](evidence/); screenshots, logs and the package ZIP remain local.
+Code scope: **8fca2d71cde979909c7a8535d43dc95b4f6c94c0** (clean clone, dirty=false). Later commits change documentation only. Complete original output: [`validation/out/clean-clone/20261018T061014Z`](evidence/clean-clone-20261018T061014Z/summary.json). The previous run at **e5c386b1fb0b6edf362bf5d37b97cc17066dfd07** (frontend e425ca2, backend f91cdb2; 576 passed) is kept in [`docs/evidence/clean-clone-20261017T041438Z`](evidence/clean-clone-20261017T041438Z/summary.json); the demo recording was made on that commit. Unmodified copies of the run summaries and the package's text deliverables are in [`docs/evidence/`](evidence/); screenshots, logs and the package ZIP remain local.
 
 | Claim | Recorded result | Scope / qualification |
 |---|---|---|
-| Complete execution | **576 passed; 0 failed/errors/skipped/unrun** | contracts 106, engine 105, API 233, ops 34, validation 50, science 36, real Edge E2E 12 |
-| Frontend preflight | **48/48** unit tests, typecheck/build pass | Separate from the 576 execution count; pinned pnpm 9.15.9 |
+| Complete execution | **819 passed; 0 failed/errors/skipped/unrun** | contracts 106, engine 139, API 404, ops 65, validation 55, science 37, real Edge E2E 13 |
+| Frontend preflight | **155/155** unit tests, typecheck/build pass | Separate from the 819 execution count; pinned pnpm 9.15.9 |
 | Requirements | **32 pass**, 0 fail/incomplete/untested | Includes substantive URS-014 module and WTT boundary checks |
-| Final-package browser check | **1/1 pass**, no skips/retries | [Supplement](evidence/backend-20261017T042216Z-package-browser/run-context.json); executed after package creation, separate from the 576; checks current counts, QA, Markdown/PNG/ZIP hashes |
-| Package integrity | **114/114** hashes and downloads verified; zero evidence-integrity problems | Real compliance HTTP router via ASGI TestClient; [manifest checks](evidence/clean-clone-20261017T041438Z/package-downloads.json) |
-| Audit | Package snapshot intact at **12** entries; final audit intact at **14** | Different capture times, not a broken chain |
+| Final-package browser check | **1/1 pass** at e5c386b; not repeated for 8fca2d7 | [Supplement](evidence/backend-20261017T042216Z-package-browser/run-context.json); executed after that package was created, separate from its 576; checks counts, QA, Markdown/PNG/ZIP hashes |
+| Package integrity | **115/115** hashes and downloads verified; zero evidence-integrity problems | Real compliance HTTP router via ASGI TestClient; [manifest checks](evidence/clean-clone-20261018T061014Z/package-downloads.json) |
+| Audit | Audit chain intact at **14** entries | Checked by the clean-clone run after packaging |
 | QA | **awaiting QA approval**, human_qa_approval=false | Fictional automated signatures; no human approval of report |
-| Cold performance | **147.8 ms median**, samples 143.8/142.7/148.2/143.7/147.8/150.5/151.0 | Windows AMD64, CPython 3.12.14, NCT03930732, seeds 200–206, all cache miss, 2,000 requested forecast draws, server X-Compute-Ms; <300 ms gate passed |
+| Cold performance | **143.3 ms median**, samples 143.3/143.0/143.6/138.1/140.9/150.9/151.7 | Windows AMD64, CPython 3.15.0, seeds 200–206, all cache miss, 2,000 requested forecast draws, server X-Compute-Ms; <300 ms gate passed. Previous run at e5c386b: 147.8 ms on CPython 3.12.14 |
 | Performance variability | **308.2 ms** earlier standalone median missed the same gate | [Original observation](evidence/backend-20261017T041106Z-cold/benchmark.json) retained; no blanket latency guarantee |
 | Historical complete run | **507 passed / 3 failed**, **664.1 ms** cold median at 38e2073 | [Original 20261017T023042Z summary](evidence/clean-clone-20261017T023042Z-historical/summary.json), not evidence for the new commit |
 | Protocol parser | Historical synthetic fixture: **7/7 visits, 50/50 procedure items** | [A4](../handoffs/A4.md); live LLM accuracy unmeasured; bulk acceptance is only a review-log metric |

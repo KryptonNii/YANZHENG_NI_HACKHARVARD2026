@@ -28,6 +28,6 @@ Answers refer to tested code **e5c386b**, [final execution](evidence/clean-clone
 
 13. **Does reproducing footprints validate the whole product?** It checks the disclosed carbon paths for two reference cases; cost, workload, forecasts and clinical appropriateness need separate empirical evidence.
 
-14. **How many defects did you catch and how fast is it?** Current execution is **576/576 passed** with **147.8 ms** median server cold compute across seven cache-miss seeds; historical **6/6 defects at d616645** was not blind, and the earlier **308.2 ms** miss remains documented. [Scope](EVIDENCE.md).
+14. **How many defects did you catch and how fast is it?** Current execution is **819/819 passed** at `8fca2d7` with **143.3 ms** median server cold compute across seven cache-miss seeds; historical **6/6 defects at d616645** was not blind, and the earlier **308.2 ms** miss remains documented. [Scope](EVIDENCE.md).
 
 15. **What does a real pilot need?** Permitted data, prospective accuracy/workload criteria, live extraction evaluation, human timing and independent QA are needed alongside production identity, connectors and deployment verification.
