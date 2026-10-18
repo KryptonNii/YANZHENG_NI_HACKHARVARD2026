@@ -129,6 +129,52 @@ async function parseError(res: Response): Promise<ApiError> {
   return new ApiError(res.status, `http_${res.status}`, `Request failed (HTTP ${res.status}).`);
 }
 
+/**
+ * Render's free plan sleeps the public demo after 15 idle minutes and restarts it on every deploy;
+ * until the API is back, Render's proxy answers 502/503/504 with its own non-JSON page. Requests
+ * that change nothing on the server wait for /api/health and are sent once more.
+ */
+const WAKE_TIMEOUT_MS = 90_000;
+const WAKE_POLL_MS = 3_000;
+const STATELESS_POSTS = new Set(["/scenarios/compute", "/scenarios/drivers", "/scenarios/compare"]);
+
+function isRepeatable(method: string, path: string): boolean {
+  return method === "GET" || (method === "POST" && STATELESS_POSTS.has(path));
+}
+
+function isProxyGap(res: Response): boolean {
+  return [502, 503, 504].includes(res.status) && !(res.headers.get("Content-Type") ?? "").includes("json");
+}
+
+function pause(ms: number, signal?: AbortSignal): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const onAbort = () => {
+      clearTimeout(timer);
+      reject(new DOMException("Aborted", "AbortError"));
+    };
+    const timer = setTimeout(() => {
+      signal?.removeEventListener("abort", onAbort);
+      resolve();
+    }, ms);
+    if (signal?.aborted) onAbort();
+    else signal?.addEventListener("abort", onAbort, { once: true });
+  });
+}
+
+/** Poll /api/health until it answers 200 (true) or WAKE_TIMEOUT_MS passes (false). */
+async function waitForWake(signal?: AbortSignal): Promise<boolean> {
+  const deadline = Date.now() + WAKE_TIMEOUT_MS;
+  while (Date.now() < deadline) {
+    await pause(WAKE_POLL_MS, signal);
+    try {
+      if ((await fetch(`${API_BASE}/health`, { headers: { Accept: "application/json" }, signal })).ok) return true;
+    } catch (err) {
+      if (isAbort(err)) throw err;
+    }
+  }
+  return false;
+}
+
 export async function requestFull<T = unknown>(method: string, path: string, opts: RequestOptions = {}): Promise<{ data: T; response: Response }> {
   const headers: Record<string, string> = { Accept: "application/json", ...identityHeaders() };
   if (opts.ifMatch) headers["If-Match"] = `"${opts.ifMatch.replaceAll('"', "")}"`;
@@ -139,9 +185,11 @@ export async function requestFull<T = unknown>(method: string, path: string, opt
     headers["Content-Type"] = "application/json";
     body = JSON.stringify(opts.body);
   }
+  const send = () => fetch(`${API_BASE}${path}`, { method, headers, body, signal: opts.signal });
   let res: Response;
   try {
-    res = await fetch(`${API_BASE}${path}`, { method, headers, body, signal: opts.signal });
+    res = await send();
+    if (isProxyGap(res) && isRepeatable(method, path) && (await waitForWake(opts.signal))) res = await send();
   } catch (err) {
     if (isAbort(err)) throw err;
     raise(new ApiError(0, "network_error", "Can't reach the TrialPilot API. Check that the server is running."), opts);

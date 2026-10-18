@@ -3,7 +3,7 @@
  * reaches the toast listeners once unless the call is `silent`. Saves rely on A5's If-Match check.
  */
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { ApiError, api, onApiError } from "./client";
+import { ApiError, api, onApiError, request } from "./client";
 import { MOCK_DESIGN } from "./mock/data";
 import { DEFAULT_LEVERS } from "./normalize";
 
@@ -133,5 +133,54 @@ describe("saveDesign relies on A5's If-Match check", () => {
 
     await expect(api.saveDesign(MOCK_DESIGN, { ifMatch: "h1", silent: true })).rejects.toMatchObject({ code: "forbidden_role" });
     expect(seen).toHaveLength(1);
+  });
+});
+
+describe("a sleeping or restarting Render demo", () => {
+  const proxyPage = (status = 503) => new Response("<html>waking up</html>", { status, headers: { "Content-Type": "text/html" } });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  it("waits for /api/health and repeats a stateless compute once", async () => {
+    vi.useFakeTimers();
+    const replies = [proxyPage(502), proxyPage(503), jsonResponse({ status: "ok" }), jsonResponse({ ok: 1 })];
+    const fetchSpy = vi.spyOn(window, "fetch").mockImplementation(async () => replies.shift()!);
+    const pending = request("POST", "/scenarios/compute", { body: {}, silent: true });
+    await vi.advanceTimersByTimeAsync(6_000);
+    await expect(pending).resolves.toEqual({ ok: 1 });
+    expect(fetchSpy.mock.calls.map((c) => c[0])).toEqual(["/api/scenarios/compute", "/api/health", "/api/health", "/api/scenarios/compute"]);
+  });
+
+  it("gives up after the wake timeout with the plain unreachable message", async () => {
+    vi.useFakeTimers();
+    const fetchSpy = vi.spyOn(window, "fetch").mockImplementation(async () => proxyPage());
+    const check = expect(request("GET", "/designs", { silent: true })).rejects.toMatchObject({ code: "api_unreachable" });
+    await vi.advanceTimersByTimeAsync(91_000);
+    await check;
+    expect(fetchSpy.mock.calls.filter((c) => c[0] === "/api/designs")).toHaveLength(1);
+  });
+
+  it("stops waiting when the caller aborts", async () => {
+    vi.useFakeTimers();
+    vi.spyOn(window, "fetch").mockImplementation(async () => proxyPage());
+    const ctrl = new AbortController();
+    const check = expect(request("GET", "/designs", { signal: ctrl.signal, silent: true })).rejects.toMatchObject({ name: "AbortError" });
+    await vi.advanceTimersByTimeAsync(1_000);
+    ctrl.abort();
+    await check;
+  });
+
+  it("never repeats a request that writes", async () => {
+    const fetchSpy = vi.spyOn(window, "fetch").mockImplementation(async () => proxyPage());
+    await expect(request("POST", "/scenarios", { body: {}, silent: true })).rejects.toMatchObject({ code: "api_unreachable" });
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+  });
+
+  it("does not wait on the API's own JSON 503", async () => {
+    const fetchSpy = vi.spyOn(window, "fetch").mockImplementation(async () => jsonResponse({ error: "offline", message: "Offline demo.", details: {} }, 503));
+    await expect(request("GET", "/designs", { silent: true })).rejects.toMatchObject({ code: "offline" });
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
   });
 });
