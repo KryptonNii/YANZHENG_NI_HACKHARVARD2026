@@ -42,7 +42,7 @@ function StatusBadges() {
 }
 
 const navCls = ({ isActive }: { isActive: boolean }) =>
-  `rounded-md px-2.5 py-1.5 text-sm font-semibold transition-colors ${
+  `whitespace-nowrap rounded-md px-2.5 py-1.5 text-sm font-semibold transition-colors ${
     isActive ? "bg-accent-50 text-accent-800" : "text-ink-600 hover:bg-ink-100 hover:text-ink-900"
   }`;
 
@@ -55,13 +55,18 @@ export function Layout() {
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2">
         {t("Skip to content", "跳转到正文")}
       </a>
-      <header className="sticky top-0 z-40 border-b border-ink-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex max-w-[1600px] items-center gap-6 px-6 py-2.5">
-          <NavLink to="/" className="flex items-center gap-2.5" aria-label={t("TrialPilot home", "TrialPilot 首页")}>
+      {/* Below lg the header wraps: logo + controls on top, the nav on its own row that scrolls sideways;
+          below md it is not sticky so it does not cover a phone screen. lg and up is the original single row. */}
+      <header className="z-40 border-b border-ink-200 bg-white/95 backdrop-blur md:sticky md:top-0">
+        <div className="mx-auto flex max-w-[1600px] flex-wrap items-center gap-x-3 gap-y-2 px-6 py-2.5 lg:flex-nowrap lg:gap-6">
+          <NavLink to="/" className="mr-auto flex items-center gap-2.5 lg:mr-0" aria-label={t("TrialPilot home", "TrialPilot 首页")}>
             <Logo />
             <span className="text-lg font-bold tracking-tight text-ink-900">TrialPilot</span>
           </NavLink>
-          <nav aria-label={t("Main", "主导航")} className="flex flex-1 flex-wrap items-center gap-0.5">
+          <nav
+            aria-label={t("Main", "主导航")}
+            className="order-last flex basis-full items-center gap-0.5 overflow-x-auto py-1 [scrollbar-width:thin] lg:order-none lg:flex-1 lg:flex-wrap lg:overflow-visible lg:py-0"
+          >
             <NavLink to="/" end className={navCls}>
               {t("Trials", "试验管理")}
             </NavLink>
@@ -92,7 +97,10 @@ export function Layout() {
               {t("Methods", "方法与参数")}
             </NavLink>
           </nav>
-          <IdentitySwitcher />
+          {/* on phones the role selector drops below the language button and badges */}
+          <div className="max-sm:order-1">
+            <IdentitySwitcher />
+          </div>
           <LanguageSwitcher />
           <StatusBadges />
         </div>

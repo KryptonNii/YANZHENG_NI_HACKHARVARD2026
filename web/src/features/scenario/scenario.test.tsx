@@ -2,7 +2,7 @@
  * Scenario simulator behaviour against the in-browser mock API (the same fetch path the real
  * API uses). Requirement tags follow A7's URS ids where they exist (see handoffs/A8.md).
  */
-import { act, render, screen, waitFor, within } from "@testing-library/react";
+import { act, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
@@ -14,6 +14,7 @@ import { MOCK_DESIGN, MOCK_PARAMS } from "@/app/api/mock/data";
 import { mockCompute } from "@/app/api/mock/engine";
 import { DEFAULT_LEVERS } from "@/app/api/normalize";
 import { setIdentity } from "@/app/identity";
+import { setLanguage } from "@/app/i18n";
 import { formatValue } from "@/app/format";
 import { ToastProvider } from "@/app/toast";
 import { ApprovalPanel } from "./components/ApprovalPanel";
@@ -188,6 +189,52 @@ describe("scenario simulator", () => {
     await userEvent.type(screen.getByTestId("sign-pin"), "9999");
     await userEvent.click(screen.getByTestId("sign-button"));
     expect(await screen.findByTestId("sign-error")).toHaveTextContent(/^Wrong PIN — the signature was not recorded\.$/);
+  });
+});
+
+describe("lever summary and default save name", () => {
+  const summary = () => screen.getByText("Impact forecast · vs baseline").parentElement as HTMLElement;
+  async function defaultSaveName() {
+    await waitFor(() => expect(screen.getByTestId("save-scenario")).toBeEnabled(), { timeout: 4000 });
+    await userEvent.click(screen.getByTestId("save-scenario"));
+    return screen.getByTestId("save-name");
+  }
+
+  it("labels and names untouched levers Baseline", async () => {
+    renderAt(`/scenario/${DESIGN}`);
+    await waitForCards();
+    expect(within(summary()).getByText("Baseline")).toBeInTheDocument();
+    expect(await defaultSaveName()).toHaveValue("Baseline");
+  });
+
+  it("labels and names a scenario that only changes enrollment speed", async () => {
+    renderAt(`/scenario/${DESIGN}`);
+    await waitForCards();
+    fireEvent.change(screen.getByTestId("lever-enrollment-rate"), { target: { value: "120" } });
+    expect(within(summary()).getByText("120% enrollment speed")).toBeInTheDocument();
+    expect(within(summary()).queryByText("Baseline")).not.toBeInTheDocument();
+    try {
+      act(() => setLanguage("zh"));
+      expect(screen.getByText("120% 入组速度")).toBeInTheDocument();
+    } finally {
+      act(() => setLanguage("en"));
+    }
+    expect(await defaultSaveName()).toHaveValue("Scenario — 120% enrollment speed");
+  });
+
+  it("labels and names a scenario that only adds countries, in both languages", async () => {
+    renderAt(`/scenario/${DESIGN}`);
+    await waitForCards();
+    fireEvent.change(screen.getByTestId("lever-added-countries"), { target: { value: "2" } });
+    expect(within(summary()).getByText("2 planned added countries")).toBeInTheDocument();
+    expect(within(summary()).queryByText("Baseline")).not.toBeInTheDocument();
+    try {
+      act(() => setLanguage("zh"));
+      expect(screen.getByText("规划新增 2 个国家")).toBeInTheDocument();
+    } finally {
+      act(() => setLanguage("en"));
+    }
+    expect(await defaultSaveName()).toHaveValue("Scenario — 2 planned added countries");
   });
 });
 

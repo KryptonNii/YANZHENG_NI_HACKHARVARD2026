@@ -84,7 +84,7 @@ test("hero flow: import, change levers, inspect provenance, save, submit, self-a
   await page.getByRole("group", { name: "Remove procedures" }).getByRole("checkbox").first().check();
 
   await expect(page.getByTestId("metric-cost_usd-delta")).not.toContainText("No change vs baseline", { timeout: 30_000 });
-  await expect(page.getByTestId("metric-patient_travel_hours-delta")).toContainText(/lower than baseline/, { timeout: 30_000 });
+  await expect(page.getByTestId("metric-patient_travel_hours-delta")).toContainText(/\blower\b/, { timeout: 30_000 });
   await expect(page.getByText("recomputing…")).toHaveCount(0, { timeout: 30_000 });
   await shot(page, info, "03-simulator-levers");
 
@@ -192,7 +192,7 @@ test("demo chips recover when the API becomes reachable", async ({ page }) => {
   await page.clock.install();
   await page.route("**/api/health", (route) => route.abort("connectionrefused"));
   await page.goto("/");
-  await expect(page.getByTestId("status-badges")).toContainText("API unreachable");
+  await expect(page.getByTestId("status-badges")).toContainText("Connection unavailable");
   await expect(page.getByTestId("demo-chips")).toHaveCount(0);
   await page.unroute("**/api/health");
   await page.clock.fastForward(31_000);
@@ -307,7 +307,7 @@ test("an unseeded trial is saved before the simulator opens, and later edits sta
   const later = await page.request.post("/api/scenarios", { headers, data: { design_id: designId, design_version: nextVersion, name: "Later design", levers: {} } });
   expect(later.ok(), await later.text()).toBeTruthy();
   await page.goto(`/compare?a=${referenceId}&b=${(await later.json()).id}`);
-  await expect(page.getByText("These scenarios are not on the same design version", { exact: false })).toBeVisible();
+  await expect(page.getByText(/Different design versions.*P50 comparison only/)).toBeVisible();
   await expect(page.getByTestId("compare-table")).not.toContainText("P10–P90 of the difference");
 });
 
@@ -337,7 +337,7 @@ test("science band prints the results-file unit, including t_co2e", async ({ pag
   test.skip(MOCK, "the mock API does not serve science/out/results.json");
   await page.goto("/science");
   await expect(page.getByTestId("science-band-unit")).toContainText("t_co2e", { timeout: 30_000 });
-  await expect(page.getByTestId("science-band-unit")).toContainText("not rescaled");
+  await expect(page.getByTestId("science-band-unit")).toContainText("Displayed unit: t");
   await expect(page.getByTestId("science-band-unit")).not.toContainText("kg_co2e");
   await shot(page, info, "13-science-t-co2e");
 });

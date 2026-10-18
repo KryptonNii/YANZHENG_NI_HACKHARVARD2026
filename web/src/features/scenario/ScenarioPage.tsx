@@ -25,6 +25,8 @@ import { METRICS } from "./metrics";
 
 function describeLevers(l: Levers, localize = tr): string[] {
   const out: string[] = [];
+  const enrollmentRate = l.enrollment_rate_multiplier ?? 1;
+  const addedCountries = l.added_country_count ?? 0;
   if (l.remote_monitoring_share > 0) out.push(localize(`${Math.round(l.remote_monitoring_share * 100)}% remote monitoring`, `${Math.round(l.remote_monitoring_share * 100)}% 远程监查`));
   if (l.home_visit_numbers.length) out.push(localize(`${l.home_visit_numbers.length} home visit${l.home_visit_numbers.length > 1 ? "s" : ""}`, `${l.home_visit_numbers.length} 次居家访视`));
   if (l.remote_visit_numbers.length) out.push(localize(`${l.remote_visit_numbers.length} telehealth visit${l.remote_visit_numbers.length > 1 ? "s" : ""}`, `${l.remote_visit_numbers.length} 次远程医疗访视`));
@@ -32,6 +34,8 @@ function describeLevers(l: Levers, localize = tr): string[] {
   if (l.drug_supply_strategy === "on_demand") out.push(localize("on-demand supply", "按需供应"));
   if (l.removed_procedures.length) out.push(localize(`${l.removed_procedures.length} procedure${l.removed_procedures.length > 1 ? "s" : ""} removed`, `已移除 ${l.removed_procedures.length} 项检查`));
   if (l.excluded_site_ids.length) out.push(localize(`${l.excluded_site_ids.length} site${l.excluded_site_ids.length > 1 ? "s" : ""} excluded`, `已排除 ${l.excluded_site_ids.length} 个研究中心`));
+  if (enrollmentRate !== 1) out.push(localize(`${Math.round(enrollmentRate * 100)}% enrollment speed`, `${Math.round(enrollmentRate * 100)}% 入组速度`));
+  if (addedCountries > 0) out.push(localize(`${addedCountries} planned added countr${addedCountries > 1 ? "ies" : "y"}`, `规划新增 ${addedCountries} 个国家`));
   return out;
 }
 

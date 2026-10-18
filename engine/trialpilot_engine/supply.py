@@ -68,6 +68,9 @@ _WORK_BUDGET = 6_000_000
 # (draw, site) pairs simulated together. Fewer, larger chunks mean fewer Python-level weekly steps;
 # the largest array is the expiry ring, shelf-life weeks × cells × 4 bytes ≈ 30 MB at 2 years.
 _CHUNK_SITE_DRAWS = 65_536
+# Patients simulated together. Without this cap a 47k-patient trial put all 100 draws (4.7M patients)
+# into one chunk and the cohort arrays peaked near 700 MB, over a 512 MB free-tier instance.
+_CHUNK_PATIENTS = 400_000
 Strategy = Literal["upfront", "on_demand"]
 BoolArray = np.ndarray[Any, np.dtype[np.bool_]]
 _NO_CELLS: IntArray = np.zeros(0, dtype=np.int64)
@@ -723,7 +726,8 @@ def simulate_supply(
         planned_patients=planned_total * share,
     )
 
-    chunk = max(1, _CHUNK_SITE_DRAWS // s)
+    most_patients = int(np.max(patients_per_draw[:d])) if d else 1
+    chunk = max(1, min(_CHUNK_SITE_DRAWS // s, _CHUNK_PATIENTS // max(most_patients, 1)))
     parts = []
     for lo in range(0, d, chunk):
         hi = min(lo + chunk, d)

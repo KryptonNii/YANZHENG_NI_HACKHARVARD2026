@@ -215,6 +215,32 @@ def test_determinism_and_quantile_order(base: tuple[TrialDesign, object]) -> Non
         assert m.p10 <= m.p50 <= m.p90
 
 
+@pytest.mark.parametrize("levers", [UPFRONT, ON_DEMAND], ids=["upfront", "on_demand"])
+def test_patient_chunk_cap_does_not_change_results(
+    base: tuple[TrialDesign, object], levers: Levers, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    from trialpilot_engine import supply as supply_mod
+
+    d, fc = base
+    whole = simulate_supply(d, levers, {}, fc, seed=5, draws=200)  # type: ignore[arg-type]
+    chunks: list[tuple[int, int]] = []
+    inner = supply_mod._simulate_chunk
+
+    def spy(*args: object) -> dict[str, np.ndarray]:
+        chunks.append((int(args[2]), int(args[3])))  # type: ignore[call-overload]
+        return inner(*args)  # type: ignore[arg-type]
+
+    monkeypatch.setattr(supply_mod, "_simulate_chunk", spy)
+    monkeypatch.setattr(supply_mod, "_CHUNK_PATIENTS", 5_000)  # ~12 draws of ~400 patients per chunk
+    split = simulate_supply(d, levers, {}, fc, seed=5, draws=200)  # type: ignore[arg-type]
+    assert len(chunks) > 1
+    assert whole.to_dict() == split.to_dict()
+    a, b = per(whole), per(split)
+    for name in ("kits_needed", "kits_produced", "kits_expired", "kits_destroyed_at_close",
+                 "shipments", "emergency_shipments"):
+        assert np.array_equal(getattr(a, name), getattr(b, name)), name
+
+
 def test_supply_runs_on_an_updated_forecast() -> None:
     d = design(n_sites=10, target=100)
     prior = forecast(d, Levers(), {}, draws=200)

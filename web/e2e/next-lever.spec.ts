@@ -26,8 +26,8 @@ test("cached BOREAS: reviewed evidence, constrained advice and current-scenario 
   test.setTimeout(180_000);
   await page.addInitScript(() => localStorage.setItem("tp.identity", "alex.author"));
   await page.goto("/");
-  await expect(page.getByTestId("status-badges")).toContainText("Offline mode");
-  await expect(page.getByTestId("status-badges")).not.toContainText("Mock API");
+  await expect(page.getByTestId("status-badges")).toContainText("Offline");
+  await expect(page.getByTestId("status-badges")).not.toContainText("Sample data");
   const imported = page.waitForResponse((r) => r.url().endsWith("/api/import/ctgov/NCT03930732") && r.ok());
   await page.getByTestId("demo-chips").getByRole("button", { name: /NCT03930732/ }).click();
   expect((await (await imported).json()).raw_cached).toBe(true);
