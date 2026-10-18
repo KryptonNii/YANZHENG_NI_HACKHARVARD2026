@@ -1,0 +1,28 @@
+name: keep demo awake
+
+# Render's free plan spins the public demo down after 15 minutes without traffic, and waking it
+# takes about a minute. This pings the health endpoint every 10 minutes as a backup to an external
+# cron service. GitHub can delay scheduled runs, so it is not relied on alone.
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Ping /api/health
+        run: |
+          url=https://yanzhengni-hackharvard2026.onrender.com/api/health
+          for attempt in 1 2 3; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 90 "$url" || true)
+            echo "attempt $attempt: HTTP $code"
+            [ "$code" = "200" ] && exit 0
+            sleep 20
+          done
+          echo "::error::$url did not return 200 after 3 attempts"
+          exit 1
