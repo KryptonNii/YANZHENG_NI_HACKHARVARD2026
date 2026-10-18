@@ -12,6 +12,8 @@ TrialPilot imports registry records, distinguishes facts from missing inputs, an
 
 The command center shows completed-week site/country enrollment, alerts, interventions and qualified effect estimates from **synthetic feeds**. Saved scenario approvals reject self-approval and bind reviewer/QA demonstration signatures to record hashes. Audit verification and a downloadable validation package expose the actual execution and its scope.
 
+Claude can also query TrialPilot directly through an MCP server. Connected in Claude Desktop, it can answer questions like "Why is the BOREAS cost range so wide?": it calls `explain_metric` and finds that the biologic kit price, a market-price proxy, drives about 40% of the variance. The six tools are compute-only and read-only, so the agent can explore what-ifs and explain numbers but never saves, approves or signs; those steps stay with people in the web app. [Setup and example questions](../README.md#ask-claude-about-a-design-mcp-compute-only).
+
 The [demo video](../README.md#demo-media) uses the real local API, not UI mocks. Cached registry/protocol inputs, synthetic operations and fictional identities remain labelled.
 
 The project connects five Regeneron starter sheets rather than building one literally: Choose Your Timeline, One Screen to Rule Them All, Software Speedrun, How Extra Is Your Trial? and Trial by Design. The [sheet-by-sheet mapping](../README.md#regeneron-starter-sheets) lists what is implemented, what is measured and what is not done.
@@ -38,6 +40,8 @@ Separating sourced facts, missing inputs and human-review candidates matters as 
 | Separate paper arithmetic | **+0.01% / −0.16%**; seed 7, 2,000 draws for engine comparisons, parameter set 1249d0f0eed8; [JSON](../science/out/results.json) |
 | Command center vs withheld truth | **42/42** planted operating problems detected by their deadlines; **11/12** intervention verdicts match the simulator's withheld ground truth, including **3/3** coincidental improvements identified as coincidence. The miss is a true no-effect case reported as inconclusive. Three seeds, synthetic feeds; [evaluation.json](../data/fixtures/ops/evaluation.json), reproduced on current code |
 | PeerMirror | BOREAS against **439** cached Phase 3 COPD registry peers: 17 outcomes vs peer median 6 (84th percentile), 24 countries vs 2 (93rd), 275 sites vs 34 (93rd). Descriptive position, not a quality verdict |
+| Sponsor complexity trend | **27,969** industry Phase 2–3 trials, 2010–2024, observed ÷ expected for phase and MeSH disease category: Regeneron-led **2.4×** (95% CI 2.0–2.7), level with large-sponsor peers by 2022–24; registered outcome measures **2.9×** vs **1.5×**. Registry proxies, not quality judgments; [method](COMPLEXITY_TREND.md) |
+| MCP tools | Real stdio session: all six tools listed as read-only; `compute_scenario` and `explain_metric` answered with ranges and drivers; [tests](../api/tests/test_mcp_server.py) |
 | Extraction | Historical synthetic parser recovered **7/7 visits, 50/50 procedure items** on a generated protocol; **live LLM accuracy unmeasured**, per [A4](../handoffs/A4.md) |
 | Defect experiment | **6/6 at d616645**, historical, unsigned and **not blind**; same author planted defects and wrote checks, per [A7](../handoffs/A7.md) |
 
@@ -53,7 +57,10 @@ Evinova, SHC/iLCCT, Medidata and ValGenesis already cover related design, carbon
 
 ## What's next
 
-A permitted-data pilot with a sponsor and site team should calibrate workload/forecast estimates and measure live extraction quality and review effort against prospective criteria. Production identity/security, authorized connectors, independent QA, Docker/deployment verification and potential SMI mapping remain future work.
+1. **Per-scenario assumption overrides.** A team should be able to replace a library value for one scenario, labelled, versioned and shown in provenance. The first candidate is its own investigational-product cost of goods in place of the biologic kit's market-price proxy, which drives about 40% of BOREAS cost variance.
+2. **A permitted-data pilot** with a sponsor and site team: calibrate workload and forecast estimates, then measure interval coverage, live extraction quality and review effort against prospective criteria.
+3. **Missing planning levers:** enrollment target, site count and activation speed, then programme-level probability of success and rNPV.
+4. **Production readiness:** identity and security, authorized connectors, independent QA, Docker and deployment verification, and potential SMI reporting mapping.
 
 ## Submission gaps
 

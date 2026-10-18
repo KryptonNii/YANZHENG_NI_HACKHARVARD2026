@@ -120,6 +120,34 @@ Navigation: **Trials** (import) · **Analysis** (scenario simulator) · **Compar
 
 `VITE_MOCK_API=1` is a separate fictional UI mode and cannot establish API, engine or compliance behavior.
 
+## Ask Claude about a design (MCP, compute-only)
+
+TrialPilot includes an MCP server, so Claude Desktop or Claude Code can query the same API the web app uses. It exposes six tools, all annotated read-only: `list_designs`, `list_scenarios`, `compute_scenario`, `compare_scenarios`, `explain_metric` and `get_parameter`. Claude can explore what-ifs and explain any number. No tool saves, submits, approves or signs anything: saving a scenario and every signature stay with a person in the web app. Results come back as P10/P50/P90 ranges with units, and `null` means unknown.
+
+**Connect Claude Desktop.** Open Settings → Developer → Edit Config, add the server to `claude_desktop_config.json`, then restart Claude Desktop:
+
+```json
+{
+  "mcpServers": {
+    "trialpilot": {
+      "command": "C:\\path\\to\\YANZHENG_NI_HACKHARVARD2026\\api\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "trialpilot_api.mcp_server"],
+      "env": { "TP_MCP_API_URL": "http://127.0.0.1:8008" }
+    }
+  }
+}
+```
+
+On macOS or Linux, use `api/.venv/bin/python`. With `TP_MCP_API_URL`, Claude sees the designs and scenarios of the API started by `sysup.cmd`. Without it, the server runs the API in-process on the local database, which seeds the four fixture trials. For Claude Code, run `claude mcp add trialpilot -- <that python> -m trialpilot_api.mcp_server`.
+
+**Questions to try:**
+
+1. *List the TrialPilot designs. For BOREAS, compute cost, site staff hours and CO2e with half of the monitoring visits done remotely, and compare them with no changes. Give P10/P50/P90.*
+2. *Why is the BOREAS cost range so wide? Explain cost_usd: which parameters drive its variance, and where does the top one come from?* On current code the answer is the biologic kit price, a Medicare market-price proxy that explains about 40% of the variance. That is why per-scenario overrides lead the roadmap below.
+3. *Move visits 4, 5 and 6 to home nursing and analyse half of the samples locally. How do patient travel hours and site staff hours change, and what warnings does the engine raise?*
+
+Checked on October 17, 2026 with a real stdio session against a temporary database: the server listed all six tools as read-only, `list_designs` returned the seeded BOREAS design, and `compute_scenario` and `explain_metric` answered with ranges and drivers. `api/tests/test_mcp_server.py` covers the tools.
+
 ## Method and uncertainty
 
 The design reuses activity inputs for cost, site time, patient travel and emissions. Carbon uses activity multiplied by emission factor under the LCCT method, limited to trial-specific activities beyond routine care. [Griffiths et al., 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC10823997/).
@@ -172,6 +200,13 @@ The [Devpost draft](docs/DEVPOST.md) records measurements with their source and 
 - Demo identity headers do not provide production authentication. Hash chaining detects inconsistencies relative to trusted evidence but cannot prevent a privileged rewrite of a database and its whole chain.
 - Prototype controls and generated documents do not establish regulatory acceptance. Security, deployment, clinical appropriateness and QA need separate assessment.
 - Live LLM quality, human review timing, human QA approval, production deployment and Docker execution remain open gaps.
+
+## Roadmap
+
+1. **Per-scenario assumption overrides.** Let a team replace a library value for one scenario, labelled, versioned and shown in provenance. The first candidate is a sponsor's own investigational-product cost of goods in place of the biologic kit's market-price proxy, which drives about 40% of BOREAS cost variance.
+2. **A permitted-data pilot.** Calibrate workload and forecast estimates against completed studies, then measure interval coverage, live extraction accuracy and human review effort.
+3. **Planning levers the model lacks.** Enrollment target, site count and activation speed, then programme-level probability of success and rNPV.
+4. **Production readiness.** Production identity, authorized system connectors, Docker and deployment verification, and independent QA.
 
 ## Presentation package
 
